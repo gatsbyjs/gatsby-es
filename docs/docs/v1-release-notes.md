@@ -1,5 +1,5 @@
 ---
-title: v1 Release Notes
+title: v1 release notes
 ---
 
 Check out the following useful links for Gatsby version 1:

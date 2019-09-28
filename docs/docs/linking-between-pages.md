@@ -1,5 +1,5 @@
 ---
-title: Linking Between Pages
+title: Linking between pages
 ---
 
 This guide covers how to link between pages in a Gatsby site.

@@ -92,7 +92,7 @@ How unordered lists are rendered in HTML:
 1. Two
 1. Three
 
-## Links and images
+## Links and Images
 
 ### Link
 
@@ -145,14 +145,14 @@ This pattern is appropriate for [decorative or repetitive images](https://www.w3
 >
 > more quotes
 
-## Code comments
+## Code Comments
 
 ### Inline
 
 - Enclose the text in backticks \`code\`
 - Inline `code` looks like this sentence
 
-### Code blocks
+### Code Blocks
 
 - Indent a block by four spaces
 
@@ -180,7 +180,7 @@ This pattern is appropriate for [decorative or repetitive images](https://www.w3
   ---
   ```
 
-## Frontmatter + MDX example
+## Frontmatter + MDX Example
 
 ```
 ---
@@ -196,7 +196,7 @@ The chart is rendered inside our MDX document.
 <Chart description={description} />
 ```
 
-## Helpful resources
+## Helpful Resources
 
 - https://daringfireball.net/projects/markdown/syntax
 - https://www.markdownguide.org/basic-syntax

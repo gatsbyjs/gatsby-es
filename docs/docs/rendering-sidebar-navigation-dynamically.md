@@ -1,5 +1,5 @@
 ---
-title: Rendering Sidebar Navigation Dynamically
+title: Rendering sidebar navigation dynamically
 issue: https://github.com/gatsbyjs/gatsby/issues/9779
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Source Plugins
+title: Source plugins
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -75,31 +75,30 @@ module.exports = {
 }
 ```
 
-Save that and restart the gatsby development server. Then open up GraphiQL again.
+Save that and restart the gatsby development server. Then open up GraphiQL
+again.
 
-In the explorer pane, you'll see `allFile` and `file` available as selections:
+If you bring up the autocomplete window, you'll see:
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Click the `allFile` dropdown. Position your cursor after `allFile` in the query area, and then type <kbd>Ctrl + Enter</kbd>. This will pre-fill a query for the `id` of each file. Press "Play" to run the query:
+Hit <kbd>Enter</kbd> on `allFile` then type <kbd>Ctrl + Enter</kbd> to run a
+query.
 
 ![filesystem-query](filesystem-query.png)
 
-In the Explorer pane, the `id` field has automatically been selected. Make selections for more fields by checking the field's corresponding checkbox. Press "Play" to run the query again, with the new fields:
-
-![filesystem-explorer-options](filesystem-explorer-options.png)
-
-Alternatively, you can add fields by using the autocomplete shortcut (<kbd>Ctrl + Space</kbd>). This will show queryable fields on the `File` nodes.
+Delete the `id` from the query and bring up the autocomplete again (<kbd>Ctrl +
+Space</kbd>).
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
 Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
+each time to re-run the query. You'll see something like this:
 
 ![allfile-query](allfile-query.png)
 
-The result is an array of `File` "nodes" (node is a fancy name for an object in a
-"graph"). Each `File` node object has the fields you queried for.
+The result is an array of File "nodes" (node is a fancy name for an object in a
+"graph"). Each File object has the fields you queried for.
 
 ## Build a page with a GraphQL query
 
@@ -209,7 +208,7 @@ export const query = graphql`
 `
 ```
 
-And now visit [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+And… 😲
 
 ![my-files-page](my-files-page.png)
 

@@ -1,10 +1,10 @@
 ---
-title: Querying Data in Components using StaticQuery
+title: Querying data in components using StaticQuery
 ---
 
-Gatsby v2 introduces `StaticQuery`, a new API that allows components to retrieve data via a GraphQL query.
+Gatsby v2 introduces `StaticQuery`, a new API that allows components to retrieve data via GraphQL query.
 
-In this guide, you'll see an example using `StaticQuery`, and learn about [the difference between a StaticQuery and a page query](#how-staticquery-differs-from-page-query).
+In this guide, we'll walk through an example using `StaticQuery`, and discuss [the difference between a StaticQuery and a page query](#how-staticquery-differs-from-page-query).
 
 ## How to use `StaticQuery` in components
 
@@ -15,7 +15,7 @@ In this guide, you'll see an example using `StaticQuery`, and learn about [the d
 
 ### Basic example
 
-Here is an example of a `Header` component using `StaticQuery`:
+We'll create a new `Header` component:
 
 ```jsx:title=src/components/header.js
 import React from "react"
@@ -41,11 +41,11 @@ export default () => (
 )
 ```
 
-By using `StaticQuery`, you can colocate a component with its data. It is no longer required to, say, pass data down from `Layout` to `Header`.
+Using `StaticQuery`, you can colocate a component with its data. No longer is it required to, say, pass data down from `Layout` to `Header`.
 
 ### useStaticQuery
 
-There's also a React hooks version of StaticQuery: check out the documentation on [`useStaticQuery`](/docs/use-static-query/)
+There's also a hooks version of StaticQuery called `useStaticQuery`. Check out its documentation [here!](/docs/use-static-query/)
 
 ### Typechecking
 

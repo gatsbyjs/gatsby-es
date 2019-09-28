@@ -2,54 +2,71 @@
 title: Using a Gatsby Theme
 ---
 
-While you can [get started quickly with a Gatsby theme starter](/docs/themes/getting-started/), you can also install a Gatsby theme directly to an existing Gatsby site. Gatsby themes are plugins, so you can [install and use them like any other Gatsby plugin](/docs/using-a-plugin-in-your-site/).
+The quickest way to get started using a Gatsby theme is to use a starter that's configured to use the theme.
 
-## Installing a Theme
+For example, `gatsby-starter-blog-theme` is a theme starter for the `gatsby-theme-blog` package.
 
-Like any Gatsby plugin, Gatsby themes are Node.js packages, so you can install them like other published packages in Node using npm or [yarn, including local workspaces](#using-yarn-workspaces).
+A **regular Gatsby starter** creates a new Gatsby site that is preconfigured for a particular use case. The resulting site effectively forks off the starter — after it’s created, the site maintains no connection to the starter.
 
-For example, `gatsby-theme-blog` is the official Gatsby theme for creating a blog.
+A **Gatsby theme starter** creates a new Gatsby site that installs and configures one or more Gatsby themes. When a starter installs a theme, it maintains the connection to that theme as a standalone npm package.
 
-To install it, run in the root of your site:
+Installing the Gatsby blog theme starter is the same process as a regular Gatsby starter:
 
-```js
-npm install --save gatsby-theme-blog
+```shell
+gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-## Theme options
+## What does a theme starter do?
 
-Depending on the theme, there may be theme options that can be configured via `gatsby-config.js`.
+The starter for the official Gatsby blog theme does the following:
 
-For example, `gatsby-theme-blog` can take in 4 potential options: `basePath`, `contentPath`, `assetPath`, and `mdx`. These options are also documented in the [theme's README](/packages/gatsby-theme-blog/) file.
+### 1. The starter installs the theme and configures it
+
+When you use a starter that's built with a theme, you will often see that you're initially presented with a lighter weight `gatsby-config.js`. Themes start doing their magic when installed via the `plugins` array:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
-      options: {
-        /*
-        - basePath defaults to `/`
-        - contentPath defaults to `content/posts`
-        - assetPath defaults to `content/assets`
-        - mdx defaults to `true`
-        */
-        basePath: `/blog`,
-        contentPath: `content/blogPosts`,
-        assetPath: `content/blogAssets`,
-        mdx: false,
-      },
+      resolve: "gatsby-theme-blog",
+      options: {},
     },
   ],
+  // Customize your site metadata:
+  siteMetadata: {
+    title: "My Blog Title",
+    author: "My Name",
+    description: "My site description...",
+    siteUrl: "https://www.gatsbyjs.org/",
+    social: [
+      {
+        name: "twitter",
+        url: "https://twitter.com/gatsbyjs",
+      },
+      {
+        name: "github",
+        url: "https://github.com/gatsbyjs",
+      },
+    ],
+  },
 }
 ```
 
-To learn how to further customize a theme, check out the docs on [Gatsby theme shadowing](/docs/themes/shadowing/).
+### 2. The starter scaffolds out example blog posts.
 
-## Published Themes
+```md:title=/content/posts/hello-world.mdx
+---
+title: Hello, world!
+path: /hello-world
+---
 
-Public Gatsby themes are published on npm for anyone to use. You can also publish private themes for use by your organization. Examples of private theme package hosting include the [npm registry](https://docs.npmjs.com/about-private-packages) and [GitHub Package Registry](https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry).
+I'm an example post!
+```
 
-## Using Yarn Workspaces
+Once you've made some edits, run `gatsby develop` to start a development server and view your changes in a browser.
 
-If you would like to work with unpublished themes, consider [setting up Yarn Workspaces for theme development](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) and [using Yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) instead of npm.
+## Updating a Theme
+
+In order to update the theme to pull in the latest updates you can update the `gatsby-theme-blog` version in your site's `package.json`.
+
+You can do this by running the install of the theme package again: `npm install --save gatsby-theme-blog`.

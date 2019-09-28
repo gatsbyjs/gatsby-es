@@ -1,5 +1,5 @@
 ---
-title: Building a Portfolio
+title: Building a portfolio
 ---
 
 This is a stub. Help our community expand it.

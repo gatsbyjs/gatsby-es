@@ -27,7 +27,7 @@ Just like a source plugin, a transformer plugin is a normal NPM package. It has 
 
 `gatsby-transformer-yaml` is transformer plugin that looks for new nodes with a media type of text/yaml (e.g. a .yaml file) and creates new YAML child node(s) by parsing the YAML source into JavaScript objects.
 
-Check out this example of rebuilding a simplified `gatsby-transformer-yaml` directly in a site. Say you have a default Gatsby starter site which includes a `src/data/example.yml` file:
+As an example, let's partially rebuild a simplified `gatsby-transformer-yaml` directly in an example site. Let's say we have a default gatsby starter site which includes a `src/data/example.yml` file:
 
 ```yaml:title=src/data/example.yml
 - name: Jane Doe
@@ -148,7 +148,7 @@ Parsed YAML content:
 ]
 ```
 
-Now you'll write a helper function to transform the parsed YAML content into new Gatsby nodes:
+Now we'll write a helper function to transform the parsed YAML content into new Gatsby nodes:
 
 ```javascript
 function transformObject(obj, id, type) {
@@ -167,11 +167,11 @@ function transformObject(obj, id, type) {
 }
 ```
 
-Above, you create a `yamlNode` object with the shape expected by the [`createNode` action](/docs/actions/#createNode).
+Above, we create a `yamlNode` object with the shape expected by the [`createNode` action](/docs/actions/#createNode).
 
-You then create a link between the parent node (file) and the child node (yaml content).
+We then create a link between the parent node (file) and the child node (yaml content).
 
-In your updated `gatsby-node.js`, you'll then iterate through the parsed YAML content, using the helper function to transform each into a new node:
+In our updated `gatsby-node.js`, we'll then iterate through the parsed YAML content, using the helper function to transform each into a new node:
 
 ```javascript:title=gatsby-node.js
 const jsYaml = require(`js-yaml`)
@@ -225,7 +225,7 @@ async function onCreateNode({
 exports.onCreateNode = onCreateNode
 ```
 
-Now you can query for your new nodes containing our transformed YAML data:
+Now we can query for our new nodes containing our transformed YAML data:
 
 ```graphql
 query {

@@ -1,5 +1,5 @@
 ---
-title: Adding Website Functionality
+title: Adding website functionality
 overview: true
 ---
 

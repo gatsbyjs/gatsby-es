@@ -1,5 +1,5 @@
 ---
-title: Interactive Pages
+title: Interactive pages
 ---
 
 This is a stub. Help our community expand it.

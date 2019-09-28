@@ -1,5 +1,5 @@
 ---
-title: Creating Global Styles
+title: Creating global styles
 ---
 
 Creating global styles for your Gatsby site depends on your styling approach, so we've moved the instructions to the relevant guides:

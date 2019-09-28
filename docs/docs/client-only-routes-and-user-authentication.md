@@ -1,5 +1,5 @@
 ---
-title: Client-only Routes & User Authentication
+title: "Client-only routes & user authentication"
 ---
 
 Often you want to create a site with client-only portions that are gated by authentication.

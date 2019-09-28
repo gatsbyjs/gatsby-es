@@ -1,5 +1,5 @@
 ---
-title: Adding Search with Elasticlunr
+title: Adding search with elasticlunr
 ---
 
 This is a stub. Help our community expand it.

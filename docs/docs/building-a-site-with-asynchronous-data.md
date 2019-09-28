@@ -1,6 +1,5 @@
 ---
-title: Building a Site with Asynchronous Data
-issue: https://github.com/gatsbyjs/gatsby/issues/18484
+title: Building a site with asynchronous data
 ---
 
 This is a stub. Help our community expand it.
