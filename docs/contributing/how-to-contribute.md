@@ -1,15 +1,16 @@
 ---
-title: How to Contribute
+title: Cómo contribuir
 ---
+Queremos que contribuir a Gatsby sea divertido, agradable y educativo para cualquiera y para todos. Todas las contribuciones son bienvenidas, incluidos temas, documentos nuevos así como las actualizaciones y los ajustes, entradas de blog, los talleres y más.
 
-We want contributing to Gatsby to be fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including issues, new docs as well as updates and tweaks, blog posts, workshops, and more.
+## ¿No estás seguro de cómo empezar a contribuir?
 
-## Not sure how to start contributing?
+Si está preocupado o no sabe por dónde empezar, verifica nuestra página [dónde participar](/contributing/where-to-participate/).
 
-If you are worried or don't know where to start, check out our [where to participate](/contributing/where-to-participate/) page. You can reach out with questions to [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) or [@GatsbyJS](https://twitter.com/gatsbyjs) on Twitter, and anyone from the Gatsby team on [Discord](https://gatsby.dev/discord). You can also [submit an issue](/contributing/how-to-file-an-issue/) and a maintainer can give you guidance!
+Puedes contactar con preguntas a [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) o [@GatsbyJS](https://twitter.com/gatsbyjs) a Twitter, y cualquier del equipo de Gatsby en [Discord](https://gatsby.dev/discord). También puede [enviar un problema](/contributing/how-to-file-an-issue/) y un mantenedor puede darte orientación!
 
-## Pair programming
+## Programación en pareja
 
-Gatsby.js offers free [pair programming sessions](/contributing/pair-programming/) to the community, if there's something you'd like to work on together. Get in touch with us if you have a question about contributing or an idea for something to pair on!
+Gatsby.js ofrece [clases de programación en pareja](/contributing/pair-programming/) gratis a la comunidad,  si hay algo te gustaría trabajar juntos. Ponerse en contacto con nosotros si tienes una pregunta sobre cómo contribuir o una idea de algo para programación en pareja!
 
 <GuideList slug={props.slug} />
