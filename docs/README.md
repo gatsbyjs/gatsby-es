@@ -1,7 +1,7 @@
-# Read docs at https://www.gatsbyjs.org/docs
+# Lea los documentos en https://www.gatsbyjs.org/docs
 
-We intend the docs to be read on gatsbyjs.org — you can read them here of course
-:-) just be warned that links won't often work and other things will be missing
-or less than optimal.
+Tenemos la intención de leer los documentos en gatsbyjs.org; por supuesto, puede leerlos aquí.
+:-) solo se advirtió que los enlaces a menudo no funcionarán y que faltarán otras cosas
+o menos que óptimo.
 
-Go forth and build cool stuff.
+Ve y construye cosas geniales.

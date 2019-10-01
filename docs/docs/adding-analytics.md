@@ -1,70 +1,69 @@
 ---
-title: Adding analytics
+Título: Agregar análisis
 ---
 
-## Why use analytics?
+## ¿Por qué usar análisis?
 
-Once you have your site live you will start wanting to get an idea of how many visitors are coming to your site along with other metrics such as:
+Una vez que tenga su sitio activo, comenzará a querer tener una idea de cuántos visitantes vienen a su sitio junto con otras métricas como:
 
-- What pages are most popular?
-- Where do my visitors come from?
-- When do people visit my site?
+- ¿Qué páginas son las más populares?
+- ¿De dónde vienen mis visitantes?
+- ¿Cuándo visitan las personas mi sitio?
 
-Google Analytics provides a way to collect this data and perform analytics on it answering the above questions among many others. The platform is free for 10 million hits per month per Tracking ID. There are other analytics options--see the "Other Gatsby analytics plugins" section at the bottom of this doc for ideas.
+Google Analytics proporciona una forma de recopilar estos datos y realizar análisis sobre ellos respondiendo las preguntas anteriores, entre muchos otros. La plataforma es gratuita por 10 millones de visitas al mes por ID de seguimiento. Hay otras opciones de análisis: consulte la sección "Otros complementos de análisis de Gatsby" al final de este documento para obtener ideas.
 
-## Setting up Google Analytics
+## Configuración de Google Analytics
 
-The first step is to set up a Google Analytics account. You can do that [here](https://analytics.google.com/) by signing in with your Google Account.
+El primer paso es configurar una cuenta de Google Analytics. Puede hacerlo [aquí] (https://analytics.google.com/) iniciando sesión con su cuenta de Google.
 
-Google also has a [get started page](https://support.google.com/analytics/answer/1008015?hl=en) for reference.
+Google también tiene una [página de inicio] (https://support.google.com/analytics/answer/1008015?hl=es) como referencia.
 
-Once you have an account, you will be prompted to set up a new property. This property will have a Tracking ID associated with it. In this case the property will be the website itself. Fill out the form with your website name and URL.
+Una vez que tenga una cuenta, se le pedirá que configure una nueva propiedad. Esta propiedad tendrá un ID de seguimiento asociado. En este caso, la propiedad será el propio sitio web. Complete el formulario con el nombre y la URL de su sitio web.
 
-The Tracking ID is what is used to identify data with your site's traffic. You would typically use a different Tracking ID for each website you are monitoring.
+El ID de seguimiento es lo que se utiliza para identificar datos con el tráfico de su sitio. Por lo general, usaría una ID de seguimiento diferente para cada sitio web que esté monitoreando.
 
-You should now have a Tracking ID; take note of it, as your website will need to reference it when sending page views to Google Analytics. It should be in the format `UA-XXXXXXXXX-X`.
+Ahora debe tener una identificación de seguimiento; tome nota de ello, ya que su sitio web deberá hacer referencia a él cuando envíe vistas de página a Google Analytics. Debe estar en el formato `UA-XXXXXXXXX-X`.
 
-You can find this tracking ID later by going to `Admin > Tracking Info > Tracking Code`.
+Puede encontrar esta identificación de seguimiento más adelante yendo a `Admin> Información de seguimiento> Código de seguimiento`.
 
-## Using `gatsby-plugin-google-analytics`
+## Usando `gatsby-plugin-google-analytics`
 
-Now, it's time to configure Gatsby to send page views to your Google Analytics account.
+Ahora es el momento de configurar Gatsby para enviar visitas a la página a su cuenta de Google Analytics.
 
-We are going to use `gatsby-plugin-google-analytics`. For other analytics options (including Google Analytics gtag.js and Google Tag Manager), check [other Gatsby analytics plugins](#other-gatsby-analytics-plugins).
+Vamos a usar `gatsby-plugin-google-analytics`. Para otras opciones de análisis (incluidos Google Analytics gtag.js y Google Tag Manager), marque [otros complementos de análisis de Gatsby] (# other-gatsby-analytics-plugins).
 
-```shell
+`` `concha
 npm install --save gatsby-plugin-google-analytics
-```
+`` `
 
-```js:title=gatsby-config.js
+`` `js: title = gatsby-config.js
 module.exports = {
-  plugins: [
+  complementos: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+      resolver: `gatsby-plugin-google-analytics`,
+      opciones: {
+        // reemplaza "UA-XXXXXXXXX-X" con tu propia ID de seguimiento
         trackingId: "UA-XXXXXXXXX-X",
       },
     },
   ],
 }
-```
+`` `
+> Nota: Lea más sobre [gatsby-config.js] (/ docs / gatsby-config /)
 
-> Note: Read more about [gatsby-config.js](/docs/gatsby-config/)
+Se puede encontrar la documentación completa del complemento [aquí] (/ packages / gatsby-plugin-google-analytics /).
 
-Full documentation for the plugin can be found [here](/packages/gatsby-plugin-google-analytics/).
+Hay varias opciones de configuración adicionales, tanto con el complemento Gatsby como en su cuenta de Google Analytics, para que pueda adaptar las cosas a las necesidades de su sitio web.
 
-There are a number of extra configuration options--both with the Gatsby plugin and also in your Google Analytics account--so you can tailor things to meet your website's needs.
+Una vez que esté configurado, puede implementar su sitio para probar. Si navega a la página de inicio de Google Analytics, debería ver un panel con estadísticas diferentes.
 
-Once this is configured you can deploy your site to test! If you navigate to the homepage of Google Analytics, you should see a dashboard with different statistics.
+## Otros complementos de análisis de Gatsby
 
-## Other Gatsby analytics plugins
-
-- [Google Tag Manager](/packages/gatsby-plugin-google-tagmanager/)
-- [Google Analytics gtag.js](/packages/gatsby-plugin-gtag/)
-- [Segment](/packages/gatsby-plugin-segment-js)
-- [Amplitude Analytics](/packages/gatsby-plugin-amplitude-analytics)
-- [Fathom](/packages/gatsby-plugin-fathom/)
-- [Baidu](/packages/gatsby-plugin-baidu-analytics/)
-- [Matomo (formerly Piwik)](/packages/gatsby-plugin-matomo/)
-- [Simple Analytics](/packages/gatsby-plugin-simple-analytics)
+- [Administrador de etiquetas de Google] (/ packages / gatsby-plugin-google-tagmanager /)
+- [Google Analytics gtag.js] (/ packages / gatsby-plugin-gtag /)
+- [Segmento] (/ packages / gatsby-plugin-segmento-js)
+- [Análisis de amplitud] (/ packages / gatsby-plugin-amplitude-analytics)
+- [Fathom] (/ packages / gatsby-plugin-fathom /)
+- [Baidu] (/ packages / gatsby-plugin-baidu-analytics /)
+- [Matomo (anteriormente Piwik)] (/ packages / gatsby-plugin-matomo /)
+- [Simple Analytics] (/ packages / gatsby-plugin-simple-analytics)
