@@ -1,24 +1,26 @@
 ---
-title: How to File an Issue
+título: Cómo presentar un problema
 ---
 
-The [issue tracker](https://github.com/gatsbyjs/gatsby/issues) is the preferred channel for bug reports, feature requests and [submitting pull requests](/contributing/how-to-open-a-pull-request/).
+El  [listado de problemas](https://github.com/gatsbyjs/gatsby/issues) es el mejor canal para reportar errores, solicitar nuevas funcionalidades y [crear pull requests](/contributing/how-to-open-a-pull-request/).
 
-If you want your issue to be resolved quickly, please include in your issue:
+Si deseas que tu problema sea solucionado lo más pronto posible, incluye lo siguiente en tu problema:
 
-- Gatsby version, Node.js version, OS version
-- The contents of your `gatsby-config.js` and `package.json` as well as your
-  `gatsby-node.js`, `gatsby-browser.js` `gatsby-ssr.js` files depending on
-  changes you've made there.
+- Versión de Gatsby, versión de Node.js, versión de Sistema Operativo
+- La configuración de tu `gatsby-config.js` y `package.json` así como
+  los cambios que has hecho en los siguientes archivos `gatsby-node.js`,
+  `gatsby-browser.js` `gatsby-ssr.js`.
 
-Please do not use the issue tracker for personal support requests. [Stack Overflow](https://stackoverflow.com/questions/ask?tags=gatsby) (**gatsby** tag) and the [Gatsby Discord](https://gatsby.dev/discord) are better places to get help.
+por favor no uses el listado de problemas para solicitar soporte, [Stack Overflow](https://stackoverflow.com/questions/ask?tags=gatsby) (etiqueta **gatsby**) y el [Gatsby Discord](https://gatsby.dev/discord) son las páginas correctas para poderte ayudar.
 
-### Special Note on Issues
+### Notas importantes en el inconveniente
 
-If an issue is affecting you, start at the top of this list and complete as many tasks on the list as you can:
+Si el error te está afectando, Completa la mayoría de ítems que puedas listados anteriormente:
 
-1.  If there is an issue, add a reaction or more details to the issue to indicate that it's affecting you
-2.  If there is an issue and you can add more detail, write a comment describing how the bug is affecting OR if you can, write up a work-around for the bug
-3.  If there _is not_ an issue, write the most complete description of what's happening, preferably with link to a Gatsby site that reproduces the problem or [create a reproducible test case](/contributing/how-to-make-a-reproducible-test-case/)
+1.  Si hay un problema , añade los detalles del problema para indicarnos que el problema te esta afectando
+2.  Si hay un problema y puedes añadir los detalles, escribe un comentario describiendo cómo el problema te esta afectando o si puedes, escribe una solucion a este problema
+3.  Si _no hay_ un problema, escribe la más completa descripción de qué está pasando, preferiblemente con un link que reproduce el problema a la página de Gatsby o [crea un caso de prueba para reproducirlo](/contributing/how-to-make-a-reproducible-test-case/)
+4.  Intenta corregir el problema (y es totalmente esperado que preguntes por ayuda; las personas que mantienen el código-abierto desean ayudar a los contribuyentes)
 4.  Offer to help fix the bug (and it is totally expected that you ask for help; open-source maintainers want to help contributors)
-5.  [Deliver a well-crafted, tested PR](/contributing/how-to-open-a-pull-request/)
+5.  [Envía un bien elaborado, detallado y probado PR](/contributing/how-to-open-a-pull-request/)
+
