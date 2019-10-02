@@ -1,30 +1,31 @@
 ---
-title: Add a Service Worker
+title: Agregar un trabajador de servicio
 ---
 
-### What is a service worker
+### ¿Qué es un trabajador de servicio?
 
-A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. They increase your site availability in spotty connections, and are essential to making a nice user experience.
+Un trabajador de servicio es una secuencia de comandos que el explorador ejecuta en segundo plano, independiente de una página Web, abriendo la puerta a entidades que no necesitan una página Web o interacción del usuario. Aumentan la disponibilidad de su sitio en conexiones irregulares, y son esenciales para crear una agradable experiencia de usuario.
 
-It supports features like push notifications and background sync.
+Es compatible con funciones como notificaciones push y sincronización en segundo plano.
 
-### Using service workers in Gatsby with `gatsby-plugin-offline`
+### Usando trabajadores de servicio en Gatsby con `gatsby-plugin-offline`
 
-Gatsby provides awesome plugin interface to create and load a service worker into your site [gatsby-plugin-offline](https://www.npmjs.com/package/gatsby-plugin-offline).
+Gatsby proporciona una interfaz de plugin impresionante para crear y cargar un trabajador de servicio en su sitio
+[gatsby-plugin-offline](https://www.npmjs.com/package/gatsby-plugin-offline).
 
-We recommend using this plugin together with the [manifest plugin](https://www.npmjs.com/package/gatsby-plugin-manifest). (Don’t forget to list the offline plugin after the manifest plugin so that the manifest file can be included in the service worker).
+Recomendamos usar este plugin junto con el[manifest plugin](https://www.npmjs.com/package/gatsby-plugin-manifest). (No olvide enumerar el complemento sin conexión después del plugin de manifiesto para que el archivo de manifiesto se pueda incluir en el trabajador de servicio).
 
-### Installing `gatsby-plugin-offline`
+### Instalando `gatsby-plugin-offline`
 
 `npm install --save gatsby-plugin-offline`
 
-Add this plugin to your `gatsby-config.js`
+Agregue este plugin a su `gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-offline`]
 ```
 
-## References
+## Referencias
 
 - [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
 - [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

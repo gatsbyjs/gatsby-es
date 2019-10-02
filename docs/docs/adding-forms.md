@@ -1,10 +1,10 @@
 ---
-title: Adding forms
+title: Agregar formularios
 ---
 
-Gatsby is built on top of React. So anything that is possible with a React form is possible in Gatsby. Additional details about how to create React forms can be found in the [React forms documentation](https://reactjs.org/docs/forms.html) (which happens to be built with Gatsby!)
+Gatsby está construido en la parte superior de React. Así que cualquier cosa que sea posible con una forma React es posible en Gatsby. Encontrará más detalles sobre cómo crear formularios React en la sección [Documentación de formularios React](https://reactjs.org/docs/forms.html) (que pasa a ser construido con Gatsby!)
 
-Let's start with the following page.
+Comencemos con la siguiente página.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -12,7 +12,7 @@ import React from "react"
 export default () => <div>Hello world!</div>
 ```
 
-This Gatsby page is a React component. When you want to create a form, you need to store the state of the form - what the user has entered. Convert your function (stateless) component to a class (stateful) component.
+Esta página de Gatsby es un componente React. Cuando desee crear un formulario, debe almacenar el estado del formulario, lo que el usuario ha ingresado. Convierta su componente de función (sin estado) en un componente de clase (con estado).
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-Now that you have created a class component, you can add `state` to the component.
+Ahora que ha creado un componente de clase, puede agregar `state` al componente.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -41,7 +41,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-And now you can add a few input fields:
+Y ahora puede agregar algunos campos de entrada:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -70,7 +70,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-When a user types into an input box, the state should update. Add an `onChange` prop to update state and add a `value` prop to keep the input up to date with the new state:
+Cuando un usuario escribe en un cuadro de entrada, el estado debe actualizarse. Añadir un `onChange` para actualizar el estado y agregar un `value` para mantener la entrada actualizada con el nuevo estado:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -119,7 +119,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-Now that your inputs are working, you want something to happen when you submit the form. Add `onSubmit` props to the form element and add `handleSubmit` to show an alert when the user submits the form:
+Ahora que sus entradas están funcionando, desea que algo suceda cuando envíe el formulario. Agregue accesorios `onSubmit` al elemento formulario y agregue `handleSubmit` para mostrar una alerta cuando el usuario envíe el formulario:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -173,6 +173,6 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-This form isn't doing anything besides showing the user information that they just entered. At this point, you may want to move this form to a component, send the form state to a backend server, or add robust validation. You can also use fantastic React form libraries like [Formik](https://github.com/jaredpalmer/formik) or [Final Form](https://github.com/final-form/react-final-form) to speed up your development process.
+Este formulario no está haciendo nada aparte de mostrar la información de usuario que acaba de introducir. En este punto, es posible que desee mover este formulario a un componente, enviar el estado del formulario a un servidor back-end o agregar una validación sólida. También puede usar fantásticas bibliotecas de formularios React como [Formik](https://github.com/jaredpalmer/formik) o [Formulario final](https://github.com/final-form/react-final-form) para acelerar el proceso de desarrollo.
 
-All of this is possible and more by leveraging the power of Gatsby and the React ecosystem!
+¡Todo esto es posible y más aprovechando el poder de Gatsby y el ecosistema React!

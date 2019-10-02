@@ -1,8 +1,8 @@
 ---
-title: Adding search with elasticlunr
+title: Agregar búsqueda con elasticlunr
 ---
 
-This is a stub. Help our community expand it.
+Esto es un trozo. Ayuda a nuestra comunidad a expandirlo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Utilice la [Guía de estilo de Gatsby](/contributing/gatsby-style-guide/) para asegurarse de que su
+se acepta la solicitud de extracción.

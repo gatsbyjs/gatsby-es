@@ -1,17 +1,17 @@
 ---
-title: Adding pagination
+title: Agregar paginación
 ---
 
-A page displaying a list of content gets longer as the amount of content grows.
-Pagination is the technique of spreading that content across multiple pages.
+Una página que muestra una lista de contenido se alarga a medida que aumenta la cantidad de contenido.
+La paginación es la técnica de difundir ese contenido en varias páginas.
 
-The goal of pagination is to create multiple pages (from a single [template](/docs/building-with-components/#page-template-components)) that show a limited number of items.
+El objetivo de la paginación es crear varias páginas (desde un único [template](/docs/building-with-components/#page-template-components)) que muestran un número limitado de elementos.
 
-Each page will [query GraphQL](/docs/querying-with-graphql/) for those specific items.
+Cada página [query GraphQL](/docs/querying-with-graphql/) para esos elementos específicos.
 
-The information needed to query for those specific items (i.e. values for [`limit`](/docs/graphql-reference/#limit) and [`skip`](/docs/graphql-reference/#skip)) will come from the [`context`](/docs/graphql-reference/#query-variables) that is added when [creating pages](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) in `gatsby-node`.
+La información necesaria para consultar esos elementos específicos (es decir, valores para [`limit`](/docs/graphql-reference/#limit) y [`skip`](/docs/graphql-reference/#skip)) vendrá de la [`context`](/docs/graphql-reference/#query-variables) que se agrega cuando [crear páginas](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) en `gatsby-node`.
 
-### Example
+### Ejemplo
 
 ```js:title=src/templates/blog-list-template.js
 import React from "react"
@@ -123,11 +123,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 ```
 
-The code above will create an amount of pages that is based on the total number of posts. Each page will list `postsPerPage`(6) posts, until there are less than `postsPerPage`(6) posts left.
-The path for the first page is `/blog`, following pages will have a path of the form: `/blog/2`, `/blog/3`, etc.
+El código anterior creará una cantidad de páginas que se basa en el número total de publicaciones. Cada página mostrará una lista `postsPerPage`(6) , hasta que haya menos de `postsPerPage`(6) puestos a la izquierda.
+La ruta de la primera página es `/blog`, siguientes páginas tendrán una ruta del formulario: `/blog/2`, `/blog/3`, etc.
 
-### Other resources
+### Otros recursos
 
-- Follow this [step-by-step tutorial](https://nickymeuleman.netlify.com/blog/gatsby-pagination/) to add links to the previous/next page and the traditional page-navigation at the bottom of the page
+- Sigue esto [tutorial paso a paso](https://nickymeuleman.netlify.com/blog/gatsby-pagination/) para agregar enlaces a la página anterior/siguiente y la navegación tradicional de la página en la parte inferior de la página
 
-- See [gatsby-paginated-blog](https://github.com/NickyMeuleman/gatsby-paginated-blog) [(demo)](https://nickymeuleman.github.io/gatsby-paginated-blog/) for an extension of the official [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) with pagination in place
+- ¿Ves [gatsby-paginated-blog](https://github.com/NickyMeuleman/gatsby-paginated-blog) [(demo)](https://nickymeuleman.github.io/gatsby-paginated-blog/) para una extensión de la [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) with pagination in place
