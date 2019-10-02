@@ -20,4 +20,4 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - [Enviar a la Biblioteca del Entrantes](/contributing/submit-to-starter-library/)
 - [Enviar a la Biblioteca del Plugins](/contributing/submit-to-plugin-library/)
 
-PExamina el resto de nuestros documentaciones para contributors y contactarnos en [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord), o en un [Tema de GitHub](/contributing/how-to-file-an-issue/) si tienes alguna pregunta sobre la contribución!
+Examina el resto de nuestros documentaciones para contributors y contactarnos en [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord), o en un [Tema de GitHub](/contributing/how-to-file-an-issue/) si tienes alguna pregunta sobre la contribución!
