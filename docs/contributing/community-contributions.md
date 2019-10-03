@@ -9,7 +9,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - Tu maravilloso sitio web Gatsby.js!
 - entrantes de Gatsby
 - Plugins de Gatsby
-- Entradas de blog y estudios de caso
+- Entradas de blog y casos de estudio
 - Videos de conferencias
 - Materiales de los talleres
 - Temas de GitHub y las solicitudes de extracción
