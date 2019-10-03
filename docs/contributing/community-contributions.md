@@ -18,6 +18,6 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 
 - [Enviar a las muestras de sitios](/contributing/site-showcase-submissions)
 - [Enviar a la biblioteca de Starters](/contributing/submit-to-starter-library/)
-- [Enviar a la Biblioteca del Plugins](/contributing/submit-to-plugin-library/)
+- [Enviar a la biblioteca de Plugins](/contributing/submit-to-plugin-library/)
 
 Examina el resto de nuestras documentaciones para contribuidores y contáctanos en [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord), o en un [Issue de GitHub](/contributing/how-to-file-an-issue/) si tienes alguna pregunta sobre contribuir!
