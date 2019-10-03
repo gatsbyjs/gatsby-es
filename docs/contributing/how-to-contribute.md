@@ -10,6 +10,6 @@ Si está preocupado o no sabe por dónde empezar, verifica nuestra página [dón
 
 ## Programación en pareja
 
-Gatsby.js ofrece sesiones gratis de programación para la comunidad, por si hay algo que te gustaría trabajar junto a un miembro del equipo. Ponte en contacto con nosotros si tienes una pregunta sobre cómo contribuir o alguna idea que quieras trabajar con alguno de nosotros!
+Gatsby.js ofrece sesiones gratis de [programación en parejas](/contributing/pair-programming/) para la comunidad, por si hay algo que te gustaría trabajar junto a un miembro del equipo. Ponte en contacto con nosotros si tienes una pregunta sobre cómo contribuir o alguna idea que quieras trabajar con alguno de nosotros!
 
 <GuideList slug={props.slug} />
