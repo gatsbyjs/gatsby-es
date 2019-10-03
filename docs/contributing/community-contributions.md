@@ -8,7 +8,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 
 - Tu maravilloso sitio web Gatsby.js!
 - entrantes de Gatsby
-- plugins de Gatsby
+- Plugins de Gatsby
 - Entradas de blog y estudios de caso
 - Videos de conferencias
 - Materiales de los talleres
