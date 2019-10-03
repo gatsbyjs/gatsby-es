@@ -7,7 +7,7 @@ Una gran parte de lo que hace a Gatsby grandioso son todos y cada uno de ustedes
 Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados de amplificar su voz. Las contribuciones no se limitan al código, y pueden adoptar muchas formas.
 
 - Tu maravilloso sitio web Gatsby.js!
-- entrantes de Gatsby
+- Starters de Gatsby
 - Plugins de Gatsby
 - Entradas de blog y casos de estudio
 - Videos de conferencias
