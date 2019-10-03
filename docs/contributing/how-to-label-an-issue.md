@@ -1,97 +1,97 @@
 ---
-title: How to label an issue
+title: Cómo etiquetar un problema
 ---
 
-## What are issue labels?
+## Qué son las etiquetas de emisión?
 
-Issue labels are a tool in GitHub that are used to group issues into one or more categories.
+Las etiquetas de problema son una herramienta de GitHub que se utilizan para agrupar problemas en una o varias categorías.
 
-[Check out Gatsby's labels (and their descriptions)](https://github.com/gatsbyjs/gatsby/issues/labels)
+[Compruebe las etiquetas de Gatsby (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-## Why label issues?
+## Por qué etiquetar problemas?
 
-Gatsby is a very active project with many new issues opened each day. Labelling issues helps by identifying:
+Gatsby es un proyecto muy activo con muchos temas nuevos abiertos cada día. Los problemas de etiquetado ayudan identificando:
 
-- good issues for new contributors to work on
-- reported and confirmed bugs
-- feature requests
-- duplicate issues
-- issues that are stalled or blocked
+- buenas cuestiones para que los nuevos contribuyentes trabajen en
+- errores reportados y confirmados
+- solicitudes de funciones
+- problemas duplicados
+- problemas que están estancados o bloqueados
 
-## Who can label issues?
+## Quién puede etiquetar los problemas?
 
-Anyone who's a member of the [Gatsby Maintainers team](https://github.com/orgs/gatsbyjs/teams/maintainers) can label issues.
+Cualquiera que sea miembro del [equipo de Gatsby Maintainers](https://github.com/orgs/gatsbyjs/teams/maintainers) puede etiquetar problemas.
 
-You can get an invite to the team by having a Pull Request merged into the Gatsby project. Check out the list of [`help wanted`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) issues and the [How To Contribute Guide](/contributing/how-to-contribute/) to get started.
+Puede obtener una invitación al equipo haciendo que una solicitud de extracción se fusione en el proyecto Gatsby. Echa un vistazo a la lista de ['ayuda deseada'](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) problemas y la [Guía de cómo contribuir](/contributing/how-to-contribute/) para empezar.
 
-**NOTE:** If you’ve already had a pull request merged and you have _not_ been invited to the maintainers team, please go to [the dashboard](https://store.gatsbyjs.org/) and request a discount code. You should get an invite to the team — _and you get free Gatsby swag!_ If that doesn’t work, please email team@gatsbyjs.com and we'll get you invited.
+**NOTA:** Si ya ha fusionado una solicitud de extracción y no ha sido invitado al equipo de mantenedores, vaya a [el panel de control](https://store.gatsbyjs.org/) and request a discount code. Deberías recibir una invitación al equipo, ¡y obtendrás un botín gratis de Gatsby! Si eso no funciona, por favor envíe un correo electrónico a team-gatsbyjs.com y te invitaremos.
 
-## How to label an issue
+## Cómo etiquetar un problema
 
-Ideally, every issue should have a single `type:` label applied to it. Optionally a `status:` label or other labels may also be applied.
+Idealmente, cada problema debe tener una sola etiqueta `type:` aplicada. Opcionalmente, también se puede aplicar una etiqueta `status:` u otras etiquetas.
 
-Before continuing, get familiar with [Gatsby's issue labels and their descriptions](https://github.com/gatsbyjs/gatsby/issues/labels).
+Antes de continuar, familiarícese con [Las etiquetas de emisión de Gatsby y sus descripciones](https://github.com/gatsbyjs/gatsby/issues/labels).
 
-The broad steps to labelling an issue are:
+Los amplios pasos para etiquetar un problema son:
 
-- Read an issue
-- Choose the labels that apply to that issue
-- That's it - sit back and relax, maybe take a few moments to enjoy the satisfaction of a job well done
+- Leer un problema
+- Elija las etiquetas que se aplican a ese problema
+- Eso es todo - siéntate y relájate, tal vez tome unos momentos para disfrutar de la satisfacción de un trabajo bien hecho
 
-The rest of this document will describe how to choose the right labels for an issue.
+El resto de este documento describirá cómo elegir las etiquetas correctas para un problema.
 
-### Find an issue that you're interested in
+### Encuentra un problema que te interese
 
-Start with [Gatsby's issues list](https://github.com/gatsbyjs/gatsby/issues) and scroll through until you see a recent one that strikes your interest. Alternatively, you can view the [list of unlabelled issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
+Comience con [Lista de problemas de Gatsby](https://github.com/gatsbyjs/gatsby/issues) y desplácese hasta que vea uno reciente que golpee su interés. Alternativamente, puede ver la [lista de problemas sin etiquetar](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
 
-### Read the issue
+### Lea el problema
 
-Read the issue and any comments to understand what the issue is about.
+Lea el problema y cualquier comentario para entender de qué se trata el problema.
 
-### Choose one `type:` label
+### Elija una etiqueta `type:`
 
-Choose a type label from the _labels_ dropdown to the right-hand side of the issue.
+Elija una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del problema.
 
-![GitHub label dropdown](./images/github-label-list.png)
+![Menú desplegable de la etiqueta de GitHub](./images/github-label-list.png)
 
-You can check through the [label descriptions](https://github.com/gatsbyjs/gatsby/issues/labels) for more information on each one.
+Puede comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada uno de ellos.
 
-The most common type of issue is `type: question or discussion`, typically you can apply this to issues that are open-ended or have no clear next step.
+El tipo más común de problema es `type: question or discussion`, normalmente se puede aplicar a los problemas que son de composición abierta o no tienen un siguiente paso claro.
 
-It's OK to change the type of an issue as more information becomes available. What starts as `type: question or discussion`, might later need to be changed to `type: bug`.
+Está bien cambiar el tipo de problema a medida que haya más información disponible. Lo que comienza como `type: question or discussion`, es posible que más tarde deba cambiarse a `type: bug`.
 
-Changing labels is quick and easily reversible, so don't worry too much about applying a "wrong" label.
+Cambiar las etiquetas es rápido y fácilmente reversible, así que no te preocupes demasiado por aplicar una etiqueta "equivocada".
 
-Choose an appropriate `type:` label and you're ready to move on to the next step.
+Elija una etiqueta de `type:` label and you're ready to move on to the next step.
 
-### Choose a `status:` label (optional)
+### Elija una etiqueta `status:` (opcional)
 
-Check through the [`status:` labels (and their descriptions)](https://github.com/gatsbyjs/gatsby/issues/labels), if any apply to this issue add them as necessary.
+Compruebe a través de las etiquetas [`status:` (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si se aplica alguna a este problema, agréguelos según sea necesario.
 
-Examples of applying `status:` labels might be:
+Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
-- An issue that depends on an external dependency being changed could be labelled with `status: blocked`
+- Un problema que depende de una dependencia externa que se va a cambiar podría etiquetarse con `status: blocked`
 
-- An issue with a clear description of how it can be resolved could be labelled `status: help wanted`.
+- Un problema con una descripción clara de cómo se puede resolver podría ser etiquetado como `status: help wanted`.
 
-- An issue that's missing information required to help the author could be labelled with `status: needs more info`
+- Un problema que falta información necesaria para ayudar al autor podría ser etiquetado con `status: needs more info`
 
-- An issue describing a bug without clear steps to reproduce could be labelled with `status: needs reproduction`
+- Un problema que describe un error sin pasos claros para reproducirse podría etiquetarse con `status: needs reproduction`
 
-- An issue describing a bug where there are steps to reproduce the bug _and_ you've run the code locally and seen the error yourself can be labelled `status: confirmed`
+- Un problema que describe un error donde hay pasos para reproducir el error y ha ejecutado el código localmente y visto el error usted mismo se puede etiquetar como `status: confirmed`
 
-### Choose any other labels
+### Elija cualquier otra etiqueta
 
-There are a few other labels that can sometimes be applied to an issue. Here are some more examples of when to use them:
+Hay algunas otras etiquetas que a veces se pueden aplicar a un problema. Aquí hay algunos ejemplos más de cuándo usarlos:
 
-- `good first issue` can be used when an issue is a small, clearly defined piece of work that could be completed by someone without in-depth knowledge of Gatsby and how it works. These issues are particularly suitable for people making their first open source contributions.
+- `good first issue` se puede utilizar cuando un problema es una pequeña pieza de trabajo claramente definida que podría ser completada por alguien sin un conocimiento profundo de Gatsby y cómo funciona. Estas cuestiones son particularmente adecuadas para las personas que hacen sus primeras contribuciones de código abierto.
 
-- `stale?` can be used on an issue where the author has not replied to requests for further information in at least 20 days.
+- `stale?` puede utilizarse en un tema en el que el autor no haya respondido a las solicitudes de información adicional en al menos 20 días.
 
-### Finish
+### El final
 
-And you're done! You can call it a day or go back to the first step to label another issue.
+¡Y ya terminaste! Puede llamarlo un día o volver al primer paso para etiquetar otro problema.
 
-## Conclusion
+## La conclusión
 
-Labelling issues is a great way to help out on the Gatsby project regardless of your experience level.
+Los problemas de etiquetado son una excelente manera de ayudar en el proyecto Gatsby independientemente de su nivel de experiencia.
