@@ -12,7 +12,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - Entradas de blog y casos de estudio
 - Videos de conferencias
 - Materiales de talleres
-- Temas de GitHub y las solicitudes de extracción
+- Issues de GitHub y pull requests
 
 ...y cualquiera que se te ocurra. Nuestro escaparate y documentos de contribución de las bibliotecas están un lugar excelente para empezar.
 
