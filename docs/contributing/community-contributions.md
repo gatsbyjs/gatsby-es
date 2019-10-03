@@ -11,7 +11,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - Plugins de Gatsby
 - Entradas de blog y casos de estudio
 - Videos de conferencias
-- Materiales de los talleres
+- Materiales de talleres
 - Temas de GitHub y las solicitudes de extracción
 
 ...y cualquiera que se te ocurra. Nuestro escaparate y documentos de contribución de las bibliotecas están un lugar excelente para empezar.
