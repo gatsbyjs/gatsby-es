@@ -2,7 +2,7 @@
 title: Contribuciones de la Comunidad
 ---
 
-Una gran parte de lo que hace Gatsby grandioso son todos y cada uno de ustedes en la comunidad. Sus contribuciones enriquecen la experiencia de Gatsby y mejorarlo cada día.
+Una gran parte de lo que hace a Gatsby grandioso son todos y cada uno de ustedes en la comunidad. Sus contribuciones enriquecen la experiencia de Gatsby y lo hacen mejorar cada día.
 
 Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados de amplificar su voz. Las contribuciones no se limitan al código, y pueden adoptar muchas formas.
 
