@@ -14,5 +14,5 @@ Hay muchas razones para contribuir a Gatsby.js y a software de código abierto e
 
 - **Hablando en conferencias.** Con esas habilidades que te has ganado trabajando en código abierto, ¿por qué no compartir ese conocimiento con el mundo? Las conferencias web en todo el mundo están continuamente buscando oradores y nuevas tomas de temas populares. ¿Construiste algo con Gatsby.js que te entusiasma? ¡La [industria le encantaría saber de ti](http://weareallaweso.me/)!
 
-Hay sin duda más beneficios que los que aparecen aquí. ¿Gatsby.js y el software de código abierto hacen tu vida mejor de alguna manera? Nos encantaría escucharlo. ¡Contáctanos [en Twitter](https://twitter.com/gatsbyjs)!
+- Hay sin duda más beneficios que los que aparecen aquí. ¿Gatsby.js y el software de código abierto hacen tu vida mejor de alguna manera? Nos encantaría escucharlo. ¡Contáctanos [en Twitter](https://twitter.com/gatsbyjs)!
 
