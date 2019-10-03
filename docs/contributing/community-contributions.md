@@ -14,7 +14,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - Materiales de talleres
 - Issues de GitHub y pull requests
 
-...y cualquiera que se te ocurra. Nuestro escaparate y documentos de contribución de las bibliotecas están un lugar excelente para empezar.
+...y cualquiera que se te ocurra. Nuestras muestras y documentos de contribución a bibliotecas son un lugar excelente para empezar:
 
 - [Enviar al Escaparate del sitio](/contributing/site-showcase-submissions)
 - [Enviar a la Biblioteca del Entrantes](/contributing/submit-to-starter-library/)
