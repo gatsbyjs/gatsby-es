@@ -16,7 +16,7 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 
 ...y cualquiera que se te ocurra. Nuestras muestras y documentos de contribución a bibliotecas son un lugar excelente para empezar:
 
-- [Enviar al Escaparate del sitio](/contributing/site-showcase-submissions)
+- [Enviar a las muestras de sitios](/contributing/site-showcase-submissions)
 - [Enviar a la Biblioteca del Entrantes](/contributing/submit-to-starter-library/)
 - [Enviar a la Biblioteca del Plugins](/contributing/submit-to-plugin-library/)
 
