@@ -1,5 +1,5 @@
 ---
-título: Cómo presentar un Issue
+title: Cómo presentar un Issue
 ---
 
 El [listado de Issues](https://github.com/gatsbyjs/gatsby/issues) es el mejor canal para reportar errores, solicitar nuevas funcionalidades y [crear pull requests](/contributing/how-to-open-a-pull-request/).
