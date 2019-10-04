@@ -10,11 +10,11 @@ Agradecemos todas sus contribuciones en la comunidad, y estaríamos encantados d
 - Starters de Gatsby
 - Plugins de Gatsby
 - Entradas de blog y casos de estudio
-- Videos de conferencias
-- Materiales de talleres
+- Videos de charlas y conferencias
+- Material para talleres
 - Issues de GitHub y pull requests
 
-...y cualquiera que se te ocurra. Nuestras muestras y documentos de contribución a bibliotecas son un lugar excelente para empezar:
+...y cualquier cosa que se te ocurra. Nuestras muestras y documentos de contribución a bibliotecas son un lugar excelente para empezar:
 
 - [Enviar a las muestras de sitios](/contributing/site-showcase-submissions)
 - [Enviar a la biblioteca de Starters](/contributing/submit-to-starter-library/)
