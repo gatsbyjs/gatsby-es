@@ -134,3 +134,4 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | string                 | _string_                              |
 | template literals      | _template literals_                   |
 | uncontrolled component | componente no controlado              |
+| Issue                  | Issue                                 |
