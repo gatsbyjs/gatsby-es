@@ -2,10 +2,6 @@
 
 This is the official Spanish translation of the Gatsby documentation.
 
-# Gatsby en Español
-
-This is the official Spanish translation of the Gatsby documentation.
-
 <p align = "center">
   <a href="https://gatsbyjs.org">
     <img alt = "Gatsby" src = "https://www.gatsbyjs.org/monogram.svg" width = "60" />
