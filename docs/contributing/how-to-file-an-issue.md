@@ -18,7 +18,7 @@ Por favor no uses el listado de issues para solicitar soporte, la (etiqueta **ga
 Si el issue te está afectando, completa la mayoría de ítems que puedas listados a continuación de arriba hacia abajo:
 
 1.  Si hay un issue , añade más detalles del issue para indicarnos te está afectando
-2.  Si hay un issue y puedes añadir más detalles, escribe un comentario describiendo cómo el error te esta afectando o si puedes, escribe una solucion a este error
+2.  Si hay un issue y puedes añadir más detalles, escribe un comentario describiendo cómo el error te está afectando o si puedes, escribe una solución a este error
 3.  Si _no hay_ un issue, escribe la más completa descripción de qué está pasando, preferiblemente con un enlace a un sitio en Gatsby que reproduce el problema o [crea un caso de prueba para reproducirlo](/contributing/how-to-make-a-reproducible-test-case/)
 4.  Ofrece ayuda para resolver el error (y es totalmente esperado que preguntes por ayuda; los mantenedores de código-abierto desean ayudar a los contribuidores)
 5.  [Envía un bien elaborado, detallado y probado PR](/contributing/how-to-open-a-pull-request/)
