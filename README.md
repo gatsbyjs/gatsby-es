@@ -1,3 +1,3 @@
 # Gatsby en Español
 
-This is the official Spanish translation of the Gatsby documentation.
+Esta es la traducción oficial en español de la documentación de Gatsby. 
