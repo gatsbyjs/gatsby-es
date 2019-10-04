@@ -1,33 +1,33 @@
 ---
-title: Adding Components to Markdown with MDX
+El titulo: Adición de componentes a Markdown con MDX
 ---
 
-When writing long-form content in Markdown you might want to embed [components](/docs/glossary/#component).
-This is often achieved by either writing content in JSX or using plugins that
-use custom syntax. The first approach isn't optimal because JSX isn't the best
-format for content and can make it less approachable to members of a team. Custom
-syntax and plugins are often too inflexible and don't promote composition. If
-you're finding yourself wanting to add components to your content you can use
-`gatsby-plugin-mdx` which is a Gatsby plugin to integrate MDX into your project.
+Al escribir contenido de formato largo en Markdown es posible que desee incrustar [componentes](/docs/glossary/#component).
+Esto a menudo es conseguido por contenido de escritura en JSX o por utilización de enchufes de unión ese
+use la sintaxis de encargo. El primer enfoque no es óptimo porque JSX no es el mejor
+el formato para el contenido y lo puede hacer menos tratable a miembros de un equipo. La sintaxis 
+personalizada y los plugins son a menudo demasiado inflexibles y no promueven la composición. Si
+se encuentra queriendo añadir componentes a su contenido puede usar
+`gatsby-plugin-mdx` que es un enchufe de unión de Gatsby para integrar MDX en su proyecto.
 
-## What's MDX?
+## ¿Qué es MDX?
 
-[MDX][mdx] is Markdown for the component era.
-It lets you write JSX embedded inside Markdown.
-It’s a great combination because it allows you to use Markdown’s terse
-syntax (such as `# Heading`) for your content and JSX for more advanced,
-or reusable components.
+[MDX][mdx] es Markdown para la era de los componentes.
+Le permite escribir JSX incrustado dentro de Markdown.
+Es una excelente combinación porque permite usar Markdown es ser conciso
+Sintaxis (como `# Heading`) para su contenido y JSX para más avanzadas, 
+o componentes reutilizables.
 
-This is useful in content-driven sites where you want the ability
-to introduce components like charts or alerts without having to
-configure a plugin. It emphasizes composition over configuration
-and really shines with interactive blog posts, documenting design
-systems, or long form articles with immersive or dynamic
-interactions.
+Esto es útil en sitios basados en contenido donde desea la capacidad 
+de introducir componentes como gráficos o alertas sin tener que 
+configurar un complemento. Hace hincapié en la composición sobre la configuración
+y realmente brilla con entradas de blog interactivas, documentos de diseño
+sistemas o artículos de forma larga con interacciones
+inmersivas o dinámicas.
 
-When using MDX you can also import other MDX documents and render
-them as components. This lets you write something like an FAQ
-page in one place and reuse it throughout your website.
+Al utilizar MDX, también puede importar otros documentos MDX y renderizarlos
+them como componentes. Esto le permite escribir algo como una página de preguntas frecuentes
+página en un solo lugar y reutilizarlo en todo su sitio web.
 
 ## What does it look like in practice?
 
@@ -38,29 +38,29 @@ Markdown and JSX are included alongside each other like this:
 ```md
 import { Chart } from '../components/chart'
 
-# Here’s a chart
+# Aquí hay un gráfico
 
-The chart is rendered inside our MDX document.
+El gráfico se representa dentro de nuestro documento MDX.
 
 <Chart />
 ```
 
-## Features
+## La característica
 
-❤️ **Powerful**: MDX blends Markdown and JSX syntax to fit perfectly in
-React/JSX-based projects.
+❤️ **Poderoso**: MDX combina Markdown y JSX sintaxis para encajar perfectamente en
+Reaccionar/JSX proyectos basados en.
 
-💻 **Everything is a component**: Use existing components inside your
-MDX and import other MDX files as plain components.
+💻 **Todo es un componente**: Utilizar los componentes existentes dentro de su
+MDX y la importación de otros MDX archivos como plain componentes.
 
-🔧 **Customizable**: Decide which component is rendered for each Markdown
+🔧 **Personalizar**: Decida qué componente se representa para cada Markdown
 element (`{ h1: MyHeading }`).
 
-📚 **Markdown-based**: The simplicity and elegance of markdown remains;
-you interleave JSX only when you want to.
+📚 **Basado en Markdown**: La sencillez y la elegancia del markdown permanece;
+Usted interleave JSX sólo cuando desee.
 
-🔥 **Blazingly blazing fast**: MDX has no runtime, all compilation occurs
-during the build stage.
+🔥 **Increíblemente veloz**: MDX no tiene tiempo de ejecución, todas la compilación se produce
+Durante la etapa de creación.
 
 <GuideList slug={props.slug} />
 
