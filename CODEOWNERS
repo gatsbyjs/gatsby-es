@@ -1,1 +1,18 @@
-*     @horacioh @Darking360
+# Todos los archivos deben ser revisados ​​por el equipo central, a menos que sean propiedad de otro equipo.
+* @ gatsbyjs / core
+
+# Todos los documentos deben ser revisados ​​por el equipo de documentos.
+/ docs / @ gatsbyjs / learning
+** / README.md @ gatsbyjs / learning
+
+# El sitio web se implementa automáticamente, por lo que necesitamos una verificación adicional para evitar travesuras.
+/ www / @ gatsbyjs / sitio web
+
+# Temas
+
+/docs/docs/themes/                              @gatsbyjs/themes-core
+/themes/                                        @gatsbyjs/themes-core
+/packages/gatsby-plugin-mdx/                    @gatsbyjs/themes-core
+/packages/gatsby/src/bootstrap/load-themes      @gatsbyjs/themes-core
+/packages/gatsby/src/bootstrap/index.js         @gatsbyjs/themes-core
+/packages/gatsby/src/internal-plugins/webpack-theme-component-shadowing/   @gatsbyjs/themes-core
