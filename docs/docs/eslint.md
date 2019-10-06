@@ -1,33 +1,33 @@
 ---
-title: Using ESLint
+título: Utilización ESLint
 ---
 
-ESLint is an open source JavaScript linting utility. Code linting is a type of static analysis that is frequently used to find problematic patterns. There are code linters for most programming languages, and compilers sometimes incorporate linting into the compilation process.
+ESLint es una utilidad de linting JavaScript de código abierto. El linting de código es un tipo de análisis estático que se utiliza con frecuencia para encontrar patrones problemáticos. Hay código linters para la mayor parte de lenguajes de programación, y los compiladores a veces incorporan linting en el proceso de compilación.
 
-JavaScript, being a dynamic and loosely-typed language, is especially prone to developer error. Without the benefit of a compilation process, JavaScript code is typically executed in order to find syntax or other errors. Linting tools like ESLint allow developers to discover problems with their JavaScript code without executing it.
+JavaScript, siendo un lenguaje dinámico y de tipo suelto, es especialmente propenso a errores de desarrollador. Sin el beneficio de un proceso de compilación, JavaScript el código es típicamente ejecutado a fin de encontrar la sintaxis u otros errores. Herramientas de linting como ESLint permiten a los desarrolladores descubrir problemas con su código JavaScript sin ejecutarlo.
 
-## How to use ESLint
+## Cómo utilizar ESLint
 
-Gatsby ships with a built-in [ESLint](https://eslint.org) setup. For _most_ users, our built-in ESlint setup is all you need. If you know however that you'd like to customize your ESlint config e.g. your company has their own custom ESlint setup, this shows how this can be done.
+Gatsby buques con un built-in [ESLint](https://eslint.org) setup. Para usuarios _most_, nuestra configuración ESLint incorporada es todo lo que necesita. Si sabe sin embargo que le gustaría personalizar su ESLint config e.g. su compañía tiene su propio sistema de ESLint de encargo, esto muestra cómo esto puede ser hecho.
 
-We'll replicate (mostly) the [ESlint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/.eslintrc.json) so you can then add additional presets, plugins, and rules.
+Replicaremos (principalmente) el [ESlint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/.eslintrc.json) por lo que puede agregar ajustes preestablecidos adicionales, plugins y reglas.
 
 ```shell
 
-# First install the necessary ESLint dependencies
+# Primero instale las dependencias necesarias de ESLint
 npm install --save-dev eslint-config-react-app
 ```
 
-Now that we have our packages installed, create a new file at the root of the site named `.eslintrc.js` using the command below.
+Ahora que tenemos nuestros paquetes instalados, crear un nuevo archivo en la raíz del sitio denominado `.eslintrc.js` usando el siguiente comando.
 
 ```shell
-# Create a config file for ESLint
+# Crear un archivo de configuración para ESLint
 touch .eslintrc.js
 ```
 
-### Configuring ESLint
+### Configuración de ESLint
 
-Copy the snippet below to the newly created `.eslintrc.js` file. Then add additional presets, plugins, and rules as desired.
+Copie el siguiente fragmento al recién creado `.eslintrc.js` archivo. A continuación, agregue ajustes preestablecidos, plugins y reglas adicionales como desee.
 
 ```js:title=.eslintrc.js
 module.exports = {
