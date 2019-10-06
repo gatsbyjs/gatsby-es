@@ -12,7 +12,6 @@ Esta página se creó para recopilar información de accesibilidad sobre el ecos
 
 Gatsbyjs.org es el hogar en línea del _framework_ web de código abierto Gatsby; incluye documentación, tutoriales y guías sobre cómo y por qué construir con Gatsby, así como un blog, una muestra e información sobre cómo contribuir al proyecto.
 
-
 Gatsbyjs.com es el sitio web comercial de Gatsby, Inc., la startup que construye Gatsby, incluido nuestro primer producto, Gatsby Preview: un servicio en la nube que permite a los miembros del equipo colaborar en un sitio de Gatsby en desarrollo.
 
 ## Proporcionar comentarios y obtener ayuda de accesibilidad
