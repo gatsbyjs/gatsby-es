@@ -1,23 +1,23 @@
 ---
-title: Enhancing Styles with CSS-in-JS
+title: Mejora tus estilos con CSS-in-JS
 overview: true
 ---
 
-CSS-in-JS refers to an approach where styles are written in JavaScript instead of in external CSS files to easily scope styles in components, eliminate dead code, encourage faster performance and dynamic styling, and more.
+CSS-in-JS se refiere a un enfoque donde los estilos son escritos en JavaScript en lugar de en un fichero externo de CSS para mantener fácilmente tus estilos en el ámbito de tus componentes, eliminar código muerto, garantizar un rendimiento más rápido y estilos dinámicos, y mucho más.
 
-CSS-in-JS bridges the gap between CSS and JavaScript:
+CSS-in-JS une la brecha entre CSS y JavaScript:
 
-1. **Components**: you'll style your site with components, which integrates well with React's "everything is a component" philosophy.
-2. **Scoped**: this is a side effect of the first. Just like [CSS Modules](/docs/css-modules/), CSS-in-JS is scoped to components by default.
-3. **Dynamic**: style your site dynamically based on component state by integrating JavaScript variables.
-4. **Bonuses**: many CSS-in-JS libraries generate unique class names which can help with caching, automatic vendor prefixes, timely loading of critical CSS, and implementing many other features, depending on the library you choose.
+1. **Componentes**: darás estilo a tu sitio con componentes, integrándose perfectamente con la filosofía de "todo es un componente" de React.
+2. **Ámbito**: esto es un efecto colateral de lo primero. Al igual que los [CSS Modules](/docs/css-modules/), el CSS-in-JS se encuentra en el ámbito de los componentes por defecto.
+3. **Dinámico**: da estilo a tu sitio dinámicamente basado en el estado de tu componente integrando variables de JavaScript.
+4. **Extra**: muchas bibliotecas de CSS-in-JS generan nombres de clase únicos que pueden ayudar con el _caching_, el _vendor prefix_ automático, la carga adecuada de CSS crítico, y además de implementar muchas otras características, dependiendo de la librería que elijas.
 
-CSS-in-JS, while not required in Gatsby, is very popular among JavaScript developers for the reasons listed above. For more context, read Max Stoiber's (creator of CSS-in-JS library [styled-components](/docs/styled-components/)) article [_Why I write CSS in JavaScript_](https://mxstbr.com/thoughts/css-in-js/). However, you should also consider whether CSS-in-JS is necessary, as not relying on it can encourage more inclusive front-end skill-sets. It is also more difficult to port styles from JSX to and from CSS.
+CSS-in-JS, aunque no es obligatorio en Gatsby, es muy popular entre los desarrolladores de JavaScript por las razones que se listaron arriba. Para más contexto, lee el artículo de Max Stoiber (creador de la biblioteca de CSS-in-JS [styled-components](/docs/styled-components/)) [_Why I write CSS in JavaScript_](https://mxstbr.com/thoughts/css-in-js/). Sin embargo, también deberías considerar si el CSS-in-JS es necesario, ya que no depender de él puede fomentar en un conjuntos de habilidades _frontend_ más inclusivas. También es más difícil migrar estilos desde JSX a CSS y viceversa.
 
-_Note that this functionality is not a part of React or Gatsby, and requires using any of the many [third-party CSS-in-JS libraries](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
+_Tenga en cuenta que esta funcionalidad no es parte de React o Gatsby, y requiere usar alguna de las muchas [bibliotecas de terceros de CSS-in-JS](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
 
-> Adding a stable CSS class to your JSX markup along with your CSS-in-JS can make it easier to users to include [User Stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) for accessibility. See [Styled Components](/docs/styled-components#enabling-user-stylesheets-with-a-stable-class-name) example.
+> Añadiendo una clase estable de CSS a JSX junto con CSS-in-JS puede hacer más fácil para tus usuario incluir [_User Stylesheets_](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para accesibilidad. Ver un ejemplo con [Styled Components](/docs/styled-components#enabling-user-stylesheets-with-a-stable-class-name).
 
-This section contains guides for styling your site with some of the most popular CSS-in-JS libraries, including how to set up global styles using each library.
+Esta sección puede contener guías para dar estilo a tu sitio con algunas de las bibliotecas CSS-in-JS más populares, incluyendo como configurar estilos globales usando cada biblioteca.
 
 <GuideList slug={props.slug} />
