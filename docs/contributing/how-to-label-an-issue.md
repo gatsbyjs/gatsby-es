@@ -1,97 +1,97 @@
 ---
-title: Cómo etiquetar un problema
+El titulo: Cómo poner etiqueta a una cuestión
 ---
 
-## Qué son las etiquetas de emisión?
+## ¿Qué son etiquetas de la cuestión?
 
-Las etiquetas de problema son una herramienta de GitHub que se utilizan para agrupar problemas en una o varias categorías.
+Emitir las etiquetas son una herramienta en GitHub que se utilizan para agrupar los temas en una o más categorías.
 
-[Compruebe las etiquetas de Gatsby (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels)
+[Echa un vistazo a las etiquetas de Gatsby (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-## Por qué etiquetar problemas?
+## ¿Por qué etiquetas de la cuestión?
 
-Gatsby es un proyecto muy activo con muchos temas nuevos abiertos cada día. Los problemas de etiquetado ayudan identificando:
+Gatsby es un proyecto muy activo con muchas nuevas cuestiones abiertas cada día. El etiquetaje a cuestiones ayuda identificándose:
 
 - buenas cuestiones para que los nuevos contribuyentes trabajen en
 - errores reportados y confirmados
-- solicitudes de funciones
-- problemas duplicados
-- problemas que están estancados o bloqueados
+- Las solicitudes de funciones
+- cuestiones duplicadas
+- las cuestiones que son paradas o bloqueadas
 
-## Quién puede etiquetar los problemas?
+## ¿Quién puede poner etiqueta a cuestiones?
 
-Cualquiera que sea miembro del [equipo de Gatsby Maintainers](https://github.com/orgs/gatsbyjs/teams/maintainers) puede etiquetar problemas.
+Cualquiera que sea un miembro del [equipo de Gatsby Maintainers](https://github.com/orgs/gatsbyjs/teams/maintainers) puede poner etiqueta a cuestiones.
 
-Puede obtener una invitación al equipo haciendo que una solicitud de extracción se fusione en el proyecto Gatsby. Echa un vistazo a la lista de ['ayuda deseada'](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) problemas y la [Guía de cómo contribuir](/contributing/how-to-contribute/) para empezar.
+Usted puede obtener una invitación para el equipo por tener una solicitud de extracción se fusionaron en el Gatsby proyecto. Compruebe la lista de ['help wanted'](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) y [Cómo contribuir guía](/contributing/how-to-contribute/) para empezar.
 
-**NOTA:** Si ya ha fusionado una solicitud de extracción y no ha sido invitado al equipo de mantenedores, vaya a [el panel de control](https://store.gatsbyjs.org/) and request a discount code. Deberías recibir una invitación al equipo, ¡y obtendrás un botín gratis de Gatsby! Si eso no funciona, por favor envíe un correo electrónico a team-gatsbyjs.com y te invitaremos.
+**NOTA:** Si ha hecho combinar ya una solicitud de tirón y _no_ ha sido invitado al equipo maintainers, por favor vaya a [el tablero de instrumentos](https://store.gatsbyjs.org/) y solicite un código de descuento.¡Debería conseguir invitar al equipo — _y consigue el botín de Gatsby libre!_ Si esto no trabaja, por favor correo electrónico team-gatsbyjs.com y le invitaremos.
 
-## Cómo etiquetar un problema
+## Cómo poner etiqueta a una cuestión
 
-Idealmente, cada problema debe tener una sola etiqueta `type:` aplicada. Opcionalmente, también se puede aplicar una etiqueta `status:` u otras etiquetas.
+Idealmente, cada cuestión debería tener un `type:` solo la etiqueta se aplicó a ello. Opcionalmente un `status:` a etiqueta u otras etiquetas también pueden ser aplicadas.
 
-Antes de continuar, familiarícese con [Las etiquetas de emisión de Gatsby y sus descripciones](https://github.com/gatsbyjs/gatsby/issues/labels).
+Antes de seguir, hágase familiar con [las etiquetas de la cuestión de Gatsby y sus descripciones](https://github.com/gatsbyjs/gatsby/issues/labels).
 
-Los amplios pasos para etiquetar un problema son:
+Los amplios pasos al etiquetaje a una cuestión son:
 
-- Leer un problema
-- Elija las etiquetas que se aplican a ese problema
+- Lea de la cuestión
+- Elija las etiquetas que se aplican a esa cuestión
 - Eso es todo - siéntate y relájate, tal vez tome unos momentos para disfrutar de la satisfacción de un trabajo bien hecho
 
-El resto de este documento describirá cómo elegir las etiquetas correctas para un problema.
+El resto de este documento describirá cómo elegir las etiquetas correctas para de la cuestión.
 
 ### Encuentra un problema que te interese
 
-Comience con [Lista de problemas de Gatsby](https://github.com/gatsbyjs/gatsby/issues) y desplácese hasta que vea uno reciente que golpee su interés. Alternativamente, puede ver la [lista de problemas sin etiquetar](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
+Comience con [la lista de cuestiones de Gatsby](https://github.com/gatsbyjs/gatsby/issues) y voluta a través de hasta que vea uno reciente que golpea su interés. O bien, puede ver el [la lista de cuestiones no marcadas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
 
-### Lea el problema
+### Lea de la cuestión
 
-Lea el problema y cualquier comentario para entender de qué se trata el problema.
+Lea de la cuestión y cualquier comentario para entender sobre qué la cuestión es.
 
-### Elija una etiqueta `type:`
+### Elija un `type:` etiqueta
 
-Elija una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del problema.
+Elija una etiqueta del tipo de las etiquetas dropdown al lado derecho de la cuestión.
 
-![Menú desplegable de la etiqueta de GitHub](./images/github-label-list.png)
+![GitHub etiqueta dropdown](./images/github-label-list.png)
 
 Puede comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada uno de ellos.
 
-El tipo más común de problema es `type: question or discussion`, normalmente se puede aplicar a los problemas que son de composición abierta o no tienen un siguiente paso claro.
+El tipo más común de la cuestión es `type: la pregunta o la discusión`, típicamente puede aplicar esto a cuestiones que son sin límites determinados o tienen ningún siguiente paso claro.
 
-Está bien cambiar el tipo de problema a medida que haya más información disponible. Lo que comienza como `type: question or discussion`, es posible que más tarde deba cambiarse a `type: bug`.
+Está bien para cambiar el tipo de una cuestión ya que más información se hace disponible. Que ventajas como `type: la pregunta o la discusión`, tendrían que más tarde ser cambiadas a `type: error de programación`.
 
-Cambiar las etiquetas es rápido y fácilmente reversible, así que no te preocupes demasiado por aplicar una etiqueta "equivocada".
+El cambio de etiquetas es rápido y fácilmente reversible, así no se preocupe demasiado de la aplicación de una etiqueta "incorrecta".
 
-Elija una etiqueta de `type:` label and you're ready to move on to the next step.
+Elija un `type:` apropiado: la etiqueta y usted están listos para circular al siguiente paso.
 
-### Elija una etiqueta `status:` (opcional)
+### Elija un `status:` etiqueta (opcional)
 
-Compruebe a través de las etiquetas [`status:` (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si se aplica alguna a este problema, agréguelos según sea necesario.
+Compruebe a través de la [`status:` etiquetas (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si alguno se aplica a este de la cuestión agregarlos como sea necesario.
 
 Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
-- Un problema que depende de una dependencia externa que se va a cambiar podría etiquetarse con `status: blocked`
+- Una cuestión que depende de una dependencia externa cambiada podría ser marcada por 'el estado: bloqueado' `status: blocked`
 
-- Un problema con una descripción clara de cómo se puede resolver podría ser etiquetado como `status: help wanted`.
+- Una cuestión con una descripción clara de cómo puede ser resuelto podría ser marcada `status: help wanted`.
 
-- Un problema que falta información necesaria para ayudar al autor podría ser etiquetado con `status: needs more info`
+- Una cuestión esto pierde la información requerida ayudar al autor podría ser marcada por `status: needs more info`
 
-- Un problema que describe un error sin pasos claros para reproducirse podría etiquetarse con `status: needs reproduction`
+- Una cuestión que describe un error de programación sin pasos claros para reproducirse podría ser marcada por `status: needs reproduction`
 
-- Un problema que describe un error donde hay pasos para reproducir el error y ha ejecutado el código localmente y visto el error usted mismo se puede etiquetar como `status: confirmed`
+- Una cuestión que describe un error de programación donde hay pasos para reproducir el error de programación y ha dirigido el código en la localidad y ha visto que el error usted mismo puede ser marcado `status: confirmed`
 
 ### Elija cualquier otra etiqueta
 
-Hay algunas otras etiquetas que a veces se pueden aplicar a un problema. Aquí hay algunos ejemplos más de cuándo usarlos:
+Hay unas otras etiquetas que pueden ser a veces aplicadas a una cuestión. Aquí están algunos ejemplos más de cuando usarlos:
 
-- `good first issue` se puede utilizar cuando un problema es una pequeña pieza de trabajo claramente definida que podría ser completada por alguien sin un conocimiento profundo de Gatsby y cómo funciona. Estas cuestiones son particularmente adecuadas para las personas que hacen sus primeras contribuciones de código abierto.
+- `la primera cuestión buena` puede ser usada cuando una cuestión es un trabajo pequeño, claramente definido que podría ser completado por alguien sin el conocimiento a fondo de Gatsby y cómo trabaja. Estas cuestiones son particularmente convenientes para la gente que hace sus primeras contribuciones de la fuente abiertas.
 
-- `stale?` puede utilizarse en un tema en el que el autor no haya respondido a las solicitudes de información adicional en al menos 20 días.
+- `stale?` puede ser usado en una cuestión donde el autor no ha contestado a peticiones de más información en al menos 20 días
 
 ### El final
 
-¡Y ya terminaste! Puede llamarlo un día o volver al primer paso para etiquetar otro problema.
+¡Y es hecho! Lo puede llamar un día o volver al primer paso para poner etiqueta a otra cuestión.
 
 ## La conclusión
 
-Los problemas de etiquetado son una excelente manera de ayudar en el proyecto Gatsby independientemente de su nivel de experiencia.
+El etiquetaje a cuestiones es una gran manera echar una mano en el proyecto de Gatsby sin tener en cuenta su nivel de experiencia.
