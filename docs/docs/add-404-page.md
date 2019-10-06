@@ -15,11 +15,11 @@ Debido a que Gatsby crea esta página para usted por defecto, no hay necesidad d
 en el fichero `gatsby-node.js`.
 
 Cuando se desarrolla usando `gatsby develop`, Gatsby utiliza una página 404 por defecto 
-que sobreescribe la página 404 personaliza. No obstante, usted puede seguir previsualizar su página 404 
+que sobreescribe la página 404 personalizada. No obstante, usted puede seguir previsualizando su página 404 
 haciendo click en "Previsualizar página 404 personalizada", para verificar que esta funcionando 
 como debería. Esto es útil cuando está desarrollando, ya que de esta manera puede ver todas las páginas disponibles.
 
-La captura de abajo muestra la página 404 que Gatsby crea por defecto.
+La captura a continuación muestra la página 404 que Gatsby crea por defecto.
 Además, lista todas las páginas disponibles en su sitio. Haciendo click en el botón "Previsualizar página 404 
 personalizada" le permitirá ver la página 404 que ha creado.
 ![Página 404 por defecto de Gatsby](images/gatsby-default-404.png)
