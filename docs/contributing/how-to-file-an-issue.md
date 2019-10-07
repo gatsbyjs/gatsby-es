@@ -22,4 +22,3 @@ Si el issue te está afectando, completa la mayoría de ítems que puedas listad
 3.  Si _no hay_ un issue, escribe la más completa descripción de qué está pasando, preferiblemente con un enlace a un sitio en Gatsby que reproduce el problema o [crea un caso de prueba para reproducirlo](/contributing/how-to-make-a-reproducible-test-case/)
 4.  Ofrece ayuda para resolver el error (y es totalmente esperado que preguntes por ayuda; los mantenedores de código-abierto desean ayudar a los contribuidores)
 5.  [Envía un bien elaborado, detallado y probado PR](/contributing/how-to-open-a-pull-request/)
-
