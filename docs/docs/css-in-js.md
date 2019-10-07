@@ -3,7 +3,7 @@ title: Mejora tus estilos con CSS-in-JS
 overview: true
 ---
 
-CSS-in-JS se refiere a un enfoque donde los estilos son escritos en JavaScript en lugar de en un fichero CSS externo para facilitar la separación de estilos entre componentes, fomentar un rendimiento más rápido, estilos dinámicos, y mucho más.
+CSS-in-JS se refiere a un enfoque donde los estilos son escritos en JavaScript en lugar de en un fichero CSS externo para facilitar la separación de estilos entre componentes, fomentando un rendimiento más rápido, estilos dinámicos y mucho más.
 
 CSS-in-JS une la brecha entre CSS y JavaScript:
 
