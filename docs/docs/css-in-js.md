@@ -14,7 +14,7 @@ CSS-in-JS une la brecha entre CSS y JavaScript:
 
 CSS-in-JS, aunque no es obligatorio en Gatsby, es muy popular entre los desarrolladores de JavaScript por las razones que se enumeraron arriba. Para más contexto, lee el artículo de Max Stoiber (creador de la biblioteca de CSS-in-JS [styled-components](/docs/styled-components/)) [_Why I write CSS in JavaScript_](https://mxstbr.com/thoughts/css-in-js/). Sin embargo, también deberías considerar si el CSS-in-JS es necesario, ya que no depender de él puede fomentar un conjunto de habilidades _frontend_ más inclusivas. También es más difícil migrar estilos desde JSX a CSS y viceversa.
 
-_Tenga en cuenta que esta funcionalidad no es parte de React o Gatsby, y requiere usar alguna de las muchas [bibliotecas CSS-in-JS de terceros](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
+_Ten en cuenta que esta funcionalidad no es parte de React o Gatsby, y requiere usar alguna de las muchas [bibliotecas CSS-in-JS de terceros](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
 
 > Añadiendo una clase estable de CSS a JSX junto con CSS-in-JS puede hacer más fácil para tus usuario incluir [_User Stylesheets_](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para accesibilidad. Veáse un ejemplo con [Styled Components](/docs/styled-components#enabling-user-stylesheets-with-a-stable-class-name).
 
