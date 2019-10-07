@@ -11,7 +11,7 @@ Si deseas que tu issue sea solucionado lo más pronto posible, incluye la siguie
   también los de los archivos `gatsby-node.js`, `gatsby-browser.js` y `gatsby-ssr.js`
   dependiendo de los cambios que hiciste allí.
 
-Por favor no uses el listado de issues para solicitar soporte, la (etiqueta **gatsby**) en [Stack Overflow](https://stackoverflow.com/questions/ask?tags=gatsby) y el canal de [Gatsby en Discord](https://gatsby.dev/discord) son las páginas correctas para poderte ayudar.
+Por favor no uses el listado de issues para solicitar soporte, la (etiqueta **gatsby**) en [Stack Overflow](https://stackoverflow.com/questions/ask?tags=gatsby) y el canal de [Gatsby en Discord](https://gatsby.dev/discord) son las páginas correctas para obtener ayuda.
 
 ### Notas importantes acerca de los Issues
 
