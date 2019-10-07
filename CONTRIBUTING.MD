@@ -1,10 +1,10 @@
-# ¿Como contribuir?
+# ¿Como contribuir? 🤔
 
 Bienvenido a la documentación en Español de Gatsby, antes que todo muchas gracias por tu interes en contribuir a hacer mas acesible la documentación a nuestro idioma, a continuación te mostramos los enlaces de utilidad y una serie de instrucciones que debes seguir para empezar a contribuir.
 
-## Traduciendo las páginas
+## Traduciendo las páginas 
 
-La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `.MD` corresponde a una página de la documentación, y por grande o pequeńa que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizo una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar aquí: [Issue de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/4).
+La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `.MD` corresponde a una página de la documentación, y por grande o pequeńa que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizo una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar en el [issue de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/4).
 
 ## Pasos para traducir una página
 
@@ -43,4 +43,32 @@ Ya todos tus cambios estan en el repositorio, pero no el oficial, para poderlos 
 - **3.-** En las opciones de la derecha, debes seleccionar tu repositorio, usualmente aparece como: `<TU_NOMBRE_DE_USUARIO>/gatsby-es`, y al lado debes seleccionar al nombre de la rama en la que estan tus cambios.
 - **4.-** Ahora se mostrarán los cambios que realizaste en el código, si todo se ve bien, haz click en `Create pulll request`.
 - **5.-** Ahora se te pedirá un titulo para el PR y unos comentarios, agrega un titulo acorde con tu traducción o cambios, y un comentario explicando los mismos, y dale a `Create pull request`.
-- **6.-** Los mantenedores revisarán tus cambios, y te harán saber si hay correcciones o se puede pasar directo, de existir correcciones, solo debes agregarlas, volver a hacer commit de tus cambios y subir a tu repositorio, el PR se actualizará automáticamente.
+- **6.-** Ahora agregarás la etiqueta `Work in progress` a tu PR, puedes hacer esto en las opciones de la mano derecha del PR, dale click a `Labels` y busca esta etiqueta, asi sabremos que sigues trabajando en el PR. Al terminar con tu trabajo, cambia la etiqueta a `Ready for review` para que sepamos que ya esta listo para ser evaluado.
+- **7.-** Los mantenedores revisarán tus cambios, y te harán saber si hay correcciones o se puede pasar directo, de existir correcciones, solo debes agregarlas, volver a hacer commit de tus cambios y subir a tu repositorio, el PR se actualizará automáticamente 🧙
+
+## Recomendaciones al trabajar en las traducciones
+
+Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de sume importancia:
+
+- Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras mal escritas, siempre ten cuidado con esto.
+- No agregues o elimines líneas de la documentación, traduce siempre sobre las mismas líneas, una forma fácil de comprobar esto es revisar que las primeras y últimas 10 líneas de la página tengan contenido igual o títulos, pero por supuesto traducidos.
+- Siempre manten un Español neutral, no uses palabras que estén influenciadas por tu región o país, esto sera evaluado mas adelante por los mantenedores pero es de gran ayuda para mantener la documentación con un lenguaje neutral.
+- Si no conoces la traducción a una palabra puedes utilizar herramientas como [Google translate](https://translate.google.com/?hl=es), no hay nada de malo en esto, pero no traduzcas una página completa con este ya que el significado se puede perder.
+
+Una buena forma de tener en cuenta aspectos como estos es crear una lita de checks en tu PR, por ejemplo:
+
+- [ ] Traducción inicial
+- [ ] Comprobar gramática y acentos
+- [ ] Leer antes de enviar
+
+## No se ingles, ¿aún así puedo contribuir?
+
+¡Por supuesto que si! Como pudiste leer en la sección arriba de esta, entre los aspectos vitales de las traducciones estan la ortografía y la gramática, los mantenedores hacen su mejor esfuerzo por mantener limpios estos aspectos, pero siempre se les puede escapar algo, tambien puedes contribuir leyendo las traducciones y detectando errores, bien sean estos aspectos o quizás palabras mal escritos, modismos o palabras que no son de Español neutro, puedes ayudarnos a curar este contenido 🤓 Envíanos un PR con correcciones 🚀
+
+## Recompensas ✨
+
+Al contribuir con un proyecto como este no solo estarías contribuyendo a código abierto (lo cual es genial), si no que tambien entras a los contribuidores oficiales de Gatsby, y por si esto no fuera lo suficiente, el equipo de Gatsby te quiere agradecer regalándote un [premio](https://www.gatsbyjs.org/contributing/contributor-swag/) de la [tienda oficial de Gatsby](https://store.gatsbyjs.org/) ❤️ Si sigues contribuyendo puedes optar por más regalos, con 5 contribuciones o más, revisa la [página oficial](https://www.gatsbyjs.org/contributing/contributor-swag/) para más información 🧐
+
+## A traducir 🏃‍
+
+Si has leído hasta aquí, ¿Qué estas esperando?, pide una página que quieras traducir en [este issue](https://github.com/gatsbyjs/gatsby-es/issues/4) y empieza a contribuir con la comunidad de Gatsby ❤️
