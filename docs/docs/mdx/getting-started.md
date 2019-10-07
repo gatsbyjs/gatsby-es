@@ -1,47 +1,43 @@
 ---
-title: Getting Started with MDX
+title: Empezando con MDX
 ---
 
-The fastest way to get started with Gatsby + MDX is to use the [MDX
-starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). This
-allows you to write .mdx files in `src/pages` in order to create new pages on
-your site.
+La manera más rápida de empezar con Gatsby + MDX es usar el [starter MDX](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Esto te permite escribir archivos .mdx en `src/pages` para crear nuevas páginas en tu sitio.
 
-## 🚀 Quick start
+## 🚀 Inicio Rápido
 
-1. **Initialize the MDX starter** with the Gatsby CLI
+1. **Inicializar el starter MDX** con el Gatsby CLI
 
    ```shell
    gatsby new my-mdx-starter https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic
    ```
 
-1. **Run the dev server** by changing directory to the scaffolded site and install dependencies
+1. **Ejecutar el servidor de desarrollo** cambiando de directorio al sitio creado e instalar las dependencias
 
    ```shell
    cd my-mdx-starter/
    gatsby develop
    ```
 
-1. **Open the site** running at http://localhost:8000
+1. **Abrir el sitio** ubicado en http://localhost:8000
 
-1. **Update the MDX content** by opening the `my-mdx-starter` directory
-   in your code editor of choice and edit `src/pages/index.mdx`.
-   Save your changes and the browser will update in real time!
+1. **Actualizar el contenido MDX** abriendo la carpeta `my-mdx-starter`
+   en tu editor de código fuente preferido y editar `src/pages/index.mdx`.
+   Guarda tus cambios y el se actualizará automáticamente en tiempo real!
 
-## Add MDX to an existing Gatsby site
+## Agregar MDX a un sitio existente de Gatsby
 
-If you already have a Gatsby site that you'd like to add MDX to, you
-can follow these steps for configuring the [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/) plugin:
+Si ya tienes un sitio de Gatsby al que quieras agregar MDX, podrás seguir estos paso para configurar el plugin [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/):
 
-1. **Add `gatsby-plugin-mdx`** and MDX as dependencies
+1. **Agregar `gatsby-plugin-mdx`** y MDX como dependencias
 
    ```shell
    npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
    ```
 
-   > **Note:** If you're upgrading from v0, additionally [check out the MDX migration guide](https://mdxjs.com/migrating/v1).
+   > **Nota:** Si estás actualizando desde la v0, también [revisa la guía de migración de MDX](https://mdxjs.com/migrating/v1).
 
-1. **Update your `gatsby-config.js`** to use `gatsby-plugin-mdx`
+1. **Actualizar tu `gatsby-config.js`** para usar`gatsby-plugin-mdx`
 
    ```javascript:title=gatsby-config.js
    module.exports = {
@@ -52,13 +48,12 @@ can follow these steps for configuring the [gatsby-plugin-mdx](/packages/gatsby-
    }
    ```
 
-1. **Restart `gatsby develop`** and add an `.mdx` page to `src/pages
+1. **Reiniciar `gatsby develop`** y agregar una página `.mdx` en `src/pages
 
-> **Note:** If you want to query for frontmatter, exports, or other fields like
-> `tableOfContents` and you haven't previously added a `gatsby-source-filesystem`
-> pointing at `src/pages` in your project, you'll want to add one now.
+> **Nota:** Si quieres hacer un query para frontmatter, exports, u otros campos como
+> `tableOfContents` y no has agregadado un `gatsby-source-filesystem`
+> dirigido a `src/pages` en tu proyecto, tendrías que agregarlo ahora.
 
-## What's next?
+## Próximos pasos?
 
-Go check out the [writing MDX guide](/docs/mdx/writing-pages) to find out what else you can do
-with Gatsby and MDX.
+Revisa [la guía de escribir MDX](/docs/mdx/writing-pages) para saber qué más puedes hacer con Gatsby y MDX.
