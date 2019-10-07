@@ -1,4 +1,4 @@
-# ¿Como contribuir? 🤔
+# ¿Cómo contribuir? 🤔
 
 Bienvenido a la documentación en Español de Gatsby, antes que todo muchas gracias por tu interes en contribuir a hacer mas acesible la documentación a nuestro idioma, a continuación te mostramos los enlaces de utilidad y una serie de instrucciones que debes seguir para empezar a contribuir.
 
@@ -48,7 +48,7 @@ Ya todos tus cambios estan en el repositorio, pero no el oficial, para poderlos 
 
 ## Recomendaciones al trabajar en las traducciones
 
-Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de sume importancia:
+Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.MD), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de sume importancia:
 
 - Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras mal escritas, siempre ten cuidado con esto.
 - No agregues o elimines líneas de la documentación, traduce siempre sobre las mismas líneas, una forma fácil de comprobar esto es revisar que las primeras y últimas 10 líneas de la página tengan contenido igual o títulos, pero por supuesto traducidos.
