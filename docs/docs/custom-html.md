@@ -50,8 +50,6 @@ significa que a su `html.js` le falta el requerido
 
 ### Agregar JavaScript personalizado
 
-You can add custom JavaScript to your HTML document by using React's [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) attribute.
-
 Puede agregar JavaScript personalizado a su documento HTML utilizando el atributo React [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml).
 
 ```jsx:title=src/html.js
