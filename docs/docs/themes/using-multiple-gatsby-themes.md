@@ -1,16 +1,16 @@
 ---
-title: Using Multiple Gatsby Themes
+título: Usando de múltiples temas de Gatsby
 ---
 
-Gatsby themes are intended to be composable. This means you can install multiple themes alongside each other.
+Gatsby temas están destinados a ser componible. Esto significa que puede instalar temas múltiples el uno junto al otro.
 
-The `gatsby-starter-theme` composes two Gatsby themes: `gatsby-theme-blog` and `gatsby-theme-notes`
+La `gatsby-starter-theme` compone dos temas de Gatsby: `gatsby-theme-blog` y `gatsby-theme-notes`
 
 ```shell
 gatsby new my-notes-blog https://github.com/gatsbyjs/gatsby-starter-theme
 ```
 
-The starter includes both theme packages (`gatsby-theme-blog` and `gatsby-theme-notes`) in the starter's `gatsby-config.js` file.
+El inicio incluye ambos paquetes de tema (`gatsby-theme-blog` y `gatsby-theme-notes`) en el archivo `gatsby-config.js` del starter.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -22,8 +22,8 @@ module.exports = {
         basePath: `/notes`,
       },
     },
-    // with gatsby-plugin-theme-ui, the last theme in the config
-    // will override the theme-ui context from other themes
+    // con gatsby-plugin-theme-ui, el último tema en la configuración
+    // anulará el contexto theme-ui de otros temas
     { resolve: `gatsby-theme-blog` },
   ],
   siteMetadata: {
@@ -32,14 +32,14 @@ module.exports = {
 }
 ```
 
-In the default setup, a blog will be served from the root path (`/`), and the notes content will be served from `/notes`.
+En la configuración predeterminada, se servirá un blog desde la ruta raíz (`/`), y el contenido de las notas se servirá desde `/notes`.
 
-Run `gatsby develop` to start a development server and view your the site:
+Ejecute `gatsby develop` para iniciar un servidor de desarrollo y ver si es el sitio:
 
 ![The homepage of the site created by gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
 
 ![The `notes` route of a site created by gatsby-theme starter](../images/gatsby-theme-starter-notes.png)
 
-## Tutorial
+## El tutorial
 
-For a step-by-step tutorial, see the ["Using Multiple Themes Together" tutorial](/tutorial/using-multiple-themes-together).
+Para ver un tutorial paso a paso, consulte el tutorial ["Uso de varios temas juntos"](/tutorial/using-multiple-themes-together).
