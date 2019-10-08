@@ -13,7 +13,7 @@ Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para 
 - Enviando arreglos de errores ortográficos o de gramática
 - Adding tests de unidad o funcionales
 - Haciendo "triage" de [issues en GitHub](https://github.com/gatsbyjs/gatsby/issues) -- especialmente determinando si un issue todavía persiste o si es reproducible
-- [Reportando bugs o issues](/contributing/how-to-file-an-issue/)
+- [Reportando errores o issues](/contributing/how-to-file-an-issue/)
 - Buscando por Gatsby en [Discord](https://gatsby.dev/discord) o [Spectrum](https://spectrum.chat/gatsby-js) y ayudando a alguien más que necesite ayuda
 - ¡Enseñándole a otros sobre cómo contribuir a los repositorios de Gatsby!
 
