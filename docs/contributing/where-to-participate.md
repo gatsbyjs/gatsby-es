@@ -17,6 +17,6 @@ Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para 
 - Buscando por Gatsby en [Discord](https://gatsby.dev/discord) o [Spectrum](https://spectrum.chat/gatsby-js) y ayudando a alguien más que necesite ayuda
 - ¡Enseñándole a otros sobre cómo contribuir a los repos de Gatsby!
 
-Como nuestro modo de decir "gracias" a nuestros contribuyentes,  **_todos los contribuyentes_ son elegibles para [swag gratuito de Gatsby](/contributing/contributor-swag/)** — sea que estés contribuyendo código, docs, una charla, un articulo, o algo que ayude a la comunidad de Gatsby. [Descubre como pedir tu swag gratuito si eres contribuyente.](/contributing/contributor-swag/)
+Como nuestro modo de decir "gracias" a nuestros contribuidores,  **_todos los contribuidores_ son elegibles para [swag gratuito de Gatsby](/contributing/contributor-swag/)** — sea que estés contribuyendo código, documentación, una charla, un artículo, o algo que ayude a la comunidad de Gatsby. [Descubre como pedir tu swag gratuito si eres contribuidor.](/contributing/contributor-swag/)
 
 Aprende más sobre cómo participar en Gatsby.js en nuestra página [Cómo contribuir](/contributing/how-to-contribute/).
