@@ -47,24 +47,24 @@ Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby
   ```
 
 - Una vez que tienes cambios en Git que quieres subir, [agrégalos y crea un commit](https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line). Para información sobre como estructurar tus commits, revisa la guía de [Manejando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
-  - Usando un caracter de punto `.` agregará todos los archivos no seguidos todavía en el actual directorio y subdirectorios.
+  - Usando un carácter de punto `.` agregará todos los archivos no seguidos todavía en el actual directorio y subdirectorios.
   ```shell
   git add .
   ```
   - Usando una herramienta visual como [GitHub Desktop](https://desktop.github.com/) o [GitX](https://rowanj.github.io/gitx/) puede ayudar para elegir sobre qué archivos y lineas hacer un commit.
-- Committear código hará correr el linter automático que usa [Prettier](https://prettier.io). Para correr el linter manualmente, corre un script npm en el directorio base del proyecto:
+- Haciendo commit del código hará correr el linter automático que usa [Prettier](https://prettier.io). Para ejecutar el linter manualmente, ejecuta un script npm en el directorio base del proyecto:
   ```shell
   npm run format
   ```
-- Aplica todos los cambios de linting antes de empujar cambios [enmedando el commit previo](https://help.github.com/en/articles/changing-a-commit-message) o agregando un nuevo commit. Para más acerca de linting y pruebas, visita el doc de [Manejando PRs](/contributing/managing-pull-requests/#automated-checks).
+- Haz commit de todos los cambios del "linting" antes de subir cambios [enmendando el commit previo](https://help.github.com/en/articles/changing-a-commit-message) o agregando un nuevo commit. Para más acerca de "linting" y pruebas, visita la guía de [Manejando PRs](/contributing/managing-pull-requests/#automated-checks).
   ```shell
   git commit --amend
   ```
-- Empuja tus cambios a tu fork, asumiendo que está configurado como [`origin`](https://www.git-tower.com/learn/git/glossary/origin):
+- Sube tus cambios a tu fork, asumiendo que está configurado como [`origin`](https://www.git-tower.com/learn/git/glossary/origin):
   ```shell
   git push origin head
   ```
-- Para abrir un PR con tus cambios ante el repo de Gatsby, puedes usar el[UI de Pull Requests de GitHub](https://help.github.com/en/articles/creating-a-pull-request). Alternativamente, puedes usar la linea de comandos: recomendamos [hub](https://github.com/github/hub) para ellos.
+- Para abrir un PR con tus cambios ante el repo de Gatsby, puedes usar la [interfaz de usuario de Pull Requests de GitHub](https://help.github.com/en/articles/creating-a-pull-request). Alternativamente, puedes usar la linea de comandos: recomendamos [hub](https://github.com/github/hub) para ello.
 
 ### PRs de Documentación
 
@@ -72,9 +72,9 @@ El sitio de documentación de Gatsby.js vive mayormente en los directorios [www]
 
 Pasos adicionales para PRs de docs:
 
-- Para cambios solamente de docs, considera usar `git checkout -b docs/some-change` o `git checkout -b docs-some-change`, ya que esto recortará el proceso de CI (o integración continua) y solo correrá tareas de linting.
+- Para cambios solamente de documentación, considera usar `git checkout -b docs/some-change` o `git checkout -b docs-some-change`, ya que esto recortará el proceso de CI (o integración continua) y solo ejecutará tareas de "linting".
 
-Más instrucciones pueden ser encontradas en la página de [contribuciones a docs](/contributing/docs-contributions/).
+Más instrucciones pueden ser encontradas en la página de [contribuciones a documentación](/contributing/docs-contributions/).
 
 ### Cambios de código
 
@@ -87,20 +87,20 @@ Hay páginas específicas acerca de cómo contribuir a varias partes del ecosist
 - [Aplicaciones a la galería](/contributing/site-showcase-submissions/)
 - [Librería de guías iniciales](/contributing/submit-to-starter-library/)
 
-### Posts del blog
+### Entradas del Blog
 
-Para contribuir al blog de Gatsby, es necesario primero pasar tu idea de contenido por el equipo de Gatsby antes de enviarla. Para más información, refiérete a la página de [contribuciones al blog y sitio web](/contributing/blog-and-website-contributions/), incluyendo cómo proponer una idea y cómo configurar el blog para que corra localmente.
+Para contribuir al blog de Gatsby, es necesario primero pasar tu idea de contenido por el equipo de Gatsby antes de enviarla. Para más información, refiérete a la página de [contribuciones al blog y sitio web](/contributing/blog-and-website-contributions/), incluyendo cómo proponer una idea y cómo configurar el blog para que se ejecute localmente.
 
 ## Actualiza tu fork con los últimos cambios de Gatsby
 
 El repo de Gatsby de Github es muy activo, así que es probable que necesites actualizar tu fork con los últimos cambios para hacer un merge de tu código. Esto requiere agregar a Gatsby como un [upstream remote](https://help.github.com/en/articles/configuring-a-remote-for-a-fork):
 
-- Establece la URL del repo de Gatsby's como una fuente remota. El nombre de la fuente remota es arbitrario; este ejemplo usa `upstream`.
+- Establece la URL del repositorio de Gatsby como una fuente remota. El nombre de la fuente remota es arbitrario; este ejemplo usa `upstream`.
   ```shell
   git remote set-url upstream git@github.com:gatsbyjs/gatsby.git
   ```
-  - _Nota: esta sintaxis [usa SSH y keys: también puedes usar `https`](https://help.github.com/en/articles/which-remote-url-should-i-use) y tu usuario/contraseña._
-- Puedes verificar el nombre del remote y URL en cualquier momento:
+  - _Nota: esta sintaxis [usa SSH y llaves de seguridad: también puedes usar `https`](https://help.github.com/en/articles/which-remote-url-should-i-use) con tu usuario/contraseña._
+- Puedes verificar el nombre del remoto y URL en cualquier momento:
   ```shell
   git remote -v
   ```
@@ -108,27 +108,27 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
   ```shell
   git fetch upstream master
   ```
-- [En la branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) que quieres actualizar, haz un merge de cualquier cambio desde Gatsby hacia tu fork:
+- [En la rama](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) que quieres actualizar, haz un merge de cualquier cambio desde Gatsby hacia tu fork:
   ```shell
   git merge upstream master
   ```
   - Si hay [conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github), querrás encargarte de ellos para conseguir un merge limpio.
-- Una vez que tu branch está en estado funcional, empuja los cambios a tu fork:
+- Una vez que tu branch está en estado funcional, sube los cambios a tu fork:
   ```shell
   git push origin head
   ```
 
-Para más información sobre cómo trabajar con repositorios upstream, [visita los docs de GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
+Para más información sobre cómo trabajar con repositorios upstream, [visita la documentación de GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
 
-_**Nota:** como miembro del repositorio de Gatsby, tambien puedes clonarlo directamente en vez de hacer un fork, y empujar tus cambios a [branches de features](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
+_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente en vez de hacer un fork, y empujar tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
 
 ## Recursos adicionales
 
 - CSS Tricks: [Cómo contribuir a un proyecto open source](https://css-tricks.com/how-to-contribute-to-an-open-source-project/)
 - [Creando un pull request](https://help.github.com/en/articles/creating-a-pull-request) from GitHub
 - [Configurando un remoto para un fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)
-- [Qué remoto debería usar?](https://help.github.com/en/articles/which-remote-url-should-i-use)
-- [Merging y Branching de Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
-- [Feature Branching y Workflows](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
+- [¿Qué remoto debería usar?](https://help.github.com/en/articles/which-remote-url-should-i-use)
+- [Merge y ramas de Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+- [Ramas por funcionalidad y flujos de trabajo](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 - [Resolviendo conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github)
-- [Manejando Pull Requests](/contributing/managing-pull-requests/) del equipo core de Gatsby.
+- [Manejando Pull Requests](/contributing/managing-pull-requests/) del equipo principal de Gatsby.
