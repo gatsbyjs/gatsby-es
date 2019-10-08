@@ -38,7 +38,7 @@ Algunos PRs pueden ser realizados completamente desde la [interfaz de usuario de
 Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby](https://github.com/gatsbyjs/gatsby), puedes hacer un fork del repositorio e instalar partes de él para que corran en tu computadora localmente.
 
 - [Hacer un fork y clonar el repositorio de Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-- Instalar [yarn](https://yarnpkg.com/) para traer las dependencias y hacer un build del proyecto.
+- Instalar [yarn](https://yarnpkg.com/) para instalar las dependencias y compilar el proyecto.
 - Sigue las instrucciones para la parte del proyecto que deseas cambiar. (Ver secciones específicas abajo.)
 - [Crear una branch en Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) para aislar tus cambios:
 
