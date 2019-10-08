@@ -10,7 +10,7 @@ En caso de que no estés familiarizado, hete aquí como el equipo de GitHub [def
 
 > Los Pull requests te permiten decir a otros acerca de cambios que has subido en una rama de un repositorio en GitHub. Una vez que un pull request es abierto, puedes discutir y revisar los cambios potenciales con colaboradores y agregar commits de seguimiento antes de que tus cambios sean incluidos en la rama de master (o base).
 
-Gatsby utiliza el proceso de PR para revisar y probar cambios antes que sean agregados al repositorio de GitHub de Gatsby. Cualquier persona puede abrir un pull request. El mismo proceso es utilizado por todos los contribuyentes, sea que ésta sea tu primera contribución al código abierto (open source) o que seas un miembro del core team de Gatsby.
+Gatsby utiliza el proceso de PR para revisar y probar cambios antes que sean agregados al repositorio de GitHub de Gatsby. Cualquier persona puede abrir un pull request. El mismo proceso es utilizado por todos los contribuyentes, sea que ésta sea tu primera contribución a código abierto (open source) o que seas un miembro del equipo principal de Gatsby.
 
 Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pull request_ (extraer) de su código hacia dentro del repo. Dependiendo del tipo de cambio hecho, los PRs son categorizados como de:
 
