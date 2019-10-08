@@ -1,11 +1,13 @@
-# Gatsby en Español
+# Gatsby en español
 
-Esta es la traducción oficial en Español de la documentación de Gatsby. 
+Esta es la traducción oficial en español de la documentación de Gatsby. 
 
 ## Navegación
 
 - [¿Cómo contribuir? 🤔](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD)
 - [Guía de estilos y glosario 💅](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.MD)
+- [Quiero ser mantenedor](ttps://github.com/gatsbyjs/gatsby-es/blob/master/MAINTAINER.MD) 🧙‍
+- [Swag gratis por contribuciones a las traducciones]((https://www.gatsbyjs.org/contributing/contributor-swag/)) ✨
 
 ## ¿Donde empezar? 🤔
 

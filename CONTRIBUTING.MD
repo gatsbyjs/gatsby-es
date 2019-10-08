@@ -4,7 +4,7 @@ Bienvenido a la documentación en Español de Gatsby, antes que todo muchas grac
 
 ## Traduciendo las páginas 
 
-La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `.MD` corresponde a una página de la documentación, y por grande o pequeńa que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizo una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar en el [issue de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/4).
+La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `markdown (.MD)` corresponde a una página de la documentación, y por grande o pequeńa que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizo una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar en el [issue de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/4).
 
 ## Pasos para traducir una página
 
@@ -12,7 +12,12 @@ Sbemos que todos quieren contribuir pero debemos mantener un orden en las traduc
 
 - **1.-** Ve al [issue de progreso de traducción](https://github.com/gatsbyjs/gatsby-es/issues/4) y revisa que página esta **disponible** y quisieras traducir.
 - **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh o @darking360 con la página que quieres traducir y así podemos asignarla.
-- **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre parentesis: `- index.md (@horacioh)`. De esta forma ya sabes que puedes empezar a traducir.
+- **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre parentesis: 
+
+    ` - index.md (@horacioh)`. 
+    
+    De esta forma ya sabes que puedes empezar a traducir.
+
 - **4.-** Empieza a traducir 🎉 Si no sabes como empezar, en la siguiente parte te enseñamos como hacer un `fork` del proyecto, clonarlo y a como abrir tu primer PR.
 
 ## Crear un fork, clonar
