@@ -46,7 +46,7 @@ Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby
   git checkout -b some-change
   ```
 
-- Una vez que tienes cambios en Git que quieres empujar, [agrégalos y crea un commit](https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line). Para información on sobre como estructurar tus commits, revisa el doc [Manejando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
+- Una vez que tienes cambios en Git que quieres subir, [agrégalos y crea un commit](https://help.github.com/en/articles/adding-a-file-to-a-repository-using-the-command-line). Para información sobre como estructurar tus commits, revisa la guía de [Manejando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
   - Usando un caracter de punto `.` agregará todos los archivos no seguidos todavía en el actual directorio y subdirectorios.
   ```shell
   git add .
