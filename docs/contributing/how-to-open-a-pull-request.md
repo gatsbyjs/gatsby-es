@@ -21,7 +21,7 @@ Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pu
 
 Recomendaciones para diferentes tipos de contribuciones se encontrarán en esta guía asi como a través de los documentos de contribuciones.
 
-## Cosas para saber antes de abrir un PR
+## Cosas a saber antes de abrir un PR
 
 Típicamente recomendamos [abrir un issue](/contributing/how-to-file-an-issue/) antes de un pull request si no hay ya un issue para el problema que quieres solucionar. Esto ayuda a facilitar una discusión antes de decidir una implementación.
 
