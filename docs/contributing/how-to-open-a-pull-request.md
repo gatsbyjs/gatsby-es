@@ -2,7 +2,7 @@
 title: Como abrir un Pull Request
 ---
 
-Una gran parte de contribuir al open source es enviar cambios a un proyecto: mejoras al código fuente o tests, actualizaciones a contenido de documentos, inclusive errores tipográficos o hipervínculos rotos. Este documento cubrirá lo que necesitas saber para **abrir un pull request** en Gatsby.
+Una gran parte de contribuir a código abierto es enviar cambios a un proyecto: mejoras al código fuente o pruebas, actualizaciones a contenido de documentos, inclusive errores tipográficos o hipervínculos rotos. Este documento cubrirá lo que necesitas saber para **abrir un pull request** en Gatsby.
 
 ## Qué es un Pull Request (PR)?
 
