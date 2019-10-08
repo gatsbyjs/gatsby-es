@@ -4,7 +4,7 @@ title: Como abrir un Pull Request
 
 Una gran parte de contribuir a código abierto es enviar cambios a un proyecto: mejoras al código fuente o pruebas, actualizaciones a contenido de documentos, inclusive errores tipográficos o hipervínculos rotos. Este documento cubrirá lo que necesitas saber para **abrir un pull request** en Gatsby.
 
-## Qué es un Pull Request (PR)?
+## ¿Qué es un Pull Request (PR)?
 
 En caso de que no estés familiarizado, hete aquí como el equipo de GitHub [definen un pull request](https://help.github.com/en/articles/about-pull-requests):
 
