@@ -40,7 +40,7 @@ Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby
 - [Hacer un fork y clonar el repositorio de Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
 - Instalar [yarn](https://yarnpkg.com/) para instalar las dependencias y compilar el proyecto.
 - Sigue las instrucciones para la parte del proyecto que deseas cambiar. (Ver secciones específicas abajo.)
-- [Crear una branch en Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) para aislar tus cambios:
+- [Crear una rama en Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) para aislar tus cambios:
 
   ```shell
   git checkout -b some-change
