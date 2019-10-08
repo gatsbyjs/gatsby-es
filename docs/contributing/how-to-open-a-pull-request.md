@@ -12,7 +12,7 @@ En caso de que no estés familiarizado, aquí está como el equipo de GitHub [de
 
 Gatsby utiliza el proceso de PR para revisar y probar cambios antes que sean agregados al repositorio de GitHub de Gatsby. Cualquier persona puede abrir un pull request. El mismo proceso es utilizado por todos los contribuyentes, sea que ésta sea tu primera contribución a código abierto (open source) o que seas un miembro del equipo principal de Gatsby.
 
-Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pull request_ (extraer) de su código hacia dentro del repo. Dependiendo del tipo de cambio hecho, los PRs son categorizados como de:
+Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pull request_ (extraer) de su código hacia dentro del repositorio. Dependiendo del tipo de cambio hecho, los PRs son categorizados como de:
 
 - [Documentación](#documentation)
 - [Código](#code-changes)
