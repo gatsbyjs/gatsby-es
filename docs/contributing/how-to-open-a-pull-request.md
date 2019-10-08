@@ -78,7 +78,7 @@ Más instrucciones pueden ser encontradas en la página de [contribuciones a doc
 
 ### Cambios de código
 
-Instrucciones para realizar cambios al código fuente de Gatsby, tests, materiales internos, APIs, paquetes, y más pueden ser encontrados en los docs de contribuciones en [estableciendo tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/). Hay también detalles adicionales en la página de [Contribuciones de código](/contributing/code-contributions/).
+Instrucciones para realizar cambios al código fuente de Gatsby, pruebas, materiales internos, APIs, paquetes, y más pueden ser encontrados en la documentación de contribuciones en [estableciendo tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/). Hay también detalles adicionales en la página de [Contribuciones de código](/contributing/code-contributions/).
 
 ### Guías iniciales o Galería de sitios
 
