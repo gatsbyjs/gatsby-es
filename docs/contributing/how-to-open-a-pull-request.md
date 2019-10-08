@@ -27,7 +27,7 @@ Típicamente recomendamos [abrir un issue](/contributing/how-to-file-an-issue/) 
 
 Para algunos cambios, como errores tipográficos o hipervínculos rotos, sería apropiado abrir un pequeño PR por si mismo. Esto es de algún modo subjetivo de modo que si tienes preguntas, [siéntete libre de consultarnos](/contributing/how-to-contribute/#not-sure-how-to-start-contributing).
 
-El equipo core de Gatsby usa un proceso de triaging delineado en [Manejando los Pull Requests](/contributing/managing-pull-requests/), si estás interesado en aprender más acerca de como ello funciona.
+El equipo principal de Gatsby usa un proceso de "triaging" delineado en [Manejando los Pull Requests](/contributing/managing-pull-requests/), si estás interesado en aprender más acerca de como funciona eso.
 
 ## Abriendo PRs en Gatsby
 
