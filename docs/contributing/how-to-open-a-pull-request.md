@@ -31,7 +31,7 @@ El equipo principal de Gatsby usa un proceso de "triaging" delineado en [Manejan
 
 ## Abriendo PRs en Gatsby
 
-Para cualquier tipo de cambio a archivos en el repo de Gatsby, puedes seguir los pasos siguientes. Asegúrate de chequear tips adicionales para contribuir a varias partes del repo más adelante en este doc, como de cambios de documentos, blog posts, guías iniciales o mejoras en código y tests.
+Para cualquier tipo de cambio a archivos en el repo de Gatsby, puedes seguir los siguientes pasos. Asegúrate de comprobar las recomendaciones adicionales para contribuir a varias partes del repo más adelante en este documento, como de cambios de documentos, entradas de blog, guías iniciales o mejoras en código y pruebas.
 
 Algunos PRs pueden ser realizados completamente desde la [UI de GitHub](https://help.github.com/en/articles/creating-a-pull-request), tal como ediciones a los archivos README o documentos.
 
