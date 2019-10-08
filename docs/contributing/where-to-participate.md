@@ -9,7 +9,7 @@ Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para 
 - [Enviando nuevas ideas de features mediante un RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
 - Enviando nueva documentación; títulos en la navegación lateral en [docs](/docs) que son más ligeros en color en gatsbyjs.org que son stubs y requieren contribuciones
 - Enviar tweets acerca de cosas que construyes con Gatsby: [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby) (Asegúrate de usar el hashtag y/o mencionarnos con un @!)
-- Enviar actualizaciones de documentación, ampliaciones, diseños o arreglos de bugs
+- Enviar actualizaciones de documentación, ampliaciones, diseños o arreglos de errores
 - Enviando arreglos de errores ortográficos o de gramática
 - Adding tests de unidad o funcionales
 - Haciendo "triage" de [issues en GitHub](https://github.com/gatsbyjs/gatsby/issues) -- especialmente determinando si un issue todavía persiste o si es reproducible
