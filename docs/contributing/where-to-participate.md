@@ -15,7 +15,7 @@ Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para 
 - Haciendo "triage" de [issues en GitHub](https://github.com/gatsbyjs/gatsby/issues) -- especialmente determinando si un issue todavía persiste o si es reproducible
 - [Reportando bugs o issues](/contributing/how-to-file-an-issue/)
 - Buscando por Gatsby en [Discord](https://gatsby.dev/discord) o [Spectrum](https://spectrum.chat/gatsby-js) y ayudando a alguien más que necesite ayuda
-- ¡Enseñándole a otros sobre cómo contribuir a los repos de Gatsby!
+- ¡Enseñándole a otros sobre cómo contribuir a los repositorios de Gatsby!
 
 Como nuestro modo de decir "gracias" a nuestros contribuidores,  **_todos los contribuidores_ son elegibles para [swag gratuito de Gatsby](/contributing/contributor-swag/)** — sea que estés contribuyendo código, documentación, una charla, un artículo, o algo que ayude a la comunidad de Gatsby. [Descubre como pedir tu swag gratuito si eres contribuidor.](/contributing/contributor-swag/)
 
