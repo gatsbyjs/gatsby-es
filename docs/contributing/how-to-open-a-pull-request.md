@@ -16,7 +16,7 @@ Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pu
 
 - [Documentación](#documentation)
 - [Código](#code-changes)
-- [Guías rápidas or Galería de sitios](#starters-or-site-showcase)
+- [Guías rápidas o Galería de sitios](#starters-or-site-showcase)
 - [Blog posts](#blog-posts)
 
 Recomendaciones para diferentes tipos de contribuciones se encontrarán en esta guía asi como a través de los documentos de contribuciones.
