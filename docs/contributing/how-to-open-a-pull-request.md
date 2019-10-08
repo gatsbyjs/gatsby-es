@@ -35,7 +35,7 @@ Para cualquier tipo de cambio a archivos en el repo de Gatsby, puedes seguir los
 
 Algunos PRs pueden ser realizados completamente desde la [interfaz de usuario de GitHub](https://help.github.com/en/articles/creating-a-pull-request), tal como ediciones a los archivos README o documentos.
 
-Para testear cambios localmente frente al [sitio y archivos de proyecto de Gatsby](https://github.com/gatsbyjs/gatsby), puedes hacer un fork del repo e instalar partes de él para que corran en tu computadora localmente.
+Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby](https://github.com/gatsbyjs/gatsby), puedes hacer un fork del repositorio e instalar partes de él para que corran en tu computadora localmente.
 
 - [Hacer un fork y clonar el repositorio de Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
 - Instalar [yarn](https://yarnpkg.com/) para traer las dependencias y hacer un build del proyecto.
