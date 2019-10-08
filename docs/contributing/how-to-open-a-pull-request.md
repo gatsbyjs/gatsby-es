@@ -68,7 +68,7 @@ Para probar cambios localmente frente al [sitio y archivos de proyecto de Gatsby
 
 ### PRs de Documentación
 
-El sitio de documentación de Gatsby.js vive mayormente en los directorios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) y [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) en GitHub, incluyendo docs y contenido de tutoriales. Hay también algunos [ejemplos en el repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples) referenciados en la documentación.
+El sitio de documentación de Gatsby.js vive mayormente en los directorios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) y [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) en GitHub, incluyendo documentaciones y contenido de tutoriales. Hay también algunos [ejemplos en el repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples) referenciados en la documentación.
 
 Pasos adicionales para PRs de docs:
 
