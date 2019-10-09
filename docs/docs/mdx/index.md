@@ -1,10 +1,10 @@
 ---
-El titulo: Adición de componentes a Markdown con MDX
+El titulo: Agregar de componentes a Markdown con MDX
 ---
 
-Al escribir contenido de formato largo en Markdown es posible que desee incrustar [componentes](/docs/glossary/#component).
-Esto a menudo es conseguido por contenido de escritura en JSX o por utilización de enchufes de unión ese
-use la sintaxis de encargo. El primer enfoque no es óptimo porque JSX no es el mejor
+Al escribir contenido en forma larga en Markdown es posible que desee incrustar [componentes](/docs/glossary/#component).
+Esto a menudo se consigue o bien escribiendo contenido en JSX o usando plugins que usan una sintáxis especial. 
+El primer enfoque no es óptimo porque JSX no es el mejor
 el formato para el contenido y lo puede hacer menos tratable a miembros de un equipo. La sintaxis 
 personalizada y los plugins son a menudo demasiado inflexibles y no promueven la composición. Si
 se encuentra queriendo añadir componentes a su contenido puede usar
@@ -29,11 +29,11 @@ Al utilizar MDX, también puede importar otros documentos MDX y renderizarlos
 them como componentes. Esto le permite escribir algo como una página de preguntas frecuentes
 página en un solo lugar y reutilizarlo en todo su sitio web.
 
-## What does it look like in practice?
+## ¿Cómo se ve en la práctica?
 
-Importing and JSX syntax works just like it does in your components. This
-results in a seamless experience for developers and content authors alike.
-Markdown and JSX are included alongside each other like this:
+Importar y la sintaxis de JSX funciona igual que en sus componentes. Este
+resulta en una experiencia sin fisuras tanto para desarrolladores como para autores de contenido.
+Markdown y JSX se incluyen uno al lado del otro así:
 
 ```md
 import { Chart } from '../components/chart'
