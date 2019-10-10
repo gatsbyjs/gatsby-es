@@ -2,7 +2,7 @@
 title: Agregar soporte offline con un Service Worker
 ---
 
-Si ha ejecutado una  [auditoría con Lighthouse](/docs/audit-with-lighthouse/), Es posible que haya notado una puntuación mediocre en la categoría "Aplicación Web Progresiva". Veamos cómo puede mejorar esa puntuación.
+Si ha ejecutado una [auditoría con Lighthouse](/docs/audit-with-lighthouse/), Es posible que haya notado una puntuación mediocre en la categoría "Aplicación Web Progresiva". Veamos cómo puede mejorar esa puntuación.
 
 1.  Puedes [agregar un archivo de manifiesto](/docs/add-a-manifest-file/). Asegúrese de que el Plugin de manifiesto aparezca en la lista _antes_ del Plugin offline para que el Puglin offline pueda almacenar en caché el creado `manifest.webmanifest`.
 2.  También puede agregar soporte fuera de línea, ya que otro requisito para que un sitio web califique como PWA (Aplicación Web Progresiva por sus iniciales en inglés) es el uso de un [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). [Gatsby's offline plugin](/packages/gatsby-plugin-offline/) hace que un sitio de Gatsby funcione sin conexión (Offline), y lo hace más resistente a las malas condiciones de la red, al crear un Service Worker para su sitio.
