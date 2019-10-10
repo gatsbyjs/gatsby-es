@@ -55,7 +55,7 @@ Ya todos tus cambios estan en el repositorio, pero no el oficial, para poderlos 
 
 Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.MD), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de sume importancia:
 
-- Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras mal escritas, siempre ten cuidado con esto.
+- Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras bien escritas, siempre ten cuidado con esto.
 - No agregues o elimines líneas de la documentación, traduce siempre sobre las mismas líneas, una forma fácil de comprobar esto es revisar que las primeras y últimas 10 líneas de la página tengan contenido igual o títulos, pero por supuesto traducidos.
 - Siempre manten un Español neutral, no uses palabras que estén influenciadas por tu región o país, esto sera evaluado mas adelante por los mantenedores pero es de gran ayuda para mantener la documentación con un lenguaje neutral.
 - Si no conoces la traducción a una palabra puedes utilizar herramientas como [Google translate](https://translate.google.com/?hl=es), no hay nada de malo en esto, pero no traduzcas una página completa con este ya que el significado se puede perder.
