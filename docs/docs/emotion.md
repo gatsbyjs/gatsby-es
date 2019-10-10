@@ -168,4 +168,4 @@ import Layout from "../components/layout";
 export default () => <Layout>¡Hola mundo!</Layout>;
 ```
 
-Ejecuta `npm run build`, y ya puedes ver en `public/index.html` que los estilos han sido añadidos _inline_ globalmente.
+Ejecuta `npm run build`, y ya puedes ver en `public/index.html` que los estilos globales han sido añadidos _inline_.
