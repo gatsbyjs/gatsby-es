@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Wow! ¡Haz recorrido un largo camino! Haz aprendido a:
+Wow! ¡Has recorrido un largo camino! Has aprendido a:
 
 - crear nuevos sitios web con Gatsby
 - crear páginas y componentes
@@ -50,7 +50,7 @@ Una vez iniciado, puedes observar tu sitio web en [`localhost:9000`](http://loca
 
 Ahora ejecutarás tus primeras pruebas con Lighthouse.
 
-1.  Si aun no lo haz hecho, abre tu sitio web en Chrome en modo incógnito, para que las extensiones no interfieran con las pruebas. Después, abre la Chrome DevTools.
+1.  Si aun no lo has hecho, abre tu sitio web en Chrome en modo incógnito, para que las extensiones no interfieran con las pruebas. Después, abre la Chrome DevTools.
 
 2.  Haz clic en la pestaña "Audits" donde mirarás una pantalla como esta:
 
@@ -255,7 +255,7 @@ Bueno, no del todo; solo para este tutorial. También hay [tutoriales adicionale
 Esto es solo el inicio. ¡Sigue adelante!
 
 - ¿Construiste algo genial? Compártelo en Twitter, con el tag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), y [@mencionanos](https://twitter.com/gatsbyjs)!
-- ¿Escribiste algún post genial acerca de lo que haz aprendido? ¡Compártelo también!
+- ¿Escribiste algún post genial acerca de lo que has aprendido? ¡Compártelo también!
 - ¡Colabora! Paseate por los [issues abiertos](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) en el repo de gatsby y [vuélvete colaborador](/contributing/how-to-contribute/).
 
 Revisa los docs de ["como contribuir"](/contributing/how-to-contribute/) para mas ideas.
