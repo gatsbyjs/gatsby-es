@@ -1,5 +1,5 @@
 ---
-title: Using Multiple Themes Together
+título: Utilizando Múltiple Temas Juntos
 ---
 
-_This tutorial is coming soon. In the meantime, check out the [introduction to using multiple themes in the docs](/docs/themes/using-multiple-gatsby-themes)._
+_Esto tutorial es viniendo pronto. En el mientras tanto, cheque fuera el [Introducción a utilizando múltiple Temas en el docs](/docs/themes/using-multiple-gatsby-themes)._
