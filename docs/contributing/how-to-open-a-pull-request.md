@@ -31,7 +31,7 @@ El equipo principal de Gatsby usa un proceso de "triaging" delineado en [Manejan
 
 ## Abriendo PRs en Gatsby
 
-Para cualquier tipo de cambio a archivos en el repo de Gatsby, puedes seguir los siguientes pasos. Asegúrate de comprobar las recomendaciones adicionales para contribuir a varias partes del repo más adelante en este documento, como de cambios de documentos, entradas de blog, guías iniciales o mejoras en código y pruebas.
+Para cualquier tipo de cambio a archivos en el repo de Gatsby, puedes seguir los siguientes pasos. Asegúrate de comprobar las recomendaciones adicionales para contribuir a varias partes del repo más adelante en este documento, como de cambios de documentos, entradas de blog, starters o mejoras en código y pruebas.
 
 Algunos PRs pueden ser realizados completamente desde la [interfaz de usuario de GitHub](https://help.github.com/en/articles/creating-a-pull-request), tal como ediciones a los archivos README o documentos.
 
@@ -80,12 +80,12 @@ Más instrucciones pueden ser encontradas en la página de [contribuciones a doc
 
 Instrucciones para realizar cambios al código fuente de Gatsby, pruebas, materiales internos, APIs, paquetes, y más pueden ser encontrados en la documentación de contribuciones en [estableciendo tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/). Hay también detalles adicionales en la página de [Contribuciones de código](/contributing/code-contributions/).
 
-### Guías iniciales o Galería de sitios
+### Starters o Galería de sitios
 
 Hay páginas específicas acerca de cómo contribuir a varias partes del ecosistema Gatsby: :
 
 - [Aplicaciones a la galería](/contributing/site-showcase-submissions/)
-- [Librería de guías iniciales](/contributing/submit-to-starter-library/)
+- [Librería de Starters](/contributing/submit-to-starter-library/)
 
 ### Entradas del Blog
 
