@@ -5,9 +5,9 @@ Esta es la traducción oficial en español de la documentación de Gatsby.
 ## Navegación
 
 - [¿Cómo contribuir? 🤔](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD)
-- [Guía de estilos y glosario 💅](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.MD)
-- [Quiero ser mantenedor](https://github.com/gatsbyjs/gatsby-es/blob/master/MAINTAINER.MD) 🧙‍
-- [Swag gratis por contribuciones a las traducciones]((https://www.gatsbyjs.org/contributing/contributor-swag/)) ✨
+- [Guía de estilos y glosario 💅](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md)
+- [Quiero ser mantenedor](https://github.com/gatsbyjs/gatsby-es/blob/master/MAINTAINERS.MD) 🧙‍
+- [Swag gratis por contribuciones a las traducciones](https://www.gatsbyjs.org/contributing/contributor-swag/) ✨
 
 ## ¿Donde empezar? 🤔
 
