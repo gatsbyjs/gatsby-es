@@ -12,7 +12,7 @@ Hasta ahora, has estado aprendiendo cómo usar React.js, lo poderoso que es ser 
 
 También has explorado componentes de estilo usando Módulos CSS.
 
-## Qué encontrarás en este tutorial
+## ¿Qué encontrarás en este tutorial?
 
 En las próximas cuatro partes del tutorial (incluyendo esta), bucearás en la capa de datos de Gatsby, que es una catacterística muy poderosa de Gatsby que te permite construir con facilidad sitios desde Markdown, WordPress, CMSs sin cabeceras y otras fuentes de datos de todos los sabores.
 
@@ -27,7 +27,7 @@ Una página web tiene cuatro partes: HTML, CSS, JS, y datos. La primera parte de
 Una manera muy informática de responder sería que datos son cosas como `"strings"`,
 integers (`42`), objects (`{ pizza: true }`), etc.
 
-Para el propósito de trabajar en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
+Parael trabajo en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
 
 Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchas sitios web, Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
 
