@@ -4,13 +4,13 @@ La traducción de la documentación de Gatsby es un esfuerzo por y para la comun
 
 ## Que esperamos de ti 🧙‍
 
-Como mantenedor tienes un rol de responsabilidad mas alto en el repositorio, tienes todo el pode ren tus manos para realizar merge de solicitudes PR, cerrar issues, y editar  o reabrir algun otro, pero todo poder conlleva una gran responsabilidad, primordialmente esperamos que sigas:
+Como mantenedor tienes un rol de responsabilidad mas alto en el repositorio, tienes todo el poder en tus manos para realizar merge de solicitudes PR, cerrar issues, y editar  o reabrir algun otro, pero todo poder conlleva una gran responsabilidad, primordialmente esperamos que sigas:
 
 - Mantener al día el repositorio, bien sea con los PR de actualización o velando porque las traducciones esten bien.
 - Priorizar PRs
 - Revisar los PRs con traducciones, a esto se le suma:
   - Tener buena ortografía y gramática con español neutro.
-  - Poseer un ojo de aguila para errores o "typos" clasicos como "ppara" y cualquier otro error humano.
+  - Poseer un ojo de aguila para errores o "typos" clásicos como "ppara" y cualquier otro error humano.
 - Sentido del deber, las traducciones son un proyecto que puedes abandonar de la noche a la mañana, tomarás un compromiso con la comunidad y debes velar por respetarlo lo más que puedas.
 - Idealmente haz contribuido activamente a las traducciones de Gatsby (así podemos ver tu compromiso y trabajo) 🧐
 - Un gran deseo por contribuir a código abierto y de ayudar a crecer a la comunidad de Gatsby ❤️
@@ -21,4 +21,4 @@ Si llegaste hasta aquí es que estás interesado en ser mantenedor de la documen
 
 ## Máximo número de mantenedores
 
-Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería mantener el número de mantenedores en algo entre 3 a 4 o 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puede soptar por [swag gratis]((https://www.gatsbyjs.org/contributing/contributor-swag/)) con tus contribuciones ❤️
+Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería mantener el número de mantenedores en algo entre 3 a 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puede soptar por [swag gratis]((https://www.gatsbyjs.org/contributing/contributor-swag/)) con tus contribuciones ❤️
