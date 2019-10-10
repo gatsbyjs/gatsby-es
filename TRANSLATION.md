@@ -1,6 +1,6 @@
 # Traducción
 
-Progreso actual: https://github.com/reactjs/es.reactjs.org/issues/4
+Progreso actual: https://github.com/gatsbyjs/gatsby-es/issues/4
 
 # Guía de estilo
 
