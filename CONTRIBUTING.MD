@@ -74,6 +74,10 @@ Una buena forma de tener en cuenta aspectos como estos es crear una lita de chec
 
 Al contribuir con un proyecto como este no solo estarías contribuyendo a código abierto (lo cual es genial), si no que tambien entras a los contribuidores oficiales de Gatsby, y por si esto no fuera lo suficiente, el equipo de Gatsby te quiere agradecer regalándote un [premio](https://www.gatsbyjs.org/contributing/contributor-swag/) de la [tienda oficial de Gatsby](https://store.gatsbyjs.org/) ❤️ Si sigues contribuyendo puedes optar por más regalos, con 5 contribuciones o más, revisa la [página oficial](https://www.gatsbyjs.org/contributing/contributor-swag/) para más información 🧐
 
+## Extensión de Markdown para VS Code
+
+Al traducir encontrarás sintaxis como `[texto](https://www.google.com)` y muchas otras como `**texto en negrita**`, esto corresponde a sintaxis de Markdown, son archivos que luego son renderizados a texto en nuestras páginas web, una forma excelente de saber si tienes bien escrito el Markdown es hacer una pequeña visualización de este, para no desplegar o ejecutar herramientas tediosas, Visual Studio Code posee una extension para visualizar Markdown, junto a otras herramientas útiles, puedes encontrarlo en [este enlace](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), si no utilizas este editor, puedes valerte de cualquier extensión que te ayude a esto, solo asegúrate de que el formato y la sintaxis estan bien, por ejemplo, nunca separes `[texto](https://www.google.com)` como `[texto] (https://www.google.com)` ya que esto daña el enlace que debe aparecer allí 🔥
+
 ## A traducir 🏃‍
 
 Si has leído hasta aquí, ¿Qué estas esperando?, pide una página que quieras traducir en [este issue](https://github.com/gatsbyjs/gatsby-es/issues/4) y empieza a contribuir con la comunidad de Gatsby ❤️
