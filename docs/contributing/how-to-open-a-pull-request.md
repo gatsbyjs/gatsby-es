@@ -113,7 +113,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
   git merge upstream master
   ```
   - Si hay [conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github), querrás encargarte de ellos para conseguir un merge limpio.
-- Una vez que tu branch está en estado funcional, sube los cambios a tu fork:
+- Una vez que tu rama está en estado funcional, sube los cambios a tu fork:
   ```shell
   git push origin head
   ```
