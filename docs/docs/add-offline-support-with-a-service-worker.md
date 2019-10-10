@@ -1,29 +1,29 @@
 ---
-title: Add Offline Support with a Service Worker
+title: Agregar soporte offline con un Service Worker
 ---
 
-If you've run an [audit with Lighthouse](/docs/audit-with-lighthouse/), you may have noticed a lackluster score in the "Progressive Web App" category. Let's address how you can improve that score.
+Si ha ejecutado una  [auditoría con Lighthouse](/docs/audit-with-lighthouse/), Es posible que haya notado una puntuación mediocre en la categoría "Aplicación Web Progresiva". Veamos cómo puede mejorar esa puntuación.
 
-1.  You can [add a manifest file](/docs/add-a-manifest-file/). Ensure that the manifest plugin is listed _before_ the offline plugin so that the offline plugin can cache the created `manifest.webmanifest`.
-2.  You can also add offline support, since another requirement for a website to qualify as a PWA is the use of a [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). [Gatsby's offline plugin](/packages/gatsby-plugin-offline/) makes a Gatsby site work offline--and makes it more resistant to bad network conditions--by creating a service worker for your site.
+1.  Puedes [agregar un archivo de manifiesto](/docs/add-a-manifest-file/). Asegúrese de que el Plugin de manifiesto aparezca en la lista _antes_ del Plugin offline para que el Puglin offline pueda almacenar en caché el creado `manifest.webmanifest`.
+2.  También puede agregar soporte fuera de línea, ya que otro requisito para que un sitio web califique como PWA (Aplicación Web Progresiva por sus iniciales en inglés) es el uso de un [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). [Gatsby's offline plugin](/packages/gatsby-plugin-offline/) hace que un sitio de Gatsby funcione sin conexión (Offline), y lo hace más resistente a las malas condiciones de la red, al crear un Service Worker para su sitio.
 
-### What is a service worker?
+### Que es un Service Worker?
 
-A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. They increase your site availability in spotty connections, and are essential to making a nice user experience.
+Un Service Worker es un script que su navegador ejecuta en segundo plano, separado de una página web, abriendo la puerta a funciones que no necesitan una página web o interacción del usuario. Aumentan la disponibilidad de su sitio en conexiones irregulares, y son esenciales para hacer una buena experiencia de usuario.
 
-It supports features like push notifications and background synchronization.
+Admite características como notificaciones push y sincronización en segundo plano.
 
-### Using service workers in Gatsby with `gatsby-plugin-offline`
+### Usar Service Workers en Gatsby con `gatsby-plugin-offline`
 
-Gatsby provides an awesome plugin interface to create and load a service worker into your site: [gatsby-plugin-offline](https://www.npmjs.com/package/gatsby-plugin-offline).
+Gatsby proporciona un increíble Plugin de interfaces para crear y cargar un Service Worker en su sitio: [gatsby-plugin-offline](https://www.npmjs.com/package/gatsby-plugin-offline).
 
-We recommend using this plugin together with the [manifest plugin](https://www.npmjs.com/package/gatsby-plugin-manifest). (Don’t forget to list the offline plugin after the manifest plugin so that the manifest file can be included in the service worker).
+Recomendamos usar este Plugin junto con el [manifest plugin](https://www.npmjs.com/package/gatsby-plugin-manifest). ( No olvide agregar el Plugin Offline después del Plugin de manifiesto para que el archivo de manifiesto se pueda incluir en el Service Worker).
 
-### Installing `gatsby-plugin-offline`
+### Instalando `gatsby-plugin-offline`
 
 `npm install --save gatsby-plugin-offline`
 
-Add this plugin to your `gatsby-config.js`
+Agregue este Plugin en el archivo`gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
 {
@@ -39,13 +39,13 @@ Add this plugin to your `gatsby-config.js`
 }
 ```
 
-That's all you need to add offline support to your Gatsby site.
+Eso es todo lo que necesita para agregar soporte Offline a su sitio Gatsby.
 
-Note: Service worker registers only in production builds (`gatsby build`).
+Nota: el Service Worker solo se registra cuando se compila en producción(`gatsby build`).
 
-### Displaying a message when a service worker updates
+### Mostrar un mensaje cuando un Service Worker se actualiza
 
-To display a custom message once your service worker finds an update, you can use the [`onServiceWorkerUpdateReady`](/docs/browser-apis/#onServiceWorkerUpdateReady) browser API in your `gatsby-browser.js` file. The following code will display a confirm prompt asking the user whether they would like to refresh the page when an update is found:
+Para mostrar un mensaje personalizado una vez que su Service Worker encuentre una actualización, puede usar el [`onServiceWorkerUpdateReady`](/docs/browser-apis/#onServiceWorkerUpdateReady) browser API en el archivo `gatsby-browser.js`. El siguiente código mostrará un mensaje de confirmación preguntando al usuario si desea actualizar la página cuando se encuentra una actualización:
 
 ```javascript:title=gatsby-browser.js
 export const onServiceWorkerUpdateReady = () => {
@@ -60,13 +60,13 @@ export const onServiceWorkerUpdateReady = () => {
 }
 ```
 
-### Using a custom service worker in Gatsby
+### Usar un Service Worker personalizado en Gatsby
 
-You can add a custom service worker if your use case requires something that `gatsby-plugin-offline` doesn't support.
+Puede agregar un Service Worker personalizado si su caso de uso requiere algo que `gatsby-plugin-offline` no soporta.
 
-Add a file called `sw.js` in the `static` folder.
+Agregar un archivo llamado `sw.js` en el fichero `static`.
 
-Use the [`registerServiceWorker`](/docs/browser-apis/#registerServiceWorker) browser API in your `gatsby-browser.js` file.
+Use el[`registerServiceWorker`](/docs/browser-apis/#registerServiceWorker) browser API en el archivo `gatsby-browser.js`.
 
 ```javascript:title=gatsby-browser.js
 export const registerServiceWorker = () => true
@@ -74,11 +74,11 @@ export const registerServiceWorker = () => true
 
 That's all! Gatsby will register your custom service worker.
 
-### Removing the service worker
+### Remover el Service Worker
 
-If you would like to fully remove the service worker from your site, you can use the plugin `gatsby-plugin-remove-serviceworker` in place of `gatsby-plugin-offline`. See [the README for `gatsby-plugin-offline`](/packages/gatsby-plugin-offline/#remove) for instructions how to do this.
+Si desea eliminar por completo el Service Worker de su sitio, puede usar el Plugin `gatsby-plugin-remove-serviceworker` en lugar de `gatsby-plugin-offline`. Vea [el README de `gatsby-plugin-offline`](/packages/gatsby-plugin-offline/#remove) para obtener instrucciones sobre cómo hacer esto.
 
-## References
+## Referencias
 
-- [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
+- [Service Workers: una Introducción](https://developers.google.com/web/fundamentals/primers/service-workers/)
 - [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
