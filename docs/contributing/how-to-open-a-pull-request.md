@@ -125,7 +125,7 @@ _**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo dire
 ## Recursos adicionales
 
 - CSS Tricks: [Cómo contribuir a un proyecto open source](https://css-tricks.com/how-to-contribute-to-an-open-source-project/)
-- [Creando un pull request](https://help.github.com/en/articles/creating-a-pull-request) from GitHub
+- [Creando un pull request](https://help.github.com/en/articles/creating-a-pull-request) de GitHub
 - [Configurando un remoto para un fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)
 - [¿Qué remoto debería usar?](https://help.github.com/en/articles/which-remote-url-should-i-use)
 - [Merge y ramas de Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
