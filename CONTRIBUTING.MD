@@ -66,7 +66,7 @@ Una buena forma de tener en cuenta aspectos como estos es crear una lista de che
 - [ ] Comprobar gramática y acentos
 - [ ] Leer antes de enviar
 
-## No se ingles, ¿aún así puedo contribuir?
+## No se inglés, ¿aún así puedo contribuir?
 
 ¡Por supuesto que si! Como pudiste leer en la sección arriba de esta, entre los aspectos vitales de las traducciones estan la ortografía y la gramática, los mantenedores hacen su mejor esfuerzo por mantener limpios estos aspectos, pero siempre se les puede escapar algo, tambien puedes contribuir leyendo las traducciones y detectando errores, bien sean estos aspectos o quizás palabras mal escritos, modismos o palabras que no son de Español neutro, puedes ayudarnos a curar este contenido 🤓 Envíanos un PR con correcciones 🚀
 
