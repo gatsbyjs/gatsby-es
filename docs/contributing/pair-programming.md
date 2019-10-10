@@ -1,10 +1,10 @@
 ---
-title: Sesiones de programación del par de la comunidad abiertas
+title: Sesiones de programación del par de la comunidad
 ---
 
 La mejor parte del código abierto es la comunidad, y cada comunidad es más fuerte cuando trabaja en conjunto. Para ayudar a construir la comunidad más fuerte posible, Gatsby ofrece gratuitas [sesiones de programación de pares de una hora][cal] a cualquier persona y a todos en la comunidad de código abierto.
 
-## Cómo funcionan las sesiones de programación de pares comunitarios
+## Cómo funcionan las sesiones de programación de pares comunidad
 
 1.  Regístrese para cualquier ranura disponible en [el calendario de emparejamiento abierto][cal]
 2.  Serás emparejado con uno de los Gatsby Inkteam
@@ -17,7 +17,7 @@ Estas sesiones están destinadas a personas que:
 
 - gustaría empezar con Gatsby, o
 - gustaría empezar a contribuir al software de código abierto, o
-- gustaría trabajar en una cuestión o solicitud de tirón relacionada con Gatsby, o
+- gustaría trabajar en un issue o solicitud de tirón relacionada con Gatsby, o
 - están utilizando Gatsby para un proyecto personal, de código abierto, de caridad o de educación
 
 Si estás interesado en apoyo de un comercial Gatsby proyecto, por favor [ponerse en contacto a través de la página de contacto](https://www.gatsbyjs.com/contact-us/).
