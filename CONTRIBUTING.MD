@@ -43,8 +43,8 @@ Al terminar de clonar el proyecto, estaras trabajando sobre la rama `master` en 
 
 Ya todos tus cambios estan en el repositorio, pero no el oficial, para poderlos incluir debes crear un PR y los mantenedores lo revisarán para aprobarlo, esto para comprobar que tiene los números de línea correctos, acentos y gramática, sigue estos pasos:
 
-- **1.-** Ve al [issue de progreso de traducción](https://github.com/gatsbyjs/gatsby-es/issues/4) y haz click en el botón `New pull request`.
-- **2.-** Como tus cambios estan en tu repositorio que es un `fork` del oficial, debes hacer click en el enlace que dice: `compare across forks`.
+- **1.-** Ve a los [issues del proyecto](https://github.com/gatsbyjs/gatsby-es/pulls) y haz click en el botón `New pull request`.
+- **2.-** Como tus cambios están en tu repositorio que es un `fork` del oficial, debes hacer click en el enlace que dice: `compare across forks`.
 - **3.-** En las opciones de la derecha, debes seleccionar tu repositorio, usualmente aparece como: `<TU_NOMBRE_DE_USUARIO>/gatsby-es`, y al lado debes seleccionar al nombre de la rama en la que estan tus cambios.
 - **4.-** Ahora se mostrarán los cambios que realizaste en el código, si todo se ve bien, haz click en `Create pulll request`.
 - **5.-** Ahora se te pedirá un titulo para el PR y unos comentarios, agrega un titulo acorde con tu traducción o cambios, y un comentario explicando los mismos, y dale a `Create pull request`.
