@@ -53,7 +53,7 @@ Ya todos tus cambios estan en el repositorio, pero no el oficial, para poderlos 
 
 ## Recomendaciones al trabajar en las traducciones
 
-Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.MD), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de suma importancia:
+Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de suma importancia:
 
 - Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras bien escritas, siempre ten cuidado con esto.
 - No agregues o elimines líneas de la documentación, traduce siempre sobre las mismas líneas, una forma fácil de comprobar esto es revisar que las primeras y últimas 10 líneas de la página tengan contenido igual o títulos, pero por supuesto traducidos.
