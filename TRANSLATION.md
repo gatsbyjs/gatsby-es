@@ -12,7 +12,7 @@ Los títulos de las secciones tienen identificadores explícitos de la siguiente
 ## Try Gatsby {#try-gatsby}
 ```
 
-¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, o sea:
+¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, osea:
 
 ```md
 Consulta la [sección de inicio](/getting-started#try-gatsby) para más información.
@@ -135,3 +135,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | template literals      | _template literals_                   |
 | uncontrolled component | componente no controlado              |
 | Issue                  | Issue                                 |
+| Layout                 | Layout                                |
+| Scope (sustantivo)     | Ambito                                |
+| Scope (verbo)          | Aislar                                |
+| Open Source            | Código abierto                        |
