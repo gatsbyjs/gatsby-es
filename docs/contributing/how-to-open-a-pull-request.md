@@ -120,7 +120,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
 
 Para más información sobre cómo trabajar con repositorios upstream, [visita la documentación de GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
 
-_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente en vez de hacer un fork, y empujar tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
+_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente en vez de hacer un fork, y subir tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
 
 ## Recursos adicionales
 
