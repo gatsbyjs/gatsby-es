@@ -2,9 +2,9 @@
 title: Almacenando en Caché
 ---
 
-Los complementos (plugins) pueden almacenar en caché datos en forma de objetos JSON y retornarlos en las compilaciones futuras.
+Los _complementos_ (plugins) pueden almacenar en caché datos en forma de objetos JSON para utilizarlos en compilaciones futuras.
 
-Gatsby y los complementos ya utilizan el almacenamiento en caché, por ejemplo:
+Gatsby ya hace uso del almacenamiento en caché, por ejemplo:
 
 - cualquier nodo creado por los complementos _fuente_ (source) o _transformador_ (transformer) son almacenados en caché
 - `gatsby-plugin-sharp` _cachea_ las miniaturas (thumbnails) que se creen
@@ -64,8 +64,8 @@ exports.onPostBuild = async function({ cache, store, graphql }, { query }) {
 
 ## Limpiando el caché
 
-Dado que los archivos caché son guardados dentro del directorio `.cache`, simplemente borrándolo podemos limpiar todo el cache. También puedes utilizar la herramienta [`gatsby clean`](/docs/gatsby-cli/#clean) para borrar los directorios `.cache` y `public`.
-Gatsby puede invalidar el caché en algunos casos, más específicamente:
+Dado que los archivos caché son guardados dentro del directorio `.cache`, simplemente borrándolo podemos limpiar el mismo. También puedes utilizar la herramienta [`gatsby clean`](/docs/gatsby-cli/#clean) para borrar los directorios `.cache` y `public`.
+Puede suceder que Gatsby invalide el caché en algunos casos, más específicamente:
 
 - Si `package.json` es modificado, por ejemplo, si una nueva dependencia es actualizada o agregada
 - Si `gatsby-config.js` cambia, por ejemplo, un nuevo complemento es agregado o modificado
