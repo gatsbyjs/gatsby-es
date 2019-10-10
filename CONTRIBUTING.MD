@@ -60,7 +60,7 @@ Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones 
 - Siempre manten un Español neutral, no uses palabras que estén influenciadas por tu región o país, esto sera evaluado mas adelante por los mantenedores pero es de gran ayuda para mantener la documentación con un lenguaje neutral.
 - Si no conoces la traducción a una palabra puedes utilizar herramientas como [Google translate](https://translate.google.com/?hl=es), no hay nada de malo en esto, pero no traduzcas una página completa con este ya que el significado se puede perder.
 
-Una buena forma de tener en cuenta aspectos como estos es crear una lita de checks en tu PR, por ejemplo:
+Una buena forma de tener en cuenta aspectos como estos es crear una lista de checks en tu PR, por ejemplo:
 
 - [ ] Traducción inicial
 - [ ] Comprobar gramática y acentos
