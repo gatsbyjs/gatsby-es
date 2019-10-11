@@ -52,7 +52,7 @@ Lee el issue y cualquier comentario para entender de qué se trata el issue.
 
 Elige una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del issue.
 
-![GitHub etiqueta dropdown](./images/github-label-list.png)
+![Dropdown de etiquetas de GitHub](./images/github-label-list.png)
 
 Puede comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada uno de ellos.
 
