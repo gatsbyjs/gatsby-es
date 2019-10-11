@@ -16,7 +16,7 @@ Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. La
 - errores reportados y confirmados
 - solicitudes de funcionalidades
 - issues duplicados
-- issues que son paradas o bloqueadas
+- issues que están parados o bloqueados
 
 ## ¿Quién puede etiquetar issues?
 
