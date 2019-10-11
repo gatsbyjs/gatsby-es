@@ -1,9 +1,9 @@
 ---
-title: Faster Recruiting
+title: Reclutamiento más veloz
 ---
 
-With the rise of React, it's become easier to find talented developers who are skilled in React, than developers who are skilled in various flavors of CMS UI development frameworks.
+Con el ascenso de React, se ha vuelto más fácil encontrar desarrolladores talentosos con habilidades en React, que desarrolladores que tienen habilidades en varios "sabores" de frameworks de CMS UI de desarrollo. 
 
-Jesus Olivas, the Head of Engineering at WeKnow, a 40-person agency based in San Diego, CA, [explains](https://www.youtube.com/watch?v=tWu1xfF18FI&feature=youtu.be&t=2392):
+Jesus Olivas, el Líder de Ingeniería de WeKnow, una agencia de 40 personas ubicada en San Diego, CA, [nos explica](https://www.youtube.com/watch?v=tWu1xfF18FI&feature=youtu.be&t=2392):
 
-> On the agency side of things, it's easier to get a developer that knows React, than finding another developer that knows Drupal theming [and] Twig...
+> En el lado agencia de las cosas, es más fácil obtener un desarrollador que sabe React, que encontrar otro desarrollador que sabe de plantillas de Drupal [y] Twig...
