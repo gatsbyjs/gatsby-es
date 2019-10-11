@@ -35,7 +35,7 @@ Antes de seguir, hazte familiar con [las etiquetas de los issues de Gatsby y sus
 Los amplios pasos para etiquetar un issue son:
 
 - Leer un issue
-- Elija las etiquetas que se aplican a ese issue
+- Elegir las etiquetas que se aplican a ese issue
 - Eso es todo - siéntate y relájate, tal vez tome unos momentos para disfrutar de la satisfacción de un trabajo bien hecho
 
 El resto de este documento describirá cómo elegir las etiquetas correctas para un issue.
