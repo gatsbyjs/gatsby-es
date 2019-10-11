@@ -405,7 +405,7 @@ Ahora deberías tener un flujo completo de autenticación, funcionando con inici
 Sí deseas aprender más sobre utilizar soluciones de autenticación listas para producción, estos enlaces pueden ayudarte:
 
 - [Repositorio de Gatsby con autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), using React Context API to handle authentication
+- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), usando el API de React Context para manejar la autenticación
 - [La tienda de Gatsby para premios y otros extras](https://github.com/gatsbyjs/store.gatsbyjs.org)
 - [ Construyendo un blog con Gatsby, React y Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
 - [JAMstack PWA — Construyamos una aplicación de encuestas con Gatsby.js, Firebase y Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
