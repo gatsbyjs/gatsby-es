@@ -22,7 +22,7 @@ Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. La
 
 Cualquier persona que sea miembro del [equipo de mantenedores de Gatsby](https://github.com/orgs/gatsbyjs/teams/maintainers) puede etiquetar issues.
 
-Usted puede obtener una invitación para el equipo por tener una solicitud de extracción se fusionaron en el Gatsby proyecto. Compruebe la lista de issues['help wanted'](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) y [Cómo contribuir guía](/contributing/how-to-contribute/) para empezar.
+Puedes obtener una invitación para el equipo por tener un pull request que fue incluido en el proyecto de Gatsby. Comprueba la lista de issues ['help wanted'] (https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) y [la guía de cómo contribuir](/contributing/how-to-contribute/) para empezar.
 
 **NOTA:** Si ha hecho combinar ya una solicitud de tirón y _no_ ha sido invitado al equipo maintainers, por favor vaya a [el tablero de instrumentos](https://store.gatsbyjs.org/) y solicite un código de descuento.¡Debería conseguir invitar al equipo — _y consigue el botín de Gatsby libre!_ Si esto no trabaja, por favor correo electrónico team-gatsbyjs.com y le invitaremos.
 
