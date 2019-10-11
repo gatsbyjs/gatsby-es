@@ -58,7 +58,7 @@ Puedes comprobar a través de las [descripciones de etiquetas](https://github.co
 
 El tipo más común de los issues es `type: question or discussion`, típicamente puedes aplicar esto a issues que son sin límites determinados o no tienen ningún paso siguiente claro.
 
-Está bien para cambiar el tipo de una issue ya que más información se hace disponible. Que ventajas como `type: la pregunta o la discusión`, tendrían que más tarde ser cambiadas a `type: error de programación`.
+Está bien cambiar el tipo de un issue ya que más información se hace disponible. Lo que empieza como `type: question or discussion`, puede que más tarde necesite ser cambiado a `type: bug`.
 
 El cambio de etiquetas es rápido y fácilmente reversible, así no se preocupe demasiado de la aplicación de una etiqueta "incorrecta".
 
