@@ -1,24 +1,25 @@
 ---
-title: How to Pitch Gatsby
+title: Cómo presentar Gatsby
 ---
 
-If you love Gatsby.js as much as we do, you might want to pitch your colleagues, managers or anyone in your life about its value. As such, we've put together some talking points that could help you make a case for building with Gatsby:
+Si amas Gatsby.js tanto como nosotros, es posible que quieras presentar a tus colegas, gerentes o cualquier persona en tu vida sobre su valor. Como tal, hemos reunido algunos puntos de conversación que podrían ayudarle a hacer un caso para construir con Gatsby:
 
-Build blazing-fast websites without the hosting hassles of managing complex, costly infrastructure or fear that your site might go down. **Gatsby is a website development tool for React, the most modern way to build reliable, lightning fast websites.**
+Cree sitios web ultrarrápidos sin las molestias de administrar infraestructura compleja y costosa o temor a que su sitio se caiga. **Gatsby es una herramienta de desarrollo de sitios web para React, la forma más moderna de construir sitios web fiables y rápidos.**
 
-## A website built with Gatsby is:
+## Un sitio web construido con Gatsby es:
 
-- **Fast:** Think rocket ship vs. Winnebago. Gatsby takes fast to a whole new level with
-  websites that live on the edge—right where your customers are. Pages load in milliseconds
-  rather than seconds. Gatsby lets teams create lightning-fast, content-driven websites without
-  needing to become performance experts.
+- **Rápido:** Piensa en un cohete contra Winnebago. Gatsby se lleva rapide a un nivel 
+  completamente nuevo con sitios web que viven al límite, justo donde están sus clientes. 
+  Las páginas se cargan en milisegundos en lugar de segundos. Gatsby permite a los equipos 
+  crear sitios web ultrarrápidos y basados en  contenido sin necesidad de convertirse en expertos 
+  en rendimiento.
 
-- **Simple:** No servers. No databases. Traditional hosting is time consuming, costly, complex, and puts your site at risk of crashing if your content goes viral. Avoid the pitfalls of hosting with a serverless architecture. A site that never goes down because it’s built on the edge, instantly scaling for traffic spikes.
+- **Sencillo:** Sin servidores. Sin bases de datos. El alojamiento tradicional consume mucho tiempo, es costoso, complejo y pone su sitio en riesgo de bloquearse si su contenido se vuelve viral. Evite los escollos del hospedaje con una arquitectura sin servidor. Un sitio que nunca va hacia abajo porque está construido sobre el borde, instantáneamente escalar los picos de tráfico.
 
-- **Trusted:** Leverage the power of the latest web technologies including React, Webpack, GraphQL, modern JavaScript, and more. Get the best of both worlds—all the power and conveniences from React and its ecosystem with a really slick and responsive user experience.
+- **De Confianza:** Aproveche la potencia de las últimas tecnologías web, como React, Webpack, GraphQL, JavaScript moderno y mucho más. Obtenga lo mejor de ambos mundos: toda la potencia y las comodidades de React y su ecosistema con una experiencia de usuario realmente fluida y responsiva.
 
-- **Flexible with the Content Mesh:** Build websites quickly and deploy them safely, no matter where your content lives. Load data from your CMS, static files, a database, or from multiple places at once. Your marketing team is happy because they can use the content management tools they’re familiar with (WordPress, Drupal, Contentful, Shopify).
+- **Flexible con la malla de contenido:** Cree sitios web rápidamente e impleméntelos de forma segura, sin importar dónde viva su contenido. Cargue datos desde su CMS, archivos estáticos, una base de datos o desde varios lugares a la vez. Su equipo de marketing está contento porque puede usar las herramientas de administración de contenido con las que están familiarizados (WordPress, Drupal, Contentful, Shopify).
 
-- **Secure:** Gatsby websites are inherently more secure because there are no servers involved. All your content is compiled ahead of time so hackers can’t get to your database or into your CMS. And your site is more resilient to DDoS attacks because the biggest point of failure — a server — is no longer part of the equation.
+- **Seguro:** Los sitios web de Gatsby son inherentemente más seguros porque no hay servidores involucrados. Todo su contenido se compila con anticipación para que los hackers no puedan llegar a su base de datos o en su CMS. Y su sitio es más resistente a los ataques DDoS porque el mayor punto de error, un servidor, ya no forma parte de la ecuación.
 
-Want more? Check out this blog post from Linda Watkins, our inimitable marketing director, on why she loves Gatsby (including a one-page overview for you to share): https://www.gatsbyjs.org/blog/2018-06-08-gatsby-marketers-managers-agencies-teams/
+Quieres más? Echa un vistazo a esta entrada de blog de Linda Watkins, nuestra inimitable directora de marketing, sobre por qué ama a Gatsby (incluyendo una descripción general de una página para que usted comparta): https://www.gatsbyjs.org/blog/2018-06-08-gatsby-marketers-managers-agencies-teams/
