@@ -1,10 +1,10 @@
 ---
-title: Bibliotecas de CSS y frameworks
+title: CSS Libraries and Frameworks
 overview: true
 ---
 
-Hay muchas otras bibliotecas de CSS y frameworks que puedes usar en tu proyecto de Gatsby.
+There are many other CSS libraries and frameworks that you can use in your Gatsby project.
 
-No hay enfoques completos al estilo, y en general, funcionarán no importa cual enfoque de estilo has elegido para tu sitio web. Requieren la instalación de bibliotecas de terceros, a menudo con la ayuda de complementos de la comunidad Gatsby.
+These are not full-on approaches to styling, and generally work no matter which styling approach you've chosen for your website. They require installing third-party libraries, often with the help of Gatsby community plugins.
 
 <GuideList slug={props.slug} />

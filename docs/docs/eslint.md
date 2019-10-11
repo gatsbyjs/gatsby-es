@@ -10,7 +10,7 @@ JavaScript, siendo un lenguaje dinámico y de tipado débil, es especialmente pr
 
 Gatsby cuenta con una configuración de ESLint incorporada por defecto. Para muchos usuarios, nuestra configuración es lo único que necesitas. Sin embargo, si sabe que le gustaría personalizar su configuración de ESLint; como por ejemplo, tu compañía tiene su propia configuración ESLint; esto muestra como se puede hacer.
 
-Replicaremos (principalmente) la [configuración que viene incluida en Gatsby] para permitirte agregar presets adicionales, plugins y reglas.
+We'll replicate (mostly) the [ESLint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js) so you can then add additional presets, plugins, and rules.
 
 ```shell
 

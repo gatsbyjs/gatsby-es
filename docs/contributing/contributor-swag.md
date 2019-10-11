@@ -16,10 +16,12 @@ Si has contribuido de otras maneras, como dando charlas sobre Gatsby, enseñando
 
 ### Detalles sobre el regalo gratis
 
-- Enviaremos un artículo desde nuestra [tienda de regalos](https://store.gatsbyjs.org/) por nivel del regalo
-- No todos los artículos son elegibles debido al alto costo para crear el regalo. Vamos a dejar claro qué artículos no son elegibles
-- Hay un límite de un regalo gratis por cada nivel de regalo
-- El envio es gratis en todo el mundo
+- We will send one item from our [swag store](https://store.gatsbyjs.org/) per swag tier
+- Tier 1 swag includes most items \$10 and under
+- Tier 2 swag includes most items \$26 and under
+- Not all items are eligible due to high cost to create the swag. We’ll make it clear which items are not eligible
+- There’s a limit of one free swag item per swag tier
+- Shipping is free worldwide
 
 
 > **NOTA:** El envío gratuito en todo el mundo es un programa piloto. Si los costos de envío se salen de control, es posible que tengamos que ajustar esta política en el futuro.
