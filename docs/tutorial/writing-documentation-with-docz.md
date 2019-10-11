@@ -1,36 +1,36 @@
 ---
-title: 'Escribiendo documentación con Docz'
+title: "Writing documentation with Docz"
 ---
 
-Escribir buena documentación es importante para los que mantienen tus proyectos (y para ti mismo en el futuro). [Docz](https://www.docz.site) es un estupendo generador de documentación. Te permite escribir documentación interactiva para tus componentes React con muy poco esfuerzo.
+Writing good documentation is important for your project maintainers (and for your future self). [Docz](https://www.docz.site) is a very nice documentation generator. It enables you to write interactive documentation for your React components with very little effort.
 
-Docz aprovecha archivos `mdx` – archivos Markdown con JSX – que convierte **componentes React** a archivos Markdown. Sabiendo tus PropTypes o tipos Flow o los tipos TypeScript, puede generar una **tabla de propiedades** para documentar apropiadamente como usar tus componentes. Adicionalmente, puedes proveer **código editable** de tus componentes, para que cualquiera pueda verlos en acción, modificar el código y ver los cambios en directo, o copiar esa parte del código y usarlo en otro lado.
+Docz leverages `mdx` files – short for Markdown with JSX – which brings **React components** to Markdown files. From your PropTypes, or Flow types or TypeScript types, it can generate **property tables** to document properly how to use your components. In addition, you can provide a **coding playground** for your components, so that anyone can see them in action, modify the code and see the changes live, or copy the snippet to use it somewhere else.
 
-Si estas empezando tu proyecto Gatsby desde cero y te gustaría tener una excelente documentación, con soporte para Docz, puedes usar [`gatsby-starter-docz`](https://github.com/pedronauck/gatsby-starter-docz). También puedes encontrar mas información al final de esta guía en la sección [otros recursos](#other-resources).
+If you're starting your Gatsby project from scratch and would like to have great documentation, with Docz support out of the box, you can use [`gatsby-starter-docz`](https://github.com/pedronauck/gatsby-starter-docz). You can also find more information at the end of this guide in the [Other resources](#other-resources) section.
 
-Como alternativa, la siguiente guía debería ayudarte a que utilices Docz en un proyecto Gatsby existente.
+Alternatively, the following guide should help you to get Docz working within an existing Gatsby project.
 
-## Configurando tu ambiente
+## Setting up your environment
 
-Primero, si aún no tienes un proyecto Gatsby configurado, usa la CLI de Gatsby para crear un nuevo sitio:
+First, if you do not have a Gatsby project set up yet, use the Gatsby CLI to create a new site:
 
 ```shell
 gatsby new my-gatsby-site-with-docz
 ```
 
-Para configurar Docz necesitas instalar el tema Docz de Gatsby, y agregar cierta configuración personalizada. Asegurate de estar en el directorio raíz de tu proyecto Gatsby:
+To set up Docz you need to install the Docz Gatsby theme and add some custom configuration. Make sure you are in the root directory of your Gatsby project:
 
 ```shell
 cd my-gatsby-site-with-docz
 ```
 
-Instala el paquete `gatsby-theme-docz`:
+And install the `gatsby-theme-docz` package:
 
 ```shell
 npm install --save gatsby-theme-docz@next
 ```
 
-Agrega `gatsby-theme-docz` bajo `plugins` en `gatsby-config.js`:
+Add `gatsby-theme-docz` under `plugins` in `gatsby-config.js`:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -39,12 +39,12 @@ module.exports = {
     `gatsby-theme-docz`,
     // Your plugins go here
   ],
-};
+}
 ```
 
-## Escribiendo documentación
+## Writing documentation
 
-Docz busca archivos `mdx` en tus directorios y los renderiza. Crea una carpeta `docs` en la raíz de tu proyecto. Coloca un archivo `index.mdx` dentro del directorio con el siguiente contenido:
+Docz searches your directories for `mdx` files and renders them. Create a `docs` folder at the root of your project. Place an `index.mdx` file inside this directory with the following content:
 
 ```mdx:title=docs/index.mdx
 ---
@@ -59,50 +59,50 @@ route: /
 Type here the most beautiful getting started that you ever saw!
 ```
 
-Inicia el servidor de desarrollo con el comando `gatsby develop` y deberías sentirte bienvenido con el diseño por defecto de Docz y una cabecera "Getting Started". Detén el servidor de desarrollo después de verificar que todo funciona.
+Run the development server with `gatsby develop` and you should be greeted with the default Docz layout and a "Getting Started" heading. Stop the development server after verifying that everything works.
 
-Condimentemos un poco más agregando y renderizando componentes React. Para mantener las cosas simples puedes crear un componente botón en el mismo directorio `docs`.
+Let's spice things up by adding and rendering a React component. For the sake of simplicity you can create the following button component in the same `docs` directory.
 
 ```jsx:title=docs/button.jsx
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react"
+import PropTypes from "prop-types"
 
 const scales = {
   small: {
-    fontSize: '16px',
+    fontSize: "16px",
   },
   normal: {
-    fontSize: '18px',
+    fontSize: "18px",
   },
   big: {
-    fontSize: '22px',
+    fontSize: "22px",
   },
-};
+}
 
 export const Button = ({ children, scale }) => (
   <button style={scales[scale]}>{children}</button>
-);
+)
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  scale: PropTypes.oneOf(['small', 'normal', 'big']),
-};
+  scale: PropTypes.oneOf(["small", "normal", "big"]),
+}
 
 Button.defaultProps = {
-  scale: 'normal',
-};
+  scale: "normal",
+}
 ```
 
-El botón mostrará su texto por defecto con la propiedad `font-size` a `18px`, aunque puedes especificar el tamaño `small` & `big`. Estas propiedades serán mostradas posteriormente por Docz.
+The button will display its text by default with a `font-size` of `18px` however you can also pass in `small` & `big` as a size. These properties will later be displayed by Docz.
 
-> **Nota:** Si tu componente depende de `StaticQuery` o `graphql`, considera separarlo en dos componentes más pequeños:
+> **Note:** If your component relies on `StaticQuery` or `graphql`, consider splitting it into two smaller components:
 >
-> - un componente React encargado solo de la **capa UI**, y
-> - otro encargándose de la **capa de datos**.
+> - one React component dealing only with the **UI layer**, and
+> - another dealing with the **data layer**.
 >
-> Podrías exhibir el componente React encargado de la capa UI en tu archivo `mdx` y el componente encargado de los datos podría usarlo para renderizar los datos obtenidos gracias a `StaticQuery` y `graphql`.
+> You could showcase the UI layer React component in your `mdx` files and your data layer component could use it to render the data it fetched thanks to `StaticQuery` and `graphql`.
 
-Crea un nuevo archivo en el directorio `docs` para documentar el componente botón recién creado. Nombra el archivo `button.mdx`:
+Create a new file in the `docs` directory to document your newly created button component. Call the file `button.mdx`:
 
 ```mdx:title=docs/button.mdx
 ---
@@ -115,7 +115,7 @@ menu: Components
 Buttons make common actions more obvious and help users more easily perform them. Buttons use labels and sometimes icons to communicate the action that will occur when the user touches them.
 ```
 
-Docz ofrece algunos componentes internos que puedes usar para mostrar el componente y sus propiedades. Importa ambos (Playground y Props) y también tu propio componente en el documento para usarlos:
+Docz offers some internal components you can use to display the component and its properties. Import both these and your component itself into the document and use them:
 
 ```mdx:title=docs/button.mdx
 ---
@@ -154,11 +154,11 @@ Buttons make common actions more obvious and help users more easily perform them
 // highlight-end
 ```
 
-Inicia el servidor de desarrollo nuevamente y deberías ver las propiedades (children y scale), un editor de código mostrando el botón normal, y un editor de código mostrando el botón en sus tres tamaños.
+Start the development server again and you should see the properties (children and scale), one playground displaying the normal button, and one playground showing the button in its three sizes.
 
-## Configuración
+## Configuration
 
-Normalmente puedes establecer tu configuración usando el archivo `doczrc.js` ([mira todas las opciones disponibles](https://www.docz.site/docs/project-configuration)) o si quieres establecer algunas opciones por defecto en tu tema, puedes establecer `options` (opciones) en la definición del tema.
+You can usually set your config using a `doczrc.js` file ([see all available options](https://www.docz.site/docs/project-configuration)) or if you want to set some default options for your theme, you can set `options` in the theme definition.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -170,15 +170,15 @@ module.exports = {
         // Your options here
       },
     },
-    //hightlight-end
+    //highlight-end
     // Your plugins go here
   ],
-};
+}
 ```
 
-> ¡Recomendamos encarecidamente que establezcas tu configuración usando `doczrc.js`! Live reloading (actualización automática de tu sitio) solo funcionará con el archivo de configuración y no con las configuraciones dentro de la definición del tema.
+> We highly recommend that you set your configuration using `doczrc.js`! Live reloading will only work with the configuration file, not the settings inside the theme definition.
 
-## Otros recursos
+## Other resources
 
-- Para más información de Docz visita [el sitio de Docz](https://docz.site/) y en particular la [documentación de Gatsby theme](https://www.docz.site/docs/gatsby-theme)
-- Revisa el [Docz starter](https://github.com/pedronauck/gatsby-starter-docz) oficial.
+- For more information on Docz visit [the Docz site](https://docz.site/) and in particular the [Gatsby theme documentation](https://www.docz.site/docs/gatsby-theme)
+- Check out the official [Docz starter](https://github.com/pedronauck/gatsby-starter-docz)
