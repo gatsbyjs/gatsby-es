@@ -10,7 +10,7 @@ Cuando tienes tu sitio web preparado querrás saber cuantos visitantes van a ent
 - ¿De dónde proceden mis visitantes?
 - ¿Cuándo visitan mi página?
 
-Google Analytics provee una forma de recoger estos datos y analizarlos, respondiendo las preguntas de arriba junto con muchas otras. La plataforma es gratuíta hasta 10 millones de entradas por mes e id de rastreo (Tracking ID). Hay otras opciones de métricas de análisis -- mira la sección "Otros plugins de Gatsby de análisis" de este documento en busca de ideas.
+Google Analytics provee una forma de recoger estos datos y analizarlos, respondiendo las preguntas de arriba junto con muchas otras. La plataforma es gratuita hasta 10 millones de entradas por mes e id de rastreo (Tracking ID). Hay otras opciones de métricas de análisis -- mira la sección "Otros plugins de Gatsby de análisis" de este documento en busca de ideas.
 
 ## Configurando Google Analytics
 
