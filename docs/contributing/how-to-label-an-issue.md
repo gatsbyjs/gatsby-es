@@ -8,7 +8,7 @@ Las etiquetas de issue son una herramienta de GitHub que se utilizan para agrupa
 
 [Echa un vistazo a las etiquetas de Gatsby (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-## ¿Por qué etiqueta issue?
+## ¿Por qué etiquetar issues?
 
 Gatsby es un proyecto muy activo con muchas nuevas issues abiertas cada día. Etiquetaje issues ayuda identificándose:
 
