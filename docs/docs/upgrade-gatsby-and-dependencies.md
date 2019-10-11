@@ -51,7 +51,7 @@ Agrega un signo de intercalación (`^`) antes de cada versión para ambas **actu
 ```
 Para actualizaciones mayores, usa la guía correspondiente del índice de guías de referencia para [Lanzamientos y Migracinoes](/docs/releases-and-migration/)
 
-Si estás actualizando Gatsby, probablemente también necesites  actualizaciones los plugins que mantiene Gatsby, puedes identificarlos por su nombre que comienza con `gatsby-`. Recuerda, esto solo aplica para plugins administrados in el repositorio [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby); para plugins administrados por la comunidad verifica si hay una nueva versión a la que puedas actualizar.
+Si estás actualizando Gatsby, probablemente también necesites  actualizar los plugins que Gatsby mantiene. Puedes identificarlos por su nombre que comienza con `gatsby-`. Recuerda, esto solo aplica para plugins administrados en el repositorio [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby); para plugins administrados por la comunidad, verifica si hay una nueva versión a la que puedas actualizar.
 
 ## Actualizar todas las dependencias en conjunto
 
@@ -105,7 +105,7 @@ npm run upgrade-interactive
 
 ## Solución de problemas
 
-Aparte de casos muy específicos como [Gatsby abandonando el soporte para Node 6](/blog/2019-06-18-dropping-support-for-node-6/), actualizar para lanzamientos parche o menores no debería requerir modificaciones a tu código. Se recomienda que corras tu suite de pruebas (en caso de que tengas una) luego de actualizar Gatsby o sus dependencias.
+Aparte de casos muy específicos como [Gatsby abandonando el soporte para Node 6](/blog/2019-06-18-dropping-support-for-node-6/), actualizar para lanzamientos parche o menores no debería requerir modificaciones a tu código. Se recomienda que corras tu suite de pruebas (en caso de que tengas una), luego de actualizar Gatsby o sus dependencias.
 
 En caso de que te encuentres con conflictos de versiones en tus dependencias, puedes usar el módulo [npm-force-resolutinos package](https://www.npmjs.com/package/npm-force-resolutions?activeTab=readme)
 
