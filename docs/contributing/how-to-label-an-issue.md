@@ -66,7 +66,7 @@ Elige una etiqueta `type:` apropiada y estarás listo para ir al siguiente paso.
 
 ### Elige una etiqueta `status:` (opcional)
 
-Compruebe a través de la [`status:` etiquetas (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si alguno se aplica a este de la issue agregarlos como sea necesario.
+Comprueba a través de la [`status:` labels (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si alguna aplica a este issue, agrégalas como sea necesario.
 
 Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
