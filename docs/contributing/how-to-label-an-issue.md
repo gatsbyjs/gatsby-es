@@ -28,7 +28,7 @@ Puedes obtener una invitación para el equipo por tener un pull request que fue 
 
 ## Cómo etiquetar un issue
 
-Idealmente, cada issue debería tener un `type:` solo la etiqueta se aplicó a ello. Opcionalmente un `status:` a etiqueta u otras etiquetas también pueden ser aplicadas.
+Idealmente, cada issue debería tener una etiqueta `type:` aplicada a el. Opcionalmente una etiqueta `status:` u otras etiquetas también pueden ser aplicadas.
 
 Antes de seguir, hágase familiar con [las etiquetas de la issue de Gatsby y sus descripciones](https://github.com/gatsbyjs/gatsby/issues/labels).
 
