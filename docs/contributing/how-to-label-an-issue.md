@@ -56,7 +56,7 @@ Elige una etiqueta de tipo en el menú desplegable de etiquetas, en el lado dere
 
 Puedes comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada una de ellas.
 
-El tipo más común de la issues es `type: la pregunta o la discusión`, típicamente puede aplicar esto a issues que son sin límites determinados o tienen ningún siguiente paso claro.
+El tipo más común de los issues es `type: question or discussion`, típicamente puedes aplicar esto a issues que son sin límites determinados o no tienen ningún paso siguiente claro.
 
 Está bien para cambiar el tipo de una issue ya que más información se hace disponible. Que ventajas como `type: la pregunta o la discusión`, tendrían que más tarde ser cambiadas a `type: error de programación`.
 
