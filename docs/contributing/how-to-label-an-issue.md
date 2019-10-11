@@ -32,7 +32,7 @@ Idealmente, cada issue debería tener una etiqueta `type:` aplicada a el. Opcion
 
 Antes de seguir, hazte familiar con [las etiquetas de los issues de Gatsby y sus descripciones](https://github.com/gatsbyjs/gatsby/issues/labels).
 
-Los amplios pasos al etiquetaje una issue son:
+Los amplios pasos para etiquetar un issue son:
 
 - Leer un issue
 - Elija las etiquetas que se aplican a ese issue
