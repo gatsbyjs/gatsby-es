@@ -1,41 +1,40 @@
 ---
-title: Upgrade for Minor or Patch Releases
+title: Actualizar para lanzamientos parche o menores
 ---
+Para mantenerse actualizado con los últimos arreglos, parches de seguridad y lanzamientos menores de Gatsby y sus dependencias, debes actualizar constantemente a las últimas versiones de cada paquete.
 
-To keep up with the latest bug fixes, security patches, and minor releases from both Gatsby and its dependencies, you should upgrade often to the latest version of each one.
+## Versionado Semántico
 
-## Semantic versioning
+Como muchos otros paquetes, Gatsby usa [versionado semántico](https://semver.org/) para etiquetar nuevas versiones e indicar el tipo de cambio que se introduce en cada lanzamiento.
 
-As many other packages, Gatsby uses [semantic versioning](https://semver.org/) to tag new versions and indicate what kind of changes are introduced in every new release.
+Esta guía busca enseñarte cómo actualizar Gatsby para lanzamientos parche o menores. Para actualizaciones mayores, puedes ir al índice de guías de referencia para [Lanzamientos y  Migraciones](/docs/releases-and-migration/) donde encontrarás la guía correspondiente de actualización.
 
-This guide is meant to teach you how to upgrade Gatsby for minor or patch releases. For major changes you can refer to the [Release and Migrations](/docs/releases-and-migration/) reference guide overview for the corresponding guide to upgrade.
+## ¿Por qué deberías actualizar Gatsby y sus dependencias?
 
-## Why you should upgrade Gatsby and its dependencies
+Cada nueva versión de cada paquete viene con mejoras en múltiples áreas como rendimiento, accesibilidad, seguridad, arreglo de bugs y más, de manera que es importante actualizar tanto Gatsby como sus dependencias para obtener las últimas mejoras en cada una de estas áreas.
 
-Every new version of every package comes with improvements on multiple categories from performance, accessibility, security, bug fixes, and more, so it is important to upgrade both Gatsby and its dependencies to get the latest improvements in every one of these categories.
+Actualizar tus dependencias en lanzamientos parche o menores también ayuda a que actualizar a lanzamientos mayores sea más fácil, además de que te ayuda a identificar funcionalidad y APIs que se volverán obsoletas en futuros lanzamientos
 
-Upgrading your dependencies often on minor or patch releases also helps you to make major upgrades easier and to identify soon-to-be-deprecated functionality or APIs.
+## Cómo identificar posibles actualizaciones
 
-## How to identify possible upgrades
-
-To start, you can run the `outdated` command to identify new releases for all your dependencies.
+Para comenzar, ejecuta el comando `outdated` de npm, para identificar nuevas actualizaciones de tus dependencias.
 
 ```shell
 npm outdated
 ```
 
-This will output a table indicating which packages have new versions available and what is the latest version for each one.
+Este comando imprimirá una tabla indicando qué paquetes tienen nuevas versiones disponibles y cuál es la última versión para cada uno.
 
 ```
 Package                            Current   Wanted   Latest  Location
 gatsby                             2.15.13  2.15.13  2.15.20
 ```
 
-## Configure your dependencies for upgrades
+## Configurar tus dependencias para actualizarse
 
-Depending on whether you want to update Gatsby and its dependencies for minor or patch releases you need to modify your `package.json` accordingly.
+Dependiendo de si quires actualizar Gatsby y sus dependencias para actualizaciones parche o menores, necesitas modificar tu `package.json` apropiadamente.
 
-If you only want to update **for patch releases**, you can add a tilde (`~`) before the version of your package:
+Si solo quieres actualizar para **actualizaciones parche**, puedes agregar una tilde (`~`) antes de cada versión en tu archivo `package.json`
 
 ```json:title=package.json
 "dependencies"{
@@ -43,53 +42,52 @@ If you only want to update **for patch releases**, you can add a tilde (`~`) bef
 }
 ```
 
-**For both patch and minor updates**, add a caret (`^`) before the version of your package:
+Agrega un signo de intercalación (`^`) antes de cada versión para ambas **actualizaciones parche y menores**
 
 ```json:title=package.json
 "dependencies"{
   "gatsby": "^2.15.13",
 }
 ```
+Para actualizaciones mayores, usa la guía correspondiente del índice de guías de referencia para [Lanzamientos y Migracinoes](/docs/releases-and-migration/)
 
-For major updates follow up with the corresponding guide from the [Release and Migrations](/docs/releases-and-migration/) reference guide overview.
+Si estás actualizando Gatsby, probablemente también necesites  actualizaciones los plugins que mantiene Gatsby, puedes identificarlos por su nombre que comienza con `gatsby-`. Recuerda, esto solo aplica para plugins administrados in el repositorio [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby); para plugins administrados por la comunidad verifica si hay una nueva versión a la que puedas actualizar.
 
-If you are updating Gatsby, you'll likely also need to update Gatsby related plugins, you can identify them by their names starting with `gatsby-`. This only applies to plugins managed in the [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby) repo; for community plugins check beforehand if there is a new version available for upgrading.
+## Actualizar todas las dependencias en conjunto
 
-## Updating all your dependencies at once
-
-After adding the corresponding annotations into your `package.json` file, you can run the update command:
+Luego de agregar las anotaciones correspondientes en tu archivo `package.json`, puedes ejecutar el commando `update` de npm.
 
 ```shell
 npm update
 ```
 
-This will upgrade all your packages to the latest [wanted version](https://docs.npmjs.com/cli/outdated), such as the latest patch, minor, or major update depending on your annotations in `package.json`.
+Este comando actualizará todos tus paquetes a la última [versión requerida](https://docs.npmjs.com/cli/outdated), ya sea la última actualización parche, menor o mayor, dependiendo de las anotaciones en el `package.json`. 
 
-## Upgrade individual dependencies
+## Actualizar dependencias individualmente
 
-You can also update one package at the time with the `install` command in npm, alongside the version that you want to install:
+También puedes actualizar tus dependencias una a la vez con el comando `install` de npm, junto con la versión que quieras instalar o a la que quieras actualizar.
 
 ```shell
-npm install <package-name>@<version> --save
+npm install <paquete>@<version> --save
 ```
 
-You can specify the version you want to install or upgrade to, in the following formats:
+Puedes especificar la versión que quieres instalar o a la que quieres actualizar en cualquiera de los siguientes formatos:
 
-- A specific version after the `@`
-- An annotated version with `*`,`^`,`~` to indicate that you want the latest major, minor or patch release respectively.
-- Use an `x` instead of a number to indicate that you want the latest major (`x`), minor (`<major>.x`) or patch release (`<major>.<minor>.x`). For example, to install the latest patch release for a given major and minor version: `npm install package-name@2.1.x --save`
+- Una versión específica luego del carácter `@`
+- Una versión anotada con `*`,`^`,`~` para indicar que requieres la última actualización mayor, menor o de parche respectivamente.
+- Usa una `x` en lugar de un número para indicar que quieres la última actualización mayor (`x`), menor (`<major>.x`) o de parche (`<major>.<minor>.x`). Por ejemplo, para instalar la última actualización parche y especificar una versión mayor y menor, usa el siguiente formato: `npm install package-name@2.1.x --save`
 
-For major upgrades, remember to follow up with the corresponding guide from the [Release and Migrations](/docs/releases-and-migration/) reference guide overview.
+Recuerda que para actualizaciones mayores debes seguir la guía correspondiente del índice de guías de referencia para [Lanzamientos y Migraciones](/docs/releases-and-migration/)
 
-## Upgrade Interactively
+## Actualizaciones interactivas
 
-You can manually select which dependencies you want to update through the [npm-check](https://www.npmjs.com/package/npm-check) module. To do that, start by installing the module:
+Puedes seleccionar individualmente qué dependencias quieres actualizar a través del módulo [npm-check](https://www.npmjs.com/package/npm-check). Para hacer esto, inicia instalando el siguiente módulo.
 
 ```shell
 npm install npm-check --save-dev
 ```
 
-Then add the corresponding script to your package.json file:
+Posteriormente, agrega el script correspondiente en tu archivo `package.json`.
 
 ```json:title=package.json
 {
@@ -99,21 +97,21 @@ Then add the corresponding script to your package.json file:
 }
 ```
 
-And finally run the recently added command:
+Finalmente, ejecuta el comando que agregaste recientemente en los scripts:
 
 ```shell
 npm run upgrade-interactive
 ```
 
-## Troubleshooting
+## Solución de problemas
 
-Aside from some specific cases, such as [Gatsby's dropping of support for Node 6](/blog/2019-06-18-dropping-support-for-node-6/), upgrading for minor or patch releases should not require you to make changes to your code. It is recommended to run your suite of tests (in case you have one) after upgrading Gatsby or its dependencies.
+Aparte de casos muy específicos como [Gatsby abandonando el soporte para Node 6](/blog/2019-06-18-dropping-support-for-node-6/), actualizar para lanzamientos parche o menores no debería requerir modificaciones a tu código. Se recomienda que corras tu suite de pruebas (en caso de que tengas una) luego de actualizar Gatsby o sus dependencias.
 
-In case you get stuck in dependencies conflicts, you can use the [npm-force-resolutinos package](https://www.npmjs.com/package/npm-force-resolutions?activeTab=readme) on npm.
+En caso de que te encuentres con conflictos de versiones en tus dependencias, puedes usar el módulo [npm-force-resolutinos package](https://www.npmjs.com/package/npm-force-resolutions?activeTab=readme)
 
-## Related content
+## Contenido relacionado
 
-Check out these related guides for major upgrades of Gatsby:
+Revisa estas guías que cubren actualizaciones mayores de Gatsby:
 
-- [Migrating from v1 to v2](/docs/migrating-from-v1-to-v2/)
-- [Migrating from v0 to v1](/docs/migrating-from-v0-to-v1/)
+- [Migrando de v1 a v2](/docs/migrating-from-v1-to-v2/)
+- [Migrando de v0 a v1](/docs/migrating-from-v0-to-v1/)
