@@ -8,7 +8,7 @@ La documentación de Gatsby consiste en una serie de páginas maquetadas mediant
 
 ## Pasos para traducir una página
 
-Sbemos que todos quieren contribuir pero debemos mantener un orden en las traducciones, para esto el issue de progreso es de gran ayuda, para poder empezar a traducir sigue estos pasos, por favor **no empieces a traducir si no sigues todos estos pasos, y te asignamos la página**, la idea es que no pierdas preciado trabajo y tiempo si la página ya fue tomada por otro, a veces podemos tardar en asignar, pero por favor ten paciencia:
+Sabemos que todos quieren contribuir pero debemos mantener un orden en las traducciones, para esto el issue de progreso es de gran ayuda, para poder empezar a traducir sigue estos pasos, por favor **no empieces a traducir si no sigues todos estos pasos, y te asignamos la página**, la idea es que no pierdas preciado trabajo y tiempo si la página ya fue tomada por otro, a veces podemos tardar en asignar, pero por favor ten paciencia:
 
 - **1.-** Ve al [issue de progreso de traducción](https://github.com/gatsbyjs/gatsby-es/issues/4) y revisa que página esta **disponible** y quisieras traducir.
 - **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh o @darking360 con la página que quieres traducir y así podemos asignarla.
@@ -22,7 +22,7 @@ Sbemos que todos quieren contribuir pero debemos mantener un orden en las traduc
 
 ## Crear un fork, clonar
 
-¿Es tu primera contribución a un proyecto de código abierto? Que genial, y no te preocupes, no es un proceso complicado o tedioso, solo hay una serie de pasos que debes seguir para empezar a traducir y crear tu primera contribución, debes crear un `fork` del proyecto, que significa clonar el proyecto base a tus proyectos, de esta manera exitamos choques no deseados en el contenido oficial. Seguidamente clonaras el proyecto a tu equipo de trabajo para tener todo el código de las páginas para que las abras en tu editor de texto, y finalmente cuando termines de traducir, pódras crear tu primer PR para que lo revisemos 🎉 Parece mucho, pero sigue estas instrucciones:
+¿Es tu primera contribución a un proyecto de código abierto? Que genial, y no te preocupes, no es un proceso complicado o tedioso, solo hay una serie de pasos que debes seguir para empezar a traducir y crear tu primera contribución, debes crear un `fork` del proyecto, que significa clonar el proyecto base a tus proyectos, de esta manera evitamos choques no deseados en el contenido oficial. Seguidamente clonaras el proyecto a tu equipo de trabajo para tener todo el código de las páginas para que las abras en tu editor de texto, y finalmente cuando termines de traducir, pódras crear tu primer PR para que lo revisemos 🎉 Parece mucho, pero sigue estas instrucciones:
 
 - **1.-** Para crear un `fork` del proyecto, dirigete a la [página principal de las traducciones en Español](https://github.com/gatsbyjs/gatsby-es) y en la parte superior derecha, veras un botón que dice `fork`, dale click y esto creará un `fork` en tus proyectos personales, al finalizar esto, estarás en una página similar a la de Gatsby, solo que con tu nombre de usuario.
 - **2.-** Ahora vas a clonar el proyecto, para esto, justo donde quedaste en el paso anterior dale click a `Clone or download` y eso te dará la direccion de tu repositorio, copiala y ve a tu terminal y ejecuta `git clone <URL_DEL_REPOSITORIO>` pegando el enlace de tu repositorio para clonar.
