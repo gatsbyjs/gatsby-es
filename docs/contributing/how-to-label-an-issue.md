@@ -24,7 +24,7 @@ Cualquier persona que sea miembro del [equipo de mantenedores de Gatsby](https:/
 
 Puedes obtener una invitación para el equipo por tener un pull request que fue incluido en el proyecto de Gatsby. Comprueba la lista de issues ['help wanted'] (https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) y [la guía de cómo contribuir](/contributing/how-to-contribute/) para empezar.
 
-**NOTA:** Si ha hecho combinar ya una solicitud de tirón y _no_ ha sido invitado al equipo maintainers, por favor vaya a [el tablero de instrumentos](https://store.gatsbyjs.org/) y solicite un código de descuento.¡Debería conseguir invitar al equipo — _y consigue el botín de Gatsby libre!_ Si esto no trabaja, por favor correo electrónico team-gatsbyjs.com y le invitaremos.
+**NOTA:** Si ya tienes un pull request incluido y _no_ has sido invitado al equipo mantenedores, por favor ve a [la página de la tienda](https://store.gatsbyjs.org/) y solicita un código de descuento. ¡Deberías obtener una invitación al equipo — _y conseguir swag de Gatsby gratis!_ Si esto no funciona, por favor envía un correo electrónico a team@gatsbyjs.com y te invitaremos.
 
 ## Cómo etiquetar un issue
 
