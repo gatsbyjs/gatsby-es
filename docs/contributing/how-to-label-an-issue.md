@@ -14,7 +14,7 @@ Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. La
 
 - issues buenos para que los nuevos contribuidores trabajen en ellos
 - errores reportados y confirmados
-- Las solicitudes de funciones
+- solicitudes de funcionalidades
 - duplicadas issues
 - issues que son paradas o bloqueadas
 
