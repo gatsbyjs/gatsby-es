@@ -22,4 +22,4 @@ Si llegaste hasta aquí es que estás interesado en ser mantenedor de la documen
 
 ## Máximo número de mantenedores
 
-Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería mantener el número de mantenedores en algo entre 3 y 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puedes optar por [swag gratis](https://www.gatsbyjs.org/contributing/contributor-swag/) con tus contribuciones ❤️
+Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería acotar el número a 3 o 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puedes optar por [swag gratis](https://www.gatsbyjs.org/contributing/contributor-swag/) con tus contribuciones ❤️
