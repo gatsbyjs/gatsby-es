@@ -20,7 +20,7 @@ Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. La
 
 ## ¿Quién puede etiquetar issues?
 
-Cualquier persona que sea miembro de la [Gatsby mantenedores team](https://github.com/orgs/gatsbyjs/teams/maintainers) pueden etiquetar los issues.
+Cualquier persona que sea miembro del [equipo de mantenedores de Gatsby](https://github.com/orgs/gatsbyjs/teams/maintainers) puede etiquetar issues.
 
 Usted puede obtener una invitación para el equipo por tener una solicitud de extracción se fusionaron en el Gatsby proyecto. Compruebe la lista de issues['help wanted'](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) y [Cómo contribuir guía](/contributing/how-to-contribute/) para empezar.
 
