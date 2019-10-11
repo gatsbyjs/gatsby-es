@@ -62,7 +62,7 @@ Está bien cambiar el tipo de un issue ya que más información se hace disponib
 
 El cambio de etiquetas es rápido y fácilmente reversible, así que no te preocupes demasiado de la aplicación de una etiqueta "incorrecta".
 
-Elija un `type:` apropiado: la etiqueta y usted están listos para circular al siguiente paso.
+Elige una etiqueta `type:` apropiada y estarás listo para ir al siguiente paso.
 
 ### Elija un `status:` etiqueta (opcional)
 
