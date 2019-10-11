@@ -80,7 +80,7 @@ Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
 - Un issue que describe un error donde hay pasos para reproducir el error _y_ has ejecutado el código en tu ambiente local y has visto que el error por ti mismo puede ser marcado con `status: confirmed`
 
-### Elija cualquier otra etiqueta
+### Elige cualquier otra etiqueta
 
 Hay unas otras etiquetas que pueden ser a veces aplicadas a un issue. Aquí están algunos ejemplos más de cuando usarlos:
 
