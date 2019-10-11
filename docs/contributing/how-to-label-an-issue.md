@@ -12,7 +12,7 @@ Las etiquetas de issue son una herramienta de GitHub que se utilizan para agrupa
 
 Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. Las etiquetas de issues ayudan identificando:
 
-- buenas issues para que los nuevos contribuyentes trabajen en
+- issues buenos para que los nuevos contribuidores trabajen en ellos
 - errores reportados y confirmados
 - Las solicitudes de funciones
 - duplicadas issues
