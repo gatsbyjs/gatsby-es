@@ -54,7 +54,7 @@ Elige una etiqueta de tipo en el menú desplegable de etiquetas, en el lado dere
 
 ![Dropdown de etiquetas de GitHub](./images/github-label-list.png)
 
-Puede comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada uno de ellos.
+Puedes comprobar a través de las [descripciones de etiquetas](https://github.com/gatsbyjs/gatsby/issues/labels) para obtener más información sobre cada una de ellas.
 
 El tipo más común de la issues es `type: la pregunta o la discusión`, típicamente puede aplicar esto a issues que son sin límites determinados o tienen ningún siguiente paso claro.
 
