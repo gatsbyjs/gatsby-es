@@ -139,3 +139,4 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | Scope (sustantivo)     | Ambito                                |
 | Scope (verbo)          | Aislar                                |
 | Open Source            | Código abierto                        |
+| script                 | script                                |
