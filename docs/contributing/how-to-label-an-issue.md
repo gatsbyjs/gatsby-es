@@ -70,7 +70,7 @@ Comprueba a través de la [`status:` labels (y sus descripciones)](https://githu
 
 Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
-- Un issue que depende de una dependencia externa cambiada podría ser marcada por 'el estado: bloqueado' `status: blocked`
+- Un issue que depende de una dependencia externa cambiada podría ser marcado con `status: blocked`
 
 - Un issue con una descripción clara de cómo puede ser resuelto podría ser marcada `status: help wanted`.
 
