@@ -46,7 +46,7 @@ Comienza con [la lista de issues de Gatsby](https://github.com/gatsbyjs/gatsby/i
 
 ### Leer un issue
 
-Lea el issue y cualquier comentario para entender de qué se trata el issue.
+Lee el issue y cualquier comentario para entender de qué se trata el issue.
 
 ### Elija un `type:` etiqueta
 
