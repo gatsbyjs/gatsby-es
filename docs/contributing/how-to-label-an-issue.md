@@ -90,7 +90,7 @@ Hay unas otras etiquetas que pueden ser a veces aplicadas a un issue. Aquí est�
 
 ### El final
 
-¡Y es hecho! Lo puede llamar un día o volver al primer paso para poner etiqueta a otra issue.
+¡Y has acabado! Puedes dejarlo por hoy o volver al primer paso para poner una etiqueta a otro issue.
 
 ## La conclusión
 
