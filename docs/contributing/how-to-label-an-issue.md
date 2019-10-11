@@ -60,7 +60,7 @@ El tipo más común de los issues es `type: question or discussion`, típicament
 
 Está bien cambiar el tipo de un issue ya que más información se hace disponible. Lo que empieza como `type: question or discussion`, puede que más tarde necesite ser cambiado a `type: bug`.
 
-El cambio de etiquetas es rápido y fácilmente reversible, así no se preocupe demasiado de la aplicación de una etiqueta "incorrecta".
+El cambio de etiquetas es rápido y fácilmente reversible, así que no te preocupes demasiado de la aplicación de una etiqueta "incorrecta".
 
 Elija un `type:` apropiado: la etiqueta y usted están listos para circular al siguiente paso.
 
