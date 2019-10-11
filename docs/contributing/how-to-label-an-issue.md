@@ -72,7 +72,7 @@ Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
 - Un issue que depende de una dependencia externa cambiada podría ser marcado con `status: blocked`
 
-- Un issue con una descripción clara de cómo puede ser resuelto podría ser marcada `status: help wanted`.
+- Un issue con una descripción clara de cómo puede ser resuelto podría ser marcado con `status: help wanted`.
 
 - Un issue esto pierde la información requerida ayudar al autor podría ser marcada por `status: needs more info`
 
