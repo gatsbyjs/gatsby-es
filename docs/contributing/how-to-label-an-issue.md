@@ -10,7 +10,7 @@ Las etiquetas de issue son una herramienta de GitHub que se utilizan para agrupa
 
 ## ¿Por qué etiquetar issues?
 
-Gatsby es un proyecto muy activo con muchas nuevas issues abiertas cada día. Etiquetaje issues ayuda identificándose:
+Gatsby es un proyecto muy activo con muchos nuevos issues abiertos cada día. Las etiquetas de issues ayudan identificando:
 
 - buenas issues para que los nuevos contribuyentes trabajen en
 - errores reportados y confirmados
