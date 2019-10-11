@@ -64,7 +64,7 @@ El cambio de etiquetas es rápido y fácilmente reversible, así que no te preoc
 
 Elige una etiqueta `type:` apropiada y estarás listo para ir al siguiente paso.
 
-### Elija un `status:` etiqueta (opcional)
+### Elige una etiqueta `status:` (opcional)
 
 Compruebe a través de la [`status:` etiquetas (y sus descripciones)](https://github.com/gatsbyjs/gatsby/issues/labels), si alguno se aplica a este de la issue agregarlos como sea necesario.
 
