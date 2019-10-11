@@ -86,7 +86,7 @@ Hay unas otras etiquetas que pueden ser a veces aplicadas a un issue. Aquí est�
 
 - `good first issue` puede ser usada cuando un issue es un trabajo pequeño, claramente definido que podría ser completado por alguien sin conocimiento a fondo de Gatsby y cómo trabaja. Estos issues son particularmente convenientes para la gente que hace sus primeras contribuciones a código abierto.
 
-- `stale?` puede ser usado en un issue donde el autor no ha contestado a peticiones de más información en al menos 20 días
+- `stale?` puede ser usado en un issue donde el autor no ha contestado a peticiones de más información en al menos 20 días.
 
 ### El final
 
