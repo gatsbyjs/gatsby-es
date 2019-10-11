@@ -48,7 +48,7 @@ Comienza con [la lista de issues de Gatsby](https://github.com/gatsbyjs/gatsby/i
 
 Lee el issue y cualquier comentario para entender de qué se trata el issue.
 
-### Elija un `type:` etiqueta
+### Elige una etiqueta `type:`
 
 Elija una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del issue.
 
