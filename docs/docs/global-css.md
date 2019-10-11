@@ -2,7 +2,7 @@
 title: Standard Styling with Global CSS Files
 ---
 
-Tradicionalmente, los sitios web han sido dotadas de estilos usando archivos globales CSS.
+Tradicionalmente, los sitios web han sido dotados de estilos usando archivos globales CSS.
 
 Las reglas de CSS con ámbito global están declaradas en hojas de estilo externas `.css`, y [la especificidad de CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y [su Cascada](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) determinan como los estilos se aplican.
 
