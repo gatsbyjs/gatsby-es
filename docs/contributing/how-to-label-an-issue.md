@@ -76,7 +76,7 @@ Ejemplos de aplicación de etiquetas `status:` podrían ser:
 
 - Un issue que no tiene la información requerida para ayudar al autor podría ser marcado con `status: needs more info`
 
-- Un issue que describe un error de programación sin pasos claros para reproducirse podría ser marcada por `status: needs reproduction`
+- Un issue que describe un error sin pasos claros para reproducirse podría ser marcado con `status: needs reproduction`
 
 - Un issue que describe un error de programación donde hay pasos para reproducir el error de programación y ha dirigido el código en la localidad y ha visto que el error usted mismo puede ser marcado `status: confirmed`
 
