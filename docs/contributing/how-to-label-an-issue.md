@@ -2,7 +2,7 @@
 El titulo: Cómo etiquetar un issue
 ---
 
-## ¿Qué son issue las etiquetas?
+## ¿Qué son las etiquetas de issue?
 
 Issue las etiquetas son una herramienta de GitHub que se utilizan para agrupar issue en una o varias categorías.
 
