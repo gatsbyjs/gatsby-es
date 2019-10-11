@@ -1,5 +1,5 @@
 ---
-título: Crear un sitio con autenticación de usuario
+title: Crear un sitio con autenticación de usuario
 ---
 
 A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas solo para clientes](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
