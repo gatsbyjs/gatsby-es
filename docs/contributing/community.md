@@ -42,11 +42,11 @@ La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee 
 Para las últimas noticias sobre Gatsby,
 [sigue a **@gatsbyjs** en Twitter](https://twitter.com/gatsbyjs).
 
-### Reunión de mentenedores de la comunidad
+### Reunión de mantenedores de la comunidad
 
 El equipo principal de Gatsby (empleados oficiales de Gatsby que trabajan en el código-abierto de Gatsby) tienen una reunión semanal donde alentamos a los miembros de a comunidad a compartir sus proyectos, desafíos, y logros directamente con el equipo principal de Gatsby. ¡También el equipo principal comparte información y planes pertinentes a la comunidad!
 
-Este evento recurrente toma lugar cada miércoles a las 8:30 AM Pacific Standard Time (PST).
+Este evento recurrente toma lugar cada miércoles a las 8:30 AM Hora estándar del pacífico (PST).
 
 [Agrega el evento del calendario recurrente aquí](https://gatsby.dev/core-maintainers)
 
