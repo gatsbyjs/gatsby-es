@@ -94,4 +94,4 @@ Hay unas otras etiquetas que pueden ser a veces aplicadas a un issue. Aquí est�
 
 ## La conclusión
 
-El etiquetaje a issues es una gran manera echar una mano en el proyecto de Gatsby sin tener en cuenta su nivel de experiencia.
+El etiquetaje a issues es una gran manera de ayudar en el proyecto de Gatsby sin tener en cuenta tu nivel de experiencia.
