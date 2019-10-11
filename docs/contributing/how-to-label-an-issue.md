@@ -50,7 +50,7 @@ Lee el issue y cualquier comentario para entender de qué se trata el issue.
 
 ### Elige una etiqueta `type:`
 
-Elija una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del issue.
+Elige una etiqueta de tipo en el menú desplegable de etiquetas, en el lado derecho del issue.
 
 ![GitHub etiqueta dropdown](./images/github-label-list.png)
 
