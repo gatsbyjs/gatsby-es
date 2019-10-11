@@ -42,7 +42,7 @@ El resto de este documento describirá cómo elegir las etiquetas correctas para
 
 ### Encontrar un issue que te interesa
 
-Comience con [la lista de issues de Gatsby](https://github.com/gatsbyjs/gatsby/issues) y voluta a través de hasta que vea uno reciente que golpea su interés. Alternativamente, puede ver la [lista de unlabelled issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
+Comienza con [la lista de issues de Gatsby](https://github.com/gatsbyjs/gatsby/issues) y haz scroll a través de esta hasta que veas uno reciente que despierte tu interés. Alternativamente, puedes ver la [lista de unlabelled issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
 
 ### Leer un issue
 
