@@ -2,18 +2,18 @@
 title: Almacenando en Caché
 ---
 
-Los _complementos_ (plugins) pueden almacenar en caché datos en forma de objetos JSON para utilizarlos en compilaciones futuras.
+Los plugins pueden almacenar en caché datos en forma de objetos JSON para utilizarlos en compilaciones futuras.
 
 Gatsby ya hace uso del almacenamiento en caché, por ejemplo:
 
-- cualquier nodo creado por los complementos _fuente_ (source) o _transformador_ (transformer) son almacenados en caché
+- cualquier nodo creado por los plugins _fuente_ (source) o _transformador_ (transformer) son almacenados en caché
 - `gatsby-plugin-sharp` _cachea_ las miniaturas (thumbnails) que se creen
 
 Los datos se almacenan en el directorio `.cache`, que es relativo al directorio raíz de tu proyecto.
 
 ## La API caché
 
-La API caché es pasada a [Gatsby's Node APIs](/docs/node-apis/) la cual es usualmente implementada con complementos.
+La API caché es pasada a [Gatsby's Node APIs](/docs/node-apis/) la cual es usualmente implementada con plugins.
 
 ```js
 exports.onPostBootstrap = async function({ cache, store, graphql }) {}
@@ -73,4 +73,4 @@ Puede suceder que Gatsby invalide el caché en algunos casos, más específicame
 
 ## Conclusión
 
-Con la API caché, vas a ser capaz de persistir datos e información entre diferentes compilaciones, lo cual es bastante útil cuando desarrollas un sitio con Gatsby (ya que corres `gatsby develop` muy frecuentemente). Las operaciones que requieren de gran rendimiento (como por ejemplo, transformaciones de imágenes) o la descarga frecuente de datos, pueden presentar una ralentización significativa en el desempeño de Gatsby, por lo cual agregar esta optimización de caché puede resultar en una mejora notable para los usuarios de tu sitio. También puedes echar un vistazo a los siguientes ejemplos que utilizan la API caché: [gatsby-source-contentful](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-contentful/src/download-contentful-assets.js), [gatsby-source-shopify](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-shopify/src/nodes.js#L23-L54), [gatsby-source-wordpress](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-wordpress/src/normalize.js#L471-L537), [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-transformer-remark/src/extend-node-type.js), [gatsby-source-tmdb](https://github.com/LekoArts/gatsby-source-tmdb/blob/e12c19af5e7053bfb7737e072db9e24acfa77f49/src/add-local-image.js).
+Con la API caché, vas a ser capaz de persistir datos e información entre diferentes compilaciones, lo cual es bastante útil cuando desarrollas un sitio con Gatsby (ya que ejecutas `gatsby develop` muy frecuentemente). Las operaciones que requieren de gran rendimiento (como por ejemplo, transformaciones de imágenes) o la descarga frecuente de datos, pueden presentar una ralentización significativa en el desempeño de Gatsby, por lo cual agregar esta optimización de caché puede resultar en una mejora notable para los usuarios de tu sitio. También puedes echar un vistazo a los siguientes ejemplos que utilizan la API caché: [gatsby-source-contentful](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-contentful/src/download-contentful-assets.js), [gatsby-source-shopify](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-shopify/src/nodes.js#L23-L54), [gatsby-source-wordpress](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-wordpress/src/normalize.js#L471-L537), [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-transformer-remark/src/extend-node-type.js), [gatsby-source-tmdb](https://github.com/LekoArts/gatsby-source-tmdb/blob/e12c19af5e7053bfb7737e072db9e24acfa77f49/src/add-local-image.js).
