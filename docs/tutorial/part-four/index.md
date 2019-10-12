@@ -27,7 +27,7 @@ Una página web tiene cuatro partes: HTML, CSS, JS, y datos. La primera parte de
 Una manera muy informática de responder sería que datos son cosas como `"strings"`,
 integers (`42`), objects (`{ pizza: true }`), etc.
 
-Parael trabajo en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
+Para el trabajo en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
 
 Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchas sitios web, Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
 
@@ -75,7 +75,7 @@ Luego instala otras dependencias necesarias en la carpeta raíz del proyecto. Us
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
-Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de capa y dos componentes de página:
+Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de layout y dos componentes de página:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -159,7 +159,7 @@ export default typography
 export const rhythm = typography.rhythm
 ```
 
-`gatsby-config.js` (must be in the root of your project, not under src)
+`gatsby-config.js` (debe estar en la raíz de tu proyecto, no bajo src)
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -179,14 +179,14 @@ Añade los archivos de arriba y ejecuta `gatsby develop`, como siempre, debería
 
 ![inicio](start.png)
 
-Tienes otro pequeño sitio con una capa y dos páginas.
+Tienes otro pequeño sitio con un layout y dos páginas.
 
 Ya puedes comenzar a lanzar peticiones 😋
 
 ## Tu primera petición GraphQL
 
 Cuando creas páginas web, probablemente querrás reusar los bits comunes de datos -- como el _titulo del sitio_ por ejemplo. Mira la página 
-`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Eating Lots`) en ls dos componentes de capa (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
+`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Eating Lots`) en los dos componentes de layout (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
 
 Pero, ¿y si quieres cambiar el titulo del sitio en el futuro? Tienes que buscar el título en todos tus componentes y editar cada instancia. Esto es incómodo y genera errores, especialmente en sitios complejos y grandes. En lugar de ello, puedes guardar el título en un lugar y referenciar esa localización desde otros archivos; cambia el título en un lugar y Gatsby _cogerá_ tu título actualizado en los archivos que lo referencien.
 
@@ -269,9 +269,9 @@ Las peticiones de página viven fuera de la definición del componente -- por co
 ### Usa una Petición Estática
 
 [StaticQuery](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
-Usemos su nueva versión de ganchos — [`useStaticQuery`](/docs/use-static-query/).
+Usemos su nueva versión de _hook_ — [`useStaticQuery`](/docs/use-static-query/).
 
-Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el gancho `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
+Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el _hook_ `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
