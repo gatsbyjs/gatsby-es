@@ -18,7 +18,7 @@ Recomendamos usar este plugin junto con el [plugin manifest](https://www.npmjs.c
 
 `npm install --save gatsby-plugin-offline`
 
-Añade ese plugin a tu `gatsby-config.js`
+Añade este plugin a tu `gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-offline`]
