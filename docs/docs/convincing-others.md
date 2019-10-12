@@ -1,15 +1,15 @@
 ---
-title: Convincing Others
+title: Convencer a los demás
 ---
 
-This section of the documentation has a slightly different tenor than the rest of the docs.
+Esta sección de la documentación tiene un tenor ligeramente distinto al resto de los docs.
 
-The purpose of the rest of the docs is to help you understand Gatsby. The purpose of this section to help you explain Gatsby to others.
+El propósito del resto de los docs es ayudarte a comprender Gatsby. El propósito de esta sección es de ayudarte a explicar Gatsby a otros.
 
-Explaining Gatsby well to others, and helping convince them to use it (or to let you use it) is a different kind of problem than becoming a talented Gatsby developer.
+Explicar Gatsby bien a otros, y ayudar a convencerlos de usarlo (o que te dejen usarlo) es un tipo de problema distinto a convertirse en un developer talentoso de Gatsby.
 
-It requires understanding what things those around you value, and helping them understand how Gatsby meets _their_ needs, rather than simply how Gatsby meets yours.
+Requiere comprensión sobre qué cosas valúas alrededor tuyo, y ayudarlos a comprender cómo Gatsby cumple _con sus_ necesidades, más que simplemente cómo Gatsby cumple con las tuyas.
 
-Gatsby is a transformative technology, and teams using Gatsby have the chance to radically improve the way they design, develop, and deploy websites. As you help others around you understand how Gatsby meets their needs, you facilitate their growth.
+Gatsby es una tecnología transformativa, y los equipos usando Gatsby tienen la chance de mejorar radicalmente el modo en que diseñan, desarrollan, y despliegan sitios web. A medida que tú ayudas a otros a comprender como Gatsby cumple con sus necesidades, facilitas su crecimiento.
 
 https://twitter.com/ryanflorence/status/1104060348363988992
