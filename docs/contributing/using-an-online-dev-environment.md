@@ -2,12 +2,11 @@
 title: Usando Gitpod, un ambiente de desarrollo Online
 ---
 
-Esta página resume como usar Gitpod, un ambiente de desarrollo Online gratuito, para contribuir al c´d de Gatsby y a su ecosistema. Para obtener instrucciones sobre cómo configurar un entorno de desarrollo localmente, visita la página de [configuración local](/contributing/setting-up-your-local-dev-environment/).
+Esta página resume como usar Gitpod, un ambiente de desarrollo Online gratuito, para contribuir al core de Gatsby y a su ecosistema. Para obtener instrucciones sobre cómo configurar un entorno de desarrollo localmente, visita la página de [configuración local](/contributing/setting-up-your-local-dev-environment/).
 
 ## Sobre Gitpod
 
-Gitpod facilita las contribuciones en GitHub, al permitir configuraciones de entornos de desarrollo automatizados. En lugar de escribir mucha 
-documentación de como instalar, configurar y dejar que cada contribuidor pase por esta aventura, la configuración es automática y reproducible.
+Gitpod facilita las contribuciones en GitHub, al permitir configuraciones de entornos de desarrollo automatizados. En lugar de escribir mucha documentación de como instalar, configurar y dejar que cada contribuidor pase por esta aventura, la configuración es automática y reproducible.
 
 Además, Gitpod pre-compila cada rama del repositorio, para que no tenga que esperar la instalación, la clonación y la compilación.
 
@@ -47,7 +46,7 @@ En este modo, puedes ver la lista de cambios de archivos a la izquierda y puedes
 
 ## Cómo ejecutar otro ejemplo
 
-Si tu quieres ejecutar otro ejemplo, puedes abrir la terminal o usar una existente y ejecutar los siguientes comandos: 
+Si tu quieres ejecutar otro ejemplo, puedes abrir la terminal o usar una existente y ejecutar los siguientes comandos:
 
 ```shell
 yarn install
