@@ -1,5 +1,5 @@
 ---
-título: temas Tutoriales
+Title: Theme Tutorials
 ---
 
 Temas de Gatsby son una nueva forma de encapsular, reutilizar, y componer la funcionalidad de Gatsby.
