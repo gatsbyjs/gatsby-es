@@ -6,7 +6,7 @@ title: Contribuciones al Blog y Sitio Web
 
 Aquí hay algunas cosas a tener en cuenta al decidir donde contribuir en Gatbsy:
 
-- [Entradas en el blog](#contributing-to-the-blog) funcionan mejor para estudios de casos y la narración sensible al tiempo (mira el [formato de entradas de blog](#blog-post-format)).
+- [Entradas en el blog](#contributing-to-the-blog) funcionan mejor para estudios de casos y la narración de historias (mira el [formato de entradas de blog](#blog-post-format)).
 - [La documentación](/contributing/docs-contributions/) es material de aprendizaje continuamente relevante y reconocible que va más allá de cualquier caso de estudio o situación.
 - [Cambios al sitio web](#making-changes-to-the-website) que mejoren cualquiera de estos, ¡son siempre bienvenidos!
 
@@ -25,7 +25,7 @@ Para añadir una entrada nueva al blog de gatsbyjs.org:
 - Añade una nueva carpeta que siga el patrón `/docs/blog/yyyy-mm-dd-title`. Dentro de esta nueva carpeta creada, añade un fichero `index.md`.
 - Añade `title`, `date`, `author`, `excerpt`, y `tags` al "frontmatter" de tu `index.md`. Puedes [ver etiquetas existentes](/blog/tags/), o [añadir una nueva](https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/tags-docs.js) si sientes que tu etiqueta merece ser su propia etiqueta, aunque recomendamos que uses etiquetas existentes.
 - Si estás haciendo una publicación cruzada de tu entrada en el blog, puedes añadir `canonicalLink` para beneficios en SEO. Puedes revisar otras entradas en el blog en `/docs/blog` para ejemplos
-- Si tu entrada en el blog contiene imágenes, añádelas a la carpeta de la entrada en el blog y referencia estas en tu fichero `index.md` de la entrada en el blog.
+- Si tu entrada en el blog contiene imágenes, añádelas a la carpeta de la entrada en el blog y referencía estas en tu fichero `index.md` de la entrada en el blog.
 - Asegúrate de que cualquier link a gatsbyjs.org es relativo - `/contributing/how-to-contribute/` en lugar de `https://gatsbyjs.org/contributing/how-to-contribute`.
 - Sigue la [Guía de Estilo](/contributing/gatsby-style-guide/#word-choice) para asegurarte de que estás usando la redacción adecuada.
 - Verifica tu gramática y capitaliza correctamente.
@@ -44,7 +44,7 @@ date: AAAA-MM-DD
 author: Jamie Doe
 excerpt: "Aquí hay un extracto útil o una breve descripción de esta publicación de blog."
 tags:
-  - increíble
+  - impresionante
   - publicación
 ---
 
