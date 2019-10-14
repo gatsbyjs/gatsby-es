@@ -35,9 +35,9 @@ Devuelve el valor _cacheado_
 
 La documentación que se encuentra en [Node API helpers](/docs/node-api-helpers/#cache) ofrece información más detallada acerca de la API.
 
-## Ejemplo utilizando un complemento
+## Ejemplo utilizando un plugin
 
-En el archivo del complemento `gatsby-node.js`, puedes acceder al argumento `cache` como se indica a continuación:
+En el archivo del plugin `gatsby-node.js`, puedes acceder al argumento `cache` como se indica a continuación:
 
 ```js:title=gatsby-node.js
 exports.onPostBuild = async function({ cache, store, graphql }, { query }) {
@@ -68,7 +68,7 @@ Dado que los archivos caché son guardados dentro del directorio `.cache`, simpl
 Puede suceder que Gatsby invalide el caché en algunos casos, más específicamente:
 
 - Si `package.json` es modificado, por ejemplo, si una nueva dependencia es actualizada o agregada
-- Si `gatsby-config.js` cambia, por ejemplo, un nuevo complemento es agregado o modificado
+- Si `gatsby-config.js` cambia, por ejemplo, un nuevo plugin es agregado o modificado
 - Si `gatsby-node.js` cambia, por ejemplo, si invocas una API Node nueva, o cambia una llamada a `createPage`
 
 ## Conclusión
