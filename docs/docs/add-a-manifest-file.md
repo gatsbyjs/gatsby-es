@@ -26,7 +26,7 @@ npm install --save gatsby-plugin-manifest
 
 2. Añade un 'favicon' a tu aplicación en `src/images/icon.png`. El icono es necesario para construir todas las imágenes para el archivo de manifiesto. Para más información, visita la documentación en [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Añade el plugin al array de `plugins` en tu fichero `gatsby-config.js`.
+3. Añade el plugin al _array_ de `plugins` en tu fichero `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
