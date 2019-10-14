@@ -142,3 +142,6 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | script                 | script                                |
 | swag                   | premio                                |
 | push notifications     | Notificaciones push                   |
+| workspace              | _workspace_                           |
+| monorepo               | _monorepo_                            |
+| fork                   | _fork_                                |
