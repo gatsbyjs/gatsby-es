@@ -4,11 +4,11 @@ title: Comunidad
 
 Desde septiembre 2019, la comunidad de Gatsby se compone de más de 2,400 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
 
-El código-abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone triste. **Todos pertenecen en el código-abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
+El código-abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone triste. **Todos pertenecen en el código abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
 
-Nunca vamos a juzgar, ser despectivos, o excluir a nadie. Más bien, nos esforzaremos por apoyar a comunidad, a través de ayudarte a contribuir al entorno de Gatsby, ofrecer [mercancía gratis para colaboradores](https://gatsby.dev/swag), dar control a la comunidad al [invitar automáticamente a todos los colaboradores a la organización del GitHub de Gatsby](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), un [código de conducta](/contributing/code-of-conduct/) abierto e inclusivo, y otros medios para empoderar y recibir con brazos abiertos a la comunidad increíble que hace que Gatsby sea posible.
+Nunca vamos a juzgar, ser despectivos, o excluir a nadie. Más bien, nos esforzaremos por apoyar a la comunidad, a través de ayudarte a contribuir al entorno de Gatsby, ofrecer [mercancía gratis para colaboradores](https://gatsby.dev/swag), dar control a la comunidad al [invitar automáticamente a todos los colaboradores a la organización del GitHub de Gatsby](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), un [código de conducta](/contributing/code-of-conduct/) abierto e inclusivo, y otros medios para empoderar y recibir con los brazos abiertos a la comunidad increíble que hace que Gatsby sea posible.
 
-Uno de los valores de nuestra comunidad es que ["tú perteneces aquí"](/blog/2018-09-07-gatsby-values/#you-belong-here).
+Uno de los valores de nuestra comunidad es que ["tú perteneces a ella"](/blog/2018-09-07-gatsby-values/#you-belong-here).
 
 ## Convenio y código de conducta para colaboradores de Gatsby
 
@@ -44,7 +44,7 @@ Para las últimas noticias sobre Gatsby,
 
 ### Reunión de mantenedores de la comunidad
 
-El equipo principal de Gatsby (empleados oficiales de Gatsby que trabajan en el código-abierto de Gatsby) tienen una reunión semanal donde alentamos a los miembros de a comunidad a compartir sus proyectos, desafíos, y logros directamente con el equipo principal de Gatsby. ¡También el equipo principal comparte información y planes pertinentes a la comunidad!
+El equipo principal de Gatsby (empleados oficiales de Gatsby que trabajan en el código abierto de Gatsby) tienen una reunión semanal donde alentamos a los miembros de a comunidad a compartir sus proyectos, desafíos, y logros directamente con el equipo principal de Gatsby. ¡También el equipo principal comparte información y planes pertinentes a la comunidad!
 
 Este evento recurrente toma lugar cada miércoles a las 8:30 AM Hora estándar del pacífico (PST).
 
