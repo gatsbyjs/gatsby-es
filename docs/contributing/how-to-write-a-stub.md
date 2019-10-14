@@ -22,7 +22,7 @@ Si tienes cualquier pregunta sobre títulos u otros detalles en relación a crea
 
 ## Sesiones de programación en pareja de la comunidad
 
-Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa rellenar el contenido, fíjate en el [programa de Programación en pareja](/contributing/pair-programming/) de Gatsby.js. Nos encantaría trabajar contigo en tu aventura de contribuir al código-abierto!
+Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa rellenar el contenido, fíjate en el [programa de Programación en pareja](/contributing/pair-programming/) de Gatsby.js. Nos encantaría trabajar contigo en tu aventura de contribuir al código abierto!
 
 ## Convertir un stub en un documento
 
