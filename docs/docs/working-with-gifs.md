@@ -6,9 +6,9 @@ Si estás construyendo un blog con Gatsby, está la posibilidad que querrás inc
 
 ## Incluyendo GIFs en componentes
 
-En los componentes y páginas de Gatsby, querrás importar GIFs animados en vez de usar Gatsby Image por que de este modo optimiza la data de la imagen para el elemento responsive de la misma.
+En los componentes y páginas de Gatsby, querrás importar GIFs animados en vez de usar Gatsby Image porque de este modo optimiza los datos de la imagen para el elemento responsivo de la misma.
 
-Hete aquí un ejemplo:
+Aquí hay un ejemplo:
 
 ```jsx:title=pages/about.js
 import React from 'react'
@@ -29,7 +29,7 @@ export default AboutPage;
 
 ## Incluyendo GIFs en el Markdown
 
-En las páginas y posts en Markdown, incluir un GIF animado se hace del mismo modo que una imagen estática:
+En las páginas y entrada en Markdown, incluir un GIF animado se hace del mismo modo que una imagen estática:
 
 ```markdown
 ![nutria bailando con un pez](./images/dancing-ofter.gif)
@@ -37,9 +37,9 @@ En las páginas y posts en Markdown, incluir un GIF animado se hace del mismo mo
 
 ![nutria bailando con un pez](./images/dancing-otter.gif)
 
-Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, asi que se cuidadoso de no hacerle sabotaje a la performance de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los cuadros](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
+Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, así que se cuidadoso de no hacerle sabotaje al rendimiento de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los cuadros](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
 
-## Asuntos relacionados de Accesibilidad con los GIFs animados
+## Asuntos relacionados con accesibilidad con GIFs animados
 
 Ten cuidado que los GIFs que "flashean" (cambian abruptamente de colores o marcos), o que se auto-reproducen pueden causar problemas para usuarios que son sensibles al movimiento. Los GIFs no deberían autoreproducirse siempre que sea posible por motivos de seguridad. Una técnica sería la de agregar controles, usando un paquete como [react-gif-player](https://www.npmjs.com/package/react-gif-player) como [un paquete sólo para el cliente](/docs/using-client-side-only-packages/).
 
