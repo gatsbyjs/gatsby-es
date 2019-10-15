@@ -140,7 +140,7 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>Sobre Pandas Comiendo a montones</h1>
+    <h1>About Pandas Comiendo a montones</h1>
     <p>
       Somos la única página en tu pc dedicado a mostrar los mejores fotos y videos de pandas comiendo montones de comida.
     </p>
