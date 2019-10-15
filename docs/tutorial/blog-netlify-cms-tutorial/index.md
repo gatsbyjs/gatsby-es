@@ -1,91 +1,91 @@
 ---
-title: Making a Gatsby Blog with Netlify CMS
+title: Creación de un Blog de Gatsby con Netlify CMS
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JeTqxCJC56Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video: Make a developer blog in under 10 minutes | Lightning Tutorial"></iframe>
 
-This tutorial will use [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog), a Gatsby starter based on the official [gatsby-starter-blog](/starters/gatsbyjs/gatsby-starter-blog/). The differences are that `gatsby-personal-starter-blog` is configured to run the blog on a subdirectory, `/blog`, and comes pre-installed with [Netlify CMS](https://www.netlifycms.org/) for content editing. It also adds VS Code highlighting for code blocks.
+Este tutorial usará [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog), un proyecto inicial de Gatsby basado en el oficial [gatsby-starter-blog](/starters/gatsbyjs/gatsby-starter-blog/). Las diferencias son que `gatsby-personal-starter-blog` está configurado para ejecutar el blog en un subdirectorio, `/blog`, y viene preinstalado con [Netlify CMS](https://www.netlifycms.org/) para edición de contenidos. También agrega el resaltado de código de VS Code para bloques de código.
 
-## Prerequisites
+## Prerrequisitos
 
-- A GitHub account
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Una cuenta de GitHub
+- [Gatsby CLI](/docs/gatsby-cli) instalada en tu equipo
 
-## Set up a Netlify CMS-managed Gatsby site in 5 steps:
+## Configuración de un sitio Gatsby administrado por Netlify CMS en 5 pasos:
 
-### Step 1
+### Paso 1
 
-Open your Terminal and run the following command from the Gatsby CLI to create a new Gatsby site using [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog).
+Abre tu Terminal y ejecuta el siguiente comando desde la CLI de Gatsby para crear un nuevo sitio de Gatsby usando [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog).
 
 ```shell
-gatsby new [your-project-name] https://github.com/thomaswangio/gatsby-personal-starter-blog
+gatsby new [nombre-de-tu-proyecto] https://github.com/thomaswangio/gatsby-personal-starter-blog
 ```
 
-### Step 2
+### Paso 2
 
-Once the Gatsby site is finished installing all the packages and dependencies, you can now go into the directory and run the site locally.
+Una vez que el sitio de Gatsby haya terminado de instalar todos los paquetes y dependencias, podrás ir al directorio y ejecutar el sitio localmente.
 
 ```shell
-cd [your-project-name]
+cd [nombre-de-tu-proyecto]
 gatsby develop
 ```
 
-Now you can go to [`localhost:8000`](http://localhost:8000) to see your new site, but what's extra cool is that Netlify CMS is pre-installed and you can access it at [`localhost:8000/admin`](http://localhost:8000/admin).
+Ahora puedes ir a [`localhost:8000`](http://localhost:8000) para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en [`localhost:8000/admin`](http://localhost:8000/admin).
 
-A CMS, or content management system, is useful because you can add content like blog posts from a dashboard on your site, instead of having to add posts manually with Markdown. However, you'll likely want to be able to access the CMS from a deployed website, not just locally. For that, you'll need to deploy to Netlify through GitHub, set up continuous deployment, and do a few configurations. We'll go over this in [Step-5](#step-5).
+Un CMS, o sistema de administración de contenido, es útil porque puedes agregar contenido como publicaciones de blog desde un tablero en tu sitio, en lugar de tener que agregar publicaciones manualmente con Markdown. Sin embargo, es probable que desees poder acceder al CMS desde un sitio web desplegado, no solo localmente. Para eso deberás desplegar en Netlify a través de GitHub, preparar una implementación continua y realizar algunas configuraciones. Repasaremos esto en el [Paso-5](#step-5).
 
-### Step 3
+### Paso 3
 
-Open the project in your code editor and open `static/admin/config.yml`. Replace `your-username/your-repo-name` with your GitHub username and project name. This step is important for managing and deploying the Netlify CMS interface.
+Abre el proyecto en tu editor de código y luego el archivo `static/admin/config.yml`. Reemplaza `tu-nombre-de-usuario/tu-nombre-de-repositorio` con tu nombre de usuario y de proyecto de GitHub. Este paso es importante para administrar e implementar la interfaz de Netlify CMS.
 
 ```diff
 backend:
 -  name: test-repo
 
 +  name: github
-+  repo: your-username/your-repo-name
++  repo: tu-nombre-de-usuario/tu-nombre-de-repositorio
 ```
 
-#### Customizing your site
+#### Personalizando tu sitio
 
-Head into `gatsby-config.js` and you can edit your siteMedata, add a Google Analytics tracking ID, and your app icon/favicon. Test out the edits for the deployed build by quitting the development server and running `gatsby build && gatsby serve`.
+Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando  `gatsby build && gatsby serve`.
 
-You'll likely also want to edit the `README.md` and `package.json` files to include your own project details.
+Probablemente también quieras editar el `README.md` y el `package.json`, archivos para incluir tus propios detalles del proyecto.
 
-### Step 4
+### Paso 4
 
-Open [github.com](http://github.com) and create a new repository, with the same name as your project. Push your new Gatsby site's code to GitHub using the following Terminal commands:
+Abre [github.com](http://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
 
 ```shell
 git init
 git add .
 git commit -m "initial commit"
-git remote add origin https://github.com/[your-username]/[your-repo-name].git
+git remote add origin https://github.com/[tu-nombre-de-usuario]/[tu-nombre-de-repositorio].git
 git push -u origin master
 ```
 
-Then, open [app.netlify.com](http://app.netlify.com) and add a "New site from Git". Choose your newly created repo and click on "Deploy site" with the default deployment settings.
+Luego abre [app.netlify.com](http://app.netlify.com) y añade un "Nuevo sitio de Git". Elige tu repositorio recién creado y haz clic en "Desplegar sitio" con la configuración de implementación predeterminada.
 
-> _Note: if you don't see the correct repo listed, you may need to install or reconfigure the Netlify app on GitHub._
+> _Nota: si no ves el repositorio correcto en la lista, es posible que debas instalar o volver a configurar la aplicación Netlify en GitHub._
 
-![Netlify Dashboard for Creating a new site](netlify-dashboard.png)
+![Tablero de Netlify para Crear un nuevo sitio](netlify-dashboard.png)
 
-### Step 5
+### Paso 5
 
-To make sure that Netlify CMS has access to your GitHub repo, you need to set up an OAuth application on GitHub. The instructions for that are here: [Netlify's Using an Authorization Provider](https://www.netlify.com/docs/authentication-providers/#using-an-authentication-provider).
+Para asegurarse de que Netlify CMS tenga acceso a tu repositorio de GitHub, debes configurar una aplicación OAuth en GitHub. Las instrucciones para eso están aquí: [Uso de un Proveedor de Autorización con Netlify](https://www.netlify.com/docs/authentication-providers/#using-an-authentication-provider).
 
-For the "Homepage URL" – you can use your Netlify subdomain, `[name-of-your-site].netlify.com`, or you can use a custom domain. To customize the subdomain, look for the "Edit site name" field under "Domain Management" for your project on the [Netlify app](https://app.netlify.com). To connect your Netlify site to your custom domain instead, see [Netlify’s instructions on custom domains](https://www.netlify.com/docs/custom-domains/).
+Para la "URL de la página de inicio": puedes usar tu subdominio de Netlify, `[nombre-de-tu-sitio].netlify.com`, o puedes usar un dominio personalizado. Para personalizar el subdominio, busca el campo "Editar nombre del sitio" en "Administración del dominio" para tu proyecto en la [App de Netlify](https://app.netlify.com). Para conectar tu sitio de Netlify a tu dominio personalizado, consulta las [Instrucciones para dominios personalizados en Netlify](https://www.netlify.com/docs/custom-domains/).
 
-Once you've configured an authentication provider then you'll be able to use Netlify CMS at your deployed site to add new posts.
+Una vez que hayas configurado un proveedor de autenticación, podrás usar Netlify CMS en tu sitio implementado para agregar nuevas publicaciones.
 
-![Netlify and GitHub Authorization](https://cdn.netlify.com/67edd5b656c432888d736cd40125cb61376905bb/c1cba/img/docs/github-oauth-config.png)
+![Autorización de Netlify y GitHub](https://cdn.netlify.com/67edd5b656c432888d736cd40125cb61376905bb/c1cba/img/docs/github-oauth-config.png)
 
-Copy the credentials of your new app listed on [GitHub oAuth Apps](https://github.com/settings/developers) and install a new auth provider on Netlify using them.
+Copia las credenciales de tu nueva aplicación listada en [Apps de oAuth en GitHub](https://github.com/settings/developers) e instala un nuevo proveedor de autenticación en Netlify usándolas.
 
-![Setting up access control](netlify-install-oauth-provider.png)
+![Configurar el control de acceso](netlify-install-oauth-provider.png)
 
-#### Benefits of Netlify CMS, GitHub, and Netlify Workflow
+#### Beneficios de Netlify CMS, GitHub y Netlify Workflow
 
-Congrats! Now that Netlify CMS is successfully configured to your project, every time you add a new post, the content will be stored in your repository and versioned on GitHub because Netlify CMS is Git-based. Also, thanks to [Netlify's Continuous Deployment](https://www.netlify.com/docs/continuous-deployment/), a new version will be deployed every time you add or edit a post.
+¡Felicidades! Ahora que Netlify CMS está configurado correctamente para tu proyecto, cada vez que agregues una nueva publicación, el contenido se almacenará en tu repositorio y se versionará en GitHub porque Netlify CMS está basado en Git. Además, gracias a la [Implementación Continua de Netlify](https://www.netlify.com/docs/continuous-deployment/), se implementará una nueva versión cada vez que agregues o edites una publicación.
 
-You can learn more about Netlify CMS and how to configure it further in the [Netlify CMS documentation](https://www.netlifycms.org/docs/intro/).
+Puedes obtener más información sobre Netlify CMS y cómo configurarlo de más formas en la [Documentación de Netlify CMS](https://www.netlifycms.org/docs/intro/).
