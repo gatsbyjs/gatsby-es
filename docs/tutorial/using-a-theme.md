@@ -1,35 +1,34 @@
 ---
-title: Using a Theme
+title: Usando un tema
 ---
 
-In this tutorial, you'll learn how to use Gatsby themes by creating a new site using the official Gatsby blog theme.
+En este tutorial aprenderás cómo usar temas en Gatsby de forma práctica, mediante la creación de un nuevo sitio usando el tema oficial para blogs de Gatsby.
 
-## Create a new site using the blog theme starter
+## Crear un nuevo sitio web usando el starter del tema para blogs
 
-Creating a site using a theme starter starts the same way as using a regular Gatsby starter:
+Crear un sitio usando un starter de un tema funciona de la misma forma que usar un starter normal:
 
 ```shell
 gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-## Run the site
+## Ejecuta el sitio web
 
-Creating a new site from the starter installed all of the blog theme's dependencies for you. Next, run the site and see what you have:
+Crear un sitio nuevo a partir del starter instala todas las dependencias del tema para blogs por ti. Ahora, ejecutemos el sitio y veamos qué tenemos:
 
 ```shell
 cd my-blog
 gatsby develop
 ```
 
-![Default screen when starting a project using gatsby blog starter](./images/starter-blog-theme-default.png)
+![Pantalla por defecto cuando se inicia un proyecto utilizando el starter del tema para blogs de gatsby](./images/starter-blog-theme-default.png)
 
-## Replace your avatar
+## Sustituye tu avatar
 
-The blog theme starter ships with a solid gray image for the avatar. Add your own avatar by choosing the image you want, and overwriting the file located at `/content/assets/avatar.png`.
+El starter del tema para blogs viene con una imagen gris sólida para el avatar. Añade tu propio avatar seleccionando la imagen que quieras, y sobreescribe el fichero que se encuentra en `/content/assets/avatar.png`.
 
-## Update your site metadata
-
-Customize the information on your site by replacing the site metadata in the `gatsby-config.js` file.
+## Actualizas los metadatos de tu sitio web
+Personaliza la información en tu propio sitio mediante el remplazo de los valores de los atributos de `siteMetadata` en el fichero `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -39,7 +38,7 @@ module.exports = {
       options: {},
     },
   ],
-  // Customize your site metadata:
+  // Personaliza la información en tu propio sitio:
   {/* highlight-start */}
   siteMetadata: {
     title: "My Blog",
@@ -61,13 +60,13 @@ module.exports = {
 }
 ```
 
-## Replace the content of the bio
+## Remplaza el contenido de la biografía
 
-When using Gatsby themes, you can take advantage of something called component shadowing.
+Cuando se usan temas de Gatsby, puedes tomar ventaja de algo llamado component shadowing.
 
-The Gatsby blog theme package has a component that contains the content of the site author's biography. The file path to that component (in the blog theme package, not your site) is `gatsby-theme-blog/src/components/bio-content.js`.
+El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
 
-If you look at the file tree of your site, you'll see it looks like this:
+Si miras al árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 
 ```
 my-blog
@@ -87,11 +86,11 @@ my-blog
 └── package.json
 ```
 
-In the `src` directory of the site, there's a `gatsby-theme-blog` directory. Any file placed in that directory that corresponds to a file in the blog theme will completely shadow the theme.
+En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-blog`. Cualquier fichero situado en esta carpeta que se corresponda con un fichero en el tema para blogs sobreescribirá el tema.
 
-> 💡 The name of the directory (here `gatsby-theme-blog`) must exactly mirror the name of the name of the published theme package, which in this case is [`gatsby-theme-blog`](https://www.npmjs.com/package/gatsby-theme-blog).
+> 💡 El nombre del directorio (por ejemplo `gatsby-theme-blog`) debe reflejar exactamente el nombre del paquete del tema publicado, que en este caso es [`gatsby-theme-blog`](https://www.npmjs.com/package/gatsby-theme-blog).
 
-Open up the `bio-content.js` file and make some content edits:
+Abre el fichero `bio-content.js` y realiza algunas modificaciones de su contenido:
 
 ```jsx:title=bio-content.js
 export default () => (
@@ -105,17 +104,17 @@ export default () => (
 )
 ```
 
-At this point, you should have an updated avatar, updated site details, and an updated bio:
+Llegados a este punto, deberías tener un avatar actualizado, los detalles de tu sitio web actualizados, y la biografía actualizada:
 
-![Screenshot of project with current tutorial edits](./images/starter-blog-theme-edited.png)
+![Captura de pantalla del proyecto con las ediciones indicadas en el tutorial](./images/starter-blog-theme-edited.png)
 
-## Add your own blog content
+## Añadir tu propio contenido al blog
 
-Now you can add your first blog post, and get rid of the demo content in the starter.
+Ahora puedes añadir tu primer post al blog y eliminar el contenido de demostración del starter.
 
-### Create a new blog post
+### Crear un nuevo post
 
-Create a new file in `my-blog/content/posts`. Name it whatever you'd like (with a `.md` or `.mdx` file extension), and add some content! Here's an example:
+Crea un nuevo fichero en `my-blog/content/posts`. Nómbralo como quieras (con extensión `.md` o `.mdx`), ¡y añade algo de contenido! Aquí tienes un ejemplo:
 
 ```mdx:title=my-blog/content/posts/my-first-post.mdx
 ---
@@ -126,22 +125,22 @@ date: 2019-07-03
 This will be my very first post on this blog!
 ```
 
-### Delete the demo posts
+### Eliminar los posts de demostración
 
-Delete the two demo posts in the `/content/posts` directory:
+Elimina los dos posts de demostración situados en el directorio `/content/posts`:
 
 - `my-blog/content/posts/hello-world.mdx`
 - `my-blog/content/posts/my-second-post.mdx`
 
-Restart the dev server, and you'll see your updated blog content:
+Reinicia el servidor de desarrollo y verás el contenido de tu blog actualizado:
 
-![Screenshot of project with updated post content](./images/starter-blog-theme-updated-content.png)
+![Captura de pantalla del proyecto con posts actualizados](./images/starter-blog-theme-updated-content.png)
 
-## Change the color theme
+## Cambiar el color del tema
 
-The blog theme ships with a default Gatsby purple theme, but you can override and customize the theming of your site to your heart's content. In this tutorial, you'll change a few colors.
+El tema para blog viene por defecto con el color púrpura de Gatsby, pero puedes sobreescribirlo y personalizarlo como más te guste. En este tutorial vamos a cambiar algunos colores.
 
-Open up `/src/gatsby-theme-blog/gatsby-plugin-theme-ui/colors.js`, and uncomment the code in that file.
+Abre el fichero `/src/gatsby-theme-blog/gatsby-plugin-theme-ui/colors.js`, y descomenta el código en el mismo.
 
 ```javascript:title=colors.js
 {/* highlight-start */}
@@ -166,14 +165,14 @@ export default merge({}, defaultThemeColors, {
 })
 ```
 
-Now, instead of a purple theme, you have a blue theme instead:
+Ahora, en lugar de un tema púrpura tenemos un tema azul.
 
-![Screenshot of project with updated color theme](./images/starter-blog-theme-updated-colors.png)
+![Captura de pantalla del proyecto con un color de tema actualizado](./images/starter-blog-theme-updated-colors.png)
 
-In this file, you're pulling in the default color theme (imported as `defaultThemeColors` here), and overriding certain color keys.
+En este fichero, estamos tomando el color por defecto del tema (importado como `defaultThemeColors` aquí) y sobreescribiendo ciertos valores del mismo.
 
-To see what other theme colors you can customize, check out the `colors.js` file in the official blog theme (`gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors.js`)
+Para ver qué otros colores del tema puedes personalizar, revisa el fichero `colors.js` en el tema oficial para blogs (`gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors.js`)
 
-## Wrapping up
+## Empaquetado
 
-This was a step-by-step introduction to using a Gatsby theme through looking at a specific example. Note that different themes will be built differently, to accept different customization options. To dive deeper, check out the [Gatsby Theme docs](/docs/themes/).
+Esto fue una introducción paso a paso para usar un tema de Gastby a través de un ejemplo específico. Ten en cuenta que temas diferentes serán construidos de forma diferente, para permitir diversas opciones de personalización. Para más información, revisa la [documentación sobre temas de Gatsby](/docs/themes/).
