@@ -13,7 +13,7 @@ Los datos se almacenan en el directorio `.cache`, que es relativo al directorio 
 
 ## La API caché
 
-La API caché es pasada a [Gatsby's Node APIs](/docs/node-apis/) la cual es usualmente implementada con plugins.
+La API caché es pasada a [las APIs Node de Gatsby](/docs/node-apis/) la cual es usualmente implementada con plugins.
 
 ```js
 exports.onPostBootstrap = async function({ cache, store, graphql }) {}
@@ -33,7 +33,7 @@ Devuelve el valor _cacheado_
 
 `cache.get(key: string) => Promise<any>`
 
-La documentación que se encuentra en [Node API helpers](/docs/node-api-helpers/#cache) ofrece información más detallada acerca de la API.
+La documentación que se encuentra en los [helpers del API de Node](/docs/node-api-helpers/#cache) ofrece información más detallada acerca de la API.
 
 ## Ejemplo utilizando un plugin
 
@@ -69,7 +69,7 @@ Puede suceder que Gatsby invalide el caché en algunos casos, más específicame
 
 - Si `package.json` es modificado, por ejemplo, si una nueva dependencia es actualizada o agregada
 - Si `gatsby-config.js` cambia, por ejemplo, un nuevo plugin es agregado o modificado
-- Si `gatsby-node.js` cambia, por ejemplo, si invocas una API Node nueva, o cambia una llamada a `createPage`
+- Si `gatsby-node.js` cambia, por ejemplo, si invocas una API de Node nueva, o cambia una llamada a `createPage`
 
 ## Conclusión
 
