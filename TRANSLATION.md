@@ -140,10 +140,10 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | Scope (verbo)          | Aislar                                |
 | Open Source            | Código abierto                        |
 | script                 | script                                |
+| Starter                | Guía rápida                           |
 | swag                   | premio                                |
 | push notifications     | Notificaciones push                   |
 | workspace              | _workspace_                           |
 | monorepo               | _monorepo_                            |
 | fork                   | _fork_                                |
-| starter                | _starter_                             |
-| component shadowing    | _component shadowing_                 |
+| Workshop               | Taller                                |
