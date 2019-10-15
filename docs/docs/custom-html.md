@@ -2,12 +2,10 @@
 título: Personalizar html.js
 ---
 
-Gatsby utiliza un componente React para que el servidor procese el `<head>` y otras partes de
+Gatsby utiliza un componente React para que el servidor renderize del `<head>` y otras partes de
 el HTML fuera de la aplicación principal de Gatsby. Gatsby también establece un valor predeterminado para la etiqueta `<noscript>` allí.
 
-La mayoría de los sitios deberían usar el `html.js` predeterminado enviado con Gatsby. Pero si necesitas
-para personalizar el html.js de su sitio, copie el predeterminado en su fuente
-árbol corriendo:
+La mayoría de los sitios deberían usar el `html.js` predeterminado enviado con Gatsby. Pero si necesitas personalizar el html.js de su sitio, copia el archivo predeterminado en tu carpeta de código fuente ejecutando:
 
 ```shell
 cp .cache/default-html.js src/html.js
@@ -15,17 +13,17 @@ cp .cache/default-html.js src/html.js
 
 Y luego haga modificaciones según sea necesario.
 
-Si necesita insertar html personalizado en el `<head>` o `<footer>` de cada página en su sitio, puede usar `html.js`.
+Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página en su sitio, puedes usar `html.js`.
 
 ### *props* necesarios
 
-Nota: los diversos *props* que se muestran en las páginas son obligatorios, p.
+Nota: los diversos *props* que se muestran en las páginas son obligatorios, p. ej.
 `headComponents`,`preBodyComponents`, `body` y `postBodyComponents`.
 
 ### Insertar html en el `<head>`
 
-Todo lo que renderizado en el componente `html.js` no se hará "live "en
-Al cliente le gustan otros componentes. Si desea actualizar dinámicamente su
+Todo lo que renderizas en el componente `html.js` no se hará "live" en
+el cliente como otros componentes le gustan otros componentes. Si deseas actualizar dinámicamente tu
 `<head>` recomendamos usar
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
@@ -35,9 +33,9 @@ Si desea insertar html personalizado en el pie de página, html.js es la forma p
 
 ### Contenedor de destino
 
-Si ve este error: `Uncaught Error: _registerComponent(...): Target container is not a DOM element.`
-significa que a su `html.js` le falta el requerido
-"contenedor de destino". Dentro de su `body` debe tener un div con una id de
+Si ves este error: `Uncaught Error: _registerComponent(...): Target container is not a DOM element.`
+significa que a tu `html.js` le falta el "contenedor de destino"
+requerido. Dentro de tu `body` debes tener un div con una id de
 `___ gatsby` como:
 
 ```jsx:title=src/html.js
@@ -50,7 +48,7 @@ significa que a su `html.js` le falta el requerido
 
 ### Agregar JavaScript personalizado
 
-Puede agregar JavaScript personalizado a su documento HTML utilizando el atributo React [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml).
+Puedes agregar JavaScript personalizado a tu documento HTML utilizando el atributo React [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml).
 
 ```jsx:title=src/html.js
 <script
