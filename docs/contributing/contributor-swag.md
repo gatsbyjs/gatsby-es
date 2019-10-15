@@ -1,27 +1,25 @@
 ---
-title: Regalos gratis para los contribuidores de Gatsby!
+title: Premios gratis para los contribuidores de Gatsby!
 ---
 
 Gatsby confía en los contribuidores de la comunidad de código abierto, y queremos asegurarnos de que sabes lo mucho que significa para nosotros que tu estás dispuesto a poner tiempo y esfuerzo en [contributing to Gatsby](/contributing/how-to-contribute/).
 
-¡Para mostrar nuestro agradecimiento,  _**todos los que contribuyen a Gatsby son elegibles para recibir regalos gratis! **_
+¡Para mostrar nuestro agradecimiento,  _**todos los que contribuyen a Gatsby son elegibles para recibir premios gratis! **_
 
-![contribuidores de Gatsby con el regalo.](./images/gatsby-swag.jpg)
+![contribuidores de Gatsby con el premio.](./images/gatsby-swag.jpg)
 
-### Cómo reclamar tu regalo gratis?
+### Cómo reclamar tu premio gratis?
 
-Si contribuyes a la organización de Gatsby en Github, puedes reclamar tu regalo [iniciando sesión en la Tienda Gatsby](https://store.gatsbyjs.org/) y solicitar un código de descuento. Con cinco o más contribuciones, puedes reclamar tu regalo _**Nivel 2**_.
+Si contribuyes a la organización de Gatsby en Github, puedes reclamar tu premio [iniciando sesión en la Tienda Gatsby](https://store.gatsbyjs.org/) y solicitar un código de descuento. Con cinco o más contribuciones, puedes reclamar tu premio _**Nivel 2**_.
 
-Si has contribuido de otras maneras, como dando charlas sobre Gatsby, enseñando a otros a usarlo, escribiendo artículos/tutoriales de Gatsby, participando en un proyecto de investigación de Gatsby, o de cualquier otra forma, por favor envíanos un email a <mailto:marketing@gatsbyjs.com> o [tweet en Gatsby en Twitter](https://twitter.com/gatsbyjs) para reclamar tu regalo.
+Si has contribuido de otras maneras, como dando charlas sobre Gatsby, enseñando a otros a usarlo, escribiendo artículos/tutoriales de Gatsby, participando en un proyecto de investigación de Gatsby, o de cualquier otra forma, por favor envíanos un email a <mailto:marketing@gatsbyjs.com> o [tweet en Gatsby en Twitter](https://twitter.com/gatsbyjs) para reclamar tu premio.
 
-### Detalles sobre el regalo gratis
+### Detalles sobre el premio gratis
 
-- We will send one item from our [swag store](https://store.gatsbyjs.org/) per swag tier
-- Tier 1 swag includes most items \$10 and under
-- Tier 2 swag includes most items \$26 and under
-- Not all items are eligible due to high cost to create the swag. We’ll make it clear which items are not eligible
-- There’s a limit of one free swag item per swag tier
-- Shipping is free worldwide
+- Enviaremos un artículo desde nuestra [tienda de premios](https://store.gatsbyjs.org/) por nivel del premio
+- No todos los artículos son elegibles debido al alto costo para crear el premio. Vamos a dejar claro qué artículos no son elegibles
+- Hay un límite de un premio gratis por cada nivel de premio
+- El envio es gratis en todo el mundo
 
 
 > **NOTA:** El envío gratuito en todo el mundo es un programa piloto. Si los costos de envío se salen de control, es posible que tengamos que ajustar esta política en el futuro.
