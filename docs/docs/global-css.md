@@ -6,13 +6,13 @@ Tradicionalmente, los sitios web han sido dotados de estilos usando archivos glo
 
 Las reglas de CSS con ámbito global están declaradas en hojas de estilo externas `.css`, y [la especificidad de CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y [su Cascada](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) determinan como los estilos se aplican.
 
-## Añadiendo estilos globales con un componente de capa
+## Añadiendo estilos globales con un componente layout
 
-La mejor manera de añadir estilos globales es con un [componente de capa compartido](/tutorial/part-three/#your-first-layout-component). Este componente de capa se usa para cosas que se comparten a lo largo del sitio web, incluyendo estilos, componentes de cabeceras y otros objetos comunes.
+La mejor manera de añadir estilos globales es con un [componente layout compartido](/tutorial/part-three/#your-first-layout-component). Este componente layout se usa para cosas que se comparten a lo largo del sitio web, incluyendo estilos, componentes de cabeceras y otros objetos comunes.
 
 > **NOTA:** Este patrón se implementa por defecto en [el inicio por defecto](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
 
-Para crear una capa compartida con estilos globales, comienza creando un nuevo sitio Gatsby con el [inicio Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world).
+Para crear un layout compartido con estilos globales, comienza creando un nuevo sitio Gatsby con el [inicio Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world).
 
 ```shell
 gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -40,7 +40,7 @@ div {
 }
 ```
 
-En `src/components/layout.js`, incluye la hoja de estilos y exporta un componente de capa:
+En `src/components/layout.js`, incluye la hoja de estilos y exporta un componente layout:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -49,7 +49,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-Finalmente, actualiza `src/pages/index.js` para usar el nuevo componente de capa:
+Finalmente, actualiza `src/pages/index.js` para usar el nuevo componente layout:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -62,9 +62,9 @@ Ejecuta `npm run develop` y verás los estilos globales aplicados.
 
 ![Global styles](./images/global-styles.png)
 
-## Añadiendo estilos globales sin un componente de capa
+## Añadiendo estilos globales sin un componente layout
 
-En algunos casos, usar un componente de capa compartido no es deseable. En esos casos, puedes incluir una hoja de estilos global usando `gatsby-browser.js`.
+En algunos casos, usar un componente layout compartido no es deseable. En esos casos, puedes incluir una hoja de estilos global usando `gatsby-browser.js`.
 
 > **NOTA:** Esta aproximación _no_ funciona con CSS-in-JS. Usa componentes compartidos para compartir estilos en CSS-in-JS.
 
@@ -91,7 +91,7 @@ a {
 Tras eso, incluye la hoja de estilos en tu archivo `gatsby-browser.js`.
 
 > **NOTA:** Esta solucion funciona cuando incluimos CSS ya que esos estilos son extraídos al compilar el JavaScript y no para css-in-js.
-> Incluir estilos en un componente de capa o un archivo global-styles.js es tu mejor opción para ello.
+> Incluir estilos en un componente layout o un archivo global-styles.js es tu mejor opción para ello.
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
