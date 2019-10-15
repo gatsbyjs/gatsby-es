@@ -3,6 +3,7 @@ title: Contribuciones de Código
 ---
 
 ¡La belleza de contribuir con código abierto es que puedes clonar tu proyecto favorito, ejecutarlo localmente y probar experimentos y cambios en tiempo real! Te hace sentir como un mago.
+
 En esta página:
 
 - [Preparación del repositorio](#repo-setup)
