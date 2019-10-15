@@ -48,7 +48,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 ```
 
-Posteriormente, ejecute una compilación (`npm run build`) ya que la generación de feeds RSS solamente se realizarán para las compilaciones de producción. Por defecto, la ruta donde se generan los feeds RSS es `/rss.xml`, pero el complemento expone opciones para configurar esta funcionalidad predeterminada.
+Posteriormente, ejecute una compilación (`npm run build`) ya que la generación de feeds RSS solamente se realizará para las compilaciones de producción. Por defecto, la ruta donde se generan los feeds RSS es `/rss.xml`, pero el complemento expone opciones para configurar esta funcionalidad predeterminada.
 
 Para configuraciones básicas con contenido Markdown como [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), ¡eso es todo lo que necesitas! Sin embargo, puedes crear un esquema de feeds RSS personalizado, modificando los archivos `gatsby-node.js` y `gatsby-config.js`.
 
