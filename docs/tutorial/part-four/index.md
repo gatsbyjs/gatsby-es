@@ -62,7 +62,7 @@ Gatsby usa GraphQL para habilitar componentes para declarar los datos que necesi
 
 ## Crea un nievo sitio web de ejemplo
 
-Crea otro nuevo sitio para esta parte del tutorial. Vas a crear un blog en Markdown llamado "Pandas Eating Lots". Está dedicado a enseñar las mejores fotos y videos de pandas comiendo montones de comida. Por el camino, comenzarás a conocer el soporte de Gatsby de Markdown y GraphQL.
+Crea otro nuevo sitio para esta parte del tutorial. Vas a crear un blog en Markdown llamado "Pandas Comiendo a montones". Está dedicado a enseñar las mejores fotos y videos de pandas comiendo montones de comida. Por el camino, comenzarás a conocer el soporte de Gatsby de Markdown y GraphQL.
 
 Abre una nueva ventana de terminal e introduce los siguientes comandos para crear una nueva página Gatsby en un directorio llamado `tutorial-part-four`. Tras esto, abre el nuevo directorio:
 
@@ -75,7 +75,7 @@ Luego instala otras dependencias necesarias en la carpeta raíz del proyecto. Us
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
-Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de layout y dos componentes de página:
+Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de capa y dos componentes de página:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -101,7 +101,7 @@ export default ({ children }) => (
           font-style: normal;
         `}
       >
-        Pandas Eating Lots
+        Pandas Comiendo a montones
       </h3>
     </Link>
     <Link
@@ -123,11 +123,11 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>Amazing Pandas Eating Things</h1>
+    <h1>Pandas alucinantes comiendo cosas</h1>
     <div>
       <img
         src="https://2.bp.blogspot.com/-BMP2l6Hwvp4/TiAxeGx4CTI/AAAAAAAAD_M/XlC_mY3SoEw/s1600/panda-group-eating-bamboo.jpg"
-        alt="Group of pandas eating bamboo"
+        alt="Un grupo de Pandas comiendo bambu"
       />
     </div>
   </Layout>
@@ -140,10 +140,9 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>About Pandas Eating Lots</h1>
+    <h1>Sobre Pandas Comiendo a montones</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Somos la única página en tu pc dedicado a mostrar los mejores fotos y videos de pandas comiendo montones de comida.
     </p>
   </Layout>
 )
@@ -159,7 +158,7 @@ export default typography
 export const rhythm = typography.rhythm
 ```
 
-`gatsby-config.js` (debe estar en la raíz de tu proyecto, no bajo src)
+`gatsby-config.js` (debe estar en la raíz de tu proyecto, no en la ruta de src)
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -179,14 +178,14 @@ Añade los archivos de arriba y ejecuta `gatsby develop`, como siempre, debería
 
 ![inicio](start.png)
 
-Tienes otro pequeño sitio con un layout y dos páginas.
+Tienes otro pequeño sitio con una capa y dos páginas.
 
 Ya puedes comenzar a lanzar peticiones 😋
 
 ## Tu primera petición GraphQL
 
 Cuando creas páginas web, probablemente querrás reusar los bits comunes de datos -- como el _titulo del sitio_ por ejemplo. Mira la página 
-`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Eating Lots`) en los dos componentes de layout (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
+`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Comiendo a montones`) en ls dos componentes de capa (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
 
 Pero, ¿y si quieres cambiar el titulo del sitio en el futuro? Tienes que buscar el título en todos tus componentes y editar cada instancia. Esto es incómodo y genera errores, especialmente en sitios complejos y grandes. En lugar de ello, puedes guardar el título en un lugar y referenciar esa localización desde otros archivos; cambia el título en un lugar y Gatsby _cogerá_ tu título actualizado en los archivos que lo referencien.
 
@@ -227,8 +226,7 @@ export default ({ data }) => (
   <Layout>
     <h1>About {data.site.siteMetadata.title}</h1> {/* highlight-line */}
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Somos la única página en tu pc dedicado a mostrar los mejores fotos y videos de pandas comiendo montones de comida.
     </p>
   </Layout>
 )
@@ -269,9 +267,9 @@ Las peticiones de página viven fuera de la definición del componente -- por co
 ### Usa una Petición Estática
 
 [StaticQuery](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
-Usemos su nueva versión de _hook_ — [`useStaticQuery`](/docs/use-static-query/).
+Usemos su nueva versión de ganchos — [`useStaticQuery`](/docs/use-static-query/).
 
-Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el _hook_ `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
+Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el gancho `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -340,7 +338,7 @@ Pero restauremos el título original.
 
 Uno de los principios principales de Gatsby es que _los creadores necesitan una conexión inmediata a lo que están creando_ ([dicho por Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). En otras palabras, cuando haces algun cambio al código, deberías ver inmediatamente el efecto de ese cambio. Si manipulas la entrada de Gatsby verás el cambio en pantalla.
 
-Así que casi en todos los sitios, los cambios que hagas se verán casi instantáneamente. Modifica el archivo `gatsby-config.js` de nuevo, esta vez cambiando el título `title` de nuevo a "Pandas Eating Lots". El cambio debería aparecer muy rápido en las páginas de tu aplicación.
+Así que casi en todos los sitios, los cambios que hagas se verán casi instantáneamente. Modifica el archivo `gatsby-config.js` de nuevo, esta vez cambiando el título `title` de nuevo a "Pandas Comiendo a montones". El cambio debería aparecer muy rápido en las páginas de tu aplicación.
 
 ![Both titles say Pandas Eating Lots](pandas-eating-lots-titles.png)
 
