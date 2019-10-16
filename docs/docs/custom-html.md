@@ -15,7 +15,7 @@ cp .cache/default-html.js src/html.js
 
 Y luego haz modificaciones según sea necesario.
 
-Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página en su sitio, puedes usar `html.js`.
+Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página de tu sitio, puedes usar `html.js`.
 
 ### *props* necesarios
 
