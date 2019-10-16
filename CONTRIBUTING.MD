@@ -11,7 +11,7 @@ La documentación de Gatsby consiste en una serie de páginas maquetadas mediant
 Sabemos que todos quieren contribuir pero debemos mantener un orden en las traducciones, para esto el issue de progreso es de gran ayuda, para poder empezar a traducir sigue estos pasos, por favor **no empieces a traducir si no sigues todos estos pasos, y te asignamos la página**, la idea es que no pierdas preciado trabajo y tiempo si la página ya fue tomada por otro, a veces podemos tardar en asignar, pero por favor ten paciencia:
 
 - **1.-** Ve al [issue de progreso de traducción](https://github.com/gatsbyjs/gatsby-es/issues/4) y revisa que página esta **disponible** y quisieras traducir.
-- **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh o @darking360 con la página que quieres traducir y así podemos asignarla.
+- **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh, @darking360 o @nucliweb con la página que quieres traducir y así podemos asignarla.
 - **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre parentesis: 
 
     ` - index.md (@horacioh)`. 
