@@ -31,7 +31,7 @@ el cliente como en otros componentes. Si deseas actualizar dinámicamente tu
 
 ### Insertar html en el `<footer>`
 
-Si desea insertar html personalizado en el pie de página, html.js es la forma preferida de hacerlo. Si está escribiendo un complemento, considere usar el accesorio `setPostBodyComponents` en la [Gatsby SSR API](/docs/ssr-apis/).
+Si desea insertar html personalizado en el pie de página, html.js es la forma preferida de hacerlo. Si estás escribiendo un plugin, considera usar el prop `setPostBodyComponents` en el [Gatsby SSR API](/docs/ssr-apis/).
 
 ### Contenedor de destino
 
