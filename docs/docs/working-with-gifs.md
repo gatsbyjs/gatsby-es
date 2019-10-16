@@ -37,9 +37,9 @@ En las páginas y entrada en Markdown, incluir un GIF animado se hace del mismo 
 
 ![nutria bailando con un pez](./images/dancing-otter.gif)
 
-Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, así que se cuidadoso de no hacerle sabotaje al rendimiento de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los cuadros](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
+Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, así que se cuidadoso de no hacerle sabotaje al rendimiento de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los fotogramas](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
 
-## Asuntos relacionados con accesibilidad con GIFs animados
+## Asuntos relacionados con accesibilidad en los GIFs animados
 
 Ten cuidado que los GIFs que "flashean" (cambian abruptamente de colores o marcos), o que se auto-reproducen pueden causar problemas para usuarios que son sensibles al movimiento. Los GIFs no deberían autoreproducirse siempre que sea posible por motivos de seguridad. Una técnica sería la de agregar controles, usando un paquete como [react-gif-player](https://www.npmjs.com/package/react-gif-player) como [un paquete sólo para el cliente](/docs/using-client-side-only-packages/).
 
