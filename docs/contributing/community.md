@@ -4,9 +4,9 @@ title: Comunidad
 
 Desde septiembre 2019, la comunidad de Gatsby se compone de más de 2,400 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
 
-El código-abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone triste. **Todos pertenecen en el código abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
+El código-abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone tristes. **Todos pertenecen en el código abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
 
-Nunca vamos a juzgar, ser despectivos, o excluir a nadie. Más bien, nos esforzaremos por apoyar a la comunidad, a través de ayudarte a contribuir al entorno de Gatsby, ofrecer [mercancía gratis para colaboradores](https://gatsby.dev/swag), dar control a la comunidad al [invitar automáticamente a todos los colaboradores a la organización del GitHub de Gatsby](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), un [código de conducta](/contributing/code-of-conduct/) abierto e inclusivo, y otros medios para empoderar y recibir con los brazos abiertos a la comunidad increíble que hace que Gatsby sea posible.
+Nunca vamos a juzgar, ser despectivos, o excluir a nadie. Más bien, nos esforzaremos por apoyar a la comunidad, a través de ayudarte a contribuir al entorno de Gatsby, ofrecer [mercancía gratis para colaboradores](https://gatsby.dev/swag), dar control a la comunidad al [invitar automáticamente a todos los colaboradores a la organización de GitHub de Gatsby](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), un [código de conducta](/contributing/code-of-conduct/) abierto e inclusivo, y otros medios para empoderar y recibir con los brazos abiertos a la comunidad increíble que hace que Gatsby sea posible.
 
 Uno de los valores de nuestra comunidad es que ["tú perteneces a ella"](/blog/2018-09-07-gatsby-values/#you-belong-here).
 
@@ -14,7 +14,7 @@ Uno de los valores de nuestra comunidad es que ["tú perteneces a ella"](/blog/2
 
 Con el fin de fomentar un ambiente abierto y cordial, nosotros como
 colaboradores y mantenedores juramos hacer que la participación en nuestro proyecto y
-nuestra comunidad sea una experiencia libre de acoso para todos, no importa su edad, tamaño,
+nuestra comunidad sea una experiencia libre de acoso para todos, no importa tu edad, tamaño,
 disabilidad, origen étnico, identidad y expresión de género, nivel de
 experiencia, nacionalidad, apariencia personal, raza, religión o identidad/orientación
 sexual.
@@ -22,7 +22,8 @@ sexual.
 [Leer el código de conducta completa](/contributing/code-of-conduct/)
 
 ## Maneras de contribuir
-La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee las guías abajo para asegurarte de que sean aceptadas tus contribuciones:
+
+La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee las guías abajo para asegurarte de que tus contribuciones sean aceptadas:
 
 - [Cómo contribuir](/contributing/how-to-contribute/)
 - [Cómo abrir un Issue](/contributing/how-to-file-an-issue/)
