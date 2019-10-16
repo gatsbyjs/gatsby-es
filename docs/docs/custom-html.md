@@ -38,7 +38,7 @@ Si desea insertar html personalizado en el pie de página, html.js es la forma p
 Si ves este error: `Uncaught Error: _registerComponent(...): Target container is not a DOM element.`
 significa que a tu `html.js` le falta el "contenedor de destino"
 requerido. Dentro de tu `body` debes tener un div con una id de
-`___ gatsby` como:
+`___gatsby` como:
 
 ```jsx:title=src/html.js
 <div
