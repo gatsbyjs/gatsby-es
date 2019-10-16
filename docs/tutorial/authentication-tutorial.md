@@ -1,27 +1,27 @@
 ---
-title: Crear un sitio con autenticación de usuario
+título: Crear un sitio con autenticación de usuarios
 ---
 
-A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas solo para clientes](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
+A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#Client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
 
 ## Prerrequisitos
 
-Ya deberías haber configurado tu entorno para poder usar el `gatsby-cli`. Un buen punto de partida es el [tutorial principal](/tutorial).
+Ya deberías haber configurado tu entorno para poder usar `gatsby-cli`. Un buen punto de partida es el [tutorial principal](/tutorial).
 
 ## Aviso de seguridad
 
-En producción, debes usar una solución probada y sólida para manejar la autenticación. [Auth0](https://www.auth0.com), [Firebase](https://firebase.google.com) y [Passport.js](http://passportjs.org) son buenos ejemplos. Este tutorial solo cubrirá el flujo de trabajo de autenticación, pero debes tomar la seguridad de tu aplicación lo más en serio posible.
+En producción, deberías usar soluciones probadas y robustas para manejar la autenticación. [Auth0](https://www.auth0.com), [Firebase](https://firebase.google.com) y [Passport.js](http://passportjs.org) son buenos ejemplos. Este tutorial solo cubrirá el flujo de autenticación, pero debes tomarte la seguridad de tu aplicación lo más en serio posible.
 
 ## Construyendo tu aplicación Gatsby
 
-Comienza creando un nuevo proyecto de Gatsby utilizando el starter `hello-world`:
+Comienza creando un nuevo proyecto de Gatsby utilizando el generador `hello-world`:
 
 ```shell
 gatsby new gatsby-auth gatsbyjs/gatsby-starter-hello-world
 cd gatsby-auth
 ```
 
-Crea un nuevo componente para contener los enlaces. Por ahora, actuará como un valor para mostrar:
+Crea un nuevo componente para contener los enlaces. Por ahora, dejaremos el texto que indica que el usuario no ha iniciado sesión; más tarde lo cambiaremos:
 
 ```jsx:title=src/components/nav-bar.js
 import React from "react"
@@ -36,20 +36,20 @@ export default () => (
       borderBottom: "1px solid #d1c1e0",
     }}
   >
-    <span>No estás autenticado</span>
+    <span>You are not logged in</span>
 
     <nav>
-      <Link to="/">Inicio</Link>
+      <Link to="/">Home</Link>
       {` `}
-      <Link to="/">Perfil</Link>
+      <Link to="/">Profile</Link>
       {` `}
-      <Link to="/">Salir</Link>
+      <Link to="/">Logout</Link>
     </nav>
   </div>
 )
 ```
 
-Y crea el componente de layout que envolverá todas las páginas y mostrará la barra de navegación:
+Y crea el componente de maquetación que envolverá todas las páginas y mostrará la barra de navegación:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -66,7 +66,7 @@ const Layout = ({ children }) => (
 export default Layout
 ```
 
-Por último, cambia la página de inicio para usar el componente de layout:
+Por último, cambia la página de índice para usar el componente de maquetación:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -76,15 +76,15 @@ import Layout from "../components/layout" // highlight-line
 // highlight-start
 export default () => (
   <Layout>
-    <h1>Hola mundo!</h1>
+    <h1>Hello world!</h1>
   </Layout>
 )
 // highlight-end
 ```
 
-## Servicio de autenticación
+## El servicio de autenticación
 
-Para este tutorial, utilizarás un usuario y contraseña codificados. Crea la carpeta `src/services` y agrega el siguiente contenido al archivo `auth.js`:
+Para este tutorial, utilizará un usuario y una contraseña hardcodeados. Crea la carpeta `src/services` y añade el siguiente contenido al archivo `auth.js`:
 
 ```javascript:title=src/services/auth.js
 export const isBrowser = () => typeof window !== "undefined"
@@ -121,32 +121,32 @@ export const logout = callback => {
 }
 ```
 
-## Crear rutas solo para clientes
+## Creando rutas únicas del cliente
 
-Al comienzo de este tutorial, creaste un sitio Gatsby "hello world", que incluye la biblioteca `@reach/router`. Ahora, utilizando la biblioteca [@reach/router](https://reach.tech/router/), puedes crear rutas disponibles solo para los usuarios registrados. Gatsby utiliza esta biblioteca bajo el capó, por lo que ni siquiera tienes que instalarla.
+Al comienzo de este tutorial, creaste un sitio Gatsby de "hola mundo", que incluía la librería `@reach/router`. Ahora, utilizando la librería [@reach/router](https://reach.tech/router/), puedes crear rutas disponibles solo para los usuarios registrados. Gatsby utiliza esta biblioteca internamente, por lo que ni siquiera tienes que instalarla.
 
-Primero, crea el archivo `gatsby-node.js` en el directorio raíz de tu proyecto. Definirá que cualquier ruta que comience con `/app/` es parte de tu contenido restringido y la página se creará bajo demanda:
+Primero, crea un archivo `gatsby-node.js` en el directorio raíz de tu proyecto. Define que cualquier ruta que comience por `/app/` es parte del contenido restringido y la página se creará dinámicamente:
 
 ```javascript:title=gatsby-node.js
-// Implementa el API de Gatsby "onCreatePage" esto es
-// llamado después de que cada página es creada
+// Implement the Gatsby API “onCreatePage”. This is
+// called after every page is created.
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
-  // page.matchPath es una llave especial que es usada para asociar páginas
-  // solo en el cliente.
+  // page.matchPath is a special key that's used for matching pages
+  // only on the client.
   if (page.path.match(/^\/app/)) {
     page.matchPath = "/app/*"
 
-    // Actualiza la página
+    // Update the page.
     createPage(page)
   }
 }
 ```
 
-> Nota: Hay un complemento conveniente que ya funciona para ti: [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths)
+> Nota: Hay un plugin que hace esto mismo: [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths)
 
-Ahora, debes crear una página genérica que tendrá la tarea de generar el contenido restringido:
+Ahora, debes crear una página abstracta que se encargará de generar el contenido restringido:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -167,17 +167,17 @@ const App = () => (
 export default App
 ```
 
-Ahora, agrega los componentes correspondientes a las nuevas rutas. El componente de perfil para mostrar los datos del usuario:
+A continuación, añade los componentes relacionados con esas nuevas rutas. El componente de perfil para mostrar los datos del usuario:
 
 ```jsx:title=src/components/profile.js
 import React from "react"
 
 const Profile = () => (
   <>
-    <h1>Tu perfil</h1>
+    <h1>Your profile</h1>
     <ul>
-      <li>Nombre: Tu nombre aparecerá aqui</li>
-      <li>E-mail: Y aqui va tu email</li>
+      <li>Name: Your name will appear here</li>
+      <li>E-mail: And here goes the mail</li>
     </ul>
   </>
 )
@@ -185,7 +185,7 @@ const Profile = () => (
 export default Profile
 ```
 
-El componente de iniciar sesión va a manejar - como ya adivinaste - el proceso de inicio de sesión:
+El componente de login, que se ocuará de - lo has adivinado - el proceso de inicio de sesión:
 
 ```jsx:title=src/components/login.js
 import React from "react"
@@ -216,7 +216,7 @@ class Login extends React.Component {
 
     return (
       <>
-        <h1>Iniciar sesión</h1>
+        <h1>Log in</h1>
         <form
           method="post"
           onSubmit={event => {
@@ -225,18 +225,18 @@ class Login extends React.Component {
           }}
         >
           <label>
-            Nombre de usuario
+            Username
             <input type="text" name="username" onChange={this.handleUpdate} />
           </label>
           <label>
-            Contraseña
+            Password
             <input
               type="password"
               name="password"
               onChange={this.handleUpdate}
             />
           </label>
-          <input type="submit" value="Iniciar sesión" />
+          <input type="submit" value="Log In" />
         </form>
       </>
     )
@@ -246,11 +246,11 @@ class Login extends React.Component {
 export default Login
 ```
 
-Aunque el enrutamiento ya está funcionando, aun puedes acceder a todas las rutas sin autenticación.
+Aunque las rutas ahora funcionan, todavía puedes acceder a ellas sin restricción.
 
-## Controlando rutas privadas
+## Controlando las rutas privadas
 
-Para comprobar si un usuario puede acceder a un contenido, puedes envolver el contenido restringido con un componente `PrivateRoute`:
+Para comprobar si un usuario puede acceder el contenido, puedes envolver el contenido restringido dentro de un componente PrivateRoute:
 
 ```jsx:title=src/components/privateRoute.js
 import React, { Component } from "react"
@@ -269,7 +269,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 export default PrivateRoute
 ```
 
-Y ahora puedes editar tu Router para utilizar el componente `PrivateRoute`:
+Ahora puedes editar tu Router para usar el componente PrivateRoute:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -292,11 +292,11 @@ const App = () => (
 export default App
 ```
 
-## Refactorizando para utilizar nuevas rutas y datos de usuario
+## Refactorizando para usar las nuevas rutas y datos de usuario
 
-Con las rutas exclusivas para el usuario configuradas, ahora debes refactorizar algunos archivos para que los datos del usuario estén disponibles.
+Con las rutas únicas del cliente configuradas, debes refactorizar algunos archivos para incorporar los datos del usuario disponibles.
 
-La barra de navegación mostrará el nombre de usuario y la opción para cerrar sesión a los usuarios registrados:
+La barra de navegación mostrará el nombre de usuario y la opción de cerrar sesión a usuarios registrados:
 
 ```jsx:title=src/components/nav-bar.js
 import React from "react"
@@ -307,9 +307,9 @@ import { getUser, isLoggedIn, logout } from "../services/auth" // highlight-line
 export default () => {
   const content = { message: "", login: true }
   if (isLoggedIn()) {
-    content.message = `Hola, ${getUser().name}`
+    content.message = `Hello, ${getUser().name}`
   } else {
-    content.message = "No has iniciado sesión"
+    content.message = "You are not logged in"
   }
   return (
     // highlight-end
@@ -323,9 +323,9 @@ export default () => {
     >
       <span>{content.message}</span> {/* highlight-line */}
       <nav>
-        <Link to="/">Inicio</Link>
+        <Link to="/">Home</Link>
         {` `}
-        <Link to="/app/profile">Perfil</Link> {/* highlight-line */}
+        <Link to="/app/profile">Profile</Link> {/* highlight-line */}
         {` `}
         {/* highlight-start */}
         {isLoggedIn() ? (
@@ -336,7 +336,7 @@ export default () => {
               logout(() => navigate(`/app/login`))
             }}
           >
-            Cerrar sesión
+            Logout
           </a>
         ) : null}
         {/* highlight-end */}
@@ -346,7 +346,7 @@ export default () => {
 } // highlight-line
 ```
 
-La página de inicio sugerirá iniciar sesión o comprobar el perfil dependiendo del caso:
+La página de índice sugerirá hacer login o ir al perfil, según corresponda:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -358,17 +358,17 @@ import Layout from "../components/layout"
 export default () => (
   <Layout>
     {/* highlight-start */}
-    <h1>Hola {isLoggedIn() ? getUser().name : "mundo"}!</h1>
+    <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
     <p>
       {isLoggedIn() ? (
         <>
-          Iniciaste sesión, así que comprueba tu {" "}
-          <Link to="/app/profile">perfil</Link>
+          You are logged in, so check your{" "}
+          <Link to="/app/profile">profile</Link>
         </>
       ) : (
         <>
-          Debes <Link to="/app/login">iniciar sesión</Link> para ver el contenido
-          restringido
+          You should <Link to="/app/login">log in</Link> to see restricted
+          content
         </>
       )}
     </p>
@@ -385,10 +385,10 @@ import { getUser } from "../services/auth" // highlight-line
 
 const Profile = () => (
   <>
-    <h1>Tu perfil</h1>
+    <h1>Your profile</h1>
     <ul>
       {/* highlight-start */}
-      <li>Nombre: {getUser().name}</li>
+      <li>Name: {getUser().name}</li>
       <li>E-mail: {getUser().email}</li>
       {/* highlight-end */}
     </ul>
@@ -398,16 +398,16 @@ const Profile = () => (
 export default Profile
 ```
 
-Ahora deberías tener un flujo completo de autenticación, funcionando con inicio de sesión y áreas restringidas solo para usuarios.
+¡Ahora deberías tener un flujo de autenticación completo, funcionando con inicio de sesión y área restringida!
 
-## Otras lecturas
+## Lectura complementaria
 
-Sí deseas aprender más sobre utilizar soluciones de autenticación listas para producción, estos enlaces pueden ayudarte:
+Si quieres aprender mas sobre cómo usar soluciones de autenticación preparadas para producción, los siguientes links pueden ser de utilidad:
 
-- [Repositorio de Gatsby con autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), usando el API de React Context para manejar la autenticación
-- [La tienda de Gatsby para premios y otros extras](https://github.com/gatsbyjs/store.gatsbyjs.org)
-- [ Construyendo un blog con Gatsby, React y Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
-- [JAMstack PWA — Construyamos una aplicación de encuestas con Gatsby.js, Firebase y Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
-- [JAMstack Hackathon Starter - Starter de una aplicación Gatsby autenticada usando Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
-- [Aprende con el directo de Jason: Cómo usar Netlify Identity y Netlify Functions (con Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
+- [El ejemplo de autenticación simple del repo de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Una _aplicación_ de email con Gatsby](https://github.com/DSchau/gatsby-mail), que usa la API de Contextos de React para controlar la autenticación
+- [La tienda de merchandising de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
+- [Building a blog with Gatsby, React and Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
+- [JAMstack PWA — Let’s Build a Polling App. with Gatsby.js, Firebase, and Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
+- [JAMstack Hackathon Starter - Un generador de apps Gatsby autenticadas con Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
+- [Livestream de Learn With Jason: How to use Netlify Identity and Netlify Functions (with Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
