@@ -66,7 +66,7 @@ Cuando se usan temas de Gatsby, puedes tomar ventaja de algo llamado component s
 
 El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
 
-Si miras al árbol de directorios de tu sitio web, verás que es parecido al siguiente:
+Si miras en el árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 
 ```
 my-blog
@@ -86,7 +86,7 @@ my-blog
 └── package.json
 ```
 
-En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-blog`. Cualquier fichero situado en esta carpeta que se corresponda con un fichero en el tema para blogs sobreescribirá el tema.
+En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-blog`. Cualquier fichero situado en esta carpeta, que se corresponda con un fichero en el tema para blogs, sobreescribirá el tema.
 
 > 💡 El nombre del directorio (por ejemplo `gatsby-theme-blog`) debe reflejar exactamente el nombre del paquete del tema publicado, que en este caso es [`gatsby-theme-blog`](https://www.npmjs.com/package/gatsby-theme-blog).
 
