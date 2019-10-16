@@ -13,7 +13,7 @@ carpeta de código fuente ejecutando:
 cp .cache/default-html.js src/html.js
 ```
 
-Y luego haga modificaciones según sea necesario.
+Y luego haz modificaciones según sea necesario.
 
 Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página en su sitio, puedes usar `html.js`.
 
