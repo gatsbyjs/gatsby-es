@@ -25,7 +25,7 @@ Nota: los diversos *props* que se muestran en las páginas son obligatorios, p. 
 ### Insertar html en el `<head>`
 
 Todo lo que renderizas en el componente `html.js` no se hará "de inmediato" en
-el cliente como otros componentes le gustan otros componentes. Si deseas actualizar dinámicamente tu
+el cliente como en otros componentes. Si deseas actualizar dinámicamente tu
 `<head>` recomendamos usar
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
