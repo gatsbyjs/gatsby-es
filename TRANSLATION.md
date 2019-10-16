@@ -140,7 +140,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | Scope (verbo)          | Aislar                                |
 | Open Source            | Código abierto                        |
 | script                 | script                                |
-| Starter                | Guía rápida                           |
+| Starter                | Starter                               |
 | swag                   | premio                                |
 | push notifications     | Notificaciones push                   |
 | workspace              | _workspace_                           |
