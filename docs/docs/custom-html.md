@@ -1,5 +1,5 @@
 ---
-título: Personalizar html.js
+title: Personalizar html.js
 ---
 
 Gatsby utiliza un componente React para que el servidor renderize el `<head>` y otras partes
