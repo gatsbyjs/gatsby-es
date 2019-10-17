@@ -145,3 +145,4 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | workspace              | _workspace_                           |
 | monorepo               | _monorepo_                            |
 | fork                   | _fork_                                |
+| file                   | archivo                               |
