@@ -18,7 +18,7 @@ curl https://www.gatsbyjs.org/docs/seo
 
 ## Aumento de velocidad
 
-Gatsby incluye muchas herramientas para optimizar el rendimiento, tales como procesar archivos estáticos, carga de imágenes prograsivas y el [modelo PRPL](/docs/prpl-pattern/)— todos ayudan a que tu sitio sea ligero y rápido por defecto.
+Gatsby incluye muchas herramientas para optimizar el rendimiento, tales como procesar archivos estáticos, carga de imágenes progresivas y el [modelo PRPL](/docs/prpl-pattern/)— todos ayudan a que tu sitio sea ligero y rápido por defecto.
 
 Desde enero de 2018, Google [premia sitios más rápidos con un aumento en las clasificaciones de búsqueda](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
 
