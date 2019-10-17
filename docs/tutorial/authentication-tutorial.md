@@ -1,8 +1,8 @@
 ---
-título: Crear un sitio con autenticación de usuarios
+title: Crear un sitio con autenticación de usuarios
 ---
 
-A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#Client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
+A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
 
 ## Prerrequisitos
 
@@ -36,20 +36,20 @@ export default () => (
       borderBottom: "1px solid #d1c1e0",
     }}
   >
-    <span>You are not logged in</span>
+    <span>No estás autenticado</span>
 
     <nav>
-      <Link to="/">Home</Link>
+      <Link to="/">Inicio</Link>
       {` `}
-      <Link to="/">Profile</Link>
+      <Link to="/">Perfil</Link>
       {` `}
-      <Link to="/">Logout</Link>
+      <Link to="/">Salir</Link>
     </nav>
   </div>
 )
 ```
 
-Y crea el componente de maquetación que envolverá todas las páginas y mostrará la barra de navegación:
+Y crea el componente de layout que envolverá todas las páginas y mostrará la barra de navegación:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -66,7 +66,7 @@ const Layout = ({ children }) => (
 export default Layout
 ```
 
-Por último, cambia la página de índice para usar el componente de maquetación:
+Por último, cambia la página de inicio para usar el componente de layout:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -76,15 +76,15 @@ import Layout from "../components/layout" // highlight-line
 // highlight-start
 export default () => (
   <Layout>
-    <h1>Hello world!</h1>
+    <h1>Hola mundo!</h1>
   </Layout>
 )
 // highlight-end
 ```
 
-## El servicio de autenticación
+## Servicio de autenticación
 
-Para este tutorial, utilizará un usuario y una contraseña hardcodeados. Crea la carpeta `src/services` y añade el siguiente contenido al archivo `auth.js`:
+Para este tutorial, utilizarás un usuario y una contraseña hardcodeados. Crea la carpeta `src/services` y añade el siguiente contenido al archivo `auth.js`:
 
 ```javascript:title=src/services/auth.js
 export const isBrowser = () => typeof window !== "undefined"
@@ -128,17 +128,17 @@ Al comienzo de este tutorial, creaste un sitio Gatsby de "hola mundo", que inclu
 Primero, crea un archivo `gatsby-node.js` en el directorio raíz de tu proyecto. Define que cualquier ruta que comience por `/app/` es parte del contenido restringido y la página se creará dinámicamente:
 
 ```javascript:title=gatsby-node.js
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+// Implementa el API de Gatsby "onCreatePage" esto es
+// llamado después de que cada página es creada
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
-  // page.matchPath is a special key that's used for matching pages
-  // only on the client.
+  // page.matchPath es una key especial que es usada para asociar páginas
+  // únicas del cliente.
   if (page.path.match(/^\/app/)) {
     page.matchPath = "/app/*"
 
-    // Update the page.
+    // Actualiza la página
     createPage(page)
   }
 }
@@ -146,7 +146,7 @@ exports.onCreatePage = async ({ page, actions }) => {
 
 > Nota: Hay un plugin que hace esto mismo: [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths)
 
-Ahora, debes crear una página abstracta que se encargará de generar el contenido restringido:
+Ahora, debes crear una página genérica que se encargará de generar el contenido restringido:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -167,17 +167,17 @@ const App = () => (
 export default App
 ```
 
-A continuación, añade los componentes relacionados con esas nuevas rutas. El componente de perfil para mostrar los datos del usuario:
+Ahora, añade los componentes correspondientes a las nuevas rutas. El componente de perfil para mostrar los datos del usuario:
 
 ```jsx:title=src/components/profile.js
 import React from "react"
 
 const Profile = () => (
   <>
-    <h1>Your profile</h1>
+    <h1>Tu perfil</h1>
     <ul>
-      <li>Name: Your name will appear here</li>
-      <li>E-mail: And here goes the mail</li>
+      <li>Nombre: Tu nombre aparecerá aqui</li>
+      <li>E-mail: Y aqui va tu email</li>
     </ul>
   </>
 )
@@ -185,7 +185,7 @@ const Profile = () => (
 export default Profile
 ```
 
-El componente de login, que se ocuará de - lo has adivinado - el proceso de inicio de sesión:
+El componente de iniciar sesión va a manejar - como ya adivinaste - el proceso de inicio de sesión:
 
 ```jsx:title=src/components/login.js
 import React from "react"
@@ -216,7 +216,7 @@ class Login extends React.Component {
 
     return (
       <>
-        <h1>Log in</h1>
+        <h1>Iniciar sesión</h1>
         <form
           method="post"
           onSubmit={event => {
@@ -225,18 +225,18 @@ class Login extends React.Component {
           }}
         >
           <label>
-            Username
+            Nombre de usuario
             <input type="text" name="username" onChange={this.handleUpdate} />
           </label>
           <label>
-            Password
+            Contraseña
             <input
               type="password"
               name="password"
               onChange={this.handleUpdate}
             />
           </label>
-          <input type="submit" value="Log In" />
+          <input type="submit" value="Iniciar sesión" />
         </form>
       </>
     )
@@ -250,7 +250,7 @@ Aunque las rutas ahora funcionan, todavía puedes acceder a ellas sin restricci�
 
 ## Controlando las rutas privadas
 
-Para comprobar si un usuario puede acceder el contenido, puedes envolver el contenido restringido dentro de un componente PrivateRoute:
+Para comprobar si un usuario puede acceder al contenido, puedes envolver el contenido restringido con un componente `PrivateRoute`:
 
 ```jsx:title=src/components/privateRoute.js
 import React, { Component } from "react"
@@ -269,7 +269,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 export default PrivateRoute
 ```
 
-Ahora puedes editar tu Router para usar el componente PrivateRoute:
+Ahora puedes editar tu Router para utilizar el componente `PrivateRoute`:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -292,11 +292,11 @@ const App = () => (
 export default App
 ```
 
-## Refactorizando para usar las nuevas rutas y datos de usuario
+## Refactorizando para utilizar las nuevas rutas y datos de usuario
 
-Con las rutas únicas del cliente configuradas, debes refactorizar algunos archivos para incorporar los datos del usuario disponibles.
+Con las rutas únicas del cliente configuradas, ahora debes refactorizar algunos archivos para incorporar los datos del usuario disponibles.
 
-La barra de navegación mostrará el nombre de usuario y la opción de cerrar sesión a usuarios registrados:
+La barra de navegación mostrará el nombre de usuario y la opción de cerrar sesión a los usuarios registrados:
 
 ```jsx:title=src/components/nav-bar.js
 import React from "react"
@@ -307,9 +307,9 @@ import { getUser, isLoggedIn, logout } from "../services/auth" // highlight-line
 export default () => {
   const content = { message: "", login: true }
   if (isLoggedIn()) {
-    content.message = `Hello, ${getUser().name}`
+    content.message = `Hola, ${getUser().name}`
   } else {
-    content.message = "You are not logged in"
+    content.message = "No has iniciado sesión"
   }
   return (
     // highlight-end
@@ -323,9 +323,9 @@ export default () => {
     >
       <span>{content.message}</span> {/* highlight-line */}
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Inicio</Link>
         {` `}
-        <Link to="/app/profile">Profile</Link> {/* highlight-line */}
+        <Link to="/app/profile">Perfil</Link> {/* highlight-line */}
         {` `}
         {/* highlight-start */}
         {isLoggedIn() ? (
@@ -336,7 +336,7 @@ export default () => {
               logout(() => navigate(`/app/login`))
             }}
           >
-            Logout
+            Cerrar sesión
           </a>
         ) : null}
         {/* highlight-end */}
@@ -346,7 +346,7 @@ export default () => {
 } // highlight-line
 ```
 
-La página de índice sugerirá hacer login o ir al perfil, según corresponda:
+La página de inicio sugerirá iniciar sesión o ir al perfil, según corresponda:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -358,17 +358,17 @@ import Layout from "../components/layout"
 export default () => (
   <Layout>
     {/* highlight-start */}
-    <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+    <h1>Hola {isLoggedIn() ? getUser().name : "mundo"}!</h1>
     <p>
       {isLoggedIn() ? (
         <>
-          You are logged in, so check your{" "}
-          <Link to="/app/profile">profile</Link>
+          Iniciaste sesión, así que comprueba tu {" "}
+          <Link to="/app/profile">perfil</Link>
         </>
       ) : (
         <>
-          You should <Link to="/app/login">log in</Link> to see restricted
-          content
+          Debes <Link to="/app/login">iniciar sesión</Link> para ver el contenido
+          restringido
         </>
       )}
     </p>
@@ -385,10 +385,10 @@ import { getUser } from "../services/auth" // highlight-line
 
 const Profile = () => (
   <>
-    <h1>Your profile</h1>
+    <h1>Tu perfil</h1>
     <ul>
       {/* highlight-start */}
-      <li>Name: {getUser().name}</li>
+      <li>Nombre: {getUser().name}</li>
       <li>E-mail: {getUser().email}</li>
       {/* highlight-end */}
     </ul>
@@ -398,16 +398,16 @@ const Profile = () => (
 export default Profile
 ```
 
-¡Ahora deberías tener un flujo de autenticación completo, funcionando con inicio de sesión y área restringida!
+¡Ahora deberías tener un flujo completo de autenticación, funcionando con inicio de sesión y áreas restringidas solo para usuarios!
 
 ## Lectura complementaria
 
-Si quieres aprender mas sobre cómo usar soluciones de autenticación preparadas para producción, los siguientes links pueden ser de utilidad:
+Sí deseas aprender más sobre cómo utilizar soluciones de autenticación listas para producción, estos enlaces pueden ayudarte:
 
-- [El ejemplo de autenticación simple del repo de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Una _aplicación_ de email con Gatsby](https://github.com/DSchau/gatsby-mail), que usa la API de Contextos de React para controlar la autenticación
-- [La tienda de merchandising de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
+- [Repositorio de Gatsby con autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), que usa la API de React Context para controlar la autenticación
+- [La tienda de Gatsby para premios y otros extras](https://github.com/gatsbyjs/store.gatsbyjs.org)
 - [Building a blog with Gatsby, React and Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
 - [JAMstack PWA — Let’s Build a Polling App. with Gatsby.js, Firebase, and Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
-- [JAMstack Hackathon Starter - Un generador de apps Gatsby autenticadas con Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
+- [JAMstack Hackathon Starter - Starter de apps Gatsby autenticadas con Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
 - [Livestream de Learn With Jason: How to use Netlify Identity and Netlify Functions (with Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
