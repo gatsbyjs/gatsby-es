@@ -3,66 +3,66 @@ title: "Adding search"
 overview: true
 ---
 
-Mira abajo para ver una lista de guías en esta sección, o sigue leyendo un resumen sobre añadir la funcionalidad de búquedas en tu sitio web.
+See below for a list of guides in this section, or keep reading for an overview on adding search functionality to your site.
 
 <GuideList slug={props.slug} />
 
-## Resumen de búsqueda en sitio web
+## Site search overview
 
-Antes que vayamos a través de los passos para añadir búsquedas a tu sitio web Gatsby, examinemos los componentes necesarios para añadir búsquedas a una página web.
+Before we go through the steps for adding search to your Gatsby website, let's examine the components needed for adding search to a website.
 
-Hay tres componentes requeridos para añadir búsquedas a tu página Gatsby:
+There are three required components for adding search to your Gatsby website:
 
-1.  índice
-2.  motor
+1.  index
+2.  engine
 3.  UI
 
-## Componentes de búsquedas
+## Site search components
 
-### índice de búsquedas
+### Search index
 
-El índice de búsquedas es una copia de tus datos almacenados en un formato amigable para búsquedas. El índice se utiliza para optimizar la búsqueda y el rendimiento cuando se ejecuta una petición de búsqueda. Sin un índice, cada búsqueda necesitaría escanear cada página en tu sitio web-lo que pronto se vuelve ineficiente.
+The search index is a copy of your data stored in a search-friendly format. An index is for optimizing speed and performance when executing a search query. Without an index, every search would need to scan every page in your site—which quickly becomes inefficient.
 
-### Motor de búsquedas
+### Search engine
 
-El motor de búsquedas recibe una petición de búsqueda, la ejecuta a través de los datos indexados y retorna cualquier documento coincidente.
+The search engine takes a search query, runs it through the search index, and returns any matching documents.
 
-### UI de búsquedas
+### Search UI
 
-El componente UI provee una interfaz al usuario, el cual le permite escribir peticiones de búsqueda y visualizar los resutados de cada petición.
+The UI component provides an interface to the user, which allows them to write search queries and view the results of each query.
 
-## Añadiendo búsquedas a tu sitio web
+## Adding search to your site
 
-Ahora que conoces los tres componentes requeridos, hay algunas formas de añadir búsquedas a tu sitio Gatsby.
+Now that you know the three required components, there are a few ways to approach adding search to your Gatsby-powered site.
 
-### Usa un motor de búsquedas de código abierto
+### Use an open source search engine
 
-Usar un motor de búsquedas de código abierto es siempre gratuíto y te permite habilitar las búsquedas sin conexión en tu sitio web. Ten en cuenta que necesitas tener cuidado con las búsquedas sin conexión porque el índice completo ha de ser llevado al cliente, que puede afectar el tamaño del paquete significativamente.
+Using an open source search engine is always free and allows you to enable offline search for your site. Note that you need to be careful with offline search because the entire search index has to be brought into the client, which can affect the bundle size significantly.
 
-Las librerías de código abierto como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) o [`js-search`](https://github.com/bvaughn/js-search) pueden ser usadas para habilitar las búsquedas en tu sitio web.
+Open source libraries like [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) or [`js-search`](https://github.com/bvaughn/js-search) can be used to enable search for your site.
 
-Para hacer eso necesitarás crear un índice de búsquedas cuando tu sitio web se construye. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), hay un plugin llamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que crea el indexado de búsquedas automáticamente.
+Doing so will require you to create a search index when your site is built. For [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), there is a plugin called [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) that creates a search index automatically.
 
-Para otras librerías, puedes usar una combinación de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) y [`sourceNodes`](/docs/node-apis/#sourceNodes) de la API node de Gatsby para crear el indexado de búsqueda y hacerlo disponible en GraphQL. Para más información de cómo hacerlo echa un vistazo al [código fuente de `gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
+For other libraries, you can use a combination of [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) and [`sourceNodes`](/docs/node-apis/#sourceNodes) from the Gatsby node API to create the search index and make it available in GraphQL. For more info on how to do this check out [`gatsby-plugin-elasticlunr-search`'s source code](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
 
-Otra opción es generar el índice al finalizar la construcción usando la API node [`onPostBuild`](/docs/node-apis/#onPostBuild). Esta aproximación la usa [`gatsby-plugin-lunr`](https://github.com/humanseelabs/gatsby-plugin-lunr) para crear un índice multilenguaje.
+Another option is to generate the search index at the end of the build using the [`onPostBuild`](/docs/node-apis/#onPostBuild) node API. This approach is used by [`gatsby-plugin-lunr`](https://github.com/humanseelabs/gatsby-plugin-lunr) to build a multilanguage index.
 
-Tras construir el índice de búsquedas e incluirlo en la capa de datos de Gatsby, necesitarás permitir al usuario buscar en tu sitio. Esto se hace habitualmente usando una entrada de texto para capturar la petición de búsqueda, y tras eso usar una de las librerías mencionadas arriba para obtener el/los documento(s) deseado(s)
+After building the search index and including it in Gatsby's data layer, you will need to allow the user to search your website. This is typically done by using a text input to capture the search query, then using one of the libraries mentioned above to retrieve the desired document(s).
 
-### Usar un motor de búsquedas basado en API
+### Use an API-based search engine
 
-Otra opción es usar un motor de búsquedas externo. Esta solución es mucho más escalable ya que los visitantes a tu sitio no tienen que descargar tu índice de búsquedas entero (que se vuelve muy pesado mientras tu sitio web crece) para buscar en tu sitio. La contrapartida es que necesitarás pagar por el alojamiento del motor de búsquedas o pagar por un servicio comercial de búsquedas.
+Another option is to use an external search engine. This solution is much more scalable as visitors to your site don't have to download your entire search index (which becomes very large as your site grows) in order to search your site. The trade-off is you'll need to pay for hosting the search engine or pay for a commercial search service.
 
-Hay muchos disponibles de código abierto que puedes alojar tu mismo y opciones de alojamiento comercial.
+There are many available both open source that you can host yourself and commercial hosted options.
 
-- [ElasticSearch](https://www.elastic.co/products/elasticsearch) — Código abierto y con alojamiento comercial disponible
-- [Solr](http://lucene.apache.org/solr/) — Código abierto y con alojamiento comercial disponible
-- [Algolia](https://www.algolia.com/) — Comercial
+- [ElasticSearch](https://www.elastic.co/products/elasticsearch) — OSS and has commercial hosting available
+- [Solr](http://lucene.apache.org/solr/) — OSS and has commercial hosting available
+- [Algolia](https://www.algolia.com/) — Commercial
 
-Si estás creando una página de documentación, puede usar la [búsqueda de documentos de Algolia](https://community.algolia.com/docsearch/). Creará automáticamente un índice de búsquedas del contenido de tus páginas.
+If you're building a documentation website you can use [Algolia's DocSearch feature](https://community.algolia.com/docsearch/). It will automatically create a search index from the content of your pages.
 
-Si tu página web no se considera documentación, necesitarás rellenar el índice de búsquedas en tiempo de construcción y subirlo usando [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia).
+If your website does not qualify as documentation, you need to collect the search index at build time and upload it using [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia).
 
-Cuando uses Algolia, ellos alojan el índice de búsquedas y el motor por ti. Tus peticiones serán enviadas a sus servidores, que responderán si hay resultados. Necesitarás implementar tu propia UI (interfaz de usuario); Algolia provee una [librería React](https://github.com/algolia/react-instantsearch) que podría tener componentes que podrías usar.
+When using Algolia, they host the search index and search engine for you. Your search queries will be sent to their servers which will respond with any results. You'll need to implement your own UI; Algolia provides a [React library](https://github.com/algolia/react-instantsearch) which may have components you'd like to use.
 
-Elasticsearch tiene varias librerías de componentes React para búsquedas, p.ej. https://github.com/appbaseio/reactivesearch
+Elasticsearch has several React component libraries for search e.g. https://github.com/appbaseio/reactivesearch
