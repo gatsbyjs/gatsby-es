@@ -4,78 +4,103 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-¡Bienvenido a la Parte 4 del tutorial! ¡Hemos llegado a la mitad! Esperamos que comiences a sentirte bastante cómodo. 😀
+Welcome to Part Four of the tutorial! Halfway through! Hope things are starting
+to feel pretty comfortable 😀
 
-## Resumen de la primera parte del tutorial
+## Recap of the first half of the tutorial
 
-Hasta ahora, has estado aprendiendo cómo usar React.js, lo poderoso que es ser capaz de crear tus _propios_ componentes para actuar como bloques personalizados para construir sitios web.
+So far, you've been learning how to use React.js—how powerful it is to be able to
+create your _own_ components to act as custom building blocks for websites.
 
-También has explorado componentes de estilo usando Módulos CSS.
+You’ve also explored styling components using CSS Modules.
 
-## ¿Qué encontrarás en este tutorial?
+## What's in this tutorial?
 
-En las próximas cuatro partes del tutorial (incluyendo esta), bucearás en la capa de datos de Gatsby, que es una catacterística muy poderosa de Gatsby que te permite construir con facilidad sitios desde Markdown, WordPress, CMSs sin cabeceras y otras fuentes de datos de todos los sabores.
+In the next four parts of the tutorial (including this one), you'll be diving into the Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
 
-**NOTA:** La capa de datos de Gatsby utiliza GraphQL. Para un tutorial en profundidad sobre GraphQL, recomendamos [Cómo GraphQL](https://www.howtographql.com/).
+**NOTE:** Gatsby’s data layer is powered by GraphQL. For an in-depth tutorial on
+GraphQL, we recommend [How to GraphQL](https://www.howtographql.com/).
 
-## Datos en Gatsby
+## Data in Gatsby
 
-Una página web tiene cuatro partes: HTML, CSS, JS, y datos. La primera parte del tutorial nos hemos centrado en los primeros tres. Ahora vamos a aprender a manejar datos en sitios de Gatsby.
+A website has four parts: HTML, CSS, JS, and data. The first half of the
+tutorial focused on the first three. Now let’s learn how to use data in Gatsby
+sites.
 
-**¿Qué son datos?**
+**What is data?**
 
-Una manera muy informática de responder sería que datos son cosas como `"strings"`,
+A very computer science-y answer would be: data is things like `"strings"`,
 integers (`42`), objects (`{ pizza: true }`), etc.
 
-Parael trabajo en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
+For the purpose of working in Gatsby, however, a more useful answer is
+"everything that lives outside a React component".
 
-Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchas sitios web, Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
+So far, you've been writing text and adding images _directly_ in components.
+Which is an _excellent_ way to build many websites. But, often you want to store
+data _outside_ components and then bring the data _into_ the component as
+needed.
 
-Si has estado creando un sitio web con WordPress (así otros contribuyentes tienen una interfaz bonita para añadir y mantener el contenido) y Gatsby, los _datos_ para el sitio (páginas y entradas) están en WordPress y tu _obtienes_ los datos, si son necesarios hacia tus componentes.
-Los datos también pueden residir en tipos de archivo como Markdown, CSV, etc. así como bases de datos y APIs de todo tipo.
+If you're building a site with WordPress (so other contributors
+have a nice interface for adding & maintaining content) and Gatsby, the _data_
+for the site (pages and posts) are in WordPress and you _pull_ that data, as
+needed, into your components.
 
-**La capa de datos de Gatsby te permite obtener los datos de esos (y cualquier otra fuente) directamente en tus componentes** en la forma y formato que quieras.
+Data can also live in file types like Markdown, CSV, etc. as well as databases
+and APIs of all sorts.
 
-## Usando Datos Desestructurados vs GraphQL
+**Gatsby's data layer lets you pull data from these (and any other source)
+directly into your components**—in the shape and form you want.
 
-### ¿Tengo que usar GraphQL y plugins de fuentes para llevar datos a sitios web Gatsby?
+## Using Unstructured Data vs GraphQL
 
-¡Para nada! Puedes usar la API del nodo `createPages` para llevar los datos desestructurados a las páginas Gatsby directamente, en lugar de a través de la capa de datos GraphQL. Esto es una gran elección para sitios web pequeños, mientras que GraphQL y los plugins de fuente pueden ayudar a ahorrar tiempo en sitios más complejos.
+### Do I have to use GraphQL and source plugins to pull data into Gatsby sites?
 
-¿Mira la guía [Usando Gatsby sin GraphQL](/docs/using-gatsby-without-graphql/) para aprender como mover datos en tu página Gatsby usando la API de node `createPages` y ¡para ver una pagina de ejemplo!
+Absolutely not! You can use the node `createPages` API to pull unstructured data into Gatsby pages directly, rather than through the GraphQL data layer. This is a great choice for small sites, while GraphQL and source plugins can help save time with more complex sites.
 
-### ¿Cuándo debo usar datos desestructurados frente a GraphQL?
+See the [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) guide to learn how to pull data into your Gatsby site using the node `createPages` API and to see an example site!
 
-Si estás creando un sitio web pequeño, una de las formas más eficientes de crearla es obtener los datos en forma desestructurada como hemos remarcado en esta guía, usando la API `createPages` y, si el sitio se hace más complejo más adelante, te toca crear sitios más complejos o te gustaría transformar tus datos, sigue estos pasos:
-1.Echa un vistazo a la [Librería de plugins](/plugins/) para ver si los plugins de fuente y o los plugins de transformaciones que te gustaría usar ya existen.
-2. Si no existen, lee la guía de [Autorización de plugins](/docs/creating-plugins/) ¡y considera crear el tuyo propio!
+### When do I use unstructured data vs GraphQL?
 
-### Cómo la capa de datos de Gatsby usa GraphQL para traer datos a los componentes
+If you're building a small site, one efficient way to build it is to pull in unstructured data as outlined in this guide, using `createPages` API, and then if the site becomes more complex later on, you move on to building more complex sites, or you'd like to transform your data, follow these steps:
 
-Hay muchas opciones para cargar datos en los componentes React. Uno de los más populares y poderosos es una tecnología llamada [GraphQL](http://graphql.org/).
+1.  Check out the [Plugin Library](/plugins/) to see if the source plugins and/or transformer plugins you'd like to use already exist
+2.  If they don't exist, read the [Plugin Authoring](/docs/creating-plugins/) guide and consider building your own!
 
-GraphQL fue creado por Facebook para ayudar a los ingenieros de producto a _traer_ los datos necesarios en los componentes.
+### How Gatsby's data layer uses GraphQL to pull data into components
 
-GraphQL es un **l**enguaje de **q**uerys (la parte  _QL_ de su nombre).Si estás familiarizado con SQL, funciona de una forma muy similar. Usando una sintaxis especial, describes los datos que quieres en tu componente y entonces te son proporcionados.
+There are many options for loading data into React components. One of the most
+popular and powerful of these is a technology called
+[GraphQL](http://graphql.org/).
 
-Gatsby usa GraphQL para habilitar componentes para declarar los datos que necesitan.
+GraphQL was invented at Facebook to help product engineers _pull_ needed data into
+components.
 
-## Crea un nievo sitio web de ejemplo
+GraphQL is a **q**uery **l**anguage (the _QL_ part of its name). If you're
+familiar with SQL, it works in a very similar way. Using a special syntax, you describe
+the data you want in your component and then that data is given
+to you.
 
-Crea otro nuevo sitio para esta parte del tutorial. Vas a crear un blog en Markdown llamado "Pandas Eating Lots". Está dedicado a enseñar las mejores fotos y videos de pandas comiendo montones de comida. Por el camino, comenzarás a conocer el soporte de Gatsby de Markdown y GraphQL.
+Gatsby uses GraphQL to enable components to declare the data they need.
 
-Abre una nueva ventana de terminal e introduce los siguientes comandos para crear una nueva página Gatsby en un directorio llamado `tutorial-part-four`. Tras esto, abre el nuevo directorio:
+## Create a new example site
+
+Create another new site for this part of the tutorial. You're going to build a Markdown blog called "Pandas Eating Lots". It's dedicated to showing off the best pictures and videos of pandas eating lots of food. Along the way, you'll be dipping your toes into GraphQL and Gatsby's Markdown support.
+
+Open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-four`. Then navigate to the new directory:
 
 ```shell
 gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-four
 ```
-Luego instala otras dependencias necesarias en la carpeta raíz del proyecto. Usarás el tema typográfico "Kirkham", y probarás una librería DSS-en-JS, ["Emotion"](https://emotion.sh/):
+
+Then install some other needed dependencies at the root of the project. You'll use the Typography theme
+"Kirkham", and you'll try out a CSS-in-JS library, ["Emotion"](https://emotion.sh/):
 
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
-Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de capa y dos componentes de página:
+
+Set up a site similar to what you ended with in [Part Three](/tutorial/part-three). This site will have a layout component and two page components:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -175,22 +200,21 @@ module.exports = {
 }
 ```
 
-Añade los archivos de arriba y ejecuta `gatsby develop`, como siempre, deberías ver lo siguiente:
+Add the above files and then run `gatsby develop`, per usual, and you should see the following:
 
-![inicio](start.png)
+![start](start.png)
 
-Tienes otro pequeño sitio con una capa y dos páginas.
+You have another small site with a layout and two pages.
 
-Ya puedes comenzar a lanzar peticiones 😋
+Now you can start querying 😋
 
-## Tu primera petición GraphQL
+## Your first GraphQL query
 
-Cuando creas páginas web, probablemente querrás reusar los bits comunes de datos -- como el _titulo del sitio_ por ejemplo. Mira la página 
-`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Eating Lots`) en ls dos componentes de capa (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
+When building sites, you'll probably want to reuse common bits of data -- like the _site title_ for example. Look at the `/about/` page. You'll notice that you have the site title (`Pandas Eating Lots`) in both the layout component (the site header) as well as in the `<h1 />` of the `about.js` page (the page header).
 
-Pero, ¿y si quieres cambiar el titulo del sitio en el futuro? Tienes que buscar el título en todos tus componentes y editar cada instancia. Esto es incómodo y genera errores, especialmente en sitios complejos y grandes. En lugar de ello, puedes guardar el título en un lugar y referenciar esa localización desde otros archivos; cambia el título en un lugar y Gatsby _cogerá_ tu título actualizado en los archivos que lo referencien.
+But what if you want to change the site title in the future? You'd have to search for the title across all your components and edit each instance. This is both cumbersome and error-prone, especially for larger, more complex sites. Instead, you can store the title in one location and reference that location from other files; change the title in a single place, and Gatsby will _pull_ your updated title into files that reference it.
 
-El lugar para esos bits comunes de datos es el objeto `siteMetadata` en el archivo  `gatsby-config.js`. Añade tu título del sitio al archivo `gatsby-config.js`:
+The place for these common bits of data is the `siteMetadata` object in the `gatsby-config.js` file. Add your site title to the `gatsby-config.js` file:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -211,11 +235,11 @@ module.exports = {
 }
 ```
 
-Reinicia el servidor de desarrollo.
+Restart the development server.
 
-### Usa una petición de página
+### Use a page query
 
-Ahora el título del sitio está disponible para ser solicitado; Añádelo al archivo `about.js` usando una [petición de página](/docs/page-query):
+Now the site title is available to be queried; Add it to the `about.js` file using a [page query](/docs/page-query):
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -246,11 +270,11 @@ export const query = graphql`
 // highlight-end
 ```
 
-Funciona!🎉
+It worked! 🎉
 
 ![Page title pulling from siteMetadata](site-metadata-title.png)
 
-La petición básica que obtiene el `title` en nuestro `about.js` cambia en:
+The basic GraphQL query that retrieves the `title` in our `about.js` changes above is:
 
 ```graphql:title=src/pages/about.js
 {
@@ -262,16 +286,16 @@ La petición básica que obtiene el `title` en nuestro `about.js` cambia en:
 }
 ```
 
-> 💡 En la [parte cinco](/tutorial/part-five/#introducing-graphiql), conocerás una herramienta que nos permite explorar interactivamente los datos disponibles a través de GraphQL, y ayudar a crear peticiones como las de arriba.
+> 💡 In [part five](/tutorial/part-five/#introducing-graphiql), you'll meet a tool that lets us interactively explore the data available through GraphQL, and help formulate queries like the one above.
 
-Las peticiones de página viven fuera de la definición del componente -- por convencion al final del archivo de componente de página -- y están disponibles únicamente para los componentes de página
+Page queries live outside of the component definition -- by convention at the end of a page component file -- and are only available on page components.
 
-### Usa una Petición Estática
+### Use a StaticQuery
 
-[StaticQuery](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
-Usemos su nueva versión de ganchos — [`useStaticQuery`](/docs/use-static-query/).
+[StaticQuery](/docs/static-query/) is a new API introduced in Gatsby v2 that allows non-page components (like our `layout.js` component), to retrieve data via GraphQL queries.
+Let's use its newly introduced hook version — [`useStaticQuery`](/docs/use-static-query/).
 
-Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el gancho `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
+Go ahead and make some changes to your `src/components/layout.js` file to use the `useStaticQuery` hook and a `{data.site.siteMetadata.title}` reference that uses this data. When you are done, your file will look like this:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -330,20 +354,26 @@ export default ({ children }) => {
 // highlight-end
 ```
 
-¡Otro éxito! 🎉
+Another success! 🎉
 
 ![Page title and layout title both pulling from siteMetadata](site-metadata-two-titles.png)
 
-¿Por qué usar dos peticiones distintas aquí? Esos ejemplos son introducciones rápidas a los tipos de peticiones, cómo son formateadas, y dónde pueden ser usadas. Por ahora, ten en cuenta que sólo páginas pueden hacer peticiones de página. Componentes que no son de página, como Layout, puede usar StaticQuery. La [Parte 7](/tutorial/part-seven/) del tutorial lo explica en profundidad.
+Why use two different queries here? These examples were quick introductions to
+the query types, how they are formatted, and where they can be used. For now,
+keep in mind that only pages can make page queries. Non-page components, such as
+Layout, can use StaticQuery. [Part 7](/tutorial/part-seven/) of the tutorial explains these in greater
+depth.
 
-Pero restauremos el título original.
+But let's restore the real title.
 
-Uno de los principios principales de Gatsby es que _los creadores necesitan una conexión inmediata a lo que están creando_ ([dicho por Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). En otras palabras, cuando haces algun cambio al código, deberías ver inmediatamente el efecto de ese cambio. Si manipulas la entrada de Gatsby verás el cambio en pantalla.
+One of the core principles of Gatsby is that _creators need an immediate connection to what they're creating_ ([hat tip to Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). In other words, when you make any change to code you should immediately see the effect of that change. You manipulate an input of Gatsby and you see the new output showing up on the screen.
 
-Así que casi en todos los sitios, los cambios que hagas se verán casi instantáneamente. Modifica el archivo `gatsby-config.js` de nuevo, esta vez cambiando el título `title` de nuevo a "Pandas Eating Lots". El cambio debería aparecer muy rápido en las páginas de tu aplicación.
+So almost everywhere, changes you make will immediately take effect. Edit the `gatsby-config.js` file again, this time changing the `title` back to "Pandas Eating Lots". The change should show up very quickly in your site pages.
 
 ![Both titles say Pandas Eating Lots](pandas-eating-lots-titles.png)
 
-## ¿Qué viene ahora?
+## What's coming next?
 
-Tras esto, aprenderás cómo obtener datos en tu Gatsby usando GraphQL con plugins de fuente en la [Parte Cinco](/tutorial/part-five/) del tutorial.
+Next, you'll be learning about how to pull data into your Gatsby site using
+GraphQL with source plugins in [part five](/tutorial/part-five/) of the
+tutorial.
