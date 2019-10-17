@@ -2,35 +2,35 @@
 title: Adding analytics
 ---
 
-## ¿Por qué usar métricas de análisis?
+## Why use analytics?
 
-Cuando tienes tu sitio web preparado querrás saber cuantos visitantes van a entrar a tu sitio junto con otras métricas como:
+Once you have your site live you will start wanting to get an idea of how many visitors are coming to your site along with other metrics such as:
 
-- ¿Qué páginas son más populares?
-- ¿De dónde proceden mis visitantes?
-- ¿Cuándo visitan mi página?
+- What pages are most popular?
+- Where do my visitors come from?
+- When do people visit my site?
 
-Google Analytics provee una forma de recoger estos datos y analizarlos, respondiendo las preguntas de arriba junto con muchas otras. La plataforma es gratuita hasta 10 millones de entradas por mes e id de rastreo (Tracking ID). Hay otras opciones de métricas de análisis -- mira la sección "Otros plugins de Gatsby de análisis" de este documento en busca de ideas.
+Google Analytics provides a way to collect this data and perform analytics on it answering the above questions among many others. The platform is free for 10 million hits per month per Tracking ID. There are other analytics options--see the "Other Gatsby analytics plugins" section at the bottom of this doc for ideas.
 
-## Configurando Google Analytics
+## Setting up Google Analytics
 
-El primer paso es crear una cuenta de Google Analytics. Puedes hacerlo [aquí](https://analytics.google.com/) con tu cuenta de Google.
+The first step is to set up a Google Analytics account. You can do that [here](https://analytics.google.com/) by signing in with your Google Account.
 
-Google también tiene una [página de preparación](https://support.google.com/analytics/answer/1008015?hl=en) para más referencias.
+Google also has a [get started page](https://support.google.com/analytics/answer/1008015?hl=en) for reference.
 
-Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Ésta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en si misma. Rellena el formulario con el nombre de tu sitio web y URL.
+Once you have an account, you will be prompted to set up a new property. This property will have a Tracking ID associated with it. In this case the property will be the website itself. Fill out the form with your website name and URL.
 
-El Tracking ID  es lo que se usa para identificar los datos con el tráfico de tu sitio web. Deberías usar un Tracking ID distinto para cada sitio web que estés monitorizando.
+The Tracking ID is what is used to identify data with your site's traffic. You would typically use a different Tracking ID for each website you are monitoring.
 
-Deberías tener un Tracking ID; apúntalo, ya que tu sitio web necesitará referenciarlo cuando mande las visualizaciones de página a Google Analytics. Debería estar en formato `UA-XXXXXXXXX-X`.
+You should now have a Tracking ID; take note of it, as your website will need to reference it when sending page views to Google Analytics. It should be in the format `UA-XXXXXXXXX-X`.
 
-Puedes encontrar el tracking ID posteriormente yendo a`Admin > Tracking Info > Tracking Code`.
+You can find this tracking ID later by going to `Admin > Tracking Info > Tracking Code`.
 
-## Usando `gatsby-plugin-google-analytics`
+## Using `gatsby-plugin-google-analytics`
 
-Ahora, es el momento de configurar Gatsby para enviar las visualizaciones de página a tu cuenta de Google Analytics.
+Now, it's time to configure Gatsby to send page views to your Google Analytics account.
 
-Vamos a usar `gatsby-plugin-google-analytics`. Para otras opciones de métricas de análisis (incluyendo gtag.js de Google Analytics y Google Tag Manager), visita [otros plugins de métricas de análisis de Gatsby](#other-gatsby-analytics-plugins).
+We are going to use `gatsby-plugin-google-analytics`. For other analytics options (including Google Analytics gtag.js and Google Tag Manager), check [other Gatsby analytics plugins](#other-gatsby-analytics-plugins).
 
 ```shell
 npm install --save gatsby-plugin-google-analytics
@@ -50,15 +50,15 @@ module.exports = {
 }
 ```
 
-> Nota: Lee más sobre [gatsby-config.js](/docs/gatsby-config/)
+> Note: Read more about [gatsby-config.js](/docs/gatsby-config/)
 
-La documentación completa para el plugin puede encontrarse [aquí](/packages/gatsby-plugin-google-analytics/).
+Full documentation for the plugin can be found [here](/packages/gatsby-plugin-google-analytics/).
 
-Hay más opciones de configuración extra--tanto con el plugin de Gatsby como en tu cuenta de Google Analytics--así que puedes personalizar cosas para satisfacer las necesidades de tu página web.
+There are a number of extra configuration options--both with the Gatsby plugin and also in your Google Analytics account--so you can tailor things to meet your website's needs.
 
-¡Cuando esté configurado puedes desplegar tu sitio web para probar! Si navegas a la página de inicio de Google Analytics, deberías ver un tablero con diferentes estadísticas.
+Once this is configured you can deploy your site to test! If you navigate to the homepage of Google Analytics, you should see a dashboard with different statistics.
 
-## Otros plugins de métricas de análisis de Gatsby
+## Other Gatsby analytics plugins
 
 - [Google Tag Manager](/packages/gatsby-plugin-google-tagmanager/)
 - [Google Analytics gtag.js](/packages/gatsby-plugin-gtag/)
