@@ -28,4 +28,4 @@ Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa relle
 
 Para transformar el stub en un documento viviente, quita la etiqueta `issue` del frontmatter (los metadatos de Markdown) del stub, y reemplaza el texto modelo con tu código y prosa bella. Guarda el archivo, sube un commit a GitHub, abre un pull request, y busca feedback. Aprende más en nuestra página sobre [contribuciones a los docs](/contributing/docs-contributions/).
 
-Si te gustaría ver los stubs disponibles, visita la [Lista de stubs](/contributing/stub-list/).
+Si quieres ver los stubs disponibles, visita la [Lista de stubs](/contributing/stub-list/).
