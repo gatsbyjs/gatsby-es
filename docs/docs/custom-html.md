@@ -1,43 +1,43 @@
 ---
-title: Customizing html.js
+title: Personalizar html.js
 ---
 
-Gatsby uses a React component to server render the `<head>` and other parts of
-the HTML outside of the core Gatsby application. Gatsby also sets a default value for the `<noscript>` tag there.
+Gatsby utiliza un componente React para que el servidor renderize el `<head>` y otras partes
+HTML fuera de la aplicación principal de Gatsby. Gatsby también establece un valor predeterminado para la etiqueta `<noscript>` allí.
 
-Most sites should use the default `html.js` shipped with Gatsby. But if you need
-to customize your site's html.js, copy the default one into your source
-tree by running:
+La mayoría de los sitios deberían usar el `html.js` predeterminado enviado con Gatsby. Pero si necesitas 
+personalizar el html.js de tu sitio, copia el archivo predeterminado en tu 
+carpeta de código fuente ejecutando:
 
 ```shell
 cp .cache/default-html.js src/html.js
 ```
 
-And then make modifications as needed.
+Y luego haz modificaciones según sea necesario.
 
-If you need to insert custom html into the `<head>` or `<footer>` of each page on your site, you can use `html.js`.
+Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página de tu sitio, puedes usar `html.js`.
 
-### Required props
+### *props* necesarios
 
-Note: the various props that are rendered into pages _are_ required e.g.
-`headComponents`, `preBodyComponents`, `body`, and `postBodyComponents`.
+Nota: los diversos *props* que se muestran en las páginas son obligatorios, p. ej.
+`headComponents`,`preBodyComponents`, `body` y `postBodyComponents`.
 
-### Inserting html into the `<head>`
+### Insertar html en el `<head>`
 
-Anything you render in the `html.js` component will _not_ be made "live" in
-the client like other components. If you want to dynamically update your
-`<head>` we recommend using
+Todo lo que renderizas en el componente `html.js` no se hará "de inmediato" en
+el cliente como en otros componentes. Si deseas actualizar dinámicamente tu
+`<head>` recomendamos usar
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
-### Inserting html into the `<footer>`
+### Insertar html en el `<footer>`
 
-If you want to insert custom html into the footer, html.js is the preferred way of doing this. If you're writing a plugin, consider using the `setPostBodyComponents` prop in the [Gatsby SSR API](/docs/ssr-apis/).
+Si desea insertar html personalizado en el pie de página, html.js es la forma preferida de hacerlo. Si estás escribiendo un plugin, considera usar el prop `setPostBodyComponents` en el [Gatsby SSR API](/docs/ssr-apis/).
 
-### Target container
+### Contenedor de destino
 
-If you see this error: `Uncaught Error: _registerComponent(...): Target container is not a DOM element.` it means your `html.js` is missing the required
-"target container". Inside your `<body>` you must have a div with an id of
-`___gatsby` like:
+Si ves este error: `Uncaught Error: _registerComponent(...): Target container is not a DOM element.` Significa que a tu `html.js` le falta el "contenedor de destino" requerido. 
+Dentro de tu `body` debes tener un div con una id de
+`___gatsby` como:
 
 ```jsx:title=src/html.js
 <div
@@ -47,9 +47,9 @@ If you see this error: `Uncaught Error: _registerComponent(...): Target containe
 />
 ```
 
-### Adding custom JavaScript
+### Agregar JavaScript personalizado
 
-You can add custom JavaScript to your HTML document by using React's [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) attribute.
+Puedes agregar JavaScript personalizado a tu documento HTML utilizando el atributo React [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml).
 
 ```jsx:title=src/html.js
 <script

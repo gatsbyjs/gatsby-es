@@ -121,6 +121,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | DOM                    | DOM                                   |
 | framework              | _framework_                           |
 | function component     | componente de función                 |
+| hardcoded              | hardcodeado                           |
 | hook                   | _hook_                                |
 | key                    | _key_                                 |
 | lazy initialization    | inicialización diferida               |
@@ -139,3 +140,10 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | Scope (sustantivo)     | Ambito                                |
 | Scope (verbo)          | Aislar                                |
 | Open Source            | Código abierto                        |
+| script                 | script                                |
+| swag                   | premio                                |
+| push notifications     | Notificaciones push                   |
+| workspace              | _workspace_                           |
+| monorepo               | _monorepo_                            |
+| fork                   | _fork_                                |
+| file                   | archivo                               |
