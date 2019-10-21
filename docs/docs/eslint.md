@@ -2,7 +2,7 @@
 título: Usando ESLint
 ---
 
-ESLint es una utilidad de linting JavaScript de código abierto. El linting de código es un tipo de análisis estático que se utiliza con frecuencia para encontrar patrones problemáticos. Hay linters de código para la mayor parte de lenguajes de programación, y los compiladores a veces incorporan linting en el proceso de compilación.
+ESLint es una utilidad de linting para JavaScript de código abierto. El linting de código es un tipo de análisis estático que se utiliza con frecuencia para encontrar patrones problemáticos. Hay linters de código para la mayor parte de lenguajes de programación, y los compiladores a veces incorporan linting en el proceso de compilación.
 
 JavaScript, siendo un lenguaje dinámico y de tipado débil, es especialmente propenso a errores por parte de los desarrolladores. Sin el beneficio de un proceso de compilación, JavaScript típicamente se ejecuta para encontrar errores de sintáxis y otros errores. Herramientas de linting como ESLint permiten a los desarrolladores descubrir problemas con su código JavaScript sin ejecutarlo.
 
@@ -14,11 +14,11 @@ Replicaremos (principalmente) la [configuración que viene incluida en Gatsby] p
 
 ```shell
 
-# Primero instale las dependencias necesarias de ESLint
+# Primero instala las dependencias necesarias de ESLint
 npm install --save-dev eslint-config-react-app
 ```
 
-Ahora que tenemos nuestros paquetes instalados, crear un nuevo archivo en la raíz del sitio denominado `.eslintrc.js` usando el siguiente comando.
+Ahora que tenemos nuestros paquetes instalados, crea un nuevo archivo en la raíz del sitio llamado `.eslintrc.js` usando el comando a continuación.
 
 ```shell
 # Crear un archivo de configuración para ESLint
@@ -27,7 +27,7 @@ touch .eslintrc.js
 
 ### Configuración de ESLint
 
-Copie el siguiente fragmento al recién creado `.eslintrc.js` archivo. A continuación, agregue ajustes preestablecidos, plugins y reglas adicionales como desee.
+Copia el siguiente fragmento al recién archivo creado `.eslintrc.js`. Ahora puedes agregar ajustes predeterminados, plugins y reglas como quieras.
 
 ```js:title=.eslintrc.js
 module.exports = {
