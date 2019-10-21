@@ -1,45 +1,45 @@
 ---
-title: Programmatically create pages from data
+title: Crear páginas programáticamente a partir de datos
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), and [part 6](/tutorial/part-six/) before continuing here.
+> Este tutorial es parte de una serie sobre la capa de datos de Gatsby. Asegúrate de haber visto [parte 4](/tutorial/part-four/), [parte 5](/tutorial/part-five/) y [part 6](/tutorial/part-six/) antes de continuar aquí.
 
-## What's in this tutorial?
+## ¿Qué hay en este tutorial?
 
-In the previous tutorial, you created a nice index page that queries markdown
-files and produces a list of blog post titles and excerpts. But you don't want to just see excerpts, you want actual pages for your
-markdown files.
+En el tutorial anterior, creaste una buena página index que consulta archivos
+markdown y produce una lista de títulos de publicaciones de blog y extractos. Pero no solo quieres ver extractos, deseas páginas reales
+para tus archivos markdown.
 
-You could continue to create pages by placing React components in `src/pages`. However, you'll
-now learn how to _programmatically_ create pages from _data_. Gatsby is _not_
-limited to making pages from files like many static site generators. Gatsby lets
-you use GraphQL to query your _data_ and _map_ the query results to _pages_—all at build
-time. This is a really powerful idea. You'll be exploring its implications and
-ways to use it for the remainder of this part of the tutorial.
+Puedes continuar creando páginas a través de componentes React en `src/pages`. Sin embargo, ahora
+ahora aprenderás cómo crear páginas a partir de _datos_ mediante _programación_. Gatsby _no_ se
+limita a crear páginas a partir de archivos como muchos generadores de sitios estáticos. Gatsby te
+permite utilizar GraphQL para consultar tus _datos_ y _mapear_ los resultados de la consulta a _páginas_,
+todo en tiempo de compilación. Esta es una idea realmente poderosa. Explorarás sus implicaciones y
+formas de usarlo durante el resto de esta parte del tutorial.
 
-Let's get started.
+Comencemos.
 
-## Creating slugs for pages
+## Crear slugs para páginas
 
-Creating new pages has two steps:
+Crear nuevas páginas tiene dos pasos:
 
-1.  Generate the "path" or "slug" for the page.
-2.  Create the page.
+1. Generar la "ruta" o "slug" para la página.
+2. Crear la página.
 
-_**Note**: Often data sources will directly provide a slug or pathname for content — when working with one of those systems (e.g. a CMS), you don't need to create the slugs yourself as you do with markdown files._
+_**Note**: A menudo las fuentes de datos proporcionarán directamente un slug o nombre de ruta para el contenido — cuando trabaje con uno de esos sistemas (por ejemplo, un CMS), no necesita crear slugs usted mismo como lo hace con los archivos markdown._
 
-To create your markdown pages, you'll learn to use two Gatsby APIs:
-[`onCreateNode`](/docs/node-apis/#onCreateNode) and
-[`createPages`](/docs/node-apis/#createPages). These are two workhorse APIs
-you'll see used in many sites and plugins.
+Para crear tus páginas markdown, aprenderás a utilizar dos API de Gatsby:
+[`onCreateNode`](/docs/node-apis/#onCreateNode) y
+[`createPages`](/docs/node-apis/#createPages). Estas son dos API caballos de batalla
+que verá utilizadas en muchos sitios y plugins.
 
-We do our best to make Gatsby APIs simple to implement. To implement an API, you export a function
-with the name of the API from `gatsby-node.js`.
+Hacemos todo lo posible para que las API de Gatsby sean simples de implementar. Para implementar un API, exporta una función
+con el nombre del API desde `gatsby-node.js`.
 
-So, here's where you'll do that. In the root of your site, create a file named
-`gatsby-node.js`. Then add the following.
+Entonces, aquí es donde harás esto. En la raíz de tu sitio, crea un archivo llamado
+`gatsby-node.js`. Luego agrega lo siguiente.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
@@ -47,15 +47,15 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-This `onCreateNode` function will be called by Gatsby whenever a new node is created (or updated).
+Gatsby llamará a esta función `onCreateNode` cada vez que se cree (o actualice) un nuevo nodo.
 
-Stop and restart the development server. As you do, you'll see quite a few newly
-created nodes get logged to the terminal console.
+Detén y reinicia el servidor de desarrollo. Mientras lo haces, verás que algunos
+nodos recién creados se registran en la consola de la terminal.
 
-Use this API to add the slugs for your markdown pages to `MarkdownRemark`
-nodes.
+Use esta API para agregar los slugs de tus páginas markdown a los
+nodos `MarkdownRemark`.
 
-Change your function so it now only logs `MarkdownRemark` nodes.
+Cambia tu función para que ahora solo registre nodos `MarkdownRemark`.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
@@ -67,11 +67,11 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-You want to use each markdown file name to create the page slug. So
-`pandas-and-bananas.md` will become `/pandas-and-bananas/`. But how do you get
-the file name from the `MarkdownRemark` node? To get it, you need to _traverse_
-the "node graph" to its _parent_ `File` node, as `File` nodes contain data you
-need about files on disk. To do that, modify your function again:
+Si deseas utilizar cada nombre de archivo markdown para crear el slug de la página. Entonces
+`pandas-and-bananas.md` será `/pandas-and-bananas/`. Pero, ¿cómo
+se obtiene el nombre del nodo `MarkdownRemark` del archivo markdown? Para obtenerlo, debes _atravesar_
+el "nodo del grafo" hasta su nodo _padre_ `File`, ya que los nodos `File` contienen los datos que
+necesita sobre los archivos en el disco. Para hacer eso, modifica tu función nuevamente:
 
 ```javascript:title=gatsby-node.js
 // highlight-next-line
@@ -85,14 +85,14 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-After restarting your development server, you should see the relative paths for your two markdown
-files print to the terminal screen.
+Después reinicia tu servidor de desarrollo, deberías ver las rutas relativas para que tus
+dos archivos markdown se impriman en la pantalla del terminal.
 
 ![markdown-relative-path](markdown-relative-path.png)
 
-Now you'll have to create slugs. As the logic for creating slugs from file names can get
-tricky, the `gatsby-source-filesystem` plugin ships with a function for creating
-slugs. Let's use that.
+Ahora tendrás que crear slugs. Como la lógica para crear slugs a partir de nombres de archivos
+puede ser complicada, el plugin `gatsby-source-filesystem` se envía con una función para crear
+slugs. Vamos a usar eso.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`) // highlight-line
@@ -104,9 +104,9 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-The function handles finding the parent `File` node along with creating the
-slug. Run the development server again and you should see logged to the terminal
-two slugs, one for each markdown file.
+La función maneja la búsqueda del nodo padre `File` junto con la creación de
+slug. Ejecuta el servidor de desarrollo nuevamente y deberías ver registrado en la terminal
+dos slugs, uno para cada archivo markdown.
 
 Now you can add your new slugs directly onto the `MarkdownRemark` nodes. This is
 powerful, as any data you add to nodes is available to query later with GraphQL.
