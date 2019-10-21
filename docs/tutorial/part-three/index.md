@@ -1,5 +1,5 @@
 ---
-title: Creating nested layout components
+title: Creando componentes layout anidados
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
