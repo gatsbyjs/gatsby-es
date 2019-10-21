@@ -1,35 +1,35 @@
 ---
-title: "Adding Images to a WordPress Site"
+title: "Agregar imágenes a un sitio WordPress"
 ---
 
-### What this tutorial covers:
+### ¿Qué cubre este tutorial?
 
-In this tutorial, you will install the several image plugins and components in order to pull image data from a WordPress account into your Gatsby site and render that data. This [Gatsby + WordPress demo site](https://using-wordpress.gatsbyjs.org/sample-post-1) shows you a sample of what you’re going to be building in this tutorial, although in this tutorial you’ll just focus on adding images.
+En este tutorial, instalarás los diversos plugins y componentes de imagen para extraer los datos de imágenes desde una cuenta de WordPress hacia tu sitio con Gatsby y renderizar dichos datos. Este [demo con Gatsby + WordPress](https://using-wordpress.gatsbyjs.org/sample-post-1) te muestra un ejemplo de lo que estarás construyendo en este tutorial, aunque en este tutorial solo te enfocarás en agregar imágenes.
 
-### Why go through this tutorial?
+### ¿Por qué seguir este tutorial?
 
-Images are one of the most beautiful and striking ways to communicate to people, and are a key part of creating an effective and positive user experience; at the same time, high quality images can load slowly and cause text boxes to jump around, both of which make it difficult for people to be patient with visiting your website.
+Las imágenes son una de las formas más hermosas y sorprendentes de comunicarse con las personas, y son una parte clave para crear una experiencia de usuario efectiva y positiva; al mismo tiempo, las imágenes de alta calidad pueden cargar lento y causar que las cajas de texto se muevan, lo que dificulta que las personas sean pacientes cuando visitan tu sitio web.
 
-The Gatsby Way™ of creating images describes a set of best practices that help you optimize performance and responsiveness of images so that you can get the benefits of awesome images that don't slow down your site. This [Gatsbygram site](https://gatsbygram.gatsbyjs.org/) (an Instagram feed fed through Gatsby) shows off the svg image tracing effect. Here’s an [image processing demo site](https://image-processing.gatsbyjs.org/) exploring how to have fun with images in your Gatsby site.
+La Gatsby Way™ de crear imágenes describe un conjunto de buenas prácticas que te ayudan a optimizar el rendimiento y la adaptabilidad de las imágenes para que puedas obtener los beneficios de imágenes increíbles que no hagan lento tu sitio. Este [sitio Gatsbygram](https://gatsbygram.gatsbyjs.org/) (un feed de Instagram alimentado a través de Gatsby) demuestra el efecto de trazado de imágenes svg. Aquí hay un [sitio de demostración de procesamiento de imágenes](https://image-processing.gatsbyjs.org/) que explora como divertirse con imágenes en tu sitio Gatsby.
 
-### Installing the `gatsby-source-wordpress` plugin
+### Instalación del plugin `gatsby-source-wordpress`
 
-First you’ll need to install the `gatsby-source-wordpress` plugin that has images ready for you to pull into your site.
+Primero necesitarás instalar el plugin `gatsby-source-wordpress` que tiene imágenes listas para que las uses en tu sitio.
 
-Create a new Gatsby project and change directories into the new project you just created:
+Crea un nuevo proyecto de Gatsby y muévete al directorio del nuevo proyecto que acabas de crear:
 
 ```shell
 gatsby new images-tutorial-site
 cd images-tutorial-site
 ```
 
-Install the `gatsby-source-wordpress` plugin. For extra reading on the plugin’s features and examples of GraphQL queries not included in this tutorial, see the [`gatsby-source-wordpress` plugin’s README file](/packages/gatsby-source-wordpress/?=wordpress).
+Instala el plugin `gatsby-source-wordpress`. Para obtener más información de las características del plugin y ejemplos de consultas GraphQL que no están incluidas en este tutorial, mira el [archivo README del plugin `gatsby-source-wordpress`](/packages/gatsby-source-wordpress/?=wordpress).
 
 ```shell
 npm install --save gatsby-source-wordpress
 ```
 
-Add the `gatsby-source-wordpress` plugin to `gatsby-config.js` using the following code, which you can also find in the [demo site’s source code](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-config.js).
+Agrega el plugin `gatsby-source-wordpress` a `gatsby-config.js` usando el siguiente código, el cual también lo puedes encontrar en el [código fuente del sitio de ejemplo](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-config.js).
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -39,27 +39,27 @@ module.exports = {
   plugins: [
     // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
     /*
-     * Gatsby's data processing layer begins with “source”
-     * plugins. Here the site sources its data from WordPress.
+     * La capa de procesamiento de datos de Gatsby empieza con los plugins
+     * de “source”. Aquí el sitio obtiene sus datos desde WordPress.
      */
     // highlight-start
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         /*
-         * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
-         * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
+         * La URL base del sitio de WordPress sin la barra diagonal y el protocolo. Esto es requerido.
+         * Ejemplo : 'dev-gatbsyjswp.pantheonsite.io' o 'www.example-site.com'
          */
         baseUrl: `dev-gatbsyjswp.pantheonsite.io`,
-        // The protocol. This can be http or https.
+        // El protocolo. Este puede ser http o https.
         protocol: `http`,
-        // Indicates whether the site is hosted on wordpress.com.
-        // If false, then the assumption is made that the site is self hosted.
-        // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
-        // If your site is hosted on wordpress.org, then set this to false.
+        // Indica si el sitio está alojado en wordpress.com.
+        // Si es falso, entonces se asume que el sitio es auto alojado.
+        // Si es verdadero, entonces el plugin obtendrá su contenido en wordpress.com usando la API REST JSON V2.
+        // Si tu sitio está alojado en wordpress.org, configúralo como falso.
         hostingWPCOM: false,
-        // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
-        // This feature is untested for sites hosted on WordPress.com
+        // Si useACF es verdadero, el plugin fuente intentará importar el contenido del plugin ACF de WordPress.
+        // Esta característica no se ha probado para sitios alojados en WordPress.com
         useACF: true,
       },
     },
@@ -68,17 +68,17 @@ module.exports = {
 }
 ```
 
-### Installing plugins to help with images
+### Instalación de plugins para ayuda con las imágenes
 
-Now you will need to add the `gatsby-transformer-sharp` and `gatsby-plugin-sharp` plugins to `gatsby-config.js`, add a GraphQL query to a page, add an image to the page, and then view the result in the browser.
+Ahora necesitarás agregar los plugins `gatsby-transformer-sharp` y `gatsby-plugin-sharp` a `gatsby-config.js`, agregar una consulta GraphQL a una página, agregar una imagen a la página, y luego visualizar el resultado en el navegador.
 
-First, you’ll need to install a few plugins and their dependencies:
+Primero, necesitarás instalar algunos plugins y sus dependencias:
 
 ```shell
 npm install --save gatsby-transformer-sharp gatsby-plugin-sharp gatsby-image
 ```
 
-Place these plugins in your `gatsby-config.js` like this:
+Coloca estos plugins en tu `gatsby-config.js` de la siguiente forma:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -88,26 +88,26 @@ module.exports = {
   plugins: [
     // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
     /*
-     * Gatsby's data processing layer begins with “source”
-     * plugins. Here the site sources its data from WordPress.
+     * La capa de procesamiento de datos de Gatsby empieza con los plugins
+     * de “source”. Aquí el sitio obtiene sus datos desde WordPress.
      */
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         /*
-         * The base URL of the WordPress site without the trailing slash and the protocol. This is required.
-         * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
+         * La URL base del sitio de WordPress sin la barra diagonal y el protocolo. Esto es requerido.
+         * Ejemplo : 'dev-gatbsyjswp.pantheonsite.io' o 'www.example-site.com'
          */
         baseUrl: `dev-gatbsyjswp.pantheonsite.io`,
-        // The protocol. This can be http or https.
+        // El protocolo. Este puede ser http o https.
         protocol: `http`,
-        // Indicates whether the site is hosted on wordpress.com.
-        // If false, then the assumption is made that the site is self hosted.
-        // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
-        // If your site is hosted on wordpress.org, then set this to false.
+        // Indica si el sitio está alojado en wordpress.com.
+        // Si es falso, entonces se asume que el sitio es auto alojado.
+        // Si es verdadero, entonces el plugin obtendrá su contenido en wordpress.com usando la API REST JSON V2.
+        // Si tu sitio está alojado en wordpress.org, configúralo como falso.
         hostingWPCOM: false,
-        // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
-        // This feature is untested for sites hosted on WordPress.com
+        // Si useACF es verdadero, el plugin fuente intentará importar el contenido del plugin ACF de WordPress.
+        // Esta característica no se ha probado para sitios alojados en WordPress.com
         useACF: true,
       },
     },
@@ -119,19 +119,19 @@ module.exports = {
 }
 ```
 
-### Creating GraphQL queries that pull in images from WordPress
+### Creación de consultas GraphQL que extraen imágenes de WordPress
 
-Now you are ready to create a GraphQL query to pull in some images from the WordPress site.
+Ahora estás listo para crear una consulta GraphQL para extraer algunas imágenes desde el sitio de WordPress.
 
-Run:
+Ejecuta:
 
 ```shell
 npm run develop
 ```
 
-Open localhost:8000 and localhost:8000/\_\_\_graphql.
+Abre localhost:8000 y localhost:8000/\_\_\_graphql.
 
-Here’s an example of creating specific widths and heights for images:
+Aquí hay un ejemplo de creación de anchos y alturas específicas para imágenes:
 
 ```graphql
 {
@@ -142,15 +142,15 @@ Here’s an example of creating specific widths and heights for images:
           photo {
             localFile {
               childImageSharp {
-                # Try editing the "width" and "height" values.
+                # Intenta editar los valores de "width" y "height".
                 resolutions(width: 200, height: 200) {
-                  # In the GraphQL explorer, use field names
-                  # like "src". In your site's code, remove them
-                  # and use the fragments provided by Gatsby.
+                  # En el explorador de GraphQL, usa los nombres de los campos
+                  # como "src". En el código de tu sitio, bórralos
+                  # y usa los fragmentos proporcionados por Gatsby.
                   src
 
-                  # This fragment won't work in the GraphQL
-                  # explorer, but you can use it in your site.
+                  # Este fragmento no funcionará en el explorador
+                  # GraphQL, pero lo puedes usar en tu sitio.
                   # ...GatsbyImageSharpResolutions_withWebp
                 }
               }
@@ -163,7 +163,7 @@ Here’s an example of creating specific widths and heights for images:
 }
 ```
 
-Here’s an example query for generating different sizes of an image:
+Aquí hay una consulta de ejemplo para generar diferentes tamaños de una imagen:
 
 ```graphql
 {
@@ -174,15 +174,15 @@ Here’s an example query for generating different sizes of an image:
           photo {
             localFile {
               childImageSharp {
-                # Try editing the "maxWidth" value to generate resized images.
+                # Intenta editar el valor de "maxWidth" para generar imágenes redimensionadas.
                 fluid(maxWidth: 500) {
-                  # In the GraphQL explorer, use field names
-                  # like "src". In your site's code, remove them
-                  # and use the fragments provided by Gatsby.
+                  # En el explorador de GraphQL, usa los nombres de los campos
+                  # como "src". En el código de tu sitio, bórralos
+                  # y usa los fragmentos proporcionados por Gatsby.
                   src
 
-                  # This fragment won't work in the GraphQL
-                  # explorer, but you can use it in your site
+                  # Este fragmento no funcionará en el explorador
+                  # GraphQL, pero lo puedes usar en tu sitio.
                   # ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -195,11 +195,11 @@ Here’s an example query for generating different sizes of an image:
 }
 ```
 
-In either case, you can add traced SVG support by adding `_tracedSVG` to the end of each fragment. _Note this won’t work in the GraphQL explorer._
+En cualquier caso, puedes agregar soporte para trazado SVG adicionando `_tracedSVG` al final de cada fragmento. _Note esto no funcionará en el explorador GraphQL._
 
-### Rendering the images to `index.js`
+### Renderización de las imágenes en `index.js`
 
-Here is what your `index.js` should look like with the query added:
+Así es como tu `index.js` debería verse con la consulta agregada:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -236,7 +236,7 @@ export const query = graphql`
             photo {
               localFile {
                 childImageSharp {
-                  # edit the maxWidth value to generate resized images
+                  # edita el valor de maxWidth para generar imágenes redimensionadas.
                   resolutions(width: 500, height: 500) {
                     ...GatsbyImageSharpResolutions_withWebp_tracedSVG
                   }
@@ -251,15 +251,15 @@ export const query = graphql`
 `
 ```
 
-Your demo site should look something like this:
+Tu sitio de demostración debería verse así:
 
-![Demo site example](./images/wordpress-image-tutorial.gif)
+![Sitio de ejemplo](./images/wordpress-image-tutorial.gif)
 
-### Testing your image loading speed and effects
+### Probar la velocidad de carga y efectos de tu imagen
 
-It is useful and can be fun to purposefully slow down your browser to see image effects animate more slowly.
+Es útil y puede ser divertido enlentecer tu navegador a propósito para ver los efectos de la imagen animarse más lento.
 
-Open your browser console and change the network speed to something slower. In Chrome, you can click on the “network” tab, then on the drop down arrow next to the word “Online.” Then click “Slow 3G.” Now, reload your page and watch the blur-up and SVG effects in action. The network tab also shows statistics on when each image loaded and how much time it took them to load.
+Abre la consola de tu navegador y cambia la velocidad de la red a algo más lento. En Chrome, puedes hacer clic en la pestaña “network”, luego en la flecha desplegable junto a la palabra “Online.” Luego haz clic en “Slow 3G.” Ahora, recarga tu página y mira el difuminado y los efectos SVG en acción. La pestaña de network también muestra estadísticas sobre cuando se cargó cada imagen y cuanto tiempo tomó cargarla.
 
 ![Network](./images/network.png)
 
