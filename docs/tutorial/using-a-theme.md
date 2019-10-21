@@ -27,8 +27,8 @@ gatsby develop
 
 El starter del tema para blogs viene con una imagen gris sólida para el avatar. Añade tu propio avatar seleccionando la imagen que quieras, y sobreescribe el fichero que se encuentra en `/content/assets/avatar.png`.
 
-## Actualizas los metadatos de tu sitio web
-Personaliza la información en tu propio sitio mediante el remplazo de los valores de los atributos de `siteMetadata` en el fichero `gatsby-config.js`.
+## Actualiza los metadatos de tu sitio web
+Personaliza la información en tu propio sitio mediante el reemplazo de los valores de los atributos de `siteMetadata` en el fichero `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -41,7 +41,7 @@ module.exports = {
   // Personaliza la información en tu propio sitio:
   {/* highlight-start */}
   siteMetadata: {
-    title: "My Blog",
+    title: "Mi Blog",
     author: "Amberley Romo",
     description: "A collection of my thoughts and writings.",
     siteUrl: "https://amberley.blog/",
@@ -60,9 +60,9 @@ module.exports = {
 }
 ```
 
-## Remplaza el contenido de la biografía
+## Reemplaza el contenido de la biografía
 
-Cuando se usan temas de Gatsby, puedes tomar ventaja de algo llamado component shadowing.
+Cuando se usan temas de Gatsby puedes aprovechar algo llamado _component shadowing_.
 
 El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
 
@@ -173,6 +173,6 @@ En este fichero, estamos tomando el color por defecto del tema (importado como `
 
 Para ver qué otros colores del tema puedes personalizar, revisa el fichero `colors.js` en el tema oficial para blogs (`gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors.js`)
 
-## Empaquetado
+## Conclusiones
 
 Esto fue una introducción paso a paso para usar un tema de Gastby a través de un ejemplo específico. Ten en cuenta que temas diferentes serán construidos de forma diferente, para permitir diversas opciones de personalización. Para más información, revisa la [documentación sobre temas de Gatsby](/docs/themes/).
