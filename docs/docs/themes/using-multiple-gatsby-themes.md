@@ -1,16 +1,16 @@
 ---
-título: Usando de múltiples temas de Gatsby
+título: Usar múltiples temas de Gatsby
 ---
 
-Gatsby temas están destinados a ser componible. Esto significa que puede instalar temas múltiples el uno junto al otro.
+Los temas Gatsby están destinados a ser combinados. Esto significa que puedes instalar varios temas el uno junto al otro.
 
-La `gatsby-starter-theme` compone dos temas de Gatsby: `gatsby-theme-blog` y `gatsby-theme-notes`
+El `gatsby-starter-theme` se compone de dos temas de Gatsby: `gatsby-theme-blog` y `gatsby-theme-notes`
 
 ```shell
 gatsby new my-notes-blog https://github.com/gatsbyjs/gatsby-starter-theme
 ```
 
-El inicio incluye ambos paquetes de tema (`gatsby-theme-blog` y `gatsby-theme-notes`) en el archivo `gatsby-config.js` del starter.
+El starter incluye ambos paquetes de tema (`gatsby-theme-blog` y `gatsby-theme-notes`) en el archivo `gatsby-config.js` del starter.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -32,9 +32,9 @@ module.exports = {
 }
 ```
 
-En la configuración predeterminada, se servirá un blog desde la ruta raíz (`/`), y el contenido de las notas se servirá desde `/notes`.
+Con la configuración predeterminada, se servirá un blog desde la ruta root (`/`), y el contenido de las notas se servirá desde `/notes`.
 
-Ejecute `gatsby develop` para iniciar un servidor de desarrollo y ver si es el sitio:
+Ejecuta `gatsby develop` para iniciar un servidor de desarrollo y ver el sitio:
 
 ![The homepage of the site created by gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
 
@@ -42,4 +42,4 @@ Ejecute `gatsby develop` para iniciar un servidor de desarrollo y ver si es el s
 
 ## El tutorial
 
-Para ver un tutorial paso a paso, consulte el tutorial ["Uso de varios temas juntos"](/tutorial/using-multiple-themes-together).
+Para ver un tutorial paso a paso, consulta el tutorial ["Usar varios temas juntos"](/tutorial/using-multiple-themes-together).
