@@ -5,8 +5,7 @@ title: Configuración de tu entorno de desarrollo local
 Esta página describe cómo configurar para que contribuyas al core de Gatsby y su ecosistema. Para obtener instrucciones sobre cómo trabajar con la documentación, visita la página [contribuciones a la documentación](/contributing/docs-contributions/). Para instrucciones de configuración del blog y sitio web, visita la página [blog y contribuciones al sitio web](/contributing/blog-and-website-contributions/).
 
 > Gatsby usa un patrón de "monorepo" para manejar sus dependencias y confía en
-> [Lerna](https://lerna.js.org/) y en [Yarn](https://yarnpkg.com/en/) para configurar el
-repositorio para cambios tanto de desarrollo como en la documentación de la infraestructura.
+> [Lerna](https://lerna.js.org/) y en [Yarn](https://yarnpkg.com/en/) para configurar el repositorio para cambios tanto de desarrollo como en la documentación de la infraestructura.
 
 ## Usando Yarn
 
@@ -20,6 +19,7 @@ Yarn es un gestor de paquetes para tu código, similar a [NPM](https://www.npmjs
 
 ## Instrucciones de instalación del repositorio de Gatsby
 
+- Asegúrate de tener instalada la última versión **LTS** de Node (>= 10.16.0). `node --version`
 - [Instala](https://yarnpkg.com/en/docs/install) el gestor de dependencias Yarn.
 - Asegúrate que tienes la última versión de Yarn instalado (>= 1.0.2). `yarn --version`
 - Haz fork del [repositorio oficial](https://github.com/gatsbyjs/gatsby).
@@ -34,12 +34,11 @@ Yarn es un gestor de paquetes para tu código, similar a [NPM](https://www.npmjs
 - Instala [gatsby-dev-cli](https://www.npmjs.com/package/gatsby-dev-cli) globalmente: `yarn global add gatsby-dev-cli`
 - Ejecuta `yarn install` en cada uno de los sitios que estás probando.
 - Para cada uno de tus sitios de prueba de Gatsby, ejecuta el comando `gatsby-dev` dentro del directorio del sitio de prueba para copiar
-  los archivos construidos desde tu copia clonada de Gatsby. Observaras tus cambios
+  los archivos construidos desde tu copia clonada de Gatsby. Observarás tus cambios
   a los paquetes de Gatsby y copiarlos en el sitio. Para instrucciones más detalladas
-  mira el [README de gatsby-dev-cli](https://www.npmjs.com/package/gatsby-dev-cli) y
-  échale un vistazo al [video de la demo del gatsby-dev-cli](https://www.youtube.com/watch?v=D0SwX1MSuas).
+  mira el [README de gatsby-dev-cli](https://www.npmjs.com/package/gatsby-dev-cli) y échale un vistazo al [video de la demo del gatsby-dev-cli](https://www.youtube.com/watch?v=D0SwX1MSuas).
   - Nota: si planeas modificar directamente los paquetes que se exportan desde `gatsby`, debes añadirlos manualmente a tus sitios de prueba para que figuren en el `package.json` (p.ej. `yarn add gatsby-link`), o especificarlos explícitamente con `gatsby-dev --packages gatsby-link`).
-- Añade pruebas y código para tus cambios.
+- Añade tests y código para tus cambios.
 - Una vez que haya terminado, asegúrate de que todas las pruebas todavía pasan: `yarn test`.
   - Para ejecutar pruebas para un solo paquete puedes ejecutar: `yarn jest <package-name>`.
   - Para ejecutar un único fichero de prueba puedes ejecutar: `yarn jest <file-path>`.
