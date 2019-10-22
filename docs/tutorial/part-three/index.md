@@ -8,11 +8,11 @@ disableTableOfContents: true
 
 ## ¿Qué hay en este tutorial?
 
-En esta parte aprenderás acerca de los plugins de gatsby y a cómo crear componentes "layout".
+En esta parte aprenderás acerca de los plugins de gatsby y a cómo crear componentes "_layout_".
 
 Los plugins de Gatsby son paquetes de JavaScript que ayudan a añadir funcionalidades a un sitio web de Gatsby. Gatsby está diseñado para ser extensible, lo que significa que sus plugins son capaces de extender y modificar todo lo que hace.
 
-Los componentes layout son para secciones de tu sitio web que quieras compartir entre varias páginas. Por ejemplo, los sitios web tendrán comúnmente un componente _layout_ que tendrá una cabecera y un pie de página. Otra cosa común para añadir a tus componentes _layouts_ son una barra lateral y/o un menú de navegación. En esta página, por ejemplo, la cabecera en la parte de arriba es parte del componente _layout_ de gatsbyjs.org.
+Los componentes _layout_ son para secciones de tu sitio web que quieras compartir entre varias páginas. Por ejemplo, los sitios web tendrán comúnmente un componente _layout_ que tendrá una cabecera y un pie de página. Otra cosa común para añadir a tus componentes _layouts_ son una barra lateral y/o un menú de navegación. En esta página, por ejemplo, la cabecera en la parte de arriba es parte del componente _layout_ de gatsbyjs.org.
 
 Sumerjámonos en la parte tres.
 
@@ -133,9 +133,9 @@ export default () => (
 
 Genial. ¡Has instalado y configurado tu primer plugin de Gatsby!
 
-## Creando componentes layout
+## Creando componentes _layout_
 
-Ahora vamos a aprender acerca de los componentes layout. Para prepararnos para esta parte, añade unas pocas páginas nuevas a tu proyecto: una página "acerca de" y una página de contacto.
+Ahora vamos a aprender acerca de los componentes _layout_. Para prepararnos para esta parte, añade unas pocas páginas nuevas a tu proyecto: una página "acerca de" y una página de contacto.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -161,15 +161,15 @@ export default () => (
 )
 ```
 
-Veamos como luce nuestra página de "acerca de":
+Veamos cómo luce nuestra página de "acerca de":
 
 ![about-uncentered](about-uncentered.png)
 
 Mmm. Sería mejor si el contenido de las dos nuevas páginas estuviera centrado como en la página principal. Y sería mejor aún tener algún tipo de navegación global para que sea más fácil para los visitantes encontrar y visitar cada una de las subpáginas.
 
-Abordarás estos cambios creando tu primer componente layout.
+Abordarás estos cambios creando tu primer componente _layout_.
 
-### ✋ Crea tu primer componente layout
+### ✋ Crea tu primer componente _layout_
 
 1. Crea un nuevo directorio en `src/components`.
 
@@ -185,7 +185,7 @@ export default ({ children }) => (
 )
 ```
 
-3. Importa este nuevo componente layout en tu componente página `src/pages/index.js`:
+3. Importa este nuevo componente _layout_ en tu componente página `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -203,13 +203,13 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-¡Genial, el componente layout está funcionando! El contenido de tu página de inicio sigue centrada.
+¡Genial, el componente _layout_ está funcionando! El contenido de tu página de inicio sigue centrada.
 
 Pero intenta navegar a `/about/` o a `/contact/`. El contenido en esas páginas no estará centrado.
 
-4. Importa el componente layout en `about.js` y en `contact.js` (como has hecho con `index.js` en los pasos anteriores).
+4. Importa el componente _layout_ en `about.js` y en `contact.js` (como has hecho con `index.js` en los pasos anteriores).
 
-¡El contenido de tus tres páginas está centrado gracias a este solo componente layout compartido!
+¡El contenido de tus tres páginas está centrado gracias a este solo componente _layout_ compartido!
 
 ### ✋ Añade un título al sitio web
 
@@ -230,9 +230,9 @@ Si vas a alguna de tus tres páginas, verás el mismo título añadido, por ejem
 
 ![with-title](with-title.png)
 
-### ✋ Añade enñaces de navegación entre las páginas
+### ✋ Añade enlaces de navegación entre las páginas
 
-1. Copia lo siguiente en tu fichero del componente layout:
+1. Copia lo siguiente en tu fichero del componente _layout_:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -269,7 +269,7 @@ export default ({ children }) => (
 
 ¡Y ahí lo tienes! Un sitio web con tres páginas y una navegación global básica.
 
-_Reto:_ Con tus nuevos poderes de "componente layout", ¡intenta añadir cabeceras, pies de páginas, navegaciones globales, barras laterales, etc. a tus sitios web Gatsby!
+_Reto:_ Con tus nuevos poderes de "componente _layout_", ¡intenta añadir cabeceras, pies de páginas, navegaciones globales, barras laterales, etc. a tus sitios web Gatsby!
 
 ## ¿Qué viene luego?
 
