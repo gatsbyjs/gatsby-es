@@ -45,8 +45,3 @@ Yarn es un gestor de paquetes para tu código, similar a [NPM](https://www.npmjs
   - Para ejecutar un único fichero de prueba puedes ejecutar: `yarn jest <file-path>`.
 - Commit y push a tu fork.
 - Crea un pull request desde tu branch.
-
-
-
-
-
