@@ -176,7 +176,7 @@ Ahora la portada debería lucir así:
 
 ![frontpage](frontpage.png)
 
-But your one blog post looks a bit lonely. So let's add another one at
+Pero tu única publicación de blog parece un poco solitaria. Así que agreguemos otra en
 `src/pages/pandas-and-bananas.md`
 
 ```markdown:title=src/pages/pandas-and-bananas.md
