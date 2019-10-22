@@ -57,7 +57,7 @@ Luego agrégalo a `gatsby-config.js` como de costumbre:
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
+    title: `Los pandas comen mucho`,
   },
   plugins: [
     {
@@ -123,7 +123,7 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          Pandas increíbles comiendo cosas
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
