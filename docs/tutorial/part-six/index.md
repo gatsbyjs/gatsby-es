@@ -226,4 +226,4 @@ Gatsby _no_ está limitado a hacer páginas a partir de archivos como muchos gen
 de sitios estáticos. Gatsby te permite utilizar GraphQL para consultar tus _datos_ y _mapear_
 los resultados de la consulta a _páginas_, todo en tiempo de compilación.
 Esta es una idea realmente poderosa. Explorarás tus implicaciones y formas de usarlo en el siguiente tutorial,
-donde aprenderás cómo [crear mediante programación a partir de datos](/tutorial/part-seven/).
+donde aprenderás cómo [crear páginas mediante programación a partir de datos](/tutorial/part-seven/).
