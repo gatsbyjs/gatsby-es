@@ -220,8 +220,8 @@ Para obtener más documentación sobre nuestros operadores de consulta, explora 
 sus archivos markdown y producir una lista de títulos y extractos de publicaciones de blog.
 Pero no solo quiere ver extractos, desea páginas reales para sus archivos markdown.
 
-Puede continuar creando páginas colocando componentes React en `src/pages`. Sin embargo,
-enseguida aprenderás cómo crear páginas _mediante programación_ a partir de los _datos_.
+Puedes continuar creando páginas colocando componentes React en `src/pages`. Sin embargo,
+enseguida aprenderás cómo crear páginas _mediante programación_ a partir de _datos_.
 Gatsby _no_ está limitado a hacer páginas a partir de archivos como muchos generadores
 de sitios estáticos. Gatsby te permite utilizar GraphQL para consultar tus _datos_ y _mapear_
 los resultados de la consulta a _páginas_, todo en tiempo de compilación.
