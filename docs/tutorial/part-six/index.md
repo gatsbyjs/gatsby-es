@@ -29,13 +29,13 @@ GraphQL.
 
 ```markdown:title=src/pages/sweet-pandas-eating-sweets.md
 ---
-title: "Sweet Pandas Eating Sweets"
+title: "Pandas Dulces Comiendo Dulces"
 date: "2017-08-10"
 ---
 
-Pandas are really sweet.
+Los pandas son realmente dulces.
 
-Here's a video of a panda eating sweets.
+Aquí hay un video de un panda comiendo dulces.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
 ```
@@ -178,12 +178,12 @@ Pero tu única publicación de blog parece un poco solitaria. Así que agreguemo
 
 ```markdown:title=src/pages/pandas-and-bananas.md
 ---
-title: "Pandas and Bananas"
+title: "Pandas y Plátanos"
 date: "2017-08-21"
 ---
 
-Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
-seem to really enjoy bananas!
+¿Los pandas comen plátanos? ¡Mira este breve video que muestra que sí!
+¡los pandas realmente disfrutan los plátanos!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
 ```
