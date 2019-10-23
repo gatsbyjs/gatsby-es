@@ -18,11 +18,14 @@ También has explorado componentes de estilo usando Módulos CSS.
 
 En las próximas cuatro partes del tutorial (incluyendo esta), bucearás en la capa de datos de Gatsby, que es una catacterística muy poderosa de Gatsby que te permite construir con facilidad sitios desde Markdown, WordPress, CMSs sin cabeceras y otras fuentes de datos de todos los sabores.
 
-**NOTA:** La capa de datos de Gatsby utiliza GraphQL. Para un tutorial en profundidad sobre GraphQL, recomendamos [Cómo usar GraphQL](https://www.howtographql.com/).
+**NOTA:** La capa de datos de Gatsby utiliza GraphQL. Para un tutorial en profundidad sobre 
+GraphQL, recomendamos [Cómo usar GraphQL](https://www.howtographql.com/).
 
 ## Datos en Gatsby
 
-Una página web tiene cuatro partes: HTML, CSS, JS, y datos. En la primera mitad del tutorial nos hemos centrado en las primeras tres. Ahora vamos a aprender a usar datos en sitios de Gatsby.
+Una página web tiene cuatro partes: HTML, CSS, JS, y datos. 
+En la primera mitad del tutorial nos hemos centrado en las primeras tres. 
+Ahora vamos a aprender a usar datos en sitios de Gatsby.
 
 **¿Qué son datos?**
 
@@ -33,38 +36,38 @@ Para el propósito en Gatsby, por otra parte, una forma más útil de responder 
 
 Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchos sitios web. Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
 
-Si has estado creando un sitio web con WordPress (así otros contribuyentes tienen una interfaz bonita para añadir y mantener el contenido) y Gatsby, los _datos_ para el sitio (páginas y entradas) están en WordPress y tu _obtienes_ los datos, si son necesarios hacia tus componentes.
-Los datos también pueden residir en tipos de archivo como Markdown, CSV, etc. así como bases de datos y APIs de todo tipo.
+Si has estado creando un sitio web con WordPress (así otros contribuidores tienen una interfaz bonita para añadir y mantener el contenido) y Gatsby, los _datos_ para el sitio (páginas y entradas) están en WordPress y _obtienes_ los datos, si son necesarios hacia tus componentes.
+Los datos también pueden residir en tipos de archivo como Markdown, CSV, etc. Así como bases de datos y APIs de todo tipo.
 
 **La capa de datos de Gatsby te permite obtener los datos de esos (y cualquier otra fuente) directamente en tus componentes** en la forma y formato que quieras.
 
-## Usando Datos Desestructurados vs GraphQL
+## Usando datos desestructurados vs GraphQL
 
 ### ¿Tengo que usar GraphQL y plugins de fuentes para llevar datos a sitios web Gatsby?
 
-¡Para nada! Puedes usar la API del nodo `createPages` para llevar los datos desestructurados a las páginas Gatsby directamente, en lugar de a través de la capa de datos GraphQL. Esto es una gran elección para sitios web pequeños, mientras que GraphQL y los plugins de fuente pueden ayudar a ahorrar tiempo en sitios más complejos.
+¡Para nada! Puedes usar la API de node `createPages` para llevar los datos desestructurados a las páginas Gatsby directamente, en lugar de a través de la capa de datos GraphQL. Esto es una gran elección para sitios web pequeños, mientras que GraphQL y los plugins de fuente pueden ayudar a ahorrar tiempo en sitios más complejos.
 
-¿Mira la guía [Usando Gatsby sin GraphQL](/docs/using-gatsby-without-graphql/) para aprender como mover datos en tu página Gatsby usando la API de node `createPages` y ¡para ver una pagina de ejemplo!
+Mira la guía [Usando Gatsby sin GraphQL](/docs/using-gatsby-without-graphql/) para aprender como mover datos en tu página Gatsby usando la API de node `createPages` y ¡para ver una pagina de ejemplo!
 
 ### ¿Cuándo debo usar datos desestructurados frente a GraphQL?
 
 Si estás creando un sitio web pequeño, una de las formas más eficientes de crearla es obtener los datos en forma desestructurada como hemos remarcado en esta guía, usando la API `createPages` y, si el sitio se hace más complejo más adelante, te toca crear sitios más complejos o te gustaría transformar tus datos, sigue estos pasos:
-1.Echa un vistazo a la [Librería de plugins](/plugins/) para ver si los plugins de fuente y o los plugins de transformaciones que te gustaría usar ya existen.
-2. Si no existen, lee la guía de [Autorización de plugins](/docs/creating-plugins/) ¡y considera crear el tuyo propio!
+1. Echa un vistazo a la [Librería de plugins](/plugins/) para ver si los plugins de fuente y o los plugins de transformaciones que te gustaría usar ya existen.
+2. Si no existen, lee la guía de [Autoría de plugins](/docs/creating-plugins/) ¡y considera crear el tuyo propio!
 
 ### Cómo la capa de datos de Gatsby usa GraphQL para traer datos a los componentes
 
-Hay muchas opciones para cargar datos en los componentes React. Uno de los más populares y poderosos es una tecnología llamada [GraphQL](http://graphql.org/).
+Hay muchas opciones para cargar datos en los componentes React. Una de las más populares y poderosas es una tecnología llamada [GraphQL](http://graphql.org/).
 
 GraphQL fue creado por Facebook para ayudar a los ingenieros de producto a _traer_ los datos necesarios en los componentes.
 
-GraphQL es un **l**enguaje de **q**uerys (la parte  _QL_ de su nombre).Si estás familiarizado con SQL, funciona de una forma muy similar. Usando una sintaxis especial, describes los datos que quieres en tu componente y entonces te son proporcionados.
+GraphQL es un **l**enguaje de **q**uerys (la parte  _QL_ de su nombre). Si estás familiarizado con SQL, funciona de una forma muy similar. Usando una sintaxis especial, describes los datos que quieres en tu componente y entonces te son proporcionados.
 
 Gatsby usa GraphQL para habilitar componentes para declarar los datos que necesitan.
 
-## Crea un nievo sitio web de ejemplo
+## Crea un nuevo sitio web de ejemplo
 
-Crea otro nuevo sitio para esta parte del tutorial. Vas a crear un blog en Markdown llamado "Pandas Comiendo a montones". Está dedicado a enseñar las mejores fotos y videos de pandas comiendo montones de comida. Por el camino, comenzarás a conocer el soporte de Gatsby de Markdown y GraphQL.
+Crea otro nuevo sitio para esta parte del tutorial. Vas a crear un blog en Markdown llamado "Pandas comiendo a montones". Está dedicado a enseñar las mejores fotos y videos de pandas comiendo montones de comida. Por el camino, comenzarás a conocer la compatibilidad de Gatsby de Markdown y GraphQL.
 
 Abre una nueva ventana de terminal e introduce los siguientes comandos para crear una nueva página Gatsby en un directorio llamado `tutorial-part-four`. Tras esto, abre el nuevo directorio:
 
@@ -129,7 +132,7 @@ export default () => (
     <div>
       <img
         src="https://2.bp.blogspot.com/-BMP2l6Hwvp4/TiAxeGx4CTI/AAAAAAAAD_M/XlC_mY3SoEw/s1600/panda-group-eating-bamboo.jpg"
-        alt="Un grupo de Pandas comiendo bambu"
+        alt="Un grupo de Pandas comiendo bambú"
       />
     </div>
   </Layout>
@@ -142,7 +145,7 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>About Pandas Comiendo a montones</h1>
+    <h1>Sobre Pandas Comiendo a montones</h1>
     <p>
       Somos la única página en tu pc dedicada a mostrar las mejores fotos y vídeos de pandas comiendo montones de comida.
     </p>
@@ -180,9 +183,9 @@ Añade los archivos de arriba y ejecuta `gatsby develop`, como siempre, debería
 
 ![inicio](start.png)
 
-Tienes otro pequeño sitio con una capa y dos páginas.
+Tienes otro pequeño sitio con un layout y dos páginas.
 
-Ya puedes comenzar a lanzar peticiones 😋
+Ya puedes comenzar a realizar peticiones 😋
 
 ## Tu primera petición GraphQL
 
@@ -264,11 +267,11 @@ La petición básica que obtiene el `title` en nuestro `about.js` cambia en:
 
 > 💡 En la [parte cinco](/tutorial/part-five/#introducing-graphiql), conocerás una herramienta que nos permite explorar interactivamente los datos disponibles a través de GraphQL, y ayudar a crear peticiones como las de arriba.
 
-Las peticiones de página viven fuera de la definición del componente -- por convencion al final del archivo de componente de página -- y están disponibles únicamente para los componentes de página
+Las peticiones de página viven fuera de la definición del componente -- por convención al final del archivo de componente de página -- y están disponibles únicamente para los componentes de página
 
 ### Usa una Petición Estática
 
-[StaticQuery](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
+[Petición Estática](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite a los componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
 Usemos su nueva versión con Hooks — [`useStaticQuery`](/docs/use-static-query/).
 
 Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el Hook `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
