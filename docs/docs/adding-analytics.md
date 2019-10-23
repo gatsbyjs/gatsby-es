@@ -66,6 +66,6 @@ Hay más opciones de configuración extra--tanto con el plugin de Gatsby como en
 - [Amplitude Analytics](/packages/gatsby-plugin-amplitude-analytics)
 - [Fathom](/packages/gatsby-plugin-fathom/)
 - [Baidu](/packages/gatsby-plugin-baidu-analytics/)
-- [Matomo (formerly Piwik)](/packages/gatsby-plugin-matomo/)
+- [Matomo (antiguamente Piwik)](/packages/gatsby-plugin-matomo/)
 - [Simple Analytics](/packages/gatsby-plugin-simple-analytics)
 - [Parse.ly Analytics](/packages/gatsby-plugin-parsely-analytics/)
