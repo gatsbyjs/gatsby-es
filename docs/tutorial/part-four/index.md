@@ -100,7 +100,7 @@ y probarás una librería CSS-en-JS, ["Emotion"](https://emotion.sh/):
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá con componente de capa y dos componentes de página:
+Configura un sitio similar al que completaste en la [Parte Tres](/tutorial/part-three). Este sitio tendrá un componente _layout_ y dos componentes de página:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -272,7 +272,7 @@ export const query = graphql`
 
 ¡Funciona!🎉
 
-![Page title pulling from siteMetadata](site-metadata-title.png)
+![Título de página obtenidos desde los metadatos del sitio web](site-metadata-title.png)
 
 La petición básica que obtiene el `title` en nuestro `about.js` cambia en:
 
