@@ -6,7 +6,7 @@ title: Creando un Sitemap (Mapa del Sitio)
 
 Un [sitemap en XML](https://support.google.com/webmasters/answer/156184?hl=es) o también llamado "mapa del sitio" lista páginas importantes de un sitio web, asegurando así que los motores de búsqueda (como Google) puedan encontrarlas y rastrearlas. De hecho, un sitemap ayuda a los motores de búsqueda a entender la estructura de tu sitio web.
 
-Imagínatelo como un mapa de tu sitio web. Éste muestra cuáles son todas las páginas de tu sitio web.
+Imagínatelo como un mapa de tu sitio web. Este muestra cuáles son todas las páginas de tu sitio web.
 
 ## Usando [gatsby-plugin-sitemap](/packages/gatsby-plugin-sitemap/)
 
@@ -30,7 +30,7 @@ module.exports = {
 
 **Nota:** La propiedad siteUrl debe ser definida y no dejarse vacía.
 
-Luego ejecuta un build (`npm run build`) ya que la generación del sitemap sucederá solamente en compilaciones de producción. ¡Esto es todo lo que se requiere para tener un sitemap funcional con Gatsby! Por defecto, la ruta del sitemap generado es /sitemap.xml e incluirá todas las páginas de tu sitio, pero obviamente, el plugin expone opciones para configurar esta funcionalidad por defecto.
+Luego ejecuta un build (`npm run build`) ya que la generación del sitemap sucederá solamente en compilaciones de producción. ¡Esto es todo lo que se requiere para tener un sitemap funcional con Gatsby! Por defecto, la ruta del sitemap generado es /sitemap.xml e incluirá todas las páginas de tu sitio, pero obviamente, el plugin ofrece opciones para configurar esta funcionalidad por defecto.
 
 ### Modificaciones adicionales
 
