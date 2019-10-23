@@ -1,5 +1,5 @@
 ---
-title: Crear páginas programáticamente a partir de datos
+title: Crear páginas mediante programación a partir de datos
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
