@@ -1,5 +1,5 @@
 ---
-title: Data in Gatsby
+title: Datos en Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
