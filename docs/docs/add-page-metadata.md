@@ -18,7 +18,7 @@ El plugin [react helmet](/packages/gatsby-plugin-react-helmet/) para Gatsby prop
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2. Agrega el complemento al array `plugins` en tu archivo` gatsby-config.js`.
+2. Agrega el plugin al array `plugins` en tu archivo` gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
