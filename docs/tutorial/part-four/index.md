@@ -4,11 +4,13 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-¡Bienvenido a la Parte 4 del tutorial! ¡Hemos llegado a la mitad! Esperamos que comiences a sentirte bastante cómodo. 😀
+¡Bienvenido a la Parte 4 del tutorial! ¡Hemos llegado a la mitad! Esperamos que comiences 
+a sentirte bastante cómodo. 😀
 
 ## Resumen de la primera parte del tutorial
 
-Hasta ahora, has estado aprendiendo cómo usar React.js, lo poderoso que es ser capaz de crear tus _propios_ componentes para actuar como bloques personalizados para construir sitios web.
+Hasta ahora, has estado aprendiendo cómo usar React.js, lo poderoso que es ser capaz de 
+crear tus _propios_ componentes para actuar como bloques personalizados para construir sitios web.
 
 También has explorado componentes de estilo usando Módulos CSS.
 
@@ -16,20 +18,20 @@ También has explorado componentes de estilo usando Módulos CSS.
 
 En las próximas cuatro partes del tutorial (incluyendo esta), bucearás en la capa de datos de Gatsby, que es una catacterística muy poderosa de Gatsby que te permite construir con facilidad sitios desde Markdown, WordPress, CMSs sin cabeceras y otras fuentes de datos de todos los sabores.
 
-**NOTA:** La capa de datos de Gatsby utiliza GraphQL. Para un tutorial en profundidad sobre GraphQL, recomendamos [Cómo GraphQL](https://www.howtographql.com/).
+**NOTA:** La capa de datos de Gatsby utiliza GraphQL. Para un tutorial en profundidad sobre GraphQL, recomendamos [Cómo usar GraphQL](https://www.howtographql.com/).
 
 ## Datos en Gatsby
 
-Una página web tiene cuatro partes: HTML, CSS, JS, y datos. La primera parte del tutorial nos hemos centrado en los primeros tres. Ahora vamos a aprender a manejar datos en sitios de Gatsby.
+Una página web tiene cuatro partes: HTML, CSS, JS, y datos. En la primera mitad del tutorial nos hemos centrado en las primeras tres. Ahora vamos a aprender a usar datos en sitios de Gatsby.
 
 **¿Qué son datos?**
 
 Una manera muy informática de responder sería que datos son cosas como `"strings"`,
-integers (`42`), objects (`{ pizza: true }`), etc.
+enteros (`42`), objetos (`{ pizza: true }`), etc.
 
-Para el trabajo en Gatsby, por otra parte, una forma de responder más útil es: "todo lo que reside fuera de un componente React"
+Para el propósito en Gatsby, por otra parte, una forma más útil de responder es: "todo lo que reside fuera de un componente React"
 
-Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchas sitios web, Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
+Hasta ahora, has estado codificando texto y añadiendo imágenes _directamente_ en componentes. Lo que es una manera _excelente_ de construir muchos sitios web. Pero, a menudo quieres almacenar datos en componentes _externos_ y llevar los datos _dentro_ del componente cuando es necesario.
 
 Si has estado creando un sitio web con WordPress (así otros contribuyentes tienen una interfaz bonita para añadir y mantener el contenido) y Gatsby, los _datos_ para el sitio (páginas y entradas) están en WordPress y tu _obtienes_ los datos, si son necesarios hacia tus componentes.
 Los datos también pueden residir en tipos de archivo como Markdown, CSV, etc. así como bases de datos y APIs de todo tipo.
@@ -70,7 +72,7 @@ Abre una nueva ventana de terminal e introduce los siguientes comandos para crea
 gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-four
 ```
-Luego instala otras dependencias necesarias en la carpeta raíz del proyecto. Usarás el tema typográfico "Kirkham", y probarás una librería DSS-en-JS, ["Emotion"](https://emotion.sh/):
+Luego instala otras dependencias necesarias en la carpeta raíz del proyecto. Usarás el tema tipográfico "Kirkham", y probarás una librería CSS-en-JS, ["Emotion"](https://emotion.sh/):
 
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
@@ -142,7 +144,7 @@ export default () => (
   <Layout>
     <h1>About Pandas Comiendo a montones</h1>
     <p>
-      Somos la única página en tu pc dedicado a mostrar los mejores fotos y videos de pandas comiendo montones de comida.
+      Somos la única página en tu pc dedicada a mostrar las mejores fotos y vídeos de pandas comiendo montones de comida.
     </p>
   </Layout>
 )
@@ -185,9 +187,9 @@ Ya puedes comenzar a lanzar peticiones 😋
 ## Tu primera petición GraphQL
 
 Cuando creas páginas web, probablemente querrás reusar los bits comunes de datos -- como el _titulo del sitio_ por ejemplo. Mira la página 
-`/about/`. Te darás cuenta que tienes el titulo de la pagina (`Pandas Comiendo a montones`) en ls dos componentes de capa (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
+`/about/`. Te darás cuenta que tienes el titulo de la página (`Pandas Comiendo a montones`) en los dos componentes _layout_ (la cabecera del sitio) y en el `<h1 />` de la página `about.js` (cabecera).
 
-Pero, ¿y si quieres cambiar el titulo del sitio en el futuro? Tienes que buscar el título en todos tus componentes y editar cada instancia. Esto es incómodo y genera errores, especialmente en sitios complejos y grandes. En lugar de ello, puedes guardar el título en un lugar y referenciar esa localización desde otros archivos; cambia el título en un lugar y Gatsby _cogerá_ tu título actualizado en los archivos que lo referencien.
+Pero, ¿y si quieres cambiar el título del sitio en el futuro? Tienes que buscar el título en todos tus componentes y editar cada instancia. Esto es incómodo y genera errores, especialmente en sitios complejos y grandes. En lugar de ello, puedes guardar el título en un lugar y referenciar esa localización desde otros archivos; cambia el título en un lugar y Gatsby _cogerá_ tu título actualizado en los archivos que lo referencien.
 
 El lugar para esos bits comunes de datos es el objeto `siteMetadata` en el archivo  `gatsby-config.js`. Añade tu título del sitio al archivo `gatsby-config.js`:
 
@@ -226,7 +228,7 @@ export default ({ data }) => (
   <Layout>
     <h1>About {data.site.siteMetadata.title}</h1> {/* highlight-line */}
     <p>
-      Somos la única página en tu pc dedicado a mostrar los mejores fotos y videos de pandas comiendo montones de comida.
+      Somos la única página en tu pc dedicada a mostrar las mejores fotos y vídeos de pandas comiendo montones de comida.
     </p>
   </Layout>
 )
@@ -244,7 +246,7 @@ export const query = graphql`
 // highlight-end
 ```
 
-Funciona!🎉
+¡Funciona!🎉
 
 ![Page title pulling from siteMetadata](site-metadata-title.png)
 
@@ -267,9 +269,9 @@ Las peticiones de página viven fuera de la definición del componente -- por co
 ### Usa una Petición Estática
 
 [StaticQuery](/docs/static-query/) es una nueva API introducida en la versión 2 de Gatsby que permite componentes que no son de página (como nuestro componente `layout.js`), obtener datos via peticiones GraphQL.
-Usemos su nueva versión de ganchos — [`useStaticQuery`](/docs/use-static-query/).
+Usemos su nueva versión con Hooks — [`useStaticQuery`](/docs/use-static-query/).
 
-Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el gancho `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
+Adelante, haz algunos cambios a tu archivo `src/components/layout.js` para usar el Hook `useStaticQuery` y una referencia  `{data.site.siteMetadata.title}`que usa esos datos. Cuando hayas terminado, tu archivo se parecerá a esto:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -330,7 +332,7 @@ export default ({ children }) => {
 
 ¡Otro éxito! 🎉
 
-![Page title and layout title both pulling from siteMetadata](site-metadata-two-titles.png)
+![Título de página y título de layout obtenidos desde los metadatos del sitio web](site-metadata-two-titles.png)
 
 ¿Por qué usar dos peticiones distintas aquí? Esos ejemplos son introducciones rápidas a los tipos de peticiones, cómo son formateadas, y dónde pueden ser usadas. Por ahora, ten en cuenta que sólo páginas pueden hacer peticiones de página. Componentes que no son de página, como Layout, puede usar StaticQuery. La [Parte 7](/tutorial/part-seven/) del tutorial lo explica en profundidad.
 
@@ -340,8 +342,8 @@ Uno de los principios principales de Gatsby es que _los creadores necesitan una 
 
 Así que casi en todos los sitios, los cambios que hagas se verán casi instantáneamente. Modifica el archivo `gatsby-config.js` de nuevo, esta vez cambiando el título `title` de nuevo a "Pandas Comiendo a montones". El cambio debería aparecer muy rápido en las páginas de tu aplicación.
 
-![Both titles say Pandas Eating Lots](pandas-eating-lots-titles.png)
+![Ambos títulos dicen Pandas comiendo a montones](pandas-eating-lots-titles.png)
 
 ## ¿Qué viene ahora?
 
-Tras esto, aprenderás cómo obtener datos en tu Gatsby usando GraphQL con plugins de fuente en la [Parte Cinco](/tutorial/part-five/) del tutorial.
+Tras esto, aprenderás cómo obtener datos en tu sitio Gatsby usando GraphQL con plugins de fuente en la [Parte Cinco](/tutorial/part-five/) del tutorial.
