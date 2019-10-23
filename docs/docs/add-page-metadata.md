@@ -51,4 +51,4 @@ class Application extends React.Component {
 
 > 💡 El ejemplo anterior es de la [documentación de React Helmet](https://github.com/nfl/react-helmet#example). ¡Échales un vistazo para más!
 
-También puedes estar interesado en consultar el documento sobre  [agregar un componente de SEO](/docs/add-seo-component/).
+También puedes estar interesado en consultar el documento sobre [agregar un componente de SEO](/docs/add-seo-component/).
