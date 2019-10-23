@@ -8,7 +8,7 @@ Agregando metadatos a las páginas (como un título o una descripción) es clave
 
 [React Helmet](https://github.com/nfl/react-helmet) es un paquete que proporciona una interfaz al componente React para que pueda administrar el tag [head del documento](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
-El plugin [react helmet](/packages/gatsby-plugin-react-helmet/) para Gatsby proporciona soporte directo para información de render de servidor agregados con React Helmet. Usando el complemento, los atributos que agregue a React Helmet se agregarán a las páginas HTML estáticas que Gatsby compila.
+El plugin [react helmet](/packages/gatsby-plugin-react-helmet/) para Gatsby proporciona soporte directo para información de render de servidor agregados con React Helmet. Usando el plugin, los atributos que agregues a React Helmet se agregarán a las páginas HTML estáticas que Gatsby compila.
 
 ### Usando `React Helmet` y `gatsby-plugin-react-helmet`
 
