@@ -1,5 +1,5 @@
 ---
-title: Agregar metadatos a las páginas
+title: Agregando metadatos a las páginas
 ---
 
 Si has realizado una [auditoría con Lighthouse](/docs/audit-with-lighthouse/), es posible que hayas notado una puntuación mediocre en la categoría "SEO". Veamos cómo se puede mejorar esta puntuación.
@@ -8,17 +8,17 @@ Agregando metadatos a las páginas (como un título o una descripción) es clave
 
 [React Helmet](https://github.com/nfl/react-helmet) es un paquete que proporciona una interfaz al componente React para que pueda administrar el tag [head del documento](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
-El componente de [componente react helmet](/packages/gatsby-plugin-react-helmet/) para Gatsby proporciona soporte directo para información de render de servidor agregados con React Helmet. Usando el complemento, los atributos que agregue a React Helmet se agregarán a las páginas HTML estáticas que Gatsby compila.
+El plugin [react helmet](/packages/gatsby-plugin-react-helmet/) para Gatsby proporciona soporte directo para información de render de servidor agregados con React Helmet. Usando el complemento, los atributos que agregue a React Helmet se agregarán a las páginas HTML estáticas que Gatsby compila.
 
 ### Usando `React Helmet` y `gatsby-plugin-react-helmet`
 
-1. Instalar ambos paquetes:
+1. Instala ambos paquetes:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2. Agregue el complemento al array `plugins` en su archivo` gatsby-config.js`.
+2. Agrega el complemento al array `plugins` en tu archivo` gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -51,4 +51,4 @@ class Application extends React.Component {
 
 > 💡 El ejemplo anterior es de la [documentación de React Helmet](https://github.com/nfl/react-helmet#example). ¡Échales un vistazo para más!
 
-También puede estar interesado en consultar el documento sobre  [agregar un componente de SEO](/docs/add-seo-component/).
+También puedes estar interesado en consultar el documento sobre  [agregar un componente de SEO](/docs/add-seo-component/).
