@@ -28,12 +28,12 @@ Crear nuevas páginas tiene dos pasos:
 1.  Generar la "ruta" o "slug" para la página.
 2.  Crear la página.
 
-_**Nota**: A menudo las fuentes de datos proporcionarán directamente un slug o nombre de ruta para el contenido — cuando trabaje con uno de esos sistemas (por ejemplo, un CMS), no necesita crear slugs usted mismo como lo hace con los archivos markdown._
+_**Nota**: A menudo las fuentes de datos proporcionarán directamente un slug o nombre de ruta para el contenido — cuando trabajas con uno de esos sistemas (por ejemplo, un CMS), no necesitas crear slugs tu mismo como lo haces con los archivos markdown._
 
 Para crear tus páginas markdown, aprenderás a utilizar dos API de Gatsby:
 [`onCreateNode`](/docs/node-apis/#onCreateNode) y
 [`createPages`](/docs/node-apis/#createPages). Estas son dos API caballos de batalla
-que verá utilizadas en muchos sitios y plugins.
+que verás utilizadas en muchos sitios y plugins.
 
 Hacemos todo lo posible para que las API de Gatsby sean simples de implementar. Para implementar un API, exporta una función
 con el nombre del API desde `gatsby-node.js`.
@@ -52,7 +52,7 @@ Gatsby llamará a esta función `onCreateNode` cada vez que se cree (o actualice
 Detén y reinicia el servidor de desarrollo. Mientras lo haces, verás que algunos
 nodos recién creados se registran en la consola de la terminal.
 
-Use esta API para agregar los slugs de tus páginas markdown a los
+Usa esta API para agregar los slugs de tus páginas markdown a los
 nodos `MarkdownRemark`.
 
 Cambia tu función para que ahora solo registre nodos `MarkdownRemark`.
@@ -67,8 +67,8 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-Si deseas utilizar cada nombre de archivo markdown para crear el slug de la página. Entonces
-`pandas-and-bananas.md` será `/pandas-and-bananas/`. Pero, ¿cómo se obtiene
+Quieres utilizar cada nombre de archivo markdown para crear el slug de la página. Para que
+`pandas-and-bananas.md` se convierta en `/pandas-and-bananas/`. Pero, ¿cómo se obtiene
 el nombre del archivo del nodo `MarkdownRemark`? Para obtenerlo, debes _atravesar_
 el "grafo del nodo" hasta su nodo _padre_ `File`, ya que los nodos `File` contienen los datos que
 necesitas sobre los archivos en el disco. Para hacer eso, modifica tu función nuevamente:
@@ -109,7 +109,7 @@ slug. Ejecuta el servidor de desarrollo nuevamente y deberías ver registrado en
 dos slugs, uno para cada archivo markdown.
 
 Ahora puedes agregar nuevos slugs directamente en los nodos `MarkdownRemark`. Esto es
-poderoso, ya que cualquier información que agregue a los nodos está disponible para consultar más tarde con GraphQL.
+poderoso, ya que cualquier información que agregues a los nodos está disponible para consultar más tarde con GraphQL.
 Por lo tanto, será fácil obtener el slug cuando llegue el momento de crear las páginas.
 
 Para hacerlo, usarás una función pasada a nuestra implementación de API llamada
@@ -137,7 +137,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 ```
 
-Reinicia el servidor de desarrollo y abre o actualiza GraphiQL. Luego ejecutá
+Reinicia el servidor de desarrollo y abre o actualiza GraphiQL. Luego ejecuta
 esta consulta GraphQL para ver tus nuevos slugs.
 
 ```graphql
@@ -178,7 +178,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 // highlight-start
 exports.createPages = async ({ graphql, actions }) => {
   // **Nota:** La llamada a la función graphql devuelve una Promesa
-  // ve: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise para más información
+  // consulta: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise para más información
   const result = await graphql(`
     query {
       allMarkdownRemark {
@@ -213,7 +213,7 @@ Luego, cierra la sesión del resultado de la consulta que debería verse así:
 
 ![query-markdown-slugs](query-markdown-slugs.png)
 
-Necesitas una cosa adicional más allá de un slug para crear páginas: una componente de
+Necesitas una cosa adicional más allá de un slug para crear páginas: un componente de
 plantilla de página. Como todo en Gatsby, las páginas programáticas funcionan con componentes
 React. Al crear una página, debes especificar qué componente usar.
 
@@ -284,8 +284,8 @@ exports.createPages = async ({ graphql, actions }) => {
 ```
 
 ¡Reinicia el servidor de desarrollo y tus páginas serán creadas! Una manera fácil de
-encontrar nuevas páginas que cree mientras desarrolla es ir a una ruta aleatoria donde
-Gatsby le mostrará una lista de páginas en el sitio. Si vas a
+encontrar nuevas páginas que crees mientras desarrollas es ir a una ruta aleatoria donde
+Gatsby te mostrará una lista de páginas en el sitio. Si vas a
 <http://localhost:8000/sdf>, verás las nuevas páginas que creaste.
 
 ![new-pages](new-pages.png)
@@ -336,7 +336,7 @@ Y…
 
 ![blog-post](blog-post.png)
 
-¡Dulce!
+¡Genial!
 
 El último paso es vincular tus nuevas páginas desde la página de índice.
 
@@ -436,10 +436,10 @@ de plantilla de página_ donde consultas datos para cada página.
 
 ## ¿Qué viene después?
 
-Ahora que haz creado un sitio de Gatsby, ¿a dónde irás?
+Ahora que has creado un sitio de Gatsby, ¿a dónde irás?
 
 - ¡Comparte tu sitio de Gatsby en Twitter y ve lo que otras personas han creado al buscar #gatsbytutorial! Asegúrate de mencionar @gatsbyjs en tu Tweet e incluye el hashtag #gatsbytutorial :)
 - Podrías echar un vistazo a algunos [ejemplos de sitios](https://github.com/gatsbyjs/gatsby/tree/master/examples#gatsby-example-websites)
-- Explorar más[plugins](/docs/plugins/)
+- Explorar más [plugins](/docs/plugins/)
 - Observar lo que [otras personas están construyendo con Gatsby](/showcase/)
 - Revisar la documentación en [API de Gatsby](/docs/api-specification/), [nodos](/docs/node-interface/), o [GraphQL](/docs/graphql-reference/)
