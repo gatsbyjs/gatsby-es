@@ -37,7 +37,7 @@ En las páginas y posts en Markdown, incluir un GIF animado se hace del mismo mo
 
 ![nutria bailando con un pez](./images/dancing-otter.gif)
 
-Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, asi que se cuidadoso de no hacerle sabotaje a la performance de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los cuadros](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
+Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, así que sé cuidadoso de no hacerle sabotaje a la performance de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los fotogramas](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
 
 ## Asuntos relacionados de Accesibilidad con los GIFs animados
 
