@@ -31,7 +31,7 @@ El ejemplo que se está ejecutando se muestra a la derecha en una ventana de vis
 
 ## Trabajando en un problema
 
-Para empezar a trabajar en un problema, puedes prefijar la URL del problema con `gitpod.io/#`.
+Para empezar a trabajar en un issue, puedes prefijar la URL del issue con `gitpod.io/#`.
 
 > Ejemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby/issues/1199
 
