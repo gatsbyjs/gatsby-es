@@ -20,11 +20,11 @@ Google también tiene una [página de preparación](https://support.google.com/a
 
 Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Ésta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en si misma. Rellena el formulario con el nombre de tu sitio web y URL.
 
-El Tracking ID  es lo que se usa para identificar los datos con el tráfico de tu sitio web. Deberías usar un Tracking ID distinto para cada sitio web que estés monitorizando.
+El Tracking ID  es lo que se usa para identificar los datos con el tráfico de tu sitio web. Deberías usar un Tracking ID distinto para cada sitio web que estés monitoreando.
 
 Deberías tener un Tracking ID; apúntalo, ya que tu sitio web necesitará referenciarlo cuando mande las visualizaciones de página a Google Analytics. Debería estar en formato `UA-XXXXXXXXX-X`.
 
-Puedes encontrar el tracking ID posteriormente yendo a`Admin > Tracking Info > Tracking Code`.
+Puedes encontrar el tracking ID posteriormente yendo a `Admin > Tracking Info > Tracking Code`.
 
 ## Usando `gatsby-plugin-google-analytics`
 
