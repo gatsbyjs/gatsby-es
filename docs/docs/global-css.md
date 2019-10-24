@@ -96,7 +96,7 @@ Tras eso, incluye la hoja de estilos en tu archivo `gatsby-browser.js`.
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 
-// or:
+// o:
 // require('./src/styles/global.css')
 ```
 
