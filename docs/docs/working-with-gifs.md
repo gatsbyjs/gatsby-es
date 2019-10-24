@@ -1,14 +1,14 @@
 ---
-title: Working With GIFs
+title: Trabajando con GIFs
 ---
 
-If you're building a blog with Gatsby, chances are you'll want to include some animated GIFs: who wouldn't want to include a dancing otter or cat GIF?
+Si estás construyendo un blog con Gatsby, está la posibilidad que querrás incluir algunos GIFs animados: quién no querría incluir un GIF de una nutria bailarina o un gato?
 
-## Including GIFs in components
+## Incluyendo GIFs en componentes
 
-In Gatsby components and pages, you'll want to import animated GIFs instead of using Gatsby Image because of the way it optimizes image data for the responsive picture element.
+En los componentes y páginas de Gatsby, querrás importar GIFs animados en vez de usar Gatsby Image porque de este modo optimiza los datos de la imagen para el elemento responsivo de la misma.
 
-Here's an example:
+Aquí hay un ejemplo:
 
 ```jsx:title=pages/about.js
 import React from 'react'
@@ -27,23 +27,23 @@ const AboutPage = () => (
 export default AboutPage;
 ```
 
-## Including GIFs in Markdown
+## Incluyendo GIFs en el Markdown
 
-In Markdown posts and pages, including an animated GIF is the same as a static image:
+En las páginas y entrada en Markdown, incluir un GIF animado se hace del mismo modo que una imagen estática:
 
 ```markdown
-![otter dancing with a fish](./images/dancing-ofter.gif)
+![nutria bailando con un pez](./images/dancing-ofter.gif)
 ```
 
-![otter dancing with a fish](./images/dancing-otter.gif)
+![nutria bailando con un pez](./images/dancing-otter.gif)
 
-Animated GIFs can be quite large in size, however, so be careful not to sabotage your webpages' performance with extremely large files. You could reduce file size by [optimizing the frames](https://skylilies.livejournal.com/244378.html) or converting them to video.
+Los GIFs animados pueden ser bastante largos en tamaño, de todos modos, así que se cuidadoso de no hacerle sabotaje al rendimiento de tu sitio web con archivos extremadamente grandes. Podrías reducir el tamaño de los archivos [optimizando los fotogramas](https://skylilies.livejournal.com/244378.html) o convirtiéndolos a video.
 
-## Accessibility concerns with animated GIFs
+## Asuntos relacionados con accesibilidad en los GIFs animados
 
-Beware that flashing and autoplaying GIFs can cause issues for users who are sensitive to motion. GIFs should not autoplay whenever possible for safety reasons. One technique would be to add controls, such as using a package like [react-gif-player](https://www.npmjs.com/package/react-gif-player) as a [client-only package](/docs/using-client-side-only-packages/).
+Ten cuidado que los GIFs que "flashean" (cambian abruptamente de colores o marcos), o que se auto-reproducen pueden causar problemas para usuarios que son sensibles al movimiento. Los GIFs no deberían autoreproducirse siempre que sea posible por motivos de seguridad. Una técnica sería la de agregar controles, usando un paquete como [react-gif-player](https://www.npmjs.com/package/react-gif-player) como [un paquete sólo para el cliente](/docs/using-client-side-only-packages/).
 
-For more information on accessible motion:
+Para más información sobre movimiento accesible:
 
 - https://source.opennews.org/articles/motion-sick/
 - https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html
