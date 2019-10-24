@@ -149,3 +149,5 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | file                                | archivo                                            |
 | Community Pair Programming Sessions | Sesiones de programación en pareja de la comunidad |
 | stub                                | stub                                               |
+| starter                             | _starter_                                          |
+| component shadowing                 | _component shadowing_                              |
