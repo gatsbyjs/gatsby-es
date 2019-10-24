@@ -35,7 +35,7 @@ Para empezar a trabajar en un problema, puedes prefijar la URL del problema con 
 
 > Ejemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby/issues/1199
 
-Esto abrirá un nuevo entorno con una rama local con el nombre del problema.
+Esto abrirá un nuevo entorno con una rama local con el nombre del issue.
 Ahora puedes codificar, probar, consolidar (commit), mandar (push) y crear un PR desde el espacio de trabajo.
 
 ## Revisiones de código
