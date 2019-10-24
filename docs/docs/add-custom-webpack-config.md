@@ -3,11 +3,10 @@ title: "Añadiendo Congiguraciones Personalizadas de webpack"
 ---
 
 _Antes de crear una configuración de webpack personalizada, comprueba si ya 
-existe un plugin de Gatsby que soporte tu caso de uso en la 
-[sección de plugins](/docs/plugins/). Si aun no existe ninguno y tu caso de uso 
-es general, te animamos encarecidamente a que contribuyas con tu plugin en la 
-Biblioteca de Plugins de Gatsby para que esté disponible para otros 
-(incluyendo a tu futuro yo 😀)._
+existe un plugin de Gatsby que soporte tu caso de uso en la [sección de plugins](/docs/plugins/). 
+Si aun no existe ninguno y tu caso de uso es general, te animamos encarecidamente 
+a que contribuyas con tu plugin en la Biblioteca de Plugins de Gatsby para que esté 
+disponible para otros (incluyendo a tu futuro yo 😀)._
 
 Para añadir configuraciones de webpack personalizadas, crea (si aun no lo hay) 
 un fichero `gatsby-node.js` en tu directorio raíz. Dentro de ese fichero, exporta 
