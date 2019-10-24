@@ -1,63 +1,63 @@
 ---
-title: Using Gatsby-Image With Your Site
+title: Usando Gatsby-Image En Su Sitio
 ---
 
-## What’s contained in this tutorial?
+## ¿Qué contiene este tutorial?
 
-By the end of this tutorial, you’ll have done the following:
+Al finalizar este tutorial, habrá hecho lo siguiente:
 
-- learned how to use `gatsby-image` for responsive images
-- queried for a single image with GraphQL
-- sourced multiple images through YAML files
-- learned how to troubleshoot common errors
+- aprendido cómo usar `gatsby-image` para imágenes adaptables
+- obtenido una sóla imágen con GraphQL
+- obtenido múltiples imágenes mediante archivos YAML
+- aprendido cómo solucionar errores comunes
 
-## Prerequisites
+## Prerequisitos
 
-This tutorial assumes you already have a Gatsby project up and running as well as images you'd like to render on your page. To set up a Gatsby site, check out the [main tutorial](/tutorial/) or the [quick start](/docs/quick-start/).
+Este tutorial asume que ya tiene un proyecto con Gatsby en marcha y funcionado así como imágenes que le gustaría renderizar en su página. Para configurar un sitio con Gatsby, revise el [tutorial principal](/tutorial/) ó la [guía de inicio rápido](/docs/quick-start/).
 
-In this tutorial you'll learn how to set up `gatsby-image`, a React component that optimizes responsive images using GraphQL and Gatsby's data layer. You'll be informed of a number of ways to use `gatsby-image` and some gotchas.
+En este tutorial aprenderá cómo configurar `gatsby-image`, un componente de React que optimiza imágenes adaptables usando GraphQL y la capa de datos de Gatsby. Será informado de una serie de maneras de usar `gatsby-image`, y algunas trampas.
 
-> _Note: this tutorial uses examples of static content stored in YAML files, but similar methods can be used for Markdown files._
+> _Nota: este tutorial usa ejemplos de contenido estático almacenado en archivos YAML, pero métodos parecidos pueden ser usados para archivos Markdown._
 
-## Getting started
+## Empezando
 
-Image optimization in Gatsby is provided by a plugin called `gatsby-image` which is incredibly performant.
+La optimización de imágenes en Gatsby la realiza un plugin llamado `gatsby-image` que es increiblemente eficiente.
 
-### Step 1
+### Paso 1
 
-Start by using npm to install the `gatsby-image` plugin and its associated dependencies.
+Comienzae usando npm para instalar el plugin `gatsby-image` y sus dependencias asociadas.
 
 ```bash
 npm install gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 ```
 
-### Step 2
+### Paso 2
 
-Add the newly installed plugins to your `gatsby-config.js` file. The config file ends up looking like this (other plugins already in use have been removed from this snippet for simplicity).
+Añada los nuevos plugins instalados a su archivo `gatsby-config.js`. El archivo de configuración se parecerá a algo así (otros plugins en uso se han eliminado de este código para simplificarlo).
 
-> _Note: once `gatsby-image` has been installed, it does not need to be included in the `gatsby-config.js` file._
+> _Nota: una vez que `gatsby-image` se ha instalado, no es necesario incluirlo en el archivo `gatsby-config.js`._
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-transformer-sharp`, `gatsby-plugin-sharp`]
 ```
 
-## Gatsby-image configuration
+## Configuración de Gatsby-image
 
-Now you're set up to use `gatsby-image`.
+Ahora está listo para usar `gatsby-image`.
 
-### Step 3
+### Paso 3
 
-Determine where your image files are located. In this example they're in `src/data`.
+Determine dónde están localizados sus archivos de imagen. En este ejemplo están en `src/data`.
 
-If you haven't already, make sure that your project is set up to see content inside that directory. That means doing two things:
+Si aún no lo ha hecho, asegúrese de que su proyecto está configurado para ver contenido dentro de ese directorio. Esto significa dos cosas:
 
-1.  Install `gatsby-source-filesystem`. Note: If you created your project using `gatsby new <name>`, this first step should already be done for you via the default starter.
+1.  Instale `gatsby-source-filesystem`. Nota: Si creó su proyecto usando `gatsby new <name>`, este primer paso ya debería estar realizado via el "starter" predeterminado.
 
 ```bash
 npm install gatsby-source-filesystem
 ```
 
-2. The next step is to make sure your `gatsby-config.js` file specifies the correct folder. In this example it would look like this:
+2. El siguiente paso es asegurarse que en su archivo `gatsby-config.js` se especifíca el directorio correcto. En este ejemplo se vería así:
 
 ```javascript:title=gatsby-config.js
 plugins: [
@@ -67,15 +67,15 @@ plugins: [
 ]
 ```
 
-Now you're ready to start working with `gatsby-image`!
+¡Ahora ya puede empezar a trabajar con `gatsby-image`!
 
-## Step 4
+## Paso 4
 
-The next step can vary depending on what you're trying to accomplish.
+El siguiente paso puede variar dependiendo de lo que quiera conseguir.
 
-## Querying data for a single image
+## Consultar datos de una sola imagen
 
-Use `graphql` to query an image file directly. You can include the relative path to the image file and determine how you want `gatsby-image` to process the file.
+Usw `graphql` para consultar un archivo de imagen directamente. Puede incluir la ruta relativa a su archivo de imagen y determinar cómo quiere que `gatsby-image` procese su archivo.
 
 ```jsx:title=src/pages/index.js
 export const query = graphql`
@@ -91,25 +91,25 @@ export const query = graphql`
 `
 ```
 
-There are a couple of things to note here.
+Hay un par de cosas a tener en cuenta aquí.
 
-### Relative image paths and `gatsby-config.js`
+### Rutas relativas de imagen y `gatsby-config.js`
 
-You might expect the relative path to be relative to the file the code sits in, in this case that's index.js. However, that doesn't work. The relative path is actually based on the line of code you put in the `gatsby-source-filesystem` config, which points to `src/data`.
+Puede esperar que la ruta relativa sea relativa al archivo donde se encuentra el código, en este caso index.js. Sin embargo, esto no funciona. La ruta relativa se basa realmente en la línea de código que indique en la configuración de `gatsby-source-filesystem`, que apunta a `src/data`.
 
-### Image fragments
+### Fragmentos de imagen
 
-Another thing to note about this query is how it uses the fragment `GatsbyImageSharpFixed` to return a fixed width and height image. You could also use the fragment `GatsbyImageSharpFluid` which produces scalable images that fill their container instead of fitting specific dimensions. In `gatsby-image`, _fluid_ images are meant for images that don’t have a finite size depending on the screen, where as other images are _fixed_.
+Otra cosa a tener en cuenta sobre esa consulta es cómo usa el fragmento `GatsbyImageSharpFixed` para devolver una imagen de ancho y alto fijos. También podría usar el fragmento `GatsbyImageSharpFluid` que genera imágenes escalables que llenan su contenedor en vez de ajustarse a dimensiones específicas. En `gatsby-image`, imágenes _fluid_ están destinadas a imágenes que no tienen un tamaño determinado dependiendo de la pantalla, mientras que otras son _fixed_.
 
-The query will return a data object including the processed image in a format usable by the `gatsby-image` component. The returned result will be automatically passed into the component and attached to the `data` prop. You can then display the image using JSX to automatically output responsive, highly performant HTML.
+La consulta devolverá un objeto de datos que incluye la imagen procesada en un formato utilizable para el componente `gatsby-image`. El resultado devuelto será pasado automáticamente al componente y se adjuntará a la propiedad `data`. Luego puede mostrar la imagen usando JSX para generar automáticamente HTML adaptable y de alto rendimiento.
 
-To display the image, start by importing the component provided by `gatsby-image`.
+Para mostrar la imagen, empiece por importar el componente proporcionado por `gatsby-image`.
 
 ```jsx
 import Img from "gatsby-image"
 ```
 
-Now you can use it. Note that the key for pointing to the image corresponds to the way in which the image was processed. In this example that is `fixed`.
+Ahora puede usarlo. Tenga en cuenta que la _key_ para apuntar a la imagen corresponde al modo en el que la imagen se procesó. En este ejemplo es `fixed`.
 
 ```jsx
 <Img
@@ -118,8 +118,7 @@ Now you can use it. Note that the key for pointing to the image corresponds to t
   alt="headshot"
 />
 ```
-
-Here is the query and usage all put together:
+Esta es una consulta y su uso todo en conjunto:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -153,11 +152,11 @@ export const query = graphql`
 export default HomePage
 ```
 
-## Querying for multiple images from YAML data
+## Consultando múltiples imágenes desde datos YAML
 
-Another way to source images is through YAML (or Markdown). This example uses the `gatsby-transformer-yaml` plugin to query the YAML files. More information about that plugin can be found in the [Gatsby plugin library](/packages/gatsby-transformer-yaml/?=gatsby-transformer-yaml).
+Otra manera de obtener imágenes es a través de YAML (o Markdown). Este ejemplo usa el plugin `gatsby-transformer-yaml` para consultar archivos YAML. Más información sobre este plugin se puede encontrar en la [librería de plugins de Gatsby](/packages/gatsby-transformer-yaml/?=gatsby-transformer-yaml).
 
-Here's an example of a query from a list of conferences in a YAML file with an image for each one:
+Aquí un ejemplo de una consulta de una lista de conferencias en un archivo YAML con una imagen para cada una:
 
 ```graphql
 {
@@ -179,19 +178,19 @@ Here's an example of a query from a list of conferences in a YAML file with an i
 }
 ```
 
-In this case the query starts with `allSpeakingYaml` to direct `graphql` to look for this data in the `speaking.yaml` file in your `src/data` folder referenced in `gatsby-config.js`. If you want to query a file named `blog.yaml`, for example, you'd start the query with `allBlogYaml`.
+En este caso la consulta empieza con `allSpeakingYaml` para dirigir a `graphql` a buscar esta información en el archivo `speaking.yaml` de su directorio `src/data` referenciado en `gatsby-config.js`. Si quiere consultar un archivo llamado `blog.yaml`, por ejemplo, comenzaría la consulta con `allBlogYaml`.
 
-## Rendering images sourced from YAML
+## Renderizando imágenes obtenenidas de YAML
 
-In order to reference your images in YAML make sure that the relative paths are accurate. The path to each image should be relative to the location of the `.yaml` file pointing to it. And all of these files need to be in a directory visible to the `gatsby-source-filesystem` plugin configured in `gatsby-config.js`.
+Para hacer referencia a sus imágenes en YAML, asegúrese de que las rutas relativas sean correctas. La ruta para cada imagen debe ser relativa a la localización a la que se apunte en el archivo `.yaml`. Y todos esos archivos deben estar en un directorio visible para el plugin `gatsby-source-filesystem` configurado en `gatsby-config.js`.
 
-The inside of the YAML file would look something like this:
+El interior del archivo YAML se vería así:
 
 ```
 - image: speaking/kcdc.jpg
 ```
 
-Now, you can create the query. Similar to the single use example above, you can use `gatsby-image` features inside the query. When the query runs, the relative path will point to the location of the image file and the resulting query processes the file as an image for display.
+Ahora, puede crear la consulta. Al igual que en el ejemplo anterior de una sola imagen, puede usar las funciones de `gatsby-image` dentro de la consulta. Cuando la consulta se ejecute, la ruta relativa apuntará a la ubicación del archivo de imagen y la consulta resultante procesará el archivo como una imagen a mostrar.
 
 ```graphql
 {
@@ -210,8 +209,7 @@ Now, you can create the query. Similar to the single use example above, you can 
   }
 }
 ```
-
-Since the images are stored as part of an array, they can be accessed using the JavaScript `map` function in JSX. As with the single image example, the actual processed image is at the `...GatsbyImageSharpFluid` level in the returned data structure.
+Debido a que las imágenes se almacenan como parte de un _array_, se puede acceder a ellas usando la función JavaScript `map` en JSX. Como en el ejemplo de una sola imagen, la imagen procesada está en el nivel `...GatsbyImageSharpFluid` en la estructura de datos resultante.
 
 ```jsx
 <Img
@@ -221,9 +219,9 @@ Since the images are stored as part of an array, they can be accessed using the 
 />
 ```
 
-## Using Static Query
+## Usando la consulta Static
 
-If your query is part of a reusable component you may want to use a Static Query hook. The code necessary to do this is almost the same as the single image use case above.
+Si su consulta es parte de un componente reutilizable, es posible que quiera usar el _hook_ `useStaticQuery`. El código necesario para hacer esto es casi el mismo que en el caso anterior de imagen única.
 
 ```javascript:title=src/components/header-image.js
 export default () => {
@@ -243,15 +241,16 @@ export default () => {
 }
 ```
 
-Instead of a query constant and data that references the result like in the first section above, you can put the `useStaticQuery` hook directly in the JSX code and then reference it in the `Img` component. Note that the query language didn’t change and neither did the `Img` tag syntax; the only change was the location of the query and the usage of the `useStaticQuery` function to wrap it.
+En vez de una consulta de constante y datos que hacen referencia al resultado como en la primera sección anterior, puede colocar el _hook_ `useStaticQuery` directamente en el código JSX y luego referenciarlo en el componente `Img`. Tenga en cuenta que ni el código de la consulta ni la sintaxis de la etiqueta `Img` cambiaron; el único cambio fue la ubicación de la consulta y el uso de la función `useStaticQuery` para envolverla.
 
-## Multiple queries and aliasing
 
-The last use case you may come across is how to handle a situation where you have multiple queries in the same file/page.
+## Múltiples consultas y alias
 
-This example is attempting to query for all the data in `speaking.yaml` and the direct file query in our first example. In order to do this you want to use aliasing in GraphQL.
+El último caso de uso que puede encontrar es cómo manejar una situación donde tiene múltiples consultas en el mismo archivo/página.
 
-The first thing to know is that an alias is assigning a name to a query. The second thing to know is that aliases are optional, but they can make your life easier! Below is an example.
+Este ejemplo está intentando consultar todos los datos en `speaking.yaml` y la consulta de archivo directa en nuestro primer ejemplo. Para hacer esto, puedes usar un alias en GraphQL.
+
+La primera cosa a saber es que un alias asigna un nombre a una consulta. La segunda cosa a saber es que un alias es opcional, pero puede hacer su vida más fácil. A continuación, un ejemplo.
 
 ```graphql
 talks: allSpeakingYaml {
@@ -270,7 +269,7 @@ talks: allSpeakingYaml {
 }
 ```
 
-When you do that, you’ve changed the reference to the query object available in your JSX code. While it was previously referenced as this:
+Cuando haga esto, ha cambiado la referencia al objeto de consulta disponible en su código JSX. Mientras anteriormente se le hizo referencia como aquí:
 
 ```jsx
 {
@@ -280,7 +279,7 @@ When you do that, you’ve changed the reference to the query object available i
 }
 ```
 
-Giving it an alias does not add a level of complexity to the response object, it just replaces it. So you end up with the same structure, referenced like this (note the alias `talks` in place of the longer `allSpeakingYaml`):
+Darle un alias no añade un nivel de complejidad al objeto de respuesta, solo lo reemplaza. Entonces termina con la misma estructura, referenciada así (ten en cuenta el alias `talk` en lugar del más largo` allSpeakingYaml`):
 
 ```jsx
 {
@@ -290,17 +289,17 @@ Giving it an alias does not add a level of complexity to the response object, it
 }
 ```
 
-The top-level object name of `data` is implicit. This is important because when you conduct multiple queries as part of a single component, Gatsby still passes the entire result to the component.
+El nombre del objeto de nivel superior `data` está implícito. Esto es importante porque cuando realice múltiples consultas como parte de un solo componente, Gatsby aún pasa el resultado completo al componente.
 
-Here's an example of data flowing into a component:
+Aquí hay un ejemplo de datos que se incluye en un componente:
 
 ```jsx
 const SpeakingPage = ({ data }) => {}
 ```
 
-Everything else gets referenced from that top-level return name.
+Todo lo demás se referencia desde ese nombre de retorno de nivel superior.
 
-With that understanding, you can combine two queries referencing images and use aliasing to distinguish between them.
+Sabiendo esto, puede combinar dos consultas que hacen referencia a imágenes y usar alias para distinguir entre ellas.
 
 ```graphql
 {
@@ -327,7 +326,8 @@ With that understanding, you can combine two queries referencing images and use 
 }
 ```
 
-Notice that this example uses aliasing for one query and not the other. This is allowed; there is no requirement that all your queries use aliasing. In this case, the JSX would look like this to access the `speaking.yaml` content.
+Tenga en cuenta que este ejemplo usa alias para una consulta y no para la otra. Esto está permitido; no es necesario que todas sus consultas utilicen alias. En este caso, el JSX se vería así para acceder al contenido en `speaking.yaml`.
+
 
 ```jsx
 {
@@ -337,38 +337,38 @@ Notice that this example uses aliasing for one query and not the other. This is 
 }
 ```
 
-And then like this to access the image using the alias name `banner`.
+Y luego así para acceder a la imagen usando el alias `banner`.
 
 ```jsx
 <Img fluid={data.banner.childImageSharp.fluid} />
 ```
 
-These examples should handle a fair number of use cases. A couple bonus things:
+Estos ejemplos deberían servir para un buena cantidad de casos de uso. Un par de cosas extra:
 
-## Aspect ratio
+## Relación de aspecto
 
-`gatsby-image` has a feature that gives you the ability to set an aspect ratio to constrain image proportions. This can be used for fixed or fluid processed images; it doesn't matter.
+`gatsby-image` tiene una característica que le permite establecer una relación de aspecto para restringir las proporciones de la imagen. Esto se puede usar tanto en imágenes procesadas fijas como fluidas; no importa.
 
 ```jsx
 <Img sizes={{ ...data.banner.childImageSharp.fluid, aspectRatio: 21 / 9 }} />
 ```
 
-This example uses the `sizes` option on the `Img` component to specify the `aspectRatio` option along with the fluid image data. This processing is made possible by `gatsby-plugin-sharp`.
+Este ejemplo usa la opción `sizes` en el componente `Img` para especificar la opción `aspectRatio` junto con los datos de la imagen fluida. Este procesamiento es posible gracias a `gatsby-plugin-sharp`.
 
-## Bonus Error
+## Consejo extra: Error
 
-Now for errors to watch out for. If you change your image processing from `fixed` to `fluid` you may see this error.
+Ahora los errores a tener en cuenta. Si cambia el procesamiento de su imagen de `fixed` a `fluid`, es posible que vea este error.
 
-![In image cache error message.](./ErrorMessage.png)
+![Mensaje de error: inImageCache](./ErrorMessage.png)
 
-Despite its appearance, solving this doesn't actually require flushing any kind of cache. In reality, it has to do with incompatible references. You likely triggered it because you changed the query to process the image as `fluid` but the JSX key was still set to `fixed`, or visa versa.
+A pesar de su apariencia, resolver esto realmente no require vaciar ningún tipo de caché. En realidad, tiene que ver con referencias incompatibles. Probablemente se lanzó el error porque cambió la consulta para procesarla como `fluid` pero la _key_ en el JSX todavía estaba configurada como `fixed`, o vice versa.
 
-## The end
+## Fin
 
-So that's it. This post included a number of different possible use cases, so don't feel as if you need to explore them all. Pick the examples and tips that apply to your implementation.
+Eso es todo. Este tutorial incluyó una serie de posibles casos de uso, así que no sienta que necesita explorarlos todos. Elija los ejemplos y consejos que se aplican a su implementación.
 
-## Other resources
+## Otros recursos
 
-- [Gatsby Image API docs](/docs/gatsby-image/)
-- [Using Gatsby Image](/docs/using-gatsby-image/)
-- [Other image and media techniques in Gatsby](/docs/images-and-files/)
+- [Documentos de la API de imagen de Gatsby](/docs/gatsby-image/)
+- [Usando imagen de Gatsby](/docs/using-gatsby-image/)
+- [Otras técnicas de imagen y medios en Gatsby](/docs/images-and-files/)
