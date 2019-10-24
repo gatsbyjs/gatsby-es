@@ -6,7 +6,7 @@ Esta sección de la documentación tiene un tenor ligeramente distinto al resto 
 
 El propósito del resto de los docs es ayudarte a comprender Gatsby. El propósito de esta sección es de ayudarte a explicar Gatsby a otros.
 
-Explicar Gatsby bien a otros, y ayudar a convencerlos de usarlo (o que te dejen usarlo) es un tipo de problema distinto a convertirse en un developer talentoso de Gatsby.
+Explicar Gatsby bien a otros, y ayudar a convencerlos de usarlo (o que te dejen usarlo) es un tipo de problema distinto a convertirse en un desarrollador talentoso de Gatsby.
 
 Requiere comprensión sobre qué cosas valúas alrededor tuyo, y ayudarlos a comprender cómo Gatsby cumple _con sus_ necesidades, más que simplemente cómo Gatsby cumple con las tuyas.
 
