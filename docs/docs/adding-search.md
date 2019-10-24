@@ -3,13 +3,13 @@ title: "Añadiendo búsquedas"
 overview: true
 ---
 
-Mira abajo para ver una lista de guías en esta sección, o sigue leyendo un resumen sobre añadir la funcionalidad de búquedas en tu sitio web.
+Mira abajo para ver una lista de guías en esta sección, o sigue leyendo un resumen sobre añadir la funcionalidad de búsquedas en tu sitio web.
 
 <GuideList slug={props.slug} />
 
 ## Resumen de búsqueda en sitio web
 
-Antes que vayamos a través de los passos para añadir búsquedas a tu sitio web Gatsby, examinemos los componentes necesarios para añadir búsquedas a una página web.
+Antes que vayamos a través de los pasos para añadir búsquedas a tu sitio web Gatsby, examinemos los componentes necesarios para añadir búsquedas a una página web.
 
 Hay tres componentes requeridos para añadir búsquedas a tu página Gatsby:
 
