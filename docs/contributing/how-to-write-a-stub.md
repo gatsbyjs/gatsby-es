@@ -22,10 +22,12 @@ Si tienes cualquier pregunta sobre títulos u otros detalles en relación a crea
 
 ## Sesiones de programación en pareja de la comunidad
 
-Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa rellenar el contenido, fíjate en el [programa de Programación en pareja](/contributing/pair-programming/) de Gatsby.js. Nos encantaría trabajar contigo en tu aventura de contribuir al código abierto!
+Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa rellenar el contenido, fíjate en el
+[programa de Programación en pareja](/contributing/pair-programming/) de Gatsby.js. Nos encantaría trabajar contigo en tu aventura de contribuir al código abierto!
 
 ## Convertir un stub en un documento
 
-Para transformar el stub en un documento viviente, quita la etiqueta `issue` del frontmatter (los metadatos de Markdown) del stub, y reemplaza el texto modelo con tu código y prosa bella. Guarda el archivo, sube un commit a GitHub, abre un pull request, y busca feedback. Aprende más en nuestra página sobre [contribuciones a los docs](/contributing/docs-contributions/).
+Para transformar el stub en un documento viviente, quita la etiqueta `issue` del frontmatter (los metadatos de Markdown) del stub, y reemplaza el texto modelo con tu
+código y prosa bella. Guarda el archivo, sube un commit a GitHub, abre un pull request, y busca feedback. Aprende más en nuestra página sobre [contribuciones a los docs](/contributing/docs-contributions/).
 
 Si quieres ver los stubs disponibles, visita la [Lista de stubs](/contributing/stub-list/).
