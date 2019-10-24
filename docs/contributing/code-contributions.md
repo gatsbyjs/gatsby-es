@@ -1,63 +1,63 @@
 ---
-title: Code Contributions
+title: Contribuciones de Código
 ---
 
-The beauty of contributing to open source is that you can clone your favorite project, get it running locally, and test out experiments and changes in real time! Way to feel like a wizard.
+¡La belleza de contribuir con código abierto es que puedes clonar tu proyecto favorito, ejecutarlo localmente y probar experimentos y cambios en tiempo real! Te hace sentir como un mago.
 
-On this page:
+En esta página:
 
-- [Repo setup](#repo-setup)
-- [Creating your own plugins and loaders](#creating-your-own-plugins-and-loaders)
-- [Making changes to the starter Library](#making-changes-to-the-starter-library)
-- [Contributing example sites](#contributing-example-sites)
-- [Using Docker to set up test environments](#using-docker-to-set-up-test-environments)
-- [Development tools](#development-tools)
+- [Preparación del repositorio](#repo-setup)
+- [Creando tus propios plugins y loaders](#creating-your-own-plugins-and-loaders)
+- [Haciendo cambios a la Librería de inicio](#making-changes-to-the-starter-library)
+- [Contribuyendo con sitios de ejemplo](#contributing-example-sites)
+- [Usando Docker para establecer entornos de pruebas](#using-docker-to-set-up-test-environments)
+- [Herramientas de Desarrollo](#development-tools)
 
-## Repo setup
+## Preparación del repositorio
 
-This page includes details specific to the Gatsby core and ecosystem codebase.
+Esta página incluye detalles específicos del núcleo de Gatsby y de su ecosistema.
 
-To start setting up the Gatsby repo on your machine using git, Yarn and Gatsby-CLI, check out the page on [setting up your local dev environment](/contributing/setting-up-your-local-dev-environment/).
+Para comenzar a configurar el repositorio de Gatsby en tu máquina usando git, Yarn y Gatsby-CLI, consulta la página de [configurando tu entorno local de desarrollo](/contributing/setting-up-your-local-dev-environment/).
 
-Alternatively, you can skip the local setup and [use an online dev environment](/contributing/using-an-online-dev-environment/).
+Alternativamente, puedes omitir la configuración local y [usar una herramienta de desarrollo en línea](/contributing/using-an-online-dev-environment/).
 
-To contribute to the blog or Gatsbyjs.org website, check out the setup steps on the [blog and website contributions](/contributing/blog-and-website-contributions/) page. For instructions on contributing to the docs, visit the [docs contributions page](/contributing/docs-contributions/).
+Para contribuir al blog o al sitio web Gatsbyjs.org, consulta los pasos de configuración en la página de [contribuciones del blog y sitio web](/contributing/blog-and-website-contributions/). Para instrucciones relativas a la contribución de documentos, visita la [página de contribuciones de documentos](/contributing/docs-contributions/).
 
-## Creating your own plugins and loaders
+## Creando tus propios plugins y loaders
 
-If you create a loader or plugin, we would love for you to open source it and put it on npm. For more information on creating custom plugins, please see the documentation for [plugins](/docs/plugins/) and the [API specification](/docs/api-specification/).
+Si creas un loader o plugin, nos encantaría que lo hicieras como código abierto y lo subieras a npm. Para obtener más información sobre la creación de plugins personalizados, consulta la documentación de [plugins](/docs/plugins/) y la [especificación de la API](/docs/api-specification/).
 
-## Making changes to the starter library
+## Haciendo cambios a la Librería de inicio
 
-Note: You don't need to follow these steps to submit to the starter library. This is only necessary if you'd like to contribute to the functionality of the starter library. To submit a starter, [follow these steps instead](/contributing/submit-to-starter-library/).
+Nota: No es necesario que sigas estos pasos para enviar una librería de inicio. Esto sólo es necesario si quieres contribuir con funcionalidades de la propia librería de inicio. Para enviar un inicializador, [sigue estos pasos en su lugar](/contributing/submit-to-starter-library/).
 
-To develop on the starter library, you'll need to supply a GitHub personal access token.
+Para desarrollar en la librería de inicio, deberás disponer de un token de acceso personal de GitHub.
 
-1. Create a personal access token in your GitHub [Developer settings](https://github.com/settings/tokens).
-2. In the new token's settings, grant that token the "public_repo" scope.
-3. Create a file in the root of `www` called `.env.development`, and add the token to that file like so:
+1. Crea un token de acceso personal en tu GitHub [Ajustes de Desarrollador](https://github.com/settings/tokens).
+2. En tus nuevos ajustes de token, garantízale alcance al "public_repo".
+3. Crea un archivo en la raíz de tu `www` llamado `.env.development`, y añade el token de esta manera:
 
 ```text:title=.env.development
-GITHUB_API_TOKEN=YOUR_TOKEN_HERE
+GITHUB_API_TOKEN=AQUI_TU_TOKEN
 ```
 
-The `.env.development` file is ignored by git. Your token should never be committed.
+El archivo `.env.development` es ignorado por git. Tu token nunca debería enviarse en tus commits.
 
-## Contributing example sites
+## Contribuyendo con sitios de ejemplo
 
-Gatsby's policy is that "Using" example sites (like those in the [examples part of the repo](https://github.com/gatsbyjs/gatsby/tree/master/examples)) should only be around plugins that are maintained by the core team as it's hard to keep things up to date otherwise.
+La política de Gatsby es que "Usar" sitios de ejemplo (como los de [ejemplos pertenecientes al repositorio](https://github.com/gatsbyjs/gatsby/tree/master/examples)) debería sólo incluir plugins mantenidos por el equipo principal ya que sinó nos es difícil mantener las cosas actualizadas.
 
-To contribute example sites, it is recommended to create your own GitHub repo and link to it from your source plugin, etc.
+Para contribuir con tus propios sitios de ejemplo, es recomendable crear tu repositorio de Github y enlazarlo ahí con tu plugin fuente, etc.
 
-## Using Docker to set up test environments
+## Usando Docker para establecer entornos de pruebas
 
-With all of the possible Gatsby integrations, it might help to spin up a Docker container with the software application you need to test. This makes installation a breeze, so you can focus less on getting set up and more on the integration details that matter to you.
+Debido a las diferentes integraciones posibles de Gatsby, puede ayudar lanzar un contenedor Docker con la aplicación de software que necesitas probar. Esto facilita la instalación, por lo que puedes centrarte menos en la configuración y más en los detalles de integración que te interesen.
 
-> Do you have a setup not listed here? Let us know by adding it to this file and opening a PR.
+> ¿Tienes alguna configuración que no esté listada aquí? Háznoslo saber añadiéndola a este archivo y abriendo una PR.
 
-### Docker, Wordpress and Gatsby
+### Docker, Wordpress y Gatsby
 
-To install Wordpress to use with Gatsby, this `docker-compose.yml` file will come in handy:
+Para instalar Wordpress con Gatsby, este archivo `docker-compose.yml` te puede ser de utilidad:
 
 ```
 version: '2'
@@ -109,16 +109,16 @@ services:
        - /sessions
 ```
 
-Use the above file contents when following the Docker Wordpress install instructions: https://docs.docker.com/compose/wordpress/
+Usa los contenidos del archivo de arriba cuando sigas las instrucciones de instalación de Docker Wordpress: https://docs.docker.com/compose/wordpress/
 
-Using Docker Compose, you can start and stop a Wordpress instance and integrate it with the [Gatsby Wordpress source plugin](/docs/sourcing-from-wordpress/).
+Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integrarla con el [plugin fuente de Gatsby Wordpress](/docs/sourcing-from-wordpress/).
 
-## Development tools
+## Herramientas de Desarrollo
 
-### Debugging the build process
+### Debugeando el proceso de build
 
-Check [Debugging the build process](/docs/debugging-the-build-process/) page to learn how to debug Gatsby.
+Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
 
 ## Feedback
 
-At any point during the contributing process, the Gatsby Core team would love to help! We hold a weekly [Core Maintainer's meeting](/contributing/community#core-maintainers-meeting) where you can share your creation(s) and receive advice and feedback directly from the team!
+En cualquier momento durante el proceso de contribución, ¡al equipo de Gatsby Core le encantaría ayudar! ¡Organizamos un [meeting semanal de Mantenedores principales](/contributing/community#core-maintainers-meeting) dónde puedes compartir tus creaciones y recibir consejo y feedback directamente del equipo!
