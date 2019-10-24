@@ -8,7 +8,7 @@ Esta página resume como usar Gitpod, un ambiente de desarrollo Online gratuito,
 
 Gitpod facilita las contribuciones en GitHub, al permitir configuraciones de entornos de desarrollo automatizados. En lugar de escribir mucha documentación de como instalar, configurar y dejar que cada contribuidor pase por esta aventura, la configuración es automática y reproducible.
 
-Además, Gitpod pre-compila cada rama del repositorio, para que no tenga que esperar la instalación, la clonación y la compilación.
+Además, Gitpod pre-compila cada rama del repositorio, para que no tengas que esperar la instalación, la clonación y la compilación.
 
 ## Para empezar
 
