@@ -2,7 +2,7 @@
 title: Convencer a los demás
 ---
 
-Esta sección de la documentación tiene un tenor ligeramente distinto al resto de los docs.
+Esta sección de la documentación tiene un tenor ligeramente distinto al resto de la documentación.
 
 El propósito del resto de la documentación es ayudarte a comprender Gatsby. El propósito de esta sección es de ayudarte a explicar Gatsby a otros.
 
