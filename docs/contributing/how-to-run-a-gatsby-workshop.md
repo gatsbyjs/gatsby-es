@@ -1,28 +1,28 @@
 ---
-title: How to Run a Gatsby Workshop
+title: Cómo realizar un taller de Gatsby
 ---
 
-Running a workshop focused on Gatsby.js is a fantastic way to teach a group of people how to create fast, accessible websites with in-person (or virtual) instruction.
+Realizar un taller enfocado a Gatsby.js es un modo fantástico de enseñarle a un grupo de personas cómo crear sitios rápidos y accesibles con una instrucción presencial o virtual.
 
-We on the Gatsby team have run a number of in-person workshops, and you can read about some of our [initial findings](https://www.gatsbyjs.org/blog/2018-05-31-open-sourcing-gatsby-workshops/). If you are interested in running a workshop yourself, we welcome you to do so and offer this page of resources to help you.
+Nosotros, en el equipo de Gatsby, hemos realizado un número de talleres presenciales, y puedes leer sobre ellos en nuestros [descubrimientos iniciales](https://www.gatsbyjs.org/blog/2018-05-31-open-sourcing-gatsby-workshops/). Si estás interesado en realizar un taller tú mismo, te animamos a hacerlo y te ofrecemos esta página de recursos para ayudarte a hacerlo.
 
-Share your ideas and report how these workshops go for you in the [Open source repo](https://github.com/gatsbyjs/gatsby) through issues and PRs (if you ran into problems with the workshops and/or have ideas of how to improve them) or [Twitter](https://twitter.com/gatsbyjs) if you want to share an upcoming workshop you're running.
+Comparte tus ideas y reporta cómo estos talleres van para ti en el [repositorio de código abierto](https://github.com/gatsbyjs/gatsby) mediante issues y PRs (Si te has encontrado con problemas relacionados con los talleres y/o tienes ideas sobre cómo mejorarlos) o [Twitter](https://twitter.com/gatsbyjs) si quieres compartir acerca de un taller que estás llevando a cabo.
 
-## Why you might want to host a workshop
+## ¿Por qué podrías querer llevar a cabo un taller?
 
-Here are some advantages that we experienced in the workshops; if these appeal to you, you could consider hosting your own workshop at your work, a meetup, or any other setting that makes sense!
+Aquí hay algunas ventajas que hemos apreciado en los talleres: si estas son atractivas para ti, podrías considerar llevar a cabo un taller en tu trabajo, en un meetup ¡o en cualquier otro lugar que tenga sentido!
 
-- _Dedicated time and place to learn:_ it’s easier to set aside time to learn something new when you are in a room with other people doing the same thing
-- _Quicker problem-solving:_ you can usually get answers to your questions and solve problems faster than you could otherwise
-- _Customized content:_ the workshop host can customize the workshop for the group’s needs ahead of time by sending out a survey, and the workshop can shift focus depending on real-time needs and questions of the group and individuals
+- _Espacio y tiempo dedicado a aprender:_ es más fácil hacerse el tiempo para aprender algo nuevo cuando estás en un lugar con otras personas haciendo lo mismo.
+- _Resolución de problemas más rápida:_ Puedes usualmente obtener respuestas a tus preguntas y resolver problemas más rápidamente de lo que lo harías de otro modo.
+- _Contenido personalizado:_ El organizador del taller puede personalizar el taller a las necesidades del grupo antes de tiempo enviando una encuesta, y el taller puede girar su foco dependiendo en las necesidades o preguntas en tiempo real del grupo y los individuos.
 
-## Where to find workshop resources
+## Donde encontrar recursos para talleres
 
-Please use the following links to find workshop materials in the Gatsby open source repo:
+Por favor usa los siguientes hipervínculos para encontrar materiales para workshops en el repositorio de código abierto de Gatsby:
 
-- Survey questions to send out [before](https://docs.google.com/a/gatsbyjs.com/forms/d/1S6diwCjR36VSJod7DGL0ZpESx3KdaNGiB4Szl4hOpg0/edit?usp=sharing) and [after](https://docs.google.com/a/gatsbyjs.com/forms/d/1iKok_QJHSav51_668QneqwxOFOMw_WNDPnX0PdBfUVA/edit?usp=sharing) workshops
-- [Introductory slide deck for Day 1](https://docs.google.com/presentation/d/1fQNLvf1C8kj4rY-hVVY5zCsxy0z03gGkiqc-wiHHYhI/edit?usp=sharing), [Introductory slide deck for Day 2](https://docs.google.com/presentation/d/1w_0CGX2DNUDAIDT0MCaCPNqA_0HgamutaECP8kZ3yyI/edit?usp=sharing)
-- [Agenda for workshop attendees](https://docs.google.com/document/d/1gn5dk5RkuOXgZatd-Ow4XGqKY1NWZVCaUhyOwrRP0JE/edit?usp=sharing)
-- [Step-by-step guide for the workshop host](https://docs.google.com/document/d/1epeLO_7xkbd-WvPDCEZZ8f2GV5uMLHHM_UIhpZxqRbo/edit?usp=sharing)
+- Preguntas de encuestas para enviar [antes](https://docs.google.com/a/gatsbyjs.com/forms/d/1S6diwCjR36VSJod7DGL0ZpESx3KdaNGiB4Szl4hOpg0/edit?usp=sharing) y [después](https://docs.google.com/a/gatsbyjs.com/forms/d/1iKok_QJHSav51_668QneqwxOFOMw_WNDPnX0PdBfUVA/edit?usp=sharing) de los talleres
+- [Diapositiva introductoria para el día 1](https://docs.google.com/presentation/d/1fQNLvf1C8kj4rY-hVVY5zCsxy0z03gGkiqc-wiHHYhI/edit?usp=sharing), [Diapositiva introductoria para el día 2](https://docs.google.com/presentation/d/1w_0CGX2DNUDAIDT0MCaCPNqA_0HgamutaECP8kZ3yyI/edit?usp=sharing)
+- [Agenda para los asistentes al taller](https://docs.google.com/document/d/1gn5dk5RkuOXgZatd-Ow4XGqKY1NWZVCaUhyOwrRP0JE/edit?usp=sharing)
+- [Guía paso a paso para el organizador del taller](https://docs.google.com/document/d/1epeLO_7xkbd-WvPDCEZZ8f2GV5uMLHHM_UIhpZxqRbo/edit?usp=sharing)
 
-We hope these workshop materials help you share Gatsby at work, meetups, and wherever else it makes sense. Let us know how it goes and how you customize or modify these workshops!
+Esperamos que estos materiales de talleres te ayuden a compartir Gatsby en el trabajo, meetups, y donde quiera que sea que tenga sentido. ¡Déjanos saber qué tal te va y como personalizas o modificas estos talleres!

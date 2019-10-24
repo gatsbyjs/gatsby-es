@@ -1,54 +1,54 @@
 ---
-title: Adding comments
+title: Agregando comentarios
 ---
 
-If you're using Gatsby to run a blog and you've started adding some content to it, the next thing to think about is how to increase engagement among your visitors. A great way to do that is to allow them to ask questions and express their views on what you've written. This will make your blog seem much more lively to anyone visiting it.
+Si tienes un blog corriendo en Gatsby y has empezado a agregar contenido a el, lo siguiente en lo que deberías pensar es en cómo incrementar el “engagement” entre tus visitantes. Una buena forma de hacerlo es permitir que tus usuarios puedan realizar preguntas y expresen sus puntos de vista sobre lo que has escrito. Esto hará ver tu blog mucho más dinámico para cualquiera que lo visite.
 
-There are many options out there for adding comment functionality, several of them specifically targeted at static sites. While this list is by no means exhaustive, it does serve as a good starting point to illustrate what's available:
+Existen muchas opciones para añadir funcionalidad de comentarios, muchos de ellos están enfocados especialmente a sitios estáticos. Aunque esta lista no es de ninguna manera exhaustiva, plantea un buen punto de inicio para ilustrar que hay disponible:
 
 - [Disqus](https://disqus.com)
 - [Commento](https://commento.io)
 - [Facebook comments](https://www.npmjs.com/package/react-facebook)
 - [Staticman](https://staticman.net)
-- [JustComments](https://just-comments.com) \([official plugin for Gatsby](https://www.gatsbyjs.org/packages/gatsby-plugin-just-comments/)\)
+- [JustComments](https://just-comments.com) \([Plugin oficial de Gatsby](https://www.gatsbyjs.org/packages/gatsby-plugin-just-comments/)\)
 - [TalkYard](https://www.talkyard.io)
 - [Gitalk](https://gitalk.github.io)
 
-You can also [roll your own comment system](/blog/2019-08-27-roll-your-own-comment-system/), as Tania Rascia wrote on the Gatsby blog.
+Puedes también [crear tu propio sistema de comentarios](/blog/2019-08-27-roll-your-own-comment-system/), como Tania Rascia escribió en el blog de Gatsby.
 
-## Using Disqus for comments
+## Usando Disqus para comentarios
 
-In this guide, we'll show you how to implement Disqus on your blog as it has a number of nice features.
+En esta guía te mostraremos como implementar Disqus en tu blog, ya que tiene características atractivas.
 
-- It is low maintenance, meaning [moderating your comments and maintaining your forum](https://help.disqus.com/moderation/moderating-101) is easy.
-- It provides official [React support](https://github.com/disqus/disqus-react).
-- It offers a [generous free tier](https://disqus.com/pricing).
-- It [seems to be by far the most widely used service](https://www.datanyze.com/market-share/comment-systems/disqus-market-share).
-- It’s easy to comment: Disqus has a large existing user base and the onboarding experience for new users is fast. You can register with your Google, Facebook or Twitter account and users can easily share the comments they write through those channels.
-- The Disqus UI has a distinct but unobtrusive look that many users will recognize and trust.
-- All Disqus components are lazy-loaded, meaning they won't negatively impact the load time of your posts.
+- Es de bajo mantenimiento, es decir, [moderar tus comentarios y mantener tu audiencia](https://help.disqus.com/moderation/moderating-101) es fácil.
+- Provee [soporte oficial de React](https://github.com/disqus/disqus-react).
+- Ofrece un [plan gratis muy generoso](https://disqus.com/pricing).
+- [Parece ser por mucho el servicio más usado](https://www.datanyze.com/market-share/comment-systems/disqus-market-share).
+- Es fácil comentar: Disqus tiene una gran base de usuarios y la experiencia de integración de nuevos usuarios es rápida. Puedes registrarte con tu cuenta de Google, Facebook o Twitter y los usuarios pueden compartir fácilmente los comentarios que escriben a través de esos canales.
+- La interfaz de Disqus tiene una inconfundible pero discreta apariencia que muchos usuarios reconocerán y confiarán en ella.
+- Todos los componentes de Disqus son "lazy-loaded", es decir, no impactarán en el tiempo de carga de tus entradas del blog.
 
-Bear in mind, however, that choosing Disqus also incurs a tradeoff. Your site is no longer entirely static but depends on an external platform to deliver your comments through embedded `iframe`s on the fly. Moreover, you should consider the privacy implications of letting a third party store your visitors' comments and potentially track their browsing behavior. You may consult the [Disqus privacy policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy), the [privacy FAQs](https://help.disqus.com/terms-and-policies/privacy-faq) (specifically the last question on GDPR compliance) and inform your users [how to edit their data sharing settings](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings).
+Sin embargo, ten en mente que usar Disqus también involucra un sacrificio. Tu sitio ya no es completamente estático, pues depende de una plataforma externa para enviar sus comentarios a través de `iframe`s integrados al momento en que el sitio cargue. Además, debes considerar las implicaciones de privacidad por permitir que un tercero guarde los comentarios de tus visitantes y potencialmente puedan seguir sus historiales de navegación. Puedes consultar el [aviso de privacidad de Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy), [preguntas frecuentes de privacidad](https://help.disqus.com/terms-and-policies/privacy-faq) (especialmente la última pregunta acerca del cumplimiento de GDPR) e informar a tus usuarios [como editar su configuración de difusión de datos](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings).
 
-If these concerns outweigh the benefits of Disqus, you may want to look into some of the other options above. We welcome pull requests to expand this guide with setup instructions for other services.
+Si estos problemas son más grandes que los beneficios de usar Disqus, puedes optar por alguna de las siguientes opciones. Aceptamos pull requests para expandir esta guía con instrucciones de configuración para otros servicios.
 
-## Implementing Disqus
+## Implementando Disqus
 
-![Disqus logo](images/disqus-logo.svg)
+![Logo de Disqus](images/disqus-logo.svg)
 
-Here are the steps for adding Disqus comments to your own blog:
+Pasos para agregar comentarios de Disqus a tu propio blog:
 
-1. [Sign-up to Disqus](https://disqus.com/profile/signup). During the process you'll have to choose a shortname for your site. This is how Disqus will identify comments coming from your site. Copy that for later.
-2. Install the Disqus React package
+1. [Registrarse a Disqus](https://disqus.com/profile/signup). Durante el proceso tendrás que escoger un nombre corto para tu sitio. De esta forma Disqus identificará comentarios viniendo de tu sitio. Guarda el nombre para después.
+2. Instalar el paquete Disqus React
 
 ```shell
 npm install disqus-react
 ```
 
-3. Add the shortname from step 1 as something like `GATSBY_DISQUS_NAME` to your `.env` and `.env.example` files so that people forking your repo will know that they need to supply this value to get comments to work. (You need to prefix the environment variable with `GATSBY_` in order to [make it available to client-side code](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
+3. Agregar el nombre que utilizaste en el paso 1 como, por ejemplo, `GATSBY_DISQUS_NAME` a tus archivos `.env` y `.env.example` para que las personas que hagan fork de tu repositorio sepan que ellos necesitan ingresar este valor para hacer funcionar los comentarios (Necesitas el prefix de la variable de entorno con `GATSBY_` para que pueda estar [disponible en el código cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
 ```title=.env.example
-# enables Disqus comments for blog posts
+# habilita comentarios de Disqus para posts en un blog
 GATSBY_DISQUS_NAME=insertValue
 ```
 
@@ -56,7 +56,7 @@ GATSBY_DISQUS_NAME=insertValue
 GATSBY_DISQUS_NAME=yourSiteShortname
 ```
 
-4. In your blog post template (usually `src/templates/post.js`) import the `DiscussionEmbed` component.
+4. En la plantilla de tu entrada de blog (usualmente `src/templates/post.js`) importa el componente `DiscussionEmbed`.
 
 ```js:title=src/templates/post.js
 import React from "react"
@@ -65,7 +65,7 @@ import { graphql } from "gatsby"
 import { DiscussionEmbed } from "disqus-react"
 ```
 
-Then define your Disqus configuration object
+Luego define tu objeto de configuración de Disqus
 
 ```js
 const disqusConfig = {
@@ -74,7 +74,7 @@ const disqusConfig = {
 }
 ```
 
-Where `identifier` must be a string or number that uniquely identifies the post. It could be the post's slug, title or some ID. Finally, add `DiscussionEmbed` to the JSX of your post template.
+Donde `identifier` debe ser un string o número que identifique exclusivamente a esa entrada de blog. Puede ser el slug del post, título o un ID. Finalmente, agrega `DiscussionEmbed` al JSX de la plantilla de tu entrada de blog.
 
 ```js:title=src/templates/post.js
 return (
@@ -87,6 +87,6 @@ return (
 )
 ```
 
-And you're done. You should now see the Disqus comment form appear beneath your blog post [looking like this](https://janosh.io/blog/disqus-comments#disqus_thread). Happy blogging!
+Y eso es todo. Ahora debes poder ver el formulario de comentarios de Disqus debajo del post de tu blog [de esta forma](https://janosh.io/blog/disqus-comments#disqus_thread). ¡Feliz blogging!
 
-[![Disqus comments](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+[![Comentarios de Disqus](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
