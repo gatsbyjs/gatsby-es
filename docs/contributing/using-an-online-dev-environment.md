@@ -42,7 +42,7 @@ Ahora puedes codificar, probar, consolidar (commit), mandar (push) y crear un PR
 
 Algunos cambios en el código requieren una revisión más profunda de lo que es posible mostrar en GithHub. Prefijar un PR con `gitpod.io/#` abrirá esa rama en modo de revisión de código.
 
-En este modo, puedes ver la lista de cambios de archivos a la izquierda y puedes navegar a través de ellos.  Puedes ejecutar la aplicación y usar las funciones de edición para explorar el código fuente modificado. Además de ver los comentarios existentes o agregar nuevos comentarios en el editor y enviar el resultado de tu revisión.
+En este modo, puedes ver la lista de cambios de archivos a la izquierda y puedes navegar a través de ellos. Puedes ejecutar la aplicación y usar las funciones de edición para explorar el código fuente modificado. Además de ver los comentarios existentes o agregar nuevos comentarios en el editor y enviar el resultado de tu revisión.
 
 ## Cómo ejecutar otro ejemplo
 
