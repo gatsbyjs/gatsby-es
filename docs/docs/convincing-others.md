@@ -4,7 +4,7 @@ title: Convencer a los demás
 
 Esta sección de la documentación tiene un tenor ligeramente distinto al resto de los docs.
 
-El propósito del resto de los docs es ayudarte a comprender Gatsby. El propósito de esta sección es de ayudarte a explicar Gatsby a otros.
+El propósito del resto de la documentación es ayudarte a comprender Gatsby. El propósito de esta sección es de ayudarte a explicar Gatsby a otros.
 
 Explicar Gatsby bien a otros, y ayudar a convencerlos de usarlo (o que te dejen usarlo) es un tipo de problema distinto a convertirse en un desarrollador talentoso de Gatsby.
 
