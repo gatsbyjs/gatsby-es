@@ -67,7 +67,6 @@ Después haz algunos ajustes a la configuración predeterminada de `webpack` par
 
 Crea un nuevo archivo llamado `webpack.config.js` en la carpeta `.storybook` creada por el CLI de Storybook. Luego ubica el siguiente código en ese archivo (dependiendo en qué versión de Storybook estás utilizando.
 
-
 **Para Storybook v5:**
 
 ```js:title=.storybook/webpack.config.js
