@@ -17,9 +17,10 @@ Si has contribuido de otras maneras, como dando charlas sobre Gatsby, enseñando
 ### Detalles sobre el premio
 
 - Enviaremos un artículo desde nuestra [tienda](https://store.gatsbyjs.org/) por nivel del premio
+- El premio de nivel 1 incluye la mayoría de los artículos menores a \$10
+- El premio de nivel 2 incluye la mayoría de los artículos menores a \$26
 - No todos los artículos son elegibles debido al alto costo de crearlo. Dejaremos claro qué artículos no son elegibles
 - Hay un límite de un premio por cada nivel
 - El envio es gratis a todo el mundo
-
 
 > **NOTA:** El envío gratuito en todo el mundo es un programa piloto. Si los costos de envío se salen de control, es posible que tengamos que ajustar esta política en el futuro.
