@@ -251,7 +251,7 @@ El código `console.log(styles)` registrará en consola lo importado para que pu
 
 ![css-modules-console](css-modules-console.png)
 
-Si comparas eso contra tu archivo CSS, observarás que cada clase es ahora una llave en el objeto importado apuntando a una cadena larga, por ejemplo `avatar` apunta a `src-pages----about-css-modules-module---avatar---2lRF7`. Estos son los nombres de clase que genera Módulos CSS. Está garantizado que serán únicas en todo tu sitio web. Y debido a que tienes que importarlas para usar las clases, nunca habrá ninguna duda de donde se está usado algo de CSS.
+Si comparas eso contra tu archivo CSS, observarás que cada clase es ahora una llave en el objeto importado apuntando a una cadena larga, por ejemplo `avatar` apunta a `src-pages----about-css-modules-module---avatar---2lRF7`. Estos son los nombres de clase que genera Módulos CSS. Está garantizado que serán únicas en todo tu sitio web. Y debido a que tienes que importarlas para usar las clases, nunca habrá ninguna duda de donde se está usando algo de CSS.
 
 4. Crea un componente `User`.
 
@@ -316,7 +316,7 @@ Si estás interesado en leer más, consulta la presentación de 2014 de [Christo
 
 ### Otras opciones CSS
 
-Gatsby soporta casi cualquier opción de estilizado (si no existe algún plugin aún para tu opción CSS favorita, [¡por favor contribuye con uno!](/contributing/how-to-contribute/))
+Gatsby ofrece compatibilidad con casi cualquier opción de estilizado (si no existe algún plugin aún para tu opción CSS favorita, [¡por favor contribuye con uno!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
