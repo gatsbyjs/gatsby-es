@@ -1,8 +1,8 @@
 ---
-title: Testeo Visual con Storybook
+title: Pruebas visuales con Storybook
 ---
 
-Saber que tus componentes se ven como deberían en cada permutación no es sólo una gran manera de testearlos visualmente, sino que también provee "documentación viva" para ellos. Esto facilita a los equipos a:
+Saber que tus componentes se ven como deberían en cada permutación no es sólo una gran manera de probarlos visualmente, sino que también provee una "documentación viva" para ellos. Esto facilita a los equipos a:
 
 1. saber qué componentes están disponibles para ellos en un proyecto dado y
 2. saber qué propiedades aceptan esos componentes y cuáles son todos los estados de ese componente.
@@ -24,9 +24,9 @@ cd my-awesome-gatsby-project
 sb init
 ```
 
-> Nota que si estás corriendo una versión reciente de `npm` (5.2.0+) puedes correr el siguiente comando singular en vez del anterior: `npx -p @storybook/cli sb init`, el cual es el método recomendado por Storybook. Ésto no instala el CLI en tu computadora, de este modo asegurando que siempre estés corriendo la última versión disponible del CLI.
+> Nota que si estás ejecutando una versión reciente de `npm` (5.2.0+) puedes correr el siguiente comando singular en vez del anterior: `npx -p @storybook/cli sb init`, el cual es el método recomendado por Storybook. Esto no instala el CLI en tu computadora, de este modo asegurando que siempre estés corriendo la última versión disponible del CLI.
 
-El comando `sb init` arranca la configuración básica necesaria para correr Storybook en un proyecto React. Pero, al ser ésto para un proyecto de Gatsby, necesitas instalar la configuración predeterminada así no obtienes errores cuando estés tratando de utilizar componentes específicos de Gatsby en las historias.
+El comando `sb init` arranca la configuración básica necesaria para ejecutar Storybook en un proyecto React. Pero, al ser esto para un proyecto de Gatsby, necesitas instalar la configuración predeterminada, así no obtienes errores cuando estés tratando de utilizar componentes específicos de Gatsby en las historias.
 
 Para actualizar tu configuración de Storybook abre `.storybook/config.js` y modifica el contenido del siguiente modo:
 
@@ -35,24 +35,24 @@ import { configure } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
 // automáticamente importa todos los archivos terminando en *.stories.js
-// delinea-la-proxima-linea
+// highlight-next-line
 const req = require.context("../src", true, /.stories.js$/)
 function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
 
 // highlight-start
-// El pisado de Link de Gatsby:
-// Gatsby define una global llamada ___loader para prevenir que sus llamadas de métodos creen errores de consola. Debes pisarlo aquí
+// La sobreescritura de Link de Gatsby:
+// Gatsby define una llamada global ___loader para prevenir que sus llamadas de métodos creen errores de consola. Debes pisarlo aquí
 global.___loader = {
   enqueue: () => {},
   hovering: () => {},
 }
 
-// Mockeo interno de Gatsby para evitar errores innecesarios en ambientes de testing de storybook
+// "Mock" interno de Gatsby para evitar errores innecesarios en ambientes de testing de storybook
 global.__PATH_PREFIX__ = ""
 
-// Esto es utilizado para pisar el método window.___navigate method que Gatsby usa y define para reportar qué camino un Link estaría llevándonos si no estuviese dentro de un storybook
+// Esto es utilizado para sobreescribir el método window.___navigate que Gatsby usa y define para reportar qué camino un Link estaría llevándonos si no estuviese dentro de un storybook
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
@@ -63,19 +63,19 @@ configure(loadStories, module)
 
 > Puedes eliminar la carpeta  `stories` de la raíz de tu proyecto o moverla adentro de tu carpeta `src`
 
-Después haz algunos ajustes a la configuración predeterminada de `webpack` para Storybook asi puedes transpilar archivos source de Gatsby, y para asegurar que tienes los plugins necesarios de `babel` para transpilar componentes de Gatsby.
+Después haz algunos ajustes a la configuración predeterminada de `webpack` para Storybook asi puedes transpilar archivos fuente de Gatsby, y para asegurar que tienes los plugins necesarios de `babel` para transpilar componentes de Gatsby.
 
-Crea un nuevo archivo llamado `webpack.config.js` en la carpeta `.storybook` creada por el CLI de Storybook. Luego ubica el siguiente código en ese archivo (dependiente en qué versión de Storybook estás utilizando.
+Crea un nuevo archivo llamado `webpack.config.js` en la carpeta `.storybook` creada por el CLI de Storybook. Luego ubica el siguiente código en ese archivo (dependiendo en qué versión de Storybook estás utilizando.
 
 
 **Para Storybook v5:**
 
 ```js:title=.storybook/webpack.config.js
 module.exports = ({ config }) => {
-  // Transpila el módulo de Gatsby por que Gatsby incluye código de ES6 no-transpilado.
+  // Transpila el módulo de Gatsby porque Gatsby incluye código de ES6 no-transpilado.
   config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
 
-  // Usa el babel-loader instalado que es v8.0-beta (que se supone debe trabajar junto a @babel/core@7)
+  // Usa el babel-loader instalado que es v8.0-beta (que debe trabajar junto a @babel/core@7)
   config.module.rules[0].use[0].loader = require.resolve("babel-loader")
 
   // usa @babel/preset-react para JSX y env (en vez de etapas preseteadas)
@@ -98,7 +98,7 @@ module.exports = ({ config }) => {
 }
 ```
 
-> Nota que si estás utilizando un [StaticQuery](/docs/static-query/) en tus components, `babel-plugin-remove-graphql-queries` es necesario para renderearlos en Storybook. Esto es por que los queries son construidos a la hora del build de Gatsby, y no será corrido cuando se rendereen los componentes directamente.
+> Nota que si estás utilizando un [StaticQuery](/docs/static-query/) en tus componentes, `babel-plugin-remove-graphql-queries` es necesario para renderizarlos en Storybook. Esto es porque los queries son construidos a la hora del compilado de Gatsby, y no será ejecutado cuando se rendericen los componentes directamente.
 
 > Cuando utilizas TypeScript, agrega esta regla::
 
@@ -114,7 +114,7 @@ config.resolve.mainFields = ["browser", "module", "main"]
 +       presets: [['react-app', {flow: false, typescript: true}]],
 +       plugins: [
 +         require.resolve('@babel/plugin-proposal-class-properties'),
-+         // Usa babel-plugin-remove-graphql-queries para eliminar queries estáticas de componentes cuando se renderea en storybook
++         // Usa babel-plugin-remove-graphql-queries para eliminar queries estáticas de componentes cuando se renderiza en storybook
 +         require.resolve('babel-plugin-remove-graphql-queries'),
 +       ],
 +     },
@@ -154,15 +154,15 @@ module.exports = (baseConfig, env, defaultConfig) => {
   return defaultConfig
 }
 ```
-Una vez que ya tienes todo esto configurado, corre Storybook para asegurarte que puede arrancar correctamente y puedes ver las historias predeterminadas instaladas por el CLI. Para correr storybook:
+Una vez que ya tienes todo esto configurado, ejecuta Storybook para asegurarte que puede arrancar correctamente y puedes ver las historias predeterminadas instaladas por el CLI. Para correr storybook:
 
 ```shell
 npm run storybook
 ```
 
-El CLI de Storybook agrega este comando a tu `package.json` para que no tengas que hacer otra cosa que correr el comando. Si Storybook hace un build exitoso deberías poder navegar a `http://localhost:6006` y ver las historias default provistas por el CLI de Storybook
+El CLI de Storybook agrega este comando a tu `package.json` para que no tengas que hacer otra cosa que correr el comando. Si Storybook hace un build exitoso deberías poder navegar a `http://localhost:6006` y ver las historias por defecto provistas por el CLI de Storybook
 
-De otro modo, si utilizas `StaticQuery` o `useStaticQuery` en tu proyecto Storybook necesita ser corrido con el `NODE_ENV` configurado a  `production` (ya que Storybook setea esaas Storybook sets this by default to `development`). De otro modo `babel-plugin-remove-graphql-queries` no correrá. Aún más, Storybook necesita saber sobre los [archivos estáticos](https://storybook.js.org/docs/configurations/serving-static-files/#2-via-a-directory) generados por el `StaticQuery` de Gatsby. Tus scripts deberían verse como:
+De otro modo, si utilizas `StaticQuery` o `useStaticQuery` en tu proyecto Storybook necesita ser ejecutado con el `NODE_ENV` configurado a `production` (ya que Storybook lo configura por defecto a `development`). De otro modo `babel-plugin-remove-graphql-queries` no se ejecutará. Es más, Storybook necesita saber sobre los [archivos estáticos](https://storybook.js.org/docs/configurations/serving-static-files/#2-via-a-directory) generados por el `StaticQuery` de Gatsby. Tus scripts deberían verse como:
 
 ```json:title=package.json
 {
@@ -175,11 +175,11 @@ De otro modo, si utilizas `StaticQuery` o `useStaticQuery` en tu proyecto Storyb
 
 ## Escribiendo historias
 
-Una guía completa de escritura de historias está más allá del alcance de esta guía, pero le daremos una mirada a cómo crear una historia.
+Una guía completa de escritura de historias está más allá del alcance de esta guía, pero te daremos una mirada a cómo crear una historia.
 
-Primero, crea el archivo de historia. Storybook busca todos los archivos con extensión `.stories.js` y los carga adentro de Storybook para ti. Generalemnte querrás que tus historias cerca de donde el componente se define, pero como ésto es Gatsby, si quieres escribir historias para tus páginas, tendrás que crear esos mismos archivos fuera del directorio `pages`.
+Primero, crea el archivo de historia. Storybook busca todos los archivos con extensión `.stories.js` y los carga adentro de Storybook para ti. Generalemnte querrás tus historias cerca del componente donde se definen, pero como esto es Gatsby, si quieres escribir historias para tus páginas, tendrás que crear esos mismos archivos fuera del directorio `pages`.
 
-> Una buena solución es crear un directorio `__stories__` próximo a tu directorio `pages` y pon todas tus historias de página allí.
+> Una buena solución es crear un directorio `__stories__` próximo a tu directorio `pages` y poner todas tus historias de página allí.
 
 ```jsx:title=src/components/example.stories.js
 import React from "react"
@@ -192,10 +192,10 @@ storiesOf(`Dashboard/Header`, module).add(`default`, () => (
 ))
 ```
 
-Ésta es una muy simple historia con no mucho ocurriendo, pero honestamente, nada realmente cambia como relacionado a Gatsby. Si quieres aprender como Storybook funciona y qué puedes hacer con él, chequea algunos de los recursos listados debajo.
+Ésta es una muy simple historia con no mucho ocurriendo, pero honestamente, nada realmente cambia con lo relacionado a Gatsby. Si quieres aprender como Storybook funciona y qué puedes hacer con él, chequea algunos de los recursos listados debajo.
 
 ## Otros recursos
 
 - Para más información sobre Storybook, visita
   [el sitio de Storybook](https://storybook.js.org/).
-- Comienza con un arrancador de  [Jest y Storybook](https://github.com/Mathspy/gatsby-storybook-jest-starter)
+- Comienza con un starter de [Jest y Storybook](https://github.com/Mathspy/gatsby-storybook-jest-starter)
