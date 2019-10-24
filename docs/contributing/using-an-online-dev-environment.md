@@ -46,7 +46,7 @@ En este modo, puedes ver la lista de cambios de archivos a la izquierda y puedes
 
 ## Cómo ejecutar otro ejemplo
 
-Si tu quieres ejecutar otro ejemplo, puedes abrir la terminal o usar una existente y ejecutar los siguientes comandos:
+Si quieres ejecutar otro ejemplo, puedes abrir la terminal o usar una existente y ejecutar los siguientes comandos:
 
 ```shell
 yarn install
