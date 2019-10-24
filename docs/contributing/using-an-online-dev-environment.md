@@ -1,12 +1,13 @@
 ---
-title: Usando Gitpod, un ambiente de desarrollo Online
+title: Usando Gitpod, un ambiente de desarrollo en línea
 ---
 
-Esta página resume como usar Gitpod, un ambiente de desarrollo Online gratuito, para contribuir al core de Gatsby y a su ecosistema. Para obtener instrucciones sobre cómo configurar un entorno de desarrollo localmente, visita la página de [configuración local](/contributing/setting-up-your-local-dev-environment/).
+Esta página resume como usar Gitpod, un ambiente de desarrollo en línea gratuito, para contribuir al core de Gatsby y a su ecosistema. Para obtener instrucciones sobre cómo configurar un entorno de desarrollo localmente, visita la página de [configuración local](/contributing/setting-up-your-local-dev-environment/).
 
 ## Sobre Gitpod
 
-Gitpod facilita las contribuciones en GitHub, al permitir configuraciones de entornos de desarrollo automatizados. En lugar de escribir mucha documentación de como instalar, configurar y dejar que cada contribuidor pase por esta aventura, la configuración es automática y reproducible.
+Gitpod facilita las contribuciones en GitHub, al permitir configuraciones de entornos de desarrollo automatizados.
+En lugar de escribir mucha documentación de como instalar, configurar y dejar que cada contribuidor pase por esta aventura, la configuración es automática y reproducible.
 
 Además, Gitpod pre-compila cada rama del repositorio, para que no tengas que esperar la instalación, la clonación y la compilación.
 
@@ -17,7 +18,6 @@ Para iniciar un nuevo entorno de desarrollo, puedes prefijar cualquier URL de Gi
 > Ejemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby
 
 El entorno de desarrollo iniciado, se abrirá con un proyecto core de Gatsby listo para usar, así como con un ejemplo integrado (gatsbygram).
-
 Se inician tres terminales en paralelo, ejecutando los siguientes procesos:
 
 - `yarn run watch --scope={gatsby,gatsby-image,gatsby-link}`
