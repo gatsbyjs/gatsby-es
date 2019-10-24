@@ -29,7 +29,7 @@ Se inician tres terminales en paralelo, ejecutando los siguientes procesos:
 
 El ejemplo que se está ejecutando se muestra a la derecha en una ventana de vista previa.
 
-## Trabajando en un problema
+## Trabajando en un issue
 
 Para empezar a trabajar en un issue, puedes prefijar la URL del issue con `gitpod.io/#`.
 
