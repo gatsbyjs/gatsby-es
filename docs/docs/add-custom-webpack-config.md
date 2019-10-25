@@ -89,6 +89,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   })
 }
 ```
+
 Puedes encontrar más información sobre _resolve_ y otras opciones en la [documentación oficial de Webpack](https://webpack.js.org/concepts/).
 
 ### Modificando el loader de babel
