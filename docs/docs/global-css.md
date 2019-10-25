@@ -4,15 +4,15 @@ title: Estilos estándar con archivos CSS globales
 
 Tradicionalmente, los sitios web han sido dotados de estilos usando archivos globales CSS.
 
-Las reglas de CSS con ámbito global están declaradas en hojas de estilo externas `.css`, y [la especificidad de CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) y [su Cascada](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) determinan como los estilos se aplican.
+Las reglas de CSS con ámbito global están declaradas en hojas de estilo externas `.css`, y [la especificidad de CSS](https://developer.mozilla.org/es/docs/Web/CSS/Especificidad) y [su Cascada](https://developer.mozilla.org/es/docs/Web/CSS/Cascade) determinan como los estilos se aplican.
 
 ## Añadiendo estilos globales con un componente layout
 
 La mejor manera de añadir estilos globales es con un [componente layout compartido](/tutorial/part-three/#your-first-layout-component). Este componente layout se usa para cosas que se comparten a lo largo del sitio web, incluyendo estilos, componentes de cabeceras y otros objetos comunes.
 
-> **NOTA:** Este patrón se implementa por defecto en [el inicio por defecto](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
+> **NOTA:** Este patrón se implementa por defecto en [el starter por defecto](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
 
-Para crear un layout compartido con estilos globales, comienza creando un nuevo sitio Gatsby con el [inicio Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world).
+Para crear un layout compartido con estilos globales, comienza creando un nuevo sitio Gatsby con el [starter Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world).
 
 ```shell
 gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -142,4 +142,4 @@ Ya que `class` es una palabra reservada en JavaScript, tendrás que usar la prop
 
 El mayor problema con los archivos CSS globales es el riesgo de conflictos con los nombres y efectos secundarios colaterales como herencias no deseadas.
 
-Metodologías CSS como BEM pueden ayudar a solucionarlo, pero una solución más moderna es escribir CSS con ámbito local usando  [Modulos CSS](/docs/css-modules/) o [CSS-in-JS](/docs/css-in-js/).
+Metodologías CSS como BEM pueden ayudar a solucionarlo, pero una solución más moderna es escribir CSS con ámbito local usando  [Módulos CSS](/docs/css-modules/) o [CSS-in-JS](/docs/css-in-js/).
