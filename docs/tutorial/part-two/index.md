@@ -124,9 +124,9 @@ gatsby develop
 
 Si echas un vistazo a tu proyecto en el navegador, deberías ver el fondo de atrás de color lavanda:
 
-![global-css](global-css.png)
+![Hola mundo color Lavanda](global-css.png)
 
-> Consejo: Esta parte del tutorial se ha enfocado en la manera más rápida y directa para iniciar a estilizar un sitio web Gatsby - importando directamente archivos CSS normales, usando `gatsby-browser.js`. En la mayoría de los casos, la mejor manera de agregar estilos globales es con un componente de diseño compartido. [Revisa la documentación](/docs/creating-global-styles/#how-to-add-global-styles-in-gatsby-with-standard-css-files) para saber más acerca de esta aproximación.
+> Consejo: Esta parte del tutorial se ha enfocado en la manera más rápida y directa para iniciar a estilizar un sitio web Gatsby - importando directamente archivos CSS normales, usando `gatsby-browser.js`. En la mayoría de los casos, la mejor manera de agregar estilos globales es con un componente de diseño compartido. [Revisa la documentación](/docs/global-css/) para saber más acerca de esta aproximación.
 
 ## Usando CSS limitado al componente
 
@@ -137,7 +137,8 @@ Hasta aquí, hemos hablado acerca de la aproximación más tradicional de usar h
 Exploremos **Módulos CSS**. Citando de
 [la página Módulo CSS](https://github.com/css-modules/css-modules):
 
-> Un **Módulo CSS** es un archivo CSS en el cual todos los nombres de las clases y animaciones están limitados localmente por defecto.
+> Un **Módulo CSS** es un archivo CSS en el cual todos los nombres de las clases y animaciones
+> están limitados localmente por defecto.
 
 Los Módulos CSS son muy populares porque te permiten escribir CSS normalmente, pero con mayor confianza. La herramienta genera automáticamente nombres de clases y animaciones únicas, así que no tienes que preocuparte por colisiones de nombres en selectores de estilos.
 
@@ -191,11 +192,11 @@ export default () => (
 
 Ahora, si visitas `http://localhost:8000/about-css-modules/`, tu página debería verse algo parecido a esto:
 
-![css-modules-basic](css-modules-basic.png)
+![Página con estilos de módulos CSS](css-modules-basic.png)
 
 #### ✋ Dale estilo a un componente utilizando Módulos CSS
 
-En esta sección, crearás una lista de personas con sus nombres, avatares y una biografía corta en latín. Crearás un componente `<User />` y le darás estilo a ese componente utilizando un modulo CSS.
+En esta sección, crearás una lista de personas con sus nombres, avatares y una biografía corta en latín. Crearás un componente `<User />` y le darás estilo a ese componente utilizando un módulo CSS.
 
 1. Crea el archivo para el CSS en `src/pages/about-css-modules.module.css`.
 
@@ -249,13 +250,14 @@ console.log(styles)
 
 El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome) en tu navegador, verás:
 
-![css-modules-console](css-modules-console.png)
+![Resultado de importar módulos CSS en consola](css-modules-console.png)
 
 Si comparas eso contra tu archivo CSS, observarás que cada clase es ahora una llave en el objeto importado apuntando a una cadena larga, por ejemplo `avatar` apunta a `src-pages----about-css-modules-module---avatar---2lRF7`. Estos son los nombres de clase que genera Módulos CSS. Está garantizado que serán únicas en todo tu sitio web. Y debido a que tienes que importarlas para usar las clases, nunca habrá ninguna duda de donde se está usando algo de CSS.
 
 4. Crea un componente `User`.
 
-Crea un nuevo componente `<User />` en el mismo archivo del componente página `about-css-modules.js`. Modifica `about-css-modules.js` para que se vea así:
+Crea un nuevo componente `<User />` en el mismo archivo del componente de página `about-css-modules.js`.
+Modifica `about-css-modules.js` para que se vea así:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
@@ -300,7 +302,7 @@ export default () => (
 
 El resultado final de la página web debería verse así:
 
-![css-modules-userlist](css-modules-userlist.png)
+![Página de listado de usuarios con módulos CSS](css-modules-userlist.png)
 
 ### CSS-in-JS
 

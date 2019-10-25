@@ -8,7 +8,7 @@ Existen muchas opciones para añadir funcionalidad de comentarios, muchos de ell
 
 - [Disqus](https://disqus.com)
 - [Commento](https://commento.io)
-- [Facebook comments](https://www.npmjs.com/package/react-facebook)
+- [Facebook Comments](https://www.npmjs.com/package/react-facebook)
 - [Staticman](https://staticman.net)
 - [JustComments](https://just-comments.com) \([Plugin oficial de Gatsby](https://www.gatsbyjs.org/packages/gatsby-plugin-just-comments/)\)
 - [TalkYard](https://www.talkyard.io)
