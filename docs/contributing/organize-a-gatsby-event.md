@@ -1,39 +1,39 @@
 ---
-title: Organize a Gatsby Event
+title: Organiza un Evento de Gatsby
 ---
 
-Interested in organizing a Gatsby event? We want to help build the Gatsby community in your area. If your event meets a few basic requirements listed below, you’ll be eligible to receive support from Gatsby such as Gatsby swag, \$300 for food, learning resources, and more. Get started by requesting event support below.
+¿Estás interesado en organizar un evento de Gatsby? Queremos ayudar a construir la comunidad de Gatsby en tu área. Si tu evento cumple con algunos requisitos básicos listados abajo, serás elegible para recibir apoyo de Gatsby, como regalos de Gatsby, \$300 dólares para comida, recursos de aprendizaje, y más. Empieza pidiendo apoyo para el evento en la parte de abajo.
 
-[Request Event Support](https://airtable.com/shrpwc99yogJm9sfI)
+[Pide Apoyo para Eventos](https://airtable.com/shrpwc99yogJm9sfI)
 
-## What constitutes a Gatsby event?
+## ¿Qué constituye un evento de Gatsby?
 
-A community organized Gatsby event can be a local meetup, a small conference, a _lunch and learn_ with coworkers, or a larger event. It’s up to you how many people you want to invite and how casual the environment. You can organize an event at your workplace or for the local community.
+Un evento de Gatsby organizado por la comunidad puede ser un meetup local, una pequeña conferencia, un _Almuerza y Aprende_ con compañeros de trabajo, o un evento más grande. Depende de ti a cuántas personas quieres invitar y qué tan informal quieres que sea el ambiente. Puedes organizar un evento en tu trabajo o en una comunidad local.
 
-## What support does Gatsby provide?
+## ¿Qué apoyo provee Gatsby?
 
-There are several ways Gatsby may support your event:
+Hay varias formas en las que Gatsby puede apoyarte con tu evento:
 
-- Promote event on the [Gatsbyjs.org Events Page](/contributing/events/)
-- Promote event via [Gatsby’s Twitter handle](https://twitter.com/gatsbyjs)
-- \$300 off food related expenses
-- Free Gatsby stickers from the [Gatsby Swag Store](https://store.gatsbyjs.org/)
-- 20% off swag in the [Gatsby Swag Store](https://store.gatsbyjs.org/) for your attendees
-- Gatsby team member speaker (when available)
+- Promover el evento en la [Página de Eventos de Gatsbyjs.org](/contributing/events/)
+- Promover el evento por [el usuario de Gatsby’s en Twitter](https://twitter.com/gatsbyjs)
+- \$300 dólares para gastos relacionados a comida
+- Stickers gratis de Gatsby de la [Tienda de Regalos de Gatsby](https://store.gatsbyjs.org/)
+- 20% de descuento en la [Tienda de Regalos de Gatsby](https://store.gatsbyjs.org/) para los asistentes
+- Un conferencista del equipo de Gatsby (cuando haya disponibilidad)
 
-## Requirements
+## Requisitos
 
-- The event must have at least half of the content focused on Gatsby or a Gatsby-related topic (such as JAMstack)
-- Both US and international events qualify for support
-- If you’re requesting the \$300 food credit, then you must submit a receipt for the expense
-- The event must be in harmony with the [Gatsby Code of Conduct](/contributing/code-of-conduct/) and follow the [Gatsby brand guidelines](/guidelines/logo/)
+- El evento debe tener por lo menos la mitad de su contenido enfocado a Gatsby o temas relacionados a Gatsby (como JAMstack)
+- Tanto eventos de Estados Unidos como internacionales califican para apoyo
+- Si pides los \$300 dólares para crédito alimenticio, debes enviar un recibo para los gastos
+- El evento debe estar en armonía con el [Código de Conducta de Gatsby](/contributing/code-of-conduct/) y seguir las [directrices de marca de Gatsby](/guidelines/logo/)
 
-## How do you qualify for Gatsby support?
+## ¿Cómo calificas para el apoyo de Gatsby?
 
-To request support and submit your event to the Gatsby events page, apply at the link below.
+Para solicitar apoyo y enviar tu evento a la página de eventos de Gatsby, debes solicitarlo en el enlace de abajo.
 
-[Request Event Support](https://airtable.com/shrpwc99yogJm9sfI)
+[Solicitud de Apoyo en Eventos](https://airtable.com/shrpwc99yogJm9sfI)
 
-## Related Links:
+## Enlaces Relacionados:
 
-- [Gatsby's Community Events](/contributing/events/)
+- [Eventos de la Comunidad de Gatsby](/contributing/events/)

@@ -126,11 +126,9 @@ Puedes ver tu sitio web en local en [**_http://localhost:8000_**](http://localho
 
 Un editor de código es un programa diseñado específicamente para editar código. Hay opciones muy buenas disponibles.
 
-> Si nunca has trabajado con un editor de código antes, te recomendamos [**VS Code**](https://code.visualstudio.com/), simplemente porque las capturas de pantalla usadas en el tutorial fueron hechas en VS Code, con lo que te será más familar.
-
 ### Descarga VS Code
 
-La documentación de Gatsby a veces incluye capturas de pantalla de editores de código; estas capturas muestran VS Code, asi que si no tienes un editor de código preferido aún, usando VS Code te asegurarás que lo que ves en tu pantalla se verá como las capturas en el tutorial y la documentación. Si has escogido usar VS Code, visita el [sitio oficial de VS Code](https://code.visualstudio.com/#alt-downloads) y descarga la versión adecuada para tu sisstema operativo.
+La documentación de Gatsby a veces incluye capturas que fueron tomadas en VS Code, asi que si no tienes un editor de código preferido aún, usando VS Code te asegurarás que lo que ves en tu pantalla se verá como las capturas en el tutorial y la documentación. Si has escogido usar VS Code, visita el [sitio oficial de VS Code](https://code.visualstudio.com/#alt-downloads) y descarga la versión adecuada para tu sisstema operativo.
 
 ### Instala el plugin de Prettier
 
@@ -159,7 +157,7 @@ Ahora, sigamos a [**conociendo los bloques de construcción de Gatsby**](/tutori
 
 ## Referencias
 
-## Descripción general de las tecnologías principales
+### Descripción general de las tecnologías principales
 
 No es necesario ser un experto en ésto ahora — ¡Si no lo eres, no te preocupes! Aprenderás mucho durante el transcurso de ésta serie de tutoriales. Estas son algunas de las tecnologías web más comunes y que usarás para crear sitios web Gatsby:
 
@@ -169,15 +167,15 @@ No es necesario ser un experto en ésto ahora — ¡Si no lo eres, no te preocup
 - **React**: Una librería de código (creada con JavaScript) para construir interfaces de usuario. Es el framework que Gatsby usa para crear páginas y estructurar contenido.
 - **GraphQL**: Un lenguaje de consulta que le permite extraer datos en su sitio web. Es la interfaz que Gatsby usa para gestionar los datos del sitio.
 
-## Qué es un sitio web?
+### Qué es un sitio web?
 
 Para una introducción completa de lo que es un sitio web, --incluida una introducción a HTML y CSS--, mira "[**Building your first web page**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)". Es un gran sitio para comenzar a aprender sobre la web. Para una introducción más práctica a [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css) y [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), consulta los tutoriales de Codecademy. [**React**](https://es.reactjs.org/tutorial/tutorial.html) y [**GraphQL**](http://graphql.org/graphql-js/) también tienen sus propios tutoriales introductorios.
 
-## Aprende más sobre la línea de comandos
+### Aprende más sobre la línea de comandos
 
 Para una excelente introducción al uso de la línea de comandos, consulte el [**tutorial de la línea de comandos de Codecademy**](https://www.codecademy.com/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command) para usuarios de Mac y Linux, y [**este tutorial**](https://www.computerhope.com/issues/chusedos.htm) para usuarios de Windows. Incluso si es un usuario de Windows, la primera página del tutorial de Codecademy es una lectura valiosa. Explica qué es la línea de comandos, no solo cómo interactuar con ella.
 
-## Aprende más sobre npm
+### Aprende más sobre npm
 
 npm es un administrador de paquetes de JavaScript. Un paquete es un módulo de código que puedes elegir incluir en tus proyectos. Si acabas de descargar e instalar Node.js, ¡npm se instaló también!
 
@@ -189,6 +187,6 @@ npm tiene tres componentes distintos: el sitio web de npm, el registro de npm y 
 
 > 💡 Mira la Introducción a npm, “[**Qué es npm?**](https://docs.npmjs.com/getting-started/what-is-npm)”.
 
-## Aprende más sobre Git
+### Aprende más sobre Git
 
 No tienes que saber Git para completar este tutorial, pero es una herramienda muy util. Si estás interesado en aprender sobre control de versiones, Git y Github, mira el [Git Handbook](https://guides.github.com/introduction/git-handbook/).
