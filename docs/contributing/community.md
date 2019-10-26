@@ -58,7 +58,7 @@ Este evento recurrente toma lugar cada miércoles a las 8:30 AM Hora estándar d
 Muchos miembros de la comunidad usan Stack Overflow para hacer preguntas. Lee
 las [preguntas existentes](http://stackoverflow.com/questions/tagged/gatsby)
 etiquetadas con **gatsby** o
-¡[haz tu próxima](http://stackoverflow.com/questions/ask?tags=gatsby)!
+¡[haz tu pregunta](http://stackoverflow.com/questions/ask?tags=gatsby)!
 
 ### Discord
 
@@ -71,7 +71,14 @@ a recursos útiles.
 Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus tips. Lee
 las [preguntas y posts existentes](https://hashnode.com/n/gatsby)
 etiquetados con **gatsby** o
-[haz tu propia pregunta](https://hashnode.com/create/question) o [comparte tu historia](https://hashnode.com/create/story) y agrega la etiqueta `gatsby`.
+[haz tu pregunta](https://hashnode.com/create/question) o [comparte tu historia](https://hashnode.com/create/story) y agrega la etiqueta `gatsby`.
+
+### DEV Community
+
+DEV Community es otra plataforma donde tambien puedes hacer preguntas y compartir tus tips. Lee
+las [preguntas y post existentes](https://dev.to/t/gatsby)
+etiquetados con **gatsby** o
+[pide ayuda](https://dev.to/new/help). Además puedes [escribir un post](https://dev.to/new/gatsby) con la etiqueta **gatsby**.
 
 ## Aprende más sobre Gatsby:
 
