@@ -23,7 +23,7 @@ Este ejemplo muestra Node versión 10, específicamente v10.16.0.
 
 ## Actualizando desde Node versión 6
 
-Node versión 6 alcanzó el status de  _Fin de Ciclo (End-of-life)_ el 30 de Abril del 2019. Muchas de las dependencias de Gatsby están actualizándose a Node versión 8 y superiores. Gatsby también debe actualizarse para entregar nuevos features y bug fixes más rápidamente.
+Node versión 6 alcanzó el estado de  _Fin de Ciclo (End-of-life)_ el 30 de Abril del 2019. Muchas de las dependencias de Gatsby están actualizándose a Node versión 8 y superiores. Gatsby también debe actualizarse para entregar nuevas funcionalidades y corrección de bugs más rápidamente.
 
 Generalmente recomendaríamos usar [la versión de Node cuyo status es Activa LTS (Active LTS)](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 al momento de escribir ésto). De todos modos, en este documento aprenderás cómo actualizar de Node 6 a Node 7 ya que esto probablemente será la actualización menos disruptiva para tí.
 
