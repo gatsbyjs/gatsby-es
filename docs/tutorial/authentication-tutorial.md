@@ -1,27 +1,27 @@
 ---
-title: Crear un sitio con autenticación de usuario
+title: Crear un sitio con autenticación de usuarios
 ---
 
-A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas solo para clientes](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
+A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
 
 ## Prerrequisitos
 
-Ya deberías haber configurado tu entorno para poder usar el `gatsby-cli`. Un buen punto de partida es el [tutorial principal](/tutorial).
+Ya deberías haber configurado tu entorno para poder usar `gatsby-cli`. Un buen punto de partida es el [tutorial principal](/tutorial).
 
 ## Aviso de seguridad
 
-En producción, debes usar una solución probada y sólida para manejar la autenticación. [Auth0](https://www.auth0.com), [Firebase](https://firebase.google.com) y [Passport.js](http://passportjs.org) son buenos ejemplos. Este tutorial solo cubrirá el flujo de trabajo de autenticación, pero debes tomar la seguridad de tu aplicación lo más en serio posible.
+En producción, deberías usar soluciones probadas y robustas para manejar la autenticación. [Auth0](https://www.auth0.com), [Firebase](https://firebase.google.com) y [Passport.js](http://passportjs.org) son buenos ejemplos. Este tutorial solo cubrirá el flujo de autenticación, pero debes tomarte la seguridad de tu aplicación lo más en serio posible.
 
 ## Construyendo tu aplicación Gatsby
 
-Comienza creando un nuevo proyecto de Gatsby utilizando el starter `hello-world`:
+Comienza creando un nuevo proyecto de Gatsby utilizando el generador `hello-world`:
 
 ```shell
 gatsby new gatsby-auth gatsbyjs/gatsby-starter-hello-world
 cd gatsby-auth
 ```
 
-Crea un nuevo componente para contener los enlaces. Por ahora, actuará como un valor para mostrar:
+Crea un nuevo componente para contener los enlaces. Por ahora, dejaremos el texto que indica que el usuario no ha iniciado sesión; más tarde lo cambiaremos:
 
 ```jsx:title=src/components/nav-bar.js
 import React from "react"
@@ -84,7 +84,7 @@ export default () => (
 
 ## Servicio de autenticación
 
-Para este tutorial, utilizarás un usuario y contraseña codificados. Crea la carpeta `src/services` y agrega el siguiente contenido al archivo `auth.js`:
+Para este tutorial, utilizarás un usuario y una contraseña hardcodeados. Crea la carpeta `src/services` y añade el siguiente contenido al archivo `auth.js`:
 
 ```javascript:title=src/services/auth.js
 export const isBrowser = () => typeof window !== "undefined"
@@ -121,11 +121,11 @@ export const logout = callback => {
 }
 ```
 
-## Crear rutas solo para clientes
+## Creando rutas únicas del cliente
 
-Al comienzo de este tutorial, creaste un sitio Gatsby "hello world", que incluye la biblioteca `@reach/router`. Ahora, utilizando la biblioteca [@reach/router](https://reach.tech/router/), puedes crear rutas disponibles solo para los usuarios registrados. Gatsby utiliza esta biblioteca bajo el capó, por lo que ni siquiera tienes que instalarla.
+Al comienzo de este tutorial, creaste un sitio Gatsby de "hola mundo", que incluía la librería `@reach/router`. Ahora, utilizando la librería [@reach/router](https://reach.tech/router/), puedes crear rutas disponibles solo para los usuarios registrados. Gatsby utiliza esta biblioteca internamente, por lo que ni siquiera tienes que instalarla.
 
-Primero, crea el archivo `gatsby-node.js` en el directorio raíz de tu proyecto. Definirá que cualquier ruta que comience con `/app/` es parte de tu contenido restringido y la página se creará bajo demanda:
+Primero, crea un archivo `gatsby-node.js` en el directorio raíz de tu proyecto. Define que cualquier ruta que comience por `/app/` es parte del contenido restringido y la página se creará dinámicamente:
 
 ```javascript:title=gatsby-node.js
 // Implementa el API de Gatsby "onCreatePage" esto es
@@ -133,8 +133,8 @@ Primero, crea el archivo `gatsby-node.js` en el directorio raíz de tu proyecto.
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
-  // page.matchPath es una llave especial que es usada para asociar páginas
-  // solo en el cliente.
+  // page.matchPath es una key especial que es usada para asociar páginas
+  // únicas del cliente.
   if (page.path.match(/^\/app/)) {
     page.matchPath = "/app/*"
 
@@ -144,9 +144,9 @@ exports.onCreatePage = async ({ page, actions }) => {
 }
 ```
 
-> Nota: Hay un complemento conveniente que ya funciona para ti: [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths)
+> Nota: Hay un plugin que hace esto mismo: [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths)
 
-Ahora, debes crear una página genérica que tendrá la tarea de generar el contenido restringido:
+Ahora, debes crear una página genérica que se encargará de generar el contenido restringido:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -167,7 +167,7 @@ const App = () => (
 export default App
 ```
 
-Ahora, agrega los componentes correspondientes a las nuevas rutas. El componente de perfil para mostrar los datos del usuario:
+Ahora, añade los componentes correspondientes a las nuevas rutas. El componente de perfil para mostrar los datos del usuario:
 
 ```jsx:title=src/components/profile.js
 import React from "react"
@@ -246,11 +246,11 @@ class Login extends React.Component {
 export default Login
 ```
 
-Aunque el enrutamiento ya está funcionando, aun puedes acceder a todas las rutas sin autenticación.
+Aunque las rutas ahora funcionan, todavía puedes acceder a ellas sin restricción.
 
-## Controlando rutas privadas
+## Controlando las rutas privadas
 
-Para comprobar si un usuario puede acceder a un contenido, puedes envolver el contenido restringido con un componente `PrivateRoute`:
+Para comprobar si un usuario puede acceder al contenido, puedes envolver el contenido restringido con un componente `PrivateRoute`:
 
 ```jsx:title=src/components/privateRoute.js
 import React, { Component } from "react"
@@ -269,7 +269,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 export default PrivateRoute
 ```
 
-Y ahora puedes editar tu Router para utilizar el componente `PrivateRoute`:
+Ahora puedes editar tu Router para utilizar el componente `PrivateRoute`:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -292,11 +292,11 @@ const App = () => (
 export default App
 ```
 
-## Refactorizando para utilizar nuevas rutas y datos de usuario
+## Refactorizando para utilizar las nuevas rutas y datos de usuario
 
-Con las rutas exclusivas para el usuario configuradas, ahora debes refactorizar algunos archivos para que los datos del usuario estén disponibles.
+Con las rutas únicas del cliente configuradas, ahora debes refactorizar algunos archivos para incorporar los datos del usuario disponibles.
 
-La barra de navegación mostrará el nombre de usuario y la opción para cerrar sesión a los usuarios registrados:
+La barra de navegación mostrará el nombre de usuario y la opción de cerrar sesión a los usuarios registrados:
 
 ```jsx:title=src/components/nav-bar.js
 import React from "react"
@@ -346,7 +346,7 @@ export default () => {
 } // highlight-line
 ```
 
-La página de inicio sugerirá iniciar sesión o comprobar el perfil dependiendo del caso:
+La página de inicio sugerirá iniciar sesión o ir al perfil, según corresponda:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -398,16 +398,16 @@ const Profile = () => (
 export default Profile
 ```
 
-Ahora deberías tener un flujo completo de autenticación, funcionando con inicio de sesión y áreas restringidas solo para usuarios.
+¡Ahora deberías tener un flujo completo de autenticación, funcionando con inicio de sesión y áreas restringidas solo para usuarios!
 
-## Otras lecturas
+## Lectura complementaria
 
-Sí deseas aprender más sobre utilizar soluciones de autenticación listas para producción, estos enlaces pueden ayudarte:
+Sí deseas aprender más sobre cómo utilizar soluciones de autenticación listas para producción, estos enlaces pueden ayudarte:
 
 - [Repositorio de Gatsby con autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), usando el API de React Context para manejar la autenticación
+- [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), que usa la API de React Context para controlar la autenticación
 - [La tienda de Gatsby para premios y otros extras](https://github.com/gatsbyjs/store.gatsbyjs.org)
-- [ Construyendo un blog con Gatsby, React y Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
-- [JAMstack PWA — Construyamos una aplicación de encuestas con Gatsby.js, Firebase y Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
-- [JAMstack Hackathon Starter - Starter de una aplicación Gatsby autenticada usando Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
-- [Aprende con el directo de Jason: Cómo usar Netlify Identity y Netlify Functions (con Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
+- [Building a blog with Gatsby, React and Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
+- [JAMstack PWA — Let’s Build a Polling App. with Gatsby.js, Firebase, and Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
+- [JAMstack Hackathon Starter - Starter de apps Gatsby autenticadas con Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
+- [Livestream de Learn With Jason: How to use Netlify Identity and Netlify Functions (with Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
