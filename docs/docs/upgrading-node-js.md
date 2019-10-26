@@ -4,7 +4,7 @@ title: Actualizando tu versión de Node.js
 
 ## Política de soporte de Node.js de Gatsby
 
-Gatsby apunta a soportar cualquier versión de Node que posea un status de _Actual (Current)_, _Activa (Active)_, or en _Mantenimiento (Maintenance)_. Una vez que una versión mayor de Node alcanza su status de _Fin de ciclo (End of Life)_ Gatsby dejará de dar soporte a esa versión.
+Gatsby apunta a dar compatibilidad con cualquier versión de Node que posea un estado de _Actual (Current)_, _Activa (Active)_, o en _Mantenimiento (Maintenance)_. Una vez que una versión mayor de Node alcanza su estado de _Fin de ciclo (End of Life)_ Gatsby dejará de dar soporte a esa versión.
 
 Gatsby dejará de dar soporte al release de Node en _Fin de Ciclo (End of Life)_ en una versión menor.
 
