@@ -12,7 +12,7 @@ Revisa el [Documento de releases de Node](https://github.com/nodejs/Release#node
 
 ## ¿Qué versión de Node poseo?
 
-Corre `node -v` en una ventana de Terminal para ver qué versión de Node posees.
+Ejecuta `node -v` en una ventana de la terminal para ver qué versión de Node posees.
 
 ```
 node -v
