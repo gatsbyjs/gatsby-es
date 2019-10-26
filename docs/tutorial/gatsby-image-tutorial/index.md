@@ -363,6 +363,6 @@ Eso es todo. Este tutorial incluyó una serie de posibles casos de uso, así que
 
 ## Otros recursos
 
-- [Documentos de la API de imagen de Gatsby](/docs/gatsby-image/)
+- [Documentos de la API de Gatsby Image](/docs/gatsby-image/)
 - [Usando imagen de Gatsby](/docs/using-gatsby-image/)
 - [Otras técnicas de imagen y medios en Gatsby](/docs/images-and-files/)
