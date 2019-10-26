@@ -14,6 +14,7 @@ Revisa el [Documento de lanzamientos de Node](https://github.com/nodejs/Release#
 
 Ejecuta `node -v` en una ventana de la terminal para ver qué versión de Node posees.
 
+
 ```
 node -v
 v10.16.0
@@ -30,6 +31,7 @@ Generalmente recomendaríamos usar [la versión de Node cuyo estado es Activa LT
 > ¿Qué acerca de Node 7? Las versiones estables de Node son lanzamientos con numeros pares - Node 6, Node 8, Node 10, etcétera. Sólo usa los números impares si quieres probar con elementos de vanguardia o experimentales.
 
 Hay múltiples modos de actualizar tu versión de Node dependiendo en cómo lo has instalado originalmente. Léelo para encontrar el mejor enfoque para tí.
+
 
 ### Usando Homebrew
 
@@ -65,6 +67,7 @@ Una vez que ésto ha concluido, ejecuta:
 node -v
 ```
 
+
 para confirmar que has actualizado de Node versión 6 a la posterior versión 8 de Node.
 
 ### Usando un paquete de administración de versión de Node
@@ -90,6 +93,7 @@ nvm alias default 8
 
 para instalar Node versión 8.
 
+
 [Revisa la documentación de nvm para más instrucciones](https://github.com/nvm-sh/nvm).
 
 #### n
@@ -100,7 +104,7 @@ Ejecuta:
 n
 ```
 
-en una terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
+en una ventana de terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
 
 [Revisa la documentación de n para más instrucciones](https://github.com/tj/n).
 

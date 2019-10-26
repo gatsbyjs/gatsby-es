@@ -1,9 +1,9 @@
 ---
-title: GraphQL and Gatsby
+title: GraphQL y Gatsby
 overview: true
 ---
 
-When building with Gatsby, you access your data through a query language named [GraphQL](http://graphql.org/). GraphQL allows you to declaratively express your data needs. This is done with `queries`, queries are the representation of the data you need. A query looks like this:
+Cuando desarrolles con Gatsby, accederás a tus datos por medio del lenguaje de consulta [GraphQL](http://graphql.org/). GraphQL te permite expresar tus necesidades de datos declarativamente. Esto es hecho con `consultas`. Las consultas son la representación de los datos que necesitas. Una consulta tiene la siguiente forma:
 
 ```graphql
 {
@@ -15,7 +15,7 @@ When building with Gatsby, you access your data through a query language named [
 }
 ```
 
-Which returns this:
+La cual devuelve:
 
 ```json
 {
@@ -27,8 +27,8 @@ Which returns this:
 }
 ```
 
-Notice how the query signature exactly matches the returned JSON signature. This is possible because in GraphQL, you query against a `schema` that is the representation of your available data. Don't worry about where the schema comes from right now, Gatsby takes care of organizing all of your data for you and making it discoverable with a tool called GraphiQL. GraphiQL is a UI that lets you 1) run queries against your data in the browser, and 2) dig into the structure of data available to you through a data type explorer.
+Observa como la estructura de la consulta concuerda con la estructura del JSON recibido. Esto es posible porque, en GraphQL, tu consulta se empareja con un `schema`, la cual, es la representación de tus datos disponibles. No te preocupes por como el esquema llega desde ahora. Gatsby se encarga de organizar todos tus datos por ti, y los hace reconocibles con una herramienta llamada GraphiQL. GraphiQL es una interfaz gráfica, que te permite 1) Hacer consultas de tus datos en el navegador. 2) Inspeccionar la estructura de datos disponible, a través de un explorador de tipos de dato.
 
-If you want to know more about GraphQL, you can read more about [why Gatsby uses it](/docs/why-gatsby-uses-graphql/) and check out this [conceptual guide](/docs/querying-with-graphql/) on querying data with GraphQL.
+Si quieres saber más acerca de GraphQL, puedes leer más acerca de [porque Gatsby lo usa](/docs/why-gatsby-uses-graphql) y revisar esta [guía conceptual](/docs/querying-with-graphql) sobre consultas de datos con GraphQL.
 
 <GuideList slug={props.slug} />
