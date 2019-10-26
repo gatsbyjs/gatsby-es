@@ -12,7 +12,7 @@ La inclusión de un archivo de manifiesto de aplicación web, es uno de los tres
 
 Citando a [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> El archivo de manifiesto de aplicación web es un archivo JSON simple que informa al navegador acerca de su aplicación web y como se debe comportar cuando sea 'instalada' en el dispositivo móvil o escritorio del usuario.
+> El archivo de manifiesto de aplicación web es un archivo JSON simple que informa al navegador acerca de tu aplicación web y como se debe comportar cuando sea 'instalada' en el dispositivo móvil o escritorio del usuario.
 
 [El plugin de manifiesto de Gatsby](/packages/gatsby-plugin-manifest/) configura Gatsby para crear un archivo `manifest.webmanifest` en cada sitio construido.
 
