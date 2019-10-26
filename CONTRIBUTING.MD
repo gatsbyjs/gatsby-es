@@ -2,21 +2,21 @@
 
 Bienvenido a la documentación en Español de Gatsby, antes que todo muchas gracias por tu interés en contribuir a hacer más accesible la documentación a nuestro idioma, a continuación te mostramos los enlaces de utilidad y una serie de instrucciones que debes seguir para empezar a contribuir.
 
-## Traduciendo las páginas 
+## Traduciendo las páginas
 
-La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `markdown (.MD)` corresponde a una página de la documentación, y por grande o pequeña que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizó una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar en el [issue de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/4).
+La documentación de Gatsby consiste en una serie de páginas maquetadas mediante Markdown que luego son renderizadas por el mismo Gatsby y son las que consumimos día a día, cada uno de estos archivos `markdown (.MD)` corresponde a una página de la documentación, y por grande o pequeña que sea se debe traducir, ya el equipo de mantenedores ha realizado este trabajo y realizó una lista de todas las páginas que se deben traducir y tenemos un issue de progreso para hacerle seguimiento, el cual puedes encontrar en el [issue activa de páginas a traducir](https://github.com/gatsbyjs/gatsby-es/issues/97).
 
 ## Pasos para traducir una página
 
 Sabemos que todos quieren contribuir pero debemos mantener un orden en las traducciones, para esto el issue de progreso es de gran ayuda, para poder empezar a traducir sigue estos pasos, por favor **no empieces a traducir si no sigues todos estos pasos, y te asignamos la página**, la idea es que no pierdas preciado trabajo y tiempo si la página ya fue tomada por otro, a veces podemos tardar en asignar, pero por favor ten paciencia:
 
-- **1.-** Ve al [issue de progreso de traducción](https://github.com/gatsbyjs/gatsby-es/issues/4) y revisa que página esta **disponible** y quisieras traducir.
+- **1.-** Ve al [issue de progreso de traducción activa](#issues-de-traducciones) y revisa que página esta **disponible** y quisieras traducir.
 - **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh, @darking360 o @nucliweb con la página que quieres traducir y así podemos asignarla.
-- **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre paréntesis: 
+- **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre paréntesis:
 
-    ` - index.md (@horacioh)`. 
-    
-    De esta forma ya sabes que puedes empezar a traducir.
+  `- index.md (@horacioh)`.
+
+  De esta forma ya sabes que puedes empezar a traducir.
 
 - **4.-** Empieza a traducir 🎉 Si no sabes como empezar, en la siguiente parte te enseñamos como hacer un `fork` del proyecto, clonarlo y a cómo abrir tu primer PR.
 
@@ -43,7 +43,7 @@ Al terminar de clonar el proyecto, estarás trabajando sobre la rama `master` en
 
 Todos tus cambios ya están en el repositorio, pero no el oficial, para poderlos incluir debes crear un PR y los mantenedores lo revisarán para aprobarlo, esto para comprobar que tiene los números de línea correctos, acentos y gramática, sigue estos pasos:
 
-- **1.-** Ve a los [issues del proyecto](https://github.com/gatsbyjs/gatsby-es/pulls) y haz click en el botón `New pull request`.
+- **1.-** Ve a las [Pull Requests del proyecto](https://github.com/gatsbyjs/gatsby-es/pulls) y haz click en el botón `New pull request`.
 - **2.-** Como tus cambios están en tu repositorio que es un `fork` del oficial, debes hacer click en el enlace que dice: `compare across forks`.
 - **3.-** En las opciones de la derecha, debes seleccionar tu repositorio, usualmente aparece como: `<TU_NOMBRE_DE_USUARIO>/gatsby-es`, y al lado debes seleccionar al nombre de la rama en la que están tus cambios.
 - **4.-** Ahora se mostrarán los cambios que realizaste en el código, si todo se ve bien, haz click en `Create pull request`.
@@ -80,4 +80,9 @@ Al traducir encontrarás sintaxis como `[texto](https://www.google.com)` y mucha
 
 ## A traducir 🏃‍
 
-Si has leído hasta aquí, ¿Qué estás esperando?, pide una página que quieras traducir en [este issue](https://github.com/gatsbyjs/gatsby-es/issues/4) y empieza a contribuir con la comunidad de Gatsby ❤️
+Si has leído hasta aquí, ¿Qué estás esperando?, pide una página que quieras traducir en [este issue](https://github.com/gatsbyjs/gatsby-es/issues/97) y empieza a contribuir con la comunidad de Gatsby ❤️
+
+## Issues de Traducciones
+
+- [Tutorials Progress (**CURRENTLY ACTIVE**)](https://github.com/gatsbyjs/gatsby-es/issues/97)
+- ~~[Spanish Translation Progress](https://github.com/gatsbyjs/gatsby-es/issues/4)~~
