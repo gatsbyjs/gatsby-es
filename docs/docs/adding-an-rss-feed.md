@@ -126,7 +126,7 @@ module.exports = {
 }
 ```
 
-Este fragmento de código contiene una configuración personalizada de `gatsby-plugin-feed` en `gatsby-config.js` para consultar los metadatos de tu sitio, como tu `title` y `siteUrl`. Tambien incluye una matriz de `feeds` con al menos un objeto que contiene una consulta GraphQL y un método `serialize`, que permite generar una estructura de feeds RSS personalizada. En este ejemplo, el contenido RSS proviene de archivos Markdown provenientes de su sitio, y se consultan con la llave `allMarkdownRemark` y sus filtros y campos asociados.
+Este fragmento de código contiene una configuración personalizada de `gatsby-plugin-feed` en `gatsby-config.js` para consultar los metadatos de tu sitio, como tu `title` y `siteUrl`. También incluye una matriz de `feeds` con al menos un objeto que contiene una consulta GraphQL y un método `serialize`, que permite generar una estructura de feeds RSS personalizada. En este ejemplo, el contenido RSS proviene de archivos Markdown provenientes de tu sitio, y se consultan con la llave `allMarkdownRemark` y sus filtros y campos asociados.
 
 El campo `output` de su objeto te permite personalizar el nombre del archivo para tu feed RSS y el `title` para el nombre del feed RSS de tu sitio.
 
