@@ -56,7 +56,7 @@ Para configuraciones básicas con contenido Markdown como [gatsby-starter-blog](
 
 Tu contenido podría no encajar perfectamente en el escenario de inicio de blog, por varias razones como:
 
-- Tu contenido no está en Markdown, por lo que el complemento no lo identifica
+- Tu contenido no está en Markdown, por lo que el plugin no lo identifica
 - Tus archivos Markdown tienen fechas en los nombres de archivo, por lo que las URL de slug provocan un error 404
 
 La buena noticia es que puedes acomodar estos escenarios y más en `gatsby-config.js` y `gatsby-node.js`.
