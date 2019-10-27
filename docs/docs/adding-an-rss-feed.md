@@ -138,7 +138,7 @@ Para ver tu feed en acción, ejecuta `gatsby build && gatsby serve` y luego insp
 
 ## Sintaxis para bloques RSS de iTunes
 
-Si creas una fuente RSS para un podcast, es probable que desees incluir bloques RSS de iTunes. Toman el formato de `itunes: author` que GraphQL no lee. Aquí hay un ejemplo de cómo implementar bloques RSS de iTunes usando este complemento:
+Si creas una fuente RSS para un podcast, es probable que desees incluir bloques RSS de iTunes. Toman el formato de `itunes: author` que GraphQL no lee. Aquí hay un ejemplo de cómo implementar bloques RSS de iTunes usando este plugin:
 
 ```js:title=gatsby-config.js
 module.exports = {
