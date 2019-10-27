@@ -29,7 +29,7 @@ module.exports = {
 }
 ```
 
-Aquí hay un ejemplo de cómo implementar este complemento con Markdown, pero para otras fuentes, necesitarás una forma de identificar de forma exclusiva el contenido, generalmente con la URL o con un slug.
+Aquí hay un ejemplo de cómo implementar este plugin con Markdown, pero para otras fuentes, necesitarás una forma de identificar de forma exclusiva el contenido, generalmente con la URL o con un slug.
 
 ```js:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`)
