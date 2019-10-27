@@ -16,7 +16,7 @@ Para generar un feed RSS, puedes usar el paquete [`gatsby-plugin-feed`](/package
 npm install --save gatsby-plugin-feed
 ```
 
-## Como usar [gatsby-plugin-feed](/packages/gatsby-plugin-feed/)
+## Cómo usar [gatsby-plugin-feed](/packages/gatsby-plugin-feed/)
 
 Cuando la instalación esté completa, podrás agregar este paquete al archivo de configuración de tu sitio, de la siguiente manera:
 
