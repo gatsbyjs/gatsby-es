@@ -52,7 +52,7 @@ Posteriormente, ejecuta una compilación (`npm run build`) ya que la generación
 
 Para configuraciones básicas con contenido Markdown como [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), ¡eso es todo lo que necesitas! Sin embargo, puedes crear un esquema de feeds RSS personalizado, modificando los archivos `gatsby-node.js` y `gatsby-config.js`.
 
-## Personalización del complemento de feed RSS
+## Personalización del plugin de feed RSS
 
 Tu contenido podría no encajar perfectamente en el escenario de inicio de blog, por varias razones como:
 
