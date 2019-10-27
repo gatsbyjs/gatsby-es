@@ -6,7 +6,7 @@ title: Agregando un Feed RSS
 
 Un [feed RSS](https://en.wikipedia.org/wiki/RSS) es un archivo estándar XML que enumera el contenido del sitio en un formato suscribible, que permite a los lectores consumir su contenido en agregadores de noticias, también conocidos como aplicaciones de lector de feeds.
 
-Piense en ello como un canal de distribución asociado para el contenido de su sitio.
+Piensa en ello como un canal de distribución asociado para el contenido de tu sitio.
 
 ## Instalación
 
