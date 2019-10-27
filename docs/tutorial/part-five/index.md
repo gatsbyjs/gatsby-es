@@ -89,7 +89,6 @@ En el panel de Explorador, el campo `id` se ha seleccionado automáticamente. Ha
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
-
 Alternativamente, puedes agregar campos utilizando el atajo de teclado de autocompletar (<kbd> Ctrl + Espacio </kbd>). Esto mostrará campos consultables en los nodos `File`.
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
