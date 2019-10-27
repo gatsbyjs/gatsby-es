@@ -134,7 +134,7 @@ Por defecto, se hace referencia al feed en todas las páginas. Puedes personaliz
 
 Para ver tu feed en acción, ejecuta `gatsby build && gatsby serve` y luego inspecciona el contenido y las URL's de tu archivo RSS en `http://localhost:9000/rss.xml`.
 
-> NOTA: si tu blog tiene enlaces permanentes personalizados, como enlaces con o sin fechas en ellos, es posible que deba [modificar `gatsby-node.js`](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/gatsby-node.js#L57) para generar URL's correctas en tus feeds RSS. ¡[Ponte en contacto con nosotros](/contributing/how-to-contribute/) si necesitas ayuda!
+> NOTA: si tu blog tiene enlaces permanentes personalizados, como enlaces con o sin fechas en ellos, es posible que debas [modificar `gatsby-node.js`](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/gatsby-node.js#L57) para generar URL's correctas en tus feeds RSS. ¡[Ponte en contacto con nosotros](/contributing/how-to-contribute/) si necesitas ayuda!
 
 ## Sintaxis para bloques RSS de iTunes
 
