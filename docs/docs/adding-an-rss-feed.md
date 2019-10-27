@@ -61,7 +61,7 @@ Tu contenido podría no encajar perfectamente en el escenario de inicio de blog,
 
 La buena noticia es que puedes acomodar estos escenarios y más en `gatsby-config.js` y `gatsby-node.js`.
 
-Para configurar el esquema por defecto (también conocido como estructura) que genera el complemento para que funcione con el contenido de tu sitio web, puedes comenzar con el siguiente código:
+Para configurar el esquema por defecto (también conocido como estructura) que genera el plugin para que funcione con el contenido de tu sitio web, puedes comenzar con el siguiente código:
 
 ```js:title=gatsby-config.js
 module.exports = {
