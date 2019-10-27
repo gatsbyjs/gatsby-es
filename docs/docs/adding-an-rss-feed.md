@@ -182,7 +182,7 @@ module.exports = {
 
 ## ¡Feliz blogueo!
 
-Con el [complemento Gatsby feed](/packages/gatsby-plugin-feed/), podrás compartir lo que escribes fácilmente con las personas suscritas a través de lectores RSS como Feedly o RSS Feed Reader. Ahora que tu feed está configurado, realmente no tendrás que pensarlo; realiza una nueva publicación, y tu feed RSS se actualizará automáticamente con tu compilación de Gatsby. Voilà!
+Con el [plugin Gatsby feed](/packages/gatsby-plugin-feed/), podrás compartir lo que escribes fácilmente con las personas suscritas a través de lectores RSS como Feedly o RSS Feed Reader. Ahora que tu feed está configurado, realmente no tendrás que pensarlo; realiza una nueva publicación, y tu feed RSS se actualizará automáticamente con tu compilación de Gatsby. Voilà!
 
 ## Más recursos
 
