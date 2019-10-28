@@ -2,11 +2,11 @@
 title: Emotion
 ---
 
-En esta guía, aprenderás como configurar un sitio con la biblioteca CSS-in-JS [Emotion](https://emotion.sh)
+En esta guía, aprenderás como configurar un sitio con la librería CSS-in-JS, [Emotion](https://emotion.sh)
 
-Emotion es una biblioteca de CSS-in-JS flexible y eficaz. Basándose en muchas otras bibliotecas CSS-in-JS, te permite dar estilo a tus aplicaciones rápidamente con estilos en objetos o en strings. Tiene una composición predecible para evitar problemas de especificidad con el CSS. Con _source maps_ y etiquetas, Emotion tiene una excelente _developer experience_ y un gran rendimiento gracias al intensivo almacenamiento en caché en producción.
+Emotion es una librería de CSS-in-JS flexible y eficaz. Basándose en muchas otras librerías CSS-in-JS, te permite dar estilo a tus aplicaciones rápidamente con estilos en objetos o en strings. Tiene una composición predecible para evitar problemas de especificidad con el CSS. Con _source maps_ y etiquetas, Emotion tiene una excelente _developer experience_ y un gran rendimiento gracias al intensivo almacenamiento en caché en producción.
 
-El [renderizado en servidor](https://emotion.sh/docs/ssr) funciona _out of the box_ en Emotion. Puedes usar métodos de React como `renderToString` o `renderToNodeStream` directamente sin configuración adicional. La característica `extractCritical` elimina las reglas sin usar que hayan sido creadas con Emotion lo que ayuda a cargar las páginas más rápido,
+El [renderizado en servidor](https://emotion.sh/docs/ssr) funciona _out of the box_ en Emotion. Puedes usar métodos de React como `renderToString` o `renderToNodeStream` directamente sin configuración adicional. La característica `extractCritical` elimina las reglas sin usar que hayan sido creadas con Emotion lo que ayuda a cargar las páginas más rápido.
 
 Primero, abre una nueva ventana de terminal y ejecuta el siguiente comando para crear un nuevo sitio:
 
@@ -28,7 +28,7 @@ module.exports = {
 };
 ```
 
-Entonces ejecuta `npm start` en tu terminal para iniciar el servidor de desarrollo de Gatsby.
+Después ejecuta `npm start` en tu terminal para iniciar el servidor de desarrollo de Gatsby.
 
 Ahora vamos a crear una página de ejemplo con Emotion en `src/pages/index.js`:
 
