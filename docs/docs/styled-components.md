@@ -12,7 +12,7 @@ Con CSS-in-JS, evitas todo eso ya que los selectores CSS están aislados automá
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components"
-  lessonTitle="Da estilos sitios hechos con Gatsby con styled-components"
+  lessonTitle="Da estilos a sitios hechos con Gatsby con styled-components"
 />
 
 Primero, abre una nueva ventana de terminal y ejecuta el siguiente comando para crear un nuevo sitio:
