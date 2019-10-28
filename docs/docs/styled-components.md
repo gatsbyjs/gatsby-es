@@ -2,47 +2,47 @@
 title: Styled Components
 ---
 
-In this guide, you will learn how to set up a site with the CSS-in-JS library [Styled Components](https://www.styled-components.com/).
+En esta guía, aprenderás cómo configurar un sitio con la librería CSS-in-JS, [Styled Components](https://www.styled-components.com/).
 
-Styled Components lets you use actual CSS syntax inside your components. Styled Components is a variant on "CSS-in-JS"—which solves many of the problems with traditional CSS.
+Styled Components nos permite usaer nuestra sintaxis CSS actual en nuestros componentes. Styled Components es una variante en "CSS-in-JS" que resuelve muchos de los problemas del CSS tradicional.
 
-One of the most important problems they solve is selector name collisions. With traditional CSS, you have to be careful not to overwrite CSS selectors used elsewhere in a site because all CSS selectors live in the same global namespace. This unfortunate restriction can lead to elaborate (and often confusing) selector naming schemes.
+Uno de los problemas más importantes que resuelve es la colisión de selectores. Con el CSS tradicional, tienes que ser cuidadoso de no sobrescribir los selectores CSS usados en cualquier lugar de tu sitio, porque todos selectores viven en el mismo espacio de nombres global. Esta desafortunada restricción puede acabar con una elaborada (y a veces confusa) forma de nombrar los selectores.
 
-With CSS-in-JS, you avoid all that as CSS selectors are scoped automatically to their component. Styles are tightly coupled with their components. This makes it much easier to know how to edit a component's CSS as there's never any confusion about how and where CSS is being used.
+Con CSS-in-JS, evitas todo eso ya que los selectores CSS están aislados automáticamente en su componente. Los estilos están estrechamente ligados a sus componentes. Esto hace mucho más fácil saber cómo editar el CSS de un componente ya que no habrá nunca ninguna confusión de cómo y dónde el CSS está siendo usado.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components"
-  lessonTitle="Style Gatsby sites with styled-components"
+  lessonTitle="Da estilos sitios hechos con Gatsby con styled-components"
 />
 
-First, open a new terminal window and run the following to create a new site:
+Primero, abre una nueva ventana de terminal y ejecuta el siguiente comando para crear un nuevo sitio:
 
 ```shell
 gatsby new styled-components-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd styled-components-tutorial
 ```
 
-Second, install the necessary dependencies for `styled-components`, including the Gatsby plugin.
+Segundo, instala las dependencias necesarias para `styled-components`, incluyendo el pluging de Gatsby.
 
 ```shell
 npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 ```
 
-And then add it to your site's `gatsby-config.js`:
+Y después añadelo al `gatsby-config.js` de tu sitio:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
-  plugins: [`gatsby-plugin-styled-components`],
-}
+  plugins: [`gatsby-plugin-styled-components`]
+};
 ```
 
-Then in your terminal run `gatsby develop` to start the Gatsby development server.
+Después ejecuta `npm start` en tu terminal para iniciar el servidor de desarrollo de Gatsby.
 
-Now create a sample Styled Components page at `src/pages/index.js`:
+Ahora vamos a crear una página de ejemplo con Styled Components en `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -51,7 +51,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const UserWrapper = styled.div`
   display: flex;
@@ -60,29 +60,29 @@ const UserWrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
-`
+`;
 
 const Avatar = styled.img`
   flex: 0 0 96px;
   width: 96px;
   height: 96px;
   margin: 0;
-`
+`;
 
 const Description = styled.div`
   flex: 1;
   margin-left: 18px;
   padding: 12px;
-`
+`;
 
 const Username = styled.h2`
   margin: 0 0 12px 0;
   padding: 0;
-`
+`;
 
 const Excerpt = styled.p`
   margin: 0;
-`
+`;
 
 const User = props => (
   <UserWrapper>
@@ -92,47 +92,47 @@ const User = props => (
       <Excerpt>{props.excerpt}</Excerpt>
     </Description>
   </UserWrapper>
-)
+);
 
 export default () => (
   <Container>
-    <h1>About Styled Components</h1>
-    <p>Styled Components is cool</p>
+    <h1>Sobre Styled Components</h1>
+    <p>Styled Components es genial</p>
     <User
       username="Jane Doe"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Soy Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
     <User
       username="Bob Smith"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Soy Bob smith, esa clase de tío verticalmente alineado. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   </Container>
-)
+);
 ```
 
-### Enabling user stylesheets with a stable class name
+### Habilitando _user stylesheets_ con nombre de clase estable
 
-Adding a persistent CSS `className` to your styled components can make it easier for end users of your website to take advantage of [user stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) for accessibility.
+Añadiendo un CSS `className` persistente a tus _styled components_ puedes hacer más fácil para los usuarios finales de tu sitio web tomar ventaja de las [_user stylesheets_](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para accesibilidad.
 
-Here's an example where the class name `container` is added to the DOM along with the Styled Components' dynamically-created class names:
+Aquí está un ejemplo donde el nombre de clase `container` es añadido al DOM junto con los nombres de clase creados dinámicamente del _Styled Components_:
 
 ```jsx:title=src/components/container.js
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const Section = styled.section`
   margin: 3rem auto;
   max-width: 600px;
-`
+`;
 
 export default ({ children }) => (
   <Section className={`container`}>{children}</Section>
-)
+);
 ```
 
-An end user of your site could then [write their own CSS styles](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) matching HTML elements using a class name of `.container`. If your CSS-in-JS style changes, it will not affect the end user's stylesheet.
+Un usuario final de tu sitio podría entonces [escribir sus propios estilos CSS](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) de los elementos HTML correspondientes usando el nombre de clase `.container`. Si tu CSS-in-JS cambia, no afectará a la hoja de estilo de tu usuario final.
 
 ```css:title=user-stylesheet.css
 .container {
