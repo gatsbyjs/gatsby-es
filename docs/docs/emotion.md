@@ -108,7 +108,7 @@ export default () => (
     <User
       username="Bob Smith"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="Soy Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Soy Bob smith, esa clase de tío verticalmente alineado. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   </Container>
 );
