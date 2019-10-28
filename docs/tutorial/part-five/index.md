@@ -10,7 +10,7 @@ disableTableOfContents: true
 
 En este tutorial aprenderás cómo consumir datos en tu sitio de Gatsby usando GraphQL y plugins fuente. Sin embargo, antes de aprender acerca de estos plugins, será bueno saber cómo usar algo llamado GraphiQL, una herramienta que te ayuda a estructurar tus consultas de manera correcta.
 
-## Introduciendo GraphiQL
+## Presentando GraphiQL
 
 GraphiQL es el entorno de desarrollo integrado para GraphQL. Es una herramienta poderosa (y asombrosa) que usarás a menudo al crear sitios web de Gatsby.
 
@@ -22,7 +22,7 @@ Puedes usarla cuando tu sitio de desarrollo esté ejecutándose de forma habitua
   <p>Your browser does not support the video element.</p>
 </video>
 
-Investiga un poco el tipo de dato `Site` que viene preconfigurado y mira qué campos están disponibles dentro de él, incluyendo el `siteMetadata` que consultaste antes. ¡Intenta abrir GraphiQL y juega con tus datos! Presiona <kbd> Ctrl + Espacio </kbd> (o usa <kbd> Shift + Espacio </kbd> como un shortcut alternativo) para abrir la ventana de autocompletado y <kbd> Ctrl + Enter </kbd> para ejecutar la consulta GraphQL. Utilizarás GraphiQL mucho más durante el resto del tutorial.
+Investiga un poco el tipo de dato `Site` que viene preconfigurado y mira qué campos están disponibles dentro de él, incluyendo el `siteMetadata` que consultaste antes. ¡Intenta abrir GraphiQL y juega con tus datos! Presiona <kbd> Ctrl + Espacio </kbd> (o usa <kbd> Shift + Espacio </kbd> como un atajo de teclado alternativo) para abrir la ventana de autocompletado y <kbd> Ctrl + Enter </kbd> para ejecutar la consulta GraphQL. Utilizarás GraphiQL mucho más durante el resto del tutorial.
 
 ## Usando el explorador de GraphiQL
 
@@ -118,7 +118,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  console.log(data) // línea resaltada
+  console.log(data) // highlight-line
   return (
     <Layout>
       <div>Hola mundo</div>
@@ -164,7 +164,7 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      {/* resaltado-inicio */}
+      {/* highlight-start */}
       <div>
         <h1>Los Archivos de Mi Sitio</h1>
         <table>
@@ -188,7 +188,7 @@ export default ({ data }) => {
           </tbody>
         </table>
       </div>
-      {/* resaltado-fin */}
+      {/* highlight-end */}
     </Layout>
   )
 }
