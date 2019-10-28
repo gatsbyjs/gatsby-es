@@ -1,44 +1,44 @@
 ---
-title: Using Prismic with GraphQL Source Plugin
+title: Uso de Prismic con el Plugin de Fuente de GraphQL
 ---
 
-## Prismic + Gatsby features
+## Características de Prismic + Gatsby
 
-Prismic is a headless CMS that provides a web application that allows content writers to focus on creating and updating the content of their website. Essentially, it differentiates itself thanks to its UX that allows a lot of flexibility without complicating it. The Slices feature plays a big role in this, they essentially correspond to components in the web application that non-technical people can use to assemble their page.
-Used alongside Gatsby it lets you create fast, editable sites.
+Prismic es un sistema de gestión de contenidos o CMS 'headless', el mismo que provee una aplicación web que permite a los creadores de contenido enforcarse en crear y modificar el contenido de su sitio. En esencia, se distingue gracias a su experiencia de usuario (UX) que permite bastante flexibilidad sin complicaciones. Aquí la característica de Slices juega un papel muy importante, ya que estos corresponden a componentes en la aplicación web que gente 'no técnica' puede usar para montar su página.
+Usado en conjunto con Gatsby, te permite crear sitios rápidos y editables.
 
-Note that the Gatsby Prismic source plugin you will use during this tutorial, as a main feature, allows for **real previews** of your pages so you can know how they will look like before publishing or building them. You can generate **shareable links** that can even be seen by non-Prismic users.
+Nota que el plugin de fuente de Gatsby Prismic que usarás durante este tutorial, tiene, como su característica principal, **vistas previas reales** de tus páginas para que puedas saber cómo se verán antes de publicarlas o desarrollarlas. Además, puedes generar **enlaces para compartir** que pueden ser vistos incluso por quienes no son usuarios de Prismic.
 
-## What’s contained in this tutorial?
+## ¿Qué contiene este tutorial?
 
-By the end of this tutorial, you’ll have done the following:
+Al terminar este tutorial, habrás hecho lo siguiente:
 
-- Learned how to configure the latest version of the Prismic source plugin
-- Fetch and render data from a Prismic repository
-- Create pages programmatically from a Prismic source
-- Configure previews for unpublished and edited documents
+- Aprendido cómo configurar la última versión del plugin de fuente de Prismic
+- Extraer y renderizar datos desde un repositorio de Prismic
+- Crear páginas mediante programación desde una fuente de Prismic
+- Configurar vistas previas para documentos editados y no publicados
 
-## Prerequisites
+## Prerrequisitos
 
-- Familiarity with Gatsby
-- A personal Prismic repository. You can follow [this 5 minute guide](https://prismic.io/docs/reactjs/getting-started/create-repo-minimalist-blog) for instructions to set up a barebones repository for a minimalistic blog
+- Debes estar familiarizado con Gatsby
+- Un repositorio personal en Prismic. Puedes seguir [esta guía de 5 minutos](https://prismic.io/docs/reactjs/getting-started/create-repo-minimalist-blog) con instrucciones para configurar un repositorio básico para un blog minimalista.
 
-## Preparing your environment
+## Preparación de tu ambiente
 
-Start a new Gatsby project using the default starter.
+Empieza un nuevo proyecto en Gatsby usando el iniciador por defecto.
 
     $ gatsby new gatsby-prismic-blog
     $ cd gatsby-prismic-blog
 
-Now, you will have to install missing packages. This command includes the Gatsby Prismic source plugin, and the Prismic kits for facilitating processes in React:
+Ahora, tendrás que instalar los paquetes faltantes. Este comando incluye el plugin de fuente de Gatsby Prismic, y los kits de Prismic para facilitar procesos en React:
 
     $ npm i --save gatsby-source-prismic-graphql prismic-javascript prismic-reactjs
 
-If you want to focus on learning how to fetch and render data from a Prismic repository, it's safe to just use the sample repository `gatsby-blog-scratch` but you should create your own so you can modify the content and test out previews. Otherwise, you can follow [this article](https://prismic.io/docs/reactjs/getting-started/create-repo-minimalist-blog) to create your own Prismic repository. You will want to write several blog posts to have some nice content to show off.
+Si quieres enfocarte sólo en aprender como extraer y renderizar datos desde un repositorio Prismic, puedes usar el repositorio de ejemplo `gatsby-blog-scratch` pero debes crear el tuyo para que puedas modificar el contenido y probar las vistas previas. De lo contrario, puedes seguir [este artículo](https://prismic.io/docs/reactjs/getting-started/create-repo-minimalist-blog) para crear tu propio repositorio Prismic. Se recomienda escribir algunos posts en el blog para que tengas contenido que mostrar.
 
-## Configuring the plugin
+## Configuración del plugin
 
-You will setup the Gatsby source plugin so it can fetch data from the Prismic repository. For this the only option you have to specify is the repository's name.
+Configurarás el plugin de fuente de Gatsby para que pueda extraer datos desde el repositorio Prismic. Para esto, la única opción que debes especificar es el nombre del repositorio.
 
 ```javascript:title=gatsby-config.js
 {
@@ -49,7 +49,7 @@ You will setup the Gatsby source plugin so it can fetch data from the Prismic re
 },
 ```
 
-If you run `gatsby develop` now, you should be able to access the data from Prismic through the GraphiQL interface in [`http://localhost:8000/___graphql`](http://localhost:8000/___graphql). You can check this by trying a query that uses the Prismic source.
+Si corres `gatsby develop` ahora, deberás tener acceso a los datos de Prismic a través de la interfaz de GraphiQL en [`http://localhost:8000/___graphql`](http://localhost:8000/___graphql). Puedes verificar que funcione intentando hacer una consulta que usa como fuente a Prismic.
 
 ```graphql
 {
@@ -65,22 +65,22 @@ If you run `gatsby develop` now, you should be able to access the data from Pris
 }
 ```
 
-If your Prismic documents are being retrieved, then the configuration was successful!
+¡Si puedes obtener tus documentos de Prismic, entonces sabremos que la configuración fue exitosa!
 
-## Fetching and rendering data
+## Extracción y renderización de datos
 
-Once you have verified on GraphiQL that you can retrieve the data from your previously created Prismic content repository, you can start on fetching and rendering that content.
+Una vez que hayas verificado en GraphiQL que es posible obtener datos desde tu repositorio Prismic creado anteriormente, podrás empezar a extraer y renderizar ese contenido.
 
-In GraphiQL experiment with the data and how it's structured. You can use the autocomplete to help you navigate around how Gatsby interprets the Prismic repository. You will need a query that gets the Home information, as well as an array of blog posts sorted in descending order.
+Experimenta con los datos y su estructura en GraphiQL. Puedes usar el autocompletado como ayuda para entender cómo Gatsby interpreta el repositorio de Prismic. Necesitarás una consulta que obtenga la información de Home, así como un arreglo de los posts del blog ordenados descendentemente.
 
 ```javascript:title=src/pages/index.js
 import React from "react"
-import { Link, graphql } from "gatsby" //highlight-line
+import { Link, graphql } from "gatsby" //destacar-línea
 
 import Layout from "../components/layout"
-import { RichText } from "prismic-reactjs" //highlight-line
+import { RichText } from "prismic-reactjs" //destacar-línea
 
-//highlight-start
+//destacar-inicio
 export const query = graphql`
   {
     prismic {
@@ -109,10 +109,10 @@ export const query = graphql`
     }
   }
 `
-// highlight-end
+// destacar-fin
 ```
 
-In order to render this data, replace the `export default IndexPage` line in the original `index.js` file with the following:
+Para renderizar estos datos, reemplaza la línea `export default IndexPage` en el archivo original `index.js` con lo siguiente:
 
 ```js:title=src/pages/index.js
 export default ({ data }) => {
@@ -124,9 +124,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <img src={doc.node.image.url} alt={doc.node.image.alt} /> // Make sure
-        to add an accessible alt attribute when adding images in Prismic:
-        https://user-guides.prismic.io/articles/768849-add-metadata-to-an-asset
+        <img src={doc.node.image.url} alt={doc.node.image.alt} /> // Asegúrate
+          de añadir el atributo de accesibilidad cuando agregues imágenes en
+          Prismic: https://user-guides.prismic.io/articles/768849-add-metadata-to-an-asset
         <h1>{RichText.asText(doc.node.headline)}</h1>
         <p>{RichText.asText(doc.node.description)}</p>
       </div>
@@ -135,12 +135,12 @@ export default ({ data }) => {
 }
 ```
 
-Save the file and check on your site running at [`http://localhost:8000`](http://localhost:8000)
+Guarda el archivo y verifica que tu sitio está corriendo en [`http://localhost:8000`](http://localhost:8000)
 
-You can use the helper function `RichText` to [render formatted text](https://prismic.io/docs/reactjs/rendering/rich-text) and generally, this is the process you will use to query your Prismic repository and then render it. We can clean this up and include a function that will render the array of queried blog posts.
+Puedes usar la función auxiliar `RichText` para [renderizar texto con formato](https://prismic.io/docs/reactjs/rendering/rich-text), generalmente, este será el proceso que usarás para consultar y renderizar tu repositorio Prismic. Podemos limpiar esto un poco más e incluir una función que renderice el arreglo de los posts del blogs que consultamos previamente.
 
 ```js:title=src/pages/index.js
-//highlight-start
+//destacar-inicio
 const BlogPosts = ({ posts }) => {
   if (!posts) return null
   return (
@@ -158,7 +158,7 @@ const BlogPosts = ({ posts }) => {
     </div>
   )
 }
-//highlight-end
+//destacar-fin
 
 export default ({ data }) => {
   const doc = data.prismic.allBlog_homes.edges.slice(0, 1).pop()
@@ -173,30 +173,30 @@ export default ({ data }) => {
         <h1>{RichText.asText(doc.node.headline)}</h1>
         <p>{RichText.asText(doc.node.description)}</p>
       </div>
-      <BlogPosts posts={posts} /> //highlight-line
+      <BlogPosts posts={posts} /> //destacar-línea
     </Layout>
   )
 }
 ```
 
-## Building links to your documents
+## Construcción de enlaces a tus documentos
 
-Now things are really taking shape. We will turn these blog post titles into links by building a [link resolver function](https://prismic.io/docs/reactjs/beyond-the-api/link-resolving), which will build the correct route for your posts.
+Ahora las cosas van tomando forma. Transformaremos los títulos de los posts del blog en enlaces, creando una [función gestora de enlaces (Link Resolver)](https://prismic.io/docs/reactjs/beyond-the-api/link-resolving), la cual construirá la ruta correcta para tus posts del blog.
 
 ```javascript:title=src/utils/linkResolver.js
 exports.linkResolver = function linkResolver(doc) {
-  // Route for blog posts
+  // Rutas para los posts del blog
   if (doc.type === "post") {
     return "/blog/" + doc.uid
   }
-  // Homepage route fallback
+  // Ruta alternativa a la página de inicio
   return "/"
 }
 ```
 
-This function's goal is to generate a navigation url that depends on the document type. In this case, it will be `/blog/{unique slug}` for documents of the type `post` and the root folder `/` for every other document type, including `blog_home`. As you can see, the data required to generate a proper url with this helper function is the document's type and unique identifier. These fields are always present as part of the `_meta` field, so make sure to retrieve it in your query.
+El objetivo de esta función es generar una url de navegación que dependa del tipo de documento. En este caso será `/blog/{slug único}` para documentos del tipo `post` y la carpeta raíz `/` para cualquier otro tipo de documento, incluyendo `blog_home`. Como puedes ver, para generar una url adecuada con esta función auxiliar, los datos requeridos son: el tipo de documento y un identificador único. Estos campos están siempre presentes como parte del campo `_meta`, así que asegúrate de obtenerlo en tu consulta.
 
-You will have to setup your `gatsby-browser.js` file to use the Link Resolver as well.
+Tendrás que configurar tu archivo `gatsby-browser.js` para que también use el Gestor de Enlaces.
 
 ```javascript:title=gatsby-browser.js
 const { registerLinkResolver } = require("gatsby-source-prismic-graphql")
@@ -205,7 +205,7 @@ const { linkResolver } = require("./src/utils/linkResolver")
 registerLinkResolver(linkResolver)
 ```
 
-You can now use the proper url generated by the `linkResolver` function to build the `<Link>` component for each blog post, so that post titles are links now.
+Ahora puedes usar la url adecuada generada por la función `linkResolver` para crear el componente `<Link>` para cada post del blog, de esta manera, ahora los títulos de los posts serán links.
 
 ```javascript:title=src/pages/index.js
 const BlogPosts = ({ posts }) => {
@@ -215,11 +215,11 @@ const BlogPosts = ({ posts }) => {
       {posts.map(post => {
         return (
           <li key={post.node._meta.id}>
-            // highlight-start
+            // destacar-inicio
             <Link to={linkResolver(post.node._meta)}>
               {RichText.asText(post.node.title)}
             </Link>
-            // highlight-end
+            // destacar-fin
             <p>
               <time>{post.node.date}</time>
             </p>
@@ -231,11 +231,11 @@ const BlogPosts = ({ posts }) => {
 }
 ```
 
-At this point, if you try to use these links to navigate your site, you will notice that you're faced with a 404 error on every page. That's because even though you're navigating to the pages correctly, there's still the issue of actually creating the pages. For this, you will have to use a template file which will programmatically build a page for each blog post.
+En este punto, si intentas usar estos enlaces para navegar por tu sitio, encontrarás errores 404 en cada página. Esto sucede porque, aunque estás navegando por las páginas correctamente, aún existe el problema de que las páginas no se están creando de manera adecuada. Para esto, deberás usar un archivo plantilla el cual creará, por medio de programación, una página por cada post del blog.
 
-## Creating pages programmatically with a template
+## Creación de páginas mediante programación con una plantilla
 
-The template you will build is very similar in concept to a regular page, with the addition of introducing a variable which will be used to query the different blog posts.
+La plantilla que desarrollarás es muy similiar, en concepto, a una página regular, con la diferencia de que esta introduce una variable que será usada para consultar los diferentes posts del blog.
 
 ```javascript:title=/src/templates/post.js
 import React from "react"
@@ -277,37 +277,37 @@ export default ({ data }) => {
 }
 ```
 
-We're rendering a very minimalistic page for each blog post; consisting of:
+Estamos renderizando una página bastante minimalista para cada post del blog, que consiste de:
 
-- A link back to the homepage.
-- The article's title and page.
-- The rich text body which will contain formatted text and images.
+- Un link para regresar a la página de inicio.
+- El título del artículo y página.
+- El texto enriquecido del cuerpo del post que contendrá texto formateado e imágenes.
 
-Having a template is not enough to generate the dynamic pages, you will need to configure the plugin in `gatsby-config.js` so that pages are created following the same pattern defined in the link resolver function.
+Tener una plantilla no es suficiente para generar páginas dinámicas, además deberás configurar el plugin en `gatsby-config.js` para que las páginas sean creadas siguiendo el mismo patrón definido en la función de gestión de enlaces (Link Resolver).
 
 ```javascript:title="/gatsby-config.js"
 options: {
   repositoryName: 'gatsby-blog-scratch',
-  //highlight-start
+  //destacar-inicio
   pages: [{
-    type: 'Post',          // Custom type of the document
-    match: '/blog/:uid',   // Pages will be generated in this pattern
-    path: '/blog-preview', // Placeholder route for previews
-    component: require.resolve('./src/templates/post.js') // Template file
+    type: 'Post',          // Tipo personalizado del documento
+    match: '/blog/:uid',   // Las páginas serán generadas con este patrón
+    path: '/blog-preview', // Ruta para vista previa
+    component: require.resolve('./src/templates/post.js') // Archivo plantilla
   }]
-  //highlight-end
+  //destacar-fin
 }
 ```
 
-And with this last step you should be able to see all of your blog posts rendered on your site.
+Y con este paso final deberías ver todos tus posts del blog renderizadas en tu sitio.
 
-## Setting up for Previews
+## Configuración de vistas previas
 
-One of the most exciting features that this Gatsby Prismic source plugin provides is the ability to preview changes to your documents without having to publish them or rebuild your Gatsby app. To activate this, you first need to setup an endpoint in your Prismic repository.
+Una de las características más emocionantes que este plugin de fuente de Gatsby Prismic provee, es la habilidad de previsualizar cambios de tus documentos sin tener que publicarlos o recompilar tu aplicación de Gatsby. Para activar esto, primero tienes que configurar un 'endpoint' en tu repositorio Prismic.
 
-In your repository, go to **Settings > Previews > Create a New Preview** and fill in the fields for your setup. For a default local development environment, you should use [`http://localhost:8000`](http://localhost:8000) as the Domain, with `/preview` as the optional Link Resolver. Don't worry about including the toolbar script, the plugin will take care of it.
+En tu repositorio, ve a **Settings > Previews > Create a New Preview** y llena los campos referentes a tu proyecto. Para un ambiente de desarrollo local debes usar [`http://localhost:8000`](http://localhost:8000) como el Dominio, con `/preview` como el Gestor de Enlaces opcional. No te preocupes en incluir el script del toolbar, el plugin se encargará de eso.
 
-Finally, return to your Gatsby configuration file to activate the feature.
+Finalmente, regresa a tu archivo de configuración de Gatsby para activar la característica.
 
 ```javascript:title="/gatsby-config.js"
 
@@ -315,10 +315,10 @@ Finally, return to your Gatsby configuration file to activate the feature.
   resolve: `gatsby-source-prismic-graphql`,
   options: {
     repositoryName: 'gatsby-blog-scratch',
-    //highlight-start
+    //destacar-inicio
     previews: true,
     path: '/preview',
-    //highlight-end
+    //destacar-fin
     pages: [{
       type: 'Post',
       match: '/blog/:uid',
@@ -329,24 +329,24 @@ Finally, return to your Gatsby configuration file to activate the feature.
 }
 ```
 
-Your blog is ready to handle previews now. Just edit any of your blog posts in your Prismic repository and preview the changes you've made instead of publishing it. Previews are not limited to the development environment, you can adjust the endpoint configuration to work for the hosted version you deploy. Content writers can use it as a staging environment to preview their content changes without having to rebuild your site, and before publishing.
+Ahora tu blog está listo par manejar vistas previas. Solamente edita cualquiera de tus posts del blog en tu repositorio Prismic y previsualiza los cambios que haces en vez de publicarlos. Las vistas previas no están limitadas al ambiente de desarrollo, puedes ajustar la configuración del 'endpoint' para que funcione con la versión alojada que despliegues. Creadores de contenido pueden usar esto como un ambiente de pre-producción para visualizar sus cambios de contenido antes de publicarlos y sin tener que recompilar el sitio.
 
-## What did you just build?
+## ¿Qué acabas de construir?
 
-After following this tutorial you have a minimalist blog that uses a Prismic repository as a data source. You have learned:
+Luego de seguir este tutorial tienes un blog minimalista que usa un repositorio Prismic como fuente de datos. Has aprendido:
 
-- How to query the relevant data with GraphQL.
-- Render that data in your site.
-- Create templates to generate pages programmatically.
-- Build links to navigate your site.
-- And most importantly, how to setup previews so you can view changes to your documents without publishing them.
+- Cómo consultar datos relevantes con GraphQL.
+- Renderizar datos en tu sitio.
+- Crear plantillas para generar páginas mediante programación.
+- Construir enlaces para navegar en el sitio.
+- Y más importante, cómo configurar vistas previas para que puedas ver los cambios de tus documentos sin publicarlos.
 
-## Where to go from here
+## ¿A dónde ir desde aquí?
 
-If you want to go further, here are some more advanced things you can do using Prismic:
+Si quieres ir más lejos, aquí hay algunos temas avanzados que puedes hacer usando Prismic:
 
-- Rendering [slice components](https://www.youtube.com/watch?v=N85Tw06e29Q) for modular page building.
-- Using [webhooks](https://user-guides.prismic.io/webhooks/webhooks) as a trigger to rebuild your site.
-- Using a [helper function](https://prismic.io/docs/reactjs/getting-started/prismic-gatsby#27_0-using-the-html-serializer) to change links inside rich text fields to Link components.
+- Renderización de [componentes 'slice'](https://www.youtube.com/watch?v=N85Tw06e29Q) para construir páginas modulares.
+- Uso de [webhooks](https://user-guides.prismic.io/webhooks/webhooks) como un disparador para recompilar tu sitio.
+- Uso de una [función auxiliar](https://prismic.io/docs/reactjs/getting-started/prismic-gatsby#27_0-using-the-html-serializer) para cambiar los enlaces que están adentro de campos de texto enriquecido para enlazar los componentes.
 
-You can read more about it in [Prismic's Gatsby documentation](https://prismic.io/docs/reactjs/getting-started/prismic-gatsby), build your [own full featured blog](https://user-guides.prismic.io/examples/gatsby-js-samples/sample-blog-with-api-based-cms-gatsbyjs) where you can try out Slices.
+Puedes leer más sobre esto en [documentacación de Gatsby en Prismic](https://prismic.io/docs/reactjs/getting-started/prismic-gatsby), haz tu [blog con todas las funcionalidades](https://user-guides.prismic.io/examples/gatsby-js-samples/sample-blog-with-api-based-cms-gatsbyjs) donde puedes probar los 'Slices'.
