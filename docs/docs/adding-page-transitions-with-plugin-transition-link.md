@@ -10,7 +10,7 @@ El componente `TransitionLink` provee una manera de describir la transición de 
 
 Nota que actualmente, como el plugin esta basado en _link navigation_, las transiciones no están soportadas cuando navegas con los botones del navegador.
 
-Para otras opciones de transiciones de página, mira la [vista general en agregar animaciones de página](/docs/adding-page-transitions).
+Para otras opciones de transiciones de página, mira la [vista general de agregar animaciones de página](/docs/adding-page-transitions).
 
 ## Empezando
 
@@ -52,7 +52,7 @@ Entonces, importa el componente AniLink:
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 ```
 
-Finalmente, asegurate de proveer el nombre de la animación deseada como una _prop_ _blank_ a `AniLink`:
+Finalmente, asegurate de proveer el nombre de la animación deseada como una _blank_ _prop_ a `AniLink`:
 
 ```javascript
 <AniLink paintDrip to="page-4">
@@ -60,7 +60,7 @@ Finalmente, asegurate de proveer el nombre de la animación deseada como una _pr
 </AniLink>
 ```
 
-Opciones como duración de la transición, dirección y demás son configurables con _props_. Vé [la documentación de AniLink](https://transitionlink.tylerbarnes.ca/docs/anilink/) para más detalles.
+Opciones como duración de la transición, dirección y demás son configurables con _props_. Mira [la documentación de AniLink](https://transitionlink.tylerbarnes.ca/docs/anilink/) para más detalles.
 
 ## Transiciones personalizadas
 
@@ -69,11 +69,10 @@ Tienes dos métodos principales de crear transiciones de páginas:
 1. Usa la función `trigger` definida en tu _prop_ `exit`/`entry`. Más detalles en la subsección '[Usando la función `trigger`](#using-the-trigger-function)'.
 2. Usa las _props_ pasadas por `TransitionLink` para definir tus transiciones. Más detalles en la subsección '[Usando _props_ pasadas](#using-passed-props)'.
 
-Adicionalmente, puedes especificar un número de _props_ y opciones en el componente `TransitionLink`, como `length`, `delay` y más. Para mas opciones y detalles, vé [la documentación de TransitionLink](https://transitionlink.tylerbarnes.ca/docs/transitionlink/).
+Adicionalmente, puedes especificar un número de _props_ y opciones en el componente `TransitionLink`, como `length`, `delay` y más. Para mas opciones y detalles, mira [la documentación de TransitionLink](https://transitionlink.tylerbarnes.ca/docs/transitionlink/).
 
 #### Usando la función trigger
 
-You can specify a `trigger` function that will handle the animation. This is useful for _imperative_ animation libraries like [animejs](https://animejs.com/) or [GSAP](https://greensock.com/gsap) that specify animations with function calls.
 Puedes especificar una función `trigger` que manejará la animación. Esto es útil para las librerías de animaciones _imperativas_ como [animejs](https://animejs.com/) o [GSAP](https://greensock.com/gsap) que especifican animaciones con llamadas a funciones.
 
 ```javascript
@@ -112,7 +111,7 @@ Puedes combinar estas _props_ con una librería de animación basada-en-estado _
 
 Si quieres acceder a estas _props_ en uno de tus componentes en vez de una página/plantilla, debes envolver tu componente en el componente `TransitionState`. Este componente toma una función que accederá a las mismas propiedades como anteriormente, la cual podrás usar en tu componente.
 
-Aquí un ejemplo usando `TransitionState` y `react-pose` para desencadenar las transiciones _enter/exit_ para el componente `Box`.
+Aquí un ejemplo usando `TransitionState` y `react-pose` para activar las transiciones _enter/exit_ para el componente `Box`.
 
 ```javascript
 import { TransitionState } from "gatsby-plugin-transition-link"
@@ -141,11 +140,11 @@ const Box = posed.div({
 </TransitionState>
 ```
 
-Ahora, el componente `Box` estará al pendiente del estatus de la transición de la página que es hijo, y aparecerá de entrada/salida en consecuencia.
+Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo, y aparecerá de entrada/salida en consecuencia.
 
 ## Excluyendo elementos de las transiciones de página
 
-Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del ancho-del-sitio_). Esto se puede conseguir envolviendo elementos con el componente `TransitionPortal`.
+Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del sitio_). Esto se puede conseguir envolviendo elementos con el componente `TransitionPortal`.
 
 ```javascript
 import { TransitionPortal } from "gatsby-plugin-transition-link"
@@ -160,12 +159,12 @@ import { TransitionPortal } from "gatsby-plugin-transition-link"
 </TransitionPortal>
 ```
 
-Como siempre, fíjate en [los docs `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información acerca de `TransitionPortal`.
+Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información acerca de `TransitionPortal`.
 
 ## Siguientes lecturas
 
 - [Documentación oficial](https://transitionlink.tylerbarnes.ca/docs/)
 - [Código fuente del plugin](https://github.com/TylerBarnes/gatsby-plugin-transition-link)
 - [Sitio demo](https://gatsby-plugin-transition-link.netlify.com/)
-- [Entrada de blog: 'Per-Link Gatsby page transitions with TransitionLink'](/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/)
+- [Entrada de blog: 'Transiciones de página con Per-Link Gatsby y TransitionLink'](/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/)
 - [Usando transition-link con react-spring](https://github.com/TylerBarnes/gatsby-plugin-transition-link/issues/34)
