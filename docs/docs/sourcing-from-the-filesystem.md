@@ -2,11 +2,11 @@
 title: Obteniendo datos desde el sistema de archivos
 ---
 
-Esta guía te guiará a través de la obtención de datos del sistema de archivos.
+Esta guía te ayudará con la obtención de datos del sistema de archivos.
 
 ## Configuración
 
-Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, diríjete a la [Guía de Inicio Rápido](/docs/quick-start).
+Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, dirígete a la [Guía de Inicio Rápido](/docs/quick-start).
 
 También será útil si estás familiarizado con [GraphiQL](/docs/introducing-graphiql/), una herramienta que te ayuda a estructurar tus consultas correctamente.
 
