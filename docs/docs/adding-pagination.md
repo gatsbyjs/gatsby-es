@@ -9,7 +9,7 @@ El objetivo de la paginación es crear varias páginas (a partir de una única [
 
 Cada página realizará [una consulta con GraphQL](/docs/querying-with-graphql/) para esas entradas en concreto.
 
-La información necesaria para buscar esas entradas concretos (es decir, los valores de [`limit`](/docs/graphql-reference/#limit) y [`skip`](/docs/graphql-reference/#skip)) provendrán del [`context`](/docs/graphql-reference/#query-variables) que se añade cuando se [crean páginas](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) en el `gatsby-node`.
+La información necesaria para buscar esas entradas en concreto (es decir, los valores de [`limit`](/docs/graphql-reference/#limit) y [`skip`](/docs/graphql-reference/#skip)) provendrán del [`context`](/docs/graphql-reference/#query-variables) que se añade cuando se [crean páginas](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) en `gatsby-node`.
 
 ### Ejemplos
 
