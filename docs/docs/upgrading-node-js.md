@@ -58,6 +58,7 @@ Estás interesado en la versión estable siguiente de Node posterior a Node 6, q
 ```
 brew install node@8
 ```
+
 Una vez que ésto ha concluido, ejecuta:
 
 ```
