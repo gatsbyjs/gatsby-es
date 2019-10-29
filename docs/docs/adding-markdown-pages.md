@@ -191,6 +191,7 @@ Para más información, echa un vistazo al ejemplo en funcionamiento `using-mark
 
 ## Otros tutoriales
 
+
 Revisa los tutoriales listados en la página de [Awesome Gatsby](/docs/awesome-gatsby-resources/#gatsby-tutorials) para más información sobre como crear sitios con Gatsby y Markdown. 
 
 ## Gatsby Markdown starters

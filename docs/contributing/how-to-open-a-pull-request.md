@@ -97,7 +97,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
 
 - Establece la URL del repositorio de Gatsby como una fuente remota. El nombre de la fuente remota es arbitrario; este ejemplo usa `upstream`.
   ```shell
-  git remote set-url upstream git@github.com:gatsbyjs/gatsby.git
+  git remote add upstream git@github.com:gatsbyjs/gatsby.git
   ```
   - _Nota: esta sintaxis [usa SSH y llaves de seguridad: también puedes usar `https`](https://help.github.com/en/articles/which-remote-url-should-i-use) con tu usuario/contraseña._
 - Puedes verificar el nombre del remoto y URL en cualquier momento:
@@ -110,7 +110,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
   ```
 - [En la rama](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) que quieres actualizar, haz un merge de cualquier cambio desde Gatsby hacia tu fork:
   ```shell
-  git merge upstream master
+  git merge upstream/master
   ```
   - Si hay [conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github), querrás encargarte de ellos para conseguir un merge limpio.
 - Una vez que tu rama está en estado funcional, sube los cambios a tu fork:
@@ -120,7 +120,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
 
 Para más información sobre cómo trabajar con repositorios upstream, [visita la documentación de GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
 
-_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente en vez de hacer un fork, y subir tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
+_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente (en vez de hacer un fork y utilizar un remoto upstream para trabajar). Entonces puedes subir tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows) para abrir PRs._
 
 ## Recursos adicionales
 
@@ -132,3 +132,4 @@ _**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo dire
 - [Ramas por funcionalidad y flujos de trabajo](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 - [Resolviendo conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github)
 - [Manejando Pull Requests](/contributing/managing-pull-requests/) del equipo principal de Gatsby.
+- [Guía de sintaxis Markdown](/docs/mdx/markdown-syntax/)
