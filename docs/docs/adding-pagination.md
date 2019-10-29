@@ -5,7 +5,7 @@ title: Agregar paginación
 Una página que muestra una lista de contenido se hace más larga a medida que aumenta la cantidad de contenido.
 La paginación es la técnica de esparcir ese contenido a lo largo de varias páginas.
 
-El objetivo de la paginación es crear varias páginas (a partir de una única [plantilla] (/docs/building-with-components/#page-template-components)) que contengan un número limitado de entradas.
+El objetivo de la paginación es crear varias páginas (a partir de una única [plantilla](/docs/building-with-components/#page-template-components)) que contengan un número limitado de entradas.
 
 Cada página realizará [una consulta con GraphQL](/docs/querying-with-graphql/) para esas entradas en concreto.
 
