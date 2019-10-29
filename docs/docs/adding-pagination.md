@@ -128,6 +128,6 @@ La dirección para la primera página es `/blog`, las siguientes páginas tendr�
 
 ### Otros recursos
 
-- Siga este [tutorial paso a paso](https://nickymeuleman.netlify.com/blog/gatsby-pagination/) para agregar enlaces a la página anterior, página siguiente y a la navegación tradicional de la página ubicada en la parte inferior de la página.
+- Sigue este [tutorial paso a paso](https://nickymeuleman.netlify.com/blog/gatsby-pagination/) para agregar enlaces a la página anterior, página siguiente y a la navegación tradicional de la página ubicada en la parte inferior de la página.
 
 - Vea la [(demo)](https://nickymeuleman.github.io/gatsby-paginated-blog/) de [gatsby-paginated-blog](https://github.com/NickyMeuleman/gatsby-paginated-blog) para una ampliación del [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) oficial con paginación implementada.
