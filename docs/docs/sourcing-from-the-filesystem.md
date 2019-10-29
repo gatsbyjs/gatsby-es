@@ -1,30 +1,31 @@
 ---
-title: Obteniendo datos desde el sistema de archivos
+title: Sourcing from the Filesystem
 ---
 
-Esta guía te guiará a través de la obtención de datos del sistema de archivos.
+This guide will walk you through sourcing data from the filesystem.
 
-## Configuración
+## Setup
 
-Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, diríjete a la [Guía de Inicio Rápido](/docs/quick-start).
+This guide assumes that you have a Gatsby project set up. If you need to set up a project, please reference the [Quick Start Guide](/docs/quick-start/).
 
-También será útil si estás familiarizado con [GraphiQL](/docs/introducing-graphiql/), una herramienta que te ayuda a estructurar tus consultas correctamente.
+It will also be useful if you are familiar with [GraphiQL](/docs/introducing-graphiql/), a tool that helps you structure your queries correctly.
 
-## Usando `gatsby-source-filesystem`
+## Using `gatsby-source-filesystem`
 
-`gatsby-source-filesystem` el el plugin de Gatsby para crear nodos `File` desde el sistema de archivos.
+`gatsby-source-filesystem` is the Gatsby plugin for creating File nodes from the file system.
 
-Instala el plugin desde la raíz de tu proyecto Gatsby:
+Install the plugin at the root of your Gatsby project:
 
 ```shell
 npm install --save gatsby-source-filesystem
 ```
-Después añádelo al archivo `gatsby-config.js` de tu proyecto:
+
+Then add it to your project's `gatsby-config.js` file:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `El Nombre de tu Sitio`,
+    title: `Your Site Name`,
   },
   plugins: [
     // highlight-start
@@ -40,36 +41,36 @@ module.exports = {
 }
 ```
 
-Guarda el archivo `gatsby-config.js`, y reinicia el servidor de desarrollo de Gatsby.
+Save the `gatsby-config.js` file, and restart the Gatsby development server.
 
-Abre GraphiQL.
+Open up GraphiQL.
 
-Si abres la ventana de autocompletar, verás:
+If you bring up the autocomplete window, you'll see:
 
 ![graphiql-filesystem](images/graphiql-filesystem.png)
 
-Pulsa <kbd>Enter</kbd> en `allFile` después pulsa <kbd>Ctrl + Enter</kbd> para ejecutar una
-consulta.
+Hit <kbd>Enter</kbd> on `allFile` then type <kbd>Ctrl + Enter</kbd> to run a
+query.
 
 ![filesystem-query](images/filesystem-query.png)
 
-Borra el `id` de la consulta y vuelve a abrir el autocompletado (<kbd>Ctrl +
-Espacio</kbd>).
+Delete the `id` from the query and bring up the autocomplete again (<kbd>Ctrl +
+Space</kbd>).
 
 ![filesystem-autocomplete](images/filesystem-autocomplete.png)
 
-Intenta añadir una serie de campos a tu consulta, pulsando <kbd>Ctrl + Enter</kbd>
-cada vez para re-ejecutar la consulta. Verás algo parecido a esto:
+Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd>
+each time to re-run the query. You'll see something like this:
 
 ![allfile-query](images/allfile-query.png)
 
-El resultado es un _array_ de "nodos" `File` (nodo es un nombre elegante para un objeto en un
-"graph"). Cada objeto `File` tiene los campos que has consultado.
+The result is an array of File "nodes" (node is a fancy name for an object in a
+"graph"). Each File object has the fields you queried for.
 
-## Transformando nodos `File`
+## Transforming File nodes
 
-Una vez que los archivos se han obtenido, varios plugins "transformadores" en el ecosistema Gatsby pueden ser usados para transformar los nodos `File` en otros varios tipos de datos. Por ejemplo, un archivo JSON puede ser obtenido usando `gatsby-source-filesystem`, y luego los nodos `File` resultates pueden ser transformados en nodos JSON usando `gatsby-transformer-json`.
+Once files have been sourced, various "transformer" plugins in the Gatsby ecosystem can then be used to transform File nodes into various other types of data. For example, a JSON file can be sourced using `gatsby-source-filesystem`, and then the resulting File nodes can be transformed into JSON nodes using `gatsby-transformer-json`.
 
-## Más referencias y ejemplos
+## Further reference and examples
 
-Para más referencia, puedes estar interesado en revisar el [README del paquete](/packages/gatsby-source-filesystem/) de `gatsby-source-filesystem`, y varios [starters que usan el plugin](/starters/?d=gatsby-source-filesystem) oficiales y de la comunidad.
+For further reference, you may be interested in checking out the `gatsby-source-filesystem` [package README](/packages/gatsby-source-filesystem/), and various official and community [starters that use the plugin](/starters/?d=gatsby-source-filesystem).
