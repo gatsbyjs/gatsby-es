@@ -2,9 +2,9 @@
 title: "Agregar un componente de SEO"
 ---
 
-Cada sitio en la web tiene _meta-tags_ básicos como el título, favicon o descripción de la página en su elemento `<head>`. Esta información se muestra en el navegador y se usa cuando alguien comparte tu sitio web, por ejemplo en Twitter. Puedes proporcionar a tus usuarios y a estos sitios web datos adicionales para integrar tu sitio web con más datos — y aquí es donde entra esta guía para un componente de SEO. Al final tendrás un componente que podrás colocar en tu archivo layout y tener previsualizaciones enriquecidas para otros clientes, usuarios de teléfonos inteligentes, y buscadores.
+Cada sitio en la web tiene _meta-tags_ básicos como el título, favicon o descripción de la página en su elemento `<head>`. Esta información se muestra en el navegador y se usa cuando alguien comparte tu sitio web, por ejemplo en Twitter. Puedes proporcionar a tus usuarios y a estos sitios web datos adicionales para integrar tu sitio web con más datos — y aquí es donde entra esta guía para un componente de SEO. Al final tendrás un componente que podrás colocar en tu archivo _layout_ y tener previsualizaciones enriquecidas para otros clientes, usuarios de teléfonos inteligentes, y buscadores.
 
-_Nota: Este componente usará StaticQuery. Si no estás familiarizado con esto, hecha un vistazo a la [documentación de StaticQuery](/docs/static-query/). También debes tener `react-helmet` instalado, para lo cual puedes hechar un vistazo a [este documento](/docs/add-page-metadata)._
+_Nota: Este componente usará StaticQuery. Si no estás familiarizado con esto, echa un vistazo a la [documentación de StaticQuery](/docs/static-query/). También debes tener `react-helmet` instalado, para lo cual puedes echar un vistazo a [este documento](/docs/add-page-metadata)._
 
 ## gatsby-config.js
 
@@ -55,7 +55,7 @@ SEO.defaultProps = {
 }
 ```
 
-**Nota:** los `propTypes` están incluidos en este ejemplo para ayudarte a asegurar que estás obteniendo todos los datos que necesitas en el componente, y sirven como una guía mientras desestructuras / usas estos props.
+**Nota:** los `propTypes` están incluidos en este ejemplo para ayudarte a asegurar que estás obteniendo todos los datos que necesitas en el componente, y sirven como una guía mientras desestructuras / usas estas _props_.
 
 Como el componente de SEO también debería ser utilizable en otros archivos, por ejemplo un archivo plantilla, el componente acepta propiedades para las cuales estableces valores predeterminados en la sección `SEO.defaultProps`. De esta forma la información que colocas en `siteMetadata` se usa cada vez a menos que definas explícitamente la propiedad.
 
@@ -87,7 +87,7 @@ const query = graphql`
 `;
 ```
 
-El siguiente paso consiste en desestructurar los datos de la consulta y crear un objeto que verifica si los props fueron usados — si no, los valores por defecto son utilizados. El alias de nombres es útil aquí: Evita las colisiones de nombres.
+El siguiente paso consiste en desestructurar los datos de la consulta y crear un objeto que verifica si las _props_ fueron usadas — si no, los valores por defecto son utilizados. El alias de nombres es útil aquí: Evita las colisiones de nombres.
 
 ```jsx:title=src/components/SEO.js
 const SEO = ({ title, description, image, pathname, article }) => (
@@ -216,7 +216,7 @@ const query = graphql`
 
 ## Ejemplos
 
-También puedes poner los meta-tags de Facebook y Twitter en sus propios componentes, agregar favicons personalizados que se encuentran en tu carpeta `static`, y agregar datos de [schema.org](https://schema.org/) (Google usará eso para sus [Datos Estructurados](https://developers.google.com/search/docs/guides/intro-structured-data)). Para ver cómo funciona, puedes hechar un vistazo a estos dos ejemplos:
+También puedes poner los meta-tags de Facebook y Twitter en sus propios componentes, agregar favicons personalizados que se encuentran en tu carpeta `static`, y agregar datos de [schema.org](https://schema.org/) (Google usará eso para sus [Datos Estructurados](https://developers.google.com/search/docs/guides/intro-structured-data?hl=es-419)). Para ver cómo funciona, puedes echar un vistazo a estos dos ejemplos:
 
 - [marisamorby.com](https://github.com/marisamorby/marisamorby.com/blob/master/packages/gatsby-theme-blog-sanity/src/components/seo.js)
 - [gatsby-starter-prismic](https://github.com/LeKoArts/gatsby-starter-prismic/blob/master/src/components/SEO/SEO.jsx)
