@@ -12,10 +12,10 @@ Como es descrito [aquí](/docs/adding-markdown-pages), tendrás que crear tus po
 ---
 path: "/blog/my-first-post"
 date: "2017-11-07"
-title: "My first blog post"
+title: "El primer post del blog"
 ---
 
-Has anyone heard about GatsbyJS yet?
+¿Alguien ha oído ya sobre GatsbyJS?
 ```
 
 ### Creación de página
