@@ -1,56 +1,56 @@
 ---
-title: Adding search with js-search
+title: Agregando búsquedas con js-search
 ---
 
-## Prerequisites
+## Prerrequisitos
 
-Before we go through the steps needed for adding client-side search to your Gatsby website, you should be familiar with the basics of Gatsby. Check out the [tutorial](/tutorial/) and brush up on the [documentation](/docs/) if you need to. In addition, some knowledge of [ES6 syntax](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2) will be useful.
+Antes de realizar los pasos necesarios para agregar búsquedas en el lado-del-cliente de tu sitio web Gatsby, debes estar familiarizado con lo básico en Gatsby. Revisa el [tutorial](/tutorial/) y repasa la [documentación](/docs/) si lo necesitas. Adicionalmente, algún conocimiento de la [sintaxis ES6](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2) será de utilidad.
 
-## What is JS Search
+## Qué es JS Search
 
-[JS Search](https://github.com/bvaughn/js-search) is a library created by Brian Vaughn, a member of the core team at Facebook. It provides an efficient way to search for data on the client with JavaScript and JSON objects. It also has extensive customization options, check out their docs for more details.
+[JS Search](https://github.com/bvaughn/js-search) es una librería creada por Brian Vaughn, un miembro del equipo del núcleo de Facebook. Provee una manera eficiente de buscar datos en el cliente con JavaScript y objetos JSON. También sus opciones de personalización son extensas, revisa sus docs para más detalles.
 
-The full code and documentation for this library is [available on GitHub](https://github.com/bvaughn/js-search). This guide is based on the official `js-search` example but has been adapted to work with your Gatsby site.
+Todo el código y documentación de esta librería esta [disponible en GitHub](https://github.com/bvaughn/js-search). Esta guía está basada en el ejemplo oficial de `js-search`, pero ha sido adaptado para que funcione con tu sitio Gatsby.
 
-## Setup
+## Montaje
 
-You'll start by creating a new Gatsby site based on the official _hello world_ starter. Open up a terminal and run the following command:
+Empezarás creando un nuevo sitio Gatsby basado en la plantilla oficial _hello world_. Abre una terminal y ejecuta el siguiente comando:
 
 ```shell
 gatsby new js-search-example https://github.com/gatsbyjs/gatsby-starter-default
 ```
 
-After the process is complete, some additional packages are needed.
+Después de que el proceso se haya completado, se necesitan algunos paquetes adicionales.
 
-Change directories to the `js-search-example` folder and issue the following command:
+Cambiate de directorio a la carpeta `js-search-example` y lanza el siguiente comando:
 
 ```shell
 npm install --save js-search axios
 ```
 
-Or if Yarn is being used:
+O si usas Yarn:
 
 ```shell
 yarn add js-search axios
 ```
 
-**Note**:
+**Nota**:
 
-For this particular example [axios](https://github.com/axios/axios) will be used to handle all of the promise-based HTTP requests.
+Para este ejemplo en particular, se usará [axios](https://github.com/axios/axios) para manejar todas las peticiones HTTP basadas-en-promesas.
 
-## Strategy selection
+## Selección de estrategia
 
-In the next sections you'll learn about two approaches to implementing `js-search` in your site. Which one you choose will depend on the number of items you want to search. For a small to medium dataset, the first strategy documented should work out nicely.
+En las siguientes secciones aprenderás dos propuestas para implementar `js-search` en tu sitio. La que elijas dependerá de el número de _items_ que quieras buscar. Para un conjunto de datos de pequeño a medio, la primera estrategia documentada debe funcionar bien.
 
-For larger datasets you could use the second approach, as most of the work is done beforehand through the use of Gatsby's internal API.
+Para un conjunto de datos mas grandes puedes usar el segundo enfoque, ya que la mayor parte del trabajo se realiza de antemano mediante el uso de la API interna de Gatsby.
 
-Both ways are fairly generalistic, they were implemented using the default options for the library, so that it can be experimented without going through into the specifics of the library.
+Las dos maneras son bastante generales, fueron implementadas usando las opciones predefinidas de la librería, para que se pueda experimentar sin entrar en los detalles de la librería.
 
-And finally, as you go through the code, be mindful it does not adhere to the best practices, it's just for demonstration purposes, in a real site it would have been implemented in a different way.
+Y finalmente, mientras codificas, ten en mente que no se adhiere a las mejoras practicas, es solo para fines ilustrativos, en un sitio real se habría implementado de diferente manera.
 
-## JS-Search with a small to medium dataset
+## JS-Search con un conjunto de datos de pequeño a medio
 
-Start by creating a file named `SearchContainer.js` in the `src/components/` folder, then add the following code to get started:
+Inicia creando un archivo llamado `SearchContainer.js` en la carpeta `src/components/`, después agrega el siguiente código para iniciar:
 
 ```javascript
 import React, { Component } from "react"
@@ -67,7 +67,7 @@ class Search extends Component {
     searchQuery: "",
   }
   /**
-   * React lifecycle method to fetch the data
+   * Método de ciclo de vida de React para obtener datos
    */
   async componentDidMount() {
     Axios.get("https://bvaughn.github.io/js-search/books.json")
@@ -85,38 +85,38 @@ class Search extends Component {
   }
 
   /**
-   * rebuilds the overall index based on the options
+   * reconstruye el índice general en base a las opciones
    */
   rebuildIndex = () => {
     const { bookList } = this.state
     const dataToSearch = new JsSearch.Search("isbn")
     /**
-     *  defines a indexing strategy for the data
-     * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
+     *  define una estrategia de índice para los datos
+     * más acerca de esto aquí https://github.com/bvaughn/js-search#configuring-the-index-strategy
      */
     dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
     /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
+     * define el sanitizante para la búsqueda
+     * para prevenir que algunas palabras sean excluidas
      *
      */
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
     /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
+     * define el índice de la búsqueda
+     * lee más aquí https://github.com/bvaughn/js-search#configuring-the-search-index
      */
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("isbn")
 
-    dataToSearch.addIndex("title") // sets the index attribute for the data
-    dataToSearch.addIndex("author") // sets the index attribute for the data
+    dataToSearch.addIndex("title") // establece el atributo índice para los datos
+    dataToSearch.addIndex("author") // establece el atributo índice para los datos
 
-    dataToSearch.addDocuments(bookList) // adds the data to be searched
+    dataToSearch.addDocuments(bookList) // agrega los datos a ser buscados
     this.setState({ search: dataToSearch, isLoading: false })
   }
 
   /**
-   * handles the input change and perform a search with js-search
-   * in which the results will be added to the state
+   * maneja el input change y realiza una búsqueda con js-search
+   * en la cual el resultado será agregado a el estado
    */
   searchData = e => {
     const { search } = this.state
@@ -240,28 +240,28 @@ class Search extends Component {
 export default Search
 ```
 
-Breaking down the code into smaller parts:
+Descomponiendo el código en partes más pequeñas:
 
-1. When the component is mounted, the `componentDidMount()` lifecycle method is triggered and the data will be fetched.
-2. If no errors occur, the data received is added to the state and the `rebuildIndex()` function is invoked.
-3. The search engine is then created and configured with the default options.
-4. The data is then indexed using js-search.
-5. When the contents of the input changes, js-search starts the search process based on the `input`'s value and returns the search results if any, which is then presented to the user via the `table` element.
+1. Cuando el componente es montado, el método de ciclo de vida `componentDidMount()` es disparado y los datos seran obtenidos.
+2. Si no ocurren errores, los datos recibidos son agregados al estado y la función `rebuildIndex()` es invocada.
+3. El motor de busqueda es entonces creado y configurado con las opciones por defecto.
+4. Los datos son indexados usando js-search.
+5. Cuando el contenido del _input_ cambia, js-search inicia el proceso de búsqueda basado en el valor del `input` y regresa los resultados de la búsqueda si hay, los cuales son presentados al usuario mediante el elemento `table`.
 
-### Joining all the pieces
+### Uniendo todas las piezas
 
-In order to get it working in your site, you would only need to import the newly created component to a page.
-As you can see [in the example site](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/pages/index.js).
+Para que funcione en tu sitio, solo necesitarás importar el componente recientemente creado a una página.
+Como puedes observar [en el sitio de ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/pages/index.js).
 
-Run `gatsby develop` and if all went well, open your browser of choice and enter the url `http://localhost:8000` - you'll have a fully functional search at your disposal.
+Ejecuta `gatsby develop` y si todo fue bien, abre tu navegador preferido e introduce la url `http://localhost:8000` - tendrás una búsqueda completamente funcional a tu dispocición.
 
-## JS-Search with a big dataset
+## JS-Search con un conjunto de datos grande
 
-Now let's try a different approach, this time instead of letting the component do all of the work, it's Gatsby's job to do that and pass all the data to a page defined by the path property, via [pageContext](/docs/behind-the-scenes-terminology/#pagecontext).
+Ahora intentemos otro enfoque, esta ocasión en vez de dejar que el componente haga todo el trabajo, es responsabilidad de Gatsby que haga eso y pase todos los datos a la página definida en la propiedad ruta, via [pageContext](/docs/behind-the-scenes-terminology/#pagecontext).
 
-To do this, some changes are required.
+Para hace esto, algunos cambios son requeridos.
 
-Start by modifying the `gatsby-node.js` file by adding the following code:
+Inicia modificando el archivo `gatsby-node.js` agregando el siguiente código:
 
 ```javascript
 const path = require("path")
@@ -275,9 +275,9 @@ exports.createPages = ({ actions }) => {
       .then(result => {
         const { data } = result
         /**
-         * creates a dynamic page with the data received
-         * injects the data into the context object alongside with some options
-         * to configure js-search
+         * crea una página dinámica con los datos recibidos
+         * inyecta los datos en el objeto contex junto con algunas opciones
+         * para configurar js-search
          */
         createPage({
           path: "/search",
@@ -307,7 +307,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-Create a file named `ClientSearchTemplate.js` in the `src/templates/` folder, then add the following code to get started:
+Crea un archivo llamado `ClientSearchTemplate.js` en la carpeta `src/templates/`, después agrega el siguiente código para empezar:
 
 ```javascript
 import React from "react"
@@ -353,7 +353,7 @@ class ClientSearch extends Component {
     selectedSanitizer: "",
   }
   /**
-   * React lifecycle method that will inject the data into the state.
+   * Método de ciclo de vida de React que inyectará los datos al estado.
    */
   static getDerivedStateFromProps(nextProps, prevState) {
     if (prevState.search === null) {
@@ -373,7 +373,7 @@ class ClientSearch extends Component {
   }
 
   /**
-   * rebuilds the overall index based on the options
+   * reconstruye el índice general en base a las opciones
    */
   rebuildIndex = () => {
     const {
@@ -394,8 +394,8 @@ class ClientSearch extends Component {
       )
     }
     /**
-     * defines an indexing strategy for the data
-     * read more about it here https://github.com/bvaughn/js-search#configuring-the-index-strategy
+     * define una estrategia de indexado para los datos
+     * leé mas acerca de esto aquí https://github.com/bvaughn/js-search#configuring-the-index-strategy
      */
     if (selectedStrategy === "All") {
       dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
@@ -408,8 +408,8 @@ class ClientSearch extends Component {
     }
 
     /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
+     * define el sanitizante para la búsqueda
+     * para prevenir que algunas palabras sean excluidas
      */
     selectedSanitizer === "Case Sensitive"
       ? (dataToSearch.sanitizer = new JsSearch.CaseSensitiveSanitizer())
@@ -418,22 +418,22 @@ class ClientSearch extends Component {
       ? (dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("isbn"))
       : (dataToSearch.searchIndex = new JsSearch.UnorderedSearchIndex())
 
-    // sets the index attribute for the data
+    // establece el atributo índice para los datos
     if (indexByTitle) {
       dataToSearch.addIndex("title")
     }
-    // sets the index attribute for the data
+    // establece el atributo índice para los datos
     if (indexByAuthor) {
       dataToSearch.addIndex("author")
     }
 
-    dataToSearch.addDocuments(books) // adds the data to be searched
+    dataToSearch.addDocuments(books) // agrega los datos a ser buscados
 
     this.setState({ search: dataToSearch, isLoading: false })
   }
   /**
-   * handles the input change and perform a search with js-search
-   * in which the results will be added to the state
+   * maneja el input change y realiza una búsqueda con js-search
+   * en la cual el resultado será agregado a el estado
    */
   searchData = e => {
     const { search } = this.state
@@ -557,22 +557,22 @@ class ClientSearch extends Component {
 export default ClientSearch
 ```
 
-Breaking down the code into smaller parts:
+Descomponiendo el código en partes más pequeñas:
 
-1. When the component is mounted, the `getDerivedStateFromProps()` lifecycle method is invoked and it will evaluate the state and if necessary update it.
-2. Then the `componentDidMount()` lifecycle method will be triggered and the `rebuildIndex()` function is invoked.
-3. The search engine is then created and configured with the options defined.
-4. The data is then indexed using js-search.
-5. When the contents of the input changes, js-search starts the search process based on the `input`'s value and returns the search results if any, which is then presented to the user via the `table` element.
+1. Cuando el componente es montado, el método de ciclo de vida `getDerivedStateFromProps()` es invocado y evaluará el estado y si es necesario lo actualizará.
+2. Despues el método de ciclo de vida `componentDidMount()` se disparará y la función `rebuildIndex()` es invocada.
+3. El motor de busqueda es entonces creado y configurado con las opciones definidas.
+4. Los datos son indexados usando js-search.
+5. Cuando el contenido del _input_ cambia, js-search inicia el proceso de búsqueda basado en el valor del `input` y regresa los resultados de la búsqueda si hay, los cuales son presentados al usuario mediante el elemento `table`.
 
-### Joining all the pieces
+### Uniendo todas las piezas
 
-Once again to get it to work on your site you would only need to copy over [the `gatsby-node.js` file located here](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/gatsby-node.js).
+Nuevamente, para que funcione en tu sitio solo necesitas copiar [el archivo `gatsby-node.js` localizado aquí](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/gatsby-node.js).
 
-And both the [template](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/templates/ClientSearchTemplate.js) and the [search component](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/components/ClientSearch.js).
+Y tanto el [modelo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/templates/ClientSearchTemplate.js) como el [componente buscar](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/components/ClientSearch.js).
 
-Issuing `gatsby develop` again, and if all went without any issues one more time, open your browser of choice and enter the url `http://localhost:8000/search`, you'll have a fully functional search at your disposal coupled with Gatsby API.
+Lanzando `gatsby develop` nuevamente, y si todo salió sin detalles una vez más, abre tu navegador preferido e introduce la url `http://localhost:8000/search`, tendrás una busqueda completamente funcional a tu dispocición acoplada con la API Gatsby.
 
-Hopefully this rather extensive guide has shed some insights on how to implement client search using js-search.
+Esperemos que esta guía bastante extensa haya arrojado algunas ideas sobre cómo implementar la búsqueda usando js-search en el lado del cliente.
 
-Now go make something great!
+¡Ahora ve y crea algo genial!
