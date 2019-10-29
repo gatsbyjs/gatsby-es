@@ -2,9 +2,9 @@
 title: Donde participar en la Comunidad
 ---
 
-Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para cada uno y para todos. Si estás interesado en participar en la comunidad de Gatsby.js, las contribuciones van más allá de pull requests y commits. Estamos emocionados de recibir una variedad de otras contribuciones, incluyendo las siguientes:
+Queremos que contribuir a Gatsby sea divertido, disfrutable, y educacional para todos y cada uno. Si estás interesado en participar en la comunidad de Gatsby.js, las contribuciones van más allá de pull requests y commits. Estamos emocionados de recibir una variedad de otras contribuciones, incluyendo las siguientes:
 
-- Bloguear, hablar sobre Gatsby, o crear tutoriales acerca de una de las cuantas funcionalidades que Gatsby tiene. Menciona a [@gatsbyjs en Twitter](https://twitter.com/gatsbyjs) y/o escríbele un e-mail a marcy [arroba] gatsbyjs [punto] com, así podemos dar retroalimentación y recomendaciones (si los quieres 😄) y ayudarte a esparcir la palabra. Por favor agrega tus entradas de blog y videos de charlas a nuestra página de [Awesome Gatsby](/docs/awesome-gatsby/).
+- Bloguear, hablar sobre Gatsby, o crear tutoriales acerca de una de las cuantas funcionalidades que Gatsby tiene. Menciona a [@gatsbyjs en Twitter](https://twitter.com/gatsbyjs) y/o escríbele un e-mail a marcy [arroba] gatsbyjs [punto] com, así podemos dar retroalimentación y recomendaciones (si los quieres 😄) y ayudarte a esparcir la palabra. Por favor agrega tus entradas de blog y videos de charlas a nuestra página de [Awesome Gatsby](/docs/awesome-gatsby-resources/).
 - Presentándote en meetups y conferencias sobre tus proyectos con Gatsby. Tus desafíos únicos y éxitos construyendo cosas con Gatsby pueden proveer gran material para charlas. Nos encantaría hacer una revisión de tu resumen de charla/CFP, ¡así que ponte en contacto con nosotros si quieres algo de ayuda!
 - [Enviando nuevas ideas de funcionalidades mediante un RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
 - Enviando nueva documentación; títulos en la navegación lateral en [docs](/docs) que son más ligeros en color en gatsbyjs.org que son stubs y requieren contribuciones

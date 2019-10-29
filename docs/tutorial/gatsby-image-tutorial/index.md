@@ -63,7 +63,7 @@ npm install gatsby-source-filesystem
 plugins: [
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
-  { resolve: `gatsby-source-filesystem`, options: { path: `./src/data/` },
+  { resolve: `gatsby-source-filesystem`, options: { path: `./src/data/` } },
 ]
 ```
 
@@ -273,17 +273,21 @@ talks: allSpeakingYaml {
 Cuando hagas esto, has cambiado la referencia al objeto de consulta disponible en tu código JSX. Mientras anteriormente se le hizo referencia como aquí:
 
 ```jsx
-{data.allSpeakingYaml.edges.map(({ node }) => (
-   <Img fluid={node.image.childImageSharp.fluid} alt={node.alt}/>
-))
+{
+  data.allSpeakingYaml.edges.map(({ node }) => (
+    <Img fluid={node.image.childImageSharp.fluid} alt={node.alt} />
+  ))
+}
 ```
 
 Darle un alias no añade un nivel de complejidad al objeto de respuesta, solo lo reemplaza. Entonces terminas con la misma estructura, referenciada así (ten en cuenta el alias `talk` en lugar del más largo` allSpeakingYaml`):
 
 ```jsx
-{data.talks.edges.map(({ node }) => (
-    <Img fluid={node.image.childImageSharp.fluid} alt={node.alt}/>
-))
+{
+  data.talks.edges.map(({ node }) => (
+    <Img fluid={node.image.childImageSharp.fluid} alt={node.alt} />
+  ))
+}
 ```
 
 El nombre del objeto de nivel superior `data` está implícito. Esto es importante porque cuando realices múltiples consultas como parte de un solo componente, Gatsby aún pasa el resultado completo al componente.
@@ -291,7 +295,7 @@ El nombre del objeto de nivel superior `data` está implícito. Esto es importan
 Aquí hay un ejemplo de datos que se incluye en un componente:
 
 ```jsx
-const SpeakingPage = ({ data }) => {})
+const SpeakingPage = ({ data }) => {}
 ```
 
 Todo lo demás se referencia desde ese nombre de retorno de nivel superior.
@@ -326,9 +330,11 @@ Sabiendo esto, puedes combinar dos consultas que hacen referencia a imágenes y 
 Ten en cuenta que este ejemplo usa alias para una consulta y no para la otra. Esto está permitido; no es necesario que todas tus consultas utilicen alias. En este caso, el JSX se vería así para acceder al contenido en `speaking.yaml`.
 
 ```jsx
-{data.allSpeakingYaml.edges.map(({ node }) => (
-     <Img fluid={node.image.childImageSharp.fluid} alt={node.alt}/>
-))
+{
+  data.allSpeakingYaml.edges.map(({ node }) => (
+    <Img fluid={node.image.childImageSharp.fluid} alt={node.alt} />
+  ))
+}
 ```
 
 Y luego así para acceder a la imagen usando el alias `banner`.
