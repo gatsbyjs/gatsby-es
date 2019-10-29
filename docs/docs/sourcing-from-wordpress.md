@@ -2,7 +2,7 @@
 title: Obteniendo datos desde WordPress
 ---
 
-Esta guía te ayudará a través del proceso de usar [Gatsby](/) con [WordPress Rest Api](https://developer.wordpress.org/rest-api/reference/).
+Esta guía te ayudará a través del proceso de usar [Gatsby](/) con la [API Rest de WordPress](https://developer.wordpress.org/rest-api/reference/).
 
 WordPress es un gestor de contenidos (CMS) libre y de código abierto. Supongamos que tienes un sitio creado con WordPress y quieres extraer los datos existentes a tu sitio estático en Gatsby. Puedes hacerlo con [gatsby-source-wordpress](/packages/gatsby-source-wordpress/?=wordpress). ¡Empecemos!
 
@@ -17,7 +17,7 @@ Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configu
 
 ### gatsby-config.js
 
-Esencialmente la base inicial de Gatsby. Las dos cosas definidas aquí inicialmente (en el starter) son `siteMetadata` y `plugins` puedes añadir más para habilitar nuevas funcionalidades para tu sitio.
+Es esencialmente la base inicial de Gatsby. Las dos cosas definidas aquí inicialmente (en el starter) son `siteMetadata` y `plugins` que puedes añadir más para habilitar nuevas funcionalidades para tu sitio.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
 
 ### Plugin: gatsby-source-wordpress
 
-Ahora que tienes cierta comprensión de la estructura del proyecto, agregemos la funcionalidad para extraer datos de WordPress. Hay un plugin para ello. [`gatsby-source-wordpress`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress) es un plugin de Gatsby para obtener datos desde sitios WordPress usando la JSON REST API. Puedes instalarlo ejecutando el siguiente comando:
+Ahora que tienes cierta comprensión de la estructura del proyecto, agreguemos la funcionalidad para extraer datos de WordPress. Hay un plugin para ello. [`gatsby-source-wordpress`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress) es el plugin de Gatsby para obtener datos desde sitios WordPress usando la JSON REST API. Puedes instalarlo ejecutando el siguiente comando:
 
 ```shell
 npm install gatsby-source-wordpress
@@ -39,7 +39,7 @@ npm install gatsby-source-wordpress
 
 ### Configurando el plugin
 
-En `gatsby-config.js`, añade tus opciones de configuración, includyendo la baseUrl de tu sitio WordPress, protocolo, si está alojado en [wordpress.com](http://wordpress.com/) o auto alojado, y si usa el plugin Advanced Custom Fields (ACF).
+En `gatsby-config.js`, añade tus opciones de configuración, incluyendo la baseUrl y protocolo de tu sitio WordPress, si está alojado en [wordpress.com](http://wordpress.com/) o auto alojado, y si usa el plugin Advanced Custom Fields (ACF) o no.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -66,7 +66,7 @@ module.exports = {
 
 ## Usando datos de WordPress
 
-Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para consultar con GraphQL. Gatsby usa [GraphQL en tiempo de compilación](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
+Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
 
 La API `createPages` expone la función `graphql`:
 
@@ -116,7 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 Después de obtener los datos desde WordPress a través de la consulta, todas las entradas se iteran, llamando a [`createPage`](/docs/actions/#createPage) para cada una.
 
-Una [página Gatsby es definida](/docs/api-specification/#concepts) como "una página del sitio con un nombre de ruta, un componente de plantilla, y una _opcional_ consulta GraphQL y un componente Layout."
+Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una página del sitio con un nombre de ruta, un componente de plantilla, y una _opcional_ consulta GraphQL y un componente Layout."
 
 Cuando reinicies tu servidor con el comando `gatsby develop` podrás navegar a las nuevas páginas creadas para cada una de tus entradas en sus respectivas rutas.
 
