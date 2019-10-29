@@ -2,7 +2,7 @@
 title: Agregando formularios
 ---
 
-Gatsby está construido encima de React. Así que cualquier cosa que es posible con formularios en React es posible en Gatsby. Detalles adicionales de cómo crear formularios pueden ser encontrados en la [documentación de Formularios en React](https://es.reactjs.org/docs/forms.html)
+Gatsby está construido sobre React. Así que cualquier cosa que es posible con formularios en React es posible en Gatsby. Detalles adicionales de cómo crear formularios pueden ser encontrados en la [documentación de Formularios en React](https://es.reactjs.org/docs/forms.html)
 
 Comencemos con la siguiente página.
 
@@ -12,7 +12,7 @@ import React from "react"
 export default () => <div>Hello world!</div>
 ```
 
-Esta página Gatsby es un compenente React. Cuando quieres crear un formulario, necesitas almacenar el estado del formulario - lo que el usuario a introducido. Convierte tu componente función (_stateless_) a un componente clase (_stateful_)
+Esta página Gatsby es un componente de React. Cuando quieras crear un formulario, necesitas almacenar el estado del formulario - lo que el usuario a introducido. Convierte tu componente función (_stateless_) a un componente clase (_stateful_)
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-Ahora que haz creado un componente clase, puedes agregarle `estado` al componente.
+Ahora que haz creado un componente clase, puedes agregarle el `estado` al componente.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -70,7 +70,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-Cuando un usuario teclea en una caja de entrada, el estado se debe actualizar. Agrega una _prop_ `onChange` para actualizar el estado y agrega una _prop_ `value` para mantener la entrada actualizada con el nuevo estado:
+Cuando un usuario escribe en una caja de entrada, el estado se debe actualizar. Agrega una _prop_ `onChange` para actualizar el estado y agrega una _prop_ `value` para mantener la entrada actualizada con el nuevo estado:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -119,7 +119,7 @@ export default class IndexPage extends React.Component {
 }
 ```
 
-Ahora que tus entradas están funcionando, quieres que suceda algo cuando envíes el formulario. Agrega las _props_ `onSubmit` al elemento del formulario y agrega un `handleSubmit` para mostrar una alerta cuando el usuario envíe el formulario:
+Ahora que tus entradas están funcionando, quieres que suceda algo cuando envías el formulario. Agrega las _props_ `onSubmit` al elemento del formulario y agrega un `handleSubmit` para mostrar una alerta cuando el usuario envíe el formulario:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
