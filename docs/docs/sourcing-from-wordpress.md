@@ -6,18 +6,18 @@ Esta guía te ayudará a través del proceso de usar [Gatsby](/) con la [API Res
 
 WordPress es un gestor de contenidos (CMS) libre y de código abierto. Supongamos que tienes un sitio creado con WordPress y quieres extraer los datos existentes a tu sitio estático en Gatsby. Puedes hacerlo con [gatsby-source-wordpress](/packages/gatsby-source-wordpress/?=wordpress). ¡Empecemos!
 
-_Nota: esta guía usa `gatsby-starter-default` para proporcionarte con los conocimientos necesarios para empezar a trabajar con WordPress, pero si te atascas en algún punto de esta guía siéntete libre de usar
+_Nota: esta guía usa `gatsby-starter-default` para proporcionarte los conocimientos necesarios para empezar a trabajar con WordPress, pero si te atascas en algún punto siéntete libre de usar
 [este ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress) para obtener información adicional._
 
 ## Configuración
 
 ### Inicio rápido
 
-Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, diríjete a la [Guía de Inicio Rápido](/docs/quick-start), después vuelve.
+Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, dirígete a la [Guía de Inicio Rápido](/docs/quick-start), después vuelve.
 
 ### gatsby-config.js
 
-Es esencialmente la base inicial de Gatsby. Las dos cosas definidas aquí inicialmente (en el starter) son `siteMetadata` y `plugins` que puedes añadir más para habilitar nuevas funcionalidades para tu sitio.
+Es esencialmente la base inicial de Gatsby. Las dos cosas definidas aquí inicialmente (en el _starter_) son `siteMetadata` y `plugins` que puedes añadir para habilitar nuevas funcionalidades para tu sitio.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -52,9 +52,9 @@ module.exports = {
         // el origen de tu WordPress
         baseUrl: `wpejemplo.com`,
         protocol: `https`,
-        // si está alojado en wordpress.com, o auto alojado?
+        // ¿si está alojado en wordpress.com, o auto alojado?
         hostingWPCOM: false,
-        // usa tu sitio el plugin Advanced Custom Fields?
+        // ¿usa tu sitio el plugin Advanced Custom Fields?
         useACF: false
       }
     },
@@ -116,7 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 Después de obtener los datos desde WordPress a través de la consulta, todas las entradas se iteran, llamando a [`createPage`](/docs/actions/#createPage) para cada una.
 
-Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una página del sitio con un nombre de ruta, un componente de plantilla, y una _opcional_ consulta GraphQL y un componente Layout."
+Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una página del sitio con un nombre de ruta, un componente de plantilla, y una consulta de GraphQL y componente _Layout opcionales_."
 
 Cuando reinicies tu servidor con el comando `gatsby develop` podrás navegar a las nuevas páginas creadas para cada una de tus entradas en sus respectivas rutas.
 
