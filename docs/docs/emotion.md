@@ -2,7 +2,7 @@
 title: Emotion
 ---
 
-En esta guía, aprenderás como configurar un sitio con la librería CSS-in-JS [Emotion](https://emotion.sh)
+En esta guía, aprenderás como configurar un sitio con la librería CSS-in-JS [Emotion](https://emotion.sh).
 
 Emotion es una librería de CSS-in-JS flexible y eficaz. Basándose en muchas otras librerías CSS-in-JS, te permite dar estilo a tus aplicaciones rápidamente con estilos en objetos o en strings. Tiene una composición predecible para evitar problemas de especificidad con el CSS. Con _source maps_ y etiquetas, Emotion tiene una excelente _developer experience_ y un gran rendimiento gracias al intensivo almacenamiento en caché en producción.
 
