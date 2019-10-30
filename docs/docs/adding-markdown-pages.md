@@ -39,11 +39,11 @@ plugins: [
 ]
 ```
 
-Completando los pasos anteriores significa que "obtienes" los archivos de Markdown del sistema de archivos. Ahora puedes "transformar" los archivos de Markdown to HTML y los frontmatter de YAML a JSON. 
+Completando los pasos anteriores significa que "obtienes" los archivos de Markdown del sistema de archivos. Ahora puedes "transformar" los archivos de Markdown a HTML y los *frontmatter* de YAML a JSON. 
 
-### Transforma Markdown a HTML y frontmatter los datos usando `gatsby-transformer-remark`
+### Transforma Markdown a HTML y frontmatter a datos usando `gatsby-transformer-remark`
 
-Usarás el plugin [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark/) para reconocer archivos que son Markdown y leer su contenido. El plugin convertirá en `frontmatter` la parte de metadatos frontmatter de tus archivos Markdown y en HTML la parte de contenido. 
+Usarás el plugin [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark/) para reconocer archivos que son Markdown y leer su contenido. El plugin convertirá en `frontmatter` la parte de metadatos *frontmatter* de tus archivos Markdown y en HTML la parte de contenido. 
 
 #### Instalar
 
@@ -73,13 +73,13 @@ Ahora crea un archivo Markdown dentro de el con el nombre `post-1.md`.
 
 #### Frontmatter para metadatos en markdown files
 
-Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado frontmatter y está denotado por tres guiones al principio y final del bloque. Este bloque será parseado por `gatsby-transformer-remark` como `frontmatter`. LA API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
+Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado *frontmatter* y está denotado por tres guiones al principio y final del bloque. Este bloque será parseado por `gatsby-transformer-remark` como `frontmatter`. LA API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
 
 ```markdown:title=src/markdown-pages/post-1.md
 ---
 path: "/blog/my-first-post"
 date: "2019-05-04"
-title: "Mi primer blog"
+title: "Mi primer post del blog"
 ---
 ```
 
@@ -133,11 +133,11 @@ Hay dos cosas importantes en el archivo superior:
 
     **Nota: Para aprender más sobre GraphQL, considera esta [excelente fuente](https://www.howtographql.com/)**
 
-2.  El resultado de la query está inyectada por Gatsby en el componente `Template` como `data`. `markdownRemark` es la propiedad en la que encontrarás todos los detalles del archivo de Markdown. Puedes usarlo para construir un plantilla para la vista de nuestro post del blog. Como es un componente de React, podrías darle un estilo con cualquiera de los [sistemas de estilo recomendados](/docs/styling/) en Gatsby.
+2.  El resultado de la consulta es inyectada por Gatsby en el componente `Template` como `data`. `markdownRemark` es la propiedad en la que encontrarás todos los detalles del archivo de Markdown. Puedes usarlo para construir un plantilla para la vista de nuestro post del blog. Como es un componente de React, podrías darle un estilo con cualquiera de los [sistemas de estilo recomendados](/docs/styling/) en Gatsby.
 
 ### Crear páginas estáticas usando `createPage` de la API en Node.js de Gatsby
 
-Gatsby expone una poderosa API en Node.JS, la cual permite funcionalidades como la creación de páginas dinámicas. Esta API está disponible en el archivo `gatsby-node.js`  en el directorio raiz de tu proyecto, al mismo nivel de `gatsby-config.js`. Cada export encontrado en este archivo srá ejecutado por Gatsby, como se detalla en su [especificación API Node](/docs/node-apis/). Sin embargo, sólo tienes que preocuparte por una API en particular de esta instancia, `createPages`.
+Gatsby expone una poderosa API en Node.JS, la cual permite funcionalidades como la creación de páginas dinámicas. Esta API está disponible en el archivo `gatsby-node.js`  en el directorio raiz de tu proyecto, al mismo nivel de `gatsby-config.js`. Cada *export* encontrado en este archivo será ejecutado por Gatsby, como se detalla en su [especificación API Node](/docs/node-apis/). Sin embargo, sólo tienes que preocuparte por una API en particular de esta instancia, `createPages`.
 
 Usa `graphql` para consultar el archivo Markdown como debajo.
 A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
@@ -185,7 +185,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 ```
 
-Esto debería de ayudarte a comenzar con algo de funcionalidad básica de Markdown en tu sitio Gatbsy. ¡Puedes personalizar el frontmatter y la plantilla de archivo para obtener los efectos deseados!
+Esto debería de ayudarte a comenzar con algo de funcionalidad básica de Markdown en tu sitio Gatbsy. ¡Puedes personalizar el *frontmatter* y la plantilla de archivo para obtener los efectos deseados!
 
 Para más información, echa un vistazo al ejemplo en funcionamiento `using-markdown-pages`. Puedes encontrarlo en la [Sección de ejemplos de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples).
 
