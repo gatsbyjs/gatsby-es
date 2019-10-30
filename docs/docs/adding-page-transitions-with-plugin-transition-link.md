@@ -97,7 +97,7 @@ Puedes especificar una función `trigger` que manejará la animación. Esto es �
 
 #### Usando props pasadas
 
-La salida y entrada de páginas/plantillas involucradas en la transición recibirán _props_ indicando el estatus de la transición actual, así como también la _prop_ `exit` o `enter` definida en el `TransitionLink`.
+La salida y entrada de páginas/plantillas involucradas en la transición recibirán _props_ indicando el estado de la transición actual, así como también la _prop_ `exit` o `enter` definida en el `TransitionLink`.
 
 
 ```javascript
