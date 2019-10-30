@@ -12,13 +12,14 @@ También será útil si estás familiarizado con [GraphiQL](/docs/introducing-gr
 
 ## Usando `gatsby-source-filesystem`
 
-`gatsby-source-filesystem` el el plugin de Gatsby para crear nodos `File` desde el sistema de archivos.
+`gatsby-source-filesystem` es el plugin de Gatsby para crear nodos `File` desde el sistema de archivos.
 
 Instala el plugin desde la raíz de tu proyecto Gatsby:
 
 ```shell
 npm install --save gatsby-source-filesystem
 ```
+
 Después añádelo al archivo `gatsby-config.js` de tu proyecto:
 
 ```javascript:title=gatsby-config.js
@@ -64,7 +65,7 @@ cada vez para re-ejecutar la consulta. Verás algo parecido a esto:
 ![allfile-query](images/allfile-query.png)
 
 El resultado es un _array_ de "nodos" `File` (nodo es un nombre elegante para un objeto en un
-"graph"). Cada objeto `File` tiene los campos que has consultado.
+"grafo"). Cada objeto `File` tiene los campos que has consultado.
 
 ## Transformando nodos `File`
 
@@ -72,4 +73,4 @@ Una vez que los archivos se han obtenido, varios plugins "transformadores" en el
 
 ## Más referencias y ejemplos
 
-Para más referencia, puedes estar interesado en revisar el [README del paquete](/packages/gatsby-source-filesystem/) de `gatsby-source-filesystem`, y varios [starters que usan el plugin](/starters/?d=gatsby-source-filesystem) oficiales y de la comunidad.
+Para más referencia, puedes estar interesado en revisar el [README del paquete](/packages/gatsby-source-filesystem/) de `gatsby-source-filesystem`, y varios [starters que usan el plugin](/starters/?d=gatsby-source-filesystem) tanto oficiales como de la comunidad.
