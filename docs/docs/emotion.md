@@ -2,7 +2,7 @@
 title: Emotion
 ---
 
-En esta guía, aprenderás como configurar un sitio con la librería CSS-in-JS, [Emotion](https://emotion.sh)
+En esta guía, aprenderás como configurar un sitio con la librería CSS-in-JS [Emotion](https://emotion.sh)
 
 Emotion es una librería de CSS-in-JS flexible y eficaz. Basándose en muchas otras librerías CSS-in-JS, te permite dar estilo a tus aplicaciones rápidamente con estilos en objetos o en strings. Tiene una composición predecible para evitar problemas de especificidad con el CSS. Con _source maps_ y etiquetas, Emotion tiene una excelente _developer experience_ y un gran rendimiento gracias al intensivo almacenamiento en caché en producción.
 
@@ -33,9 +33,9 @@ Después ejecuta `npm start` en tu terminal para iniciar el servidor de desarrol
 Ahora vamos a crear una página de ejemplo con Emotion en `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import React from "react"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -44,7 +44,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const UserWrapper = styled.div`
   display: flex;
@@ -56,7 +56,7 @@ const UserWrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
-`;
+`
 
 const Avatar = styled.img`
   flex-grow: 0;
@@ -65,26 +65,26 @@ const Avatar = styled.img`
   width: 96px;
   height: 96px;
   margin: 0;
-`;
+`
 
 const Description = styled.div`
   flex: 1;
   margin-left: 18px;
   padding: 12px;
-`;
+`
 
 const Username = styled.h2`
   margin: 0 0 12px 0;
   padding: 0;
-`;
+`
 
 const Excerpt = styled.p`
   margin: 0;
-`;
+`
 // Usando la prop css proporciona una API flexible y concisa para dar estilo a tus componentes //
 const underline = css`
   text-decoration: underline;
-`;
+`
 
 const User = props => (
   <UserWrapper>
@@ -94,7 +94,7 @@ const User = props => (
       <Excerpt>{props.excerpt}</Excerpt>
     </Description>
   </UserWrapper>
-);
+)
 
 export default () => (
   <Container>
@@ -111,7 +111,7 @@ export default () => (
       excerpt="Soy Bob smith, esa clase de tío verticalmente alineado. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   </Container>
-);
+)
 ```
 
 ## Añadiendo estilos globales en Gatsby con Emotion
@@ -129,7 +129,7 @@ Crea el fichero `gatsby-config.js` y añade el plugin de Emotion:
 ```js:title=gatsby-config.js
 module.exports = {
   plugins: [`gatsby-plugin-emotion`]
-};
+}
 ```
 
 Después, añade un componente _layout_ en `src/components/layout.js`:
@@ -142,7 +142,7 @@ import styled from "@emotion/styled";
 const Wrapper = styled("div")`
   border: 2px solid green;
   padding: 10px;
-`;
+`
 
 export default ({ children }) => (
   <Wrapper>
@@ -156,16 +156,16 @@ export default ({ children }) => (
     />
     {children}
   </Wrapper>
-);
+)
 ```
 
 Entonces, actualiza `src/pages/index.js` usando el _layout_:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
-import Layout from "../components/layout";
+import React from "react"
+import Layout from "../components/layout"
 
-export default () => <Layout>¡Hola mundo!</Layout>;
+export default () => <Layout>¡Hola mundo!</Layout>
 ```
 
 Ejecuta `npm run build`, y ya puedes ver en `public/index.html` que los estilos globales han sido añadidos _inline_.
