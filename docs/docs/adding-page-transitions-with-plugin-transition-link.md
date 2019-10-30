@@ -109,7 +109,7 @@ const PageOrTemplate = ({ children, transitionStatus, entry, exit }) => {
 
 Puedes combinar estas _props_ con una librería de animación basada-en-estado _declarativa_ como [react-pose](https://popmotion.io/pose/) o [react-spring](http://react-spring.surge.sh/) para especificar transiciones para salir y entrar a una página.
 
-Si quieres acceder a estas _props_ en uno de tus componentes en vez de una página/plantilla, debes envolver tu componente en el componente `TransitionState`. Este componente toma una función que accederá a las mismas propiedades como anteriormente, la cual podrás usar en tu componente.
+Si quieres acceder a estas _props_ en uno de tus componentes en vez de una página/plantilla, debes envolver tu componente en el componente `TransitionState`. Este componente toma una función que accederá a las mismas propiedades como antes, la cual podrás usar en tu componente.
 
 Aquí un ejemplo usando `TransitionState` y `react-pose` para activar las transiciones _enter/exit_ para el componente `Box`.
 
