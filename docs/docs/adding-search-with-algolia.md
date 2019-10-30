@@ -1,5 +1,5 @@
 ---
-title: Añadir una búsqueda con Algolia
+title: Añadiendo un buscador con Algolia
 ---
 
 Una vez que hayas añadido contenido a tu sitio, querrás que tus visitantes encuentren fácilmente lo que están buscando. Esta guía te llevará por el proceso de configurar un experiencia de búsqueda personalizada, soportada por [Algolia](https://www.algolia.com), en cualquier sitio desarrollado con Gatsby. Escribirás componentes funcionales que dependen de _Hooks_ de React, así que, para seguir esta guía, se requiere que uses [React 16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0) o superior.
@@ -7,17 +7,17 @@ Una vez que hayas añadido contenido a tu sitio, querrás que tus visitantes enc
 Es importante que sepas estas dos cosas antes de que empieces:
 
 1. Además de esta guía, también pudieras consultar la extensa [documentación de Algolia sobre cómo iniciar con React](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react).
-2. Si estás buscando añadir una búsqueda a un sitio de documentación, puedes dejar que Algolia haga la mayoría de pasos indicados abajo usando su funcionalidad [Docsearch](https://community.algolia.com/docsearch). Para sitios de otros tipos y un fino control sobre qué datos exactos deben ser indexados, sigue leyendo.
+2. Si estás buscando añadir un buscador a un sitio de documentación, puedes dejar que Algolia haga la mayoría de pasos indicados abajo usando su funcionalidad [Docsearch](https://community.algolia.com/docsearch). Para sitios de otros tipos y un fino control sobre qué datos exactos deben ser indexados, sigue leyendo.
 
 ## ¿Por qué usar Algolia?
 
-Algolia es una plataforma de _hosting_ de búsqueda para un sitio, ella aloja información del índice de páginas por ti, y retorna los resultados en donde sea que esté la búsqueda de tu sitio. Tú le dices a Algolia qué paginas tienes, dónde están y cómo navegar hacia ellas, y Algolia te devuelve esos resultados basada en cualquier término de búsqueda usado.
+Algolia es una plataforma de alojamiento de buscadores que aloja información del índice de páginas por ti, y retorna los resultados en donde sea que esté la búsqueda de tu sitio. Tú le dices a Algolia qué paginas tienes, dónde están y cómo navegar hacia ellas, y Algolia te devuelve esos resultados basada en cualquier término de búsqueda usado.
 
-Para implementar la búsqueda de Algolia en un sitio Gatsby, tendrás que instalar el _plugin_, decirle qué información consultar, proveer tus credenciales de Algolia, y seguir otros pocos pasos de configuración. Esto significa que después de que las consultas se hayan ejecutado cuando haces un `gatsby build`, Algolia tendrá disponible el índice entero de tu sitio y podrá devolver resultados a usuarios rápidamente. Para aprender más acerca de los beneficios de usar Algolia, [revisa este post de Netlify, quienes recientemente cambiaron su sitio a Algolia](https://www.netlify.com/blog/2017/10/10/replacing-our-search-with-algolia/).
+Para implementar la búsqueda de Algolia en un sitio Gatsby, tendrás que instalar el _plugin_, decirle qué información consultar, proveer tus credenciales de Algolia, y seguir otros pocos pasos de configuración. Esto significa que después de que las consultas se hayan ejecutado cuando haces un `gatsby build`, Algolia tendrá disponible el índice entero de tu sitio y podrá devolver resultados a usuarios rápidamente. Para aprender más acerca de los beneficios de usar Algolia, [revisa este post en el blog de Netlify, quienes recientemente cambiaron el buscador de su sitio al de Algolia](https://www.netlify.com/blog/2017/10/10/replacing-our-search-with-algolia/).
 
 ## Configuración del _plugin_ de Algolia
 
-En primer lugar, necesitarás añadir [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia) y [`react-instantsearch-dom`](https://github.com/algolia/react-instantsearch) a tu proyecto. `react-instantsearch` es la librería de Algolia que tiene componentes React disponibles, los cuales puedes importar para ahorrarte un montón de trabajo. También usarás `dotenv` el cual viene con Gatsby por defecto. Necesitarás especificar tu _app ID_ de Algolia y las _API keys_ de búsqueda y administración sin agregarlas a tu sistema de control de versiones.
+En primer lugar, necesitarás añadir [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia) y [`react-instantsearch-dom`](https://github.com/algolia/react-instantsearch) a tu proyecto. `react-instantsearch` es la librería de Algolia que contiene componentes React disponibles, los cuales puedes importar para ahorrarte un montón de trabajo. También usarás `dotenv` el cual viene con Gatsby por defecto. Necesitarás especificar tu _app ID_ de Algolia y las _API keys_ de búsqueda y administración sin agregarlas a tu sistema de control de versiones.
 
 ```shell
 npm install --save gatsby-plugin-algolia react-instantsearch-dom algoliasearch dotenv
@@ -307,7 +307,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
   })
 ```
 
-`Search` retorna JSX que renderiza un arreglo dinámico de `indices` pasados como _prop_. Cada ítem del arreglo debe ser un objeto con llaves como `name`, `title`, `hitComp`. El `name` especifica el índice a ser consultado en tu cuenta de Algolia, el `title` es el título a mostrar encima de los resultados que verá el usuario y `hitComp` el componente _hit_ que renderiza los datos devueltos por cada coincidencia.
+`Search` devuelve JSX que renderiza un arreglo dinámico de `indices` pasados como _prop_. Cada ítem del arreglo debe ser un objeto con llaves como `name`, `title`, `hitComp`. El `name` especifica el índice a ser consultado en tu cuenta de Algolia, el `title` es el título a mostrar encima de los resultados que verá el usuario y `hitComp` el componente _hit_ que renderiza los datos devueltos por cada coincidencia.
 
 ```js:title=src/components/search/index.js
   return (
@@ -339,7 +339,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
 
 Pasar este arreglo de `indices` como un prop, permite reusar el mismo componente de búsqueda `Search` en diferentes partes del sitio y además permite que cada uno de ellos consulte diferentes índices. Por ejemplo, aparte de tener una caja de búsqueda principal en la cabecera del sitio para encontrar páginas y/o posts, tal vez quisieras tener una wiki en tu sitio y ofrecer a tus visitantes una segunda caja de búsqueda que muestre solo resultados de la wiki.
 
-Nota que usaste el mismo _app ID_ en `algoliasearch` que especificaste en el archivo `.env` y que fue usado también en `src/utils/algolia.js` así como tu _search-only API key_ para generar una búsqueda en el cliente que conecta con tu _backend_. _¡No copies tu admin API key de Algolia aquí!_ `algoliasearch` solo necesita _leer_ tus índices. Pegar tu _admin key_ aquí permitirá que otros la obtengan cuando tu sitio sea desplegado. Y alguien podría arruinar tus datos indexados en Algolia.
+Nota que usaste el mismo _app ID_ en `algoliasearch` que especificaste en el archivo `.env` y que fue usado también en `src/utils/algolia.js` así como tu _search-only API key_ para generar una búsqueda en el cliente que conecta con tu _backend_. _¡No copies tu admin API key de Algolia aquí!_ `algoliasearch` solo necesita _leer_ tus índices. Pegar tu _admin key_ aquí permitirá que otros la obtengan cuando tu sitio sea desplegado. Y alguien podría empezar a meterse en tus datos indexados en Algolia.
 
 ## `input.js`
 
@@ -582,7 +582,7 @@ const Header = ({ site, transparent }) => (
 export default Header
 ```
 
-Nota que aquí es donde defines tu arreglo de índices de búsqueda y lo pasas como prop a `Search`.
+Nota que aquí es donde defines tu arreglo de índices de búsqueda y lo pasas como _prop_ a `Search`.
 
 ¡Si todo funciona como esperamos, al ejecutar `gatsby develop` deberías ver la magia de la búsqueda instantánea como se muestra en el video de abajo! Además puedes mirar y jugar con el buscador implementado [aquí](https://janosh.io/blog).
 
@@ -590,7 +590,7 @@ Nota que aquí es donde defines tu arreglo de índices de búsqueda y lo pasas c
 
 ## Recursos adicionales
 
-Si tienes algún problema o si quisieras aprender más acerca del uso de Algolia para búsquedas, puedes mirar este tutorial de Jason Lengstorf:
+Si tienes algún problema o si quieres aprender más acerca del uso de Algolia para búsquedas, puedes mirar este tutorial de Jason Lengstorf:
 
 `youtube: VSkXyuXzwlc`
 
