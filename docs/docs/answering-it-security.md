@@ -10,7 +10,7 @@ Aquí puedes encontrar algunos puntos de referencia que te podrían ayudar a res
 - Gatsby agrega una capa de indirección que esconde tu CMS -- por lo que incluso si tu CMS _es_ vulnerable, los agentes malintencionados no tendrán idea de dónde encontrarlo. Esto contrasta con otros sistemas en los que los agentes malintencionados pueden localizar fácilmente el panel de control de administración en, por ejemplo, `/wp-admin` e intentar hackearlo.
 - Gatsby te permite servir tu sitio Web a través de una CDN global, sin importar qué CDN esté utilizando tu empresa (por ejemplo, Akamai, Cloudflare, Fastly...), lo que elimina eficazmente el riesgo de ataques DDOS.
 
-Es útil recalcar al personal de seguridad que estos beneficios fueron factores que motivaron a que se seleccionara a Gatsby para el proyecto. Ha escogido a Gatsby, en parte, porque es _más_ seguro.
+Es útil recalcar al personal de seguridad que estos beneficios fueron factores que motivaron a que se seleccionara a Gatsby para el proyecto. Has escogido a Gatsby, en parte, porque es _más_ seguro.
 
 Más información sobre la seguridad en Gatsby: [https://www.gatsbyjs.org/blog/2019-04-06-security-for-modern-web-frameworks/](/blog/2019-04-06-security-for-modern-web-frameworks/)
 
