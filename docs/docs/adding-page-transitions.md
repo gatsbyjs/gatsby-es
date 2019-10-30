@@ -1,8 +1,8 @@
 ---
-title: Adding Page Transitions
+title: Añadiendo transiciones de página
 overview: true
 ---
 
-Page transitions give users a better experience when navigating between pages. There are a number of ways to add them to your Gatsby site.
+Las transiciones de página dan una mejor experiencia a los usuarios cuando navegan entre páginas. Hay numerosas formas de añadirlas a tu sitio Gatsby.
 
 <GuideList slug={props.slug} />
