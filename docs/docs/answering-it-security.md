@@ -16,4 +16,4 @@ Más información sobre la seguridad en Gatsby: [https://www.gatsbyjs.org/blog/2
 
 --
 
-**Nota:** ¿Tienes ideas adicionales sobre cómo contestar preguntas sobre TI y seguridad relacionadas con los proyectos Gatsby? Aceptamos con gusto contribuciones a las documentaciones de Gatsby. Descubra [cómo contribuir](/contributing/docs-contributions/).
+**Nota:** ¿Tienes ideas adicionales sobre cómo contestar preguntas sobre TI y seguridad relacionadas con los proyectos Gatsby? Aceptamos con gusto contribuciones a las documentaciones de Gatsby. Descubre [cómo contribuir](/contributing/docs-contributions/).
