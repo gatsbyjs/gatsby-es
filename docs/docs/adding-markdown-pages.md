@@ -39,7 +39,7 @@ plugins: [
 ]
 ```
 
-Completando los pasos anteriores significa que "obtienes" los archivos de Markdown del sistema de archivos. Ahora puedes "transformar" los archivos de Markdown a HTML y los *frontmatter* de YAML a JSON. 
+Completando los pasos anteriores significa que "obtienes" los archivos de Markdown del sistema de archivos. Ahora puedes "transformar" los archivos de Markdown a HTML y los _frontmatter_ de YAML a JSON. 
 
 ### Transforma Markdown a HTML y frontmatter a datos usando `gatsby-transformer-remark`
 
