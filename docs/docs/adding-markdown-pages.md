@@ -43,7 +43,7 @@ Completando los pasos anteriores significa que "obtienes" los archivos de Markdo
 
 ### Transforma Markdown a HTML y frontmatter a datos usando `gatsby-transformer-remark`
 
-Usarás el plugin [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark/) para reconocer archivos que son Markdown y leer su contenido. El plugin convertirá en `frontmatter` la parte de metadatos *frontmatter* de tus archivos Markdown y en HTML la parte de contenido. 
+Usarás el plugin [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark/) para reconocer archivos que son Markdown y leer su contenido. El plugin convertirá en `frontmatter` la parte de metadatos _frontmatter_ de tus archivos Markdown y en HTML la parte de contenido. 
 
 #### Instalar
 
