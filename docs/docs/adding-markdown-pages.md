@@ -185,7 +185,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 ```
 
-Esto debería de ayudarte a comenzar con algo de funcionalidad básica de Markdown en tu sitio Gatbsy. ¡Puedes personalizar el *frontmatter* y la plantilla de archivo para obtener los efectos deseados!
+Esto debería de ayudarte a comenzar con algo de funcionalidad básica de Markdown en tu sitio Gatbsy. ¡Puedes personalizar el _frontmatter_ y la plantilla de archivo para obtener los efectos deseados!
 
 Para más información, echa un vistazo al ejemplo en funcionamiento `using-markdown-pages`. Puedes encontrarlo en la [Sección de ejemplos de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples).
 
