@@ -142,7 +142,7 @@ Gatsby expone una poderosa API en Node.JS, la cual permite funcionalidades como 
 Usa `graphql` para consultar el archivo Markdown como debajo.
 A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
 
-**NOTA:** Gatsby llama a la API `createPages`  (si está presente) en tiempo de compilación con parametros inyectados, `actions` y `graphql`.
+**NOTA:** Gatsby llama a la API `createPages`  (si está presente) en tiempo de compilación con parámetros inyectados, `actions` y `graphql`.
 
 ```javascript:title=gatsby-node.js
 const path = require(`path`)
