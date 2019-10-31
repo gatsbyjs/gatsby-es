@@ -1,15 +1,14 @@
 ---
-title: Creating Plugins
+title: Creación de plugins
 ---
 
-You may be looking to build and perhaps publish a plugin that doesn't exist yet, or you may just be curious to know more about the anatomy of a Gatsby plugin (file structure, etc).
+Puede que estés buscando crear y tal vez publicar un plugin que no existe todavía, o puede que sólo tengas curiosidad por saber más sobre la estructura anatómica de un plugin de Gatsby (estructura de archivos, etc.).
 
-## Core concepts
+## Conceptos básicos
 
-- Each Gatsby plugin can be created as an npm package or as a [local plugin](/docs/creating-a-local-plugin/)
-- A `package.json` is required
-- Plugins implement the Gatsby APIs for [Node](/docs/node-apis/), [server-side rendering](/docs/ssr-apis/), and the [browser](/docs/browser-apis/)
-
-This section of the docs includes the following guides:
+- Cada plugin de Gatsby puede ser creado como un paquete npm o como un [plugin local](/docs/creating-a-local-plugin/)
+- Un archivo `package.json` es requerido
+- Los plugins implementan las APIs de Gatsby para [Node](/docs/node-apis/), el [renderizado del lado del servidor](/docs/ssr-apis/) y el [navegador](/docs/browser-apis/).
+Esta sección de la documentación contiene las siguientes guías:
 
 <GuideList slug={props.slug} />
