@@ -94,15 +94,15 @@ exports.components = {
 }
 ```
 
-Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) con lo que puede mapear componentChunkNames con sus implementaciones de componentes. Mientras el [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) debe usar `async-requires.js` (debajo) debido a que realiza [separación del código](/docs/how-code-splitting-works/).It is used during [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) so that it can map componentChunkNames to their component implementations. Whereas the [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) must use `async-requires.js` (below) since it performs [code splitting](/docs/how-code-splitting-works/).
+Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) con lo que puede mapear componentChunkNames con sus implementaciones de componentes. Mientras el [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) debe usar `async-requires.js` (debajo) debido a que realiza [División del código](/docs/how-code-splitting-works/).
 
 ## async-requires.js
 
 ---
 
-`async-requires.js`  es muy similar a `sync-requires.js`, ya que es un archivo JavaScript generado dinámicamente. La diferencia es que está escrito para ser usado por la división del código via _webpack_ . Así que en lugar de usar `require` con la ruta del componente, este usa `import` y añade una pista con la que podremos enlazar eventualmente el componentChunkName con su archivo resultante (más información en el documento [Dividiendo Código](/docs/how-code-splitting-works/)). `components` es una función, de forma que puede ser inicializada en diferido.`async-requires.js` is very similar to `sync-requires.js`, in that it is a dynamically generated JavaScript file. The difference is that it is written to be used for code splitting via webpack. So, instead of using `require` with the component's path, it uses `import` and adds a `webpackChunkName` hint so that we can eventually link the componentChunkName to its resulting file (more info in [Code Splitting](/docs/how-code-splitting-works/) docs). `components` is a function, so that it can be lazily initialized.
+`async-requires.js`  es muy similar a `sync-requires.js`, ya que es un archivo JavaScript generado dinámicamente. La diferencia es que está escrito para ser usado por la división del código via _webpack_ . Así que en lugar de usar `require` con la ruta del componente, este usa `import` y añade una pista con la que podremos enlazar eventualmente el componentChunkName con su archivo resultante (más información en el documento [Dividiendo Código](/docs/how-code-splitting-works/)). `components` es una función, de forma que puede ser inicializada en diferido.
 
-`async-requires.js` también exporta una función `data` que importa `data.json` ([Ver abajo](/docs/write-pages/#datajson))`async-requires.js` also exports a `data` function that imports `data.json` ([see below](/docs/write-pages/#datajson))
+`async-requires.js` también exporta una función `data` que importa `data.json` ([Ver abajo](/docs/write-pages/#datajson))
 
 An example of async-requires is:
 
@@ -118,11 +118,11 @@ exports.components = {
 exports.data = () => import("/home/site/.cache/data.json")
 ```
 
-Recuerda, `sync-requires.js` es usado durante la [Generación de Página HTML](/docs/html-generation/). Y `async-requires.js` es usado por [Montando la App de JavaScript](/docs/production-app/). Remember, `sync-requires.js` is used during [Page HTML Generation](/docs/html-generation/). And `async-requires.js` is used by [Building the JavaScript App](/docs/production-app/).
+Recuerda, `sync-requires.js` es usado durante la [Generación de Página HTML](/docs/html-generation/). Y `async-requires.js` es usado por [Montando la App de JavaScript](/docs/production-app/). 
 
 ## data.json
 
-Este es un archivo json generado. Contiene todo los contenidos de `pages.json` ([como encima](/docs/write-pages/#pagesjson)), y el redux `jsonDataPaths` los cuales fueron creados al final de la fase de [Ejecución de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk). Así, que se parece a: This is a generated json file. It contains the entire `pages.json` contents ([as above](/docs/write-pages/#pagesjson)), and the entire redux `jsonDataPaths` which was created at the end of the [Query Execution](/docs/query-execution/#save-query-results-to-redux-and-disk) stage. So, it looks like:
+Este es un archivo json generado. Contiene todo los contenidos de `pages.json` ([como encima](/docs/write-pages/#pagesjson)), y el redux `jsonDataPaths` los cuales fueron creados al final de la fase de [Ejecución de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk). Se parece a: 
 
 ```javascript
 {
@@ -142,11 +142,11 @@ Este es un archivo json generado. Contiene todo los contenidos de `pages.json` (
  }
 ```
 
-`data.json` es usado en dos lugares. Primero, es importado en diferido por `async-requires.js` (arriba), que a su vez es usado por `production-app` para [cargar resultados json](/docs/production-app/#load-page-resources) para una página.`data.json` is used in two places. First, it's lazily imported by `async-requires.js` (above), which in turn is used by `production-app` to [load json results](/docs/production-app/#load-page-resources) for a page.
+`data.json` es usado en dos lugares. Primero, es importado en diferido por `async-requires.js` (encima), que a su vez es usado por `production-app` para [cargar resultados json](/docs/production-app/#load-page-resources) para una página.
 
-Este también es usado por [Generación de Página HTML](/docs/html-generation/) de dos maneras:It is also used by [Page HTML Generation](/docs/html-generation/) in two ways:
+Este también es usado por [Generación de Página HTML](/docs/html-generation/) de dos maneras:
 
-1. `static-entry.js` produce un _bundle webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa  `pages` para buscar la página para la página.1. `static-entry.js` produces a `page-renderer.js` webpack bundle that generates the HTML for a path. It requires `data.json` and uses the `pages` to lookup the page for the page.
-2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniendola en cuenta en `data.json.dataPaths[jsonName]`. 2. To get the `jsonName` from the page object, and uses it to construct a resource path for the actual json result by looking it up in `data.json.dataPaths[jsonName]`.
+1. `static-entry.js` produce un _bundle webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa  `pages` para buscar la página para la página.
+2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta en `data.json.dataPaths[jsonName]`.
 
-Ahora que hemos escrito nuestra página de datos, podemos empezar con la [sección de empaquetado web](/docs/webpack-and-ssr/).Now that we've written out page data, we can start on the [Webpack section](/docs/webpack-and-ssr/).
+Ahora que hemos escrito nuestra página de datos, podemos empezar con la [sección de empaquetado web](/docs/webpack-and-ssr/).
