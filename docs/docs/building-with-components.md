@@ -1,34 +1,34 @@
 ---
-title: Building with Components
+title: Construyendo con Componentes
 ---
 
 import LayerModel from "../../www/src/components/layer-model"
 
-To use Gatsby, you will need a basic understanding of React components.
+Para usar Gatsby, necesitarás un conocimiento básico sobre componentes en React.
 
-The [official tutorial](https://reactjs.org/tutorial/tutorial.html)
-is a good place to start.
+El [tutorial oficial](https://reactjs.org/tutorial/tutorial.html)
+es un buen lugar para empezar.
 
-## Why React components?
+## ¿Por qué componentes en React?
 
-React's component architecture simplifies building large websites by encouraging
-modularity, reusability, and clear abstractions. React has a large ecosystem of
-open source components, tutorials, and tooling that can be used seamlessly for
-building sites with Gatsby. Gatsby is built to behave almost exactly like a
-normal React application.
+La arquitectura de componentes de React simplifica la construcción de sitios web grandes incentivando la
+modularidad, la reusabilidad, y las abstracciones claras. React tiene un gran ecosistema de
+componentes de código abierto, tutoriales, y herramientas que pueden ser usadas sin problemas para
+construir sitios con Gatsby. Gatsby está construido para comportarse casi exactamente como una
+aplicación React normal.
 
-The following model shows how data from a source can be queried by GraphQL for use inside components in the process of building a Gatsby site:
+El siguiente modelo muestra cómo datos de un origen pueden ser consultados por GraphQL para usarlos dentro de componentes en el proceso de construcción de un sitio con Gatsby:
 
 <LayerModel initialLayer="View" />
 
-[Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
-is a good resource for learning how to structure applications with React.
+[Pensando en React](https://facebook.github.io/react/docs/thinking-in-react.html)
+es un buen recurso para aprender cómo estructurar aplicaciones con React.
 
-## How does Gatsby use React Components?
+## ¿Cómo usa Gatsby componentes React?
 
-Everything in Gatsby is built using components.
+Todo en Gatsby está construido usando componentes.
 
-A basic directory structure of a project might look like this:
+Una estructura de directorios básica de un proyecto podría verse así:
 
 ```
 .
@@ -49,15 +49,15 @@ A basic directory structure of a project might look like this:
         └── post.jsx
 ```
 
-### Page components
+### Componentes de página
 
-Components under `src/pages` become pages automatically with paths based on
-their file name. For example `src/pages/index.jsx` is mapped to `yoursite.com`
-and `src/pages/about.jsx` becomes `yoursite.com/about/`. Every `.js` or `.jsx`
-file in the pages directory must resolve to either a string or react component,
-otherwise your build will fail.
+Los componentes dentro de `src/pages` se convierten en páginas automáticamente con rutas basadas en
+su nombre de archivo. Por ejemplo `src/pages/index.jsx` se asigna a `yoursite.com`
+y `src/pages/about.jsx` se convierte en `yoursite.com/about/`. Todos los archivos `.js` o `.jsx`
+en el directorio _pages_ deben resolver en una cadena de texto o en un componente React,
+de lo contrario el _build_ fallará.
 
-Example:
+Ejemplo:
 
 ```jsx:title=src/pages/about.jsx
 import React from "react"
@@ -73,18 +73,18 @@ function AboutPage(props) {
 export default AboutPage
 ```
 
-### Page template components
+### Componentes de plantilla de página
 
-You can programmatically create pages using "page template components". All
-pages are React components but very often these components are just wrappers around data from files or other sources.
+Puedes crear páginas mediante programación usando "componentes de plantilla de página". Todas
+las páginas son componentes React pero muy a menudo estos componentes son solo _wrappers_ para datos desde archivos u otros orígenes.
 
-`src/templates/post.jsx` is an example of a page component. It queries GraphQL
-for markdown data and then renders the page using this data.
+`src/templates/post.jsx` es un ejemplo de un componente de página. Consulta a GraphQL
+por datos _markdown_ y entonces renderiza la página usando estos datos.
 
-See [part seven](/tutorial/part-seven/) of the tutorial for a detailed
-introduction to programmatically creating pages.
+Mira la [parte siete](/tutorial/part-seven/) del tutorial para una introducción
+detallada de crear páginas mediante programación.
 
-Example:
+Ejemplo:
 
 ```jsx:title=src/templates/post.jsx
 import React from "react"
@@ -114,19 +114,19 @@ export const pageQuery = graphql`
 `
 ```
 
-### HTML component
+### Componente HTML
 
-`src/html.jsx` is responsible for everything other than where Gatsby lives in
-the `<body />`.
+`src/html.jsx` es responsable de todo lo que no sea donde Gatsby está en 
+el `<body />`.
 
-In this file, you can modify the `<head>` metadata and general structure of the
-document and add external links.
+En este archivo, puedes modificar los metadatos del `<head>` y la estructura general del
+documento y añadir enlaces externos.
 
-Typically you should omit this from your site as the default html.js file will
-suffice. If you need more control over server rendering, then it's valuable to
-have an html.js.
+Por lo general, debes omitir esto en tu sitio, ya que el archivo html.js predeterminado será
+suficiente. Si necesitas más control sobre el renderizado en el servidor, entonces es importante
+tener un html.js.
 
-Example:
+Ejemplo:
 
 ```jsx:title=src/html.jsx
 import React from "react"
@@ -169,12 +169,12 @@ function HTML(props) {
 }
 ```
 
-These are examples of the different ways React components are used in Gatsby
-sites. To see full working examples, check out the
-[examples directory](https://github.com/gatsbyjs/gatsby/tree/master/examples) in
-the Gatsby repo.
+Estos son ejemplos de las diferentes formas en que los componentes React son usados en sitios Gatsby.
+Para ver ejemplos completos, consulta el
+[directorio de ejemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples) en
+el repositorio de Gatsby.
 
-### Non-page components
+### Componentes que no son de página
 
-A Non-page component is one that's embedded inside some other component, forming a component hierarchy. An example would be a Header component that's included in multiple page components.
-Gatsby uses GraphQL to enable components to declare the data they need. Using the [StaticQuery](/docs/static-query/) component or [useStaticQuery hook](/docs/use-static-query/), you can colocate a non-page component with its data.
+Un componente que no es de página es uno que está incrustado dentro de otro componente, formando una jerarquía de componente. Un ejemplo sería un componente _Header_ que está incluido en múltiples componentes de página.
+Gatsby usa GraphQL para permitir a los componentes declarar los datos que necesiten. Usando el componente [StaticQuery](/docs/static-query/) o el [_hook_ useStaticQuery](/docs/use-static-query/), puedes colocar un componente que no sea de página con sus datos.
