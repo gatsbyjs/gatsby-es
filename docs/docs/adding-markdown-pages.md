@@ -73,7 +73,7 @@ Ahora crea un archivo Markdown dentro de el con el nombre `post-1.md`.
 
 #### Frontmatter para metadatos en markdown files
 
-Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado *frontmatter* y está denotado por tres guiones al principio y final del bloque. Este bloque será parseado por `gatsby-transformer-remark` como `frontmatter`. LA API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
+Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado _frontmatter_ y está denotado por tres guiones al principio y final del bloque. Este bloque será parseado por `gatsby-transformer-remark` como `frontmatter`. La API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
 
 ```markdown:title=src/markdown-pages/post-1.md
 ---
