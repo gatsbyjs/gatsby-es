@@ -1,9 +1,9 @@
 ---
-title: Creating global styles
+title: Creación de estilos globales
 ---
 
-Creating global styles for your Gatsby site depends on your styling approach, so we've moved the instructions to the relevant guides:
+El crear estilos globales para tu sitio Gatsby depende de tu estrategia de diseño, de modo que hemos trasladado las instrucciones a las guías pertinentes:
 
-- [Global styles with standard CSS files](/docs/global-css/) (also applies if you're using CSS Modules for component-scoped styles)
-- [Global styles with CSS-in-JS library Emotion](/docs/emotion/)
-- [Global styles with CSS-in-JS library Styled-Components](/docs/styled-components/)
+- [Estilos globales con archivos CSS estándar](/docs/global-css/) (también se aplica si está utilizando CSS Modules para los estilos basados en componentes)
+- [Estilos globales con la librería CSS-in-JS Emotion](/docs/emotion/)
+- [Estilos globales con la librería CSS-in-JS Styled-Components](/docs/styled-components/)
