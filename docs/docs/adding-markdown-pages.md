@@ -139,8 +139,7 @@ Hay dos cosas importantes en el archivo superior:
 
 Gatsby expone una poderosa API en Node.JS, la cual permite funcionalidades como la creación de páginas dinámicas. Esta API está disponible en el archivo `gatsby-node.js`  en el directorio raíz de tu proyecto, al mismo nivel de `gatsby-config.js`. Cada *export* encontrado en este archivo será ejecutado por Gatsby, como se detalla en su [especificación API Node](/docs/node-apis/). Sin embargo, sólo tienes que preocuparte por una API en particular de esta instancia, `createPages`.
 
-Usa `graphql` para consultar el archivo Markdown como debajo.
-A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
+Usa `graphql` para consultar el archivo Markdown como debajo.A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
 
 **NOTA:** Gatsby llama a la API `createPages`  (si está presente) en tiempo de compilación con parámetros inyectados, `actions` y `graphql`.
 
@@ -190,7 +189,6 @@ Esto debería de ayudarte a comenzar con algo de funcionalidad básica de Markdo
 Para más información, echa un vistazo al ejemplo en funcionamiento `using-markdown-pages`. Puedes encontrarlo en la [Sección de ejemplos de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples).
 
 ## Otros tutoriales
-
 
 Revisa los tutoriales listados en la página de [Awesome Gatsby](/docs/awesome-gatsby-resources/#gatsby-tutorials) para más información sobre como crear sitios con Gatsby y Markdown. 
 
