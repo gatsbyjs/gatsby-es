@@ -20,9 +20,9 @@ Empezarás creando un nuevo sitio Gatsby basado en la plantilla oficial _hello w
 gatsby new js-search-example https://github.com/gatsbyjs/gatsby-starter-default
 ```
 
-Después de que el proceso se haya completado, se necesitan algunos paquetes adicionales.
+Después que el proceso se haya completado, se necesitan algunos paquetes adicionales.
 
-Cambiate de directorio a la carpeta `js-search-example` y lanza el siguiente comando:
+Cambia de directorio a la carpeta `js-search-example` y lanza el siguiente comando:
 
 ```shell
 npm install --save js-search axios
@@ -42,15 +42,15 @@ Para este ejemplo en particular, se usará [axios](https://github.com/axios/axio
 
 En las siguientes secciones aprenderás dos propuestas para implementar `js-search` en tu sitio. La que elijas dependerá de el número de _items_ que quieras buscar. Para un conjunto de datos de pequeño a medio, la primera estrategia documentada debe funcionar bien.
 
-Para un conjunto de datos mas grandes puedes usar el segundo enfoque, ya que la mayor parte del trabajo se realiza de antemano mediante el uso de la API interna de Gatsby.
+Para un conjunto de datos mas grandes puedes usar el segundo enfoque, ya que la mayor parte del trabajo se realiza de antemano mediante el uso de la _API_ interna de Gatsby.
 
 Las dos maneras son bastante generales, fueron implementadas usando las opciones predefinidas de la librería, para que se pueda experimentar sin entrar en los detalles de la librería.
 
-Y finalmente, mientras codificas, ten en mente que no se adhiere a las mejoras practicas, es solo para fines ilustrativos, en un sitio real se habría implementado de diferente manera.
+Y finalmente, mientras atraviesas el código, ten en mente que no se adhiere a las mejoras practicas, es solo para fines ilustrativos, en un sitio real se habría implementado de diferente manera.
 
 ## JS-Search con un conjunto de datos de pequeño a medio
 
-Inicia creando un archivo llamado `SearchContainer.js` en la carpeta `src/components/`, después agrega el siguiente código para iniciar:
+Comienza creando un archivo llamado `SearchContainer.js` en la carpeta `src/components/`, después agrega el siguiente código para iniciar:
 
 ```javascript
 import React, { Component } from "react"
@@ -244,7 +244,7 @@ Descomponiendo el código en partes más pequeñas:
 
 1. Cuando el componente es montado, el método de ciclo de vida `componentDidMount()` es disparado y los datos seran obtenidos.
 2. Si no ocurren errores, los datos recibidos son agregados al estado y la función `rebuildIndex()` es invocada.
-3. El motor de busqueda es entonces creado y configurado con las opciones por defecto.
+3. El motor de búsqueda es entonces creado y configurado con las opciones por defecto.
 4. Los datos son indexados usando js-search.
 5. Cuando el contenido del _input_ cambia, js-search inicia el proceso de búsqueda basado en el valor del `input` y regresa los resultados de la búsqueda si hay, los cuales son presentados al usuario mediante el elemento `table`.
 
@@ -432,7 +432,7 @@ class ClientSearch extends Component {
     this.setState({ search: dataToSearch, isLoading: false })
   }
   /**
-   * maneja el input change y realiza una búsqueda con js-search
+   * maneja los cambios en el input y realiza una búsqueda con js-search
    * en la cual el resultado será agregado a el estado
    */
   searchData = e => {
@@ -560,8 +560,8 @@ export default ClientSearch
 Descomponiendo el código en partes más pequeñas:
 
 1. Cuando el componente es montado, el método de ciclo de vida `getDerivedStateFromProps()` es invocado y evaluará el estado y si es necesario lo actualizará.
-2. Despues el método de ciclo de vida `componentDidMount()` se disparará y la función `rebuildIndex()` es invocada.
-3. El motor de busqueda es entonces creado y configurado con las opciones definidas.
+2. Despues el método de ciclo de vida `componentDidMount()` será disparado y la función `rebuildIndex()` es invocada.
+3. El motor de búsqueda es entonces creado y configurado con las opciones definidas.
 4. Los datos son indexados usando js-search.
 5. Cuando el contenido del _input_ cambia, js-search inicia el proceso de búsqueda basado en el valor del `input` y regresa los resultados de la búsqueda si hay, los cuales son presentados al usuario mediante el elemento `table`.
 
@@ -569,9 +569,9 @@ Descomponiendo el código en partes más pequeñas:
 
 Nuevamente, para que funcione en tu sitio solo necesitas copiar [el archivo `gatsby-node.js` localizado aquí](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/gatsby-node.js).
 
-Y tanto el [modelo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/templates/ClientSearchTemplate.js) como el [componente buscar](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/components/ClientSearch.js).
+Y tanto la [plantilla](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/templates/ClientSearchTemplate.js) como el [componente buscar](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-js-search/src/components/ClientSearch.js).
 
-Lanzando `gatsby develop` nuevamente, y si todo salió sin detalles una vez más, abre tu navegador preferido e introduce la url `http://localhost:8000/search`, tendrás una busqueda completamente funcional a tu dispocición acoplada con la API Gatsby.
+Lanzando `gatsby develop` nuevamente, y si todo salió sin detalles una vez más, abre tu navegador preferido e introduce la url `http://localhost:8000/search`, tendrás una búsqueda completamente funcional a tu dispocición acoplada con la API Gatsby.
 
 Esperemos que esta guía bastante extensa haya arrojado algunas ideas sobre cómo implementar la búsqueda usando js-search en el lado del cliente.
 
