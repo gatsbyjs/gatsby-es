@@ -1,25 +1,25 @@
 ---
-title: "Building Apps with Gatsby"
+title: "Creando Aplicaciones con Gatsby"
 ---
 
-Gatsby is an excellent framework for building web apps. You can use Gatsby to create personalized, logged-in experiences with two different approaches.
+Gatsby es un _framework_ excelente para crear aplicaciones web. Puedes usar Gatsby para crear experiencias personalizas y de sesión con dos enfoques diferentes.
 
-1.  "hybrid" app pages, and
-2.  client-only routes & user authentication
+1.  páginas de aplicaciones "híbridas", y
+2.  rutas solo para clientes y autenticación de usuarios
 
-## Hybrid app pages
+## Páginas de aplicaciones híbridas
 
-When a visitor lands on a Gatsby page, the page's HTML file is loaded first, then the JavaScript bundle; When your React components load in the browser, they can fetch and render data from APIs.
+Cuando un visitante llega a tu página Gatsby, el archivo HTML de la página se carga primero, después el paquete JavaScript; cuando tus componentes React se cargan en el navegador, pueden obtener y renderizar datos desde APIs.
 
-> 💡 The [React docs](https://reactjs.org/docs/faq-ajax.html) have a great, straightforward example demonstrating this approach.
+> 💡 La [documentación de React](https://reactjs.org/docs/faq-ajax.html) tiene un gran y sencillo ejemplo demostrando este enfoque.
 
-Some examples of how you could apply this:
+Algunos ejemplos en los que podrías aplicar esto:
 
-- A news site with live data like sports scores or the weather
-- An e-commerce site with universal product pages and category pages, but also personalized recommendation sections
+- Un sitio de noticias con datos en vivo como resultados deportivos o el tiempo
+- Un sitio de comercio electrónico con páginas de producto universales y páginas de categorías, pero también secciones de recomendaciones personalizadas
 
-You can also use your React components to create interactive widgets e.g. allow a user to do searches or submit forms. Because Gatsby is just React, it's easy to blend static and interactive/dynamic models of building web sites.
+También puedes usar tus componentes React para crear widgets interactivos p.ej. permitir a un usuario realizar búsquedas o enviar formularios. Porque Gatsby es solo React, es fácil combinar modelos estáticos e interactivos/dinámicos para crear sitios web.
 
-## Client-only routes & user authentication
+## Rutas solo para clientes y autenticación de usuarios
 
-Often you want to create a site with client-only routes that are gated by authentication. For more on this approach, check out the reference guide on [client-only routes and authentication](/docs/client-only-routes-and-user-authentication/).
+A menudo quieres crear un sitio con rutas exclusivas para clientes que están protegidas por autenticación. Para saber más sobre este enfoque, consulta la guía de referencia en [rutas y autenticación solo para clientes](/docs/client-only-routes-and-user-authentication/).
