@@ -16,8 +16,8 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
         <img src="/cheat-sheet_page_2.png" alt="Cheat Sheet - page 2" style="display:block; margin:0;" />
     </a>
 </figure>
-<!-- tyle=" position: absolute; height: 1px; width: 1px;overflow: hidden; clip: rect(1px, 1px, 1px, 1px); -->
-<div id="cheat_sheet-text" s">
+
+<div id="cheat_sheet-text" style=" position: absolute; height: 1px; width: 1px;overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
     <h2>Contenidos de la hoja de trucos de Gatsby</h2>
     <p>v1.0 para Gatsby 2.x
         <a href="https://gatsby.dev/cheatsheet">Ultima versión <span aria-hidden="true">↗</span></a>
