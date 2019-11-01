@@ -142,7 +142,7 @@ Este es un archivo json generado. Contiene todo los contenidos de `pages.json` (
  }
 ```
 
-`data.json` es usado en dos lugares. Primero, es importado en diferido por `async-requires.js` (encima), que a su vez es usado por `production-app` para [cargar resultados json](/docs/production-app/#load-page-resources) para una página.
+`data.json` es usado en dos lugares. Primero, es importado en diferido por `async-requires.js` (arriba), que a su vez es usado por `production-app` para [cargar resultados json](/docs/production-app/#load-page-resources) para una página.
 
 Este también es usado por la [generación de página HTML](/docs/html-generation/) de dos maneras:
 
