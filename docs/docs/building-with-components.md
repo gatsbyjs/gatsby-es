@@ -55,7 +55,7 @@ Los componentes dentro de `src/pages` se convierten en páginas automáticamente
 su nombre de archivo. Por ejemplo `src/pages/index.jsx` se asigna a `yoursite.com`
 y `src/pages/about.jsx` se convierte en `yoursite.com/about/`. Todos los archivos `.js` o `.jsx`
 en el directorio _pages_ deben resolver en una cadena de texto o en un componente React,
-de lo contrario el _build_ fallará.
+de lo contrario el _compilado_ fallará.
 
 Ejemplo:
 
@@ -65,7 +65,7 @@ import React from "react"
 function AboutPage(props) {
   return (
     <div className="about-container">
-      <p>About me.</p>
+      <p>Acerca de mi.</p>
     </div>
   )
 }
@@ -76,7 +76,7 @@ export default AboutPage
 ### Componentes de plantilla de página
 
 Puedes crear páginas mediante programación usando "componentes de plantilla de página". Todas
-las páginas son componentes React pero muy a menudo estos componentes son solo _wrappers_ para datos desde archivos u otros orígenes.
+las páginas son componentes React pero muy a menudo estos componentes son solo _envoltorios_ para datos desde archivos u otros orígenes.
 
 `src/templates/post.jsx` es un ejemplo de un componente de página. Consulta a GraphQL
 por datos _markdown_ y entonces renderiza la página usando estos datos.
