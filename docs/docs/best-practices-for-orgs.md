@@ -1,5 +1,5 @@
 ---
-title: Best Practices for Organizations
+title: Mejores prácticas para Organizaciones
 issue: https://github.com/gatsbyjs/gatsby/issues/14042
 ---
 
@@ -9,6 +9,7 @@ Cuando tienes varios equipos construyendo sitios web con Gatsby, existen algunas
 
 --
 
-Esto es una parte. Ayuda a nuestra comunidad a expandirlo.
+Esto es un stub. Ayuda a nuestra comunidad a expandirlo.
 
-Usa la [Guía de estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu pull request sea aceptado.
+Por favor, usa la [Guía de Estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu
+pull request sea aceptada.
