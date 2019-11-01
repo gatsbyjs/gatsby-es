@@ -1,12 +1,12 @@
 ---
-title: Using Fragments
+title: Usando Fragmentos
 ---
 
-Fragments allow you to reuse parts of GraphQL queries. It also allows you to split up complex queries into smaller, easier to understand components.
+Los Fragmentos te permiten reutilizar partes de consultas GraphQL. También te permiten dividir consultas complejas en componentes más pequeños y fáciles de entender.
 
-## The building blocks of a fragment
+## Los bloques de construcción de un fragmento
 
-Here is an example fragment:
+Aquí está un ejemplo de un fragmento:
 
 ```graphql
 fragment FragmentName on TypeName {
@@ -15,15 +15,15 @@ fragment FragmentName on TypeName {
 }
 ```
 
-A fragment consists of three components:
+Un fragmento consiste en tres componentes:
 
-1. `FragmentName`: the name of the fragment that will be referenced later.
-2. `TypeName`: the [GraphQL type](https://graphql.org/graphql-js/object-types/) of the object the fragment will be used on. This is important because you can only query for fields that actually exist on a given object.
-3. The body of the query. You can define any fields with any level of nesting in here, the same that you would elsewhere in a GraphQL query
+1. `FragmentName`: el nombre del fragmento que será referenciado más tarde.
+2. `TypeName`: el [GraphQL type](https://graphql.org/graphql-js/object-types/) de un objeto en el que se usará el fragmento. Este es importante porque sólo puede consultar los campos que realmente existen en un objeto determinado.
+3. El cuerpo de la consulta. Puedes definir cualquier campo con cualquier nivel de anidamiento aquí, igual que lo haría en cualquier otra parte de una consulta GraphQL.
 
-## Creating and using a fragment
+## Creando y usando un fragmento
 
-A fragment can be created inside any GraphQL query, but it's good practice to create the query separately. More organization advice in the [Conceptual Guide](/docs/querying-with-graphql/#fragments).
+Un fragmento puede ser creado dentro de cualquier consulta GraphQL, pero es una buena práctica crear la consulta por separado. Más consejos de organizacioón en [Conceptual Guide](/docs/querying-with-graphql/#fragments).
 
 ```jsx:title=src/components/IndexPost.jsx
 import React from "react"
@@ -43,7 +43,7 @@ export const query = graphql`
 `
 ```
 
-This defines a fragment named `SiteInformation`. Now it can be used from within the page's GraphQL query:
+Esto define un fragmento llamado `SiteInformation`. Ahora puede ser usado dentro de la consulta GraphQL de la página:
 
 ```jsx:title=src/pages/main.jsx
 import React from "react"
@@ -74,9 +74,9 @@ export const query = graphql`
 `
 ```
 
-When compiling your site, Gatsby preprocesses all GraphQL queries it finds. Therefore, any file that gets included in your project can define a snippet. However, only Pages can define GraphQL queries that actually return data. This is why we can define the fragment in the component file - it doesn't actually return any data directly.
+Cuando compilas tu sitio, Gatsby preprocesa todas las consultas GraphQL que encuentra. Por lo tanto, cualquier archivo que se incluye en tu proyecto puede definir un snippet. Sin embargo, sólo las páginas pueden definir consultas GraphQL que realmente devuelven datos. Esto es por que podemos definir el fragmento en el archivo componente - en realidad no regresa ningún dato directamente.
 
-## Further reading
+## Otras lecturas
 
-- [Querying Data with GraphQL - Fragments](/docs/querying-with-graphql/#fragments)
-- [GraphQL Docs - Fragments](https://graphql.org/learn/queries/#fragments)
+- [Consultar datos con GraphQL - Fragments](/docs/querying-with-graphql/#fragments)
+- [Documentación GraphQL - Fragments](https://graphql.org/learn/queries/#fragments)
