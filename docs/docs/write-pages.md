@@ -12,7 +12,7 @@ title: Escribir páginas
 >
 > Puedes ayudar haciendo un PR para [actualizar esta documentación](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-Esta es una de las últimas fases de preparación antes de pasarnos a empaquetar la web para realizar una optimización en nuestro código y realizar la división de código. El empaquetado web construye un _bundle_ web. Este no tiene conocimiento del código del núcleo de Gatsby. En su lugar, opera solo en los archivos en el directorio `.cache`. Además, no tiene acceso a toda la información de Redux creada durante el arranque. En cambio, nosotros creamos archivos JavaScript y JSON dinámicos que son dependientes del empaquetado web de la aplicación en el directorio `.cache` (ver [Montando la App de JavaScript](/docs/production-app/)). 
+Esta es una de las últimas fases de preparación antes de pasarnos a empaquetar la web para realizar una optimización en nuestro código y realizar la división de código. Webpack construye un _bundle_ web. Este no tiene conocimiento del código del núcleo de Gatsby. En su lugar, opera solo en los archivos en el directorio `.cache`. Además, no tiene acceso a toda la información de Redux creada durante el arranque. En cambio, creamos archivos JavaScript y JSON dinámicos que son dependientes del empaquetado web de la aplicación en el directorio `.cache` (ver [Montando la App de JavaScript](/docs/production-app/)). 
 
 Puedes pensar en este paso como coger todos los datos que fueron generados durante la preparación y guardarlos en el disco para el consumo por el empaquetado web.
 
