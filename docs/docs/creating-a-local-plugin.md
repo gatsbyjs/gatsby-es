@@ -1,10 +1,10 @@
 ---
-title: Creating a Local Plugin
+title: Creación de un plugin local
 ---
 
-If a plugin is only relevant to your specific use-case, or if you’re developing a plugin and want a simpler workflow, a locally defined plugin is a convenient way to create and manage your plugin code.
+Si un plugin es únicamente aplicable a tu caso de uso específico, o si estás desarrollando un plugin y requieres de un flujo de trabajo más sencillo, un plugin definido localmente es la manera más apropiada de crear y gestionar el código de su plugin.
 
-Place the code in the `plugins` folder in the root of your project like this:
+Coloque el código en la carpeta `plugins` en la carpeta raíz de su proyecto de esta manera:
 
 ```
 plugins
@@ -12,9 +12,9 @@ plugins
     └── package.json
 ```
 
-**NOTE:** You still need to add the plugin to your `gatsby-config.js`. There is no auto-detection of local plugins.
+**NOTA:** Aún así necesitas añadir el plugin a tu `gatsby-config.js`. No se detectan automáticamente los plugins locales.
 
-**NOTE:** For the plugin to be discovered, the plugin's root folder name is the value that needs to be referenced in order to load it (_not_ its _name_ in its package.json file). For example, in the above structure, the correct way to load the plugin is:
+**NOTA:** Para que el plugin sea detectado, el valor del nombre de la carpeta raíz del plugin es el que necesita ser referenciado para poder ser cargado (_no_ el _nombre_ en tu archivo package.json). Para la estructura anterior, por ejemplo, la forma correcta de cargar el plugin es:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
 }
 ```
 
-Like all `gatsby-*` files, the code is not processed by Babel. If you want
-to use JavaScript syntax which isn't supported by your version of Node.js, you
-can place the files in a `src` subfolder and build them to the plugin folder
-root.
+Como en todos los archivos `gatsby-*`, el código no se procesará por Babel. Si
+deseas utilizar sintaxis JavaScript que no es soportada por tu versión de Node.js,
+podrás colocar los archivos en un subdirectorio `src` y generarlos en la raíz de
+la carpeta del plugin.
