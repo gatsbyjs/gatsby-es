@@ -9,7 +9,7 @@ Un CMS monolítico tradicional, es responsable tanto de la administración del c
 
 Muchos sistemas de gestión de contenidos (CMS) ahora soportan un modo _“headless”_ o “desacoplado”, que es perfecto para sitios con Gatsby.
 
-Mediante el uso de [plugins _source_](/plugins/?=source), Gatsby tiene soporte para docenas de opciones de _headless CMS_, permitiendo a tu equipo de contenido la comodidad y familiaridad de su interfaz de administración preferida, y a tu equipo de desarrollo una experiencia de desarrollo y rendiento mejoradas al usar Gatsby, GraphQL, y React para crear el _frontend_.
+Mediante el uso de [plugins fuente](/plugins/?=source), Gatsby tiene soporte para docenas de opciones de _headless CMS_, permitiendo a tu equipo de contenido la comodidad y familiaridad de su interfaz de administración preferida, y a tu equipo de desarrollo una experiencia de desarrollo y rendimiento mejoradas al usar Gatsby, GraphQL, y React para crear el _frontend_.
 
 Las guías en esta sección explicarán el proceso de configuración de abastecimiento de contenidos de algunos de los _headless CMS_ más populares en uso actualmente.
 
