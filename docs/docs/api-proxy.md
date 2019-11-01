@@ -4,11 +4,11 @@ title: "Filtrando peticiones a APIs en desarrollo"
 
 ## Recursos
 
-Si no estas familiarizado con los ciclos de vida de Gatsby, revisa la vista general de [APIs de ciclo de vida de Gatsby](/docs/gatsby-lifecycle-apis/).
+Si no estás familiarizado con los ciclos de vida de Gatsby, revisa la vista general de [APIs de ciclo de vida de Gatsby](/docs/gatsby-lifecycle-apis/).
 
 ## Filtrando peticiones a APIs en desarrollo
 
-De seguido la gente sirve una aplicación React desde el mismo _host_ y puerto que su
+La gente a menudo sirve una aplicación React desde el mismo _host_ y puerto que su
 servidor _backend_.
 
 Para indicarle al servidor de desarrollo que filtre cualquier petición no conocida a tu servidor API
@@ -33,8 +33,8 @@ el lugar indicado en producción.
 ## Proxy avanzado
 
 Algunas ocasiones necesitas acceso más granular/flexible a el servidor de desarrollo.
-Gatsby expone el servidor de desarrollo [Express.js](https://expressjs.com/) a tu sitio `gatsby-config.js` donde tu
-puedes agregar middleware de Express según necesites.
+Gatsby expone el servidor de desarrollo [Express.js](https://expressjs.com/) a tu sitio `gatsby-config.js` donde tú
+puedes agregar _middleware_ de Express según necesites.
 
 ```javascript:title=gatsby-config.js
 var proxy = require("http-proxy-middleware")
@@ -56,9 +56,9 @@ module.exports = {
 
 Ten en mente que _middleware_ solo tiene efecto en desarrollo (con `gatsby develop`).
 
-### Certificados con sello-propia
+### Certificados con sello-propio
 
-Si tu filtras a APIs locales con certificados con sello-propio, establece la opción `secure` a `false`.
+Si filtras a APIs locales con certificados con sello-propio, establece la opción `secure` a `false`.
 
 ```javascript:title=gatsby-config.js
 var proxy = require("http-proxy-middleware")
