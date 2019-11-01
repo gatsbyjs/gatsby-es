@@ -38,7 +38,7 @@ sudo apt install -y build-essential
 
 **Instalar node**
 
-Las instrucciones para instalar de nodejs.org resultan en una instalación rota (ej. errores de permisos al intentar correr `npm install`). En su lugar, intenta instalar versiones de node utilizando [n] a través del comando [n-install]:
+Seguir las instrucciones de instalación de nodejs.org acaba con una instalación ligeramente defectuosa (p.e. errores de permisos al intentar ejecutar `npm install`). En su lugar, intenta instalar versiones de node utilizando [n] a través del comando [n-install]:
 
 ```shell
 curl -L https://git.io/n-install | bash
@@ -58,7 +58,7 @@ sudo apt install git
 sudo apt install libpng-dev
 ```
 
-O para instalar todo al mismo tiempo y aprobar `(y)` todo:
+O para instalar y aprobar todo al mismo tiempo `(y)`:
 
 ```shell
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
