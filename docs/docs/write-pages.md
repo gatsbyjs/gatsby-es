@@ -104,7 +104,7 @@ Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/
 
 `async-requires.js` también exporta una función `data` que importa `data.json` ([Ver abajo](/docs/write-pages/#datajson))
 
-An example of async-requires is:
+Un ejemplo de _async-requires_ es:
 
 ```javascript
 exports.components = {
@@ -147,6 +147,6 @@ Este es un archivo json generado. Contiene todo los contenidos de `pages.json` (
 Este también es usado por la [generación de página HTML](/docs/html-generation/) de dos maneras:
 
 1. `static-entry.js` produce un _compilado de webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa `pages` para buscar la página para la página.
-2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta en `data.json.dataPaths[jsonName]`.
+2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta al buscar en `data.json.dataPaths[jsonName]`.
 
 Ahora que hemos escrito nuestra página de datos, podemos empezar con la [sección de Webpack](/docs/webpack-and-ssr/).
