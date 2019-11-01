@@ -94,7 +94,7 @@ exports.components = {
 }
 ```
 
-Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) con lo que puede mapear componentChunkNames con sus implementaciones de componentes. Mientras el [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) debe usar `async-requires.js` (debajo) debido a que realiza [División del código](/docs/how-code-splitting-works/).
+Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) con lo que puede mapear _componentChunkNames_ con sus implementaciones de componentes. Mientras el [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) debe usar `async-requires.js` (debajo) debido a que realiza [División del código](/docs/how-code-splitting-works/).
 
 ## async-requires.js
 
