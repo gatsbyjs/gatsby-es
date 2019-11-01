@@ -68,7 +68,7 @@ Esto es una colección de objetos de página, creados desde el _namespace_ `page
 
 Las páginas están ordenadas de forma que aquellas con `matchPath`s van antes que las que no tienen. Esto es para ayudar a [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) en la selección de páginas mediante regex, antes de probar las rutas explícitas. Mirar [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para más información.
 
-e.g.
+p. ej.
 
 ```javascript
 ;[
