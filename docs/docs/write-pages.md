@@ -50,7 +50,7 @@ digraph {
 
 La mayoría del código que respalda esta sección está en [pages-writer.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/pages-writer.js)
 
-Los archivos dinámicos que son creados están (todos dentro del directorio `.cache`).
+Los archivos dinámicos que son creados son (todos dentro del directorio `.cache`).
 
 - [pages.json](#pagesjson)
 - [sync-requires.js](#sync-requiresjs)
