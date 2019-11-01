@@ -144,7 +144,7 @@ Este es un archivo json generado. Contiene todo los contenidos de `pages.json` (
 
 `data.json` es usado en dos lugares. Primero, es importado en diferido por `async-requires.js` (encima), que a su vez es usado por `production-app` para [cargar resultados json](/docs/production-app/#load-page-resources) para una página.
 
-Este también es usado por [Generación de Página HTML](/docs/html-generation/) de dos maneras:
+Este también es usado por la [generación de página HTML](/docs/html-generation/) de dos maneras:
 
 1. `static-entry.js` produce un _bundle webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa  `pages` para buscar la página para la página.
 2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta en `data.json.dataPaths[jsonName]`.
