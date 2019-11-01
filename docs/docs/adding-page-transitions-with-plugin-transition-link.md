@@ -2,13 +2,13 @@
 title: Agregando transiciones de página con _gatsby-plugin-transition-link_
 ---
 
-Esta guía cubrirá como usar `gatsby-plugin-transition-link` para animar transiciones entre páginas en tu sitio web Gatsby.
+Esta guía cubrirá cómo usar `gatsby-plugin-transition-link` para animar transiciones entre páginas en tu sitio web Gatsby.
 
 ## Vista general
 
-El componente `TransitionLink` provee una manera de describir la transición de una página via _props_ en un componente Link. Funciona con muchas librerías de animación, como [react-pose](https://popmotion.io/pose/), [gsap](https://greensock.com/), [animejs](https://animejs.com/) y muchas otras.
+El componente `TransitionLink` provee una manera de describir la transición de una página vía _props_ en un componente Link. Funciona con muchas librerías de animación, como [react-pose](https://popmotion.io/pose/), [gsap](https://greensock.com/), [animejs](https://animejs.com/) y muchas otras.
 
-Nota que actualmente, como el plugin esta basado en _link navigation_, las transiciones no están soportadas cuando navegas con los botones del navegador.
+Nota que actualmente, como el plugin está basado en _link navigation_, las transiciones no están soportadas cuando navegas con los botones del navegador.
 
 Para otras opciones de transiciones de página, mira la [vista general de agregar animaciones de página](/docs/adding-page-transitions).
 
@@ -20,7 +20,7 @@ Primero, instala el plugin:
 npm install --save gatsby-plugin-transition-link
 ```
 
-Asegurate de agregar el plugin en tu `gatsby-config.js`:
+Asegúrate de agregar el plugin en tu `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -40,7 +40,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 Puedes usar el componente `AniLink` para agregar transiciones de página sin tener que definir tus propias transiciones. Es un envoltorio alrededor de `TransitionLink` que provee 4 transiciones predefinidas: `fade`, `swipe`, `cover`, y `paintDrip`. Puedes previsualizarlas en [este sitio demo](https://gatsby-plugin-transition-link.netlify.com/).
 
-Para usar AniLink, necesitaras instalar la librería de animación `gsap`:
+Para usar AniLink, necesitarás instalar la librería de animación `gsap`:
 
 ```shell
 npm install --save gsap
@@ -52,7 +52,7 @@ Entonces, importa el componente AniLink:
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 ```
 
-Finalmente, asegurate de proveer el nombre de la animación deseada como una _blank_ _prop_ a `AniLink`:
+Finalmente, asegúrate de proveer el nombre de la animación deseada como una _blank_ _prop_ a `AniLink`:
 
 ```javascript
 <AniLink paintDrip to="page-4">
@@ -98,7 +98,6 @@ Puedes especificar una función `trigger` que manejará la animación. Esto es �
 #### Usando props pasadas
 
 La salida y entrada de páginas/plantillas involucradas en la transición recibirán _props_ indicando el estatus de la transición actual, así como también la _prop_ `exit` o `enter` definida en el `TransitionLink`.
-
 
 ```javascript
 const PageOrTemplate = ({ children, transitionStatus, entry, exit }) => {
