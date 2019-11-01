@@ -149,4 +149,4 @@ Este también es usado por [Generación de Página HTML](/docs/html-generation/)
 1. `static-entry.js` produce un _bundle webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa  `pages` para buscar la página para la página.
 2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta en `data.json.dataPaths[jsonName]`.
 
-Ahora que hemos escrito nuestra página de datos, podemos empezar con la [sección de empaquetado web](/docs/webpack-and-ssr/).
+Ahora que hemos escrito nuestra página de datos, podemos empezar con la [sección de Webpack](/docs/webpack-and-ssr/).
