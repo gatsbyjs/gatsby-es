@@ -112,6 +112,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | array                               | _array_                                            |
 | arrow function                      | función flecha                                     |
 | assert                              | comprobar                                          |
+| branch                              | branch                                             |
 | bug                                 | error                                              |
 | bundler                             | _bundler_                                          |
 | callback                            | _callback_                                         |
