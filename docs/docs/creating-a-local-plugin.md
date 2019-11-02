@@ -2,7 +2,7 @@
 title: Creación de un plugin local
 ---
 
-Si un plugin es únicamente aplicable a tu caso de uso específico, o si estás desarrollando un plugin y requieres de un flujo de trabajo más sencillo, un plugin definido localmente es la manera más apropiada de crear y gestionar el código de su plugin.
+Si un plugin es únicamente aplicable a tu caso de uso específico, o si estás desarrollando un plugin y requieres de un flujo de trabajo más sencillo, un plugin definido localmente es la manera más apropiada de crear y gestionar el código de tu plugin.
 
 Coloca el código en la carpeta `plugins` en la carpeta raíz de tu proyecto de esta manera:
 
