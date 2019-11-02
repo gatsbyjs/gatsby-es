@@ -11,7 +11,7 @@ Gatsby es un _framework_ excelente para crear aplicaciones web. Puedes usar Gats
 
 Cuando un visitante llega a tu página Gatsby, el archivo HTML de la página se carga primero, después el paquete JavaScript; cuando tus componentes React se cargan en el navegador, pueden obtener y renderizar datos desde APIs.
 
-> 💡 La [documentación de React](https://reactjs.org/docs/faq-ajax.html) tiene un gran y sencillo ejemplo demostrando este enfoque.
+> 💡 La [documentación de React](https://es.reactjs.org/docs/faq-ajax.html) tiene un gran y sencillo ejemplo demostrando este enfoque.
 
 Algunos ejemplos en los que podrías aplicar esto:
 
