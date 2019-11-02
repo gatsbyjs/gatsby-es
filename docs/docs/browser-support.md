@@ -20,7 +20,7 @@ compatible con algunos de tus navegadores de destino deseados, no tendrás que p
 los navegadores antiguos se rompan, ya que Babel agregará automáticamente el polyfill
 necesario `core-js/modules/es7.array.includes`.
 
-## Especifique qué navegadores soporta tu proyecto utilizando la "Browserslist"
+## Especifica qué navegadores son compatibles con tu proyecto utilizando la "Browserslist"
 
 Puedes personalizar tu lista de versiones de navegadores soportadas mediante la declaración de
 la clave [`"browserslist"`](https://github.com/ai/browserslist) dentro de tu `paquete.json`.
