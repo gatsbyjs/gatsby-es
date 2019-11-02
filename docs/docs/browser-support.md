@@ -16,7 +16,7 @@ más antiguos. En el caso de versiones anteriores, Gatsby (a través de Babel) a
 los mínimos "polyfills" requeridos para que tu código funcione en esos navegadores.
 
 Si comienzas a utilizar una nueva API de JavaScript como `[].includes` que no es
-soportada por algunos de tus navegadores de destino deseados, no tendrás que preocuparte de que
+compatible con algunos de tus navegadores de destino deseados, no tendrás que preocuparte de que
 los navegadores antiguos se rompan, ya que Babel agregará automáticamente el polyfill
 necesario `core-js/modules/es7.array.includes`.
 
