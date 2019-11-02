@@ -11,7 +11,7 @@ la cual es actualmente IE9+, así como las versiones más recientes de otros nav
 Gatsby se beneficia de la versatilidad de Babel 7 para añadir automáticamente polyfills
 a tus navegadores de destino deseados.
 
-Los navegadores recientes soportan una mayor cantidad de APIs JavaScript que los navegadores
+Los navegadores recientes son compatibles con una mayor cantidad de APIs JavaScript que los navegadores
 más antiguos. En el caso de versiones anteriores, Gatsby (a través de Babel) agrega automáticamente
 los mínimos "polyfills" requeridos para que tu código funcione en esos navegadores.
 
