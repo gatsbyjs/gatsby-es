@@ -24,7 +24,7 @@ necesario `core-js/modules/es7.array.includes`.
 
 Puedes personalizar tu lista de versiones de navegadores compatibles mediante la declaración de
 la clave [`"browserslist"`](https://github.com/ai/browserslist) dentro de tu `package.json`.
-Cambiando estos valores se modificará tus códigos de salida de JavaScript (a través de
+Cambiando estos valores se modificará tu código de JavaScript (a través de
 [`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers))
 y de CSS (a través de [`autoprefixer`](https://github.com/postcss/autoprefixer)).
 
