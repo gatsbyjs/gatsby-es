@@ -43,4 +43,4 @@ Por defecto, Gatsby tiene la siguiente configuración:
 ```
 
 Si sólo quieres dar compatibilidad con navegadores más recientes, asegurate de especificar esto en tu
-`paquete.json`. Por lo general, esto te permitirá obtener archivos JavaScript más pequeños.
+`package.json`. Por lo general, esto te permitirá obtener archivos JavaScript más pequeños.
