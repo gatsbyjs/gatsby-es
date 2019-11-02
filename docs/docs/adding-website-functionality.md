@@ -1,8 +1,8 @@
 ---
-title: Adding website functionality
+title: Agregando funcionalidad de sitio web
 overview: true
 ---
 
-Gatsby empowers developers and creators to make a diverse amount of websites. One may wish to add additional functionality to their site such as search, authentication, forms, comments, and plenty of others. In this section, you will find a showcase of guides and concepts on how to level up your site.
+Gatsby empodera a los desarrolladores y creadores para hacer una cantidad diversa de sitios web. Uno puede desear agregar funcionalidad adicional a su sitio tal como búsqueda, autenticación, formularios, comentarios, y un montón de otros. En esta sección, usted encontrará guías y conceptos sobre cómo elevar el nivel de su sitio.
 
 <GuideList slug={props.slug} />
