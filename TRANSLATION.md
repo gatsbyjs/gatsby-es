@@ -127,26 +127,26 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | function component                  | componente de función                              |
 | hardcoded                           | hardcodeado                                        |
 | hook                                | _hook_                                             |
-| issue                               | issue                                              |
+| issue                               | _issue_                                            |
 | key                                 | _key_                                              |
 | lazy initialization                 | inicialización diferida                            |
-| layout                              | layout                                             |
+| layout                              | _layout_                                           |
 | library                             | biblioteca                                         |
 | lowercase                           | minúscula(s)                                       |
 | monorepo                            | _monorepo_                                         |
 | open source                         | código abierto                                     |
 | props                               | _props_                                            |
-| push notifications                  | notificaciones push                                |
+| push notifications                  | notificaciones _push_                              |
 | React element                       | elemento de React                                  |
 | render                              | renderizar (verb), renderizado (noun)              |
 | scope (sustantivo)                  | ámbito                                             |
 | scope (verbo)                       | aislar                                             |
-| script                              | script                                             |
+| script                              | _script_                                           |
 | shallow rendering                   | renderizado superficial                            |
 | starter                             | _starter_                                          |
 | state                               | estado                                             |
 | string                              | _string_                                           |
-| stub                                | stub                                               |
+| stub                                | _stub_                                             |
 | swag                                | premio                                             |
 | template literals                   | _template literals_                                |
 | uncontrolled component              | componente no controlado                           |
