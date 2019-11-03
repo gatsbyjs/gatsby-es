@@ -4,7 +4,8 @@ title: Compatibilidad Con Navegadores
 
 Gatsby tiene compatibilidad con
 [los mismos navegadores que la actual versión estable de React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support),
-la cual es actualmente IE9+, así como las versiones más recientes de otros navegadores populares.
+la cual es actualmente IE9+, así como las versiones más recientes de otros
+navegadores populares.
 
 ## Polyfills
 
@@ -22,9 +23,10 @@ necesario `core-js/modules/es7.array.includes`.
 
 ## Especifica qué navegadores son compatibles con tu proyecto utilizando la "Browserslist"
 
-Puedes personalizar tu lista de versiones de navegadores compatibles mediante la declaración de
-la clave [`"browserslist"`](https://github.com/ai/browserslist) dentro de tu `package.json`.
-Cambiando estos valores se modificará tu código de JavaScript (a través de
+Puedes personalizar tu lista de versiones de navegadores compatibles
+mediante la declaración de la clave [`"browserslist"`](https://github.com/ai/browserslist)
+dentro de tu `package.json`. Cambiando estos valores se modificará tu código de
+JavaScript (a través de
 [`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers))
 y de CSS (a través de [`autoprefixer`](https://github.com/postcss/autoprefixer)).
 
