@@ -116,39 +116,39 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | bundler                             | _bundler_                                          |
 | callback                            | _callback_                                         |
 | camelCase                           | _camelCase_                                        |
+| community pair programming sessions | sesiones de programación en pareja de la comunidad |
+| component shadowing                 | _component shadowing_                              |
 | controlled component                | componente controlado                              |
 | debugging                           | depuración                                         |
 | DOM                                 | DOM                                                |
+| file                                | archivo                                            |
+| fork                                | _fork_                                             |
 | framework                           | _framework_                                        |
 | function component                  | componente de función                              |
 | hardcoded                           | hardcodeado                                        |
 | hook                                | _hook_                                             |
+| issue                               | issue                                              |
 | key                                 | _key_                                              |
 | lazy initialization                 | inicialización diferida                            |
+| layout                              | layout                                             |
 | library                             | biblioteca                                         |
 | lowercase                           | minúscula(s)                                       |
+| monorepo                            | _monorepo_                                         |
+| open source                         | código abierto                                     |
 | props                               | _props_                                            |
-| React element                       | Elemento de React                                  |
+| push notifications                  | notificaciones push                                |
+| React element                       | elemento de React                                  |
 | render                              | renderizar (verb), renderizado (noun)              |
+| scope (sustantivo)                  | ámbito                                             |
+| scope (verbo)                       | aislar                                             |
+| script                              | script                                             |
 | shallow rendering                   | renderizado superficial                            |
+| starter                             | _starter_                                          |
 | state                               | estado                                             |
 | string                              | _string_                                           |
+| stub                                | stub                                               |
+| swag                                | premio                                             |
 | template literals                   | _template literals_                                |
 | uncontrolled component              | componente no controlado                           |
-| Issue                               | Issue                                              |
-| Layout                              | Layout                                             |
-| Scope (sustantivo)                  | Ambito                                             |
-| Scope (verbo)                       | Aislar                                             |
-| Open Source                         | Código abierto                                     |
-| script                              | script                                             |
-| swag                                | premio                                             |
-| push notifications                  | Notificaciones push                                |
+| workshop                            | taller                                             |
 | workspace                           | _workspace_                                        |
-| monorepo                            | _monorepo_                                         |
-| fork                                | _fork_                                             |
-| Workshop                            | Taller                                             |
-| file                                | archivo                                            |
-| Community Pair Programming Sessions | Sesiones de programación en pareja de la comunidad |
-| stub                                | stub                                               |
-| starter                             | _starter_                                          |
-| component shadowing                 | _component shadowing_                              |
