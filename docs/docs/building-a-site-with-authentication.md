@@ -1,34 +1,34 @@
 ---
-title: Building a Site with Authentication
+title: Creando un Sitio con Autenticación
 ---
 
-With Gatsby, you are able to create restricted areas in your app. For that, you
-must use the concept of [client-only routes](/docs/building-apps-with-gatsby/#client-only-routes).
+Con Gatsby, puedes crear áreas restringidas en tu aplicación. Para ello, debes
+usar el concepto de [rutas solo para clientes](/docs/building-apps-with-gatsby/#client-only-routes).
 
-Using the [@reach/router](https://reach.tech/router/) library, which comes
-installed with Gatsby, you can control which component will be loaded when a
-certain route is called, and check for the authentication state before serving
-the content.
+Usando la librería [@reach/router](https://reach.tech/router/), que viene
+instalada con Gatsby, puedes controlar qué componente será cargado cuando cierta
+ruta es llamada, y verificar el estado de autenticación antes de servir
+el contenido.
 
-## Prerequisites
+## Prerrequisitos
 
-You must know how to set up a basic Gatsby project. If you need to, check the
-[main tutorial](/tutorial).
+Debes saber cómo configurar un proyecto Gatsby básico. Si lo necesitas, revisa el
+[tutorial principal](/tutorial).
 
-## Setting the authentication workflow
+## Establecer el flujo de trabajo de autenticación
 
-To create a common authentication workflow, you can usually follow these steps:
+Para crear un flujo de trabajo común de autenticación, generalmente puedes seguir estos pasos:
 
-- [Create client-only routes](/tutorial/authentication-tutorial/#creating-client-only-routes),
-  to tell Gatsby which routes should be rendered on demand
-- [Wrap private content in a PrivateRoute component](/tutorial/authentication-tutorial/#controlling-private-routes),
-  to check if a user is authenticated or not, therefore rendering the content or
-  redirecting to another page (usually, the login page)
+- [Crear rutas exclusivas para clientes](/tutorial/authentication-tutorial/#creating-client-only-routes),
+  para decirle a Gatsby qué rutas deberían ser renderizadas bajo demanda
+- [Envolver contenido privado en un componente _PrivateRoute_](/tutorial/authentication-tutorial/#controlling-private-routes),
+  para verificar si un usuario está autenticado o no, por lo tanto, renderizar el contenido o
+  redireccionar a otra página (generalmente, la página de inicio de sesión)
 
-## Real-world example: Gatsby store
+## Ejemplo real: la tienda de Gatsby
 
-The [Gatsby store](https://github.com/gatsbyjs/store.gatsbyjs.org) uses this
-approach when handling a private route:
+La [tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org) usa este
+enfoque al manejar una ruta privada:
 
 ```jsx
 // import ...
@@ -38,7 +38,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     isBrowser &&
     window.location.pathname !== `/login`
   ) {
-    // If we’re not logged in, redirect to the home page.
+    // Si no has iniciado sesión, redireccionar a la página de inicio.
     navigate(`/app/login`)
     return null
   }
@@ -51,14 +51,14 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 }
 ```
 
-## Further reading
+## Lecturas adicionales
 
-If you want more information about authenticated areas with Gatsby, this (non-exhaustive list) may help:
+Si quieres más información sobre áreas autenticadas con Gatsby, esta lista (lista no exhaustiva) podría ayudar:
 
-- [Making a site with user authentication](/tutorial/authentication-tutorial), a Gatsby advanced tutorial
-- [Gatsby repo simple auth example](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [A Gatsby email _application_](https://github.com/DSchau/gatsby-mail), using React Context API to handle authentication
-- [The Gatsby store for swag and other Gatsby goodies](https://github.com/gatsbyjs/store.gatsbyjs.org)
-- [Add Authentication to your Gatsby apps with Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (livestream with Jason Lengstorf)
-- [Add Authentication to your Gatsby apps with Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
-- [Other authentication-related posts on the Gatsby blog](/blog/tags/authentication/)
+- [Creando un sitio con autenticación de usuarios](/tutorial/authentication-tutorial), un tutorial avanzado de Gatsby
+- [repositorio de Gatsby con ejemplo de autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Una _aplicación_ de email en Gatsby](https://github.com/DSchau/gatsby-mail), usando la API _Context_ de React para manejar autenticación
+- [La tienda de Gatsby para _swag_ y otros productos](https://github.com/gatsbyjs/store.gatsbyjs.org)
+- [Añade Autenticación a tus aplicaciones Gatsby con Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (transmisión en directo con Jason Lengstorf)
+- [Añade Autenticación a tus aplicaciones Gatsby con Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
+- [Otras publicaciones relacionadas con autenticación en el blog de Gatsby](/blog/tags/authentication/)
