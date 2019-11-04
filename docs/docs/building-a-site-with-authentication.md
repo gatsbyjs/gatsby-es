@@ -56,7 +56,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 Si quieres más información sobre áreas autenticadas con Gatsby, esta lista (lista no exhaustiva) podría ayudar:
 
 - [Creando un sitio con autenticación de usuarios](/tutorial/authentication-tutorial), un tutorial avanzado de Gatsby
-- [repositorio de Gatsby con ejemplo de autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Repositorio de Gatsby con ejemplo de autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
 - [Una _aplicación_ de email en Gatsby](https://github.com/DSchau/gatsby-mail), usando la API _Context_ de React para manejar autenticación
 - [La tienda de Gatsby para _swag_ y otros productos](https://github.com/gatsbyjs/store.gatsbyjs.org)
 - [Añade Autenticación a tus aplicaciones Gatsby con Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (transmisión en directo con Jason Lengstorf)
