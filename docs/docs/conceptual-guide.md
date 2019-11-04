@@ -1,8 +1,8 @@
 ---
-title: Conceptual Guide
+title: Guía Conceptual
 overview: true
 ---
 
-Read high-level overviews of the Gatsby approach.
+Lee visiones conceptuales a alto nivel del _approach_ (enfoque) de Gatsby. 
 
 <GuideList slug={props.slug} />
