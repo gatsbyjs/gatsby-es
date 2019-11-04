@@ -3,7 +3,7 @@ title: Estilos
 overview: true
 ---
 
-Existen muchas formas de diseñar su sitio web. Se pueden agrupar aproximadamente en tres enfoques de estilo:
+Existen muchas formas de diseñar tu sitio web. Se pueden agrupar aproximadamente en tres enfoques de estilo:
 
 - [**Archivos CSS globales**](/docs/global-css/): la manera tradicional de diseñar un sitio web. Las reglas de CSS se declaran globalmente y los estilos se aplican según la especificidad y la herencia.
 - [**Hojas de estilo modulares**](/docs/css-modules): las reglas de CSS se escriben tradicionalmente pero se consumen con JavaScript y se definen localmente para evitar efectos secundarios no deseados en otros lugares. Esto funciona por defecto en Gatsby.
