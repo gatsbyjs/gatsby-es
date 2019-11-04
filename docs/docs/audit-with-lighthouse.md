@@ -4,9 +4,9 @@ title: Auditar con Lighthouse
 
 Citando el [sitio web de Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse es una herramienta automatizada de código abierto diseñada para mejorar la calidad de tus apps web. Puedes ejecutarla en cualquier página web, pública o que requiera autenticación. Tiene auditorías de rendimiento, accesibilidad, aplicaciones web progresivas (_PWAs_), y más.
+> Lighthouse es una herramienta automatizada de código abierto diseñada para mejorar la calidad de las páginas webs. Puedes ejecutarla en cualquier página web, pública o que requiera autenticación. Tiene auditorías de rendimiento, accesibilidad, aplicaciones web progresivas (_PWAs_), y más.
 
-Lighthouse está incluida en las herramientas de desarrollo de Chrome. Ejecutar su auditoría -- y luego abordar los errores que encuentra e implementar las mejoras que sugiere -- es una excelente manera de preparar tu sitio para salir al aire. Te ayuda a confiar en que tu sitio es lo más rápido y accesible posible.
+Lighthouse está incluida en las herramientas de desarrollo de Chrome. Ejecutar su auditoría -- y luego abordar los errores que encuentra e implementar las mejoras que sugiere -- es una excelente manera de preparar tu sitio para ponerlo online. Te ayuda a confiar en que tu sitio es lo más rápido y accesible posible.
 
 Si aún no lo has hecho, necesitas crear una compilación de producción de tu sitio Gatsby. El servidor de desarrollo de Gatsby está optimizado para que el desarrollo sea rápido, pero el sitio que genera, aunque se parece mucho a una versión de producción del sitio, no está tan optimizado.
 
@@ -42,7 +42,7 @@ Ahora ejecutemos tu primera prueba con Lighthouse.
 
 ![Resultados de auditoría con Lighthouse](./images/lighthouse-audit-results.png)
 
-Como puedes ver, el rendimiento de Gatsby es excelente por defecto pero nos faltan algunas cosas para _PWA_, Accesibilidad, Mejores Prácticas y SEO que mejorarán nuestro puntaje (y en el proceso harán que tu sitio sea mucho más amigable para los visitantes y los motores de búsqueda). Para mejorar aún más tus puntajes, consulta los enlaces en "Siguientes pasos" a continuación.
+Como puedes ver, el rendimiento de Gatsby es excelente por defecto pero nos faltan algunas cosas para _PWA_, Accesibilidad, Mejores Prácticas y SEO que mejorarán nuestra puntuación (y en el proceso harán que tu sitio sea mucho más amigable para los visitantes y los motores de búsqueda). Para mejorar aún más tus puntuaciones, consulta los enlaces en "Siguientes pasos" a continuación.
 
 Siguientes pasos:
 
