@@ -2,7 +2,7 @@
 title: Hoja de trucos
 ---
 
-El equipo de Gatsby ha creado un recurso que te puede ser útil al crear un sitio de Gatsby: ¡una hoja de trucos con todos los comandos principales y consejos de desarrollo!. So lo deseas, descarga e imprime una copia (¡y pegala en su estación de trabajo!). Para mas información relacionada, visita [Inicio rápido](/docs/quick-start/) y [Comandos (Gatsby CLI)](/docs/gatsby-cli/).
+El equipo de Gatsby ha creado un recurso que te puede ser útil al crear un sitio de Gatsby: ¡una hoja de trucos con todos los comandos principales y consejos de desarrollo!. Si lo deseas, descarga e imprime una copia (¡y pégala en tu estación de trabajo!). Para más información relacionada, visita [Inicio rápido](/docs/quick-start/) y [Comandos (Gatsby CLI)](/docs/gatsby-cli/).
 
 Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</a>
 
@@ -20,7 +20,7 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
 <div id="cheat_sheet-text" style=" position: absolute; height: 1px; width: 1px;overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
     <h2>Contenidos de la hoja de trucos de Gatsby</h2>
     <p>v1.0 para Gatsby 2.x
-        <a href="https://gatsby.dev/cheatsheet">Ultima versión <span aria-hidden="true">↗</span></a>
+        <a href="https://gatsby.dev/cheatsheet">Última versión <span aria-hidden="true">↗</span></a>
     </p>
     <h2>Docs principales</h2>
     <table>
@@ -123,7 +123,7 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
             </tr>
             <tr>
                 <td>
-                    <p>Como Contribuir</p>
+                    <p>Cómo Contribuir</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/contribute">gatsby.dev/contribute</a></p>
@@ -139,7 +139,7 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
         <code>npm install -g gatsby-cli</code></p>
     <p>Ejecuta <code>gatsby --help</code> para obtener una lista de comandos y opciones.</p>
     <h3><code>gatsby new <span style="font-weight:normal">nombre-de-mi-sitio</span></code></h3>
-    <p>Crea un nuevo sitio local Gatsby con el iniciador predeterminado (ve "Comandos de inicio rápido" en esta guía de inicio rápido sobre cómo usar otros iniciadores).</p>
+    <p>Crea un nuevo sitio local Gatsby con el iniciador predeterminado (ve "Comandos de inicio rápido" en esta hoja de trucos sobre cómo usar otros iniciadores).</p>
     <h3><code>gatsby develop</code></h3>
     <p>Inicia el servidor de desarrollo Gatsby.</p>
     <table>
@@ -209,7 +209,7 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
         </tbody>
     </table>
     <h3><code>gatsby serve</code></h3>
-    <p>Sirve a la compilación de producción para pruebas.</p>
+    <p>Sirve la compilación de producción para pruebas.</p>
     <table>
         <tbody>
             <tr>
@@ -261,15 +261,14 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
         </tbody>
     </table>
     <h3><code>gatsby clean</code></h3>
-    <p>Limpia los directiorios <code>.cache</code> y <code>public</code> de Gatsby.</p>
+    <p>Limpia los derectorios <code>.cache</code> y <code>public</code> de Gatsby.</p>
     <h2>¡Camisetas, gorras, sudaderas y más!</h2>
-    <p>¡Suscríbete al newsletter de Gatsby y <strong>obtén un 30% de descuento</strong> 
-en tu compra en la tienda Gatsby! (<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
+    <p>¡Suscríbete al newsletter de Gatsby y <strong>obtén un 30% de descuento</strong> en tu compra en la tienda Gatsby! (<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
     <p>Suscríbete en <a href="https://gatsby.dev/discount">gatsby.dev/discount</a></p>
     <h2>Comandos de Inicio Rápido</h2>
     <p>Crea un nuevo sitio de Gatsby con el iniciador "Blog":<br />
     <code>gatsby new mi-nuevo-blog https://github.com/gatsbyjs/gatsby-starter-blog</code></p>
-    <p>Ir al directorio de tu nuevo sitio e inícialo:<br />
+    <p>Ve al directorio de tu nuevo sitio e inícialo:<br />
     <code>cd mi-nuevo-blog/<br />
     gatsby develop</code></p>
     <p>Tu sitio ahora se está ejecutando en <code>http://localhost:8000</code>!</p>
