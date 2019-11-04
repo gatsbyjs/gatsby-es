@@ -6,9 +6,9 @@ _El framework de testeo recomendado es [Jest](https://jestjs.io/). Esta guía as
 
 El [@testing-library/react](https://github.com/testing-library/react-testing-library) de Kent C. Dodds ha aumentado en popularidad desde que fue lanzado y es un gran reemplazo para [enzyme](https://github.com/airbnb/enzyme). Puedes escribir tests unitarios y de integración y te incita a consultar el DOM de la misma forma que haría el usuario. De ahí el principio rector:
 
-> _The more your tests resemble the way your software is used, the more confidence they can give you._ (Cuanto más se parezcan sus pruebas a la forma en que se utiliza su software, más confianza le pueden brindar.)
+> _The more your tests resemble the way your software is used, the more confidence they can give you._ (Cuanto más se parezcan tus pruebas a la forma en que se utiliza tu software, más confianza te pueden brindar.)
 
-Proporciona funciones ligeras de utilidad además de `react-dom` y `react-dom/test-utils` y te dá la confianza de que no rompe tus test al refactorizar el componente en la implementación (pero no en la funcinalidad).  
+Proporciona funciones ligeras de utilidad por encima de `react-dom` y `react-dom/test-utils` y te dá la confianza de que no rompe tus tests al refactorizar el componente en la implementación (pero no en la funcinalidad).  
 
 ## Instalación
 
@@ -18,7 +18,7 @@ Instala la librería como uno de tus proyectos `devDependencies`. Opcionalmente 
 npm install --save-dev @testing-library/react @testing-library/jest-dom
 ```
 
-Crea el archivo `setup-test-env.js` en la raíz de tu proyecto. Introduce este codigo en el:
+Crea el archivo `setup-test-env.js` en la raíz de tu proyecto. Introduce este código en el:
 
 ```js:title=setup-test-env.js
 import "@testing-library/jest-dom/extend-expect"
@@ -36,7 +36,7 @@ module.exports = {
 
 ## Uso
 
-Vamos a crear un pequeño ejemplo de test usando la nueva librería añadida. Si aún no lo has hecho lee la [guía de testeo unitario](/docs/unit-testing) — esencialmente ahora usarás `@testing-library/react` en vez de `react-test-renderer`. Hay un montón de opciones cuando se trata de selectores, aquí este ejemplo escoge `getByTestId`. También utiliza `toHaveTextContent` desde `jest-dom`
+Vamos a crear un pequeño ejemplo de test usando la nueva librería añadida. Si aún no lo has hecho lee la [guía de testeo unitario](/docs/unit-testing) — esencialmente ahora usarás `@testing-library/react` en vez de `react-test-renderer`. Hay muchas opciones cuando se trata de selectores, aquí este ejemplo escoge `getByTestId`. También utiliza `toHaveTextContent` desde `jest-dom`
 
 ```js
 import React from "react"
