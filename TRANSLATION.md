@@ -116,8 +116,11 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | bundler                             | _bundler_                                          |
 | callback                            | _callback_                                         |
 | camelCase                           | _camelCase_                                        |
+| cheat-sheet                         | hoja de trucos                                     |
+| client-side                         | _client-side_                                      |
 | controlled component                | componente controlado                              |
 | debugging                           | depuración                                         |
+| deploy                              | _deploy_                                           |
 | DOM                                 | DOM                                                |
 | framework                           | _framework_                                        |
 | function component                  | componente de función                              |
@@ -127,6 +130,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | lazy initialization                 | inicialización diferida                            |
 | library                             | biblioteca                                         |
 | lowercase                           | minúscula(s)                                       |
+| newsletter                          | _newsletter_                                       |
 | props                               | _props_                                            |
 | React element                       | Elemento de React                                  |
 | render                              | renderizar (verb), renderizado (noun)              |
@@ -137,6 +141,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | uncontrolled component              | componente no controlado                           |
 | Issue                               | Issue                                              |
 | Layout                              | Layout                                             |
+| server-side rendering               | _server-side rendering_                            |
 | Scope (sustantivo)                  | Ambito                                             |
 | Scope (verbo)                       | Aislar                                             |
 | Open Source                         | Código abierto                                     |
