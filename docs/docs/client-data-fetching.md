@@ -12,7 +12,7 @@ Compilar páginas durante el [tiempo de compilación](/docs/glossary#build) es �
 
 ## Combinando datos de compilación y ejecución en el lado del cliente
 
-Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una aplicación React después de cargarse estáticamente, Gatsby no es solo para sitios estáticos. También puedes obtener datos dinámicamente en el client-side según sea necesario, como lo harías con cualquier otra aplicación React.
+Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una aplicación React después de cargarse estáticamente, Gatsby no es solo para sitios estáticos. También puedes obtener datos dinámicamente en el lado del cliente según sea necesario, como lo harías con cualquier otra aplicación React.
 
 Para ilustrar esto, usaremos un pequeño sitio de ejemplo que utiliza la capa de datos de Gatsby en el momento de la compilación y los datos del cliente en el tiempo de ejecución. Este ejemplo se basa libremente en el ejemplo del sitio [Gatsby con Apollo](https://github.com/jlengstorf/gatsby-with-apollo) de Jason Lengstorf. Tu obtendrás datos de personajes para Rick (de Rick y Morty) y una imagen aleatoria de cachorros.
 
