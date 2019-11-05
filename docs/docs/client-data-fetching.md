@@ -8,7 +8,7 @@ Este artículo trata sobre cómo obtener datos tanto en tiempo de _compilación_
 
 Cuando este artículo mencione [hidratación](/docs/glossary#hydration), significa que Gatsby (a través de React.js) crea archivos estáticos para hacer _server-side rendering_ (renderizado en el servidor). Cuando el paquete de secuencias de comandos de Gatsby se descarga y ejecuta en el navegador, se conserva el markup HTML creado por Gatsby y convierte el sitio en una aplicación web React completa que puede manipular el [DOM](/docs/glossary#dom). El resultado de este proceso crea páginas de carga rápida y una experiencia de usuario grata.
 
-Compilar páginas durante el [build-time](/docs/glossary#build) es útil cuando el contenido de tu sitio web no cambia con frecuencia, o cuando el proceso de recompilación es simple. Sin embargo, algunos sitios web con necesidades más dinámicas requieren una [ejecución](/docs/glossary#runtime) en el [client-side](/docs/glossary#client-side) para manejar el contenido que cambia constantemente después de que se carga la página, como un widget de chat o una aplicación web de cliente de correo electrónico.
+Compilar páginas durante el [tiempo de compilación](/docs/glossary#build) es útil cuando el contenido de tu sitio web no cambia con frecuencia, o cuando el proceso de recompilación es simple. Sin embargo, algunos sitios web con necesidades más dinámicas requieren una [ejecución](/docs/glossary#runtime) en el [lado del cliente](/docs/glossary#client-side) para manejar el contenido que cambia constantemente después de que se carga la página, como un widget de chat o una aplicación web de cliente de correo electrónico.
 
 ## Combinando datos de compilación y ejecución en el client-side
 
