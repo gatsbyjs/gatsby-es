@@ -226,5 +226,5 @@ Eso es todo -- un ejemplo de consulta de datos en tiempo de compilación utiliza
 
 Puede que te interese consultar otros proyectos (tanto utilizados en producción como pruebas de conceptos) que ilustran este uso:
 
--   [Tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
+- [Tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
 -   [Correo de Gatsby](https://github.com/DSchau/gatsby-mail)
