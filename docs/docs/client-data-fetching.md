@@ -10,7 +10,7 @@ Cuando este artículo mencione [hidratación](/docs/glossary#hydration), signifi
 
 Compilar páginas durante el [tiempo de compilación](/docs/glossary#build) es útil cuando el contenido de tu sitio web no cambia con frecuencia, o cuando el proceso de recompilación es simple. Sin embargo, algunos sitios web con necesidades más dinámicas requieren una [ejecución](/docs/glossary#runtime) en el [lado del cliente](/docs/glossary#client-side) para manejar el contenido que cambia constantemente después de que se carga la página, como un widget de chat o una aplicación web de cliente de correo electrónico.
 
-## Combinando datos de compilación y ejecución en el client-side
+## Combinando datos de compilación y ejecución en el lado del cliente
 
 Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una aplicación React después de cargarse estáticamente, Gatsby no es solo para sitios estáticos. También puedes obtener datos dinámicamente en el client-side según sea necesario, como lo harías con cualquier otra aplicación React.
 
