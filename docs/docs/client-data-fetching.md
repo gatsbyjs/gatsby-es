@@ -67,7 +67,7 @@ module.exports = {
 Ahora puedes agregar la consulta a tu página `index.js`:
 
 ```jsx:title=index.js
-import React, { Component } from "react";
+import React, { Component } from "react"
 import { graphql } from "gatsby";
 
 // highlight-start
