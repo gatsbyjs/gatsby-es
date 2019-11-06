@@ -192,7 +192,7 @@ class ClientFetchingExample extends Component {
 
   // Estos datos se obtienen al momento de ejecución en el cliente. // highlight-start
   fetchRicksPupper = () => {
-    this.setState({ cargando: true })
+    this.setState({ loading: true })
 
     axios
       .get(`https://dog.ceo/api/breeds/image/random`)
