@@ -6,7 +6,7 @@ title: Enrutamiento
 
 Gatsby lo hace fácil mediante programación controlar sus páginas. Las páginas pueden ser creadas de tres maneras.
 
-- En el gatsby-node.js de su sitio implementando el API.
+- En el gatsby-node.js de tu sitio implementando el API.
   [`createPages`](/docs/node-apis/#createPages).
 - El núcleo de Gatsby convierte automáticamente los componentes React que se encuentran dentro de `src/pages` en páginas.
 - Los Plugins también pueden implementar  `createPages` y crear páginas por usted.
@@ -22,6 +22,6 @@ También puede usar enlaces estándar `<a>`, pero en estos casos no  obtendrá e
 
 ## Crear enlaces con autenticación activada
 
-Si no desea que todo su contenido esté disponible públicamente, Gatsby le permite crear [rutas "solo para clientes"](/docs/client-only-routes-and-user-authentication), que viven detrás de una puerta de autenticación.
+Si no desea que todo tu contenido esté disponible públicamente, Gatsby permite crear [rutas "solo para clientes"](/docs/client-only-routes-and-user-authentication), que viven detrás de una puerta de autenticación.
 
 <GuideList slug={props.slug} />
