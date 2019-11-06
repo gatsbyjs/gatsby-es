@@ -159,7 +159,7 @@ class ClientFetchingExample extends Component {
       rickAndMorty: { character },
     } = this.props.data
 
-    const { img, raza } = this.state.mascota // highlight-line
+    const { img, breed } = this.state.pupper // highlight-line
 
     return (
       <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
