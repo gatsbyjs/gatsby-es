@@ -204,7 +204,7 @@ class ClientFetchingExample extends Component {
 
         this.setState({
           loading: false,
-          mascota: {
+          pupper: {
             ...this.state.mascota,
             img,
             raza,
