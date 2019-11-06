@@ -4,19 +4,19 @@ title: Obtener Datos del Cliente
 
 ## Contexto
 
-Este artículo trata sobre cómo obtener datos tanto en tiempo de _compilación_ como en tiempo de _ejecución_. Se usa el plugin [`gatsby-source-graphql`](/packages/gatsby-source-graphql/) para obtener datos [durante la compilación](/docs/glossary#build) en el servidor, mientras que usa el paquete [`axios`](https://github.com/axios/axios) para obtener diferentes datos en el [client-side](/docs/glossary#client-side) cuando se carga la página.
+Este artículo trata sobre cómo obtener datos tanto en tiempo de _compilación_ como en tiempo de _ejecución_. Se usa el plugin [`gatsby-source-graphql`](/packages/gatsby-source-graphql/) para obtener datos [durante la compilación](/docs/glossary#build) en el servidor, mientras que usa el paquete [`axios`](https://github.com/axios/axios) para obtener diferentes datos en el [lado del cliente](/docs/glossary#client-side) cuando se carga la página.
 
-Cuando este artículo mencione [hidratación](/docs/glossary#hydration), significa que Gatsby (a través de React.js) crea archivos estáticos para hacer server-side rendering. Cuando el paquete de secuencias de comandos de Gatsby se descarga y ejecuta en el navegador, se conserva el markup HTML creado por Gatsby y convierte el sitio en una aplicación web React completa que puede manipular el [DOM](/docs/glossary#dom). El resultado de este proceso crea páginas de carga rápida y una experiencia de usuario grata.
+Cuando este artículo mencione [hidratación](/docs/glossary#hydration), significa que Gatsby (a través de React.js) crea archivos estáticos para hacer _server-side rendering_ (renderizado en el servidor). Cuando el paquete de secuencias de comandos de Gatsby se descarga y ejecuta en el navegador, se conserva el markup HTML creado por Gatsby y convierte el sitio en una aplicación web React completa que puede manipular el [DOM](/docs/glossary#dom). El resultado de este proceso crea páginas de carga rápida y una experiencia de usuario grata.
 
-Compilar páginas durante el [build-time](/docs/glossary#build) es útil cuando el contenido de tu sitio web no cambia con frecuencia, o cuando el proceso de recompilación es simple. Sin embargo, algunos sitios web con necesidades más dinámicas requieren una [ejecución](/docs/glossary#runtime) en el [client-side](/docs/glossary#client-side) para manejar el contenido que cambia constantemente después de que se carga la página, como un widget de chat o una aplicación web de cliente de correo electrónico.
+Compilar páginas durante el [tiempo de compilación](/docs/glossary#build) es útil cuando el contenido de tu sitio web no cambia con frecuencia, o cuando el proceso de recompilación es simple. Sin embargo, algunos sitios web con necesidades más dinámicas requieren una [ejecución](/docs/glossary#runtime) en el [lado del cliente](/docs/glossary#client-side) para manejar el contenido que cambia constantemente después de que se carga la página, como un widget de chat o una aplicación web de cliente de correo electrónico.
 
-## Combinando datos de compilación y ejecución en el client-side
+## Combinando datos de compilación y ejecución en el lado del cliente
 
-Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una aplicación React después de cargarse estáticamente, Gatsby no es solo para sitios estáticos. También puedes obtener datos dinámicamente en el client-side según sea necesario, como lo harías con cualquier otra aplicación React.
+Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una aplicación React después de cargarse estáticamente, Gatsby no es solo para sitios estáticos. También puedes obtener datos dinámicamente en el lado del cliente según sea necesario, como lo harías con cualquier otra aplicación React.
 
 Para ilustrar esto, usaremos un pequeño sitio de ejemplo que utiliza la capa de datos de Gatsby en el momento de la compilación y los datos del cliente en el tiempo de ejecución. Este ejemplo se basa libremente en el ejemplo del sitio [Gatsby con Apollo](https://github.com/jlengstorf/gatsby-with-apollo) de Jason Lengstorf. Tu obtendrás datos de personajes para Rick (de Rick y Morty) y una imagen aleatoria de cachorros.
 
-> Nota: Revisa el [ejemplo completo acá](https://github.com/amberleyromo/gatsby-client-data-fetching), si te es de más ayuda.
+> Nota: Revisa el [ejemplo completo aquí](https://github.com/amberleyromo/gatsby-client-data-fetching), si te es de más ayuda.
 
 ### 1. Crea un componente de página de Gatsby
 
@@ -55,9 +55,9 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-          typeName: "RMAPI",
-          fieldName: "rickAndMorty",
-          url: "https://rickandmortyapi-gql.now.sh/",
+        typeName: "RMAPI",
+        fieldName: "rickAndMorty",
+        url: "https://rickandmortyapi-gql.now.sh/",
       },
     },
   ],
@@ -226,5 +226,5 @@ Eso es todo -- un ejemplo de consulta de datos en tiempo de compilación utiliza
 
 Puede que te interese consultar otros proyectos (tanto utilizados en producción como pruebas de conceptos) que ilustran este uso:
 
--   [Tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
--   [Correo de Gatsby](https://github.com/DSchau/gatsby-mail)
+- [Tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org)
+- [Correo de Gatsby](https://github.com/DSchau/gatsby-mail)
