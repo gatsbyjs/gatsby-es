@@ -16,7 +16,7 @@ Debido a que un sitio de Gatsby se [hidrata](/docs/glossary#hydration) en una ap
 
 Para ilustrar esto, usaremos un pequeño sitio de ejemplo que utiliza la capa de datos de Gatsby en el momento de la compilación y los datos del cliente en el tiempo de ejecución. Este ejemplo se basa libremente en el ejemplo del sitio [Gatsby con Apollo](https://github.com/jlengstorf/gatsby-with-apollo) de Jason Lengstorf. Tu obtendrás datos de personajes para Rick (de Rick y Morty) y una imagen aleatoria de cachorros.
 
-> Nota: Revisa el [ejemplo completo acá](https://github.com/amberleyromo/gatsby-client-data-fetching), si te es de más ayuda.
+> Nota: Revisa el [ejemplo completo aquí](https://github.com/amberleyromo/gatsby-client-data-fetching), si te es de más ayuda.
 
 ### 1. Crea un componente de página de Gatsby
 
