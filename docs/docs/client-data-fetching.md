@@ -143,7 +143,7 @@ class ClientFetchingExample extends Component {
     error: false,
     pupper: {
       img: "",
-      raza: "",
+      breed: "",
     },
   }
   // highlight-end
