@@ -47,7 +47,7 @@ export default ClientFetchingExample;
 
 Para obtener la información y la imagen del personaje de Rick, utiliza el plugin `gatsby-source-graphql`. Esto te permitirá consultar la API de Rick y Morty utilizando consultas de Gatsby.
 
-> Nota: Para aprender más acerca de como usar [`gatsby-source-graphql`](/packages/gatsby-source-graphql/), o acerca de la [Capa de datos GraphQL de Gatsby](/docs/graphql/), echa un vistazo a sus respectivos documentos. El propósito de incluirlos aquí es solo para comparación.
+> Nota: Para aprender más acerca de cómo usar [`gatsby-source-graphql`](/packages/gatsby-source-graphql/), o acerca de la [Capa de datos GraphQL de Gatsby](/docs/graphql/), echa un vistazo a sus respectivos documentos. El propósito de incluirlos aquí es solo para comparación.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
