@@ -203,7 +203,7 @@ class ClientFetchingExample extends Component {
         const breed = img.split("/")[4]
 
         this.setState({
-          cargando: false,
+          loading: false,
           mascota: {
             ...this.state.mascota,
             img,
