@@ -136,7 +136,7 @@ export const GatsbyQuery = graphql`
   }
 `
 
-class EjemploDeObtencionDesdeCliente extends Component {
+class ClientFetchingExample extends Component {
   // highlight-start
   state = {
     cargando: false,
