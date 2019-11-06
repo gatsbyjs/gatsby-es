@@ -196,7 +196,7 @@ class ClientFetchingExample extends Component {
 
     axios
       .get(`https://dog.ceo/api/breeds/image/random`)
-      .then(mascota => {
+      .then(pupper => {
         const {
           data: { message: img },
         } = mascota
