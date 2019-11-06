@@ -2,7 +2,7 @@
 title: Cómo contribuir
 ---
 
-Queremos que contribuir a Gatsby sea divertido, agradable y educativo para cualquiera y para todos. Todas las contribuciones son bienvenidas, incluyendo issues, nueva documentación y también actualizaciones, mejoras, artículos para el blog, talleres y más.
+Queremos que contribuir a Gatsby sea divertido, agradable y educativo para para todos y cada uno. Todas las contribuciones son bienvenidas, incluyendo issues, nueva documentación y también actualizaciones, mejoras, artículos para el blog, talleres y más.
 
 ## ¿No estás seguro de cómo empezar a contribuir?
 
