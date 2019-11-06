@@ -212,7 +212,7 @@ class ClientFetchingExample extends Component {
         })
       })
       .catch(error => {
-        this.setState({ cargando: false, error })
+        this.setState({ loading: false, error })
       })
   }
 } // highlight-end
