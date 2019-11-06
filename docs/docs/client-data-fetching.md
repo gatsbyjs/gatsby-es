@@ -150,7 +150,7 @@ class ClientFetchingExample extends Component {
 
   // highlight-start
   componentDidMount() {
-    this.obtenMascotaDeRick()
+    this.fetchRicksPupper()
   }
   // highlight-end
 
