@@ -191,7 +191,7 @@ class ClientFetchingExample extends Component {
   }
 
   // Estos datos se obtienen al momento de ejecución en el cliente. // highlight-start
-  obtenMascotaDeRick = () => {
+  fetchRicksPupper = () => {
     this.setState({ cargando: true })
 
     axios
