@@ -112,7 +112,7 @@ class ClientFetchingExample extends Component {
     }
 }
 
-export default EjemploDeObtencionDesdeCliente;
+export default ClientFetchingExample
 ```
 
 ### 3. Obtén la información de la mascota y los datos de la imagen en el cliente
