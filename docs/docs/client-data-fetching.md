@@ -71,7 +71,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 
 // highlight-start
-// Esta query es ejecutada al momento de compilación de Gatsby.
+// Esta consulta es ejecutada al momento de compilación de Gatsby.
 export const GatsbyQuery = graphql`
   {
     rickAndMorty {
