@@ -199,7 +199,7 @@ class ClientFetchingExample extends Component {
       .then(pupper => {
         const {
           data: { message: img },
-        } = mascota
+        } = pupper
         const raza = img.split("/")[4]
 
         this.setState({
