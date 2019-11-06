@@ -27,18 +27,18 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 
 class EjemploDeObtencionDesdeCliente extends Component {
-    render() {
-        return (
-            <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
-                <h1>Imagen de Rick</h1>
-                <p>Esto se obtendrá en una query durante la compilación</p>
+  render() {
+    return (
+      <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
+        <h1>Imagen de Rick</h1>
+        <p>Esto se obtendrá en una query durante la compilación</p>
 
-                <h2>Imagen de la mascota de Rick</h2>
-                <p>Esto se obtendrá en una solicitud del cliente</p>
-            </div>
-        );
+        <h2>Imagen de la mascota de Rick</h2>
+        <p>Esto se obtendrá en una solicitud del cliente</p>
+      </div>
+      );
     }
-}
+  }
 
 export default EjemploDeObtencionDesdeCliente;
 ```
@@ -51,16 +51,16 @@ Para obtener la información y la imagen del personaje de Rick, utiliza el plugi
 
 ```javascript:title=gatsby-config.js
 module.exports = {
-    plugins: [
-        {
-            resolve: "gatsby-source-graphql",
-            options: {
-                typeName: "RMAPI",
-                fieldName: "rickAndMorty",
-                url: "https://rickandmortyapi-gql.now.sh/",
-            },
-        },
-    ],
+  plugins: [
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+          typeName: "RMAPI",
+          fieldName: "rickAndMorty",
+          url: "https://rickandmortyapi-gql.now.sh/",
+      },
+    },
+  ],
 }
 ```
 
@@ -73,14 +73,14 @@ import { graphql } from "gatsby";
 // highlight-start
 // Esta query es ejecutada al momento de compilación de Gatsby.
 export const GatsbyQuery = graphql`
-    {
-        rickAndMorty {
-            character(id: 1) {
-                name
-                image
-            }
-        }
+  {
+    rickAndMorty {
+      character(id: 1) {
+        name
+        image
+      }
     }
+  }
 `
 // highlight-end
 
@@ -93,21 +93,21 @@ class EjemploDeObtencionDesdeCliente extends Component {
         // highlight-end
 
         return (
-            <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
-                // highlight-start
-                <h1>{character.name} Con Su Mascota</h1>
-                <p>Los datos de la API de Rick & Morty se obtienen al momento de compilación.</p>
-                <div>
-                    <img
-                        src={character.image}
-                        alt={character.name}
-                        style={{ width: 300 }}
-                    />
-                </div>
-                // highlight-end
-                <h2>Imagen de la mascota de Rick</h2>
-                <p>Esto se obtendrá desde una solicidud del cliente</p>
+          <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
+            // highlight-start
+            <h1>{character.name} Con Su Mascota</h1>
+            <p>Los datos de la API de Rick & Morty se obtienen al momento de compilación.</p>
+            <div>
+              <img
+                src={character.image}
+                alt={character.name}
+                style={{ width: 300 }}
+              />
             </div>
+            // highlight-end
+            <h2>Imagen de la mascota de Rick</h2>
+            <p>Esto se obtendrá desde una solicidud del cliente</p>
+          </div>
         )
     }
 }
