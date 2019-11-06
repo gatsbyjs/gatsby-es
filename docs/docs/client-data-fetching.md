@@ -26,7 +26,7 @@ Sin datos aún. Sólo la página básica React en donde agregarás los datos.
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 
-class EjemploDeObtencionDesdeCliente extends Component {
+class ClientFetchingExample extends Component {
     render() {
         return (
             <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
