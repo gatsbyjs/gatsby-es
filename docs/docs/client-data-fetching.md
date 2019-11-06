@@ -207,7 +207,7 @@ class ClientFetchingExample extends Component {
           pupper: {
             ...this.state.pupper,
             img,
-            raza,
+            breed,
           },
         })
       })
