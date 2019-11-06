@@ -1,26 +1,26 @@
 ---
-title: Adding a List of Markdown Blog Posts
+title: Agregar una Lista de Posts de un Blog en Markdown
 ---
 
-Once you have added Markdown pages to your site, you are just one step away from being able to list your posts on a dedicated index page.
+Una vez que hayas añadido páginas en _Markdown_ a tu sitio, estás a un solo paso de poder listar tus posts en una página índice dedicada.
 
-### Creating posts
+### Creación de posts
 
-As described [here](/docs/adding-markdown-pages), you will have to create your posts in Markdown files which will look like this:
+Como es descrito [aquí](/docs/adding-markdown-pages), tendrás que crear tus posts en archivos _Markdown_, los cuales se verán algo así:
 
 ```md
 ---
 path: "/blog/my-first-post"
 date: "2017-11-07"
-title: "My first blog post"
+title: "El primer post del blog"
 ---
 
-Has anyone heard about GatsbyJS yet?
+¿Alguien ha oído ya sobre GatsbyJS?
 ```
 
-### Creating the page
+### Creación de página
 
-The first step will be to create the page which will display your posts, in `src/pages/`. You can for example use `index.js`.
+El primer paso será crear la página que mostrará tus posts en `src/pages/`.  Puedes usar `index.js` por ejemplo.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -32,7 +32,7 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(edge => !!edge.node.frontmatter.date) // Puedes filtrar tus posts basados en algún criterio
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return <div>{Posts}</div>
@@ -41,9 +41,9 @@ const IndexPage = ({
 export default IndexPage
 ```
 
-### Creating the GraphQL query
+### Creación de la consulta GraphQL
 
-Second, you need to provide the data to your component with a GraphQL query. Let's add it, so that `index.js` looks like this:
+En segundo lugar, necesitas proveer los datos a tu componente mediante una consulta GraphQL. La añadiremos de tal manera que `index.js`, se verá así:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -56,7 +56,7 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(edge => !!edge.node.frontmatter.date) // Puedes filtrar tus posts basados en algún criterio
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return <div>{Posts}</div>
@@ -83,9 +83,9 @@ export const pageQuery = graphql`
 `
 ```
 
-### Creating the `PostLink` component
+### Creación del componente `PostLink`
 
-The only thing left to do is to add the `PostLink` component. Create a new file `post-link.js` in `src/components/` and add the following:
+La única tarea que queda por hacer es añadir el componente `PostLink`. Crea un nuevo archivo `post-link.js` en `src/components/` y añade lo siguiente:
 
 ```jsx:title=src/components/post-link.js
 import React from "react"
@@ -102,4 +102,4 @@ const PostLink = ({ post }) => (
 export default PostLink
 ```
 
-This should get you a page with your posts sorted by descending date. You can further customize the `frontmatter` and the page and `PostLink` components to get your desired effects!
+Esto debería mostrarte una página con tus posts ordenados por fecha de manera descendente. ¡Puedes personalizar aún más el `frontmatter` y los componentes de página y `PostLink` para obtener los efectos que desees!

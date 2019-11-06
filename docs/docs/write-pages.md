@@ -85,7 +85,9 @@ p. ej.
 
 ## sync-requires.js
 
+
 Es un archivo de JavaScript generado dinámicamente que exporta `components`. Este es un objeto creado por iteración sobre el _namespace_ `components` de redux. Las claves son el [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname) (p. ej. `component---src-blog-2-js`), y los valores son expresiones requeridas por el componente. P. ej. `/home/site/src/blog/2.js`. El archivo se verá parecido a este:
+
 
 ```javascript
 exports.components = {
