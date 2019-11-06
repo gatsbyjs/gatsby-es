@@ -40,7 +40,7 @@ class EjemploDeObtencionDesdeCliente extends Component {
     }
   }
 
-export default EjemploDeObtencionDesdeCliente;
+export default ClientFetchingExample;
 ```
 
 ### 2. Obtén la información del personaje al momento de compilación
