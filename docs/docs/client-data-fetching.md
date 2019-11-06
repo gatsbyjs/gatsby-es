@@ -217,7 +217,7 @@ class ClientFetchingExample extends Component {
   }
 } // highlight-end
 
-export default EjemploDeObtencionDesdeCliente
+export default ClientFetchingExample
 ```
 
 Eso es todo -- un ejemplo de consulta de datos en tiempo de compilación utilizando la capa de datos Gatsby GraphQL y solicitando datos dinámicamente en el cliente en tiempo de ejecución.
