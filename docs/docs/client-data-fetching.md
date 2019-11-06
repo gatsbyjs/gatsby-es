@@ -175,7 +175,7 @@ class ClientFetchingExample extends Component {
         </div>
          {/* highlight-start */}
         <div>
-          {this.state.cargando ? (
+          {this.state.loading ? (
             <p>Un momento por favor, ¡mascota en camino!</p>
           ) : img && raza ? (
             <>
