@@ -141,7 +141,7 @@ class ClientFetchingExample extends Component {
   state = {
     loading: false,
     error: false,
-    mascota: {
+    pupper: {
       img: "",
       raza: "",
     },
