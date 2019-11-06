@@ -177,7 +177,7 @@ class ClientFetchingExample extends Component {
         <div>
           {this.state.loading ? (
             <p>Un momento por favor, ¡mascota en camino!</p>
-          ) : img && raza ? (
+          ) : img && breed ? (
             <>
               <h2>{`¡La mascota es un ${raza}!`}</h2>
               <img src={img} alt={`mono aleatorio `} style={{ maxWidth: 300 }} />
