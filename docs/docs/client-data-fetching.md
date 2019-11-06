@@ -68,7 +68,7 @@ Ahora puedes agregar la consulta a tu página `index.js`:
 
 ```jsx:title=index.js
 import React, { Component } from "react"
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
 // highlight-start
 // Esta query es ejecutada al momento de compilación de Gatsby.
