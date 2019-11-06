@@ -84,7 +84,7 @@ export const GatsbyQuery = graphql`
 `
 // highlight-end
 
-class EjemploDeObtencionDesdeCliente extends Component {
+class ClientFetchingExample extends Component {
     render() {
         // highlight-start
         const {
