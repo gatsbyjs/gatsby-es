@@ -200,7 +200,7 @@ class ClientFetchingExample extends Component {
         const {
           data: { message: img },
         } = pupper
-        const raza = img.split("/")[4]
+        const breed = img.split("/")[4]
 
         this.setState({
           cargando: false,
