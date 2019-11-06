@@ -139,7 +139,7 @@ export const GatsbyQuery = graphql`
 class ClientFetchingExample extends Component {
   // highlight-start
   state = {
-    cargando: false,
+    loading: false,
     error: false,
     mascota: {
       img: "",
