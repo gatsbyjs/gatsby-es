@@ -117,26 +117,41 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | callback                            | _callback_                                         |
 | camelCase                           | _camelCase_                                        |
 | cheat-sheet                         | hoja de trucos                                     |
-| client-side                         | _client-side_                                      |
+| client-side                         | lado del cliente                                   |
+| community pair programming sessions | sesiones de programación en pareja de la comunidad |
+| component shadowing                 | _component shadowing_                              |
 | controlled component                | componente controlado                              |
 | debugging                           | depuración                                         |
 | deploy                              | _deploy_                                           |
 | DOM                                 | DOM                                                |
+| file                                | archivo                                            |
+| fork                                | _fork_                                             |
 | framework                           | _framework_                                        |
 | function component                  | componente de función                              |
 | hardcoded                           | hardcodeado                                        |
 | hook                                | _hook_                                             |
+| issue                               | _issue_                                            |
 | key                                 | _key_                                              |
 | lazy initialization                 | inicialización diferida                            |
+| layout                              | _layout_                                           |
 | library                             | biblioteca                                         |
 | lowercase                           | minúscula(s)                                       |
 | newsletter                          | _newsletter_                                       |
+| monorepo                            | _monorepo_                                         |
+| open source                         | código abierto                                     |
 | props                               | _props_                                            |
-| React element                       | Elemento de React                                  |
+| push notifications                  | notificaciones _push_                              |
+| React element                       | elemento de React                                  |
 | render                              | renderizar (verb), renderizado (noun)              |
+| scope (sustantivo)                  | ámbito                                             |
+| scope (verbo)                       | aislar                                             |
+| script                              | _script_                                           |
 | shallow rendering                   | renderizado superficial                            |
+| starter                             | _starter_                                          |
 | state                               | estado                                             |
 | string                              | _string_                                           |
+| stub                                | _stub_                                             |
+| swag                                | premio                                             |
 | template literals                   | _template literals_                                |
 | uncontrolled component              | componente no controlado                           |
 | Issue                               | Issue                                              |
@@ -157,3 +172,5 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | stub                                | stub                                               |
 | starter                             | _starter_                                          |
 | component shadowing                 | _component shadowing_                              |
+| workshop                            | taller                                             |
+| workspace                           | _workspace_                                        |
