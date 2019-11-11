@@ -1,24 +1,24 @@
 ---
-title: Winning Over Clients
+title: Ganando clientes
 issue: https://github.com/gatsbyjs/gatsby/issues/14040
 ---
 
-The top priority of most clients is that the website is shipped to their standard of quality, on time, and under budget.
+La prioridad principal de la mayoría de los clientes es que el sitio web se envíe a su estándar de calidad, a tiempo y por debajo del presupuesto. 
 
-In addition, they usually want to be able to use familiar CMS-based workflows to create, edit, and publish content.
+Además, generalmente desean poder utilizar flujos de trabajo familiares basados en CMS para crear, editar y publicar contenido.
 
-Some benefits that you can use to pitch Gatsby to clients include:
+Algunos beneficios que puedes usar para atraer clientes a Gatsby incluyen:
 
-- Works with their CMS
-- Fast development speed ensures project will be on time
-- Ease of making development changes helps keep project under budget
-- Lower hosting cost helps keep project under budget
+- Trabaja con su CMS
+- La rápida velocidad de desarrollo garantiza que el proyecto llegue a tiempo
+- La facilidad para realizar cambios de desarrollo ayuda a mantener el proyecto por debajo del presupuesto
+- El bajo costo de alojamiento ayuda a mantener el proyecto por debajo del presupuesto
 
-[This one-pager](/gatsby-one-pager.pdf) may also be useful for clients -- it explains Gatsby in their language.
+[Este paginador](/gatsby-one-pager.pdf) puede ser util para clientes -- esto explica Gatsby en tu idioma.
 
 --
 
-This is a stub. Help our community expand it.
+Esto es un stub. Ayuda a nuestra comunidad a expandirlo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, usa la [Guía de Estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu
+pull request sea aceptada.
