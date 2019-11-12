@@ -120,7 +120,7 @@ exports.components = {
 exports.data = () => import("/home/site/.cache/data.json")
 ```
 
-Recuerda, `sync-requires.js` es usado durante la [generación de página HTML](/docs/html-generation/). Y `async-requires.js` es usado por el [compilado de la aplicación de JavaScript](/docs/production-app/). 
+Recuerda, `sync-requires.js` es usado durante la [generación de página HTML](/docs/html-generation/). Y `async-requires.js` es usado por el [compilado de la aplicación de JavaScript](/docs/production-app/).
 
 ## data.json
 
