@@ -4,7 +4,7 @@ title: Escribir páginas
 
 > Esta documentación no está actualizada con la última versión de Gatsby.
 >
-> Las areas desactualizadas son:
+> Las áreas desactualizadas son:
 >
 > - `data.json` debería ser reemplazada con `page-data.json`
 > - eliminar las menciones de `pages.json`
