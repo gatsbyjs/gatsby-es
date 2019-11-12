@@ -102,7 +102,7 @@ Este es usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/
 
 ---
 
-`async-requires.js`  es muy similar a `sync-requires.js`, ya que es un archivo JavaScript generado dinámicamente. La diferencia es que está escrito para ser usado por la división del código via _webpack_ . Así que en lugar de usar `require` con la ruta del componente, este usa `import` y añade una pista con la que podremos enlazar eventualmente el _componentChunkName_ con su archivo resultante (más información en el documento [Dividiendo Código](/docs/how-code-splitting-works/)). `components` es una función, de forma que puede ser inicializada en diferido.
+`async-requires.js`  es muy similar a `sync-requires.js`, ya que es un archivo JavaScript generado dinámicamente. La diferencia es que está escrito para ser usado por la división del código via _webpack_ . Así que en lugar de usar `require` con la ruta del componente, este usa `import` y añade una pista con la que podremos enlazar eventualmente el _componentChunkName_ con su archivo resultante (más información en el documento [División de Código](/docs/how-code-splitting-works/)). `components` es una función, de forma que puede ser inicializada en diferido.
 
 `async-requires.js` también exporta una función `data` que importa `data.json` ([Ver abajo](/docs/write-pages/#datajson))
 
