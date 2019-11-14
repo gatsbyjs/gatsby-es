@@ -22,7 +22,7 @@ Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configu
 plugins: [`gatsby-plugin-sass`],
 ```
 
-> **Nota**: Puedes configurar [opciones adicionales del complemento](/packages/gatsby-plugin-sass/#other-options) como rutas para incluir y opciones para `css-loader`.
+> **Nota**: Puedes configurar [opciones adicionales del plugin](/packages/gatsby-plugin-sass/#other-options) como rutas para incluir y opciones para `css-loader`.
 
 3.  Escribe tus hojas de estilo como archivos `.sass` or `.scss` y solicítalas o impórtalas como de costumbre.
 
