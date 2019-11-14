@@ -54,4 +54,4 @@ import "./styles.sass"
 
 - [Introducción a Sass](https://designmodo.com/introduction-sass/)
 - [Documentación de Sass](https://sass-lang.com/documentation)
-- [Gatsby *starters* que usan Sass](/starters/?c=Styling%3ASCSS)
+- [*Starters* de Gatsby que usan Sass](/starters/?c=Styling%3ASCSS)
