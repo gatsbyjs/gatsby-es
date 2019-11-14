@@ -103,7 +103,7 @@ fin
 Una vez que el arranque inicial ha terminado, un `webpack-dev-server` y un servidor express son iniciados para servir archivos para el flujo de desarrollo con actualizaciones en vivo. En un build de producción, Gatsby se salta el servidor de desarrollo y en su lugar crea el CSS, luego el JavaScript, y después el HTML estático con webpack.
 
 Durante este proceso, hay varios puntos de extensión donde los plugins pueden
-intervenir. Todos los procesos principales tiene un `onPre` y `onPost`. P.e. `onPreBootstrap`
+intervenir. Todos los procesos principales tienen un `onPre` y `onPost`. P.e. `onPreBootstrap`
 y `onPostBootstrap`, `onPreBuild` o `onPostBuild`. Durante el arranque,
 los plugins pueden responder en varias fases a APIs como `onCreatePages`,
 `onCreateBabelConfig` y `onSourceNodes`.
@@ -117,5 +117,7 @@ extensión en el proceso de renderización del servidor y en el navegador. P.e.
 
 Las tres principales inspiraciones para esta API y especificaciones son la API de React.js, especialmente
 [el email de @leebyron's sobre la API de React](https://gist.github.com/vjeux/f2b015d230cc1ab18ed1df30550495ed),
-la charla ["Cómo Diseñar una Buena API y Por Qué Importas" de Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop), que diseñó muchas partes de Java, y el plugin de diseño
+la charla
+["Cómo Diseñar una Buena API y Por Qué Importas" de Joshua Bloch](https://www.youtube.com/watch?v=heh4OeB9A-c&app=desktop),
+que diseñó muchas partes de Java, y el plugin de diseño
 de [Hapi.js](https://hapijs.com/api).
