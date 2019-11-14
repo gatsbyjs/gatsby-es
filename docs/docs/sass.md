@@ -6,7 +6,7 @@ title: Uso de Sass en Gatsby
 
 Sass compilará los archivos `.sass` y `.scss` en archivos `.css`, para que puedas escribir tus hojas de estilo con funciones más avanzadas.
 
-> **Nota**: la diferencia entre usar un archivo `.sass` o `.scss` es la sintaxis en la que escribes tus estilos. Todo CSS válido es también SCSS válido, por lo que es el más fácil de usar y el más popular . Puedes leer más sobre las diferencias en la [documentación de Sass](https://sass-lang.com/documentation/syntax).
+> **Nota**: la diferencia entre usar un archivo `.sass` o `.scss` es la sintaxis en la que escribes tus estilos. Todo CSS válido es también SCSS válido, por lo que es el más fácil de usar y el más popular. Puedes leer más sobre las diferencias en la [documentación de Sass](https://sass-lang.com/documentation/syntax).
 
 ## Instalación y configuración de Sass
 
