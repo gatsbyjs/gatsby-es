@@ -16,7 +16,7 @@ Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configu
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2.  Incluye el complemento en tu archivo `gatsby-config.js`.
+2.  Incluye el plugin en tu archivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
