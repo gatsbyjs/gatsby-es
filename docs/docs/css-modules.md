@@ -4,7 +4,7 @@ title: Estilos en Ámbito de Componentes con Módulos CSS
 
 CSS en ámbito de componentes te permite escribir CSS tradicional y portátil con efectos secundarios mínimos: no tendrás que preocuparte por conflictos de nombres de selectores o por afectar los estilos de otros componentes.
 
-Gatsby trabaja de manera creativa con los [módulos CSS](https://github.com/css-modules/css-modules), una solución popular para escribir CSS en ámbito por componentes. Aquí tenemos un [ejemplo de un sitio que usa módulos CSS](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-css-modules).
+Gatsby trabaja sin ninguna configuración requerida con [módulos CSS](https://github.com/css-modules/css-modules), una solución popular para escribir CSS en ámbito de componentes. Aquí tenemos un [ejemplo de un sitio que usa módulos CSS](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-css-modules).
 
 ## ¿Qué es un módulo CSS?
 
