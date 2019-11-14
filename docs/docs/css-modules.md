@@ -10,7 +10,7 @@ Gatsby trabaja sin ninguna configuración requerida con [módulos CSS](https://g
 
 Citando a [la página de inicio de Módulos CSS](https://github.com/css-modules/css-modules):
 
-> Un **módulo CSS** es un archivo CSS, en el cual, todos los nombres de clases y animaciones están scoped localmente, por defecto.
+> Un **módulo CSS** es un archivo CSS, en el cual, todos los nombres de clases y animaciones están aislados localmente por defecto.
 
 Los módulos CSS te permiten escribir estilos en archivos CSS, utilizándolos como objetos JavaScript para procesamiento y seguridad adicionales. Los módulos CSS son muy populares porque, automáticamente, hacen que los nombres de clases y animaciones sean únicos para que no haya que preocuparse por conflictos de nombres de selectores.
 
