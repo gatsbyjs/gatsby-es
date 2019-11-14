@@ -12,7 +12,7 @@ Sass compilará los archivos `.sass` y `.scss` en archivos `.css`, para que pued
 
 Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, dirígete a la [**Guía de inicio rápido**](/docs/quick-start/) y luego, regresa.
 
-1.  Instala el complemento Gatsby [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass/) y `node-sass`, una dependencia de pares requerida a partir de v2.0.0.
+1.  Instala el plugin Gatsby [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass/) y `node-sass`, una dependencia obligatoria requerida a partir de v2.0.0.
 
 `npm install --save node-sass gatsby-plugin-sass`
 
