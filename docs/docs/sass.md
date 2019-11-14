@@ -2,7 +2,7 @@
 title: Uso de Sass en Gatsby
 ---
 
-[Sass](https://sass-lang.com) es una extensión de CSS, que agrega reglas anidadas, variables, mixins, herencia de selectores y más. En Gatsby, el código Sass se puede traducir a CSS estándar, en el formato correcto, mediante un complemento.
+[Sass](https://sass-lang.com) es una extensión de CSS, que agrega reglas anidadas, variables, mixins, herencia de selectores y más. En Gatsby, el código Sass se puede traducir a CSS estándar, en el formato correcto, mediante un plugin.
 
 Sass compilará los archivos `.sass` y `.scss` en archivos `.css`, para que puedas escribir tus hojas de estilo con funciones más avanzadas.
 
