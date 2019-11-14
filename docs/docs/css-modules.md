@@ -1,5 +1,5 @@
 ---
-title: Estilos en Ámbito por Componentes con Módulos CSS
+title: Estilos en Ámbito de Componentes con Módulos CSS
 ---
 
 CSS en ámbito por componentes te permite escribir CSS tradicional y portátil con efectos secundarios mínimos: no tendrás que preocuparte por conflictos de nombres de selectores o por afectar los estilos de otros componentes.
