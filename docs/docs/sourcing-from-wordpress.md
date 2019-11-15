@@ -1,28 +1,28 @@
 ---
-title: Sourcing from WordPress
+title: Obteniendo datos desde WordPress
 ---
 
-This guide will walk you through the process of using [Gatsby](/) with [WordPress Rest Api](https://developer.wordpress.org/rest-api/reference/).
+Esta guía te ayudará a través del proceso de usar [Gatsby](/) con la [API Rest de WordPress](https://developer.wordpress.org/rest-api/reference/).
 
-WordPress is a free and open-source content management system (CMS). Let's say you have a site built with WordPress and you want to pull the existing data into your static Gatsby site. You can do that with [gatsby-source-wordpress](/packages/gatsby-source-wordpress/?=wordpress). Let's begin!
+WordPress es un gestor de contenidos (CMS) libre y de código abierto. Supongamos que tienes un sitio creado con WordPress y quieres extraer los datos existentes a tu sitio estático en Gatsby. Puedes hacerlo con [gatsby-source-wordpress](/packages/gatsby-source-wordpress/?=wordpress). ¡Empecemos!
 
-_Note: this guide uses the `gatsby-starter-default` to provide you with the knowledge necessary to start working with WordPress but if you get stuck at some point of the guide feel free to use
-[this example](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress) to gain extra insights._
+_Nota: esta guía usa `gatsby-starter-default` para proporcionarte los conocimientos necesarios para empezar a trabajar con WordPress, pero si te atascas en algún punto siéntete libre de usar
+[este ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress) para obtener información adicional._
 
-## Setup
+## Configuración
 
-### Quick start
+### Inicio rápido
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [Quick Start guide](/docs/quick-start), then come back.
+Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, dirígete a la [Guía de Inicio Rápido](/docs/quick-start), después vuelve.
 
 ### gatsby-config.js
 
-Essentially the Gatsby home base. The two things defined here initially (in the starter) are `siteMetadata` and `plugins` you can add to enable new functionalities on your site.
+Es esencialmente la base inicial de Gatsby. Las dos cosas definidas aquí inicialmente (en el _starter_) son `siteMetadata` y `plugins` que puedes añadir para habilitar nuevas funcionalidades para tu sitio.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
+    title: "Starter de Inicio en Gatsby",
   },
   plugins: ["gatsby-plugin-react-helmet"],
   ...
@@ -31,15 +31,15 @@ module.exports = {
 
 ### Plugin: gatsby-source-wordpress
 
-Now that you have some understanding of project structure lets add fetching WordPress data functionality. There's a plugin for that. [`gatsby-source-wordpress`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress) is Gatsby's plugin for sourcing data from WordPress sites using the WordPress JSON REST API. You can install it by running the following command:
+Ahora que tienes cierta comprensión de la estructura del proyecto, agreguemos la funcionalidad para extraer datos de WordPress. Hay un plugin para ello. [`gatsby-source-wordpress`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress) es el plugin de Gatsby para obtener datos desde sitios WordPress usando la JSON REST API. Puedes instalarlo ejecutando el siguiente comando:
 
 ```shell
 npm install gatsby-source-wordpress
 ```
 
-### Configuring the plugin
+### Configurando el plugin
 
-In `gatsby-config.js`, add your configuration options, including your WordPress site's baseUrl, protocol, whether it's hosted on [wordpress.com](http://wordpress.com/) or self-hosted, and whether it makes use of the Advanced Custom Fields (ACF) plugin.
+En `gatsby-config.js`, añade tus opciones de configuración, incluyendo la baseUrl y protocolo de tu sitio WordPress, si está alojado en [wordpress.com](http://wordpress.com/) o auto alojado, y si usa el plugin Advanced Custom Fields (ACF) o no.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -49,12 +49,12 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        // your wordpress source
-        baseUrl: `wpexample.com`,
+        // el origen de tu WordPress
+        baseUrl: `wpejemplo.com`,
         protocol: `https`,
-        // is it hosted on wordpress.com, or self-hosted?
+        // ¿si está alojado en wordpress.com, o auto alojado?
         hostingWPCOM: false,
-        // does your site use the Advanced Custom Fields Plugin?
+        // ¿usa tu sitio el plugin Advanced Custom Fields?
         useACF: false
       }
     },
@@ -62,19 +62,19 @@ module.exports = {
 }
 ```
 
-**Note**: If your config varies from what it shown above, for instance, if you are hosting your WordPress instance on WordPress.com, please refer to the [plugin docs](/packages/gatsby-source-wordpress/?=wordpre#how-to-use) for more information on how to setup other options required for your use case.
+**Nota**: Si tu configuración varía de lo que se muestra arriba, por ejemplo, si estás alojando tu instancia WordPress en WordPress.com, por favor consulta los [documentos del plugin](/packages/gatsby-source-wordpress/?=wordpre#how-to-use) para más información de cómo configurar otras opciones requeridas para tu caso de uso.
 
-## Using WordPress data
+## Usando datos de WordPress
 
-Once your source plugin is pulling data, you can construct your site pages by implementing the `createPages` API in `gatsby-node.js`. When this is called, your data has already been fetched and is available to query with GraphQL. Gatsby uses [GraphQL at build time](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Your source plugin (in this case, `gatsby-source-wordpress`) fetches your data, and Gatsby uses that data to "[automatically _infer_ a GraphQL schema](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" that you can query against.
+Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
 
-The `createPages` API exposes the `graphql` function:
+La API `createPages` expone la función `graphql`:
 
-> The GraphQL function allows us to run arbitrary queries against the local WordPress GraphQL schema... like the site has a built-in database constructed from the fetched data that you can run queries against. ([Source](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js#L15))
+> La función GraphQL nos permite ejecutar consultas arbitrarias contra el esquema local de WordPress... como si el sitio tuviera una base de datos incluida construida a partir los datos recuperados contra los que puedes realizar consultas. ([Fuente](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js#L15))
 
-You can use the [`gatsby-node.js`](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js) from the plugin demo to get started. For the purpose of this guide, the code to construct posts works out of the box. It queries your local WordPress GraphQL schema for all Posts, [iterates through each Post node](/docs/programmatically-create-pages-from-data/) and constructs a static page for each, [based on the defined template](/docs/layout-components/).
+Puedes usar el archivo [`gatsby-node.js`](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js) de la demo del plugin para empezar. Para los fines de esta guía, el código para construir entradas funciona de forma predeterminada. Consulta tu esquema GraphQL local de WordPress para todas las entradas, [itera a través de cada nodo de las Entradas](/docs/programmatically-create-pages-from-data/) y crea una página estática para cada una, [basado en la plantilla definida](/docs/layout-components/).
 
-For example, find an excerpt of the demo `gatsby-node.js` below.
+Por ejemplo, aquí abajo tienes un extracto de ejemplo en `gatsby-node.js`.
 
 ```javascript:title=gatsby-node.js
 const path = require(`path`)
@@ -83,7 +83,7 @@ const slash = require(`slash`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // query content for WordPress posts
+  // consulta contenido para entradas de WordPress
   const result = await graphql(`
     query {
       allWordpressPost {
@@ -100,12 +100,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const postTemplate = path.resolve(`./src/templates/post.js`)
   result.data.allWordpressPost.edges.forEach(edge => {
     createPage({
-      // will be the url for the page
+      // será la url de tu página
       path: edge.node.slug,
-      // specify the component template of your choice
+      // especifica un componente de plantilla a tu elección
       component: slash(postTemplate),
-      // In the ^template's GraphQL query, 'id' will be available
-      // as a GraphQL variable to query for this posts's data.
+      // En la consulta GraphQL de la plantilla, 'id' estará disponible
+      // como una variable GraphQL para realizar consultas de datos de esta entrada.
       context: {
         id: edge.node.id,
       },
@@ -114,24 +114,24 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-After fetching data from WordPress via the query, all posts are iterated over, calling [`createPage`](/docs/actions/#createPage) for each one.
+Después de obtener los datos desde WordPress a través de la consulta, todas las entradas se iteran, llamando a [`createPage`](/docs/actions/#createPage) para cada una.
 
-A [Gatsby page is defined](/docs/api-specification/#concepts) as "a site page with a pathname, a template component, and an _optional_ GraphQL query and Layout component."
+Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una página del sitio con un nombre de ruta, un componente de plantilla, y una consulta de GraphQL y componente _Layout opcionales_."
 
-When you restart your server with the `gatsby develop` command, you'll be able to navigate to the new pages created for each of your posts at their respective paths.
+Cuando reinicies tu servidor con el comando `gatsby develop` podrás navegar a las nuevas páginas creadas para cada una de tus entradas en sus respectivas rutas.
 
-In the GraphiQL IDE at [localhost:8000/\_\_graphql](http://localhost:8000/__graphql) you should now see queryable fields for `allWordpressPosts` in the docs or explorer sidebar.
+En el IDE GraphiQL en [localhost:8000/\_\_graphql](http://localhost:8000/__graphql) deberías ver ahora campos consultables para `allWordpressPosts` en la barra lateral de documentos o del explorador.
 
-## Wrapping Up
+## Terminando
 
-This was a very basic example meant to help you understand how you can fetch data from WordPress and use it with Gatsby. As
-the guide mentioned already, if you got stuck, you can have a look at
-[example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress), which is a working example
-created to support this guide.
+Este fue un ejemplo muy básico para ayudarte a entender cómo obtener datos desde WordPress y usarlos con Gatsby. Como
+la guía ya ha mencionado, si te atascas, puedes echar un vistazo al
+[repositorio de ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress), que es un ejemplo funcional
+creado para dar soporte a esta guía.
 
-## Other resources
+## Otros recursos
 
-- [Blog post on which this guide is based on](/blog/2018-01-22-getting-started-gatsby-and-wordpress/)
-- [Watch + Learn video tutorials](http://watch-learn.com/series/gatsbyjs-wordpress)
-- [Another blog post on using Gatsby with WordPress](https://indigotree.co.uk/how-use-wordpress-headless-cms/)
-- More [Gatsby blog posts about using Gatsby + Wordpress](/blog/tags/wordpress/)
+- [Publicación en la que se basa esta guía](/blog/2018-01-22-getting-started-gatsby-and-wordpress/)
+- [Video tutoriales "Watch + Learn"](http://watch-learn.com/series/gatsbyjs-wordpress)
+- [Otra publicación sobre el uso de Gatsby con WordPress](https://indigotree.co.uk/how-use-wordpress-headless-cms/)
+- Más [Publicaciones en el blog de Gatsby sobre Gatsby + WordPress](/blog/tags/wordpress/)

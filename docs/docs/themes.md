@@ -1,16 +1,16 @@
 ---
-title: Themes
+title: Temas
 overview: true
 ---
 
-Using a Gatsby theme, all of your default configuration (shared functionality, data sourcing, design) is abstracted out of your site, and into an installable package.
+Al usar un tema de Gatsby, toda tu configuración por defecto (funcionalidades compartidas, suministro de datos, diseño) es abstraído fuera de tu sitio, a un paquete instalable.
 
-This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Esto significa que la configuración y funcionalidades no son directamente escritas en tu proyecto, sino versionadas, administradas centralmente, e instaladas como una dependencia. Puedes actualizar un tema fácilmente, componer temas, e incluso intercambiar un tema compatible por otro.
 
 <GuideList slug={props.slug} />
 
-### Other resources
+### Otros recursos
 
-- [Gatsby blog posts on themes](/blog/tags/themes)
-- [Jason Lengstorf and Brent Jackson livestream building a theme](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
-- [Jason Lengstorf and Emma Wedekind livestream building a theme](https://www.youtube.com/watch?v=W2uTfay3doo)
+- [Entradas del blog de Gatsby sobre temas](/blog/tags/themes)
+- [Transimión en vivo de Jason Lengstorf y Brent Jackson en donde crean un tema](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
+- [Transimión en vivo de Jason Lengstorf y Emma Wedekind en donde crean un tema](https://www.youtube.com/watch?v=W2uTfay3doo)

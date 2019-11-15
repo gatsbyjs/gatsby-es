@@ -1,14 +1,14 @@
 ---
-title: "Adding an SEO component"
+title: "Agregar un componente de SEO"
 ---
 
-Every site on the web has basic _meta-tags_ like the title, favicon or description of the page in their `<head>` element. This information gets displayed in the browser and is used when someone, e.g. shares your website on Twitter. You can give your users and these websites additional data to embed your website with more data — and that's where this guide for a SEO component comes in. At the end you'll have a component you can place in your layout file and have rich previews for other clients, smartphone users, and search engines.
+Cada sitio en la web tiene _meta-tags_ básicos como el título, favicon o descripción de la página en su elemento `<head>`. Esta información se muestra en el navegador y se usa cuando alguien comparte tu sitio web, por ejemplo en Twitter. Puedes proporcionar a tus usuarios y a estos sitios web datos adicionales para integrar tu sitio web con más datos — y aquí es donde entra esta guía para un componente de SEO. Al final tendrás un componente que podrás colocar en tu archivo _layout_ y tener previsualizaciones enriquecidas para otros clientes, usuarios de teléfonos inteligentes, y buscadores.
 
-_Note: This component will use StaticQuery. If you're unfamiliar with that, have a look at the [StaticQuery documentation](/docs/static-query/). You also have to have `react-helmet` installed for which you can have a look at [this document](/docs/add-page-metadata)._
+_Nota: Este componente usará StaticQuery. Si no estás familiarizado con esto, echa un vistazo a la [documentación de StaticQuery](/docs/static-query/). También debes tener `react-helmet` instalado, para lo cual puedes echar un vistazo a [este documento](/docs/add-page-metadata)._
 
 ## gatsby-config.js
 
-Gatsby makes all data put into the `siteMetadata` section of your `gatsby-config` file automatically available in GraphQL and therefore it's a good idea to place your information for the component there.
+Gatsby pone todos los datos de la sección `siteMetadata` de tu archivo `gatsby-config` disponibles de forma automática en GraphQL y, por lo tanto, es una buena idea colocar tu información para el componente allí.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -17,16 +17,16 @@ module.exports = {
     titleTemplate: "%s · The Real Hero",
     description:
       "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
-    url: "https://www.doe.com", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    url: "https://www.doe.com", // ¡No se permite la barra inclinada final!
+    image: "/images/snape.jpg", // Ruta a la imagen que colocaste en la carpeta 'static'
     twitterUsername: "@occlumency",
   },
 }
 ```
 
-## SEO component
+## Componente de SEO
 
-Create a new component with this initial boilerplate:
+Crea un componente nuevo con esta plantilla inicial:
 
 ```jsx:title=src/components/SEO.js
 import React from "react"
@@ -55,11 +55,11 @@ SEO.defaultProps = {
 }
 ```
 
-**Note:** `propTypes` are included in this example to help you ensure you’re getting all the data you need in the component, and to help serve as a guide while destructuring / using those props.
+**Nota:** los `propTypes` están incluidos en este ejemplo para ayudarte a asegurar que estás obteniendo todos los datos que necesitas en el componente, y sirven como una guía mientras desestructuras / usas estas _props_.
 
-As the SEO component should also be usable in other files, e.g. a template file, the component also accepts properties for which you set sensible defaults in the `SEO.defaultProps` section. This way the information you put into `siteMetadata` gets used every time unless you define the property explicitly.
+Como el componente de SEO también debería ser utilizable en otros archivos, por ejemplo un archivo plantilla, el componente acepta propiedades para las cuales estableces valores predeterminados en la sección `SEO.defaultProps`. De esta forma la información que colocas en `siteMetadata` se usa cada vez a menos que definas explícitamente la propiedad.
 
-Now define the query and place it in the StaticQuery (you can also save the query in a constant). You can also alias query items, so `title` gets renamed to `defaultTitle`.
+Ahora define la consulta y colócala en StaticQuery (también puedes guardar la consulta en una constante). También puedes crear un alias para los campos, de esta forma `title` se renombra a `defaultTitle`.
 
 ```jsx:title=src/components/SEO.js
 const SEO = ({ title, description, image, pathname, article }) => (
@@ -87,7 +87,7 @@ const query = graphql`
 `;
 ```
 
-The next step is to destructure the data from the query and to create an object that checks if the props were used — if not the default values are utilized. The name aliasing comes in handy here: It avoids name collisions.
+El siguiente paso consiste en desestructurar los datos de la consulta y crear un objeto que verifica si las _props_ fueron usadas — si no, los valores por defecto son utilizados. El alias de nombres es útil aquí: Evita las colisiones de nombres.
 
 ```jsx:title=src/components/SEO.js
 const SEO = ({ title, description, image, pathname, article }) => (
@@ -120,7 +120,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
 export default SEO
 ```
 
-The last step is to return this data with the help of `Helmet`. Your complete SEO component should look like:
+El último paso es retornar estos datos con la ayuda de `Helmet`. Tu componente de SEO completo debería verse así:
 
 ```jsx:title=src/components/SEO.js
 import React from "react"
@@ -214,11 +214,11 @@ const query = graphql`
 `
 ```
 
-## Examples
+## Ejemplos
 
-You could also put the Facebook and Twitter meta-tags into their own components, add custom favicons you placed in your `static` folder, and add [schema.org](https://schema.org/) data (Google will use that for their [Structured Data](https://developers.google.com/search/docs/guides/intro-structured-data)). To see how that works you can have a look at these two examples:
+También puedes poner los meta-tags de Facebook y Twitter en sus propios componentes, agregar favicons personalizados que se encuentran en tu carpeta `static`, y agregar datos de [schema.org](https://schema.org/) (Google usará eso para sus [Datos Estructurados](https://developers.google.com/search/docs/guides/intro-structured-data?hl=es-419)). Para ver cómo funciona, puedes echar un vistazo a estos dos ejemplos:
 
 - [marisamorby.com](https://github.com/marisamorby/marisamorby.com/blob/master/packages/gatsby-theme-blog-sanity/src/components/seo.js)
 - [gatsby-starter-prismic](https://github.com/LeKoArts/gatsby-starter-prismic/blob/master/src/components/SEO/SEO.jsx)
 
-As mentioned at the beginning you are also able to use the component in templates, like in [this example](https://github.com/jlengstorf/marisamorby.com/blob/master/src/templates/post.js#L12-L18).
+Como se mencionó al inicio también eres capaz de usar el componente en plantillas, como en [este ejemplo](https://github.com/jlengstorf/marisamorby.com/blob/6e86f845185f9650ff95316d3475bb8ac86b15bf/src/templates/post.js#L12-L18).
