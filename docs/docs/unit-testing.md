@@ -2,24 +2,25 @@
 título: Prueba Unitaria
 ---
 
-Las pruebas unitarias son una excelente manera de protegerse contra errores en su código antes de 
-que lo desplejes. Aunque Gatsby no incluye soporte para pruebas unitarias 
+Las pruebas unitarias son una excelente manera de protegerse contra errores en tú código antes de 
+que lo despliegues. Aunque Gatsby no incluye soporte para pruebas unitarias 
 inusuales, solo toma unos pocos pasos para comenzar a funcionar. Sin embargo, hay algunas 
-características del proceso de compilación de Gatsby que hacen que la configuración estándar de Jest no
-funciona del todo. Esta guía le muestra cómo configurarlo.
+características del proceso de compilación de Gatsby hacen que la configuración estándar de Jest no 
+funcione del todo. Esta guía le muestra cómo configurarlo.
 
-## Configurando su entorno
+## Configurando tú entorno
 
 El _framework_ de prueba más popular para React es [Jest](https://jestjs.io/),
 que fue creado por Facebook. Aunque Jest es un _framework_ de pruebas unitarias de JavaScript de 
 propósito general, tiene muchas características que lo hacen funcionar particularmente bien
 con React.
 
-_Nota: Para esta guía, comenzarás con `gatsby-starter-default`, pero los conceptos deben ser los mismos o muy similares para su sitio._
+_Nota: Para esta guía, comenzarás con `gatsby-starter-default`, pero los 
+conceptos deben ser los mismos o muy similares para tú sitio._
 
 ### 1. Instalar dependencias
 
-Primero, necesitas instalar Jest y algunos paquetes más necesarios. Instale babel-jest y babel-preset-gatsby para asegurarse de que los preajustes de babel que se utilizan coinciden con los que se utilizan internamente para su sitio Gatsby.
+Primero, necesitas instalar Jest y algunos paquetes más necesarios. Instale babel-jest y babel-preset-gatsby para asegurarse de que los preajustes de babel que se utilizan coinciden con los que se utilizan internamente para tú sitio Gatsby.
 
 ```shell
 npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby identity-obj-proxy
@@ -27,7 +28,7 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 
 ### 2. Crear un archivo de configuración para Jest
 
-Debido a que Gatsby maneja su propia configuración de Babel, tú deberás decirle
+Debido a que Gatsby maneja tú propia configuración de Babel, tú deberás decirle
 manualmente a Jest que use `babel-jest`. La forma más fácil de hacer esto es añadiendo `jest.config.js`. Tú puedes configurar algunos valores predeterminados útiles al mismo tiempo:
 
 ```js:title=jest.config.js
@@ -67,11 +68,11 @@ module.exports = require("babel-jest").createTransformer(babelOptions)
 - La siguiente opción es `moduleNameMapper`. Esta
   sección funciona un poco como las reglas de webpack,  y le dice a Jest cómo manejar las importaciones.
   Aquí te preocupa principalmente simular las importaciones de archivos estáticos, porque Jest no las puede
-  manejar. Un simulacro es un módulo ficticio que se utiliza en lugar del módulo real dentro 
+  manejar. Un _mock_ es un módulo ficticio que se utiliza en lugar del módulo real dentro 
   las pruebas. Es bueno cuando tienes algo que no puedes o no quieres probar.
   Puedes simular cualquier cosa, y aquí estás simulando los activos en lugar del del código. Para
   hojas de estilo necesita usar el paquete `identity-obj-proxy`. Para todos los otros activos
-  necesitas usar un simulacro manual llamado `file-mock.js`. Necesitas crear esto tú mismo.
+  necesitas usar un _mock_ manual llamado `file-mock.js`. Necesitas crear esto por tu cuenta.
   La convención es crear un directorio llamado `__mocks__` en el directorio raíz
   para esto. Ten en cuenta el par de guiones bajos dobles en el nombre.
 
@@ -101,14 +102,14 @@ excluir el módulo `gatsby`.
 - La sección `globals` establece `__PATH_PREFIX__`, que generalmente lo establece Gatsby,
   y que algunos componentes necesitan.
 
-- Debe establecer `testURL` con una URL válida,  porque algunos APIs de DOM como
+- Debe establecer `testURL` con una URL válida, porque a algunos APIs de DOM como
   `localStorage` no le son suficiente los valores prederminados (`about:blank`).
 
 > Nota: si está utilizando Jest 23.5.0 o posterior, `testURL` usará `http://localhost` entonces puedes omitir esta configuración.
 
 - Hay un global más que debes configurar, pero como es una función no puedes
-  configúrelo aquí en el JSON. El `setupFiles` _array_ te permite enumerar los archivos que serán
-  incluido antes de ejecutar todas las pruebas, por lo que es perfecto para esto.
+  configurarlo aquí en el JSON. El `setupFiles` _array_ te permite enumerar los archivos que serán
+  incluidos antes de ejecutar todas las pruebas, por lo que es perfecto para esto.
 
 ```js:title=loadershim.js
 global.___loader = {
@@ -116,11 +117,11 @@ global.___loader = {
 }
 ```
 
-### 3. Simulacros útiles para completar su entorno de prueba
+### 3. _Mocks_ útiles para completar tú entorno de prueba
 
 #### Simulando `gatsby`
 
-Finalmente, es una buena idea simular el module `gatsby`. Esto puede no ser
+Finalmente, es una buena idea simular el módulo `gatsby`. Esto puede no ser
 necesario al principio, pero hará las cosas mucho más fáciles si quieres probar
 componentes que usan `Link` o GraphQL.
 
@@ -156,10 +157,10 @@ module.exports = {
 
 Esto simula la función `graphql()`, el componente `Link`, y el componente `StaticQuery`.
 
-## Pruebas de escritura
+## Escribiendo tests
 
 Una guía completa de pruebas unitarias está más allá del ámbito de esta guía, pero tú puedes 
-empezar con una simple prueba instantánea para verificar que todo esté funcionando.
+empezar con un simple _snapshot_ para verificar que todo esté funcionando.
 
 Primero, crea un archivo de prueba. Los puedes poner en el directorio 
 `__tests__`, en otro lugar (generalmente al lado del componente en sí), con
@@ -182,7 +183,7 @@ describe("Header", () => {
 })
 ```
 
-Esta es una prueba instantánea muy simple, que usa `react-test-renderer` para rederizar
+Esta es un _snapshot_ muy simple, que usa `react-test-renderer` para rederizar
 el componente y luego genera un _snapshot_ de él mismo en la primera ejecución. Luego
 compara los futuros _snapshots_ contra este, lo que significa que puede verificar rápidamente por
 regresiones. Visite [los documentos de Jest](https://jestjs.io/docs/en/getting-started) para
@@ -208,11 +209,11 @@ el _snapshot_ que se está escribiendo. Esto se crea en un directorio `__snapsho
 a tus pruebas. Si lo miras, verás que es una representación JSON
 del componente `<Header />`. Debe verificar sus archivos de _snapshots_
 en un sistema de control de fuente (por ejemplo, un repositorio de GitHub) para que cualquier cambio se rastree en el historial.
-Esto es particularmente importante para recordar si está utilizando un continuo
-sistema de integración como Travis o CircleCI para ejecutar pruebas, ya que fallarán si el _snapshot_ no se registra en el control de origen.
+Esto es particularmente importante para recordar si está utilizando un sistema
+de integración continua como Travis o CircleCI para ejecutar pruebas, ya que fallarán si el _snapshot_ no se registra en el control de origen.
 
 Si realiza cambios que necesiten actualizar el _snapshot_, puede hacerlo
-ejecutando `npm test - -u`.
+ejecutando `npm test --u`.
 
 ## Usando TypeScript
 
@@ -248,13 +249,13 @@ module.exports = {
 }
 ```
 
-Tu puedes notar que hay otras dos opciones, , `testRegex` y `moduleFileExtensions`,
-han sido agregados. La opción `testRegex` es el patrón que le dice a Jest qué archivos
+Puedes notar que otras dos opciones, `testRegex` y `moduleFileExtensions`,
+han sido agregadas. La opción `testRegex` es el patrón que le dice a Jest qué archivos
 contienen pruebas. El patrón anterior coincide con cualquier archivo`.js`, `.jsx`, `.ts` o `.tsx`
 dentro de un directorio`__tests__`, o cualquier archivo en otro lugar con la extensión
 `.test.js`, `.test.jsx`, `.test.ts`, `.test.tsx`, o `.spec.js`, `.spec.jsx`,
 `.spec.ts`, `.spec.tsx`.
-s ne
+
 La opción `moduleFileExtensions` es necesaria cuando se trabaja con TypeScript.
 Lo único que hace es decirle a Jest qué extensiones de archivo puede
 importar en sus archivos sin precisar la extensión del archivo. Con la configuración inicial,
@@ -263,8 +264,8 @@ agregar `ts` y` tsx`. Puede leer más al respecto en [la documentación de Jest]
 
 ## Otros recursos
 
-Si necesita hacer cambios en su configuración de Babel, tú puedes editar la configuración en
-`jest-preprocess.js`. Es posible que debes habilitar algunos de los complementos utilizados por Gatsby,
+Si necesita hacer cambios en tú configuración de Babel, tú puedes editar la configuración en
+`jest-preprocess.js`. Es posible que debas habilitar algunos de los complementos utilizados por Gatsby,
 aunque recuerde que puede que necesite instalar las versiones de Babel 7. Vea
 [la guía de configuración de Gatsby Babel](/docs/babel) para algunos ejemplos.
 
