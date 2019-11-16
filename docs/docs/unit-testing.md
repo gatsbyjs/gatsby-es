@@ -1,35 +1,34 @@
 ---
-title: Unit Testing
+título: Prueba Unitaria
 ---
 
-Unit testing is a great way to protect against errors in your code before you
-deploy it. While Gatsby does not include support for unit testing out of the
-box, it only takes a few steps to get up and running. However there are a few
-features of the Gatsby build process that mean the standard Jest setup doesn't
-quite work. This guide shows you how to set it up.
+Las pruebas unitarias son una excelente manera de protegerse contra errores en su código antes de 
+que lo desplejes. Aunque Gatsby no incluye soporte para pruebas unitarias 
+inusuales, solo toma unos pocos pasos para comenzar a funcionar. Sin embargo, hay algunas 
+características del proceso de compilación de Gatsby que hacen que la configuración estándar de Jest no
+funciona del todo. Esta guía le muestra cómo configurarlo.
 
-## Setting up your environment
+## Configurando su entorno
 
-The most popular testing framework for React is [Jest](https://jestjs.io/),
-which was created by Facebook. While Jest is a general purpose JavaScript unit
-testing framework, it has lots of features that make it work particularly well
-with React.
+El _framework_ de prueba más popular para React es [Jest](https://jestjs.io/),
+que fue creado por Facebook. Aunque Jest es un _framework_ de pruebas unitarias de JavaScript de 
+propósito general, tiene muchas características que lo hacen funcionar particularmente bien
+con React.
 
-_Note: For this guide, you will be starting with `gatsby-starter-default`, but the
-concepts should be the same or very similar for your site._
+_Nota: Para esta guía, comenzarás con `gatsby-starter-default`, pero los conceptos deben ser los mismos o muy similares para su sitio._
 
-### 1. Installing dependencies
+### 1. Instalar dependencias
 
-First you need to install Jest and some more required packages. We install babel-jest and babel-preset-gatsby to ensure that the babel preset(s) that are used match what are used internally for your Gatsby site.
+Primero, necesitas instalar Jest y algunos paquetes más necesarios. Instale babel-jest y babel-preset-gatsby para asegurarse de que los preajustes de babel que se utilizan coinciden con los que se utilizan internamente para su sitio Gatsby.
 
 ```shell
 npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby identity-obj-proxy
 ```
 
-### 2. Creating a configuration file for Jest
+### 2. Crear un archivo de configuración para Jest
 
-Because Gatsby handles its own Babel configuration, you will need to manually
-tell Jest to use `babel-jest`. The easiest way to do this is to add a `jest.config.js`. You can set up some useful defaults at the same time:
+Debido a que Gatsby maneja su propia configuración de Babel, tú deberás decirle
+manualmente a Jest que use `babel-jest`. La forma más fácil de hacer esto es añadiendo `jest.config.js`. Tú puedes configurar algunos valores predeterminados útiles al mismo tiempo:
 
 ```js:title=jest.config.js
 module.exports = {
@@ -50,12 +49,12 @@ module.exports = {
 }
 ```
 
-Let's go over the content of this configuration file:
+Repasemos el contenido de este archivo de configuración:
 
-- The `transform` section tells Jest that all `js` or `jsx` files need to be
-  transformed using a `jest-preprocess.js` file in the project root. Go ahead and
-  create this file now. This is where you set up your Babel config. You can start
-  with the following minimal config:
+- La sección `transform` le indica a Jest que todos los archivos `js` o `jsx` deben ser
+  transformados usando un archivo `jest-preprocess.js` en la raíz del proyecto. Sigue adelante y
+ crea este archivo ahora. Aquí es donde configuras tú configuración de Babel. Tú puedes empezar
+ con la siguiente configuración mínima:
 
 ```js:title=jest-preprocess.js
 const babelOptions = {
@@ -65,28 +64,28 @@ const babelOptions = {
 module.exports = require("babel-jest").createTransformer(babelOptions)
 ```
 
-- The next option is `moduleNameMapper`. This
-  section works a bit like webpack rules, and tells Jest how to handle imports.
-  You are mainly concerned here with mocking static file imports, which Jest can't
-  handle. A mock is a dummy module that is used instead of the real module inside
-  tests. It is good when you have something that you can't or don't want to test.
-  You can mock anything, and here you are mocking assets rather than code. For
-  stylesheets you need to use the package `identity-obj-proxy`. For all other assets
-  you need to use a manual mock called `file-mock.js`. You need to create this yourself.
-  The convention is to create a directory called `__mocks__` in the root directory
-  for this. Note the pair of double underscores in the name.
+- La siguiente opción es `moduleNameMapper`. Esta
+  sección funciona un poco como las reglas de webpack,  y le dice a Jest cómo manejar las importaciones.
+  Aquí te preocupa principalmente simular las importaciones de archivos estáticos, porque Jest no las puede
+  manejar. Un simulacro es un módulo ficticio que se utiliza en lugar del módulo real dentro 
+  las pruebas. Es bueno cuando tienes algo que no puedes o no quieres probar.
+  Puedes simular cualquier cosa, y aquí estás simulando los activos en lugar del del código. Para
+  hojas de estilo necesita usar el paquete `identity-obj-proxy`. Para todos los otros activos
+  necesitas usar un simulacro manual llamado `file-mock.js`. Necesitas crear esto tú mismo.
+  La convención es crear un directorio llamado `__mocks__` en el directorio raíz
+  para esto. Ten en cuenta el par de guiones bajos dobles en el nombre.
 
 ```js:title=__mocks__/file-mock.js
 module.exports = "test-file-stub"
 ```
 
-- The next config setting is `testPathIgnorePatterns`. You are telling Jest to ignore
-  any tests in the `node_modules` or `.cache` directories.
+- La siguiente configuración es `testPathIgnorePatterns`. Le estás diciendo a Jest que ignore
+  cualquier prueba en los directorios `node_modules` o `.cache`.
 
-- The next option is very important, and is different from what you'll find in other
-  Jest guides. The reason that you need `transformIgnorePatterns` is because Gatsby
-  includes un-transpiled ES6 code. By default Jest doesn't try to transform code
-  inside `node_modules`, so you will get an error like this:
+- La siguiente opción es muy importante y es diferente de lo que encontrarás en otras
+  guías de Jest. La razón por la que necesitas `transformIgnorePatterns` es porque Gatsby
+  incluye código ES6 no transpilado. Con la configuracion _default_ de Jest, no transforma el código
+  dentro de `node_modules`, entonces vas a obtener un error come este:
 
 ```
 /my-app/node_modules/gatsby/cache-dir/gatsby-browser-entry.js:1
@@ -95,21 +94,21 @@ module.exports = "test-file-stub"
 SyntaxError: Unexpected token import
 ```
 
-This is because `gatsby-browser-entry.js` isn't being transpiled before running
-in Jest. You can fix this by changing the default `transformIgnorePatterns` to
-exclude the `gatsby` module.
+Esto se debe a que `gatsby-browser-entry.js` no se transpila antes de ejecutarse
+en Jest. Puedes arreglar esto cambiando el valor predeterminado `transformIgnorePatterns` a
+excluir el módulo `gatsby`.
 
-- The `globals` section sets `__PATH_PREFIX__`, which is usually set by Gatsby,
-  and which some components need.
+- La sección `globals` establece `__PATH_PREFIX__`, que generalmente lo establece Gatsby,
+  y que algunos componentes necesitan.
 
-- You need to set `testURL` to a valid URL, because some DOM APIs such as
-  `localStorage` are unhappy with the default (`about:blank`).
+- Debe establecer `testURL` con una URL válida,  porque algunos APIs de DOM como
+  `localStorage` no le son suficiente los valores prederminados (`about:blank`).
 
-> Note: if you're using Jest 23.5.0 or later, `testURL` will default to `http://localhost` so you can skip this setting.
+> Nota: si está utilizando Jest 23.5.0 o posterior, `testURL` usará `http://localhost` entonces puedes omitir esta configuración.
 
-- There's one more global that you need to set, but as it's a function you can't
-  set it here in the JSON. The `setupFiles` array lets you list files that will be
-  included before all tests are run, so it's perfect for this.
+- Hay un global más que debes configurar, pero como es una función no puedes
+  configúrelo aquí en el JSON. El `setupFiles` _array_ te permite enumerar los archivos que serán
+  incluido antes de ejecutar todas las pruebas, por lo que es perfecto para esto.
 
 ```js:title=loadershim.js
 global.___loader = {
@@ -117,13 +116,13 @@ global.___loader = {
 }
 ```
 
-### 3. Useful mocks to complete your testing environment
+### 3. Simulacros útiles para completar su entorno de prueba
 
-#### Mocking `gatsby`
+#### Simulando `gatsby`
 
-Finally it's a good idea to mock the `gatsby` module itself. This may not be
-needed at first, but will make things a lot easier if you want to test
-components that use `Link` or GraphQL.
+Finalmente, es una buena idea simular el module `gatsby`. Esto puede no ser
+necesario al principio, pero hará las cosas mucho más fáciles si quieres probar
+componentes que usan `Link` o GraphQL.
 
 ```js:title=__mocks__/gatsby.js
 const React = require("react")
@@ -155,17 +154,17 @@ module.exports = {
 }
 ```
 
-This mocks the `graphql()` function, `Link` component, and `StaticQuery` component.
+Esto simula la función `graphql()`, el componente `Link`, y el componente `StaticQuery`.
 
-## Writing tests
+## Pruebas de escritura
 
-A full guide to unit testing is beyond the scope of this guide, but you can
-start with a simple snapshot test to check that everything is working.
+Una guía completa de pruebas unitarias está más allá del ámbito de esta guía, pero tú puedes 
+empezar con una simple prueba instantánea para verificar que todo esté funcionando.
 
-First, create the test file. You can either put these in a `__tests__`
-directory, or put them elsewhere (usually next to the component itself), with
-the extension `.spec.js` or `.test.js`. The decision comes down to your own
-preference. In this guide, we will use the `__tests__` folder convention. Let's create a test for our header component, so create a `header.js` file in `src/components/__tests__/`:
+Primero, crea un archivo de prueba. Los puedes poner en el directorio 
+`__tests__`, en otro lugar (generalmente al lado del componente en sí), con
+la extensión `.spec.js` o `.test.js`. La decisión está basada en tú
+preferencia. En esta guía, utilizaremos la convención de carpetas `__tests__`. Creemos una prueba para nuestro componente de encabezado, así que cree un archivo `header.js` en `src/components/__tests__/`:
 
 ```js:title=src/components/__tests__/header.js
 import React from "react"
@@ -183,17 +182,17 @@ describe("Header", () => {
 })
 ```
 
-This is a very simple snapshot test, which uses `react-test-renderer` to render
-the component, and then generates a snapshot of it on first run. It then
-compares future snapshots against this, which means you can quickly check for
-regressions. Visit [the Jest docs](https://jestjs.io/docs/en/getting-started) to
-learn more about other tests that you can write.
+Esta es una prueba instantánea muy simple, que usa `react-test-renderer` para rederizar
+el componente y luego genera un _snapshot_ de él mismo en la primera ejecución. Luego
+compara los futuros _snapshots_ contra este, lo que significa que puede verificar rápidamente por
+regresiones. Visite [los documentos de Jest](https://jestjs.io/docs/en/getting-started) para
+aprender más sobre otras pruebas que tú puedes escribir.
 
-## Running tests
+## Ejecutando pruebas
 
-If you look inside `package.json` you will probably find that there is already a
-script for `test`, which just outputs an error message. Change this to use the
-`jest` executable that we now have available, like so:
+Si miras dentro de `package.json`, probablemente encontrarás que ya hay un
+_script_ para `test`, que solo muestra un mensaje de error. Cambie esto para usar el
+ejecutable `jest` que ahora tenemos disponible, así:
 
 ```json:title=package.json
   "scripts": {
@@ -201,30 +200,30 @@ script for `test`, which just outputs an error message. Change this to use the
   }
 ```
 
-This means you can now run tests by typing `npm test`. If you want you could
-also run with a flag that triggers watch mode to watch files and run tests when they are changed: `npm test -- --watch`.
+Esto significa que ahora puede ejecutar pruebas escribiendo `npm test`. Si quieres, puedes
+también ejecutar con un indicador que activa el modo de observación para ver archivos y ejecutar pruebas cuando se cambian: `npm test -- --watch`.
 
-Run the tests again now and it should all work! You may get a message about
-the snapshot being written. This is created in a `__snapshots__` directory next
-to your tests. If you take a look at it, you will see that it is a JSON
-representation of the `<Header />` component. You should check your snapshot files
-into a source control system (for example, a GitHub repo) so that any changes are tracked in history.
-This is particularly important to remember if you are using a continuous
-integration system such as Travis or CircleCI to run tests, as these will fail if the snapshot is not checked into source control.
+¡Ejecute las pruebas nuevamente y todo debería funcionar! Tú puedes recibir un mensaje sobre
+el _snapshot_ que se está escribiendo. Esto se crea en un directorio `__snapshots__` seguido
+a tus pruebas. Si lo miras, verás que es una representación JSON
+del componente `<Header />`. Debe verificar sus archivos de _snapshots_
+en un sistema de control de fuente (por ejemplo, un repositorio de GitHub) para que cualquier cambio se rastree en el historial.
+Esto es particularmente importante para recordar si está utilizando un continuo
+sistema de integración como Travis o CircleCI para ejecutar pruebas, ya que fallarán si el _snapshot_ no se registra en el control de origen.
 
-If you make changes that mean you need to update the snapshot, you can do this
-by running `npm test -- -u`.
+Si realiza cambios que necesiten actualizar el _snapshot_, puede hacerlo
+ejecutando `npm test - -u`.
 
-## Using TypeScript
+## Usando TypeScript
 
-If you are using TypeScript, you need to make a couple of small changes to your
-config. First install `ts-jest`:
+Si está utilizando TypeScript, necesita hacer un par de pequeños cambios en su
+configuración.  Primero instale `ts-jest`:
 
 ```shell
 npm install --save-dev ts-jest
 ```
 
-Then update the configuration in `jest.config.js`, like so:
+Luego actualice la configuración en `jest.config.js`, así:
 
 ```js:title=jest.config.js
 module.exports = {
@@ -249,30 +248,30 @@ module.exports = {
 }
 ```
 
-You may notice that two other options, `testRegex` and `moduleFileExtensions`,
-have been added. Option `testRegex` is the pattern telling Jest which files
-contain tests. The pattern above matches any `.js`, `.jsx`, `.ts` or `.tsx`
-file inside a `__tests__` directory, or any file elsewhere with the extension
-`.test.js`, `.test.jsx`, `.test.ts`, `.test.tsx`, or `.spec.js`, `.spec.jsx`,
+Tu puedes notar que hay otras dos opciones, , `testRegex` y `moduleFileExtensions`,
+han sido agregados. La opción `testRegex` es el patrón que le dice a Jest qué archivos
+contienen pruebas. El patrón anterior coincide con cualquier archivo`.js`, `.jsx`, `.ts` o `.tsx`
+dentro de un directorio`__tests__`, o cualquier archivo en otro lugar con la extensión
+`.test.js`, `.test.jsx`, `.test.ts`, `.test.tsx`, o `.spec.js`, `.spec.jsx`,
 `.spec.ts`, `.spec.tsx`.
+s ne
+La opción `moduleFileExtensions` es necesaria cuando se trabaja con TypeScript.
+Lo único que hace es decirle a Jest qué extensiones de archivo puede
+importar en sus archivos sin precisar la extensión del archivo. Con la configuración inicial,
+funciona con las extensiones de archivo `js`,` json`, `jsx`,` node`, por lo que solo necesitamos
+agregar `ts` y` tsx`. Puede leer más al respecto en [la documentación de Jest](https://jestjs.io/docs/en/configuration.html#modulefileextensions-array-string).
 
-Option `moduleFileExtensions` is needed when working with TypeScript.
-The only thing it is doing is telling Jest which file extensions you can
-import in your files without making precise the file extension. By default,
-it works with `js`, `json`, `jsx`, `node` file extensions so we just need
-to add `ts` and `tsx`. You can read more about it in [Jest's documentation](https://jestjs.io/docs/en/configuration.html#modulefileextensions-array-string).
+## Otros recursos
 
-## Other resources
+Si necesita hacer cambios en su configuración de Babel, tú puedes editar la configuración en
+`jest-preprocess.js`. Es posible que debes habilitar algunos de los complementos utilizados por Gatsby,
+aunque recuerde que puede que necesite instalar las versiones de Babel 7. Vea
+[la guía de configuración de Gatsby Babel](/docs/babel) para algunos ejemplos.
 
-If you need to make changes to your Babel config, you can edit the config in
-`jest-preprocess.js`. You may need to enable some of the plugins used by Gatsby,
-though remember you may need to install the Babel 7 versions. See
-[the Gatsby Babel config guide](/docs/babel) for some examples.
+Para obtener más información sobre las pruebas de Jest, visita
+[el sitio de Jest](https://jestjs.io/docs/en/getting-started).
 
-For more information on Jest testing, visit
-[the Jest site](https://jestjs.io/docs/en/getting-started).
-
-For an example encapsulating all of these techniques--and a full unit test suite with [@testing-library/react][react-testing-library], check out the [using-jest][using-jest] example.
+Para ver un ejemplo que encapsula todas estas técnicas--y un conjunto de pruebas de unidad completa con [@testing-library/react][react-testing-library], consulte el ejemplo [using-jest][using-jest].
 
 [using-jest]: https://github.com/gatsbyjs/gatsby/tree/master/examples/using-jest
 [react-testing-library]: https://github.com/testing-library/react-testing-library
