@@ -2,11 +2,11 @@
 title: Creando un _Starter_
 ---
 
-[_Starters_](/docs/starters/) son proyectos tipo plantilla que los desarrolladores Gatsby pueden usar para configurar un nuevo sitio rápidamente. Antes de crear un _starter_, puede ser útil examinar detenidamente la [Librería de _Starters_ de Gatsby](/starters/) para ver lo que ya existe y determinar cómo tu _starter_ puede aportar valor.
+[_Los starters_](/docs/starters/) son proyectos tipo plantilla que los desarrolladores Gatsby pueden usar para configurar un nuevo sitio rápidamente. Antes de crear un _starter_, puede ser útil examinar detenidamente la [Librería de _Starters_ de Gatsby](/starters/) para ver lo que ya existe y determinar cómo tu _starter_ puede aportar valor.
 
 ## Requerimientos básicos
 
-Para que un _starter_ funcione adecuadamente, necesita incluir algunos ficheros (mira el [_starter_ Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world/) para ver un ejemplo tipo esqueleto):
+Para que un _starter_ funcione adecuadamente, necesita incluir algunos ficheros (mira el [_starter_ Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world/) para ver un ejemplo del tipo esqueleto):
 
 - `README.md`: instrucciones de cómo instalar y configurar tu _starter_, una lista de sus características o estructura, y cualquier consejo útil.
 - `package.json`: el "centro de control" para las dependencias y _scripts_ de Gatsby. Encuentra un ejemplo en el archivo [package.json del _starter_ Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/package.json).
@@ -37,7 +37,7 @@ Aunque los _starters_ oficiales están en el repositorio de Gatsby, miembros de 
 
 ## Configurable
 
-Los _starters_ deben utilizar metadatos en `gatsby-config.js` cuando sea posible, ya que este suele ser el primer sitio donde los usuarios buscarán información para configurar el sitio. Algunos ejemplos de cosas que podrías hacer confirables en el `gatsby-config` son:
+Los _starters_ deben utilizar metadatos en `gatsby-config.js` cuando sea posible, ya que este suele ser el primer sitio donde los usuarios buscarán información para configurar el sitio. Algunos ejemplos de cosas que podrías hacer configurables en el `gatsby-config` son:
 
 - El título del sitio
 - El nombre del autor, información de contacto, y biografía
