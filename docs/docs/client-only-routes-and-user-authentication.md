@@ -1,37 +1,37 @@
 ---
-title: "Client-Only Routes & User Authentication"
+title: "Rutas solo para el cliente & Autenticación de Usuario"
 ---
 
-Often you want to create a site with client-only portions that are gated by authentication.
+A menudo, deseas crear un sitio con partes solamente para el lado del cliente que están protegidas con autenticación.
 
-A classic example would be a site that has a landing page, various marketing pages, a login page, and then an app section for logged-in users. The logged-in section doesn't need to be server rendered as all data will be loaded live from your API after the user logs in. So it makes sense to make this portion of your site client-only.
+Un ejemplo clásico sería un sitio que tiene una página de destino, varias páginas de marketing, una página de inicio de sesión y luego una sección de aplicación para usuarios que han iniciado sesión. La sección de inicio de sesión no necesita ser procesada por el servidor, ya que todos los datos se cargarán en vivo desde tu API después de que el usuario inicie sesión. Por lo tanto, tiene sentido que esta parte de tu sitio sea solo para el lado del cliente.
 
-Gatsby uses [@reach/router](https://reach.tech/router/) under the hood. You should use @reach/router to create client-only routes.
+Gatsby usa [@reach/router](https://reach.tech/router/) debajo del capó. Deberías usar @reach/router para crear rutas solo para el lado del cliente.
 
-These routes will exist on the client only and will not correspond to index.html files in an app's built assets. If you'd like site users to be able to visit client routes directly, you'll need to set up your server to handle those routes appropriately.
+Estas rutas existirán sólo en el lado del cliente y no se corresponderán con archivos index.html en activos construidos por una aplicación. Si deseas que los usuarios del sitio puedan visitar las rutas de los clientes directamente, deberás configurar tu servidor para manejar esas rutas de manera adecuada.
 
-To create client-only routes, add the following code to your site’s `gatsby-node.js` file:
+Para crear rutas solo para el lado del cliente, agregua el siguiente código al archivo `gatsby-node.js` de tu sitio:
 
 ```javascript:title=gatsby-node.js
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+// Implementa la API “onCreatePage” de Gatsby. Esto se
+// llama después de que cada página se carga.
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
-  // page.matchPath is a special key that's used for matching pages
-  // only on the client.
+  // page.matchPath es una calve especial que se utiliza para hacer coincidir páginas
+  // solo en el cliente.
   if (page.path.match(/^\/app/)) {
     page.matchPath = "/app/*"
 
-    // Update the page.
+    // Actualiza la página.
     createPage(page)
   }
 }
 ```
 
-> 💡 Note: There's also a plugin to simplify the creation of client-only routes in your site:
+> 💡 Nota: También hay un plugin para simplificar la creación de rutas solo para el lado del cliente en tu sitio
 > [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths/).
 
-> Tip: For applications with complex routing, you may want to override Gatsby's default scroll behavior with the [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll) Browser API.
+> Tip: Para aplicaciones con enrutamiento complejo, es posible que desees anular el comportamiento de desplazamiento predeterminado de Gatsby con la API del navegador [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll).
 
-Check out the ["simple auth" example site](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) for a demo implementing user authentication and restricted client-only routes.
+Consulta el [sitio de ejemplo de "autenticación simple"](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) para ver una demostración que implementa la autenticación de usuarios y rutas restringidas solo para el lado del cliente.
