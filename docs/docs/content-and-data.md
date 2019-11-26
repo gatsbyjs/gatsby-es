@@ -10,6 +10,6 @@ Gatsby usa plugins de origen para obtener datos. [Ya existen numerosos plugins d
 
 Bonus: lee sobre [Temas de Gatsby y documentos distribuidos](/blog/2019-07-03-using-themes-for-distributed-docs/) trabajando bien juntos en el blog de Gatsby.
 
-_(Si aún no hay un plugin para tu opción favorita, ¡considera [contribuir](/docs/creating-plugins) con uno!)_
+_(Si aún no hay un plugin para tu opción favorita, ¡considera [contribuir](/docs/creating-plugins) uno!)_
 
 <GuideList slug={props.slug} />
