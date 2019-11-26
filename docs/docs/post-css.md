@@ -40,7 +40,7 @@ import "./styles.css"
 
 ### Con Módulos CSS
 
-Usar módulos CSS no requiere configuración adicional. Simplemente,  antepón `.module` a la extensión. Por ejemplo: `App.css -> App.module.css`. Cualquier archivo con la extensión del módulo utilizará módulos CSS.
+Usar módulos CSS no requiere configuración adicional. Simplemente, antepón `.module` a la extensión. Por ejemplo: `App.css -> App.module.css`. Cualquier archivo con la extensión del módulo utilizará módulos CSS.
 
 ### Complementos PostCSS
 
