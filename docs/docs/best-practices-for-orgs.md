@@ -1,15 +1,15 @@
 ---
-title: Best Practices for Organizations
+title: Mejores prácticas para Organizaciones
 issue: https://github.com/gatsbyjs/gatsby/issues/14042
 ---
 
-When you have multiple teams building Gatsby sites, there are some best practices to ensure you're working well at scale. These docs explain those practices.
+Cuando tienes varios equipos construyendo sitios web con Gatsby, existen algunas prácticas recomendadas para garantizar que trabajen bien a escala. Estos documentos explican esas prácticas.
 
 <GuideList slug={props.slug} />
 
 --
 
-This is a stub. Help our community expand it.
+Esto es un stub. Ayuda a nuestra comunidad a expandirlo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, usa la [Guía de Estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu
+pull request sea aceptada.
