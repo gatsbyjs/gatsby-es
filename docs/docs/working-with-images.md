@@ -13,7 +13,7 @@ Consultar imágenes con GraphQL te permite acceder a los datos de la imagen tant
 Necesitarás unos cuantos plugins para esto:
 
 - [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin que te permite [consultar archivos con GraphQL](/docs/querying-with-graphql/#images)
-- [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta las conexiones entre Sharp y Plugins Gatsby 
+- [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) se encarga de las conexiones entre Sharp y los Plugins de Gatsby 
 - [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) te permite crear multiples imágenes de los tamaños adecuados y resoluciones con una consulta
 
 Si la imagen final es de un tamaño fijo, la optimización depende de tener multiples resoluciones de la imagen.  Si es responsive es decir se estira para llenar un contenedor o página, la optimización se basa en tener diferentes tamaños de la misma imagen. Mira la [documentación de Gatsby Image para más información](/packages/gatsby-image/#two-types-of-responsive-images).
