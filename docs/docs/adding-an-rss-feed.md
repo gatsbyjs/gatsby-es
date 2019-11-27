@@ -1,24 +1,24 @@
 ---
-title: Adding an RSS Feed
+title: Agregando un Feed RSS
 ---
 
-## What is an RSS feed?
+## ¿Qué es un feed RSS?
 
-An [RSS Feed](https://en.wikipedia.org/wiki/RSS) is a standard XML file listing a website’s content in a subscribable format, allowing readers to consume your content in news aggregators, also called feed reader apps.
+Un [feed RSS](https://en.wikipedia.org/wiki/RSS) es un archivo estándar XML que enumera el contenido del sitio en un formato suscribible, que permite a los lectores consumir su contenido en agregadores de noticias, también conocidos como aplicaciones de lector de feeds.
 
-Think of it as a syndicated distribution channel for your site's content.
+Piensa en ello como un canal de distribución asociado para el contenido de tu sitio.
 
-## Install
+## Instalación
 
-To generate an RSS feed, you can use the [`gatsby-plugin-feed`](/packages/gatsby-plugin-feed/) package. To install this package, run the following command:
+Para generar un feed RSS, puedes usar el paquete [`gatsby-plugin-feed`](/packages/gatsby-plugin-feed/). Para instalar este paquete, ejecuta el siguiente comando:
 
 ```shell
 npm install --save gatsby-plugin-feed
 ```
 
-## How to use [gatsby-plugin-feed](/packages/gatsby-plugin-feed/)
+## Cómo usar [gatsby-plugin-feed](/packages/gatsby-plugin-feed/)
 
-Once installation is complete, you can now add this plugin to your site's config file, like so:
+Cuando la instalación esté completa, podrás agregar este paquete al archivo de configuración de tu sitio, de la siguiente manera:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
 }
 ```
 
-Here's an example of how you could implement this plugin with Markdown, but for other sources, you will need a way to uniquely identify content--typically a URL or slug.
+Aquí hay un ejemplo de cómo implementar este plugin con Markdown, pero para otras fuentes, necesitarás una forma de identificar de forma exclusiva el contenido, generalmente con la URL o con un slug.
 
 ```js:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -48,20 +48,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 ```
 
-Next run a build (`npm run build`) since the RSS feed generation will only happen for production builds. By default, the generated RSS feed path is `/rss.xml`, but the plugin exposes options to configure this default functionality.
+Posteriormente, ejecuta una compilación (`npm run build`) ya que la generación de feeds RSS solamente se realizará para las compilaciones de producción. Por defecto, la ruta donde se generan los feeds RSS es `/rss.xml`, pero el plugin expone opciones para configurar esta funcionalidad predeterminada.
 
-For basic setups with Markdown content like the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), that's all you need! However, you can craft a custom RSS feed schema using custom code in your `gatsby-node.js` and `gatsby-config.js` files.
+Para configuraciones básicas con contenido Markdown como [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), ¡eso es todo lo que necesitas! Sin embargo, puedes crear un esquema de feeds RSS personalizado, modificando los archivos `gatsby-node.js` y `gatsby-config.js`.
 
-## Customizing the RSS feed plugin
+## Personalización del plugin de feed RSS
 
-Your content might not fit neatly into the blog-starter scenario, for various reasons like:
+Tu contenido podría no encajar perfectamente en el escenario de inicio de blog, por varias razones como:
 
-- Your content isn't in Markdown so the plugin doesn't know about it
-- Your Markdown files have dates in the filenames, for which the slug URLs cause 404s
+- Tu contenido no está en Markdown, por lo que el plugin no lo identifica
+- Tus archivos Markdown tienen fechas en los nombres de archivo, por lo que las URL de slug provocan un error 404
 
-The good news is you can accommodate these scenarios and more in `gatsby-config.js` and `gatsby-node.js`.
+La buena noticia es que puedes acomodar estos escenarios y más en `gatsby-config.js` y `gatsby-node.js`.
 
-To customize the default feed schema (a.k.a. structure) output by the plugin to work with your website's content, you can start with the following code:
+Para configurar el esquema por defecto (también conocido como estructura) que genera el plugin para que funcione con el contenido de tu sitio web, puedes comenzar con el siguiente código:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -126,19 +126,19 @@ module.exports = {
 }
 ```
 
-This snippet contains a custom `gatsby-plugin-feed` setup in `gatsby-config.js` to query metadata for your site, like its `title` and `siteUrl`. It also includes a `feeds` array with at least one object containing a GraphQL query and `serialize` method, which allows you to output a custom RSS feed structure. In this example, the RSS content comes from Markdown files sourced from your site, and queried with the key `allMarkdownRemark` and its associated filters and fields.
+Este fragmento de código contiene una configuración personalizada de `gatsby-plugin-feed` en `gatsby-config.js` para consultar los metadatos de tu sitio, como tu `title` y `siteUrl`. También incluye una matriz de `feeds` con al menos un objeto que contiene una consulta GraphQL y un método `serialize`, que permite generar una estructura de feeds RSS personalizada. En este ejemplo, el contenido RSS proviene de archivos Markdown provenientes de tu sitio, y se consultan con la llave `allMarkdownRemark` y sus filtros y campos asociados.
 
-The `output` field in your feed object allows you to customize the filename for your RSS feed, and `title` for the name of your site's RSS feed.
+El campo `output` de su objeto te permite personalizar el nombre del archivo para tu feed RSS y el `title` para el nombre del feed RSS de tu sitio.
 
-By default, feed is referenced in every page. You can customize this behavior by providing an extra field `match` of type `string`. This string will be used to build a `RegExp`, and this regular expression will be used to test the `pathname` of current page. Only pages that satisfied the regular expression will have feed reference included.
+Por defecto, se hace referencia al feed en todas las páginas. Puedes personalizar este comportamiento proporcionando un campo adicional `match` de tipo `string`. Esta cadena se usará para construir una `RegExp`, y esta expresión regular se usará para probar el `pathname` de la página actual. Solo las páginas que satisfacen la explesión regular tendrán referencia del feed incluido.
 
-To see your feed in action, run `gatsby build && gatsby serve` and you can then inspect the content and URLs in your RSS file at `http://localhost:9000/rss.xml`.
+Para ver tu feed en acción, ejecuta `gatsby build && gatsby serve` y luego inspecciona el contenido y las URL's de tu archivo RSS en `http://localhost:9000/rss.xml`.
 
-> NOTE: if your blog has custom permalinks, such as links with or without dates in them, you may need to [customize `gatsby-node.js`](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/gatsby-node.js#L57) to output the correct URLs in your RSS feed. [Get in touch with us](/contributing/how-to-contribute/) if you need any help!
+> NOTA: si tu blog tiene enlaces permanentes personalizados, como enlaces con o sin fechas en ellos, es posible que debas [modificar `gatsby-node.js`](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/gatsby-node.js#L57) para generar URL's correctas en tus feeds RSS. ¡[Ponte en contacto con nosotros](/contributing/how-to-contribute/) si necesitas ayuda!
 
-## Syntax for iTunes RSS blocks
+## Sintaxis para bloques RSS de iTunes
 
-If creating a RSS feed for a podcast you probably will want to include iTunes RSS blocks. They take the format of `itunes:author` which GraphQL does not read. Here's an example of how to implement iTunes RSS blocks using this plugin:
+Si creas una fuente RSS para un podcast, es probable que desees incluir bloques RSS de iTunes. Toman el formato de `itunes: author` que GraphQL no lee. Aquí hay un ejemplo de cómo implementar bloques RSS de iTunes usando este plugin:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -180,10 +180,10 @@ module.exports = {
 }
 ```
 
-## Happy blogging!
+## ¡Feliz blogueo!
 
-With the [Gatsby feed plugin](/packages/gatsby-plugin-feed/), you can share your writing easily with people subscribed through RSS readers like Feedly or RSS Feed Reader. Now that your feed is set up, you won't really have to think about it; publish a new post, and your RSS feed will automatically update with your Gatsby build. Voilà!
+Con el [plugin Gatsby feed](/packages/gatsby-plugin-feed/), podrás compartir lo que escribes fácilmente con las personas suscritas a través de lectores RSS como Feedly o RSS Feed Reader. Ahora que tu feed está configurado, realmente no tendrás que pensarlo; realiza una nueva publicación, y tu feed RSS se actualizará automáticamente con tu compilación de Gatsby. Voilà!
 
-## More resources
+## Más recursos
 
 [Jason Lengstorf and Amberley Romo livestream building an RSS feed powered podcast site](https://www.youtube.com/watch?v=0hGlvyuQiKQ).

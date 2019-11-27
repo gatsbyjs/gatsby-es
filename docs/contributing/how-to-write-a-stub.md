@@ -1,10 +1,10 @@
 ---
-title: How to Write a Stub
+title: Cómo escribir un stub
 ---
 
-Sometimes you might have an idea for a Gatsby.js documentation page or agree upon a suggestion in a GitHub issue, but don't have the time or resources to write that page yourself. Rather than let the idea drift off into space, consider **creating a documentation stub** to act as a content placeholder. That way, other members of the community (and/or you, in the future) can come back and fill in the details.
+Tal vez tienes una idea para una página de documentación de Gatsby.js o estás de acuerdo con una sugerencia en un Issue de GitHub, pero no tienes el tiempo o los recursos para escribir esa página. En vez de dejar que la idea se te desvanezca, considera **crear un stub de documentación** como una reserva del contenido venidero. Así otros miembros de la comunidad (y/o tú en el futuro) pueden regresar y rellenar los detalles.
 
-A **stub** is a temporary placeholder for a piece of Gatsby.js documentation tied to a GitHub issue, using this format (feel free to copy and paste, changing the title and issue number):
+Un **stub** es una reserva temporal para una página de documentación de Gatsby.js enlazado con un Issue de GitHub, que utiliza esta plantilla (puedes copiarla y pegarla, cambiando el título y el número del Issue):
 
 ```markdown:title=how-to-tame-dragons.md
 ---
@@ -18,16 +18,16 @@ Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure
 pull request gets accepted.
 ```
 
-If you have any questions about titles or other details related to creating stubs, feel free to ask us on a relevant GitHub issue.
+Si tienes cualquier pregunta sobre títulos u otros detalles en relación a crear stubs, por favor pregúntanos en el Issue de Github pertinente.
 
-## Community Pair Programming Sessions
+## Sesiones de programación en pareja de la comunidad
 
-If you create a stub or see an existing one on the Gatsby.js site and feel interested in filling out the content, check out the Gatsby.js
-[Pair Programming program](/contributing/pair-programming/). We would love to work with you in your open source contributing journey!
+Si llegas a crear un stub o ves uno en el sitio de Gatsby.js y te interesa rellenar el contenido, fíjate en el
+[programa de Programación en pareja](/contributing/pair-programming/) de Gatsby.js. Nos encantaría trabajar contigo en tu aventura de contribuir al código abierto!
 
-## Converting a Stub to a Doc
+## Convertir un stub en un documento
 
-To change a stub into a living-breathing document, remove the `issue` entry from a stub's frontmatter (a fancy name for Markdown metadata) and replace the boilerplate content with
-your wonderful prose and code. Save the file, commit to GitHub, open a PR, get feedback. Learn more in our page on [docs contributions](/contributing/docs-contributions/).
+Para transformar el stub en un documento viviente, quita la etiqueta `issue` del frontmatter (los metadatos de Markdown) del stub, y reemplaza el texto modelo con tu
+código y prosa bella. Guarda el archivo, sube un commit a GitHub, abre un pull request, y busca feedback. Aprende más en nuestra página sobre [contribuciones a los docs](/contributing/docs-contributions/).
 
-If you wish to see any of the available stubs, head over to the current [Stub List](/contributing/stub-list/).
+Si quieres ver los stubs disponibles, visita la [Lista de stubs](/contributing/stub-list/).

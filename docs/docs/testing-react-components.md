@@ -1,32 +1,32 @@
 ---
-title: "Testing React components"
+title: "Testeando componentes React"
 ---
 
-_The recommended testing framework is [Jest](https://jestjs.io/). This guide assumes that you followed the [Unit testing](/docs/unit-testing) guide to setup Jest._
+_El framework de testeo recomendado es [Jest](https://jestjs.io/). Esta guía asume que seguiste la guía de [testeo unitario](/docs/unit-testing) para configurar Jest._
 
-The [@testing-library/react](https://github.com/testing-library/react-testing-library) by Kent C. Dodds has risen in popularity since its release and is a great replacement for [enzyme](https://github.com/airbnb/enzyme). You can write unit and integration tests and it encourages you to query the DOM in the same way the user would. Hence the guiding principle:
+El [@testing-library/react](https://github.com/testing-library/react-testing-library) de Kent C. Dodds ha aumentado en popularidad desde que fue lanzado y es un gran reemplazo para [enzyme](https://github.com/airbnb/enzyme). Puedes escribir tests unitarios y de integración y te incita a consultar el DOM de la misma forma que haría el usuario. De ahí el principio rector:
 
-> The more your tests resemble the way your software is used, the more confidence they can give you.
+> _The more your tests resemble the way your software is used, the more confidence they can give you._ (Cuanto más se parezcan tus pruebas a la forma en que se utiliza tu software, más confianza te pueden brindar.)
 
-It provides light utility functions on top of `react-dom` and `react-dom/test-utils` and gives you the confidence that refactors of your component in regards to the implementation (but not functionality) don't break your tests.
+Proporciona funciones ligeras de utilidad por encima de `react-dom` y `react-dom/test-utils` y te dá la confianza de que no rompe tus tests al refactorizar el componente en la implementación (pero no en la funcinalidad).  
 
-## Installation
+## Instalación
 
-Install the library as one of your project's `devDependencies`. Optionally you may install `jest-dom` to use its [custom jest matchers](https://github.com/testing-library/jest-dom#custom-matchers).
+Instala la librería como uno de tus proyectos `devDependencies`. Opcionalmente puedes instalar `jest-dom` para usar sus [custom jest matchers](https://github.com/testing-library/jest-dom#custom-matchers).
 
 ```shell
 npm install --save-dev @testing-library/react @testing-library/jest-dom
 ```
 
-Create the file `setup-test-env.js` at the root of your project. Insert this code into it:
+Crea el archivo `setup-test-env.js` en la raíz de tu proyecto. Introduce este código en el:
 
 ```js:title=setup-test-env.js
 import "@testing-library/jest-dom/extend-expect"
 ```
 
-This file gets run automatically by Jest before every test and therefore you don't need to add the imports to every single test file.
+Este archivo es automáticamente ejecutado por Jest antes de cada test y por lo tanto no es necesario añadir los imports para cada archivo de testeo.
 
-Lastly you need to tell Jest where to find this file. Open your `jest.config.js` and add this entry to the bottom after 'setupFiles':
+Por ultimo necesitas decirle a Jest donde encontrar este archivo. Abre tu `jest.config.js` y añade esta entrada en el pie,después de 'setupFiles':
 
 ```js:title=jest.config.js
 module.exports = {
@@ -34,21 +34,21 @@ module.exports = {
 }
 ```
 
-## Usage
+## Uso
 
-Let's create a little example test using the newly added library. If you haven't done already read the [unit testing guide](/docs/unit-testing) — essentially you'll use `@testing-library/react` instead of `react-test-renderer` now. There are a lot of options when it comes to selectors, this example chooses `getByTestId` here. It also utilizes `toHaveTextContent` from `jest-dom`:
+Vamos a crear un pequeño ejemplo de test usando la nueva librería añadida. Si aún no lo has hecho lee la [guía de testeo unitario](/docs/unit-testing) — esencialmente ahora usarás `@testing-library/react` en vez de `react-test-renderer`. Hay muchas opciones cuando se trata de selectores, aquí este ejemplo escoge `getByTestId`. También utiliza `toHaveTextContent` desde `jest-dom`
 
 ```js
 import React from "react"
 import { render } from "@testing-library/react"
 
-// You have to write data-testid
-const Title = () => <h1 data-testid="hero-title">Gatsby is awesome!</h1>
+// tienes que escribir data-testid
+const Title = () => <h1 data-testid="hero-title">¡Gatsby es increible!</h1>
 
 test("Displays the correct title", () => {
   const { getByTestId } = render(<Title />)
-  // Assertion
-  expect(getByTestId("hero-title")).toHaveTextContent("Gatsby is awesome!")
-  // --> Test will pass
+  // _Assertion_ (Afirmación)
+  expect(getByTestId("hero-title")).toHaveTextContent("¡Gatsby es increible!")
+  // --> El test será valido
 })
 ```

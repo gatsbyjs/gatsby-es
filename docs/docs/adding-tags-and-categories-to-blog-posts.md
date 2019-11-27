@@ -1,50 +1,50 @@
 ---
-title: Creating Tags Pages for Blog Posts
+title: Creación de Páginas de Etiquetas para Publicaciones de Blog
 ---
 
-Creating tag pages for your blog post is a way to let visitors browse related content.
+Crear páginas de etiquetas para tu publicación de blog es una forma de permitir a los visitantes navegar por contenido relacionado.
 
-To add tags to your blog posts, you will first want to have your site set up to turn your markdown pages into blog posts. To get your blog pages set up, see the [tutorial on Gatsby's data layer](/tutorial/part-four/) and [Adding Markdown Pages](/docs/adding-markdown-pages/).
+Para agregar etiquetas a las publicaciones de tu blog, primero deberás configurar tu sitio para convertir tus páginas _markdown_ en publicaciones de blog. Para configurar las páginas de tu blog, mira el [tutorial de la capa de datos de Gatsby](/tutorial/part-four/) y [Agregar Páginas en _Markdown_](/docs/adding-markdown-pages/).
 
-The process will essentially look like this:
+El proceso esencialmente se verá así:
 
-1.  Add tags to your `markdown` files
-2.  Write a query to get all tags for your posts
-3.  Make a tags page template (for `/tags/{tag}`)
-4.  Modify `gatsby-node.js` to render pages using that template
-5.  Make a tags index page (`/tags`) that renders a list of all tags
-6.  _(optional)_ Render tags inline with your blog posts
+1.  Agregar etiquetas a tus archivos `markdown`
+2.  Escribir una consulta para obtener todas las etiquetas para tus publicaciones
+3.  Hacer una página plantilla de etiquetas (para `/tags/{tag}`)
+4.  Modificar `gatsby-node.js` para renderizar páginas usando la plantilla
+5.  Hacer una página _index_ de etiquetas (`/tags`) que renderice una lista de todas las etiquetas
+6.  _(opcional)_ Renderizar etiquetas dentro de tus publicaciones de blog
 
-## Add tags to your `markdown` files
+## Agregar etiquetas a tus archivos `markdown`
 
-You add tags by defining them in the `frontmatter` of your Markdown file. The `frontmatter` is the area at the top surrounded by dashes that includes post data like the title and date.
+Agregas etiquetas definiéndolas en el `frontmatter` de tu archivo _Markdown_. El `frontmatter` es el área en la parte superior rodeada de guiones que incluye datos de publicaciones como el título y la fecha.
 
 ```md
 ---
-title: "A Trip To the Zoo"
+title: "Un viaje al zoológico"
 ---
 
-I went to the zoo today. It was terrible.
+Fui al zoológico hoy. Fue terrible.
 ```
 
-Fields can be strings, numbers, or arrays. Since a post can usually have many tags, it makes sense to define it as an array. Here we add our new tags field:
+Los campos pueden ser cadenas de texto, números, o arreglos. Como una publicación generalmente puede tener muchas etiquetas, tiene sentido definirla como un arreglo. Aquí agregamos nuestro nuevo campo de etiquetas:
 
 ```md
 ---
-title: "A Trip To the Zoo"
-tags: ["animals", "Chicago", "zoos"]
+title: "Un viaje al zoológico"
+tags: ["animales", "Chicago", "zoológicos"]
 ---
 
-I went to the zoo today. It was terrible.
+Fui al zoológico hoy. Fue terrible.
 ```
 
-If `gatsby develop` is running, restart it so Gatsby can pick up the new fields.
+Si `gatsby develop` está corriendo, reinícialo para que Gatsby pueda utilizar los nuevos campos.
 
-## Write a query to get all tags for your posts
+## Escribir una consulta para obtener todas las etiquetas para tus publicaciones
 
-Now, these fields are available in the data layer. To use field data, query it using `graphql`. All fields are available to query inside `frontmatter`
+Ahora, estos campos están disponibles en la capa de datos. Para usar datos de un campo, consúltalo usando `graphql`. Todos los campos están disponibles para consultar dentro de `frontmatter`
 
-Try running the following query in Graph<em>i</em>QL (`localhost:8000/___graphql`):
+Intenta correr la siguiente consulta en Graph<em>i</em>QL (`localhost:8000/___graphql`):
 
 ```graphql
 {
@@ -57,19 +57,19 @@ Try running the following query in Graph<em>i</em>QL (`localhost:8000/___graphql
 }
 ```
 
-The above query groups posts by `tags`, and returns each `tag` with the number of posts as `totalCount`. As an addition, we could extract some post data in each group if we need to. To keep this tutorial small, we're only using the tag name in our tag pages. Let's make the tag page template now:
+La consulta anterior agrupa las publicaciones por `tags`, y retorna cada `tag` con el número de publicaciones como `totalCount`. Además, podríamos extraer algunos datos de publicaciones en cada grupo si es necesario. Para mantener este tutorial pequeño, solo estamos usando el nombre de la etiqueta en nuestras páginas de etiquetas. Hagamos la página plantilla de etiquetas ahora:
 
-## Make a tags page template (for `/tags/{tag}`)
+## Hacer una página plantilla de etiquetas (para `/tags/{tag}`)
 
-If you followed the tutorial for [Adding Markdown Pages](/docs/adding-markdown-pages/), then this process should sound familiar: we'll make a tag page template, then use it in `createPages` in `gatsby-node.js` to generate individual pages for the tags in our posts.
+Si seguiste el tutorial para [Agregar Páginas en _Markdown_](/docs/adding-markdown-pages/), entonces este proceso debería sonar familiar: haremos una página plantilla de etiquetas, luego la usaremos en `createPages` en `gatsby-node.js` para generar páginas individuales para las etiquetas en nuestras publicaciones.
 
-First, we'll add a tags template at `src/templates/tags.js`:
+Primero, agregaremos una plantilla de etiquetas en `src/templates/tags.js`:
 
 ```jsx:title=src/templates/tags.js
 import React from "react"
 import PropTypes from "prop-types"
 
-// Components
+// Componentes
 import { Link, graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
@@ -94,8 +94,8 @@ const Tags = ({ pageContext, data }) => {
         })}
       </ul>
       {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
+              Esto enlaza a una página que aún no existe.
+              ¡Volveremos a esto!
             */}
       <Link to="/tags">All tags</Link>
     </div>
@@ -150,11 +150,11 @@ export const pageQuery = graphql`
 `
 ```
 
-**Note**: `propTypes` are included in this example to help you ensure you're getting all the data you need in the component, and to help serve as a guide while destructuring / using those props.
+**Nota**: los `propTypes` están incluidos en este ejemplo para ayudarte a asegurar que estás obteniendo todos los datos que necesitas en el componente, y sirven como una guía mientras desestructuras / usas estas _props_.
 
-## Modify `gatsby-node.js` to render pages using that template
+## Modificar `gatsby-node.js` para renderizar páginas usando la plantilla
 
-Now we've got a template. Great! I'll assume you followed the tutorial for [Adding Markdown Pages](/docs/adding-markdown-pages/) and provide a sample `createPages` that generates post pages as well as tag pages. In the site's `gatsby-node.js` file, include `lodash` (`const _ = require('lodash')`) and then make sure your [`createPages`](/docs/node-apis/#createPages) looks something like this:
+Ahora tenemos una plantilla. ¡Excelente! Asumiré que seguiste el tutorial para [Agregar Páginas en _Markdown_](/docs/adding-markdown-pages/) y tienes un ejemplo de `createPages` que genera páginas de publicación, así como páginas de etiquetas. En el archivo del sitio `gatsby-node.js`, incluye `lodash` (`const _ = require('lodash')`) y luego asegúrate que tu [`createPages`](/docs/node-apis/#createPages) se parezca a esto:
 
 ```js:title=gatsby-node.js
 const path = require("path")
@@ -191,7 +191,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  // handle errors
+  // manejar errores
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
@@ -199,7 +199,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const posts = result.data.postsRemark.edges
 
-  // Create post detail pages
+  // Crear páginas de detalles de publicaciones
   posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
@@ -207,10 +207,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  // Extract tag data from query
+  // Extraer datos de etiquetas de la consulta
   const tags = result.data.tagsGroup.group
 
-  // Make tag pages
+  // Hacer páginas de etiquetas
   tags.forEach(tag => {
     createPage({
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
@@ -223,24 +223,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 ```
 
-Some notes:
+Algunas notas:
 
-- Our GraphQL query only looks for data we need to generate these pages. Anything else can be queried again later (and, if you notice, we do this above in the tags template for the post title).
-- We have referenced two `allMarkdownRemark` fields in our query. To avoid naming collisions we must [alias](/docs/graphql-reference/#aliasing) one of them. We alias both to make our code more human-readable.
-- While making the tag pages, note that we pass `tag.name` through in the `context`. This is the value that gets used in the `TagPage` query to limit our search to only posts tagged with the tag in the URL.
+- Nuestra consulta GraphQL solo busca datos que necesitamos para generar estas páginas. Cualquier otra cosa puede ser consultada nuevamente más tarde (y, si te das cuenta, hacemos esto arriba en la plantilla de etiquetas para el título de la publicación).
+- Hemos hecho referencia a dos campos `allMarkdownRemark` en nuestra consulta. Para evitar colisiones de nombres debemos asignar un [alias](/docs/graphql-reference/#aliasing) a uno de ellos. Hemos asignado un alias a ambos campos para que nuestro código sea más legible para los humanos.
+- Al hacer las páginas de etiquetas, ten en cuenta que pasamos `tag.name` a través del `context`. Este es el valor que se usa en la consulta `TagPage` para limitar nuestra búsqueda a solo publicaciones etiquetadas con la etiqueta en la URL.
 
-## Make a tags index page (`/tags`) that renders a list of all tags
+## Hacer una página _index_ de etiquetas (`/tags`) que renderice una lista de todas las etiquetas
 
-Our `/tags` page will simply list out all tags, followed by the number of posts with that tag. We can get the data with the first query we wrote earlier, that groups posts by tags:
+Nuestra página `/tags` simplemente listará todas las etiquetas, seguidas por el número de publicaciones con dicha etiqueta. Podemos obtener los datos con la primera consulta que escribimos anteriormente, que agrupa publicaciones por etiquetas:
 
 ```jsx:title=src/pages/tags.js
 import React from "react"
 import PropTypes from "prop-types"
 
-// Utilities
+// Utilidades
 import kebabCase from "lodash/kebabCase"
 
-// Components
+// Componentes
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
@@ -306,6 +306,6 @@ export const pageQuery = graphql`
 `
 ```
 
-## _(optional)_ Render tags inline with your blog posts
+## _(opcional)_ Renderizar etiquetas dentro de tus publicaciones de blog
 
-The home stretch! Anywhere else you'd like to render your tags, simply add them to the `frontmatter` section of your `graphql` query and access them in your component like any other prop.
+¡Un esfuerzo final! En cualquier otro lugar donde desees renderizar tus etiquetas, simplemente agrégalas a la sección `frontmatter` de tu consulta `graphql` y accede a ellas en tu componente como cualquier otro _prop_.

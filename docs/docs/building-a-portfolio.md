@@ -1,8 +1,8 @@
 ---
-title: Building a portfolio
+title: Construyendo un Portafolio
 ---
 
-This is a stub. Help our community expand it.
+Esto es un _stub_. Ayuda a nuestra comunidad a expandirlo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, utiliza la [Guía de estilo de Gatsby](/contributing/gatsby-style-guide/) para asegurarte
+de que tu solicitud sea aceptada.

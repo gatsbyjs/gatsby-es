@@ -1,24 +1,24 @@
 ---
-title: Standard Styling with Global CSS Files
+title: Estilos estándar con archivos CSS globales
 ---
 
-Traditionally, websites are styled using global CSS files.
+Tradicionalmente, los sitios web han sido dotados de estilos usando archivos globales CSS.
 
-Globally-scoped CSS rules are declared in external `.css` stylesheets, and [CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) and [the Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) determine how styles are applied.
+Las reglas de CSS con ámbito global están declaradas en hojas de estilo externas `.css`, y [la especificidad de CSS](https://developer.mozilla.org/es/docs/Web/CSS/Especificidad) y [su Cascada](https://developer.mozilla.org/es/docs/Web/CSS/Cascade) determinan como los estilos se aplican.
 
-## Adding global styles with a layout component
+## Añadiendo estilos globales con un componente layout
 
-The best way to add global styles is with a [shared layout component](/tutorial/part-three/#your-first-layout-component). This layout component is used for things that are shared throughout the site, including styles, header components, and other common items.
+La mejor manera de añadir estilos globales es con un [componente layout compartido](/tutorial/part-three/#your-first-layout-component). Este componente layout se usa para cosas que se comparten a lo largo del sitio web, incluyendo estilos, componentes de cabeceras y otros objetos comunes.
 
-> **NOTE:** This pattern is implemented by default in [the default starter](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
+> **NOTA:** Este patrón se implementa por defecto en [el starter por defecto](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
 
-To create a shared layout with global styles, start by creating a new Gatsby site with the [hello world starter](https://github.com/gatsbyjs/gatsby-starter-hello-world).
+Para crear un layout compartido con estilos globales, comienza creando un nuevo sitio Gatsby con el [starter Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world).
 
 ```shell
 gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Open your new site in your code editor and create a new directory at `/src/components`. Inside, create two new files:
+Abre tu nuevo sitio web en tu editor de código y crea un nuevo directorio en `/src/components`. Dentro, crea dos nuevos archivos:
 
 ```diff
   global-styles/
@@ -31,7 +31,7 @@ Open your new site in your code editor and create a new directory at `/src/compo
           └─  index.js
 ```
 
-Inside `src/components/layout.css`, add some global styles:
+Dentro de `src/components/layout.css`, añade algunos estilos globales:
 
 ```css:title=src/components/layout.css
 div {
@@ -40,7 +40,7 @@ div {
 }
 ```
 
-In `src/components/layout.js`, include the stylesheet and export a layout component:
+En `src/components/layout.js`, incluye la hoja de estilos y exporta un componente layout:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -49,7 +49,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-Finally, update `src/pages/index.js` to use the new layout component:
+Finalmente, actualiza `src/pages/index.js` para usar el nuevo componente layout:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -58,17 +58,17 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-Run `npm run develop` and you’ll see the global styles applied.
+Ejecuta `npm run develop` y verás los estilos globales aplicados.
 
 ![Global styles](./images/global-styles.png)
 
-## Adding global styles without a layout component
+## Añadiendo estilos globales sin un componente layout
 
-In some cases, using a shared layout component is not desirable. In these cases, you can include a global stylesheet using `gatsby-browser.js`.
+En algunos casos, usar un componente layout compartido no es deseable. En esos casos, puedes incluir una hoja de estilos global usando `gatsby-browser.js`.
 
-> **NOTE:** This approach does _not_ work with CSS-in-JS. Use shared components to share styles in CSS-in-JS.
+> **NOTA:** Esta aproximación _no_ funciona con CSS-in-JS. Usa componentes compartidos para compartir estilos en CSS-in-JS.
 
-First, open a new terminal window and run the following commands to create a new default Gatsby site and start the development server:
+Primero, abre una nueva ventana de terminal y ejecuta los siguientes comandos para crear un nuevo sitio por defecto Gatsby y arranca el servidor de desarrollo:
 
 ```shell
 gatsby new global-style-tutorial https://github.com/gatsbyjs/gatsby-starter-default
@@ -76,7 +76,7 @@ cd global-style-tutorial
 npm run develop
 ```
 
-Second, create a CSS file and define any styles you wish. An example:
+Segundo, crea un archivo CSS y define tantos estilos como quieras. Por ejemplo:
 
 ```css:title=src/styles/global.css
 html {
@@ -88,27 +88,27 @@ a {
 }
 ```
 
-Then, include the stylesheet in your site's `gatsby-browser.js` file.
+Tras eso, incluye la hoja de estilos en tu archivo `gatsby-browser.js`.
 
-> **NOTE:** This solution works when including css as those styles are extracted when building the JavaScript but not for css-in-js.
-> Including styles in a layout component or a global-styles.js is your best bet for that.
+> **NOTA:** Esta solucion funciona cuando incluimos CSS ya que esos estilos son extraídos al compilar el JavaScript y no para css-in-js.
+> Incluir estilos en un componente layout o un archivo global-styles.js es tu mejor opción para ello.
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 
-// or:
+// o:
 // require('./src/styles/global.css')
 ```
 
-> _Note: You can use Node.js require or import syntax. Additionally, the placement of the example css file in a `src/styles` folder is arbitrary._
+> _Nota: Puedes usar la sintaxis require o import de Node.js. Además, la localización del archivo de ejemplo css en una carpeta `src/styles` es arbitraria._
 
-You should see your global styles taking effect across your site:
+Deberías ver tus estilos globales actualizados a lo largo de tu sitio web:
 
 ![Global styles example site](./images/global-styles-example.png)
 
-### Importing CSS files into components
+### Importando archivos CSS en componentes
 
-It is also possible to break up your CSS styles into separate files so that team members can work independently while still using traditional CSS. You can then [import files directly](/docs/importing-assets-into-files/) into pages, templates, or components:
+Es posible separar tus estilos CSS en archivos separados para que otros miembros del equipo puedan trabajar independientemente usando CSS tradicional. Puedes entonces [importar archivos directamente](/docs/importing-assets-into-files/) en páginas, modelos, o componentes:
 
 ```css:title=menu.css
 .menu {
@@ -122,11 +122,11 @@ It is also possible to break up your CSS styles into separate files so that team
 import "css/menu.css"
 ```
 
-This approach can simplify integration of CSS or [Sass](/packages/gatsby-plugin-sass/) styles into your Gatsby site by allowing team members to write and consume more traditional, class-based CSS. However, there are [trade-offs](#limitations) that must be considered with regards to web performance and the lack of dead code elimination.
+Esta aproximación puede simplificar la integración de CSS o estilos [Sass](/packages/gatsby-plugin-sass/) en tu sitio Gatsby permitiendo a los miembros del equipo escribir y consumir CSS tradicional basado en clases. Por otra parte, hay [concesiones](#limitations) que deben ser consideradas respecto al rendimiento y la falta de eliminación del código muerto.
 
-### Adding classes to components
+### Añadiendo clases a los componentes
 
-Since `class` is a reserved word in JavaScript, you'll have to use the `className` prop instead, which will render as the browser-supported `class` attribute in your HTML output.
+Ya que `class` es una palabra reservada en JavaScript, tendrás que usar la propiedad `className` en su lugar, la cual renderizará como el atributo soportado por el navegador `class` en la salida HTML.
 
 ```jsx
 <button className="primary">Click me</button>
@@ -138,8 +138,8 @@ Since `class` is a reserved word in JavaScript, you'll have to use the `classNam
 }
 ```
 
-### Limitations
+### Limitaciones
 
-The biggest problem with global CSS files is the risk of name conflicts and side effects like unintended inheritance.
+El mayor problema con los archivos CSS globales es el riesgo de conflictos con los nombres y efectos secundarios colaterales como herencias no deseadas.
 
-CSS methodologies like BEM can help solve this, but a more modern solution is to write locally-scoped CSS using [CSS Modules](/docs/css-modules/) or [CSS-in-JS](/docs/css-in-js/).
+Metodologías CSS como BEM pueden ayudar a solucionarlo, pero una solución más moderna es escribir CSS con ámbito local usando  [Módulos CSS](/docs/css-modules/) o [CSS-in-JS](/docs/css-in-js/).

@@ -107,43 +107,48 @@ Para mantener la consistencia y evitar regionalismos decidimos utilizar tú para
 
 Aquí hay algunas sugerencias para la traducción de términos de uso común en este tipo de documentación técnica.
 
-| Original word/term     | Suggestion                            |
-| ---------------------- | ------------------------------------- |
-| array                  | _array_                               |
-| arrow function         | función flecha                        |
-| assert                 | comprobar                             |
-| bug                    | error                                 |
-| bundler                | _bundler_                             |
-| callback               | _callback_                            |
-| camelCase              | _camelCase_                           |
-| controlled component   | componente controlado                 |
-| debugging              | depuración                            |
-| DOM                    | DOM                                   |
-| framework              | _framework_                           |
-| function component     | componente de función                 |
-| hardcoded              | hardcodeado                           |
-| hook                   | _hook_                                |
-| key                    | _key_                                 |
-| lazy initialization    | inicialización diferida               |
-| library                | biblioteca                            |
-| lowercase              | minúscula(s)                          |
-| props                  | _props_                               |
-| React element          | Elemento de React                     |
-| render                 | renderizar (verb), renderizado (noun) |
-| shallow rendering      | renderizado superficial               |
-| state                  | estado                                |
-| string                 | _string_                              |
-| template literals      | _template literals_                   |
-| uncontrolled component | componente no controlado              |
-| Issue                  | Issue                                 |
-| Layout                 | Layout                                |
-| Scope (sustantivo)     | Ambito                                |
-| Scope (verbo)          | Aislar                                |
-| Open Source            | Código abierto                        |
-| script                 | script                                |
-| swag                   | premio                                |
-| push notifications     | Notificaciones push                   |
-| workspace              | _workspace_                           |
-| monorepo               | _monorepo_                            |
-| fork                   | _fork_                                |
-| file                   | archivo                               |
+| Original word/term                  | Suggestion                                         |
+| ----------------------------------- | -------------------------------------------------- |
+| array                               | _array_                                            |
+| arrow function                      | función flecha                                     |
+| assert                              | comprobar                                          |
+| bug                                 | error                                              |
+| bundler                             | _bundler_                                          |
+| callback                            | _callback_                                         |
+| camelCase                           | _camelCase_                                        |
+| community pair programming sessions | sesiones de programación en pareja de la comunidad |
+| component shadowing                 | _component shadowing_                              |
+| controlled component                | componente controlado                              |
+| debugging                           | depuración                                         |
+| DOM                                 | DOM                                                |
+| file                                | archivo                                            |
+| fork                                | _fork_                                             |
+| framework                           | _framework_                                        |
+| function component                  | componente de función                              |
+| hardcoded                           | hardcodeado                                        |
+| hook                                | _hook_                                             |
+| issue                               | _issue_                                            |
+| key                                 | _key_                                              |
+| lazy initialization                 | inicialización diferida                            |
+| layout                              | _layout_                                           |
+| library                             | biblioteca                                         |
+| lowercase                           | minúscula(s)                                       |
+| monorepo                            | _monorepo_                                         |
+| open source                         | código abierto                                     |
+| props                               | _props_                                            |
+| push notifications                  | notificaciones _push_                              |
+| React element                       | elemento de React                                  |
+| render                              | renderizar (verb), renderizado (noun)              |
+| scope (sustantivo)                  | ámbito                                             |
+| scope (verbo)                       | aislar                                             |
+| script                              | _script_                                           |
+| shallow rendering                   | renderizado superficial                            |
+| starter                             | _starter_                                          |
+| state                               | estado                                             |
+| string                              | _string_                                           |
+| stub                                | _stub_                                             |
+| swag                                | premio                                             |
+| template literals                   | _template literals_                                |
+| uncontrolled component              | componente no controlado                           |
+| workshop                            | taller                                             |
+| workspace                           | _workspace_                                        |
