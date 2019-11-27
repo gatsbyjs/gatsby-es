@@ -4,7 +4,7 @@ title: Trabajando Con Imágenes En Gatsby
 
 La optimización de imágenes es un reto en cualquier página web. Para utilizar las mejores prácticas para rendimiento en dispositvos, necesitas multiples tamaños y resoluciones de cada imagen. Por suerte, Gatsby tiene varios [plugins](/docs/plugins/) útiles que trabajan juntos para hacerlo para imágenes en [componentes de página](/docs/building-with-components/#page-components).
 
-La apoximación recomendada es usar [consultas GraphQL](/docs/querying-with-graphql/) para conseguir imágenes de resolución y tamaño óptimas, entonces, mostrarlas con el componente  [`gatsby-image`](/packages/gatsby-image/).
+La aproximación recomendada es usar [consultas GraphQL](/docs/querying-with-graphql/) para conseguir imágenes de resolución y tamaño óptimas, y después, mostrarlas con el componente  [`gatsby-image`](/packages/gatsby-image/).
 
 ## Consulta Imágenes Con GraphQL
 
