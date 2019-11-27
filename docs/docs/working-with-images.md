@@ -10,7 +10,7 @@ La apoximación recomendada es usar [consultas GraphQL](/docs/querying-with-grap
 
 Consultar imágenes con GraphQL te permite acceder a los datos de la imagen tanto como realizar transformaciones con [Sharp](https://github.com/lovell/sharp), una librería de alto rendimiento para el procesamiento de imágenes.
 
-Necesitarás unos pocos plugins para esto:
+Necesitarás unos cuantos plugins para esto:
 
 - [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin que te permite [consultar archivos con GraphQL](/docs/querying-with-graphql/#images)
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta las conexiones entre Sharp y Plugins Gatsby 
