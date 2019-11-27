@@ -41,7 +41,7 @@ export const query = graphql`
 [`gatsby-image`](/packages/gatsby-image/) es un plugin que automáticamente crea componentes React para imágenes optimizadas que:
 
 > - Carga el tamaño óptimo de imagen para cada tamaño de dispositivo y resolución de pantalla
-> - Mantiene la posición de la imagen mientras se carga para que su página no salte mientras se cargan las imágenes
+> - Mantiene la posición de la imagen mientras se carga para que tu página no salte mientras se cargan las imágenes
 > - Utiliza el efecto de "desenfoque", es decir, carga una pequeña versión de la imagen para mostrar mientras se carga la imagen completa
 > - Alternativamente, proporciona un SVG de "marcador de posición trazado" de la imagen
 > - Carga en diferido de imágenes, lo que reduce el ancho de banda y acelera el tiempo de carga inicial
