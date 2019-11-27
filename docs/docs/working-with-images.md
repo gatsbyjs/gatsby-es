@@ -95,6 +95,6 @@ export const query = graphql`
 
 - [Documentación de la API de Gatsby Image ](/docs/gatsby-image/)
 - [Usando gatsby-image con Gatsby](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e)lista de reproducción de egghead.io gratuita
-- [README de plugin gatsby-image](/packages/gatsby-image/)
+- [README del plugin gatsby-image](/packages/gatsby-image/)
 - [gatsby-plugin-sharp archivo README](/packages/gatsby-plugin-sharp/)
 - [gatsby-transformer-sharp archivo README](/packages/gatsby-transformer-sharp/)
