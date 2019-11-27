@@ -20,7 +20,7 @@ Si la imagen final es de un tamaño fijo, la optimización depende de tener mult
 
 También puedes usar argumentos en tu consulta para especificar exactamente, las dimensiones mínimas, y máximas. Ve la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
 
-Este ejemplo es para una galería de imágenes donde las imágenes se estiran cuando se cambia el tamaño de la página. Utiliza el método `fluid` y el fragmento fluid para obtener los datos adecuados para usar en el componente `gatsby-image` y argumentos para establecer el ancho como 400px y la altura máxima como 250px.
+Este ejemplo es para una galería de imágenes donde las imágenes se estiran cuando se cambia el tamaño de la página. Utiliza el método `fluid` y el fragmento `fluid` para obtener los datos adecuados para usar en el componente `gatsby-image` y argumentos para establecer el ancho como 400px y la altura máxima como 250px.
 
 ```js
 export const query = graphql`
