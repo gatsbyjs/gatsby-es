@@ -9,7 +9,7 @@ Además, generalmente desean poder utilizar flujos de trabajo familiares basados
 
 Algunos beneficios que puedes usar para atraer clientes a Gatsby incluyen:
 
-- Trabaja conjuntamente con tú CMS
+- Trabaja conjuntamente con su CMS
 - La rápida velocidad de desarrollo garantiza que el proyecto estará a tiempo
 - La facilidad para realizar cambios de desarrollo ayuda a mantener el proyecto por debajo del presupuesto
 - El bajo costo de alojamiento ayuda a mantener el proyecto dentro del presupuesto
