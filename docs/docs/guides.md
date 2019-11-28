@@ -1,8 +1,8 @@
 ---
-title: Reference Guides
+title: Guías de referencia
 overview: true
 ---
 
-Dive deeper into different topics around building with Gatsby, like sourcing data, building and styling pages, deployment, and more. While the [tutorials](/tutorial/) are step-by-step instructions, reference guides are resources about the various Gatsby development techniques.
+Sumérgete en diferentes temas alrededor de la construcción con Gatsby, como obtener datos, crear y diseñar páginas, despliegue y más. Mientras que los [tutoriales](/tutorial/) son instrucciones paso a paso, las guías de referencia son recursos sobre las diversas técnicas de desarrollo de Gatsby.
 
 <GuideList slug={props.slug} />
