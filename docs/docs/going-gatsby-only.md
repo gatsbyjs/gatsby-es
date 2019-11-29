@@ -1,24 +1,24 @@
 ---
-title: Going Gatsby-Only
+title: Usando solo Gatsby
 ---
 
-Some agencies and freelancers have decided that in order to unify their business, they will _only_ build sites on Gatsby and turn down clients or projects where it's not possible to use Gatsby.
+Algunas agencias y _freelancers_ han decidido que para unificar sus negocios, _solo_ construirán sitios en Gatsby y rechazarán clientes o proyectos donde no sea posible usar Gatsby.
 
-Some of the benefits such agencies list include:
+Algunos de los beneficios señalados por dichas agencias incluyen:
 
-- reduced knowledge silos
-- a unified technology stack
-- consistent fast development
-- no time ever spent on performance optimization
-- ability to build projects across CMS-es
-- a more cohesive team.
+- reducción en silos de conocimiento
+- unificación del stack de tecnologías
+- desarrollo rápido y consistente
+- ningún tiempo dedicado a la optimización del rendimiento
+- capacidad para construir proyectos a través de CMS-es
+- un equipo más cohesivo.
 
-One example of this is [Narative.co](https://www.narative.co/), based in Montreal. Narative [wrote a blog post](/blog/2018-06-18-why-narative-loves-gatsby/) laying out some of these benefits:
+Un ejemplo de esto es [Narative.co](https://www.narative.co/), con sede en Montreal. Narative [publicó un artículo en su blog](/blog/2018-06-18-why-narative-loves-gatsby/) presentando algunos de estos beneficios:
 
-> Gatsby allows our team to use the powerful React API when creating page based websites with almost no drawbacks. All the principles and techniques we’ve learned from using React for the last few years can be leveraged with Gatsby. This has enabled us to create a team that is extremely dynamic and cohesive without the worry of creating silos or losing knowledge across teams. Our team is able to learn once, write everywhere. With an engineering team that’s familiar with React and Gatsby we’re able to tackle more problems faster, which is highly beneficial to our partners and the services we offer.
+> Gatsby le permite a nuestro equipo usar la poderosa API de React al crear sitios web basados en páginas, casi sin inconvenientes. Todos los principios y técnicas que hemos aprendido mediante el uso de React durante los últimos años, pueden ser aprovechados con Gatsby. Esto, nos ha permitido crear un equipo que es extremadamente dinámico y cohesivo sin la preocupación de crear silos o perder conocimiento entre los equipos. Nuestro equipo es capaz de aprender una vez y escribir en todas partes. Con un equipo de ingeniería que está familiarizado con React y Gatsby, podemos abordar más problemas, de manera más rápido, lo cual es altamente beneficioso para nuestros socios y los servicios que ofrecemos.
 
-> Gatsby does not only allow us to deliver fast websites, it has also sped up our development time. The developer experience is another focus of the team behind Gatsby - and it shows. Features such as live reload are ready to go at when you start a new project. There’s no need to setup a custom Webpack configuration as the basics are completed for you. Building your website and deploying is also carefully thought out by Gatsby and often requires running a single command and using one of the many integrations for hosting. Furthermore, the documentation is comprehensive and has plenty of content from introductory guides to complex use cases. This has been amazing for training and on boarding new members of our team, especially if they’re already familiar with React.
+> Gatsby no solo nos permite ofrecer sitios web rápidos, sino que también ha acelerado nuestro tiempo de desarrollo. La experiencia del desarrollador es otro enfoque del equipo detrás de Gatsby, y se nota. Las características como la recarga en vivo están listas para ser usadas cuando se comienza un nuevo proyecto. No es necesario definir una configuración personalizada de Webpack, ya que los conceptos básicos están completos para ti. Gatsby también ha pensado cuidadosamente en la construcción de tu sitio web y su despliegue, y a menudo requiere ejecutar un solo comando y usar una de las muchas integraciones para el alojamiento. Además, la documentación es completa y tiene mucho contenido, desde guías introductorias hasta casos de uso complejos. Esto ha sido asombroso para el entrenamiento e incorporación de nuevos miembros de nuestro equipo, especialmente si ya están familiarizados con React.
 
-> Many popular CMS tools are tightly coupled to their source of data. Gatsby offers a clear separation between the data and view layer building on top of the Headless CMS principles. The advantage for Narative is that we can develop without CMS lock-in such as WordPress. If our team decides to go with a new view layer the migration would be less painful than migrating all the data as well. Often times flexibility in software means more complexity to manage but in this case the flexibility is in the right spots where it reduces complexity.
+> Muchas herramientas populares de CMS están estrechamente relacionadas con su fuente de datos. Gatsby ofrece una separación clara entre los datos y la construcción de la capa de vista sobre los principios de Headless CMS. La ventaja para Narative es que podemos desarrollar sin bloqueo de CMS, como WordPress. Si nuestro equipo decidiera optar por una nueva capa de vista, la migración no sería tan complicada como migrar todos los datos también. Muchas veces, la flexibilidad en el software se traduce en más complejidad para administrar, pero en este caso, la flexibilidad está en los lugares correctos donde reduce la complejidad.
 
-> We pass this flexibility on to our partners. They are able to manage their data while our team is able to deliver an excellent product on top of their existing infrastructure. This has made our solutions to revamping legacy projects even stronger than before.
+> Nosotros transmitimos esta flexibilidad a nuestros socios. Ellos pueden administrar sus datos mientras que nuestro equipo puede entregar un excelente producto además de su infraestructura existente. Esto ha hecho que nuestras soluciones modernicen proyectos heredados aún más fuerte que antes.
