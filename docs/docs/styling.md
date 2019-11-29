@@ -1,14 +1,14 @@
 ---
-title: Styling
+title: Estilos
 overview: true
 ---
 
-There are many ways to style your website. They can roughly be grouped into three styling approaches:
+Existen muchas formas de diseñar tu sitio web. Se pueden agrupar aproximadamente en tres enfoques de estilo:
 
-- [**Global CSS Files**](/docs/global-css/): the traditional way to style a website. CSS rules are declared globally and styles are applied depending on specificity and inheritance.
-- [**Modular Stylesheets**](/docs/css-modules): CSS rules are written traditionally but consumed with JavaScript and scoped locally to avoid unintended side-effects elsewhere. Works out-of-the-box with Gatsby.
-- [**CSS-in-JS**](/docs/css-in-js/): locally-scoped CSS written and consumed in JavaScript, enabling the easier use of dynamic styling and other features. Requires the use of third-party libraries.
+- [**Archivos CSS globales**](/docs/global-css/): la manera tradicional de diseñar un sitio web. Las reglas de CSS se declaran globalmente y los estilos se aplican según la especificidad y la herencia.
+- [**Hojas de estilo modulares**](/docs/css-modules): las reglas de CSS se escriben tradicionalmente pero se consumen con JavaScript y se definen localmente para evitar efectos secundarios no deseados en otros lugares. Esto funciona por defecto en Gatsby.
+- [**CSS-in-JS**](/docs/css-in-js/): las variables locales de CSS son escritas y consumidas en Javascript, lo que permite un uso más sencillo de diseño dinámico. Otras características requieren el uso de librerías de terceros. 
 
-Gatsby doesn't have an opinion about which styling approach you choose. Almost every possible option is supported through official and community plugins. _(If there isn’t a plugin yet for your favorite option, consider [contributing](/docs/creating-plugins) one!)_
+Gatsby no tiene una opinión sobre el enfoque de estilos que elijas. Casi todas las opciones posibles son compatibles a través de plugins oficiales y de terceros. _(Si todavía no existe un plugin para tu característica favorita, considera [contribuir](/docs/creating-plugins) con uno!)_
 
 <GuideList slug={props.slug} />

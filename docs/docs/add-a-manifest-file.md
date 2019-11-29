@@ -1,32 +1,32 @@
 ---
-title: Add a manifest file
+title: Añadir un archivo de manifiesto
 ---
 
-If you've run an [audit with Lighthouse](/docs/audit-with-lighthouse/), you may have noticed a lackluster score in the "Progressive Web App" category. Let's address how you can improve that score.
+Si has llevado a cabo una [auditoría con Lighthouse](/docs/audit-with-lighthouse/), puedes haberte dado cuenta de una puntuación un tanto mediocre en la categoría "Aplicación Web Progresiva" ("Progressive Web App"). Veamos como se puede mejorar esta puntuación.
 
-But first, what exactly _are_ PWAs?
+Pero primero, ¿qué _son_ exactamente las PWA?
 
-They are regular websites that take advantage of modern browser functionality to augment the web experience with app-like features and benefits. Check out [Google's overview](https://developers.google.com/web/progressive-web-apps/) of what defines a PWA experience and the [Progressive web apps (PWAs) doc](/docs/progressive-web-app/) to learn how a Gatsby site is a progressive web app.
+Son sitios web corrientes que aprovechan la funcionalidad de los navegadores web modernos para mejorar la experiencia web con características y beneficios similares a las aplicaciones. Visita [la visión general de Google](https://developers.google.com/web/progressive-web-apps/) que define una experiencia PWA y [la documentación sobre Aplicaciones Web Progresivas (PWAs)](/docs/progressive-web-app/) para aprender como un sitio Gatsby es una Aplicación Web Progresiva.
 
-The inclusion of a web app manifest is one of the three generally accepted [baseline requirements for a PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
+La inclusión de un archivo de manifiesto de aplicación web, es uno de los tres [requisitos base para una PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1) generalmente aceptados.
 
-Quoting [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
+Citando a [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when 'installed' on the user's mobile device or desktop.
+> El archivo de manifiesto de aplicación web es un archivo JSON simple que informa al navegador acerca de tu aplicación web y como se debe comportar cuando sea 'instalada' en el dispositivo móvil o escritorio del usuario.
 
-[Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configures Gatsby to create a `manifest.webmanifest` file on every site build.
+[El plugin de manifiesto de Gatsby](/packages/gatsby-plugin-manifest/) configura Gatsby para crear un archivo `manifest.webmanifest` en cada sitio construido.
 
-### Using `gatsby-plugin-manifest`
+### Usando `gatsby-plugin-manifest`
 
-1.  Install the plugin:
+1.  Instala el plugin:
 
 ```shell
 npm install --save gatsby-plugin-manifest
 ```
 
-2. Add a favicon for your app under `src/images/icon.png`. The icon is necessary to build all images for the manifest. For more information look at the docs of [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
+2. Añade un 'favicon' a tu aplicación en `src/images/icon.png`. El icono es necesario para construir todas las imágenes para el archivo de manifiesto. Para más información, visita la documentación en [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+3. Añade el plugin al _array_ de `plugins` en tu fichero `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -39,13 +39,13 @@ npm install --save gatsby-plugin-manifest
         start_url: "/",
         background_color: "#6b37bf",
         theme_color: "#6b37bf",
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Habilita la opción "Añadir a pantalla de inicio" y deshabilita la interfaz de usuario del navegador (incluyendo el botón para ir atrás). 
+        // Mira: https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "src/images/icon.png", // This path is relative to the root of the site.
-        // An optional attribute which provides support for CORS check.
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
-        // Any invalid keyword or empty string defaults to `anonymous`
+        icon: "src/images/icon.png", // Esta ruta es relativa a la raíz del sitio
+        // Un atributo opcional que proporciona soporte para las comprobaciones CORS.
+        // Si no provees ninguna opción crossOrigin, se omite CORS para el manifiesto.
+        // Cualquier palabra inválida o cadena de texto vacía se interpreta como el valor `anonymous`
         crossOrigin: `use-credentials`,
       },
     },
@@ -53,4 +53,4 @@ npm install --save gatsby-plugin-manifest
 }
 ```
 
-That's all you need to get started with adding a web manifest to a Gatsby site. The example given reflects a base configuration -- check out the [plugin reference](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) for more options.
+Eso es todo lo que necesitas para empezar a añadir un manifiesto web a un sitio Gatsby. El ejemplo proporcionado refleja una configuración base -- visita la [documentación de referencia del plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) para más opciones.

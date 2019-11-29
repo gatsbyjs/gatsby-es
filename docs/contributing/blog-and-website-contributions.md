@@ -17,7 +17,7 @@ Nota: Antes de añadir una entrada en el blog, asegurate de tener la aprobación
 Para añadir una entrada nueva al blog de gatsbyjs.org:
 
 - Clona el [repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/) y navega a `/www`.
-- Ejecuta `yarn`para instalar todas las dependencias del sitio web. ([¿Por qué Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))
+- Ejecuta `yarn` para instalar todas las dependencias del sitio web. ([¿Por qué Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))
 - Ejecuta `npm run develop` para previsualizar el blog en `http://localhost:8000/blog`.
 - El contenido del blog reside en la carpeta `/docs/blog`. Realiza las modificaciones o añade contenido aquí.
 - Añade tu imagen de avatar a `/docs/blog/avatars`.
@@ -30,8 +30,8 @@ Para añadir una entrada nueva al blog de gatsbyjs.org:
 - Sigue la [Guía de Estilo](/contributing/gatsby-style-guide/#word-choice) para asegurarte de que estás usando la redacción adecuada.
 - Verifica tu gramática y capitaliza correctamente.
 - Haz commit y push a tu fork.
-- Crea una pull request desde tu rama.
-  - Recomendamos usar el prefijo `docs`, p. ej. `docs/tu-cambio` or `docs-tu-cambio`. ([Ejemplo de pull request](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
+- Crea un pull request desde tu rama.
+  - Recomendamos usar el prefijo `docs`, p. ej. `docs/tu-cambio` o `docs-tu-cambio`. ([Ejemplo de pull request](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
 
 ### Formato de publicación de blog
 
@@ -60,7 +60,7 @@ Markdown y archivos de imagen para una fácil vinculación.
 
 Si quieres realizar cambios, mejoras, o añadir nueva funcionalidad al sitio web, no necesitas configurar por completo el repositorio de Gatsby para contribuir. Puedes activar tu propia instancia del sitio web de Gatsby con estos pasos:
 
-- Clona [el repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/) y navega a `/www`
+- Clona [el repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/) y navega a `/www`.
 - Ejecuta `yarn` para instalar todas las dependencias del sitio web.
 - Ejecuta `npm run develop` para previsualizar el sitio en `http://localhost:8000/`.
 

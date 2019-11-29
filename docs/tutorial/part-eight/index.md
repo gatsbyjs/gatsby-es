@@ -72,7 +72,6 @@ Son sitios web normales que toman ventaja de la funcionalidad de los navegadores
 
 Incluir un manifiesto a la aplicación web es uno de los tres generalmente aceptados [requerimientos básicos para una PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
 
-
 Citando a [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
 > El manifiesto de una aplicación web es un simple archivo JSON que le dice al navegador acerca de tu aplicación web y como comportarse cuando se 'instale' en el dispositivo movil o de escritorio.
@@ -120,7 +119,6 @@ Otro requerimiento para que un sitio web califique como PWA es el uso de un [ser
 
 El [plugin Gatsby's offline](/packages/gatsby-plugin-offline/) hace que el sitio web Gatsby funcione sin conexión y sea mas resistente a malas condiciones de red, creando un "service worker" para tu sitio web.
 
-
 ### ✋ Usando `gatsby-plugin-offline`
 
 1.  Instala plugin:
@@ -156,7 +154,7 @@ npm install --save gatsby-plugin-offline
 
 Es todo lo que necesitas para iniciar con "service workers" en Gatsby.
 
-> 💡 El plugin sin conexión (offline plugin) lo deberás listar _después_ del plugin manifiesto (manifest plugin), para que el plugin sin conexión pueda guardar en la cache del navegador el archivo creado `manifest.webmanifest`.
+> 💡 El plugin sin conexión (gatsby-plugin-offline) lo deberás listar _después_ del plugin manifiesto (manifest plugin), para que el plugin sin conexión pueda guardar en la cache del navegador el archivo creado `manifest.webmanifest`.
 
 ## Agregar metadatos a la página
 
@@ -174,10 +172,17 @@ El plugin [gatsby-plugin-react-helmet](/packages/gatsby-plugin-react-helmet/) so
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2.  Agrega el plugin al listado de `plugins` en el archivo `gatsby-config.js`.
+2.  Asegúrate de que tienes `description` y `author` configurados dentro del objeto `siteMetadata`. También, agrega el plugin `gatsby-plugin-react-helmet` al array de `plugins` en tu archivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
-{
+module.exports = {
+  siteMetadata: {
+    title: `Pandas Eating Lots`,
+    // highlight-start
+    description: `A simple description about pandas eating lots...`,
+    author: `gatsbyjs`,
+    // highlight-end
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
@@ -196,35 +201,144 @@ npm install --save gatsby-plugin-react-helmet react-helmet
     `gatsby-plugin-offline`,
     // highlight-next-line
     `gatsby-plugin-react-helmet`,
-  ]
+  ],
 }
 ```
 
-3.  Utiliza `React Helmet` en tus páginas:
+3.  En el directorio `src/components`, crea un archivo llamado `seo.js` y agrega lo siguiente:
 
-```jsx
+```jsx:title=src/components/seo.js
 import React from "react"
-import { Helmet } from "react-helmet"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
-class Application extends React.Component {
-  render() {
-    return (
-      <div className="application">
-        {/* highlight-start */}
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>My Title</title>
-          <link rel="canonical" href="http://mysite.com/example" />
-        </Helmet>
-        ...
-        {/* highlight-end */}
-      </div>
-    )
-  }
+function SEO({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
+
+  const metaDescription = description || site.siteMetadata.description
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    />
+  )
 }
+
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
+
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
+
+export default SEO
 ```
 
-> 💡 El ejemplo anterior es de la [documentación de React Helmet](https://github.com/nfl/react-helmet#example). ¡Revísalos para más información!
+El código de arriba configura valores por defecto para la mayoría de etiquetas de metadatos y te proporciona un componente `<SEO>` para ytrabajar con el en el resto de tu proyecto. Bastante genial, ¿verdad?
+
+4.  Ahora, puedes utilizar el componente `<SEO>` en tus plantillas y páginas y pasarle props. Por ejemplo, agrégalo a tu plantilla `blog-post.js` así:
+
+```jsx:title=src/templates/blog-post.js
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+// highlight-next-line
+import SEO from "../components/seo"
+
+export default ({ data }) => {
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      // highlight-start
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.excerpt}
+      />
+      // highlight-end
+      <div>
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        // highlight-next-line
+        excerpt
+      }
+    }
+  }
+`
+```
+
+El ejemplo de arriba esta basado en el [Starter de Blog de Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Pasandole props al componente `<SEO>` puedes cambiar dinámicamente  los metadatos de una entrada del blog. En este caso, el `title` y el `excerpt` de la entrada de blog (sí existen en el archivo markdown de la entrada de blog) serán utilizados en lugar de las propiedades por defecto del `siteMetadata` de tu archivo `gatsby-config.js`.
+
+Ahora, sí ejecutas una auditoría Lighthouse como se mostraba más arriba, deberías acercarte --sí no es perfecto-- ¡a una puntuación de 100!
+
+> 💡 ¡Para más información y ejemplos, revisa [Agregando un componente SEO ](docs/add-seo-component) y la [documentación de React Helmet](https://github.com/nfl/react-helmet#example)!
 
 ## Sigue haciéndolo mejor
 

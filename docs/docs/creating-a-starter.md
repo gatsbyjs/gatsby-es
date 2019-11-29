@@ -1,76 +1,76 @@
 ---
-title: Creating a Starter
+title: Creando un _Starter_
 ---
 
-[Starters](/docs/starters/) are boilerplate projects that Gatsby developers can use to set up a new site quickly. Before creating a starter, it may be helpful to peruse the [Gatsby Starter Library](/starters/) to see what already exists and determine how your starter will provide value.
+[_Los starters_](/docs/starters/) son proyectos tipo plantilla que los desarrolladores Gatsby pueden usar para configurar un nuevo sitio rápidamente. Antes de crear un _starter_, puede ser útil examinar detenidamente la [Librería de _Starters_ de Gatsby](/starters/) para ver lo que ya existe y determinar cómo tu _starter_ puede aportar valor.
 
-## Basic requirements
+## Requerimientos básicos
 
-For a starter to work properly, it needs to include some files (see the [Hello World starter](https://github.com/gatsbyjs/gatsby-starter-hello-world/) for a barebones example):
+Para que un _starter_ funcione adecuadamente, necesita incluir algunos ficheros (mira el [_starter_ Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world/) para ver un ejemplo del tipo esqueleto):
 
-- `README.md`: instructions for how to install and configure your starter, a list of its features or structure, and any helpful tips.
-- `package.json`: the "command center" for Gatsby dependencies and scripts. Find an example in the [Hello World starter's package.json](https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/package.json) file.
-- `gatsby-config.js`: a space to add configurable data and plugins. See [Gatsby Config](/docs/gatsby-config/) for more information.
-- `src/pages`: a directory for page components to live, with at least one [index.js file (example)](https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/src/pages/index.js).
-- `static`: a directory for static assets, such as a `favicon.ico` file.
-- `.gitignore`: a file telling Git which resources to leave out of source control, such as the `node_modules` directory, log files, Gatsby `.cache` and `public` directories.
-- `.prettierrc` _(optional)_: a configuration file for [Prettier](https://prettier.io/), a JavaScript linter and formatter used for Gatsby development.
+- `README.md`: instrucciones de cómo instalar y configurar tu _starter_, una lista de sus características o estructura, y cualquier consejo útil.
+- `package.json`: el "centro de control" para las dependencias y _scripts_ de Gatsby. Encuentra un ejemplo en el archivo [package.json del _starter_ Hola Mundo](https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/package.json).
+- `gatsby-config.js`: un espacio para agregar datos configurables y _plugins_. Mira la [Configuración de Gatsby](/docs/gatsby-config/) para más información.
+- `src/pages`: un directorio donde viven los componentes de página, con al menos un [archivo index.js (ejemplo)](https://github.com/gatsbyjs/gatsby-starter-hello-world/blob/master/src/pages/index.js).
+- `static`: un directorio para archivos estáticos, como un archivo `favicon.ico`.
+- `.gitignore`: un archivo que le dice a Git qué recursos dejar fuera del control de versiones, como el directorio `node_modules`, archivos de registro, el `.cache` de Gatsby y el directorio `public`.
+- `.prettierrc` _(opcional)_: un archivo de configuración para [Prettier](https://prettier.io/), un _linter_ JavaScript y formateador usado para desarrollar en Gatsby.
 
-Your starter should also have these qualities:
+Tu _starter_ también debería tener estas cualidades:
 
-- Open source and available from a stable URL
+- Código abierto y disponible desde una URL estable
 - Configurable
-- Fast
-- Web accessible
+- Rápido
+- Accesibilidad web
 
-Let's expand upon these items to prepare you for creating a winning starter.
+Explicamos sobre estos elementos para prepararte para crear un _starter_ ganador.
 
-## Open source and available from a stable URL
+## Código abierto y disponible desde una URL estable
 
-The Gatsby CLI allows users to install a new site with a starter using the command `gatsby new <site-name> <starter-url>`. For this to work, your starter needs to be available to download. The easiest way to accomplish this is to host your starter on GitHub or GitLab and use the publicly available repo URL, such as:
+La CLI de Gatsby permite a los usuarios instalar un nuevo sitio con un _starter_ usando el comando `gatsby new <nombre-del-sitio> <url-del-starter>`. Para que esto funcione, tu _starter_ necesita estar disponible para descargar. La forma más fácil para conseguir esto es alojar tu _starter_ en GitHub o GitLab y usar la URL del repositorio disponible públicamente, como:
 
-`gatsby new my-app https://github.com/gatsbyjs/gatsby-starter-blog`
+`gatsby new mi-aplicacion https://github.com/gatsbyjs/gatsby-starter-blog`
 
-Although the official starters live in the Gatsby repo, community members can offer their own starters from their own repos. Here's an example of installing a community starter:
+Aunque los _starters_ oficiales están en el repositorio de Gatsby, miembros de la comunidad pueden ofrecer sus propios _starters_ desde sus propios repositorios. Aquí hay un ejemplo de instalación de un _starter_ de la comunidad:
 
-`gatsby new my-app https://github.com/netlify-templates/gatsby-starter-netlify-cms`
+`gatsby new mi-aplicacion https://github.com/netlify-templates/gatsby-starter-netlify-cms`
 
 ## Configurable
 
-Starters should utilize metadata in `gatsby-config.js` wherever possible, as this is typically the first place users will look for site configuration information. Some examples of things you could make configurable in `gatsby-config` include:
+Los _starters_ deben utilizar metadatos en `gatsby-config.js` cuando sea posible, ya que este suele ser el primer sitio donde los usuarios buscarán información para configurar el sitio. Algunos ejemplos de cosas que podrías hacer configurables en el `gatsby-config` son:
 
-- Site title
-- Author name, contact information, and bio
-- Social media description
+- El título del sitio
+- El nombre del autor, información de contacto, y biografía
+- Los enlaces a redes sociales
 
-Alternatively, for starters connecting to a headless CMS, author-specific items could be pulled in to the starter from a CMS platform using a source plugin and GraphQL instead. Showing users how this is done can make your starter very helpful!
+Alternativamente, para _starters_ que se conectan a un _headless CMS_, los elementos específicos de un autor se pueden extraer en el _starter_ desde una plataforma CMS usando un _plugin_ fuente y GraphQL en su lugar. ¡Mostrar a los usuarios cómo se hace esto puede hacer que tu _starter_ sea muy útil!
 
-It's also highly appreciated if the built-in theming capabilities are used and a "theme" file is exposed for configuration, for example when using styled-components or a design system.
+También sería muy apreciado si se usan capacidades de temas incorporados y un archivo "tema" se proporciona para configurarlo, por ejemplo cuando se use _styled-components_ o un sistema de diseño.
 
-## Fast
+## Rápido
 
-Gatsby is pretty darned fast out of the box. To make a starter that supports users in the "Gatsby way", you'll want to set up a test implementation with your starter for debugging performance. Using tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Webpagetest.org](https://www.webpagetest.org/), you can evaluate the speed of your test site and make any necessary improvements to the starter source code so your users will benefit from fast defaults.
+Gatsby es bastante rápido por defecto. Para crear un _starter_ que soporte a los usuarios en la "forma Gatsby", querrás configurar una implementación de pruebas con tu _starter_ para depurar el rendimiento. Usando herramientas como [Lighthouse](https://developers.google.com/web/tools/lighthouse/) y [Webpagetest.org](https://www.webpagetest.org/), puedes evaluar la velocidad de tu sitio de pruebas y hacer cualquier mejora necesaria al código fuente del _starter_  para que tus usuarios se beneficien de la velocidad por defecto.
 
-If there are areas of the starter that could be impacted by the user, it may help to add some documentation or code comments reminding them to optimize for performance (e.g. compressing images)!
+Si hay áreas del _starter_ que podrían verse afectadas por el usuario, puede ayudar añadir alguna documentación o comentarios en el código que le recuerden optimizar para rendimiento (p.ej. comprimir imágenes)
 
-## Web accessible
+## Accesibilidad web
 
-In addition to performance, creating a starter free of accessibility issues is a wonderful way to contribute to the Gatsby ecosystem. Here are some tips for creating an inclusive, accessible starter:
+Además del rendimiento, crear un _starter_ libre de problemas de accesibilidad es una maravillosa manera de contribuir al ecosistema de Gatsby. Aquí hay algunos consejos para crear un _starter_ inclusivo y accesible:
 
-- Use adequate [color contrast](https://webaim.org/articles/contrast/). (This is the most common accessibility issue on the web!)
-- Preserve [visible keyboard focus indicators](https://webaim.org/techniques/keyboard/).
-- Use [image alt text](https://webaim.org/techniques/alttext/) in your examples.
-- Recommend and use [semantic HTML](https://webaim.org/techniques/semanticstructure/) wherever possible.
-- [Label your form inputs](https://webaim.org/techniques/forms/).
+- Uso adecuado del [contraste en el color](https://webaim.org/articles/contrast/). (¡Este es el problema de accesibilidad más común en la web!)
+- Conservar [indicadores visuales del enfoque del teclado](https://webaim.org/techniques/keyboard/).
+- Usar [textos alternativos en las imágenes](https://webaim.org/techniques/alttext/) en tus ejemplos.
+- Recomienda y usa [HTML semántico](https://webaim.org/techniques/semanticstructure/) donde sea posible.
+- [Añade _labels_ a los _inputs_ de tu formulario](https://webaim.org/techniques/forms/).
 
-For more accessibility help, check out the [A11y Project checklist](https://a11yproject.com/checklist) and [WebAIM](https://webaim.org). You can also check out [tips on creating accessible web apps](https://www.deque.com/blog/accessibility-tips-in-single-page-applications/) heavy on client-side JavaScript.
+Para más ayuda sobre accesibilidad, consulta la [lista de verificación del Proyecto A11y](https://a11yproject.com/checklist) y [WebAIM](https://webaim.org). También puedes consultar los [consejos para crear aplicaciones web accesibles](https://www.deque.com/blog/accessibility-tips-in-single-page-applications/) con mucho JavaScript en el lado del cliente.
 
-## Add your starter to the Gatsby Starter Library
+## Añade tu _starter_ a la Librería de _Starters_ de Gatsby
 
-To make sure your starter is easily discoverable, you are welcome (but not required) to add it to the [Gatsby Starter Library](/contributing/submit-to-starter-library/). Add tags to your starter by first checking for existing ones (like `contentful`, `csv`, etc.), and adding more if needed!
+Para asegurarte de que tu _starter_ es fácilmente localizable, eres bienvenido (pero no requerido) a añadirlo a la [Librería de _Starters_ de Gatsby](/contributing/submit-to-starter-library/). Añade etiquetas a tu _starter_ comprobando primero las existentes (como `contentful`, `csv`, etc.), ¡y añade más si es necesiario!
 
-## Further reading:
+## Otras lecturas:
 
-- [How to create a Gatsby Starter
-  ](https://medium.com/@emasuriano/how-to-create-a-gatsby-starter-e7d53083a880) by Emanuel Suriano
-- [Introducing Gatsby Themes](/blog/2018-11-11-introducing-gatsby-themes/) (including info on starters)
+- [Cómo crear un _Starter_ en Gatsby
+  ](https://medium.com/@emasuriano/how-to-create-a-gatsby-starter-e7d53083a880) por Emanuel Suriano
+- [Introducción a los temas de Gatsby](/blog/2018-11-11-introducing-gatsby-themes/) (ncluye información sobre los _starters_)

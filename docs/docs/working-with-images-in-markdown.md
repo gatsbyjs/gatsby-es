@@ -2,9 +2,11 @@
 title: Trabajando con imágenes en publicaciones y páginas de Markdown
 ---
 
+
 Al crear sitios Gatsby compuestos principalmente por páginas o publicaciones de Markdown, la inserción de imágenes puede mejorar el contenido. Agregar imágenes se puede hacer de múltiples maneras.
 
 ## Imágenes destacadas con metadatos de Frontmatter
+
 
 En sitios como un blog, es posible que desees incluir una imagen destacada que aparece en la parte superior de una página. Una forma de hacerlo es coger el nombre de archivo de la imagen de un campo de _frontmatter_ y luego transformarlo con `gatsby-plugin-sharp` en una consulta GraphQL.
 
@@ -75,7 +77,9 @@ export const query = graphql`
 `
 ```
 
+
 También en la plantilla de publicación Markdown, importa el paquete `gatsby-image` y pasa los resultados de la consulta graphQL a un componente` <Img /> `.
+
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -128,7 +132,9 @@ Tu imagen destacada debería aparecer ahora en la página generada justo debajo 
 
 ## Imágenes en línea con `gatsby-remark-images`
 
+
 Las imágenes también pueden incluirse en el propio cuerpo de Markdown. El complemento [gatsby-remark-images](/packages/gatsby-remark-images) es útil para esto.
+
 
 Comienza instalando `gatsby-remark-images` y `gatsby-plugin-sharp`.
 

@@ -1,35 +1,35 @@
 ---
-title: Adding search with Algolia
+title: Añadiendo un buscador con Algolia
 ---
 
-Once you've added some content to your site, you'll want to make it easy for your visitors to find what they're looking for. This guide will run you through the process of setting up a custom search experience powered by [Algolia](https://www.algolia.com) on any Gatsby site. You'll be writing functional components that rely on React Hooks so following this guide requires you to be using [React 16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0) or higher.
+Una vez que hayas añadido contenido a tu sitio, querrás que tus visitantes encuentren fácilmente lo que están buscando. Esta guía te llevará por el proceso de configurar un experiencia de búsqueda personalizada, soportada por [Algolia](https://www.algolia.com), en cualquier sitio desarrollado con Gatsby. Escribirás componentes funcionales que dependen de _Hooks_ de React, así que, para seguir esta guía, se requiere que uses [React 16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0) o superior.
 
-Two things before you begin:
+Es importante que sepas estas dos cosas antes de que empieces:
 
-1. Beyond this guide, you may also want to checkout Algolia's extensive [docs on how to get started in React](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react).
-2. If you're looking to add search to a documentation site, you can let Algolia handle most of the steps outlined below by using their [Docsearch](https://community.algolia.com/docsearch) functionality. For other types of sites and more fine-grained control over exactly what data should be indexed, read on.
+1. Además de esta guía, también pudieras consultar la extensa [documentación de Algolia sobre cómo iniciar con React](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react).
+2. Si estás buscando añadir un buscador a un sitio de documentación, puedes dejar que Algolia haga la mayoría de pasos indicados abajo usando su funcionalidad [Docsearch](https://community.algolia.com/docsearch). Para sitios de otros tipos y un fino control sobre qué datos exactos deben ser indexados, sigue leyendo.
 
-## Why Use Algolia?
+## ¿Por qué usar Algolia?
 
-Algolia is a site search hosting platform that hosts page index information for you, and then returns the results to wherever you have the site search located on your site. You tell Algolia what pages you have, where they are, and how to navigate to them, and Algolia returns those results to the user based on whatever search terms they use.
+Algolia es una plataforma de alojamiento de buscadores que aloja información del índice de páginas por ti, y retorna los resultados en donde sea que esté la búsqueda de tu sitio. Tú le dices a Algolia qué paginas tienes, dónde están y cómo navegar hacia ellas, y Algolia te devuelve esos resultados basada en cualquier término de búsqueda usado.
 
-To implement Algolia search on your Gatsby site, you'll need to install the plugin, tell it what information to query, provide your Algolia credentials, and a few other configuration steps. This means that after the queries have run when you `gatsby build`, Algolia will have the entire index of your site available and can serve results to users very quickly. To learn more about the benefits of using Algolia, [check out this blog post from Netlify, who recently switched their site search to Algolia](https://www.netlify.com/blog/2017/10/10/replacing-our-search-with-algolia/).
+Para implementar la búsqueda de Algolia en un sitio Gatsby, tendrás que instalar el _plugin_, decirle qué información consultar, proveer tus credenciales de Algolia, y seguir otros pocos pasos de configuración. Esto significa que después de que las consultas se hayan ejecutado cuando haces un `gatsby build`, Algolia tendrá disponible el índice entero de tu sitio y podrá devolver resultados a usuarios rápidamente. Para aprender más acerca de los beneficios de usar Algolia, [revisa este post en el blog de Netlify, quienes recientemente cambiaron el buscador de su sitio al de Algolia](https://www.netlify.com/blog/2017/10/10/replacing-our-search-with-algolia/).
 
-## Configuring the Algolia plugin
+## Configuración del _plugin_ de Algolia
 
-First, you'll need to add [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia) and [`react-instantsearch-dom`](https://github.com/algolia/react-instantsearch) to your project. `react-instantsearch` is Algolia's library containing off-the-shelf React components which you can import to save yourself a lot of work. You'll also be using `dotenv` which gets shipped with Gatsby by default. You're going to need it to specify your Algolia app ID and both the search and admin API keys without committing them to version control.
+En primer lugar, necesitarás añadir [`gatsby-plugin-algolia`](https://github.com/algolia/gatsby-plugin-algolia) y [`react-instantsearch-dom`](https://github.com/algolia/react-instantsearch) a tu proyecto. `react-instantsearch` es la librería de Algolia que contiene componentes React disponibles, los cuales puedes importar para ahorrarte un montón de trabajo. También usarás `dotenv` el cual viene con Gatsby por defecto. Necesitarás especificar tu _app ID_ de Algolia y las _API keys_ de búsqueda y administración sin agregarlas a tu sistema de control de versiones.
 
 ```shell
 npm install --save gatsby-plugin-algolia react-instantsearch-dom algoliasearch dotenv
 ```
 
-You will be using `styled-components` to design the search UI in this guide but you can use whichever CSS solution you prefer. If you'd like to start using `styled-components` as well, you also need to install
+En esta guía usarás `styled-components` para diseñar la interfaz de usuario de la búsqueda pero puedes usar cualquier otra solución de CSS que prefieras. Si también eliges usar `styled-components`, deberás instalarlo.
 
 ```shell
 npm install --save styled-components gatsby-plugin-styled-components
 ```
 
-Next, add `gatsby-plugin-algolia` and `gatsby-plugin-styled-components` to your `gatsby-config.js`.
+Luego, añade `gatsby-plugin-algolia` y `gatsby-plugin-styled-components` a tu `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 const queries = require("./src/utils/algolia")
@@ -39,8 +39,8 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Gatsby+Algolia`,
-    description: `How to setup Algolia search in Gatsby`,
-    author: `<your name>`,
+    description: `Cómo configurar la búsqueda de Algolia en Gatsby`,
+    author: `<tu nombre>`,
   },
   plugins: [
     {
@@ -57,13 +57,13 @@ module.exports = {
 }
 ```
 
-Notice that you're loading `queries` from a file at `./src/utils/algolia.js` (you can of course put it wherever you like) and your Algolia ID and API key from `.env` so let's add those files.
+Nota que estás obteniendo `queries` desde un archivo en `./src/utils/algolia.js` (por su puesto que podrías ponerlo donde desees) y tu _ID de Algolia_ y _API key_ desde `.env`. Así que, creemos esos archivos.
 
-For this, you will need to navigate to [the 'API Keys' section of your Algolia profile](https://www.algolia.com/api-keys). If you already have an account, you will find your API keys here. If not, you will need to sign up for one and then navigate to this link. It should look something like this screenshot, only with actual numbers instead of redacted ones:
+Para esto, necesitas navegar a [la sección 'API Keys' de tu perfil de Algolia](https://www.algolia.com/api-keys). Si ya tienes una cuenta, encontrarás tus _API keys_ ahí. Si no la tienes, necesitarás crear una y luego navegar a ese enlace. Deberá verse como esta captura de pantalla, con la diferencia de que tendrá información real, no como ahora que veremos información redactada a manera de ejemplo:
 
-![algolia api key screenshot](./images/algolia-api-keys.png)
+![captura de pantalla de api key de algolia](./images/algolia-api-keys.png)
 
-Once you have your App ID, Search-Only API Key, and Admin API Key, place the following code into your `.env` file, replacing the placeholder keys with your keys:
+Una vez que tengas tu _App ID_, _Search-Only API Key_ y _Admin API Key_, coloca el siguiente código en tu archivo `.env`, reemplazando la información ficticia con tus llaves reales:
 
 ```text:title=.env
 GATSBY_ALGOLIA_APP_ID=KA4OJA9KAS
@@ -71,22 +71,22 @@ GATSBY_ALGOLIA_SEARCH_KEY=lkjas987ef923ohli9asj213k12n59ad
 ALGOLIA_ADMIN_KEY=lksa09sadkj1230asd09dfvj12309ajl
 ```
 
-The placeholder keys in the previous code snippet are random character sequences but the ones you copy from your Algolia profile should be the same length. One of the benefits of using this method of querying your API keys is that they all get stored in one file, on the server, and are therefore never exposed to the client-side, which increases security.
+Las _keys_ en el código de ejemplo anterior son secuencias de caracteres randómicos, pero las que copies desde tu perfil de Algolia deberán tener la misma longitud. Uno de los beneficios de usar este método para consultar tus _API keys_ es que todas son guardadas en un solo archivo en el servidor, y por lo tanto, nunca son expuestas al lado del cliente, lo cual incrementa la seguridad.
 
-Since your .env file contains your real private API keys, it is considered a security risk to commit your actual `.env` file. It's good practice to commit a `.env.example` to git or other version control so that if someone forks your repo, they know which environment variables they need to supply, without committing your private keys.
+Como tu archivo .env contiene tus _API keys_ reales y privadas, es considerado un riesgo de seguridad hacer _commit_ de tu archivo `.env`. Es una buena práctica hacer _commit_ a git o a cualquier otro sistema de control de versiones de un archivo `.env.example`, así se sabrá qué variables de entorno se deben proveer, sin mostrar tus _keys_ privadas.
 
 ```text:title=.env.example
-# rename this file to .env and supply the values listed below
-# also make sure they are available to the build tool (e.g. Netlify)
-# warning: variables prexifed with GATSBY_ will be made available to client-side code
-# be careful not to expose sensitive data (in this case your Algolia admin key)
+# renombre este archivo como .env y provee los valores listados abajo
+# también asegúrate de que esté disponible para herramientas de compilación (ej: Netlify)
+# advertencia: las variables con el prefijo GATSBY_ serán accesibles desde código del lado del cliente
+# se cuidadoso de no exponer información sensible (en este caso tu 'admin API key' de Algolia)
 
-GATSBY_ALGOLIA_APP_ID=insertValue
-GATSBY_ALGOLIA_SEARCH_KEY=insertValue
-ALGOLIA_ADMIN_KEY=insertValue
+GATSBY_ALGOLIA_APP_ID=ingreseValor
+GATSBY_ALGOLIA_SEARCH_KEY=ingreseValor
+ALGOLIA_ADMIN_KEY=ingreseValor
 ```
 
-The `queries` allow you to grab the data you want Algolia to index directly from Gatsby's GraphQL layer by exporting from `src/utils/algolia.js` an array of objects, each containing a required GraphQL query and an optional index name, transformer function and settings object.
+Las consultas o `queries` (en inglés) te permiten obtener la información que quieras que Algolia indexe directamente desde la capa de GraphQL de Gatsby, exportándolas desde `src/utils/algolia.js` como un arreglo de objetos. Cada objeto está formado por una consulta GraphQL obligatoria y un nombre de índice opcional, una función transformadora (_transformer function_) y un objeto de configuraciones (_settings_).
 
 ```js:title=src/utils/algolia.js
 const pageQuery = `{
@@ -153,26 +153,26 @@ const queries = [
 module.exports = queries
 ```
 
-It might look a little intimidating at first, but basically you're just letting `gatsby-plugin-algolia` know how to acquire the data with which to populate your indices on their servers. The example above uses separate queries passing data to separate indices for pages and blog posts.
+Tal vez se vea un poco intimidante al inicio, pero solamente estás haciéndole saber a `gatsby-plugin-algolia` cómo obtener la información con la cual llenará tus índices en sus servidores. El ejemplo de arriba usa consultas separadas pasando datos a índices separados de páginas y posts del blog.
 
-Transformers allow you to modify the data returned by the queries to bring it into a format ready for searching. All you're doing here is 'flattening' posts and pages to 'unnest' the frontmatter fields (such as `author`, `date`, `tags`) but transformers could do much more for you if required. This makes the whole process of indexing your data really flexible and powerful. You could for instance use them to filter the results of your queries, format fields, add or merge them, etc.
+Los _transformers_ te permiten modificar los datos retornados por las consultas para convertirlos a un formato listo para la búsqueda. Lo que estás haciendo aquí es poner a un mismo nivel los atributos de posts y páginas para _'desanidar'_ los campos de _frontmatter_ (como `author`, `date`, `tags`) pero los _transformers_ pueden hacer mucho más si lo necesitas. Esto hace el proceso de indexado de información bastante flexible y poderoso. Podríamos, por ejemplo, usarlos para filtrar los resultados de tus consultas, formatear campos, añadir otros, unirlos, etc.
 
-If you've come this far, then the "backend" is done. You should now be able to run `gatsby build` and see your indices in Algolia's webinterface be flooded with your data.
+Si has llegado hasta aquí entonces el _"backend"_ está listo. Deberías poder ejecutar `gatsby build` y ver tus índices en la interface web de Algolia llenos con tus datos.
 
-## Adding a search interface to your site
+## Añadir una interfaz de búsqueda a tu sitio
 
-Next, let's build a user-facing search interface for your site. It needs a way for the user to enter a search string, send that string to Algolia, receive matching results (_hits_ in Algolia speak) from your indices and finally display those to the user. Let's dive right in.
+Ahora, vamos a construir una interfaz de búsqueda para el usuario de nuestro sitio. Necesitamos una manera en la que el usuario pueda ingresar una cadena a buscar, enviar esta cadena a Algolia, recibir de los índices los resultados que coincidan con el criterio de búsqueda (llamados _hits_ en lenguaje de Algolia) y finalmente mostrar esos resultados al usuario. Empecemos.
 
-You're going to assemble everything you need into a React `Search` component that you call from anywhere on your site where you want the user to be able to search. Even though design varies strongly from site to site, I'll also go through the styles implemented with [`styled-components`](https://styled-components.com) in this guide since working out the CSS transitions to have the search field slide out as the user clicks on it and the results pane to appear once Algolia returns matches took some time.
+Vamos a montar todo lo que necesitas en un componente de React llamado `Search` que llamarás desde cualquier parte de tu sitio en el que quieras que el usuario pueda realizar una búsqueda. Aunque el diseño varíe bastante de un sitio a otro, se revisará en esta guía los estilos implementados con [`styled-components`](https://styled-components.com) debido a que me tomó algún tiempo hacer que funcionen las transiciones CSS para que la caja de búsqueda se deslice cuando el usuario haga clic sobre ella y mostrar los resultados una vez que Algolia retorne las coincidencias.
 
-The `Search` components is made up of the following files:
+El componente `Search` está formado por los siguientes archivos:
 
-- **`index.js`**: the main component
-- **`input.js`**: the text input field
-- **`hitComps.js`**: the components that will render matching posts/pages
-- **`styles.js`**: the styled components
+- **`index.js`**: el componente principal
+- **`input.js`**: el campo de texto
+- **`hitComps.js`**: los componentes que renderizarán las páginas/posts que coincidan con el criterio de búsqueda
+- **`styles.js`**: los componentes estilizados
 
-There's quite a lot happening in these files so let's break them down one by one and piece by piece.
+Están sucediendo algunas cosas en estos archivos, así que vamos a descomponerlos uno por uno, pieza por pieza.
 
 ### `index.js`
 
@@ -250,24 +250,24 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
 }
 ```
 
-At the top, you import `InstantSearch` from [`react-instantsearch-dom`](https://community.algolia.com/react-instantsearch) which is the root component that allows your whole search experience to connect to Algolia's service. As the name suggests, `Index` allows you to tap into an individual index and `Hits` provides you with the data returned for a user's search input. Finally [`connectStateResults`](https://community.algolia.com/react-instantsearch/connectors/connectStateResults.html) wraps around custom React components and provides them with high-level stats about the current search state such as the query, the number of results and how long it took to fetch them.
+En la parte superior, importas `InstantSearch` de [`react-instantsearch-dom`](https://community.algolia.com/react-instantsearch) el cual es el componente raíz que permite conectar toda tu experiencia de búsqueda con el servicio de Algolia. Como el nombre lo indica, `Index` te permite acceder a un índice individual y `Hits` te provee de la información retornada, relacionada a la búsqueda del usuario. Finalmente [`connectStateResults`](https://community.algolia.com/react-instantsearch/connectors/connectStateResults.html) envuelve a componentes personalizados de React y los provee con estadísticas de alto nivel sobre la búsqueda actual como: la consulta, el número de resultados y cuánto tiempo tomó obtenerlas.
 
-You then import the styled components that make up the UI and the `Input` component into which the user enters the query.
+Luego importas los componentes estilizados que componen la interfaz de usuario y el componente `Input` en el cual el usuario ingresa la consulta.
 
 ```js:title=src/components/search/index.js
 import { Root, SearchBox, HitsWrapper, PoweredBy } from "./styles"
 import Input from "./Input"
 ```
 
-`PoweredBy` renders the string "Powered by Algolia" with a small logo and link. If you're using Algolia's generous free tier, they ask you to acknowledge them in this way below the search results. `react-instantsearch-dom` also provides a [`PoweredBy` component](https://community.algolia.com/react-instantsearch/widgets/PoweredBy.html) specifically for this purpose but I preferred to build my own. You'll get back to these styled components once you're done with `index.js`. For now, let's move on.
+`PoweredBy` renderiza la cadena "Powered by Algolia" con un pequeño logo y link. Si estás usando la generosa cuenta gratuita de Algolia, ellos te piden que los menciones de esta manera debajo de los resultados de búsqueda. `react-instantsearch-dom` también provee un [componente de `PoweredBy`](https://community.algolia.com/react-instantsearch/widgets/PoweredBy.html) específicamente para este propósito, pero yo prefiero construir el mío. Regresaremos a estos componentes estilizados una vez que hayamos terminado con `index.js`. Por ahora, continuemos.
 
-The last thing you need for the `Search` component to work are hit components for every type of result you want to display to the user. The hit component determines how attributes of matching results (such as author, date, tags and title in the case of a blog post) are displayed to the user.
+Lo último que necesitas para que el componente `Search` funcione, es usar componentes _hit_ para cada tipo de resultado que quieres mostrar al usuario. El componente _hit_ determina cómo los atributos de los resultados (como autor, fecha, etiquetas y título en el caso del post del blog) son mostrados al usuario.
 
 ```js:title=src/components/search/index.js
 import * as hitComps from "./hitComps"
 ```
 
-Next you define two connected components. `Results` informs the user that no matches could be found for a query unless the number of hits is positive, i.e. `searchResults.nbHits > 0`. `Stats` just displays `searchResults.nbHits`.
+A continuación definirás dos componentes conectados. `Results` informará al usuario que no se encontraron coincidencias para la consulta, a menos que, el número de _hits_ sea positivo, es decir, si `searchResults.nbHits > 0`. `Stats` mostrará `searchResults.nbHits`.
 
 ```js:title=src/components/search/index.js
 const Results = connectStateResults(
@@ -281,7 +281,7 @@ const Stats = connectStateResults(
 )
 ```
 
-Now comes the actual `Search` component. It starts off with some state initialization, defining handler functions and event listeners to trigger them. All they do is make the search input slide out when the user clicks a search icon and disappear again when the user clicks or touches (on mobile) anywhere.
+Ahora trabajaremos en el verdadero componente de búsqueda `Search`. Este empieza con algunas inicializaciones de estados, definiciones de funciones para manejar eventos. Todo lo que hace este código es deslizar hacia afuera el cuadro de texto de la búsqueda cuando el usuario hace clic en el ícono de buscar y lo desaparece de nuevo cuando el usuario hace clic o toca la pantalla(en móviles) en otra parte.
 
 ```js:title=src/components/search/index.js
 export default function Search({ indices, collapse, hitsAsGrid }) {
@@ -307,7 +307,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
   })
 ```
 
-`Search` returns JSX that renders a dynamic array of `indices` passed as a prop. Each array item should be an object with keys `name`, `title`, `hitComp` that specifies the name of the index in your Algolia account to be queried, the title to display above the results shown to the user and the component `hitComp` that renders the data returned for each match.
+`Search` devuelve JSX que renderiza un arreglo dinámico de `indices` pasados como _prop_. Cada ítem del arreglo debe ser un objeto con llaves como `name`, `title`, `hitComp`. El `name` especifica el índice a ser consultado en tu cuenta de Algolia, el `title` es el título a mostrar encima de los resultados que verá el usuario y `hitComp` el componente _hit_ que renderiza los datos devueltos por cada coincidencia.
 
 ```js:title=src/components/search/index.js
   return (
@@ -337,9 +337,9 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
 }
 ```
 
-Passing this `indices` array as a prop allows you to reuse the same `Search` component in different parts of your site and have each of them query different indices. As an example, besides a primary search box in the header used for finding pages and/or posts, your site might have a wiki and you want to offer your visitors a second search box that displays only wiki articles.
+Pasar este arreglo de `indices` como un prop, permite reusar el mismo componente de búsqueda `Search` en diferentes partes del sitio y además permite que cada uno de ellos consulte diferentes índices. Por ejemplo, aparte de tener una caja de búsqueda principal en la cabecera del sitio para encontrar páginas y/o posts, tal vez quisieras tener una wiki en tu sitio y ofrecer a tus visitantes una segunda caja de búsqueda que muestre solo resultados de la wiki.
 
-Note that you fed `algoliasearch` with the same app ID you specified in our `.env` file and used in `src/utils/algolia.js` as well as with your search-only API key to generate a search client which connects to your backend. _Don't paste in your Algolia admin API key here!_ `algoliasearch` only needs to _read_ your indices. Pasting your admin key here would allow others to obtain it once your site is deployed. They could then start messing with your indexed data on Algolia.
+Nota que usaste el mismo _app ID_ en `algoliasearch` que especificaste en el archivo `.env` y que fue usado también en `src/utils/algolia.js` así como tu _search-only API key_ para generar una búsqueda en el cliente que conecta con tu _backend_. _¡No copies tu admin API key de Algolia aquí!_ `algoliasearch` solo necesita _leer_ tus índices. Pegar tu _admin key_ aquí permitirá que otros la obtengan cuando tu sitio sea desplegado. Y alguien podría empezar a meterse en tus datos indexados en Algolia.
 
 ## `input.js`
 
@@ -363,9 +363,9 @@ export default connectSearchBox(({ refine, ...rest }) => (
 ))
 ```
 
-The `Input` component is where the user enters the search string. It is quite short since the grunt work is done by Algolia's [`connectSearchBox`](https://community.algolia.com/react-instantsearch/connectors/connectSearchBox.html) function.
+El componente `Input` es donde el usuario ingresa la cadena de búsqueda. Este es relativamente corto ya que el trabajo duro es realizado por Algolia en la función [`connectSearchBox`](https://community.algolia.com/react-instantsearch/connectors/connectSearchBox.html).
 
-Now let's look at the styled components `SearchIcon`, `Form`, `Input` as well as the ones imported in `index.js`.
+Ahora, vamos a echar un vistazo a los componentes estilizados `SearchIcon`, `Form`, `Input` así como a los que han sido importados en `index.js`.
 
 ## `styles.js`
 
@@ -429,7 +429,7 @@ export const Input = styled.input`
   background: transparent;
   transition: ${props => props.theme.shortTrans};
   border-radius: ${props => props.theme.smallBorderRadius};
-  {hightlight-next-line}
+  {highlight-next-line}
   ${props => (props.collapse ? collapse : expand)};
 `
 
@@ -503,9 +503,9 @@ export const PoweredBy = () => (
 )
 ```
 
-Styles will of course be different from one site to the next so I only list these components here for completeness and because they implement the dynamic behavior of the search interface, i.e. that the input field only slides out once the user clicks the `SearchIcon` (a magnifier) and that the pane displaying search (`HitsWrapper`) results only appears once Algolia's server returned matches, both of you which you might want to keep.
+Los estilos variarán de un sitio a otro, se muestran estos componentes solamente para tener la guía completa y además porque implementan comportamiento dinámico de la interfaz de búsqueda, me refiero al cuadro de texto que se desliza una vez que el usuario hace clic sobre el ícono `SearchIcon` (una lupa) y el panel que muestra los resultados de la búsqueda (`HitsWrapper`) que sólo aparece cuando los servidores de Algolia han retornado las coincidencias, dos funcionalidades que tal vez te interese conservar en tu código.
 
-Now you're almost done, two small steps remain. First you need to put together a hit component for every type of result you want to display. In this example, these are blog posts and pages. And second, you need to call your `Search` component somewhere on your site. Here are the hit components.
+Ya casi hemos finalizado, solo faltan dos pequeños pasos. Primero necesitas construir un componente _hit_ para cada tipo de resultado que desees mostrar. En el ejemplo a continuación, encontrarás posts del blog y páginas. Y segundo, necesitas llamar a tu componente de búsqueda `Search` en algún lado de tu sitio. A continuación, puedes ver los componentes _hit_.
 
 ## `hitComps.js`
 
@@ -553,11 +553,11 @@ export const PostHit = clickHandler => ({ hit }) => (
 )
 ```
 
-`Highlight` and `Snippet` imported from `react-instantsearch-dom` both display attributes of matching search results to the user. Their distinction is that the former renders it in full (e.g. a title, date or list of tags) whereas the latter only shows a snippet, i.e. a text passage of given length surrounding the matching string (e.g. for body texts). In each case the `attribute` prop should be the name of the property as it was assigned in `src/utils/algolia.js` and as it appears in your Aloglia indices.
+`Highlight` y `Snippet` importados desde `react-instantsearch-dom` muestran al usuario atributos de resultados de coincidencias de búsquedas. Su diferencia es que el primero renderiza todo el texto (por ejemplo un título, fecha o etiqueta), mientras que el segundo solo muestra un fragmento del texto, es decir, un texto de un largo específico rodeando la cadena de coincidencia (para párrafos por ejemplo). En cada caso, el prop `attribute` deberá ser el nombre de la propiedad como fue asignada en `src/utils/algolia.js` y como aparece en tus índices del Algolia.
 
-## Usage
+## Uso
 
-Now all you need to do is import `Search` somewhere. The obvious place is the `Header` component so let's add it there.
+Ahora, todo lo que se necesita es importar `Search` en algún lugar. El lugar obvio es el componente cabecera llamado `Header` así que, coloquémoslo ahí.
 
 ```js:title=src/components/Header/index.js
 import React from "react"
@@ -582,16 +582,16 @@ const Header = ({ site, transparent }) => (
 export default Header
 ```
 
-Note that this is where you define your array of search indices and pass it as a prop to `Search`.
+Nota que aquí es donde defines tu arreglo de índices de búsqueda y lo pasas como _prop_ a `Search`.
 
-If everything works as expected, running `gatsby develop` should now give you some instant search magic looking something like in the video below! You can also play around with it [here](https://janosh.io/blog).
+¡Si todo funciona como esperamos, al ejecutar `gatsby develop` deberías ver la magia de la búsqueda instantánea como se muestra en el video de abajo! Además puedes mirar y jugar con el buscador implementado [aquí](https://janosh.io/blog).
 
 `youtube: Amsub4xJ3Jc`
 
-## Additional Resources
+## Recursos adicionales
 
-If you have any issues or if you want to learn more about using Algolia for search, check out this tutorial from Jason Lengstorf:
+Si tienes algún problema o si quieres aprender más acerca del uso de Algolia para búsquedas, puedes mirar este tutorial de Jason Lengstorf:
 
 `youtube: VSkXyuXzwlc`
 
-You can also find stories of companies using Gatsby + Algolia together [in the Algolia section of the blog](/blog/tags/algolia).
+Además, también puedes encontrar historias de compañías que usan Gatsby + Algolia [en la sección del blog de Algolia](/blog/tags/algolia).

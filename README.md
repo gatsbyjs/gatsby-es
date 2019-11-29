@@ -6,10 +6,10 @@ Esta es la traducción oficial en español de la documentación de Gatsby.
 
 - [¿Cómo contribuir? 🤔](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD)
 - [Guía de estilos y glosario 💅](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md)
-- [Quiero ser mantenedor](https://github.com/gatsbyjs/gatsby-es/blob/master/MAINTAINERS.MD) 🧙‍
-- [Swag gratis por contribuciones a las traducciones](https://www.gatsbyjs.org/contributing/contributor-swag/) ✨
+- [Quiero ser mantenedor 🧙‍](https://github.com/gatsbyjs/gatsby-es/blob/master/MAINTAINERS.MD)
+- [Swag gratis por contribuciones a las traducciones ✨](https://www.gatsbyjs.org/contributing/contributor-swag/)
 
-## ¿Donde empezar? 🤔
+## ¿Dónde empezar? 🤔
 
 Puedes ir directamente al [issue de traducciones](https://github.com/gatsbyjs/gatsby-es/issues/97) y pedir una página que quieras traducir y el equipo te la asignará, pero te recomendamos que leas detenidamente [las instrucciones](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD) donde damos con más detalle los pasos, posibles preguntas que tengas y enlaces de utilidad 💅
 

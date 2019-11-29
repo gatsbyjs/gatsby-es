@@ -1,19 +1,19 @@
 ---
-title: Answering IT & Security Questions
+title: Respuestas a preguntas sobre TI y seguridad
 ---
 
-At larger companies, such as the Fortune 500, there are Security teams that audit new technologies being used inside the company.
+En grandes compañías, como la de Fortune 500, operan equipos de seguridad que auditan las nuevas tecnologías que se estén incorporando a la compañía.
 
-If security engineers are interested in your project, some talking points that can help answer their questions include:
+Aquí puedes encontrar algunos puntos de referencia que te podrían ayudar a responder a algunas preguntas que los ingenieros de seguridad te hagan en caso que estén interesados en tu proyecto:
 
-- Because Gatsby compiles your site to flat files, rather than having running app servers and databases users are targeting, it reduces the attack surface of the site to outsiders.
-- Gatsby adds a layer of indirection which obscures your CMS -- so even if your CMS _is_ vulnerable, bad actors have no idea where to find it. This is in contrast to systems where bad actors can easily locate the admin dashboard at, eg, `/wp-admin` and attempt to hack in.
-- Gatsby lets you serve your site from a global CDN, likely whatever CDN your company is using (eg Akamai, Cloudflare, Fastly...), which effectively eliminates the risk of DDOS attacks.
+- Dado que Gatsby compila tu sitio en archivos planos, en lugar de tener que ejecutar servidores y bases de datos a las que se dirigen los usuarios, se reduce la superficie de ataque del sitio frente a intrusos.
+- Gatsby agrega una capa de indirección que esconde tu CMS -- por lo que incluso si tu CMS _es_ vulnerable, los agentes malintencionados no tendrán idea de dónde encontrarlo. Esto contrasta con otros sistemas en los que los agentes malintencionados pueden localizar fácilmente el panel de control de administración en, por ejemplo, `/wp-admin` e intentar hackearlo.
+- Gatsby te permite servir tu sitio Web a través de una CDN global, sin importar qué CDN esté utilizando tu empresa (por ejemplo, Akamai, Cloudflare, Fastly...), lo que elimina eficazmente el riesgo de ataques DDOS.
 
-It's helpful to emphasize to security personnel that these benefits were a factor in why Gatsby was selected for the project. You chose Gatsby, in part, because it is _more_ secure.
+Es útil recalcar al personal de seguridad que estos beneficios fueron factores que motivaron a que se seleccionara a Gatsby para el proyecto. Has escogido a Gatsby, en parte, porque es _más_ seguro.
 
-Read about security in Gatsby: [https://www.gatsbyjs.org/blog/2019-04-06-security-for-modern-web-frameworks/](/blog/2019-04-06-security-for-modern-web-frameworks/)
+Más información sobre la seguridad en Gatsby: [https://www.gatsbyjs.org/blog/2019-04-06-security-for-modern-web-frameworks/](/blog/2019-04-06-security-for-modern-web-frameworks/)
 
 --
 
-**Note:** do you have additional ideas on how to answer IT and security questions for Gatsby projects? We welcome contributions to the Gatsby docs. Find out [how to contribute](/contributing/docs-contributions/).
+**Nota:** ¿Tienes ideas adicionales sobre cómo contestar preguntas sobre TI y seguridad relacionadas con los proyectos Gatsby? Aceptamos con gusto contribuciones a las documentaciones de Gatsby. Descubre [cómo contribuir](/contributing/docs-contributions/).
