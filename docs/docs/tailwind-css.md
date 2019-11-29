@@ -2,54 +2,54 @@
 title: Tailwind CSS
 ---
 
-Tailwind is a utility-first CSS framework for rapidly building custom user interfaces. This guide will show you how to get started with Gatsby and [Tailwind CSS](https://tailwindcss.com/).
+Tailwind es un _framework_ CSS, tipo _utility-first_, para crear rápidamente interfaces de usuario personalizadas. Esta guía te mostrará cómo comenzar a usar Gatsby y [Tailwind CSS](https://tailwindcss.com/).
 
-## Overview
+## Visión general
 
-There are two ways you can use Tailwind with Gatsby:
+Hay dos formas de usar Tailwind con Gatsby:
 
-1. Standard: Use PostCSS to generate Tailwind classes, then you can apply those classes using `className`.
-2. CSS-in-JS: Integrate Tailwind classes into Styled Components.
+1. Estándar: usa PostCSS para generar clases de Tailwind, luego podrás aplicar esas clases usando `className`.
+2. CSS-in-JS: integra clases de Tailwind en componentes con estilo.
 
-You have to install and configure Tailwind for both of these methods, so this guide will walk through that step first, then you can follow the instructions for either PostCSS or CSS-in-JS.
+Para ambos métodos, deberás instalar y configurar Tailwind, por lo que esta guía te guiará primero por ese paso, luego podrás seguir las instrucciones para PostCSS o CSS-in-JS.
 
-## Installing and Configuring Tailwind
+## Instalar y configurar Tailwind
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [**Quick Start guide**](/docs/quick-start), then come back.
+Esta guía asume que tienes un proyecto Gatsby configurado. Si necesitas configurar un proyecto, dirígete a la [**Guía de inicio rápido**](/docs/quick-start), y luego regresa.
 
-1. Install Tailwind
+1. Instala Tailwind
 
 ```shell
 npm install tailwindcss --save-dev
 ```
 
-2. Generate Tailwind config file (optional)
+2. Genera el archivo de configuración de Tailwind (opcional)
 
-**Note**: A config file isn't required for Tailwind 1.0.0+
+**Nota**: No se requiere un archivo de configuración para Tailwind 1.0.0+
 
-To configure Tailwind, we'll need to add a Tailwind configuration file. Luckily, Tailwind has a built-in script to do this. Just run the following command:
+Para configurar Tailwind, necesitaremos agregar un archivo de configuración de Tailwind. Afortunadamente, Tailwind tiene un script incorporado para hacer esto. Simplemente ejecuta el siguiente comando:
 
 ```shell
 npx tailwind init
 ```
 
-### Option #1: PostCSS
+### Opción #1: PostCSS
 
-1.  Install the Gatsby PostCSS plugin [**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss).
+1.  Instala el plugin Gatsby PostCSS [**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss).
 
 ```shell
 npm install --save gatsby-plugin-postcss
 ```
 
-2.  Include the plugin in your `gatsby-config.js` file.
+2.  Incluye el plugin en tu archivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-postcss`],
 ```
 
-3. Configure PostCSS to use Tailwind
+3. Configura PostCSS para usar Tailwind
 
-Create a postcss.config.js in your project's root folder with the following contents.
+Crea un postcss.config.js en la carpeta raíz de tu proyecto con los siguientes contenidos.
 
 ```javascript:title=postcss.config.js
 module.exports = () => ({
@@ -57,27 +57,27 @@ module.exports = () => ({
 })
 ```
 
-4. Use the Tailwind Directives in your CSS
+4. Usa las directivas de Tailwind en tu CSS
 
-You can now use the `@tailwind` directives to add Tailwind's utilities, preflight, and components into your CSS. You can also use `@apply` and all of Tailwind's other directives and functions!
+Ahora puede usar las directivas `@tailwind` para agregar las utilidades, la verificación previa y los componentes de Tailwind a tu CSS. ¡También puedes usar `@apply` y todas las demás directivas y funciones de Tailwind!
 
-To learn more about how to use Tailwind in your CSS, visit the [Tailwind Documentation](https://tailwindcss.com/docs/installation#3-use-tailwind-in-your-css)
+Para obtener más información sobre cómo usar Tailwind en tu CSS, visita la [Documentación de Tailwind](https://tailwindcss.com/docs/installation#3-use-tailwind-in-your-css)
 
-### Option #2: CSS-in-JS
+### Opción #2: CSS-in-JS
 
-These steps assume you have a CSS-in-JS library already installed, and the examples are based on Styled Components.
+Estos pasos suponen que ya tienes instalada una biblioteca CSS-in-JS, y los ejemplos se basan en componentes con estilo.
 
-1. Install Tailwind Babel Macro
+1. Instala Tailwind Babel Macro
 
-**Note**: `tailwind.macro` isn't currently compatible with Tailwind 1.0.0+. However, a compatible beta is available at `tailwind.macro@next`. Feel free to either use the beta or revert to TailwindCSS 0.7.4.
+**Nota**: Actualmente, `tailwind.macro` no es compatible con Tailwind 1.0.0+. Sin embargo, hay una versión beta compatible, disponible en `tailwind.macro@next`. Ten la libertad de usar la versión beta o volver a TailwindCSS 0.7.4.
 
-**Option 1**: Install `tailwind.macro@next` and use Tailwind 1.0.0+
+**Opción 1**: Instala `tailwind.macro@next` y usa Tailwind 1.0.0+
 
 ```shell
 npm install --save tailwind.macro@next
 ```
 
-**Option 2**: Install stable `tailwind.macro` and use Tailwind 0.7.4
+**Opción 2**: Instala `tailwind.macro` estable y usa Tailwind 0.7.4
 
 ```bash
 // Remove tailwind 1.0.0+ if you've already installed it
@@ -88,13 +88,13 @@ npm install tailwindcss@0.7.4
 npm install tailwind.macro
 ```
 
-2. Use the Babel Macro (tailwind.macro) in your styled component
+2. Usa Babel Macro (tailwind.macro) en tu componente con estilo
 
 ```javascript
 import styled from "styled-components"
 import tw from "tailwind.macro"
 
-// All versions
+// Todas las versiones
 const Button = styled.button`
   ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
 `
@@ -105,8 +105,8 @@ const Button = tw.button`
 `
 ```
 
-## Other resources
+## Otros recursos
 
-- [Introduction to PostCSS](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
-- [Tailwind Documentation](https://tailwindcss.com/)
-- [Gatsby starters that use Tailwind](/starters/?c=Styling%3ATailwind&v=2)
+- [Introducción a PostCSS](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
+- [Documentación de Tailwind](https://tailwindcss.com/)
+- [*Starters* de Gatsby que usan Tailwind](/starters/?c=Styling%3ATailwind&v=2)
