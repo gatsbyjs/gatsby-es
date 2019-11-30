@@ -18,7 +18,7 @@ Para crear rutas solo para el lado del cliente, agrega el siguiente código al a
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
-  // page.matchPath es una calve especial que se utiliza para hacer coincidir páginas
+  // page.matchPath es una clave especial que se utiliza para hacer coincidir páginas
   // solo en el cliente.
   if (page.path.match(/^\/app/)) {
     page.matchPath = "/app/*"
