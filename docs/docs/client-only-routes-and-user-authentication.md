@@ -14,7 +14,7 @@ Para crear rutas solo para el lado del cliente, agrega el siguiente código al a
 
 ```javascript:title=gatsby-node.js
 // Implementa la API “onCreatePage” de Gatsby. Esto se
-// llama después de que cada página se carga.
+// llama después de crear cada página.
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
 
