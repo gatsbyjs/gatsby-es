@@ -8,7 +8,7 @@ Un ejemplo clásico sería un sitio que tiene una página de destino, varias pá
 
 Gatsby usa [@reach/router](https://reach.tech/router/) debajo del capó. Deberías usar @reach/router para crear rutas solo para el lado del cliente.
 
-Estas rutas existirán sólo en el lado del cliente y no se corresponderán con archivos index.html en activos construidos por una aplicación. Si deseas que los usuarios del sitio puedan visitar las rutas de los clientes directamente, deberás configurar tu servidor para manejar esas rutas de manera adecuada.
+Estas rutas existirán sólo en el lado del cliente y no se corresponderán con archivos index.html en los recursos construidos por una aplicación. Si deseas que los usuarios del sitio puedan visitar las rutas de los clientes directamente, deberás configurar tu servidor para manejar esas rutas de manera adecuada.
 
 Para crear rutas solo para el lado del cliente, agregua el siguiente código al archivo `gatsby-node.js` de tu sitio:
 
