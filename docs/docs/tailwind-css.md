@@ -88,7 +88,7 @@ npm install tailwindcss@0.7.4
 npm install tailwind.macro
 ```
 
-2. Usa Babel Macro (tailwind.macro) en tu componente con estilo
+2. Usa el Macro de Babel (tailwind.macro) en tu componente con _Styled Components_
 
 ```javascript
 import styled from "styled-components"
