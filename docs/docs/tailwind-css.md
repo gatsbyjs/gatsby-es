@@ -8,7 +8,7 @@ Tailwind es un _framework_ CSS, del tipo _utility-first_, para crear rápidament
 
 Hay dos formas de usar Tailwind con Gatsby:
 
-1. Estándar: usa PostCSS para generar clases de Tailwind, luego podrás aplicar esas clases usando `className`.
+1. Estándar: Usa PostCSS para generar clases de Tailwind, luego podrás aplicar esas clases usando `className`.
 2. CSS-in-JS: integra clases de Tailwind en componentes con estilo.
 
 Para ambos métodos, deberás instalar y configurar Tailwind, por lo que esta guía te guiará primero por ese paso, luego podrás seguir las instrucciones para PostCSS o CSS-in-JS.
