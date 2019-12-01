@@ -67,7 +67,7 @@ Para obtener más información sobre cómo usar Tailwind en tu CSS, visita la [D
 
 Estos pasos suponen que ya tienes instalada una biblioteca CSS-in-JS, y los ejemplos se basan en componentes con estilo.
 
-1. Instala Tailwind Babel Macro
+1. Instala el Macro de Babel para Tailwind
 
 **Nota**: Actualmente, `tailwind.macro` no es compatible con Tailwind 1.0.0+. Sin embargo, hay una versión beta compatible, disponible en `tailwind.macro@next`. Ten la libertad de usar la versión beta o volver a TailwindCSS 0.7.4.
 
