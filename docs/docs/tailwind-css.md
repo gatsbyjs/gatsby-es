@@ -59,7 +59,7 @@ module.exports = () => ({
 
 4. Usa las directivas de Tailwind en tu CSS
 
-Ahora puede usar las directivas `@tailwind` para agregar las utilidades, la verificación previa y los componentes de Tailwind a tu CSS. ¡También puedes usar `@apply` y todas las demás directivas y funciones de Tailwind!
+Ahora puedes usar las directivas `@tailwind` para agregar las utilidades de Tailwind, la verificación previa y los componentes a tu CSS. ¡También puedes usar `@apply` y todas las demás directivas y funciones de Tailwind!
 
 Para obtener más información sobre cómo usar Tailwind en tu CSS, visita la [Documentación de Tailwind](https://tailwindcss.com/docs/installation#3-use-tailwind-in-your-css)
 
