@@ -2,7 +2,7 @@
 title: Tailwind CSS
 ---
 
-Tailwind es un _framework_ CSS, tipo _utility-first_, para crear rápidamente interfaces de usuario personalizadas. Esta guía te mostrará cómo comenzar a usar Gatsby y [Tailwind CSS](https://tailwindcss.com/).
+Tailwind es un _framework_ CSS, del tipo _utility-first_, para crear rápidamente interfaces de usuario personalizadas. Esta guía te mostrará cómo comenzar a usar Gatsby y [Tailwind CSS](https://tailwindcss.com/).
 
 ## Visión general
 
