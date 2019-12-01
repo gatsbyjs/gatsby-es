@@ -1,19 +1,19 @@
 ---
-title: How Gatsby Can Boost Your Career
+title: Cómo puede Gatsby impulsar tu carrera
 ---
 
-If you're a developer, and you've come to this section looking for tips about spreading Gatsby in your organization, your main motive is probably the ability to work more with a tool you love.
+Si eres desarrollador y has venido a esta sección en busca de consejos sobre cómo difundir Gatsby en tu organización, es probable que tu motivo principal sea la capacidad de poder trabajar más con una herramienta que te encanta.
 
-One, unintended, side effect: this is also good for your career.
+Un efecto secundario indeliberado: esto también es bueno para tu carrera.
 
-As you ship Gatsby sites and get [other developers](/docs/winning-over-developers), [engineering leaders](/docs/winning-over-engineering-leaders), [marketers](/docs/winning-over-marketers) and [executives](/docs/winning-over-executives), and [clients](/docs/winning-over-executives) excited about Gatsby, you'll notice that you gain visibility, a reputation for driving results and business value.
+A medida que entregas sitios Gatsby y logras que [otros desarrolladores](/docs/winning-over-developers), [líderes de ingeniería](/docs/winning-over-engineering-leaders), [personal de mercadeo](/docs/winning-over-marketers) y [ejecutivos](/docs/winning-over-executives), y [clientes](/docs/winning-over-executives) se entusiasmen con Gatsby, notarás que ganas visibilidad, una reputación por impulsar resultados y valor comercial.
 
-> Some insight on driving results forward from prominent React developer, Ryan Florence: https://twitter.com/ryanflorence/status/1104060348363988992
+> Una idea sobre cómo impulsar los resultados, de parte del destacado desarrollador de React, Ryan Florence: https://twitter.com/ryanflorence/status/1104060348363988992
 
-In general, great engineering career opportunities often lie in developing expertise in new, rapidly emerging systems and technologies -- there are fewer established domain experts in these fields, room to carve out a personal brand as an expert, and an ever-growing demand for expertise.
+En general, las grandes oportunidades en carreras de ingeniería residen, a menudo, en desarrollar experiencia en sistemas y tecnologías nuevos y rápidamente emergentes: hay menos expertos en dominios establecidos en estos campos, espacio para crear una marca personal como experto y una demanda cada vez mayor de experiencia.
 
-For an inspiring story on how Gatsby has already transformed someone's career, read our [interview with Ahmed Alahmady](/blog/2019-05-03-how-gatsby-helped-jump-start-my-engineering-career/) on the Gatsby blog.
+Para conocer una historia inspiradora sobre cómo Gatsby ya ha transformado la carrera de alguien, lee nuestra [entrevista con Ahmed Alahmady](/blog/2019-05-03-how-gatsby-helped-jump-start-my-engineering-career/) en el blog de Gatsby.
 
 --
 
-**Note:** do you have more ideas on how Gatsby can boost your career? We welcome contributions to this page. Find out [how to contribute](/contributing/docs-contributions/).
+**Nota:** ¿Tienes más ideas sobre cómo Gatsby puede impulsar tu carrera? Agradecemos las contribuciones a esta página. Descubre [cómo contribuir](/contributing/docs-contributions/).
