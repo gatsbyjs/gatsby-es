@@ -6,7 +6,7 @@ Si eres desarrollador y has venido a esta sección en busca de consejos sobre c�
 
 Un efecto secundario, no intencional: esto también es bueno para tu carrera.
 
-A medida que entregas sitios Gatsby y logras que [otros desarrolladores](/docs/winning-over-developers), [líderes de ingeniería](/docs/winning-over-engineering-leaders), [personal de mercadeo](/docs/winning-over-marketers) y [ejecutivos](/docs/winning-over-executives), y [clientes](/docs/winning-over-executives) se entusiasmen con Gatsby, notarás que ganas visibilidad, una reputación por impulsar resultados y valor comercial.
+A medida que entregas sitios Gatsby y logras que [otros desarrolladores](/docs/winning-over-developers), [líderes de ingeniería](/docs/winning-over-engineering-leaders), [personal de _marketing_](/docs/winning-over-marketers) y [ejecutivos](/docs/winning-over-executives), y [clientes](/docs/winning-over-executives) se entusiasmen con Gatsby, notarás que ganas visibilidad, una reputación por impulsar resultados y valor comercial.
 
 > Una idea sobre cómo impulsar los resultados, de parte del destacado desarrollador de React, Ryan Florence: https://twitter.com/ryanflorence/status/1104060348363988992
 
