@@ -4,7 +4,7 @@ title: Cómo puede Gatsby impulsar tu carrera
 
 Si eres desarrollador y has venido a esta sección en busca de consejos sobre cómo difundir Gatsby en tu organización, es probable que tu motivo principal sea la capacidad de poder trabajar más con una herramienta que te encanta.
 
-Un efecto secundario indeliberado: esto también es bueno para tu carrera.
+Un efecto secundario, no intencional: esto también es bueno para tu carrera.
 
 A medida que entregas sitios Gatsby y logras que [otros desarrolladores](/docs/winning-over-developers), [líderes de ingeniería](/docs/winning-over-engineering-leaders), [personal de mercadeo](/docs/winning-over-marketers) y [ejecutivos](/docs/winning-over-executives), y [clientes](/docs/winning-over-executives) se entusiasmen con Gatsby, notarás que ganas visibilidad, una reputación por impulsar resultados y valor comercial.
 
