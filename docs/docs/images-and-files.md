@@ -1,9 +1,9 @@
 ---
-title: Images, Files, and Video in Gatsby
+title: Imágenes, archivos y video en Gatsby
 ---
 
-Gatsby provides multiple solutions for adding images, video, and files to your projects. And a pro tip: you don't necessarily have to use GraphQL! From [imports](/docs/importing-assets-into-files/) and use of the [static folder](/docs/static-folder/) to dynamic queries with [Gatsby Image](/docs/using-gatsby-image/) to prevent image bloat, you've got options.
+Gatsby te ofrece múltiples soluciones para agregar imágenes, videos y archivos a tus proyectos. Y un consejo profesional: ¡no necesariamente tienes que usar GraphQL! Desde las [importaciones](/docs/importing-assets-into-files/) y el uso de la [carpeta estática](/docs/static-folder/) hasta las consultas dinámicas con [Gatsby Image](/docs/using-gatsby-image/) para evitar la inflar de la imagen, tienes opciones.
 
-This section will walk you through several common patterns for handling media with Gatsby, where you can learn about the pros and cons of each method.
+Esta sección te guiará a través de varios patrones comunes para manejar medios con Gatsby, donde puedes conocer los pros y los contras de cada método.
 
 <GuideList slug={props.slug} />
