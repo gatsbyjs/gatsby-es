@@ -134,8 +134,4 @@ creado para dar soporte a esta guía.
 - [Publicación en la que se basa esta guía](/blog/2018-01-22-getting-started-gatsby-and-wordpress/)
 - [Video tutoriales "Watch + Learn"](http://watch-learn.com/series/gatsbyjs-wordpress)
 - [Otra publicación sobre el uso de Gatsby con WordPress](https://indigotree.co.uk/how-use-wordpress-headless-cms/)
-<<<<<<< HEAD
 - Más [Publicaciones en el blog de Gatsby sobre Gatsby + WordPress](/blog/tags/wordpress/)
-=======
-- Más [Publicaciones en el blog de Gatsby sobre Gatsby + WordPress](/blog/tags/wordpress/)
->>>>>>> try-rebase
