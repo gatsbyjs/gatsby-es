@@ -55,17 +55,10 @@ Este evento recurrente toma lugar cada miércoles a las 8:30 AM Hora estándar d
 
 ### Stack Overflow
 
-<<<<<<< HEAD
 Muchos miembros de la comunidad usan Stack Overflow para hacer preguntas. Lee
 las [preguntas existentes](http://stackoverflow.com/questions/tagged/gatsby)
 etiquetadas con **gatsby** o
 ¡[haz tu pregunta](http://stackoverflow.com/questions/ask?tags=gatsby)!
-=======
-Many members of the community use Stack Overflow to ask questions. Read through
-the [existing questions](http://stackoverflow.com/questions/tagged/gatsby)
-tagged with `gatsby` or
-[ask your own](http://stackoverflow.com/questions/ask?tags=gatsby)!
->>>>>>> try-rebase
 
 ### Discord
 
@@ -75,35 +68,19 @@ a recursos útiles.
 
 ### Hashnode
 
-<<<<<<< HEAD
-Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus tips. Lee
+Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus consejos. Lee
 las [preguntas y posts existentes](https://hashnode.com/n/gatsby)
 etiquetados con **gatsby** o
 [haz tu pregunta](https://hashnode.com/create/question) o [comparte tu historia](https://hashnode.com/create/story) y agrega la etiqueta `gatsby`.
 
 ### DEV Community
 
-DEV Community es otra plataforma donde tambien puedes hacer preguntas y compartir tus tips. Lee
-las [preguntas y post existentes](https://dev.to/t/gatsby)
+DEV Community es otra plataforma informativa donde tambien puedes hacer preguntas y compartir tus consejos. Lee
+las [preguntas y posts existentes](https://dev.to/t/gatsby)
 etiquetados con **gatsby** o
 [pide ayuda](https://dev.to/new/help). Además puedes [escribir un post](https://dev.to/new/gatsby) con la etiqueta **gatsby**.
 
 ## Aprende más sobre Gatsby:
-=======
-Many members of the community also use Hashnode to ask questions and share their tips. Read through
-the [existing questions and posts](https://hashnode.com/n/gatsby)
-tagged with `gatsby` or
-[ask your own question](https://hashnode.com/create/question) or [share your story](https://hashnode.com/create/story) and add the `gatsby` tag.
-
-### DEV Community
-
-DEV Community is another informative platform to ask questions and share tips as well. Read through
-the [existing questions and posts](https://dev.to/t/gatsby)
-tagged with `gatsby` or
-[ask for help](https://dev.to/new/help). You could also [write your post](https://dev.to/new/gatsby) with the `gatsby` tag.
-
-## Learn More About Gatsby:
->>>>>>> try-rebase
 
 - [¿Por qué contribuir a Gatsby?](/contributing/why-contribute-to-gatsby/)
 - [Eventos de la comunidad de Gatsby](/contributing/events/)
