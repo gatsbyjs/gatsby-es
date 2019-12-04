@@ -100,11 +100,7 @@ Ejecuta:
 n
 ```
 
-<<<<<<< HEAD
 en una ventana de terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
-=======
-en una terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
->>>>>>> try-rebase
 
 [Revisa la documentación de n para más instrucciones](https://github.com/tj/n).
 
