@@ -126,11 +126,7 @@ Si echas un vistazo a tu proyecto en el navegador, deberías ver el fondo de atr
 
 ![Hola mundo color Lavanda](global-css.png)
 
-<<<<<<< HEAD
 > Consejo: Esta parte del tutorial se ha enfocado en la manera más rápida y directa para iniciar a estilizar un sitio web Gatsby - importando directamente archivos CSS normales, usando `gatsby-browser.js`. En la mayoría de los casos, la mejor manera de agregar estilos globales es con un componente de diseño compartido. [Revisa la documentación](/docs/global-css/) para saber más acerca de esta aproximación.
-=======
-> Consejo: Esta parte del tutorial se ha enfocado en la manera más rápida y directa para iniciar a estilizar un sitio web Gatsby - importando directamente archivos CSS normales, usando `gatsby-browser.js`. En la mayoría de los casos, la mejor manera de agregar estilos globales es con un componente de diseño compartido. [Revisa la documentación](/docs/creating-global-styles/#how-to-add-global-styles-in-gatsby-with-standard-css-files) para saber más acerca de esta aproximación.
->>>>>>> try-rebase
 
 ## Usando CSS limitado al componente
 
