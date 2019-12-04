@@ -11,11 +11,7 @@ Esta es la traducción oficial en español de la documentación de Gatsby.
 
 ## ¿Dónde empezar? 🤔
 
-<<<<<<< HEAD
 Puedes ir directamente al [issue de traducciones](https://github.com/gatsbyjs/gatsby-es/issues/97) y pedir una página que quieras traducir y el equipo te la asignará, pero te recomendamos que leas detenidamente [las instrucciones](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD) donde damos con más detalle los pasos, posibles preguntas que tengas y enlaces de utilidad 💅
-=======
-Puedes ir directamente al [issue de traducciones](https://github.com/gatsbyjs/gatsby-es/issues/4) y pedir una página que quieras traducir y el equipo te la asignará, pero te recomendamos que leas detenidamente [las instrucciones](https://github.com/gatsbyjs/gatsby-es/blob/master/CONTRIBUTING.MD) donde damos con más detalle los pasos, posibles preguntas que tengas y enlaces de utilidad. 💅
->>>>>>> try-rebase
 
 ## Guía de estilos y glosario 💅
 
