@@ -80,7 +80,7 @@ Si usas un [dominio personalizado](https://help.github.com/articles/using-a-cust
 
 ### Implementar en _GitHub Pages_ desde un servidor CI
 
-También es posible implementar tu sitio web en `gh-pages` a través de un servidor CI. Este ejemplo usa Travis CI, a servicio _Continuous Integration_ alojado, pero otros sistemas de CI también podrían funcionar.
+También es posible implementar tu sitio web en `gh-pages` a través de un servidor CI. Este ejemplo usa Travis CI, un servicio de _Integración Continua_ alojado, pero otros sistemas de CI también podrían funcionar.
 
 Puedes usar el [gh-pages npm module](https://www.npmjs.com/package/gh-pages) para implementar. Pero primero, debes configurarlo con las credenciales adecuadas para que `gh-pages` pueda crear una nueva rama.
 
