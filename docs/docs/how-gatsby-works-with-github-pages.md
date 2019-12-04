@@ -90,7 +90,7 @@ Para enviar cambios desde el sistema CI a GitHub, te tendrás que autenticar. Pa
 
 En GitHub, dirígete a las configuraciones de tu cuenta -> Configuraciones de desarollador -> _Tokens_ personales de acceso, y crea un nuevo _token_ que provea los permisos de acceso `repo`.
 
-En las [configuraciones de Travis para el repositorio](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings), agrega una nueva variable de entorno secreta del nombre `GH_TOKEN` con el valor del _token_ copiado de GitHub. Asegúrate de **NO cambiar la configuración "mostrar en registros de compilación" a _on_** ya que el _token_ debe permanecer secreto. De lo contrario, otras personas podrían acceder a tu repositorio (lo que constituye un gran problema de seguridad).
+En las [configuraciones de Travis para el repositorio](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings), agrega una nueva variable de entorno secreta con nombre `GH_TOKEN` con el valor del _token_ copiado de GitHub. Asegúrate de **NO cambiar la configuración "mostrar en registros de compilación" a _on_** ya que el _token_ debe permanecer secreto. De lo contrario, otras personas podrían acceder a tu repositorio (lo que constituye un gran problema de seguridad).
 
 #### Agregar _script_ para implementar en _GitHub Pages_ a través de CI
 
