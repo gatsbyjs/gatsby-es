@@ -94,7 +94,7 @@ En las [configuraciones de Travis para el repositorio](https://docs.travis-ci.co
 
 #### Agregar _script_ para desplegar en _GitHub Pages_ a través de CI
 
-Actualice el `package.json` del proyecto Gatsby para incluir también un script de ejecución `deploy` que invoque `gh-pages` con dos argumentos importantes de la línea de comandos:
+Actualiza el `package.json` del proyecto Gatsby para incluir también un script de ejecución `deploy` que llame `gh-pages` con dos argumentos importantes de la línea de comandos:
 
 1. `-d public` - especifica el directorio en el que existen los archivos creados y se enviará como fuente a _GitHub Pages_
 2. `-r URL` - la URL del repositorio de GitHub, incluido el uso del _token_ secreto de GitHub (como una variable de entorno secreta) para poder enviar cambios a la rama `gh-pages`, en forma de `https://$GH_TOKEN@github.com/<github username>/<github repository name>.git`
