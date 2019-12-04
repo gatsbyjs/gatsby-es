@@ -54,7 +54,7 @@ Luego agrega un _script_ `deploy` a `package.json` en el código base de tu repo
 }
 ```
 
-Cuando ejecutes `npm run deploy`, todo el contenido de la carpeta `public` será movido a la rama `gh-pages` de tu repositorio. Asegúrate de que la configuración de tu repositorio tenga la rama `gh-pages` establecida como la fuente desde la cual implementar.
+Cuando ejecutes `npm run deploy`, todo el contenido de la carpeta `public` será movido a la rama `gh-pages` de tu repositorio. Asegúrate de que la configuración de tu repositorio tenga la rama `gh-pages` establecida como la fuente desde la cual se hará el despliegue.
 
 **Nota**: para seleccionar _master_ o _gh-pages_ como tu fuente de publicación, debes tener la rama presente en tu repositorio. Si no tienes una rama _master_ or _gh-pages_, puedes crearlas y luego volver a la configuración de fuente para cambiar tu fuente de publicación.
 
