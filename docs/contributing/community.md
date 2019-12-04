@@ -68,15 +68,15 @@ a recursos útiles.
 
 ### Hashnode
 
-Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus tips. Lee
+Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus consejos. Lee
 las [preguntas y posts existentes](https://hashnode.com/n/gatsby)
 etiquetados con **gatsby** o
 [haz tu pregunta](https://hashnode.com/create/question) o [comparte tu historia](https://hashnode.com/create/story) y agrega la etiqueta `gatsby`.
 
 ### DEV Community
 
-DEV Community es otra plataforma donde tambien puedes hacer preguntas y compartir tus tips. Lee
-las [preguntas y post existentes](https://dev.to/t/gatsby)
+DEV Community es otra plataforma informativa donde tambien puedes hacer preguntas y compartir tus consejos. Lee
+las [preguntas y posts existentes](https://dev.to/t/gatsby)
 etiquetados con **gatsby** o
 [pide ayuda](https://dev.to/new/help). Además puedes [escribir un post](https://dev.to/new/gatsby) con la etiqueta **gatsby**.
 
