@@ -1,5 +1,5 @@
 ---
-title: "Rutas solo para el cliente & Autenticación de Usuario"
+title: "Rutas solo para el cliente & Autenticación de usuario"
 ---
 
 A menudo, deseas crear un sitio con partes solamente para el lado del cliente que están protegidas con autenticación.
@@ -32,6 +32,6 @@ exports.onCreatePage = async ({ page, actions }) => {
 > 💡 Nota: También hay un plugin para simplificar la creación de rutas solo para el lado del cliente en tu sitio
 > [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths/).
 
-> Tip: Para aplicaciones con enrutamiento complejo, es posible que desees anular el comportamiento de desplazamiento predeterminado de Gatsby con la API del navegador [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll).
+> Consejo: Para aplicaciones con enrutamiento complejo, es posible que desees anular el comportamiento de desplazamiento predeterminado de Gatsby con la API del navegador [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll).
 
 Consulta el [sitio de ejemplo de "autenticación simple"](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) para ver una demostración que implementa la autenticación de usuarios y rutas restringidas solo para el lado del cliente.
