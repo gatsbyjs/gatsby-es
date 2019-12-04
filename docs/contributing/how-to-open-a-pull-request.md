@@ -11,10 +11,6 @@ En caso de que no estés familiarizado, aquí está como el equipo de GitHub [de
 > Los Pull requests te permiten decir a otros acerca de cambios que has subido en una rama de un repositorio en GitHub. Una vez que un pull request es abierto, puedes discutir y revisar los cambios potenciales con colaboradores y agregar commits de seguimiento antes de que tus cambios sean incluidos en la rama de master (o base).
 
 Gatsby utiliza el proceso de PR para revisar y probar cambios antes que sean agregados al repositorio de GitHub de Gatsby. Cualquier persona puede abrir un pull request. El mismo proceso es utilizado por todos los contribuidores, sea que ésta sea tu primera contribución a código abierto (open source) o que seas un miembro del equipo principal de Gatsby.
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> try-rebase
 
 Cuando alguien quiere contribuir a Gatsby, abren una solicitud para _hacer un pull request_ (extraer) de su código hacia dentro del repositorio. Dependiendo del tipo de cambio hecho, los PRs son categorizados como de:
 
@@ -124,11 +120,7 @@ El repo de Gatsby de Github es muy activo, así que es probable que necesites ac
 
 Para más información sobre cómo trabajar con repositorios upstream, [visita la documentación de GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
 
-<<<<<<< HEAD
 _**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente (en vez de hacer un fork y utilizar un remoto upstream para trabajar). Entonces puedes subir tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows) para abrir PRs._
-=======
-_**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo directamente en vez de hacer un fork, y subir tus cambios a [ramas de funcionalidades](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)._
->>>>>>> try-rebase
 
 ## Recursos adicionales
 
@@ -140,7 +132,4 @@ _**Nota:** como miembro del repositorio de Gatsby, también puedes clonarlo dire
 - [Ramas por funcionalidad y flujos de trabajo](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
 - [Resolviendo conflictos de merge](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github)
 - [Manejando Pull Requests](/contributing/managing-pull-requests/) del equipo principal de Gatsby.
-<<<<<<< HEAD
 - [Guía de sintaxis Markdown](/docs/mdx/markdown-syntax/)
-=======
->>>>>>> try-rebase
