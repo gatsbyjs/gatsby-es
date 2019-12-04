@@ -7,7 +7,7 @@ _GitHub Pages_ es un servicio ofrecido por GitHub que permite el alojamiento de 
 Puedes publicar tu sitio en _GitHub Pages_ de diferentes maneras:
 
 - a una ruta como `username.github.io/reponame/` o `/docs`
-- a un subdominio basado en tu nombre de usuario o en el nombre de tu organización: `username.github.io` or `orgname.github.io`
+- a un subdominio basado en tu nombre de usuario o en el nombre de tu organización: `username.github.io` o `orgname.github.io`
 - al subdominio raíz en `username.github.io`, y luego configurado para usar un dominio personalizado
 
 ## Configurar la rama fuente de _GitHub Pages_
