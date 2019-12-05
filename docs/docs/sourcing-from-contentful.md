@@ -15,11 +15,11 @@ Esta guía assume que tiene un proyecto de Gatsby configurado. Si necesita confi
 
 ## Introducir datos y expulsarlos
 
-Si tienes un archivo JSON con contenido, puedes colocarlo en Contentful usando[contentful-import](https://github.com/contentful/contentful-import). Si estás creando contendio nuevo, no necesita esto y simplemente crea contenido directamente en Contentful.
+Si tienes un archivo JSON con contenido, puedes colocarlo en Contentful usando [contentful-import](https://github.com/contentful/contentful-import). Si estás creando contendio nuevo, no necesita esto y simplemente crea contenido directamente en Contentful.
 
 Si creas contenido directamente en Contentful, asegúrate de nombrar sus _fields_ de una manera que puedas recordar cuando crees consultas en _GraphQL_. Si usas GraphiQL, puedes sugerirle campos, pero esto sólo ayudará si los nombres del los campos son claros y memorables.
 
-En cuanto a enviar datos a tu sitio, le sugerimos que use este fantástico plugin: [gatsby-source-contentful](https://www.npmjs.com/package/gatsby-source-contentful), para usarlo , necesitarías tener el `spaceId` y el `accessToken` provenientes de contentful.
+En cuanto a enviar datos a tu sitio, le sugerimos que use este fantástico plugin: [gatsby-source-contentful](https://www.npmjs.com/package/gatsby-source-contentful), para usarlo, necesitarías tener el `spaceId` y el `accessToken` provenientes de contentful.
 
 ## Instalación
 
