@@ -2,7 +2,7 @@
 title: Crear bibliotecas de componentes
 ---
 
-Las librerías de componentes a menudo se usan en sistemas de IU basados en componentes como React y Vue. Típicamente son repositorios versionados de componentes.
+Las bibliotecas de componentes a menudo se usan en sistemas de UI basados en componentes como React y Vue. Típicamente son repositorios versionados de componentes.
 
 El [Sistema de Diseño Carbon](http://carbondesignsystem.com/) de IMB y el [Blueprint](https://blueprintjs.com/) de Palantir son ambos buenos ejemplos.
 
