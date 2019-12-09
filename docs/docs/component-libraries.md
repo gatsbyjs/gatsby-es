@@ -19,7 +19,7 @@ Las bibliotecas de componentes generalmente son mantenidas por un individuo o un
 
 Las bibliotecas de componentes generalmente se almacenan en un repositorio separado. Las aplicaciones o sitios web individuales especifican en sus dependencias (en `package.json`) qué versión de cada componente están utilizando.
 
-Un inconveniente de usar librerías de componentes es la complejidad adicional de las dependencias de repositorio cruzado.
+Un inconveniente de usar bibliotecas de componentes es la complejidad adicional de las dependencias de repositorio cruzado.
 
 Por ejemplo, si un desarrollador de características necesita cambiar un componente de la librerías, el flujo de trabajo de ese desarrollador generalmente involucra dos pull requests; uno para el repositorio del repositorio de componentes para realizar los cambios, y otro para el repositorio del sitio web para aumentar la versión del componente.
 
