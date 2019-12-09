@@ -21,7 +21,7 @@ Las bibliotecas de componentes generalmente se almacenan en un repositorio separ
 
 Un inconveniente de usar bibliotecas de componentes es la complejidad adicional de las dependencias de repositorio cruzado.
 
-Por ejemplo, si un desarrollador de características necesita cambiar un componente de la librerías, el flujo de trabajo de ese desarrollador generalmente involucra dos pull requests; uno para el repositorio del repositorio de componentes para realizar los cambios, y otro para el repositorio del sitio web para aumentar la versión del componente.
+Por ejemplo, si un desarrollador de características necesita cambiar un componente de la biblioteca, el flujo de trabajo de ese desarrollador generalmente involucra dos pull requests; uno para el repositorio del repositorio de componentes para realizar los cambios, y otro para el repositorio del sitio web para aumentar la versión del componente.
 
 ## Diferentes métodos de versiones
 
