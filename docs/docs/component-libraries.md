@@ -11,7 +11,7 @@ El [Sistema de Diseño Carbon](http://carbondesignsystem.com/) de IMB y el [Blu
 Existen varias razones para crear bibliotecas de componentes.
 
 - **Crear un diseño unificado**. En las grandes propiedades web y aplicaciones web, la apariencia puede diferir en diferentes secciones mantenidas por diferentes equipos. Las bibliotecas de componentes se usan a menudo para implementar un [sistema de diseño](https://www.designsystems.com/).
--   **Evita reinventar la rueda**. Las librerías de componentes incluyen elementos comunes como carruseles o menús desplegables para evitar la necesidad de que los equipos individuales vuelvan a re-implementar estos componentes.
+- **Evita reinventar la rueda**. Las bibliotecas de componentes incluyen elementos comunes como carruseles o menús desplegables para evitar la necesidad de que los equipos individuales vuelvan a re-implementar estos componentes.
 
 ## Herramientas y configuraciones de equipo
 
