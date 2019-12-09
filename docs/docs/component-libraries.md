@@ -25,7 +25,7 @@ Por ejemplo, si un desarrollador de características necesita cambiar un compone
 
 ## Diferentes métodos de versiones
 
-Existen dos métodos diferentes para versionar librerías de componentes.
+Existen dos métodos diferentes para versionar bibliotecas de componentes.
 
 La primera es la versión global en toda la librería de componentes. En cualquier commit, la librería tiene un número de versión (por ejemplo, `30.3.1`). Cualquier commit de actualización de un componente generará el número de versión correspondiente. Tanto Carbon Design System como Blueprint adoptan este método.
 
