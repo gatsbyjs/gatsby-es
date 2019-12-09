@@ -1,5 +1,5 @@
 ---
-title: Crear librerías de componentes
+title: Crear bibliotecas de componentes
 ---
 
 Las librerías de componentes a menudo se usan en sistemas de IU basados en componentes como React y Vue. Típicamente son repositorios versionados de componentes.
