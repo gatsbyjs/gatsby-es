@@ -17,7 +17,7 @@ Existen varias razones para crear bibliotecas de componentes.
 
 Las bibliotecas de componentes generalmente son mantenidas por un individuo o un equipo de diseño que actúa como curador; cuando un equipo de sitio web o equipo de características necesita un componente, generalmente está disponible para que lo usen, para que puedan trabajar más rápido.
 
-Las librerías de componentes generalmente se almacenan en un repositorio separado. Las aplicaciones o sitios web individuales especifican en sus dependencias (en `package.json`) qué versión de cada componente están utilizando.
+Las bibliotecas de componentes generalmente se almacenan en un repositorio separado. Las aplicaciones o sitios web individuales especifican en sus dependencias (en `package.json`) qué versión de cada componente están utilizando.
 
 Un inconveniente de usar librerías de componentes es la complejidad adicional de las dependencias de repositorio cruzado.
 
