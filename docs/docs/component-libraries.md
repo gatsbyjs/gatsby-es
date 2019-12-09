@@ -6,7 +6,7 @@ Las bibliotecas de componentes a menudo se usan en sistemas de UI basados en com
 
 El [Sistema de Diseño Carbon](http://carbondesignsystem.com/) de IMB y el [Blueprint](https://blueprintjs.com/) de Palantir son ambos buenos ejemplos.
 
-## Por qué librerías de componentes
+## Por qué bibliotecas de componentes
 
 Existen varias razones para crear librerías de componentes.
 
