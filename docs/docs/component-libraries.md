@@ -29,6 +29,6 @@ Existen dos métodos diferentes para versionar bibliotecas de componentes.
 
 La primera es la versión global en toda la biblioteca de componentes. En cualquier commit, la biblioteca tiene un número de versión (por ejemplo, `30.3.1`). Cualquier commit de actualización de un componente generará el número de versión correspondiente. Tanto _Carbon Design System_ como _Blueprint_ adoptan este método.
 
-El segundo enfoque es versionar cada componente en la librería de componentes. Esto fue utilizado, por ejemplo, [por Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) - construyeron su librería de componentes como componentes React, y crearon cada componente como un paquete npm separado y versionado.
+El segundo enfoque es versionar cada componente en la biblioteca de componentes. Esto fue utilizado, por ejemplo, [por Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) - construyeron su biblioteca de componentes como componentes React, y crearon cada componente como un paquete npm separado y versionado.
 
 Este método permite más granularidad. -- _¿qué sucede si deseas una versión anterior de un componente, pero una versión más nueva de otro?_ -- pero requiere herramientas adicionales para que los flujos de trabajo del desarrollador sean agradables.
