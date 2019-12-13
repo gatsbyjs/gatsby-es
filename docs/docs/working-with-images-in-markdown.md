@@ -8,7 +8,7 @@ Al crear sitios Gatsby compuestos principalmente por páginas o publicaciones de
 
 En sitios como un blog, es posible que desees incluir una imagen destacada que aparece en la parte superior de una página. Una forma de hacerlo es tomar el nombre de archivo de la imagen de un campo de _frontmatter_ y luego transformarlo con `gatsby-plugin-sharp` en una consulta GraphQL.
 
-Esta solución supone que ya tienes páginas generadas mediante programación desde Markdown con procesadores como `gatsby-transformer-remark` o` gatsby-plugin-mdx`. De lo contrario, lee hasta la [Parte 7 del Tutorial de Gatsby](/tutorial/part-seven/). Esto será la base del tutorial y, como tal, se usará `gatsby-transformer-remark` para este ejemplo.
+Esta solución supone que ya tienes páginas generadas mediante programación desde Markdown con procesadores como `gatsby-transformer-remark` o `gatsby-plugin-mdx`. De lo contrario, lee hasta la [Parte 7 del Tutorial de Gatsby](/tutorial/part-seven/). Esto será la base del tutorial y, como tal, se usará `gatsby-transformer-remark` para este ejemplo.
 
 > Nota: Esto se puede hacer de manera similar usando también [MDX](/docs/mdx/). En lugar de los nodos `markdownRemark` en GraphQL, se pueden intercambiar por `Mdx` y debería funcionar.
 
