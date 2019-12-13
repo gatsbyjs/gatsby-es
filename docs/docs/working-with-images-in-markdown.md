@@ -128,7 +128,7 @@ Tu imagen destacada debería aparecer ahora en la página generada justo debajo 
 
 ## Imágenes en línea con `gatsby-remark-images`
 
-Las imágenes también pueden incluirse en el propio cuerpo de Markdown. El complemento [gatsby-remark-images](/packages/gatsby-remark-images) es útil para esto.
+Las imágenes también pueden incluirse en el propio cuerpo de Markdown. El plugin [gatsby-remark-images](/packages/gatsby-remark-images) es útil para esto.
 
 Comienza instalando `gatsby-remark-images` y `gatsby-plugin-sharp`.
 
