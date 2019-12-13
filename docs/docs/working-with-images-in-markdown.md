@@ -90,7 +90,7 @@ export default ({ data }) => {
 
   // inicio destacado
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
-  // final destacado
+  // highlight-end
 
   return (
     <Layout>
