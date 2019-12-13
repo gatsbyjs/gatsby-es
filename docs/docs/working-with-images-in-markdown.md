@@ -96,7 +96,7 @@ export default ({ data }) => {
     <Layout>
       <div>
         <h1>{post.frontmatter.title}</h1>
-        // inicio destacado
+        // highlight-start
         <Img fluid={featuredImgFluid} />
         // final destacado
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
