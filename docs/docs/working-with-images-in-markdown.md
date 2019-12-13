@@ -47,7 +47,7 @@ featuredImage: ./awesome-image.png
 ¡El contenido va aquí!
 ```
 
-El campo `FeaturedImage` debe incluir la ruta relativa de la imagen que desea utilizar.
+El campo `featuredImage` debe incluir la ruta relativa de la imagen que deseas utilizar.
 
 Ahora puedes consultar la imagen destacada en GraphQL. Si la ruta del archivo apunta a una imagen real, se transformará en un nodo `Archivo` en GraphQL y entonces podrás obtener los datos de la imagen utilizando el campo `childImageSharp`.
 
