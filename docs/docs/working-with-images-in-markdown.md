@@ -167,7 +167,7 @@ module.exports = {
 }
 ```
 
-Con esta configuración, puede usar la sintaxis predeterminada de Markdown para las imágenes. Sharp los procesará y aparecerán como si los hubiera colocado en un componente `gatsby-image`.
+Con esta configuración, puedes usar la sintaxis predeterminada de Markdown para las imágenes. Sharp los procesará y aparecerán como si los hubiera colocado en un componente `gatsby-image`.
 
 ```md
 ![Imagen asombrosa](./my-awesome-image.png)
