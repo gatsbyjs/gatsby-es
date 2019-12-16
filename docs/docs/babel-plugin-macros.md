@@ -1,61 +1,61 @@
 ---
-title: Using Babel Plugin Macros
+title: Usando el plugin macros babel
 ---
 
-Gatsby includes a powerful new way of applying compile-time code
-transformations,
-[Babel macros](https://github.com/kentcdodds/babel-plugin-macros)! Macros are
-like Babel plugins, but instead of adding them to your `.babelrc`, you import them in
-the file you want to use them. This has two big advantages:
+Gatsby incluye una poderosa y nueva manera de aplicar transformaciones de código en
+tiempo-de-compilación,
+[Macros babel](https://github.com/kentcdodds/babel-plugin-macros)! Las macros son
+como plugins Babel, pero en vez de agregarlas a tu `.babelrc`, las importas en
+el archivo que quieres que las use. Esto tiene dos grandes ventajas:
 
-- No confusion about where a non-standard syntax is coming from. Macros are
-  explicitly imported wherever they are used.
-- No configuration files. Macros are included directly in your code as needed.
+- No confusiones por no saber de donde viene una sintaxis no-estándar. Las macros son
+  importadas explícitamente donde son usadas.
+- No archivos de configuración. Las macros son incluidas directamente en tú código según se necesiten.
 
-Like Babel plugins, macros run only at compile time. They are not included in
-the public JavaScript bundle. As such, macros have no effect on your code
-beyond the transformations they apply.
+Como los plugins Babel, las macros se ejecutan solo en tiempo de compilación. No son incluidas en
+el bundle Javascript público. Por lo cual, las macros no tienen ningún efecto en tú código
+más allá de la transformación que aplican.
 
-## Installing macros
+## Instalando macros
 
-Just like plugins, many macros are published as npm packages. By convention,
-they are named by their function, followed by `.macro`.
+Justo como plugins, muchas macros son publicadas como paquetes npm. Por convención,
+son nombradas por su función, seguidas de `.macro`.
 
-For example, [`preval.macro`](https://www.npmjs.com/package/preval.macro) is a
-macro that pre-evaluates JavaScript code. You can install it by running:
+Por ejemplo, [`preval.macro`](https://www.npmjs.com/package/preval.macro) es una
+macro que pre-evaluá el código Javascript. Puedes instalarla ejecutando:
 
 ```shell
 npm install --save-dev preval.macro
 ```
 
-Some macros are instead included in larger packages. To install and use them,
-refer to their documentation.
+Algunas macros son incluidas en paquetes más grandes. Para instalarlas y usarlas,
+refierete a su documentación.
 
-## Using macros
+## Usando macros
 
-To use an installed macro, import it in your code like so:
+Para usar una macro instalada, impórtala en tu código:
 
 ```javascript
 import preval from "preval.macro"
 ```
 
-You can then use the imported variable however the macro's documentation says.
-`preval.macro` is used as a template literal tag:
+Entonces puedes usar la variable importada aunque la documentación de la macro dice.
+`preval.macro` es usada como una etiqueta de plantilla literal:
 
 ```javascript
 import preval from "preval.macro"
 const x = preval`module.exports = 1` // highlight-line
 ```
 
-When building your project this code will be transformed into:
+Cuando compiles tu proyecto este código sera transformado a:
 
 ```javascript
 const x = 1
 ```
 
-## Discovering available macros
+## Descubriendo macros disponibles
 
-Take a look at the
-[Awesome babel macros](https://github.com/jgierer12/awesome-babel-macros)
-list to find available macros you can use. Additionally, this list contains
-helpful resources for using macros and developing them yourself.
+Echa un vistazo a la lista
+[Macros babel asombrosas](https://github.com/jgierer12/awesome-babel-macros)
+para encontrar las macros disponibles que puedes usar. Adicionalmente, la lista contiene
+recursos de mucha ayuda para usar macros y desarrollarlas tú mismo.
