@@ -88,7 +88,7 @@ import Img from "gatsby-image"
 export default ({ data }) => {
   let post = data.markdownRemark
 
-  // inicio destacado
+  // highlight-start
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   // highlight-end
 
