@@ -83,7 +83,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 // inicio destacado
 import Img from "gatsby-image"
-// final destacado
+// highlight-end
 
 export default ({ data }) => {
   let post = data.markdownRemark
