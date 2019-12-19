@@ -81,7 +81,7 @@ También en la plantilla de publicación Markdown, importa el paquete `gatsby-im
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// inicio destacado
+// highlight-start
 import Img from "gatsby-image"
 // highlight-end
 
