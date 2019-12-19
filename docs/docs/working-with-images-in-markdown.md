@@ -60,7 +60,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        // inicio destacado
+        // highlight-start
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
