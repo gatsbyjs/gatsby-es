@@ -156,7 +156,7 @@ export default props => (
 Cuando usas Theme UI en un tema de Gatsby, es importante entender cómo el paquete `gatsby-plugin-theme-ui` maneja los objetos de tema de multiples temas de Gatsby y sitios en Gatsby.
 Si un tema de Gatsby que usa `gatsby-plugin-theme-ui` es instalado en un sitio, el fichero `src/gatsby-plugin-theme-ui/index.js` correspodiente sobrescribirá los estilos por defecto.
 Esto es intencionado para dar control completo a la persona que use el tema.
-Si multiples temas son instalados en el mismo sitio, el último que sea definido en el array de `plugins` de tu fichero `gatsby-config.js` tomará precendencia.
+Si multiples temas son instalados en el mismo sitio, el último que sea definido en el `array` de `plugins` de tu archivo `gatsby-config.js` tomará precedencia.
 
 To extend an existing Theme UI configuration from a theme, it can be imported and merged with any other values you would like to customize.
 Para extender una configuración de Theme UI existente de un tema, puede ser importado y unido con algunos otros valores que te gustarían personalizar. 
