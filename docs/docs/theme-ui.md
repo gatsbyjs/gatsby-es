@@ -29,7 +29,7 @@ Theme UI usa un objeto de configuración `theme` para proporcionar color, tipogr
 Esto permite a los componentes dentro de tu sitio añadir estilos basados en un conjunto predefinido de valores.
 
 El plugin de Theme UI usa la [API de _component shadowing_][] para añadir el contexto de tu tema a tu sitio.
-Crea una carpeta `src/gatsby-plugin-theme-ui` en tu proyecto, y añade un fichero `index.js` para exportar un tema.
+Crea una carpeta `src/gatsby-plugin-theme-ui` en tu proyecto, y añade un archivo `index.js` para exportar un tema.
 
 ```shell
 mkdir src/gatsby-plugin-theme-ui
