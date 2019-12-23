@@ -41,7 +41,7 @@ export default {}
 
 ## Creando un tema
 
-Añade un objeto `colors` al fichero creado arriba para almacenar la paleta de colores para tu sitio.
+Añade un objeto `colors` al archivo creado arriba para almacenar la paleta de colores para tu sitio.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
