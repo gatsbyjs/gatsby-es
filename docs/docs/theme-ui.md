@@ -25,7 +25,7 @@ module.exports = {
 }
 ```
 
-Theme UI usa un objeto de configuración `theme` para proporcionar color, typografía, _layout_ y otros values de estilo compartido a través del [contexto de React][].
+Theme UI usa un objeto de configuración `theme` para proporcionar color, tipografía, _layout_ y otros valores de estilo compartido a través del [Context de React][].
 Esto permite a los componentes dentro de tu sitio añadir estilos basados en un conjunto predefinido de valores.
 
 El plugin de Theme UI usa la [API de _component shadowing_][] para añadir el contexto de tu tema a tu sitio.
