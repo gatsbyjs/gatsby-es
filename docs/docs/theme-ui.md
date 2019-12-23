@@ -4,7 +4,8 @@ title: Theme UI
 
 [Theme UI][] es una libraría para dar estilo a aplicaciones de React con restricciones de diseño configurables por el usuario.
 Te permite dar estilo a cualquier componente en tu aplicación con valores tipográficos, de color y de _layout_ definidos en un tema compartido.
-Theme UI es usado actualmente en los temas oficiales de Gatsby, pero puede ser usado en cualquier sitio Gatsby o aplicación de React.
+Theme UI es usado actualmente en los temas oficiales de Gatsby, 
+pero puede ser usado en cualquier sitio Gatsby o aplicación de React.
 Incluye la librería CSS-in-JS [Emotion][] junto con utilidades adicionales para dar estilo como [MDX][] y para usar configuraciones y temas mediante [Typography.js][].
 
 ## Usando Theme UI en Gatsby
@@ -154,11 +155,11 @@ export default props => (
 ## Usando Theme UI en un tema de Gatsby
 
 Cuando usas Theme UI en un tema de Gatsby, es importante entender cómo el paquete `gatsby-plugin-theme-ui` maneja los objetos de tema de multiples temas de Gatsby y sitios en Gatsby.
-Si un tema de Gatsby que usa `gatsby-plugin-theme-ui` es instalado en un sitio, el fichero `src/gatsby-plugin-theme-ui/index.js` correspodiente sobrescribirá los estilos por defecto.
+Si un tema de Gatsby que usa `gatsby-plugin-theme-ui` es instalado en un sitio,
+el archivo `src/gatsby-plugin-theme-ui/index.js` correspodiente sobrescribirá los estilos por defecto.
 Esto es intencionado para dar control completo a la persona que use el tema.
 Si multiples temas son instalados en el mismo sitio, el último que sea definido en el array de `plugins` de tu fichero `gatsby-config.js` tomará precendencia.
 
-To extend an existing Theme UI configuration from a theme, it can be imported and merged with any other values you would like to customize.
 Para extender una configuración de Theme UI existente de un tema, puede ser importado y unido con algunos otros valores que te gustarían personalizar. 
 Lo siguiente es un ejemplo de extender la configuración de `gatsby-theme-blog`.
 
@@ -166,8 +167,8 @@ Lo siguiente es un ejemplo de extender la configuración de `gatsby-theme-blog`.
 import baseTheme from "gatsby-theme-blog/src/gatsby-plugin-theme-ui"
 import merge from "lodash.merge"
 
-// lodash.merge will deeply merge custom values with the
-// blog theme's defaults
+// lodash.merge combinará profundamente los valores personalizados con los
+// los valores por defecto del tema del blog
 export default merge({}, baseTheme, {
   colors: {
     text: "#222",
@@ -185,7 +186,7 @@ En tu configuración de Theme UI, añade un objeto `styles` a los elementos que 
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
-  // base theme values...
+  // valores base del tema...
   styles: {
     // las claves usadas aquí referencian elementos en MDX
     h1: {
