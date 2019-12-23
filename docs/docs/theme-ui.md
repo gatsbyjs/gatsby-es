@@ -208,7 +208,7 @@ export default {
 }
 ```
 
-Con el ejemplo de arriba, cualquier elemento `<h1>` o `<a>`renderizado desde un fichero MDX incluirá los estilos base.
+Con el ejemplo de arriba, cualquier elemento `<h1>` o `<a>`renderizado desde un archivo MDX incluirá los estilos base.
 
 Para aprender más sobre usar Theme UI en tu proyecto, mira la web oficial de [Theme UI][theme ui]
 
