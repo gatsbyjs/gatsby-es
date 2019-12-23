@@ -2,7 +2,7 @@
 title: Theme UI
 ---
 
-[Theme UI][] es una libraría para dar estilo a aplicaciones de React con restricciones de diseño configurables por el usuario.
+[Theme UI][] es una librería para dar estilo a aplicaciones de React con restricciones de diseño configurables por el usuario.
 Te permite dar estilo a cualquier componente en tu aplicación con valores tipográficos, de color y de _layout_ definidos en un tema compartido.
 Theme UI es usado actualmente en los temas oficiales de Gatsby, pero puede ser usado en cualquier sitio Gatsby o aplicación de React.
 Incluye la librería CSS-in-JS [Emotion][] junto con utilidades adicionales para dar estilo como [MDX][] y para usar configuraciones y temas mediante [Typography.js][].
