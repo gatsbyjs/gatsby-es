@@ -120,7 +120,7 @@ Lee más sobre crear temas en la [documentación de Theme UI](https://theme-ui.c
 
 ## Añadiento estilos a elementos
 
-Theme UI usa una función personalizada para añadir soporte para el `sx` prop de Them UI en JSX.
+Theme UI usa una función personalizada para añadir soporte para la propiedad `sx` de Theme UI en JSX.
 Esta función personalizada es habilitada incluyendo un comentario en la parte superior del fichero:
 
 ```js
