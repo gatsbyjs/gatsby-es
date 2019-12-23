@@ -128,7 +128,7 @@ Esta función personalizada es habilitada incluyendo un comentario en la parte s
 import { jsx } from "theme-ui"
 ```
 
-La [`sx` prop][] es usada para dar estilo a elemento referenciando valores que viene del tema.
+La [propiedad `sx`][] es usada para dar estilo a elementos referenciando valores que vienen del tema.
 
 [`sx` prop]: https://theme-ui.com/sx-prop
 
