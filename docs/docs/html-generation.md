@@ -52,11 +52,11 @@ Contiene un mapeo de componentChunkName de los trozos de webpack que lo componen
  
 ##### chunk-map.json
  
-Contiene un mapeo de componentChunkName a sus _chunks_ centrales (no-compartidos). Mira [División de código](/docs/how-code-splitting-works/#chunk-mapjson) para más.
+Contiene un mapeo de componentChunkName a sus trozos centrales (no-compartidos). Mira [División de código](/docs/how-code-splitting-works/#chunk-mapjson) para más.
  
 #### 2. Crear contenedores HTML React
  
-Creamos un componente `html` React que eventualmente será renderizado a un archivo. Tendra props por cada seccion (e.g. `head`, `preBodyComponents`, `postBodyComponents`). Esto es propiedad de [default-html.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/default-html.js).
+Creamos un componente `html` React que eventualmente será renderizado a un archivo. Tendra props por cada seccion (ejemplo `head`, `preBodyComponents`, `postBodyComponents`). Esto es propiedad de [default-html.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/default-html.js).
  
 #### 3. Cargar pagina y datos
  
@@ -72,7 +72,7 @@ Esto es cubierto por la documentación de [división de código](/docs/how-code-
  
 #### 6. Inyectar información de página a CDATA
  
-[production-app.js](/docs/production-app/#first-load) necesita saber de la pagina que esta renderizando. La forma en que pasamos esta información es configurándose en CDATA durante la generación de HTML, ya que conocemos esa página hasta este punto. Entonces agregamos lo siguiente a la [parte superior del documento HTML](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L325):
+[production-app.js](/docs/production-app/#first-load) necesita saber de la pagina que esta renderizando. La forma en que pasamos esta información es configurándola en CDATA durante la generación de HTML, ya que conocemos esa página hasta este punto. Entonces agregamos lo siguiente a la [parte superior del documento HTML](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L325):
  
 ```html
 /*
@@ -97,7 +97,7 @@ Finalmente, llamamos a [react-dom](https://reactjs.org/docs/react-dom.html) y re
  
 Hemos generado los medios para generar HTML para una página. Este empaquetado webpack es guardado en `public/render-page.js`. A continuación, necesitamos usarlo para generar el HTML para todas las páginas del sitio.
 
-La pagina HTML no depende de otras páginas. Entonces podemos realizar este paso en paralelo. Usamos el [jest-worker](https://github.com/facebook/jest/tree/master/packages/jest-worker) libreria para hacer esto mas facil. Por defecto [html-renderer-queue.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/html-renderer-queue.js) crea un grupo de _workers_ igual al numero de nucleos fisicos en tu maquina. Puedes configurar el número de grupos pasando una variable de entorno opcional, [`GATSBY_CPU_COUNT`](/docs/multi-core-builds). Luego divide las páginas en grupos y las envía a los _workers_, que ejecutan [worker.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/worker.js).
+La pagina HTML no depende de otras páginas. Entonces podemos realizar este paso en paralelo. Usamos la libreria [jest-worker](https://github.com/facebook/jest/tree/master/packages/jest-worker) para hacer esto mas facil. Por defecto [html-renderer-queue.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/html-renderer-queue.js) crea un grupo de _workers_ igual al numero de nucleos fisicos en tu maquina. Puedes configurar el número de grupos pasando una variable de entorno opcional, [`GATSBY_CPU_COUNT`](/docs/multi-core-builds). Luego divide las páginas en grupos y las envía a los _workers_, que ejecutan [worker.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/worker.js).
 
 Los _workers_ simplemente iteran sobre cada página en su partición y llaman a `render-page.js` con la página.Luego guarda el html para la ruta de las páginas en `/public`.
  
