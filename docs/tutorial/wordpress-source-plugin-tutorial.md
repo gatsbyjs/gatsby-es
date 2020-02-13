@@ -1,41 +1,41 @@
 ---
-title: "WordPress Source Plugin Tutorial"
+title: "Tutorial del complemento WordPress Source"
 ---
 
-## How to create a site with data pulled from WordPress
+## Cómo crear un sitio con datos extraídos de WordPress
 
-### What this tutorial covers:
+### Qué cubre este tutorial:
 
-In this tutorial, you will install the `gatsby-source-wordpress` plugin in order to pull blog and image data from a WordPress install into your Gatsby site and render that data. This [Gatsby + WordPress demo site](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress) shows you the source code for an example site similar to what you’re going to be building in this tutorial, although it’s missing the cool images you’ll be adding in the next part of this tutorial, [Adding Images to a WordPress Site](/tutorial/wordpress-image-tutorial/). :D
+En este tutorial, instalará el complemento `gatsby-source-wordpress` para extraer datos de blog e imágenes de una instalación de WordPress en su sitio de Gatsby y representar esos datos. Este [sitio de demostración de Gatsby + WordPress] (https://github.com/gatsbyjs/gatsby/tree/master/examples/using-wordpress) le muestra el código fuente de un sitio de ejemplo similar a lo que va a construir en este tutorial, aunque faltan las imágenes geniales que agregará en la siguiente parte de este tutorial, [Agregar imágenes a un sitio de WordPress] (/ tutorial / wordpress-image-tutorial /). :D
 
-#### But do you prefer GraphQL?
+#### ¿Pero prefieres GraphQL?
 
-If you prefer using GraphQL, there's a [wp-graphql](https://github.com/wp-graphql/wp-graphql) plugin to easily expose both default and custom data in WordPress.
+Si prefiere usar GraphQL, hay un complemento [wp-graphql] (https://github.com/wp-graphql/wp-graphql) para exponer fácilmente los datos predeterminados y personalizados en WordPress.
 
-The same authentication schemes supported by the WP-API are supported in wp-graphql, which can be used with the [gatsby-source-graphql](/packages/gatsby-source-graphql/) plugin.
+Los mismos esquemas de autenticación admitidos por el WP-API se admiten en wp-graphql, que se puede usar con el complemento [gatsby-source-graphql] (/ packages / gatsby-source-graphql /).
 
-## Why go through this tutorial?
+## ¿Por qué pasar por este tutorial?
 
-While each source plugin may operate differently from others, it’s worth going through this tutorial because you will almost definitely be using a source plugin in most Gatsby sites you build. This tutorial will walk you through the basics of connecting your Gatsby site to a CMS, pulling in data, and using React to render that data in beautiful ways on your site.
+Si bien cada complemento de origen puede funcionar de manera diferente a los demás, vale la pena seguir este tutorial porque casi definitivamente usará un complemento de origen en la mayoría de los sitios de Gatsby que cree. Este tutorial lo guiará a través de los conceptos básicos para conectar su sitio Gatsby a un CMS, obtener datos y usar React para representar esos datos de manera hermosa en su sitio.
 
-If you’d like to look at the growing number of source plugins available to you, search for “source” in the [Gatsby plugin library](/plugins/?=source).
+Si desea ver el creciente número de complementos de origen disponibles para usted, busque "origen" en la [biblioteca de complementos de Gatsby](/plugins/?=source).
 
-### Creating a site with the `gatsby-source-wordpress` plugin
+### Crear un sitio con el complemento `gatsby-source-wordpress`
 
-Create a new Gatsby project and change directories into the new project you just created:
+Cree un nuevo proyecto Gatsby y cambie los directorios al nuevo proyecto que acaba de crear:
 
 ```shell
  gatsby new wordpress-tutorial-site
 cd wordpress-tutorial-site
 ```
 
-Install the `gatsby-source-wordpress` plugin. For extra reading on the plugin’s features and examples of GraphQL queries not included in this tutorial, see the [`gatsby-source-wordpress` plugin’s README file](/packages/gatsby-source-wordpress/?=wordpress).
+Instala el complemento `gatsby-source-wordpress`. Para obtener más información sobre las características del complemento y ejemplos de consultas GraphQL no incluidas en este tutorial, consulte el [archivo README del complemento 'gatsby-source-wordpress`](/packages/gatsby-source-wordpress/?=wordpress).
 
 ```shell
 npm install --save gatsby-source-wordpress
 ```
 
-Add the `gatsby-source-wordpress` plugin to `gatsby-config.js` using the following code, which you can also find in the [demo site’s source code](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-config.js).
+Agregue el complemento `gatsby-source-wordpress` a` gatsby-config.js` utilizando el siguiente código, que también puede encontrar en el [código fuente del sitio de demostración] (https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-config.js).
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -74,11 +74,11 @@ module.exports = {
 }
 ```
 
-### Creating GraphQL queries that pull data from WordPress
+### Crear consultas GraphQL que extraen datos de WordPress
 
-Now you are ready to create a GraphQL query to pull in some data from the WordPress site. You will create a query that pulls in the title of the blog posts, date they were posted, and blogpost content.
+Ahora está listo para crear una consulta GraphQL para obtener algunos datos del sitio de WordPress. Creará una consulta que extraiga el título de las publicaciones del blog, la fecha en que se publicaron y el contenido de la publicación del blog.
 
-Run:
+Correr:
 
 ```shell
 gatsby develop
@@ -104,7 +104,7 @@ query {
 }
 ```
 
-This next query will pull in a sorted list of the blog posts:
+La siguiente consulta extraerá una lista ordenada de las publicaciones del blog:
 
 ```graphql
 {
@@ -120,9 +120,9 @@ This next query will pull in a sorted list of the blog posts:
 }
 ```
 
-## Rendering the blog posts to `index.js`
+## Representar las publicaciones del blog en `index.js`
 
-Now that you've created GraphQL queries that pull in the data you want, you'll use that second query to create a list of sorted blogpost titles on your site's homepage. Here is what your `index.js` should look like:
+Ahora que ha creado las consultas de GraphQL que extraen los datos que desea, utilizará esa segunda consulta para crear una lista de títulos de publicaciones de blog ordenados en la página de inicio de su sitio. Así es como debería verse su `index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -166,28 +166,28 @@ export const pageQuery = graphql`
 //highlight-end
 ```
 
-Save these changes and look at localhost:8000 to see your new homepage with a list of sorted blog posts!
+Guarde estos cambios y revise localhost:8000 para ver su nueva página de inicio con una lista de publicaciones de blog ordenadas.
 
-![WordPress home after query](/images/wordpress-source-plugin-home.jpg)
+![Inicio de WordPress después de la consulta](/images/wordpress-source-plugin-home.jpg)
 
-> **NOTE:** to future editors: it would be useful to also have examples of how to load blog posts to their own individual pages. And helpful to insert a screenshot of the final result here
+> ** NOTA: ** para futuros editores: sería útil tener también ejemplos de cómo cargar publicaciones de blog en sus propias páginas individuales. Y útil para insertar una captura de pantalla del resultado final aquí
 
-## Create pages for each blog post and link to them
+## Cree páginas para cada publicación de blog y enlácelas
 
-An index page with a post title and excerpt is great, but you should also build pages out for each of the blog posts, and link to them from your `index.js` file.
+Una página de índice con un título y extracto de publicación es excelente, pero también debe crear páginas para cada una de las publicaciones del blog y vincularlas desde su archivo `index.js`.
 
-To do this, you need to:
+Para hacer esto, necesitas:
 
-1. Create pages for each blog post
-2. Link up the title on the index page with the post page.
+1. Crear páginas para cada publicación de blog
+2. Enlace el título en la página de índice con la página de publicación.
 
-If you haven't already, please read through [Part 7](/tutorial/part-seven/) of the foundational tutorial, as it goes through the concept and examples of this process with Markdown instead of WordPress.
+Si aún no lo ha hecho, lea la [Parte 7] (/tutorial/part-seven/) del tutorial fundamental, ya que trata el concepto y los ejemplos de este proceso con Markdown en lugar de WordPress.
 
-### Creating pages for each blog post.
+### Crear páginas para cada publicación de blog.
 
-In Part 7 of the tutorial, the first step in creating pages is creating slugs for the markdown files. Since you are using WordPress and not Markdown files, you can grab the slugs that get returned from your API call to the WordPress source. You can skip creating slugs, since you already have them.
+En la Parte 7 del tutorial, el primer paso para crear páginas es crear slugs para los archivos de markdown. Como está utilizando WordPress y no archivos de Markdown, puede tomar las babosas que se devuelven de su llamada API a la fuente de WordPress. Puede omitir la creación de babosas, ya que ya las tiene.
 
-Open up your `gatsby-node.js` file in the root of your project (it should be blank except for some comments) and add the following:
+Abra su archivo `gatsby-node.js` en la raíz de su proyecto (debe estar en blanco excepto por algunos comentarios) y agregue lo siguiente:
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
@@ -213,15 +213,15 @@ exports.createPages = ({ graphql, actions }) => {
 }
 ```
 
-Next, stop and restart the `gatsby develop` environment. As you watch the terminal you should see two Post objects log to the terminal:
+A continuación, detenga y reinicie el entorno `gatsby develop`. Mientras observa el terminal, debería ver dos objetos Post registrados en el terminal:
 
 ![Two posts logged to the terminal](/images/wordpress-source-plugin-log.jpg)
 
-Excellent! As explained in Part 7 of the tutorial, this `createPages` export is one of the Gatsby "workhorses" and allows us to create your blog posts (or pages, or custom post types, etc.) from your WordPress install.
+¡Excelente! Como se explica en la Parte 7 del tutorial, esta exportación `createPages` es uno de los "caballos de batalla" de Gatsby y nos permite crear sus publicaciones de blog (o páginas, o tipos de publicaciones personalizadas, etc.) desde su instalación de WordPress.
 
-Before you can create the blog posts, however, you need to specify a template to build the pages.
+Sin embargo, antes de poder crear las publicaciones de blog, debe especificar una plantilla para crear las páginas.
 
-In your `src` directory, create a directory called `templates` and in the newly created `templates` folder, create a filed named `blog-post.js`. In that new file, paste the following:
+En su directorio `src`, cree un directorio llamado `templates` y en la carpeta `templates` recién creada, cree un archivo llamado `blog-post.js`. En ese nuevo archivo, pegue lo siguiente:
 
 ```jsx:title=src/tempates/blog-post.js
 import React from "react"
@@ -254,9 +254,9 @@ export const query = graphql`
 `
 ```
 
-What is this file doing? After importing your dependencies, it constructs the layout of the post with JSX. It wraps everything in the `Layout` component, so the style is the same throughout the site. Then, it simply adds the post title and the post content. You can add anything you want and can query for here (e.g. feature image, post meta, custom fields, etc.).
+¿Qué está haciendo este archivo? Después de importar sus dependencias, construye el diseño de la publicación con JSX. Envuelve todo en el componente `Layout`, por lo que el estilo es el mismo en todo el sitio. Luego, simplemente agrega el título de la publicación y el contenido de la publicación. Puede agregar cualquier cosa que desee y puede consultar aquí (por ejemplo, imagen característica, meta de publicación, campos personalizados, etc.).
 
-Below that, you can see the GraphQL query calling the specific post based on the `$slug`. This variable is passed to the `blog-post.js` template when the page is created in `gatsby-node.js`. To accomplish this, add the following code to the `gatsby-node.js` file:
+Debajo de eso, puede ver la consulta GraphQL llamando a la publicación específica basada en el `$slug`. Esta variable se pasa a la plantilla `blog-post.js` cuando la página se crea en `gatsby-node.js`. Para lograr esto, agregue el siguiente código al archivo `gatsby-node.js`:
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
@@ -294,15 +294,15 @@ exports.createPages = ({ graphql, actions }) => {
 }
 ```
 
-You will need to stop and start your environment again using `gatsby develop`. When you do, you will not see a change on the index page of the site, but if you navigate to a 404 page, like [http://localhost:8000/asdf](http://localhost:8001/asdf), you should see the two sample posts created and be able to click on them to go to the sample posts:
+Deberá detenerse y volver a iniciar su entorno utilizando `gatsby develop`. Cuando lo haga, no verá un cambio en la página de índice del sitio, pero si navega a una página 404, como [http://localhost:8000/asdf] (http://localhost:8001/asdf) , debería ver las dos publicaciones de muestra creadas y poder hacer clic en ellas para ir a las publicaciones de muestra:
 
-![Sample post links](/images/wordpress-source-plugin-sample-post-links.gif)
+![Ejemplos de enlaces de publicaciones](/images/wordpress-source-plugin-sample-post-links.gif)
 
-But nobody likes to go to a 404 page to find a blog post! So, let's link these up from the home page.
+¡Pero a nadie le gusta ir a una página 404 para encontrar una publicación de blog! Entonces, vinculemos esto desde la página de inicio.
 
-### Linking to posts from the homepage.
+### Vinculación a publicaciones de la página de inicio.
 
-Since you already have your structure and query done for the `index.js` page, all you need to do is use the `Link` component to wrap your titles and you should be good to go.
+Dado que ya tiene su estructura y consulta para la página `index.js`, todo lo que necesita hacer es usar el componente` Link` para ajustar sus títulos y debería estar listo.
 
 Open up your `index.js` file and add the following:
 
@@ -347,10 +347,10 @@ export const pageQuery = graphql`
 `
 ```
 
-And that's it! When you wrap the title in the `Link` component and reference the slug of the post, Gatsby will add some magic to the link, preload it, and make the transition between pages incredibly fast:
+¡Y eso es! Cuando envuelva el título en el componente `Link` y haga referencia a la publicación de la publicación, Gatsby agregará algo de magia al enlace, lo precargará y hará que la transición entre páginas sea increíblemente rápida:
 
-![Final product with links from the home page to the blog posts](/images/wordpress-source-plugin-home-to-post-links.gif)
+![Producto final con enlaces desde la página de inicio a las publicaciones del blog](/images/wordpress-source-plugin-home-to-post-links.gif)
 
-### Wrapping up.
+### Resumiendo.
 
-You can apply the same procedure to calling and creating pages, custom post types, custom fields, taxonomies, and all the fun and flexible content WordPress is known for. This can be as simple or as complex as you would like it to be, so explore and have fun with it!
+Puede aplicar el mismo procedimiento para llamar y crear páginas, tipos de publicaciones personalizadas, campos personalizados, taxonomías y todo el contenido divertido y flexible por el que WordPress es conocido. Esto puede ser tan simple o complejo como te gustaría que fuera, ¡así que explora y diviértete!
