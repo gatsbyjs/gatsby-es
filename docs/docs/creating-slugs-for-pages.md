@@ -36,7 +36,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 ## Slugs creados por consultas
 
-Abre y actualiza GraphiQL, luego ejecuta esta consulta GraphQL para ver todas tus slugs:
+Abre y actualiza GraphiQL, luego ejecuta esta consulta GraphQL para ver todos tus slugs:
 
 ```graphql
 {
