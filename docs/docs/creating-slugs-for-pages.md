@@ -1,5 +1,5 @@
 ---
-title: Creando slug para páginas
+title: Creando Slugs para páginas
 ---
 
 La lógica para crear slugs a partir de nombres de archivos puede ser complicada, el plugin `gatsby-source-filesystem` viene con una función para crearlos.
