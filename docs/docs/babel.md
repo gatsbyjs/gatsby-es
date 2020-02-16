@@ -2,29 +2,29 @@
 title: Babel
 ---
 
-Gatsby uses the phenomenal project [Babel](https://babeljs.io/) to enable
-support for writing modern JavaScript — while still supporting older browsers.
+Gatsby usa el proyecto fenomenal llamado [Babel](https://babeljs.io/) para tener
+compatibilidad y poder escribir JavaScript moderno, sin dejar de soportar navegadores antiguos.
 
-## How to specify which browsers to support
+## Como especificar cuales navegadores soportar
 
-Gatsby supports by default the last two versions of major browsers, IE 9+, as well as
-any browser that still has 1%+ browser share.
+Gatsby soporta por defecto las últimas dos versiones de los navegadores principales, 
+IE 9+, así como cualquier navegador que aún tenga el 1%+ de la cuota de navegación.
 
-This means we automatically compile your JavaScript to ensure it works on older browsers.
-We also automatically add polyfills as needed — no more shipping code which mysteriously
-breaks on older browsers!
+Esto significa que compilamos automáticamente tu Javascript para garantizar que funcione en navegadores antiguos.
+También, agregamos automáticamente los polyfills que sean necesarios, no más códigos de envío 
+que se rompen misteriosamente en navegadores antiguos!
 
-If you only target newer browsers, see the [Browser
-Support](/docs/browser-support/) docs page for how to instruct Gatsby on which
-browsers you support and then Babel will start compiling for only these
-browsers.
+Si tú solo le apuntas a los navegadores más nuevos. Revisa la página de  
+la documentación [Compatibilidad Con Navegadores](/docs/browser-support/) para 
+conocer como indicarle a Gatsby qué navegadores soportas y entonces Babel 
+comenzará a compilar solo para esos navegadores
 
-## How to use a custom .babelrc file
+## Como usar un archivo .babelrc personalizado
 
-Gatsby ships with a default .babelrc setup that should work for most sites. If you'd like
-to add custom Babel presets or plugins, you can create your own `.babelrc` at the root of
-your site, import [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby),
-and add additional plugins, presets, and pass options to `babel-preset-gatsby`, e.g. `targets`.
+Gatsby viene con una configuración .babelrc por defecto que debería funcionar para la mayoría de los sitios.
+Si tú quisieras agregar presets o plugins de Babel personalizados, puedes crear tu propio .babelrc en la raíz 
+de tu sitio, importa [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby), 
+y agrega los plugins, presets y pass options de Babel a `babel-preset-gatsby`, p. ej. `targets`.
 
 ```shell
 npm install --save-dev babel-preset-gatsby
@@ -39,7 +39,7 @@ npm install --save-dev babel-preset-gatsby
       "babel-preset-gatsby",
       {
         "targets": {
-          "browsers": [">0.25%", "not dead"]
+          "browsers": [">0.25%", "no está muerto"]
         }
       }
     ]
@@ -48,4 +48,4 @@ npm install --save-dev babel-preset-gatsby
 ```
 <!-- prettier-ignore-end -->
 
-For more advanced configurations, you can also copy the defaults from [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) and customize them to suit your needs.
+Para configuraciones más avanzadas, también puedes copiar los valores predeterminados de [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) y personalizarlos para satisfacer tus necesidades. 
