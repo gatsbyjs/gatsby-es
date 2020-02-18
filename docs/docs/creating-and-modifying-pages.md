@@ -41,7 +41,7 @@ ej. `localhost:8000/___graphql`.
 
 La propiedad `context` acepta un objeto, y podemos pasar cualquier dato al que queramos que la página pueda acceder.
 
-También puedes consultar cualquier dato de `contexto` que tu o los plugins agreguen a las páginas.
+También puedes consultar cualquier dato de `context` que tu o los plugins agreguen a las páginas.
 
 > **NOTA:** Hay algunos nombres reservados que _no pueden_ ser utilizados en `contexto`. Son: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, y `pluginCreatorId`.
 
