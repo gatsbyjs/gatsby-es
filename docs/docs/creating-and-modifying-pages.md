@@ -39,7 +39,7 @@ ej. `localhost:8000/___graphql`.
 }
 ```
 
-La propiedad `contexto` acepta un objeto, y podemos pasar cualquier dato al que queramos que la página pueda acceder.
+La propiedad `context` acepta un objeto, y podemos pasar cualquier dato al que queramos que la página pueda acceder.
 
 También puedes consultar cualquier dato de `contexto` que tu o los plugins agreguen a las páginas.
 
