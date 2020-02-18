@@ -14,7 +14,7 @@ Las páginas se pueden crear de tres maneras:
 También puedes implementar la API [`onCreatePage`](/docs/node-apis/#onCreatePage)
 para modificar páginas creadas en el core o plugins o para crear [rutas solo para clientes](/docs/building-apps-with-gatsby/).
 
-## Ayuda de depuración
+## Ayuda para depuración
 
 Para ver qué páginas están siendo creadas por tu código o plugins, puedes consultar
 información de la página mientras desarrollas in Graph*i*QL. Pega la siguiente consulta 
