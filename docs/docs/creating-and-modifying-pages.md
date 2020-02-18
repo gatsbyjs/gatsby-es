@@ -50,7 +50,7 @@ También puedes consultar cualquier dato de `context` que tu o los plugins agreg
 A menudo necesitarás crear páginas programaticamente. Por ejemplo, tienes
 archivos de markdown donde cada uno debe ser una página.
 
-Este ejemplo asume que cada página de markdown tiene una `ruta` establecida en el frontmatter
+Este ejemplo asume que cada página de markdown tiene un `path` establecido en el `frontmatter`
 del archivo de markdown.
 
 ```javascript:title=gatsby-node.js
