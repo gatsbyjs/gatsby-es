@@ -1,13 +1,13 @@
 ---
-title: Debugging Cache Issues
+title: Depuración de problemas de caché
 ---
 
-There can be certain scenarios in which the Gatsby caching mechanism appears to fail, which can lead to issues like:
+Puede haber ciertos escenarios en los que el mecanismo de almacenamiento en caché de Gatsby parece fallar, lo que puede conducir a problemas como:
 
-- Content not appearing when it should
-- Changes to plugin source code not appearing to be invoked appropriately
+- Contenido que no aparece cuando debería
+- Los cambios en el código fuente del plugin no parecen invocarse adecuadamente
 
-and more! If you've found yourself writing a script like:
+¡y más! Si te has encontrado escribiendo un script como:
 
 ```json:title=package.json
 {
@@ -17,9 +17,9 @@ and more! If you've found yourself writing a script like:
 }
 ```
 
-consider utilizing the `gatsby clean` command which can help resolve caching issues for you.
+considera utilizar el comando `gatsby clean` que puede ayudarte a resolver los problemas de almacenamiento en caché.
 
-First make sure the version of `gatsby` specified in your `package.json` dependencies is _at least_ `2.1.1`, and then make the following change to `package.json`:
+Primero asegúrate de que la versión de `gatsby` especificada en sus dependencias` package.json` sea _al menos_ `2.1.1`, y luego realiza el siguiente cambio en` package.json`:
 
 ```json:title=package.json
 {
@@ -29,8 +29,8 @@ First make sure the version of `gatsby` specified in your `package.json` depende
 }
 ```
 
-Now when issues arise that seem to be related to caching, you can use `npm run clean` to wipe out the cache and start from a fresh slate.
+Ahora, cuando surgen problemas que parecen estar relacionados con el almacenamiento en caché, puede usar `npm run clean` para borrar el caché y comenzar desde una nueva lista.
 
-_Note: If you find yourself using this command regularly, consider helping us out and [responding to our GitHub Issue][github-issue] with clear reproduction steps._
+_Nota: Si te encuentras usando este comando regularmente, considera ayudarnos y [responder a nuestros issues de GitHub][issue de github] con pasos claros de reproducción ._
 
-[github-issue]: https://github.com/gatsbyjs/gatsby/issues/11747
+[issue de github]: https://github.com/gatsbyjs/gatsby/issues/11747
