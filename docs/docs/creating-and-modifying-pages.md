@@ -17,7 +17,7 @@ para modificar páginas creadas en el core o plugins o para crear [rutas solo pa
 ## Ayuda para depuración
 
 Para ver qué páginas están siendo creadas por tu código o plugins, puedes consultar
-información de la página mientras desarrollas in Graph*i*QL. Pega la siguiente consulta 
+información de la página mientras desarrollas en Graph*i*QL. Pega la siguiente consulta 
 en el IDE de Graph*i*QL para tu sitio. El IDE de Graph*i*QL está disponible cuando 
 ejecutas el servidor de desarrollo de tu sitio en `HOST:PORT/___graphql` 
 ej. `localhost:8000/___graphql`.
