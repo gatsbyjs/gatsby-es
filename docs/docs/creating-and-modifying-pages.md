@@ -145,7 +145,7 @@ exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   deletePage(page)
-  // Puedes acceder a la variable "house" en las consultas de su página ahora
+  // Puedes acceder a la variable "house" en las consultas de tu página ahora
   createPage({
     ...page,
     context: {
