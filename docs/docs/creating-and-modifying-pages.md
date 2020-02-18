@@ -172,4 +172,4 @@ El contexto de la página se serializa antes de pasar a las páginas: esto signi
 
 ## Crear rutas solo para clientes
 
-En casos específicos, es posible que desees crear un sitio con porciones exclusivas para clientes que se cierran mediante autenticación. Para obtener más información sobre cómo lograr esto, consulta [client-only routes & user authentication](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).
+En casos específicos, es posible que desees crear un sitio con porciones exclusivas para clientes que se cierran mediante autenticación. Para obtener más información sobre cómo lograr esto, consulta [rutas solo para clientes y autenticación de usuario](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).
