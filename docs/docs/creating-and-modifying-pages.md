@@ -115,7 +115,7 @@ Para hacer esto, en el `gatsby-node.js` de tu sitio agregua código similar al s
 _Nota: También hay un plugin que elimina automáticamente todas las barras finales de las páginas:
 [gatsby-plugin-remove-trailing-slashes](/packages/gatsby-plugin-remove-trailing-slashes/)_.
 
-_Nota: Si necesitas realizar una acción asincrónica dentro de `onCreatePage`, puedes devolver una promesa o utilizar una función` async`._
+_Nota: Si necesitas realizar una acción asíncrona dentro de `onCreatePage`, puedes devolver una promesa o utilizar una función `async`._
 
 ```javascript:title=gatsby-node.js
 // Reemplazar '/' daría como resultado una cadena vacía que no es válida
