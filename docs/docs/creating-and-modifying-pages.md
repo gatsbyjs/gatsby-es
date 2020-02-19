@@ -47,7 +47,7 @@ También puedes consultar cualquier dato de `context` que tu o los plugins agreg
 
 ## Crear páginas en gatsby-node.js
 
-A menudo necesitarás crear páginas programaticamente. Por ejemplo, tienes
+A menudo necesitarás crear páginas programáticamente. Por ejemplo, tienes
 archivos de markdown donde cada uno debe ser una página.
 
 Este ejemplo asume que cada página de markdown tiene un `path` establecido en el `frontmatter`
