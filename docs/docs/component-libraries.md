@@ -4,11 +4,7 @@ title: Crear bibliotecas de componentes
 
 Las bibliotecas de componentes a menudo se usan en sistemas de UI basados en componentes como React y Vue. Típicamente son repositorios versionados de componentes.
 
-<<<<<<< HEAD
-El [Sistema de Diseño Carbon](http://carbondesignsystem.com/) de IMB y el [Blueprint](https://blueprintjs.com/) de Palantir son ambos buenos ejemplos.
-=======
-IBM's [Carbon Design System](https://www.carbondesignsystem.com/) and Palantir's [Blueprint](https://blueprintjs.com/) are both good examples.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+El [Sistema de Diseño Carbon](https://www.carbondesignsystem.com/) de IMB y el [Blueprint](https://blueprintjs.com/) de Palantir son ambos buenos ejemplos.
 
 ## Por qué bibliotecas de componentes
 
