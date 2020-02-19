@@ -19,7 +19,7 @@ El proceso esencialmente se verá así:
 
 Agregas etiquetas definiéndolas en el `frontmatter` de tu archivo _Markdown_. El `frontmatter` es el área en la parte superior rodeada de guiones que incluye datos de publicaciones como el título y la fecha.
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 ---
@@ -29,7 +29,7 @@ Fui al zoológico hoy. Fue terrible.
 
 Los campos pueden ser cadenas de texto, números, o arreglos. Como una publicación generalmente puede tener muchas etiquetas, tiene sentido definirla como un arreglo. Aquí agregamos nuestro nuevo campo de etiquetas:
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 tags: ["animales", "Chicago", "zoológicos"]

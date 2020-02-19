@@ -13,7 +13,7 @@ La información necesaria para buscar esas entradas en concreto (es decir, los v
 
 ### Ejemplos
 
-```js:title=src/templates/blog-list-template.js
+```jsx:title=src/templates/blog-list-template.js
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"

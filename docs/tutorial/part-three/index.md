@@ -265,7 +265,7 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![with-navigation2](with-navigation.png)
 
 ¡Y ahí lo tienes! Un sitio web con tres páginas y una navegación global básica.
 

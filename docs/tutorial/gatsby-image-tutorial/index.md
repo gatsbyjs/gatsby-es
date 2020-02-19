@@ -187,7 +187,7 @@ Para hacer referencia a tus imágenes en YAML, asegúrate de que las rutas relat
 
 El interior del archivo YAML se vería así:
 
-```
+```yaml
 - image: speaking/kcdc.jpg
 ```
 
@@ -225,7 +225,7 @@ Debido a que las imágenes se almacenan como parte de un _array_, se puede acced
 
 Si tu consulta es parte de un componente reutilizable, es posible que quieras usar el _hook_ `useStaticQuery`. El código necesario para hacer esto es casi el mismo que en el caso anterior de imagen única.
 
-```javascript:title=src/components/header-image.js
+```jsx:title=src/components/header-image.js
 export default () => {
   const data = useStaticQuery(graphql`
     query {

@@ -47,22 +47,22 @@ Abre GraphiQL.
 
 Si abres la ventana de autocompletar, verás:
 
-![graphiql-filesystem](images/graphiql-filesystem.png)
+![graphiql-filesystem](./images/graphiql-filesystem.png)
 
 Pulsa <kbd>Enter</kbd> en `allFile` después pulsa <kbd>Ctrl + Enter</kbd> para ejecutar una
 consulta.
 
-![filesystem-query](images/filesystem-query.png)
+![filesystem-query](./images/filesystem-query.png)
 
 Borra el `id` de la consulta y vuelve a abrir el autocompletado (<kbd>Ctrl +
 Espacio</kbd>).
 
-![filesystem-autocomplete](images/filesystem-autocomplete.png)
+![filesystem-autocomplete](./images/filesystem-autocomplete.png)
 
 Intenta añadir una serie de campos a tu consulta, pulsando <kbd>Ctrl + Enter</kbd>
 cada vez para re-ejecutar la consulta. Verás algo parecido a esto:
 
-![allfile-query](images/allfile-query.png)
+![allfile-query](./images/allfile-query.png)
 
 El resultado es un _array_ de "nodos" `File` (nodo es un nombre elegante para un objeto en un
 "grafo"). Cada objeto `File` tiene los campos que has consultado.

@@ -22,7 +22,7 @@ plugins: [`gatsby-plugin-postcss`],
 
 3.  Escribe tus hojas de estilo utilizando PostCSS (archivos .css) y solicítalas o impórtalas como de costumbre.
 
-```css:styles.css
+```css:title=styles.css
 @custom-media --med (width <= 50rem);
 
 @media (--med) {

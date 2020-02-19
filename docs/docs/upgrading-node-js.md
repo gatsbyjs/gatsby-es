@@ -14,9 +14,9 @@ Revisa el [Documento de lanzamientos de Node](https://github.com/nodejs/Release#
 
 Ejecuta `node -v` en una ventana de la terminal para ver qué versión de Node posees.
 
-```
+```shell
 node -v
-v10.16.0
+v10.18.0
 ```
 
 Este ejemplo muestra Node versión 10, específicamente v10.16.0.
@@ -39,13 +39,13 @@ Tendrás homebrew instalado en tu computadora si has [seguido la parte cero del 
 
 Para actualizar de Node 6 a Node 8 usando Homebrew, abre una ventana de la terminal y ejecuta los siguientes comandos:
 
-```
+```shell
 brew search node
 ```
 
 Deberías tener un resultado similar a éste:
 
-```
+```shell
 brew search node
 ==> Formulae
 heroku/brew/heroku-node ✔        llnode                           node@10                          nodebrew
@@ -55,13 +55,13 @@ libbitcoin-node                  node-build                       node_exporter 
 
 Estás interesado en la versión estable siguiente de Node posterior a Node 6, que es Node 8. Homebrew hace esto disponible en un paquete llamado `node@8`. Ejecuta:
 
-```
-brew install node@8
+```shell
+brew install node@10
 ```
 
 Una vez que ésto ha concluido, ejecuta:
 
-```
+```shell
 node -v
 ```
 
@@ -77,15 +77,15 @@ Hay dos paquetes populares para administrar múltiples versiones de Node en tu s
 
 Ejecuta
 
-```
+```shell
 nvm
 ```
 
 en una ventana de la terminal para ver si nvm está instalado en tu sistema. Si está instalado, ejecuta:
 
-```
-nvm install 8
-nvm alias default 8
+```shell
+nvm install 10
+nvm alias default 10
 ```
 
 para instalar Node versión 8.
@@ -96,7 +96,7 @@ para instalar Node versión 8.
 
 Ejecuta:
 
-```
+```shell
 n
 ```
 

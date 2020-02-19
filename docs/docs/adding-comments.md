@@ -52,7 +52,7 @@ npm install disqus-react
 GATSBY_DISQUS_NAME=insertValue
 ```
 
-```title=.env
+```text:title=.env
 GATSBY_DISQUS_NAME=yourSiteShortname
 ```
 
@@ -76,7 +76,7 @@ const disqusConfig = {
 
 Donde `identifier` debe ser un string o número que identifique exclusivamente a esa entrada de blog. Puede ser el slug del post, título o un ID. Finalmente, agrega `DiscussionEmbed` al JSX de la plantilla de tu entrada de blog.
 
-```js:title=src/templates/post.js
+```jsx:title=src/templates/post.js
 return (
   <Global>
     <PageBody>

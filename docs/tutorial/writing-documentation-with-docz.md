@@ -27,7 +27,7 @@ cd my-gatsby-site-with-docz
 Instala el paquete `gatsby-theme-docz`:
 
 ```shell
-npm install --save gatsby-theme-docz@next
+npm install --save gatsby-theme-docz docz
 ```
 
 Agrega `gatsby-theme-docz` bajo `plugins` en `gatsby-config.js`:

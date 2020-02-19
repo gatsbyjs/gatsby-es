@@ -2,7 +2,7 @@
 title: Creación de un Blog de Gatsby con Netlify CMS
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JeTqxCJC56Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video: Make a developer blog in under 10 minutes | Lightning Tutorial"></iframe>
+https://youtu.be/JeTqxCJC56Q
 
 Este tutorial usará [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog), un proyecto inicial de Gatsby basado en el oficial [gatsby-starter-blog](/starters/gatsbyjs/gatsby-starter-blog/). Las diferencias son que `gatsby-personal-starter-blog` está configurado para ejecutar el blog en un subdirectorio, `/blog`, y viene preinstalado con [Netlify CMS](https://www.netlifycms.org/) para edición de contenidos. También agrega el resaltado de código de VS Code para bloques de código.
 

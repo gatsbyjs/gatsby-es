@@ -1,6 +1,7 @@
 ---
 title: Temas
 overview: true
+disableTableOfContents: true
 ---
 
 Al usar un tema de Gatsby, toda tu configuración por defecto (funcionalidades compartidas, suministro de datos, diseño) es abstraído fuera de tu sitio, a un paquete instalable.

@@ -68,7 +68,7 @@ El paquete del tema para blogs de Gatsby tiene un componente que contiene la bio
 
 Si miras en el árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 
-```
+```text
 my-blog
 ├── content
 │   ├── assets
@@ -93,6 +93,8 @@ En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-bl
 Abre el fichero `bio-content.js` y realiza algunas modificaciones de su contenido:
 
 ```jsx:title=bio-content.js
+import React, { Fragment } from "react"
+
 export default () => (
   {/* highlight-start */}
   <Fragment>
@@ -143,6 +145,9 @@ El tema para blog viene por defecto con el color púrpura de Gatsby, pero puedes
 Abre el fichero `/src/gatsby-theme-blog/gatsby-plugin-theme-ui/colors.js`, y descomenta el código en el mismo.
 
 ```javascript:title=colors.js
+import merge from "deepmerge"
+import defaultThemeColors from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors"
+
 {/* highlight-start */}
 const blue60 = "#007acc"
 const blue30 = "#66E0FF"

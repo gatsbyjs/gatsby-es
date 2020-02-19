@@ -20,8 +20,7 @@ npm install -g @storybook/cli
 Una vez que el CLI está instalado, el próximo paso es correr el comando `sb init` que está disponible en el directorio base de tu proyecto Gatsby
 
 ```shell
-cd my-awesome-gatsby-project
-sb init
+npx -p @storybook/cli sb init
 ```
 
 > Nota que si estás ejecutando una versión reciente de `npm` (5.2.0+) puedes correr el siguiente comando singular en vez del anterior: `npx -p @storybook/cli sb init`, el cual es el método recomendado por Storybook. Esto no instala el CLI en tu computadora, de este modo asegurando que siempre estés corriendo la última versión disponible del CLI.

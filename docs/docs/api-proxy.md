@@ -14,7 +14,7 @@ servidor _backend_.
 Para indicarle al servidor de desarrollo que filtre cualquier petición no conocida a tu servidor API
 en desarrollo, agrega un campo `proxy` a tu `gatsby-config.js`, por ejemplo:
 
-```js:title=gatsby-config.js
+```javascript:title=gatsby-config.js
 module.exports = {
   proxy: {
     prefix: "/api",
