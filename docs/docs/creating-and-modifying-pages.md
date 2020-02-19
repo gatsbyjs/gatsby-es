@@ -43,7 +43,7 @@ La propiedad `context` acepta un objeto, y podemos pasar cualquier dato al que q
 
 También puedes consultar cualquier dato de `context` que tu o los plugins agreguen a las páginas.
 
-> **NOTA:** Hay algunos nombres reservados que _no pueden_ ser utilizados en `contexto`. Son: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, y `pluginCreatorId`.
+> **NOTA:** Hay algunos nombres reservados que _no pueden_ ser utilizados en `context`. Son: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, y `pluginCreatorId`.
 
 ## Crear páginas en gatsby-node.js
 
