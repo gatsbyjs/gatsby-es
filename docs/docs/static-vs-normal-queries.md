@@ -2,31 +2,12 @@
 title: Static vs Normal Queries
 ---
 
-<<<<<<< HEAD
-> This documentation isn't up to date with the latest version of Gatsby.
->
-> Outdated areas are:
->
-> - mention the useStaticQuery hook
-> - describe how queries are stripped and JSON imports are rewritten
->
-> You can help by making a PR to [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
-=======
 Gatsby handles three varieties of GraphQL queries: Page queries (sometimes for simplicity referred to as "normal queries"), static queries using the `<StaticQuery />` component, and static queries using the `useStaticQuery` hook.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Differences between varieties of GraphQL queries
 
 Static queries differ from Gatsby page queries in a number of ways. For pages, Gatsby is capable of handling queries with variables because of its awareness of page context. However, **page queries can only be made in top-level page components**.
 
-<<<<<<< HEAD
-- page queries can accept variables (via `pageContext`) but can only be added to _page_ components
-- StaticQuery does not accept variables (hence the name "static"), but can be used in _any_ component, including pages
-- StaticQuery does not work with raw React.createElement calls; please use JSX, e.g. `<StaticQuery />`
-- Static Queries don't need to get run for each page.(ie:Just once)
-
-### staticQueryComponents
-=======
 In contrast, static queries do not take variables. This is because static queries are used inside specific components, and can appear lower in the component tree. Data fetched with a static query won't be dynamic (i.e. **they can't use variables**, hence the name "static" query), but they can be called at any level in the component tree.
 
 _For more information on the practical differences in usage between static and normal queries, refer to the guide on [static query](/docs/static-query/#how-staticquery-differs-from-page-query). This guide discusses the differences in how they are handled internally by Gatsby_
@@ -34,7 +15,6 @@ _For more information on the practical differences in usage between static and n
 ## Keeping track of site queries during build in Redux stores
 
 Gatsby stores the queries from your site in Redux stores called `components` and `staticQueryComponents`. This process and a flowchart illustrating it are explained in the [query extraction](/docs/query-extraction/#store-queries-in-redux) guide.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 In Redux, `staticQueryComponents` is a `Map` from component `jsonName` to `StaticQueryObject`. An example entry in that data structure looks like this:
 
