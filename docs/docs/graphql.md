@@ -29,10 +29,6 @@ La cual devuelve:
 
 Observa como la estructura de la consulta concuerda con la estructura del JSON recibido. Esto es posible porque, en GraphQL, tu consulta se empareja con un `schema`, la cual, es la representación de tus datos disponibles. No te preocupes por como el esquema llega desde ahora. Gatsby se encarga de organizar todos tus datos por ti, y los hace reconocibles con una herramienta llamada GraphiQL. GraphiQL es una interfaz gráfica, que te permite 1) Hacer consultas de tus datos en el navegador. 2) Inspeccionar la estructura de datos disponible, a través de un explorador de tipos de dato.
 
-<<<<<<< HEAD
-Si quieres saber más acerca de GraphQL, puedes leer más acerca de [porque Gatsby lo usa](/docs/why-gatsby-uses-graphql) y revisar esta [guía conceptual](/docs/querying-with-graphql) sobre consultas de datos con GraphQL.
-=======
-If you want to know more about GraphQL, you can read more about [why Gatsby uses it](/docs/why-gatsby-uses-graphql/) and check out this [conceptual guide](/docs/graphql-concepts/) on querying data with GraphQL.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Si quieres saber más acerca de GraphQL, puedes leer más acerca de [porque Gatsby lo usa](/docs/why-gatsby-uses-graphql/) y revisar esta [guía conceptual](/docs/graphql-concepts/) sobre consultas de datos con GraphQL.
 
 <GuideList slug={props.slug} />
