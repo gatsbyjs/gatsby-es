@@ -2,7 +2,7 @@
 title: Comunidad
 ---
 
-Desde deciembre 2019, la comunidad de Gatsby se compone de más de 2,800 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
+Desde diciembre 2019, la comunidad de Gatsby se compone de más de 2,800 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
 
 El código abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone tristes. **Todos pertenecen en el código abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
 
