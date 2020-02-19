@@ -35,11 +35,7 @@ Then in the `public` directory will be files to copy to the server.
 
 ## Adding a Path Prefix
 
-<<<<<<< HEAD
-If you want to specific Path Prefix, for example `example.com/blog/` instead of `example.com/` read [Adding a Path Prefix](/docs/path-prefix)
-=======
 If you want a specific Path Prefix, for example `example.com/blog/` instead of `example.com/` read [adding a path prefix](/docs/path-prefix)
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Specific deploy
 
