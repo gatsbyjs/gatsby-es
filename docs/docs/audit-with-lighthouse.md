@@ -26,11 +26,7 @@ gatsby build
 gatsby serve
 ```
 
-<<<<<<< HEAD
-Una vez que inicie, puedes ver tu sitio en `localhost:9000`.
-=======
-Once this starts, you can now view your site at `http://localhost:9000`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Una vez que inicie, puedes ver tu sitio en `http://localhost:9000`.
 
 ### Ejecuta una auditoría con Lighthouse
 
