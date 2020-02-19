@@ -66,11 +66,7 @@ module.exports = {
 
 ## Usando datos de WordPress
 
-<<<<<<< HEAD
-Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
-=======
-Once your source plugin is pulling data, you can construct your site pages by implementing the `createPages` API in `gatsby-node.js`. When this is called, your data has already been fetched and is available to query with GraphQL. Gatsby uses [GraphQL at build time](/docs/graphql-concepts/#how-do-graphql-and-gatsby-work-together); Your source plugin (in this case, `gatsby-source-wordpress`) fetches your data, and Gatsby uses that data to "[automatically _infer_ a GraphQL schema](/docs/graphql-concepts/#how-does-graphql-and-gatsby-work-together)" that you can query against.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/graphql-concepts/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/graphql-concepts/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
 
 La API `createPages` expone la función `graphql`:
 
@@ -81,11 +77,11 @@ Puedes usar el archivo [`gatsby-node.js`](https://github.com/gatsbyjs/gatsby/blo
 Por ejemplo, aquí abajo tienes un extracto de ejemplo en `gatsby-node.js`.
 
 ```javascript:title=gatsby-node.js
-const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
+const path = require(`path`);
+const { slash } = require(`gatsby-core-utils`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   // consulta contenido para entradas de WordPress
   const result = await graphql(`
@@ -99,9 +95,9 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+  const postTemplate = path.resolve(`./src/templates/post.js`);
   result.data.allWordpressPost.edges.forEach(edge => {
     createPage({
       // será la url de tu página
@@ -111,11 +107,11 @@ exports.createPages = async ({ graphql, actions }) => {
       // En la consulta GraphQL de la plantilla, 'id' estará disponible
       // como una variable GraphQL para realizar consultas de datos de esta entrada.
       context: {
-        id: edge.node.id,
-      },
-    })
-  })
-}
+        id: edge.node.id
+      }
+    });
+  });
+};
 ```
 
 Después de obtener los datos desde WordPress a través de la consulta, todas las entradas se iteran, llamando a [`createPage`](/docs/actions/#createPage) para cada una.
@@ -124,11 +120,7 @@ Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una
 
 Cuando reinicies tu servidor con el comando `gatsby develop` podrás navegar a las nuevas páginas creadas para cada una de tus entradas en sus respectivas rutas.
 
-<<<<<<< HEAD
-En el IDE GraphiQL en [localhost:8000/\_\_graphql](http://localhost:8000/__graphql) deberías ver ahora campos consultables para `allWordpressPosts` en la barra lateral de documentos o del explorador.
-=======
-In the GraphiQL IDE at `http://localhost:8000/__graphql` you should now see queryable fields for `allWordpressPosts` in the docs or explorer sidebar.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+En el IDE GraphiQL en `localhost:8000/__graphql` deberías ver ahora campos consultables para `allWordpressPosts` en la barra lateral de documentos o del explorador.
 
 ## Terminando
 
