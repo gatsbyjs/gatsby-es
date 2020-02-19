@@ -2,13 +2,7 @@
 title: Construyendo con Componentes
 ---
 
-<<<<<<< HEAD
-import LayerModel from "../../www/src/components/layer-model"
-
 Para usar Gatsby, necesitarás un conocimiento básico sobre componentes en React.
-=======
-To use Gatsby, you will need a basic understanding of React components.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 El [tutorial oficial](https://reactjs.org/tutorial/tutorial.html)
 es un buen lugar para empezar.
@@ -64,17 +58,17 @@ de lo contrario el _compilado_ fallará.
 Ejemplo:
 
 ```jsx:title=src/pages/about.jsx
-import React from "react"
+import React from "react";
 
 function AboutPage(props) {
   return (
     <div className="about-container">
       <p>Acerca de mi.</p>
     </div>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;
 ```
 
 ### Componentes de plantilla de página
@@ -91,20 +85,20 @@ detallada de crear páginas mediante programación.
 Ejemplo:
 
 ```jsx:title=src/templates/post.jsx
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 function BlogPostTemplate(props) {
-  const post = props.data.markdownRemark
+  const post = props.data.markdownRemark;
   return (
     <div>
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
-  )
+  );
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -115,12 +109,12 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ### Componente HTML
 
-`src/html.jsx` es responsable de todo lo que no sea donde Gatsby está en 
+`src/html.jsx` es responsable de todo lo que no sea donde Gatsby está en
 el `<body />`.
 
 En este archivo, puedes modificar los metadatos del `<head>` y la estructura general del
@@ -133,27 +127,27 @@ tener un html.js.
 Ejemplo:
 
 ```jsx:title=src/html.jsx
-import React from "react"
-import favicon from "./favicon.png"
+import React from "react";
+import favicon from "./favicon.png";
 
-let inlinedStyles = ""
+let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
   try {
-    inlinedStyles = require("!raw-loader!../public/styles.css")
+    inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
 
 function HTML(props) {
-  let css
+  let css;
   if (process.env.NODE_ENV === "production") {
     css = (
       <style
         id="gatsby-inlined-css"
         dangerouslySetInnerHTML={{ __html: inlinedStyles }}
       />
-    )
+    );
   }
   return (
     <html lang="en">
@@ -169,7 +163,7 @@ function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 ```
 
