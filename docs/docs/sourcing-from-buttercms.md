@@ -164,13 +164,13 @@ With your homepage defined, the ButterCMS our graphql query will return some dat
 Now lets create the home page:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => {
-  const home = data.home.edges[0].node
+  const home = data.home.edges[0].node;
 
   return (
     <Layout>
@@ -186,7 +186,7 @@ const IndexPage = ({ data }) => {
           alignItems: `center`,
           justifyContent: `center`,
           flexDirection: `column`,
-          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`,
+          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`
         }}
       >
         <h1
@@ -195,7 +195,7 @@ const IndexPage = ({ data }) => {
             color: `white`,
             fontSize: `2.5rem`,
             fontWeight: `100`,
-            maxWidth: `960px`,
+            maxWidth: `960px`
           }}
         >
           {home.headline}
@@ -206,7 +206,7 @@ const IndexPage = ({ data }) => {
             backgroundColor: `white`,
             border: `none`,
             fontSize: `1.5rem`,
-            borderRadius: `10px`,
+            borderRadius: `10px`
           }}
         >
           {home.call_to_action}
@@ -221,7 +221,7 @@ const IndexPage = ({ data }) => {
           display: `flex`,
           flexDirection: `column`,
           alignItems: `center`,
-          justifyContent: `center`,
+          justifyContent: `center`
         }}
       >
         {home.customer_logos.map(({ logo_image }) => (
@@ -233,8 +233,8 @@ const IndexPage = ({ data }) => {
         ))}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 //GraphQl query to fetch homepage data
 export const query = graphql`
@@ -254,9 +254,9 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;
 ```
 
 in your terminal, run
@@ -303,11 +303,7 @@ gatsby develop
 
 ### Testing with GrapiQl
 
-<<<<<<< HEAD
-You can test out your Graphql queries with GrahiQl( A graphql debugger) fire up Graphiql on [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
-=======
 You can test out your GraphQL queries with GraphiQL (a GraphQL debugger) fire up GraphiQL on `http://localhost:8000/___graphql`
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Once graphiql is opened paste the query below :
 
@@ -333,15 +329,15 @@ Once graphiql is opened paste the query below :
 Now lets refactor our home page to display link(s) to each customer case study page
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-  const home = data.home.edges[0].node
-  const case_studies = data.case_studies.edges
+  console.log(data);
+  const home = data.home.edges[0].node;
+  const case_studies = data.case_studies.edges;
 
   return (
     <Layout>
@@ -357,7 +353,7 @@ const IndexPage = ({ data }) => {
           alignItems: `center`,
           justifyContent: `center`,
           flexDirection: `column`,
-          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`,
+          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`
         }}
       >
         <h1
@@ -366,7 +362,7 @@ const IndexPage = ({ data }) => {
             color: `white`,
             fontSize: `2.5rem`,
             fontWeight: `100`,
-            maxWidth: `960px`,
+            maxWidth: `960px`
           }}
         >
           {home.headline}
@@ -377,7 +373,7 @@ const IndexPage = ({ data }) => {
             backgroundColor: `white`,
             border: `none`,
             fontSize: `1.5rem`,
-            borderRadius: `10px`,
+            borderRadius: `10px`
           }}
         >
           {home.call_to_action}
@@ -390,7 +386,7 @@ const IndexPage = ({ data }) => {
           display: `flex`,
           flexDirection: `column`,
           alignItems: `center`,
-          justifyContent: `center`,
+          justifyContent: `center`
         }}
       >
         {home.customer_logos.map(({ logo_image }) => (
@@ -409,8 +405,8 @@ const IndexPage = ({ data }) => {
         ))}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -444,21 +440,21 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;
 ```
 
 Next you'll refactor `gatsby-node-js` to programmatically create customer case study pages with gatsby create pages API. First you need to define a customer case study template
 
 ```jsx:title=src/templates/customer-case-study.js
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 function CustomerCaseStudy({ data }) {
-  const page = data.allButterPage.edges[0].node
+  const page = data.allButterPage.edges[0].node;
 
   return (
     <Layout>
@@ -470,7 +466,7 @@ function CustomerCaseStudy({ data }) {
         <p>{page.testimonial}</p>
       </div>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -489,28 +485,28 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default CustomerCaseStudy
+export default CustomerCaseStudy;
 ```
 
 Now let's programmatically create customer case study pages based on the template you defined in `src/template/customer-case-study.js`
 
 ```javascript:title=gatsby-node.js
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   // Blog post template
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
   //customer case study template
   const customerCaseStudy = path.resolve(
     `./src/templates/customer-case-study.js`
-  )
+  );
 
-  let posts
+  let posts;
   try {
     posts = await graphql(`
       {
@@ -536,16 +532,16 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    `)
+    `);
   } catch (error) {
-    console.log(`Error Running Querying Posts`, error)
+    console.log(`Error Running Querying Posts`, error);
   }
 
-  posts = posts.data.allButterPost.edges
+  posts = posts.data.allButterPost.edges;
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
 
     // Create blog posts pages.
     createPage({
@@ -554,13 +550,13 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: post.node.slug,
         previous,
-        next,
-      },
-    })
-  })
+        next
+      }
+    });
+  });
 
   // Fetch Customer Case study pages
-  let pages
+  let pages;
   try {
     pages = await graphql(`
       {
@@ -578,9 +574,9 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    `)
+    `);
   } catch (error) {
-    console.log(`Error Running Querying Pages`, error)
+    console.log(`Error Running Querying Pages`, error);
   }
 
   //Create Customer Case study pages
@@ -589,11 +585,11 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/case-study/${page.node.slug}`,
       component: customerCaseStudy,
       context: {
-        slug: page.node.slug,
-      },
-    })
-  })
-}
+        slug: page.node.slug
+      }
+    });
+  });
+};
 ```
 
 That's it! now stop the server and run:
@@ -639,15 +635,15 @@ Now go back to your workspace and update your heading and FAQ items.
 ## Integrate into your application
 
 ```jsx:title=src/pages/faq.js
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const Faq = ({ data }) => {
-  const FAQs = data.allButterCollection.edges[0].node.value
-  const headline = data.allButterContentField.edges[0].node.value
+  const FAQs = data.allButterCollection.edges[0].node.value;
+  const headline = data.allButterContentField.edges[0].node.value;
 
   return (
     <Layout>
@@ -661,7 +657,7 @@ const Faq = ({ data }) => {
           alignItems: `center`,
           justifyContent: `center`,
           flexDirection: `column`,
-          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`,
+          background: `linear-gradient(-45deg, rgb(29, 64, 86) 0%, rgb(60, 24, 78) 100%)`
         }}
       >
         {headline}
@@ -674,7 +670,7 @@ const Faq = ({ data }) => {
               padding: `10px`,
               background: `whitesmoke`,
               borderRadius: `10px`,
-              margin: `5px`,
+              margin: `5px`
             }}
           >
             <h2 style={{ color: `#213b55` }}>{faq.question}</h2>
@@ -683,8 +679,8 @@ const Faq = ({ data }) => {
         ))}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   {
@@ -709,8 +705,8 @@ export const query = graphql`
       }
     }
   }
-`
-export default Faq
+`;
+export default Faq;
 ```
 
 # Blog
@@ -724,16 +720,16 @@ Butter CMS is also a great feat if you want to spin up a blog, it's pretty easy 
 Now you will create a home page for our blog posts. It basically lists all blog posts.
 
 ```jsx:title=src/pages/blog.js
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
 class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allButterPost.edges
+    const { data } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
+    const posts = data.allButterPost.edges;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -746,17 +742,17 @@ class BlogIndex extends React.Component {
           style={{
             alignItems: `center`,
             justifyContent: `center`,
-            margin: `20px 0px 20px 0px`,
+            margin: `20px 0px 20px 0px`
           }}
         >
           <div
             style={{
               maxWidth: `960px`,
-              padding: `30px`,
+              padding: `30px`
             }}
           >
             {posts.map(({ node }) => {
-              const title = node.seo_title || node.slug
+              const title = node.seo_title || node.slug;
               return (
                 <div
                   key={node.slug}
@@ -775,16 +771,16 @@ class BlogIndex extends React.Component {
                     dangerouslySetInnerHTML={{ __html: node.meta_description }}
                   />
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -823,7 +819,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ## Creating a blog template
@@ -831,18 +827,18 @@ export const pageQuery = graphql`
 Now you've listed our blog posts in `src/pages/blog.js`, using gatsby [createpages](/docs/node-apis/#createPages) API you would generate blog post pages using a template:
 
 ```jsx:title=src/pages/template/blog-post.js
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/Bio"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Bio from "../components/Bio";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.allButterPost.edges[0].node
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.allButterPost.edges[0].node;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -852,7 +848,7 @@ class BlogPostTemplate extends React.Component {
             display: `flex`,
             alignItems: `center`,
             justifyContent: `center`,
-            margin: `20px 0px 20px 0px`,
+            margin: `20px 0px 20px 0px`
           }}
         >
           <div style={{ maxWidth: `960px`, padding: `30px` }}>
@@ -873,7 +869,7 @@ class BlogPostTemplate extends React.Component {
                 flexWrap: `wrap`,
                 justifyContent: `space-between`,
                 listStyle: `none`,
-                padding: 0,
+                padding: 0
               }}
             >
               <li>
@@ -894,11 +890,11 @@ class BlogPostTemplate extends React.Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -922,7 +918,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ## Generate blog pages
