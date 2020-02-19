@@ -7,9 +7,12 @@ Si un plugin es únicamente aplicable a tu caso de uso específico, o si estás 
 Coloca el código en la carpeta `plugins` en la carpeta raíz de tu proyecto de esta manera:
 
 ```
-plugins
-└── my-own-plugin
-    └── package.json
+/my-gatsby-site
+└── gatsby-config.js
+└── /src
+└── /plugins
+    └── /my-own-plugin
+        └── package.json
 ```
 
 **NOTA:** Aún así necesitas añadir el plugin a tu `gatsby-config.js`. No se detectan automáticamente los plugins locales.
@@ -18,7 +21,10 @@ plugins
 
 ```javascript:title=gatsby-config.js
 module.exports = {
-  plugins: ["my-own-plugin"],
+  plugins: [
+    `gatsby-third-party-plugin`,
+    `my-own-plugin`, // highlight-line
+  ],
 }
 ```
 

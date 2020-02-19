@@ -78,7 +78,7 @@ Por ejemplo, aquí abajo tienes un extracto de ejemplo en `gatsby-node.js`.
 
 ```javascript:title=gatsby-node.js
 const path = require(`path`)
-const slash = require(`slash`)
+const { slash } = require(`gatsby-core-utils`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions

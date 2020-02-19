@@ -35,12 +35,9 @@ existen en torno a la Browserslist — https://css-tricks.com/browserlist-good-i
 
 Por defecto, Gatsby tiene la siguiente configuración:
 
-```javascript:title=package.json
+```json:title=package.json
 {
- "browserslist": [
-   ">0.25%",
-   "not dead"
- ]
+  "browserslist": [">0.25%", "not dead"]
 }
 ```
 

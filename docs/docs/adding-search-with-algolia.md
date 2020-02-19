@@ -176,7 +176,7 @@ Están sucediendo algunas cosas en estos archivos, así que vamos a descomponerl
 
 ### `index.js`
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
 import React, { useState, useEffect, createRef } from "react"
 import {
   InstantSearch,
@@ -254,7 +254,7 @@ En la parte superior, importas `InstantSearch` de [`react-instantsearch-dom`](ht
 
 Luego importas los componentes estilizados que componen la interfaz de usuario y el componente `Input` en el cual el usuario ingresa la consulta.
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
 import { Root, SearchBox, HitsWrapper, PoweredBy } from "./styles"
 import Input from "./Input"
 ```
@@ -263,13 +263,13 @@ import Input from "./Input"
 
 Lo último que necesitas para que el componente `Search` funcione, es usar componentes _hit_ para cada tipo de resultado que quieres mostrar al usuario. El componente _hit_ determina cómo los atributos de los resultados (como autor, fecha, etiquetas y título en el caso del post del blog) son mostrados al usuario.
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
 import * as hitComps from "./hitComps"
 ```
 
 A continuación definirás dos componentes conectados. `Results` informará al usuario que no se encontraron coincidencias para la consulta, a menos que, el número de _hits_ sea positivo, es decir, si `searchResults.nbHits > 0`. `Stats` mostrará `searchResults.nbHits`.
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) =>
     res && res.nbHits > 0 ? children : `No results for ${state.query}`
@@ -283,7 +283,7 @@ const Stats = connectStateResults(
 
 Ahora trabajaremos en el verdadero componente de búsqueda `Search`. Este empieza con algunas inicializaciones de estados, definiciones de funciones para manejar eventos. Todo lo que hace este código es deslizar hacia afuera el cuadro de texto de la búsqueda cuando el usuario hace clic en el ícono de buscar y lo desaparece de nuevo cuando el usuario hace clic o toca la pantalla(en móviles) en otra parte.
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
 export default function Search({ indices, collapse, hitsAsGrid }) {
   const ref = createRef()
   const [query, setQuery] = useState(``)
@@ -309,7 +309,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
 
 `Search` devuelve JSX que renderiza un arreglo dinámico de `indices` pasados como _prop_. Cada ítem del arreglo debe ser un objeto con llaves como `name`, `title`, `hitComp`. El `name` especifica el índice a ser consultado en tu cuenta de Algolia, el `title` es el título a mostrar encima de los resultados que verá el usuario y `hitComp` el componente _hit_ que renderiza los datos devueltos por cada coincidencia.
 
-```js:title=src/components/search/index.js
+```jsx:title=src/components/search/index.js
   return (
     <InstantSearch
       searchClient={searchClient}
@@ -343,7 +343,7 @@ Nota que usaste el mismo _app ID_ en `algoliasearch` que especificaste en el arc
 
 ## `input.js`
 
-```js:title=src/components/search/input.js
+```jsx:title=src/components/search/input.js
 import React from "react"
 import { connectSearchBox } from "react-instantsearch-dom"
 
@@ -509,7 +509,7 @@ Ya casi hemos finalizado, solo faltan dos pequeños pasos. Primero necesitas con
 
 ## `hitComps.js`
 
-```js:title=src/components/search/hitComps.js
+```jsx:title=src/components/search/hitComps.js
 import React, { Fragment } from "react"
 import { Highlight, Snippet } from "react-instantsearch-dom"
 import { Link } from "gatsby"
@@ -559,7 +559,7 @@ export const PostHit = clickHandler => ({ hit }) => (
 
 Ahora, todo lo que se necesita es importar `Search` en algún lugar. El lugar obvio es el componente cabecera llamado `Header` así que, coloquémoslo ahí.
 
-```js:title=src/components/Header/index.js
+```jsx:title=src/components/Header/index.js
 import React from "react"
 
 import { Container, Logo } from "./styles"
@@ -586,12 +586,12 @@ Nota que aquí es donde defines tu arreglo de índices de búsqueda y lo pasas c
 
 ¡Si todo funciona como esperamos, al ejecutar `gatsby develop` deberías ver la magia de la búsqueda instantánea como se muestra en el video de abajo! Además puedes mirar y jugar con el buscador implementado [aquí](https://janosh.io/blog).
 
-`youtube: Amsub4xJ3Jc`
+https://youtu.be/Amsub4xJ3Jc
 
 ## Recursos adicionales
 
 Si tienes algún problema o si quieres aprender más acerca del uso de Algolia para búsquedas, puedes mirar este tutorial de Jason Lengstorf:
 
-`youtube: VSkXyuXzwlc`
+https://youtu.be/VSkXyuXzwlc
 
 Además, también puedes encontrar historias de compañías que usan Gatsby + Algolia [en la sección del blog de Algolia](/blog/tags/algolia).

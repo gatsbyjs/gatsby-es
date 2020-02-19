@@ -1,8 +1,6 @@
 ---
-title: Centralizing Your Site's Navigation
+title: Creating Dynamic Navigation in Gatsby
 ---
-
-## Creating dynamic navigation in Gatsby
 
 At times you will want to be able to edit your website's navigation in response to a _change in requirements_. To achieve this, you can use Gatsby to dynamically generate your navigation. Where you store the data for your navigation can be anywhere - a backend API, CMS, headless CMS or even the filesystem.
 
@@ -191,7 +189,7 @@ const Layout = ({ children }) => (
 
 Locate the `header.js` file inside `src/components` and remove everything so only the functional component definition is left (everything else is just boilerplate code given to us when generating our project):
 
-```js:title=src/components/header.js
+```jsx:title=src/components/header.js
 import React from "react"
 import { Link } from "gatsby"
 const Header = ({ siteTitle, menuLinks }) => (

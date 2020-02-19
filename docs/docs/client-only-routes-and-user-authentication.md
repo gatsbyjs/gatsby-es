@@ -21,6 +21,8 @@ exports.onCreatePage = async ({ page, actions }) => {
   // page.matchPath es una clave especial que se utiliza para hacer coincidir páginas
   // solo en el cliente.
   if (page.path.match(/^\/app/)) {
+    // page.matchPath is a special key that's used for matching pages
+    // with corresponding routes only on the client.
     page.matchPath = "/app/*"
 
     // Actualiza la página.

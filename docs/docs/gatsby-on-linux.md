@@ -50,9 +50,16 @@ Hay otras alternativas para el manejo de versiones de node, tales como [nvm] per
 
 La instalación de Debian es casi indéntica a la de Ubuntu, con la excepción de tener que instalar `git` y `libpng-dev`.
 
+Begin by updating and upgrading.
+
 ```shell
 sudo apt update
 sudo apt -y upgrade
+```
+
+Additional dependencies need to be installed as well. `build-essential` is a package that allows other packages to compile to a Debian package. `git` installs a package to work with version control. `linbpng-dev` installs a package that allows the project to manipulate images.
+
+```shell
 sudo apt install build-essential
 sudo apt install git
 sudo apt install libpng-dev
@@ -64,10 +71,11 @@ O para instalar y aprobar todo al mismo tiempo `(y)`:
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
 ```
 
-<!-- links -->
+### Additional links and resources
 
-[windows store]: https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6
-[n]: https://github.com/tj/n
-[n-install]: https://github.com/mklement0/n-install
-[nvm]: https://github.com/creationix/nvm
-[bash startup]: https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578
+- [Super detailed guide to making VSCode work with ESL from VSCode's docs website](https://code.visualstudio.com/docs/remote/wsl)
+- [Microsoft Store page for downloading Ubuntu on Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
+- [n](https://github.com/tj/n)
+- [nvm](https://github.com/creationix/nvm)
+- [n-install](https://github.com/mklement0/n-install)
+- [bash startup](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578)

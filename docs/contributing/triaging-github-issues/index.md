@@ -16,7 +16,7 @@ For Gatsby the first line of communication between a user and the team is the is
 
 An opened issue could be:
 
-- a question that can be answered immediately
+- [a question that can be answered immediately](#questions-with-immediate-answers)
 - a bug report
 - a request for a feature
 - or a discussion on a complicated use case
@@ -25,7 +25,7 @@ On the core team, we regularly designate someone to be a first touch maintainer.
 
 First touch maintainers will typically:
 
-- answer questions that can be answered immediately
+- [answer questions by pointing to documentation](#questions-with-immediate-answers)
 - test and reproduce possible bug reports and label them appropriately
 - communicate feature requests to the rest of the team and ensure a valid response
 - enable discussions on complicated use cases, whether themselves or via the rest of team
@@ -65,7 +65,51 @@ Check out [the docs on issue labeling for more info](/contributing/how-to-label-
 
 ### Resolution flowchart
 
-The [resolution flowchart](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) provides a decision tree for how issues should be categorized into one of five types: question or discussion, bug report, feature request, documentation, or maintenance.
+Issues are categorized into one of five types: question or discussion, bug report, feature request, documentation, or maintenance.
+
+#### Questions with immediate answers
+
+- Point to existing documentation to answer the question
+- If insufficient, do the following:
+  1. Provide an answer
+  2. Label the issue with documentation
+  3. Keep it open until a PR has added the answer to the documentation, and the issue includes a link to said documentation
+
+If an issue comes in as a question with a known answer it can be tempting to answer it and close the issue. However, the consequence of this approach is that the answer to a question others may have is now buried in a closed issue and may be hard to surface. The preferred solution is to get that answer documented in the main Gatsby documentation and connect the issue to an answer by including a docs link.
+
+#### Bug Report
+
+Bug Reports are issues that identify functionality in Gatsby that should work but does not in a given scenario. If an issue is a Bug Report, it should include steps to reproduce the problem. If it doesn't, ask the issue filer for those steps and label the issue with `needs reproduction`.
+
+Attempt to reproduce the bug using the steps given. If that's not possible, ask for more information and label the issue as `needs more info`.
+
+If the reproduction is successful, label the issue with `confirmed` and determine who is best suited to implement a fix. If it's approachable for the community, consider the `help wanted` or `good first issue` labels. Otherwise, label with `inkteam to review` so it can be picked up by a Gatsby team member.
+
+![Flow chart for handling a Bug Report](./BugFlow.png)
+
+#### Feature Request
+
+Feature Requests are issues that request support for additional functionality not currently covered in the existing codebase. The first step in triaging a feature request is to determine if it's a reasonable request; this is a challenge and if you don't feel comfortable making this determination please label with `inkteam to review`. If it's clear that this isn't a feature it makes sense for Gatsby to implement, provide a comment explaining the decision making and close the issue. Review the [saved replies](#saved-replies) to see if there is an appropriate response already available.
+
+If it's determined to be a worthwhile feature, the next decision point is whether the feature should be added to core or upstream. Upstream issues are those that are outside of Gatsby's control and caused by dependencies. Upstream features should be labeled with `upstream` and include comments about the scope.
+
+If it's a core change, is it a breaking change? Breaking changes should be labeled with `breaking change` and typically closed. Note that they may sometimes be left open with the note that the functionality can only be added in a major release.
+
+Non-breaking changes can be labeled as `help wanted` and it is often best to ask the creator of the issue if they'd be interested in helping develop the PR.
+![Flow chart for handling a Feature Request](./FeatureFlow.png)
+
+#### Documentation
+
+Issues can be filed requesting documentation on a particular topic. Sometimes the documentation already exists, so you can link to it and close the issue.
+
+Alternatively, the issue may be something the team is unable to address. Consider using a [saved reply](#saved-replies) in that circumstance.
+
+Otherwise, label the issue with `documentation` and ask the issuer filer if they'd like to help with a PR.
+![Flow chart for handling a Documentation Request](./DocumentationFlow.png)
+
+#### Maintenance
+
+Maintenance issues are things like bumping a package version. These issues should be labeled with `maintenance`.
 
 ### Saved replies
 

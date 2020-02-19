@@ -63,10 +63,7 @@ Ahora define la consulta y colócala en StaticQuery (también puedes guardar la 
 
 ```jsx:title=src/components/SEO.js
 const SEO = ({ title, description, image, pathname, article }) => (
-  <StaticQuery
-    query={query}
-    render={}
-  />
+  <StaticQuery query={query} render={} />
 )
 
 export default SEO
@@ -84,7 +81,7 @@ const query = graphql`
       }
     }
   }
-`;
+`
 ```
 
 El siguiente paso consiste en desestructurar los datos de la consulta y crear un objeto que verifica si las _props_ fueron usadas — si no, los valores por defecto son utilizados. El alias de nombres es útil aquí: Evita las colisiones de nombres.

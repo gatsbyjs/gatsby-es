@@ -48,13 +48,13 @@ npm install --save gsap
 
 Entonces, importa el componente AniLink:
 
-```javascript
+```jsx
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 ```
 
 Finalmente, asegúrate de proveer el nombre de la animación deseada como una _blank_ _prop_ a `AniLink`:
 
-```javascript
+```jsx
 <AniLink paintDrip to="page-4">
   Go to Page 4
 </AniLink>
@@ -75,7 +75,7 @@ Adicionalmente, puedes especificar un número de _props_ y opciones en el compon
 
 Puedes especificar una función `trigger` que manejará la animación. Esto es útil para las librerías de animaciones _imperativas_ como [animejs](https://animejs.com/) o [GSAP](https://greensock.com/gsap) que especifican animaciones con llamadas a funciones.
 
-```javascript
+```jsx
 <TransitionLink
   exit={{
     length: length,
@@ -99,7 +99,7 @@ Puedes especificar una función `trigger` que manejará la animación. Esto es �
 
 La salida y entrada de páginas/plantillas involucradas en la transición recibirán _props_ indicando el estado de la transición actual, así como también la _prop_ `exit` o `enter` definida en el `TransitionLink`.
 
-```javascript
+```jsx
 const PageOrTemplate = ({ children, transitionStatus, entry, exit }) => {
   console.log(transitionStatus, entry, exit)
   return <div className={transitionStatus}>{children}</div>
@@ -112,7 +112,7 @@ Si quieres acceder a estas _props_ en uno de tus componentes en vez de una pági
 
 Aquí un ejemplo usando `TransitionState` y `react-pose` para activar las transiciones _enter/exit_ para el componente `Box`.
 
-```javascript
+```jsx
 import { TransitionState } from "gatsby-plugin-transition-link"
 
 const Box = posed.div({
@@ -121,15 +121,16 @@ const Box = posed.div({
 })
 
 <TransitionState>
-      {({ transitionStatus, exit, enter }) => {
-        console.log('exit object is', exit)
-        console.log('enter object is', enter)
+      {({ transitionStatus, exit, enter, mount }) => {
+        console.log("current page's transition status is", transitionStatus)
+        console.log("exit object is", exit)
+        console.log("enter object is", enter)
 
         return (
             <Box
               className="box"
               pose={
-                ['entering', 'entered'].includes(transitionStatus)
+                mount // this is true while the page is mounting or has mounted
                   ? 'visible'
                   : 'hidden'
               }
@@ -150,12 +151,16 @@ import { TransitionPortal } from "gatsby-plugin-transition-link"
 ```
 
 ```javascript
-<TransitionPortal>
-  <SomeComponent>
-    This component will sit on top of both pages, and persist through page
-    transitions.
-  </SomeComponent>
-</TransitionPortal>
+module.exports = {
+    plugins: [
+       {
+          resolve: "gatsby-plugin-transition-link",
+          options: {
+              layout: require.resolve(`./src/components/Layout.js`)
+            }
+       }
+    ]
+];
 ```
 
 Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información acerca de `TransitionPortal`.

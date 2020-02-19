@@ -59,8 +59,8 @@ Debido a las diferentes integraciones posibles de Gatsby, puede ayudar lanzar un
 
 Para instalar Wordpress con Gatsby, este archivo `docker-compose.yml` te puede ser de utilidad:
 
-```
-version: '2'
+```yaml:title=docker-compose.yml
+version: "2"
 
 services:
   db:
@@ -91,22 +91,22 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-    - ./wp-content:/var/www/html/wp-content
-    - ./wp-app:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./wp-app:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: sessions_phpmyadmin
-      environment:
-       - PMA_ARBITRARY=1
-       - PMA_HOST=sessions_db
-       - PMA_USER=wordpress
-       - PMA_PASSWORD=wordpress
-      restart: always
-      ports:
-       - 8080:80
-      volumes:
-       - /sessions
+    image: phpmyadmin/phpmyadmin
+    container_name: sessions_phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=sessions_db
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 ```
 
 Usa los contenidos del archivo de arriba cuando sigas las instrucciones de instalación de Docker Wordpress: https://docs.docker.com/compose/wordpress/

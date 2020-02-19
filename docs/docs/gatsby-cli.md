@@ -27,7 +27,7 @@ También puedes usar la variante en script de estos comandos en el `package.json
 
 ### `new`
 
-```
+```shell
 gatsby new [<site-name> [<starter-url>]]
 ```
 
@@ -96,7 +96,7 @@ gatsby develop -H 0.0.0.0
 
 El terminal the mostrará la información como normalmente, pero además va a incluir una URL que podrás usar para navegar desde un cliente de la misma red para ver cómo se renderiza.
 
-```
+```shell
 You can now view gatsbyjs.org in the browser.
 ⠀
   Local:            http://0.0.0.0:8000/

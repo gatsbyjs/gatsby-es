@@ -6,7 +6,7 @@ Usando la API [`onCreatePage`](/docs/node-apis/#onCreatePage) en el archivo `gat
 
 En el siguiente ejemplo, vamos a crear una página 404 en inglés en `src/pages/en/404.js`, y una página 404 en alemán en `/src/pages/de/404.js`. Éste es un ejemplo sencillo:
 
-```javascript:title=src/pages/en/404.js
+```jsx:title=src/pages/en/404.js
 import React from "react"
 import Layout from "../../components/layout"
 
@@ -18,7 +18,7 @@ export default () => (
 )
 ```
 
-```javascript:title=src/pages/de/404.js
+```jsx:title=src/pages/de/404.js
 import React from "react"
 import Layout from "../../components/layout"
 

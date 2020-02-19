@@ -22,7 +22,7 @@ plugins: [`gatsby-plugin-sass`],
 
 Now is the time to create a scss-file that holds our simple style customisation and the import statement for bulma.
 
-(To keep things simple, insert the file next to index.js in the pages-directory)
+(To keep things simple, insert the file next to `index.js` in the pages-directory)
 
 ```scss:title=mystyles.scss
 @charset "utf-8";
@@ -39,7 +39,7 @@ The last step is to import the style and use it.
 
 Let's replace the default contents of the index.js file.
 
-```javascript:title=index.js
+```jsx:title=index.js
 import React from "react"
 import "./mystyles.scss"
 
