@@ -30,11 +30,7 @@ cd [nombre-de-tu-proyecto]
 gatsby develop
 ```
 
-<<<<<<< HEAD
-Ahora puedes ir a [`localhost:8000`](http://localhost:8000) para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en [`localhost:8000/admin`](http://localhost:8000/admin).
-=======
-Now you can go to `http://localhost:8000` to see your new site, but what's extra cool is that Netlify CMS is pre-installed and you can access it at `http://localhost:8000/admin`
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Ahora puedes ir a `http://localhost:8000` para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en `http://localhost:8000/admin`.
 
 Un CMS, o sistema de administración de contenido, es útil porque puedes agregar contenido como publicaciones de blog desde un tablero en tu sitio, en lugar de tener que agregar publicaciones manualmente con Markdown. Sin embargo, es probable que desees poder acceder al CMS desde un sitio web desplegado, no solo localmente. Para eso deberás desplegar en Netlify a través de GitHub, preparar una implementación continua y realizar algunas configuraciones. Repasaremos esto en el [Paso-5](#step-5).
 
@@ -52,17 +48,13 @@ backend:
 
 #### Personalizando tu sitio
 
-Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando  `gatsby build && gatsby serve`.
+Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando `gatsby build && gatsby serve`.
 
 Probablemente también quieras editar el `README.md` y el `package.json`, archivos para incluir tus propios detalles del proyecto.
 
 ### Paso 4
 
-<<<<<<< HEAD
-Abre [github.com](http://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
-=======
-Open [github.com](https://github.com) and create a new repository, with the same name as your project. Push your new Gatsby site's code to GitHub using the following Terminal commands:
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Abre [github.com](https://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
 
 ```shell
 git init
