@@ -34,7 +34,7 @@ Agrega el plugin `gatsby-source-wordpress` a `gatsby-config.js` usando el siguie
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Gatsby WordPress Tutorial",
+    title: "Gatsby WordPress Tutorial"
   },
   plugins: [
     // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
@@ -60,12 +60,12 @@ module.exports = {
         hostingWPCOM: false,
         // Si useACF es verdadero, el plugin fuente intentará importar el contenido del plugin ACF de WordPress.
         // Esta característica no se ha probado para sitios alojados en WordPress.com
-        useACF: true,
-      },
-    },
+        useACF: true
+      }
+    }
     // highlight-end
-  ],
-}
+  ]
+};
 ```
 
 ### Instalación de plugins para ayuda con las imágenes
@@ -83,7 +83,7 @@ Coloca estos plugins en tu `gatsby-config.js` de la siguiente forma:
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "Gatsby WordPress Tutorial",
+    title: "Gatsby WordPress Tutorial"
   },
   plugins: [
     // https://public-api.wordpress.com/wp/v2/sites/gatsbyjsexamplewordpress.wordpress.com/pages/
@@ -108,15 +108,15 @@ module.exports = {
         hostingWPCOM: false,
         // Si useACF es verdadero, el plugin fuente intentará importar el contenido del plugin ACF de WordPress.
         // Esta característica no se ha probado para sitios alojados en WordPress.com
-        useACF: true,
-      },
+        useACF: true
+      }
     },
     // highlight-start
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    "gatsby-plugin-sharp"
     // highlight-end
-  ],
-}
+  ]
+};
 ```
 
 ### Creación de consultas GraphQL que extraen imágenes de WordPress
@@ -129,11 +129,7 @@ Ejecuta:
 npm run develop
 ```
 
-<<<<<<< HEAD
-Abre localhost:8000 y localhost:8000/\_\_\_graphql.
-=======
-Open `http://localhost:8000` and `http://localhost:8000/___graphql`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Abre `http://localhost:8000` y `http://localhost:8000/___graphql`.
 
 Aquí hay un ejemplo de creación de anchos y alturas específicas para imágenes:
 
@@ -206,16 +202,16 @@ En cualquier caso, puedes agregar soporte para trazado SVG adicionando `_tracedS
 Así es como tu `index.js` debería verse con la consulta agregada:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 
 const IndexPage = ({ data }) => {
   const imagesResolutions = data.allWordpressPost.edges.map(
     edge =>
       edge.node.childWordPressAcfPostPhoto.photo.localFile.childImageSharp
         .resolutions
-  )
+  );
   return (
     <div>
       <h1>Hi people</h1>
@@ -226,10 +222,10 @@ const IndexPage = ({ data }) => {
       ))}
       <Link to="/page-2/">Go to page 2</Link>
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query {
@@ -252,7 +248,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Tu sitio de demostración debería verse así:
