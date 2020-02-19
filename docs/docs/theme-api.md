@@ -25,12 +25,12 @@ module.exports = {
       options: {
         postsPath: "/blog",
         colors: {
-          primary: "tomato",
-        },
-      },
-    },
-  ],
-}
+          primary: "tomato"
+        }
+      }
+    }
+  ]
+};
 ```
 
 You can access options that are passed to your theme in your theme's `gatsby-config`. You can use options to make filesystem sourcing configurable, accept different nav menu items, change branding colors from the default, and anything else you want to make configurable.
@@ -39,15 +39,15 @@ To take advantage of the options that are passed in when configuring your theme 
 
 ```js:title=gatsby-config.js
 module.exports = themeOptions => {
-  console.log(themeOptions)
+  console.log(themeOptions);
   // logs `postsPath` and `colors`
 
   return {
     plugins: [
       // ...
-    ],
-  }
-}
+    ]
+  };
+};
 ```
 
 While using the usual object export (`module.exports = {}`) in your theme means that you can run the theme standalone as its own site, when using a function in your theme to accept options you will need to run the theme as part of an example site. See how the [theme authoring starter](https://github.com/gatsbyjs/gatsby/tree/master/themes/gatsby-starter-theme-workspace) handles this using Yarn Workspaces.
@@ -58,8 +58,8 @@ Note that because themes are plugins you can also access the options in any of t
 
 ```js:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }, themeOptions) => {
-  console.log(themeOptions)
-}
+  console.log(themeOptions);
+};
 ```
 
 ## Shadowing
@@ -83,10 +83,10 @@ In the last section we talked about completely replacing one component with anot
 Taking the `Header` example from before, when we write our shadowing file at `src/gatsby-theme-amazing/components/header.js`, we can import the original component and re-export it as such, adding our own overridden prop to the component.
 
 ```js
-import Header from "gatsby-theme-amazing/src/components/header"
+import Header from "gatsby-theme-amazing/src/components/header";
 
 // these props are the same as the original component would get
-export default props => <Header {...props} myProp="true" />
+export default props => <Header {...props} myProp="true" />;
 ```
 
 Taking this approach means that when we upgrade our theme later we can also take advantage of all the updates to the `Header` component because we haven't fully replaced it, just modified it.
@@ -103,13 +103,8 @@ gatsby-theme-amazing/src/components/header.js
 
 and here is the path where we would shadow it in our site:
 
-<<<<<<< HEAD
-```
-<our-site>/src/gatsby-theme-amazing/components/header.js
-=======
 ```text
 <your-site>/src/gatsby-theme-amazing/components/header.js
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ```
 
 Shadowing only works on imported files in the `src` directory. This is because shadowing is built on top of Webpack, so the module graph needs to include the shadowable file.
@@ -122,16 +117,16 @@ Gatsby themes can compose horizontally and vertically. Vertical composition refe
 
 ```js:title=gatsby-theme-child/gatsby-config.js
 module.exports = {
-  plugins: [`gatsby-theme-parent`],
-}
+  plugins: [`gatsby-theme-parent`]
+};
 ```
 
 Horizontal composition is when two different themes are used together, such as `gatsby-theme-blog` and `gatsby-theme-notes`.
 
 ```js:title=my-site/gatsby-config.js
 module.exports = {
-  plugins: [`gatsby-theme-blog`, `gatsby-theme-notes`],
-}
+  plugins: [`gatsby-theme-blog`, `gatsby-theme-notes`]
+};
 ```
 
 Themes at their core are an algorithm that merges multiple `gatsby-config.js` files together into a single config your site can use to build with. To do that we need to define how to combine two `gatsby-config.js`s together. Before we can do that, we need to flatten the parent/child relationships into a single array. This results in the final ordering when considering which shadowing file to use if multiple are available.
