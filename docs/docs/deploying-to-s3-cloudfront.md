@@ -54,8 +54,6 @@ And finally, add the deployment script to your `package.json`:
 That's it!
 Run `npm run build && npm run deploy` to do a build and have it immediately deployed to S3!
 
-<<<<<<< HEAD
-=======
 ## Deploying with `.env` variables
 
 Some deployments require passing environment variables. To deploy with environment variables, update the deployment script to your `package.json`:
@@ -75,7 +73,6 @@ If you have multiple AWS profiles in your machine, you can deploy by declaring y
 AWS_PROFILE=yourprofilename npm run deploy
 ```
 
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ## Setting up: CloudFront
 
 CloudFront is a global CDN and can be used to make your blazing fast Gatsby site load _even faster_, particularly for first-time visitors. Additionally, CloudFront provides the easiest way to give your S3 bucket a custom domain name and HTTPS support.
@@ -106,7 +103,7 @@ By specifying the `protocol` and `hostname` parameters, you can cause redirects 
 If you use your site's URL elsewhere in gatsby-config.js, I have a tip for you. You can define the URL once at the top of the config:
 
 ```javascript
-const siteAddress = new URL("https://www.example.com")
+const siteAddress = new URL("https://www.example.com");
 ```
 
 And then in the Gatsby config you can reference it like so:
