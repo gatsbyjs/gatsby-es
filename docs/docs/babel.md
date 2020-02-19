@@ -3,9 +3,9 @@ title: Babel
 ---
 
 Gatsby usa el fenomenal proyecto llamado [Babel](https://babeljs.io/) para tener
-compatibilidad y poder escribir JavaScript moderno, sin dejar de soportar navegadores antiguos.
+compatibilidad y poder escribir JavaScript moderno, sin dejar de dar compatibilidad a navegadores antiguos.
 
-## Cómo especificar cuales navegadores soportar
+## Cómo especificar a cuales navegadores dar compatibilidad
 
 Gatsby es compatible por defecto con las últimas dos versiones de los navegadores principales, 
 IE 9+, así como cualquier navegador que aún tenga el 1%+ de la cuota de navegación.
