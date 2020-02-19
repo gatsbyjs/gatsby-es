@@ -19,7 +19,7 @@ El proceso esencialmente se verá así:
 
 Agregas etiquetas definiéndolas en el `frontmatter` de tu archivo _Markdown_. El `frontmatter` es el área en la parte superior rodeada de guiones que incluye datos de publicaciones como el título y la fecha.
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 ---
@@ -29,7 +29,7 @@ Fui al zoológico hoy. Fue terrible.
 
 Los campos pueden ser cadenas de texto, números, o arreglos. Como una publicación generalmente puede tener muchas etiquetas, tiene sentido definirla como un arreglo. Aquí agregamos nuestro nuevo campo de etiquetas:
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 tags: ["animales", "Chicago", "zoológicos"]
@@ -44,7 +44,11 @@ Si `gatsby develop` está corriendo, reinícialo para que Gatsby pueda utilizar 
 
 Ahora, estos campos están disponibles en la capa de datos. Para usar datos de un campo, consúltalo usando `graphql`. Todos los campos están disponibles para consultar dentro de `frontmatter`
 
+<<<<<<< HEAD
 Intenta correr la siguiente consulta en Graph<em>i</em>QL (`localhost:8000/___graphql`):
+=======
+Try running the following query in Graph<em>i</em>QL (`http://localhost:8000/___graphql`):
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ```graphql
 {

@@ -99,7 +99,11 @@ Puedes esperar que la ruta relativa sea relativa al archivo donde se encuentra e
 
 ### Fragmentos de imagen
 
+<<<<<<< HEAD
 Otra cosa a tener en cuenta sobre esa consulta es cómo usa el fragmento `GatsbyImageSharpFixed` para devolver una imagen de ancho y alto fijos. También podrías usar el fragmento `GatsbyImageSharpFluid` que genera imágenes escalables que llenan su contenedor en vez de ajustarse a dimensiones específicas. En `gatsby-image`, imágenes _fluid_ están destinadas a imágenes que no tienen un tamaño determinado dependiendo de la pantalla, mientras que las otras son _fixed_.
+=======
+Another thing to note about this query is how it uses the fragment `GatsbyImageSharpFixed` to return a fixed width and height image. You could also use the fragment `GatsbyImageSharpFluid` which produces scalable images that fill their container instead of fitting specific dimensions. In `gatsby-image`, _fluid_ images are meant for images that don’t have a finite size depending on the screen, whereas other images are _fixed_.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 La consulta devolverá un objeto de datos que incluye la imagen procesada en un formato utilizable para el componente `gatsby-image`. El resultado devuelto será pasado automáticamente al componente y se adjuntará a la propiedad `data`. Luego puedes mostrar la imagen usando JSX para generar automáticamente HTML adaptable y de alto rendimiento.
 
@@ -187,7 +191,7 @@ Para hacer referencia a tus imágenes en YAML, asegúrate de que las rutas relat
 
 El interior del archivo YAML se vería así:
 
-```
+```yaml
 - image: speaking/kcdc.jpg
 ```
 
@@ -225,7 +229,7 @@ Debido a que las imágenes se almacenan como parte de un _array_, se puede acced
 
 Si tu consulta es parte de un componente reutilizable, es posible que quieras usar el _hook_ `useStaticQuery`. El código necesario para hacer esto es casi el mismo que en el caso anterior de imagen única.
 
-```javascript:title=src/components/header-image.js
+```jsx:title=src/components/header-image.js
 export default () => {
   const data = useStaticQuery(graphql`
     query {

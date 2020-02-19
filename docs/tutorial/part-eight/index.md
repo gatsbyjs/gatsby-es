@@ -44,7 +44,11 @@ gatsby build
 gatsby serve
 ```
 
+<<<<<<< HEAD
 Una vez iniciado, puedes observar tu sitio web en [`localhost:9000`](http://localhost:9000).
+=======
+Once this starts, you can view your site at `http://localhost:9000`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ### Ejecuta una auditoría Lighthouse
 
@@ -358,9 +362,15 @@ Lighthouse es una herramienta estupenda para hacer mejoras a tu sitio y aprender
 
 ### Inicializadores oficiales
 
+<<<<<<< HEAD
 1.  [Inicializador Gatsby por defecto (Gatsby's Default Starter)](https://github.com/gatsbyjs/gatsby-starter-default): Empieza tu proyecto con este modelo. Este inicializador básico genera los principales archivos de configuración que puedas necesitar. _[ejemplo funcionando](http://gatsbyjs.github.io/gatsby-starter-default/)_
 2.  [Inicializador Gatsby para blogs (Gatsby's Blog Starter)](https://github.com/gatsbyjs/gatsby-starter-blog): Inicializador Gatsby para crear un asombroso y ultra rápido blog. _[ejemplo funcionando](http://gatsbyjs.github.io/gatsby-starter-blog/)_
 3.  [Inicializador Gatsby Hola-Mundo (Gatsby's Hello-World Starter)](https://github.com/gatsbyjs/gatsby-starter-hello-world): Inicializador Gatsby con lo mínimo básico necesario para un sitio web Gatsby. _[ejemplo funcionando](https://gatsby-starter-hello-world-demo.netlify.com/)_
+=======
+1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](https://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](https://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Eso es todo amigos
 

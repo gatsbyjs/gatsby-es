@@ -34,7 +34,11 @@ Si estos problemas son más grandes que los beneficios de usar Disqus, puedes op
 
 ## Implementando Disqus
 
+<<<<<<< HEAD
 ![Logo de Disqus](images/disqus-logo.svg)
+=======
+![Disqus logo](./images/disqus-logo.svg)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Pasos para agregar comentarios de Disqus a tu propio blog:
 
@@ -47,12 +51,17 @@ npm install disqus-react
 
 3. Agregar el nombre que utilizaste en el paso 1 como, por ejemplo, `GATSBY_DISQUS_NAME` a tus archivos `.env` y `.env.example` para que las personas que hagan fork de tu repositorio sepan que ellos necesitan ingresar este valor para hacer funcionar los comentarios (Necesitas el prefix de la variable de entorno con `GATSBY_` para que pueda estar [disponible en el código cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
+<<<<<<< HEAD
 ```title=.env.example
 # habilita comentarios de Disqus para posts en un blog
+=======
+```text:title=.env.example
+# enables Disqus comments for blog posts
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 GATSBY_DISQUS_NAME=insertValue
 ```
 
-```title=.env
+```text:title=.env
 GATSBY_DISQUS_NAME=yourSiteShortname
 ```
 
@@ -76,7 +85,7 @@ const disqusConfig = {
 
 Donde `identifier` debe ser un string o número que identifique exclusivamente a esa entrada de blog. Puede ser el slug del post, título o un ID. Finalmente, agrega `DiscussionEmbed` al JSX de la plantilla de tu entrada de blog.
 
-```js:title=src/templates/post.js
+```jsx:title=src/templates/post.js
 return (
   <Global>
     <PageBody>
@@ -89,4 +98,8 @@ return (
 
 Y eso es todo. Ahora debes poder ver el formulario de comentarios de Disqus debajo del post de tu blog [de esta forma](https://janosh.io/blog/disqus-comments#disqus_thread). ¡Feliz blogging!
 
+<<<<<<< HEAD
 [![Comentarios de Disqus](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+=======
+[![Disqus comments](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc

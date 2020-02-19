@@ -2,7 +2,11 @@
 title: Crear un sitio con autenticación de usuarios
 ---
 
+<<<<<<< HEAD
 A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
+=======
+Sometimes, you need to create a site with gated content, restricted to only authenticated users. Using Gatsby, you may achieve this using the concept of [client-only routes](/docs/client-only-routes-and-user-authentication/), to define which pages a user can view only after logging in.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Prerrequisitos
 
@@ -121,7 +125,13 @@ export const logout = callback => {
 }
 ```
 
+<<<<<<< HEAD
 ## Creando rutas únicas del cliente
+=======
+_The guide on [adding authentication](/docs/building-a-site-with-authentication/) contains more information about the flow for connecting Gatsby to an external service._
+
+## Creating client-only routes
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Al comienzo de este tutorial, creaste un sitio Gatsby de "hola mundo", que incluía la librería `@reach/router`. Ahora, utilizando la librería [@reach/router](https://reach.tech/router/), puedes crear rutas disponibles solo para los usuarios registrados. Gatsby utiliza esta biblioteca internamente, por lo que ni siquiera tienes que instalarla.
 

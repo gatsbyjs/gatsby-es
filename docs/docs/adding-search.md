@@ -39,9 +39,15 @@ Ahora que conoces los tres componentes requeridos, hay algunas formas de añadir
 
 Usar un motor de búsquedas de código abierto es siempre gratuíto y te permite habilitar las búsquedas sin conexión en tu sitio web. Ten en cuenta que necesitas tener cuidado con las búsquedas sin conexión porque el índice completo ha de ser llevado al cliente, que puede afectar el tamaño del paquete significativamente.
 
+<<<<<<< HEAD
 Las librerías de código abierto como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) o [`js-search`](https://github.com/bvaughn/js-search) pueden ser usadas para habilitar las búsquedas en tu sitio web.
 
 Para hacer eso necesitarás crear un índice de búsquedas cuando tu sitio web se construye. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), hay un plugin llamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que crea el indexado de búsquedas automáticamente.
+=======
+Open source libraries like [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), [`flexsearch`](https://github.com/nextapps-de/flexsearch) or [`js-search`](https://github.com/bvaughn/js-search) can be used to enable search for your site.
+
+Doing so will require you to create a search index when your site is built. For [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), there is a plugin called [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) that creates a search index automatically. For [`flexsearch`](https://github.com/nextapps-de/flexsearch) there is a plugin called [`gatsby-plugin-flexsearch`](https://github.com/tmsss/gatsby-plugin-flexsearch).
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Para otras librerías, puedes usar una combinación de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) y [`sourceNodes`](/docs/node-apis/#sourceNodes) de la API node de Gatsby para crear el indexado de búsqueda y hacerlo disponible en GraphQL. Para más información de cómo hacerlo echa un vistazo al [código fuente de `gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
 

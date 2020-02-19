@@ -32,7 +32,11 @@ export default AboutPage;
 En las páginas y entrada en Markdown, incluir un GIF animado se hace del mismo modo que una imagen estática:
 
 ```markdown
+<<<<<<< HEAD
 ![nutria bailando con un pez](./images/dancing-ofter.gif)
+=======
+![otter dancing with a fish](./images/dancing-otter.gif)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ```
 
 ![nutria bailando con un pez](./images/dancing-otter.gif)

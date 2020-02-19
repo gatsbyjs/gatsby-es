@@ -20,6 +20,46 @@ npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 
 You will also want to have `gatsby-source-filesystem` installed. Then, configure the various plugins in the `gatsby-config` file.
 
+<<<<<<< HEAD
+=======
+### Configuring for images and posts in the same directory
+
+If your images are in the same directory as the Markdown files, sourcing and resolving the images can be done in one configuration. For example, if your Markdown pages and images are located together in a `/pages` directory, both content types will be automatically picked up by GraphQL as part of Gatsby's data layer.
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`, // highlight-line
+      },
+    },
+  ],
+}
+```
+
+Then, in an example Markdown file, add a field called `featuredImage`:
+
+```markdown:title=src/pages/my-favorite-doggos.md
+---
+title: My Favorite Doggos
+featuredImage: pupperino.png
+---
+
+Content goes here!
+```
+
+The next step will be to incorporate the data into a template with a GraphQL query, which can be found later in this guide.
+
+### Configuring for images and posts in different directories
+
+There are also occassions when you may want to source images from a different directory than where your Markdown posts or pages are located, such as in an external `/images` folder. You can set this up by specifying two distinct sources, one for the pages and the other for images:
+
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ```js:title=gatsby-config.js
 module.exports = {
   plugins: [
@@ -38,7 +78,11 @@ module.exports = {
 
 Then, in an example markdown file, add a field called `featuredImage`:
 
+<<<<<<< HEAD
 ```md:title=src/pages/example-post.md
+=======
+```markdown:title=src/pages/about.md
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ---
 title: My Amazing Post
 featuredImage: ./awesome-image.png
@@ -138,7 +182,11 @@ npm install --save gatsby-remark-images gatsby-plugin-sharp
 
 Also make sure that `gatsby-source-filesystem` is installed and points at the directory where your images are located.
 
-Configure the plugins in your `gatsby-config` file. As with the previous example, either `Remark` or `MDX` can be used; `gatsby-plugin-mdx` will be used in this case. Put the `gatsby-remark-images` plugin within the `gatsbyRemarkPlugins` option field of `gatsby-plugin-mdx`.
+Configure the plugins in your `gatsby-config` file. As with the previous example, either `Remark` or `MDX` can be used.
+
+### Using the MDX Plugin
+
+The `gatsby-plugin-mdx` plugin will be used in the example below. Put the `gatsby-remark-images` plugin within the `gatsbyRemarkPlugins` option field of `gatsby-plugin-mdx`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -167,8 +215,44 @@ module.exports = {
 }
 ```
 
-With this configuration, you can use the default Markdown syntax for images. They will be processed by Sharp and appear as if you placed them in a `gatsby-image` component.
+### Using the Transformer Remark Plugin
 
+Here is a similar example using the `gatsby-transformer-remark` plugin instead of `gatsby-plugin-mdx`. Put the `gatsby-remark-images` plugin within the `plugins` option field of `gatsby-transformer-remark`.
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
+  ],
+}
+```
+
+With the configurations above, you can use the default Markdown syntax for images. They will be processed by Sharp and appear as if you placed them in a `gatsby-image` component.
+
+<<<<<<< HEAD
 ```md
 ![Awesome image](./my-awesome-image.png)
+=======
+```markdown
+![Hopper The Rabbit](./rabbit-friend.png)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ```

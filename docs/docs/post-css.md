@@ -20,9 +20,13 @@ plugins: [`gatsby-plugin-postcss`],
 
 > **Nota**: Si necesitas pasar opciones a PostCSS, usa las opciones del plugin; consulta [postcss-loader](https://github.com/postcss/postcss-loader) para ver todas las opciones disponibles.
 
+<<<<<<< HEAD
 3.  Escribe tus hojas de estilo utilizando PostCSS (archivos .css) y solicítalas o impórtalas como de costumbre.
+=======
+3.  Write your stylesheets using PostCSS (`.css` files) and require or import them as normal.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
-```css:styles.css
+```css:title=styles.css
 @custom-media --med (width <= 50rem);
 
 @media (--med) {

@@ -11,6 +11,7 @@ A medida que tu proyecto crece en el tiempo, tener esta información disponible 
 
 ## Configurando tu ambiente
 
+<<<<<<< HEAD
 Para configurar Storybook necesitas instalar dependencias y algunas configuraciones personalizadas. Primero, instala el CLI de Storybook.
 
 ```shell
@@ -18,15 +19,23 @@ npm install -g @storybook/cli
 ```
 
 Una vez que el CLI está instalado, el próximo paso es correr el comando `sb init` que está disponible en el directorio base de tu proyecto Gatsby
+=======
+> Note that the following instructions are using [npx](https://www.npmjs.com/package/npx). `npx` is a part of npm and in this case it allows you to automatically generate a file/folder structure complete with the default configuration. If you're running an older version of `npm` (`<5.2.0`) you should run the following command instead: `npm install -g @storybook/cli`. You can then run `sb init` from your Gatsby root directory to initialise Storybook.
+
+To set up Storybook you need to install dependencies and do some custom configuration. You can get started quickly by using the automated command line tool from your Gatsby root directory:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ```shell
-cd my-awesome-gatsby-project
-sb init
+npx -p @storybook/cli sb init
 ```
 
+<<<<<<< HEAD
 > Nota que si estás ejecutando una versión reciente de `npm` (5.2.0+) puedes correr el siguiente comando singular en vez del anterior: `npx -p @storybook/cli sb init`, el cual es el método recomendado por Storybook. Esto no instala el CLI en tu computadora, de este modo asegurando que siempre estés corriendo la última versión disponible del CLI.
 
 El comando `sb init` arranca la configuración básica necesaria para ejecutar Storybook en un proyecto React. Pero, al ser esto para un proyecto de Gatsby, necesitas instalar la configuración predeterminada, así no obtienes errores cuando estés tratando de utilizar componentes específicos de Gatsby en las historias.
+=======
+This command adds a set of boilerplate files for Storybook in your project. However, since this is for a Gatsby project, you need to update the default Storybook configuration a bit so you don't get errors when trying to use Gatsby specific components inside of the stories.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Para actualizar tu configuración de Storybook abre `.storybook/config.js` y modifica el contenido del siguiente modo:
 
@@ -159,7 +168,11 @@ Una vez que ya tienes todo esto configurado, ejecuta Storybook para asegurarte q
 npm run storybook
 ```
 
+<<<<<<< HEAD
 El CLI de Storybook agrega este comando a tu `package.json` para que no tengas que hacer otra cosa que correr el comando. Si Storybook hace un build exitoso deberías poder navegar a `http://localhost:6006` y ver las historias por defecto provistas por el CLI de Storybook
+=======
+Storybook CLI adds this command to your `package.json` for you so you shouldn't have to anything other than run the command. If Storybook builds successfully you should be able to navigate to `http://localhost:6006` and see the default stories supplied by the Storybook CLI.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 De otro modo, si utilizas `StaticQuery` o `useStaticQuery` en tu proyecto Storybook necesita ser ejecutado con el `NODE_ENV` configurado a `production` (ya que Storybook lo configura por defecto a `development`). De otro modo `babel-plugin-remove-graphql-queries` no se ejecutará. Es más, Storybook necesita saber sobre los [archivos estáticos](https://storybook.js.org/docs/configurations/serving-static-files/#2-via-a-directory) generados por el `StaticQuery` de Gatsby. Tus scripts deberían verse como:
 

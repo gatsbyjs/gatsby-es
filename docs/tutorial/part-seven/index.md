@@ -283,10 +283,17 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
+<<<<<<< HEAD
 ¡Reinicia el servidor de desarrollo y tus páginas serán creadas! Una manera fácil de
 encontrar nuevas páginas que crees mientras desarrollas es ir a una ruta aleatoria donde
 Gatsby te mostrará una lista de páginas en el sitio. Si vas a
 <http://localhost:8000/sdf>, verás las nuevas páginas que creaste.
+=======
+Restart the development server and your pages will be created! An easy way to
+find new pages you create while developing is to go to a random path where
+Gatsby will helpfully show you a list of pages on the site. If you go to
+`http://localhost:8000/sdf`, you'll see the new pages you created.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![new-pages](new-pages.png)
 
@@ -382,7 +389,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: #bbb;
+                    color: #555;
                   `}
                 >
                   — {node.frontmatter.date}
@@ -425,9 +432,15 @@ export const query = graphql`
 
 ## Desafío
 
+<<<<<<< HEAD
 Intenta jugar más con el sitio. Intenta agregar más archivos markdown. Explora
 consultando otros datos desde los nodos `MarkdownRemark` y agregandolos a las páginas de
 portada o blog.
+=======
+Try playing more with the site. Try adding some more markdown files. Explore
+querying other data from the `MarkdownRemark` nodes and adding them to the
+front page or blog posts pages.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 En esta parte del tutorial, has aprendido los fundamentos de construir con
 la capa de datos de Gatsby. Aprendiste como _origen_ y _transformar_ datos utilizando

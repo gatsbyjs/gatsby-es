@@ -132,7 +132,11 @@ El campo `output` de su objeto te permite personalizar el nombre del archivo par
 
 Por defecto, se hace referencia al feed en todas las páginas. Puedes personalizar este comportamiento proporcionando un campo adicional `match` de tipo `string`. Esta cadena se usará para construir una `RegExp`, y esta expresión regular se usará para probar el `pathname` de la página actual. Solo las páginas que satisfacen la explesión regular tendrán referencia del feed incluido.
 
+<<<<<<< HEAD
 Para ver tu feed en acción, ejecuta `gatsby build && gatsby serve` y luego inspecciona el contenido y las URL's de tu archivo RSS en `http://localhost:9000/rss.xml`.
+=======
+To see your feed in action, run `gatsby build && gatsby serve` and you can then inspect the content and URLs in your RSS file at `http://localhost:9000/rss.xml`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 > NOTA: si tu blog tiene enlaces permanentes personalizados, como enlaces con o sin fechas en ellos, es posible que debas [modificar `gatsby-node.js`](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/gatsby-node.js#L57) para generar URL's correctas en tus feeds RSS. ¡[Ponte en contacto con nosotros](/contributing/how-to-contribute/) si necesitas ayuda!
 

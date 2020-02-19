@@ -9,7 +9,11 @@ Gatsby ya hace uso del almacenamiento en caché, por ejemplo:
 - cualquier nodo creado por los plugins _fuente_ (source) o _transformador_ (transformer) son almacenados en caché
 - `gatsby-plugin-sharp` _cachea_ las miniaturas (thumbnails) que se creen
 
+<<<<<<< HEAD
 Los datos se almacenan en el directorio `.cache`, que es relativo al directorio raíz de tu proyecto.
+=======
+Build outputs are stored in the `.cache` and `public` directories relative to your project root.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## La API caché
 

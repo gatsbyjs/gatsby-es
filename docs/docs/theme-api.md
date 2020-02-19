@@ -97,14 +97,19 @@ Until we build tooling to support automatically handling shadowing, you will hav
 
 Luckily, the way to do that is only a few steps. Take the `src` directory from the theme, and move it to the front of the path, then write a file at that location in your site. Looking back on our `Header` example, this is the path to the component in our theme:
 
-```
+```text
 gatsby-theme-amazing/src/components/header.js
 ```
 
 and here is the path where we would shadow it in our site:
 
+<<<<<<< HEAD
 ```
 <our-site>/src/gatsby-theme-amazing/components/header.js
+=======
+```text
+<your-site>/src/gatsby-theme-amazing/components/header.js
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 ```
 
 Shadowing only works on imported files in the `src` directory. This is because shadowing is built on top of Webpack, so the module graph needs to include the shadowable file.

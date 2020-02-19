@@ -20,7 +20,11 @@ Data needs to be [sourced](/docs/content-and-data/) — or added to the GraphQL 
 
 **Note**: GraphQL isn't required: you can still [use Gatsby without GraphQL](/docs/using-gatsby-without-graphql/).
 
+<<<<<<< HEAD
 Sourcing data with an existing plugin requires installing necessary packages and adding the plugin to the plugins array in the `gatsby-config` with any optional configurations. To source data from the filesystem for use with GraphQL, such as Markdown files, images, and more, refer to the [filesystem data sourcing docs](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/#5-sourcing-data).
+=======
+To source data with an existing plugin you have to install all needed packages. Furthermore you have to add the plugin to the plugins array in the `gatsby-config` with any optional configurations. If you want to source data from the filesystem for use with GraphQL, such as Markdown files, images, and more, refer to the [filesystem data sourcing docs](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/sourcing-data).
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 For instructions on installing plugins from npm, refer to the instructions in the docs on [using a plugin](/docs/using-a-plugin-in-your-site/).
 
@@ -68,7 +72,7 @@ export const pageQuery = graphql`
 
 When included in a page component file, a page query returns a data object that is passed automatically to the component as a prop.
 
-```javascript
+```jsx
 // highlight-start
 const HomePage = ({ data }) => {
   // highlight-end
@@ -148,7 +152,7 @@ The `useStaticQuery` hook takes one argument:
 
 - `query`: a `graphql` query string
 
-```jsx
+```javascript
 const data = useStaticQuery(graphql`
   query HeaderQuery {
     site {
@@ -219,7 +223,11 @@ Other built-in configurations can be used in queries
 - [`Alias`](/docs/graphql-reference#alias)
 - [`Group`](/docs/graphql-reference#group)
 
+<<<<<<< HEAD
 For examples, refer to the [Query recipes](/docs/recipes/#6-querying-data) and [GraphQL Query Options Reference Guide](/docs/graphql-reference/).
+=======
+For examples, refer to the [query recipes](/docs/recipes/querying-data) and [GraphQL query options reference guide](/docs/graphql-reference/).
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Query fragments
 

@@ -19,7 +19,11 @@ La manera más rápida de empezar con Gatsby + MDX es usar el [starter MDX](http
    gatsby develop
    ```
 
+<<<<<<< HEAD
 1. **Abrir el sitio** ubicado en http://localhost:8000
+=======
+1. **Open the site** running at `http://localhost:8000`
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 1. **Actualizar el contenido MDX** abriendo la carpeta `mi-mdx-starter`
    en tu editor de código preferido y editando `src/pages/index.mdx`.
@@ -27,7 +31,14 @@ La manera más rápida de empezar con Gatsby + MDX es usar el [starter MDX](http
 
 ## Agregar MDX a un sitio existente creado con Gatsby
 
+<<<<<<< HEAD
 Si ya tienes un sitio creado con Gatsby al que le quieras agregar MDX, puedes seguir estos paso para configurar el plugin [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/):
+=======
+If you already have a Gatsby site that you'd like to add MDX to, you
+can follow these steps for configuring the [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/) plugin.
+
+Alternatively, you may be looking to configure an existing blog site to use MDX. [This blog post](/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/) walks you through those steps in detail.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 1. **Agregar `gatsby-plugin-mdx`** y MDX como dependencias
 

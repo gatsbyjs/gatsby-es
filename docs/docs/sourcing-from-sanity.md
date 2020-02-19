@@ -38,7 +38,11 @@ module.exports = {
 
 En este punto puedes elegir (y probablemente deberías) [configurar una API de GraphQL](https://www.sanity.io/help/graphql-beta) para tu conjunto de datos de Sanity, si aún no lo has hecho. Esto ayudará al plugin conocer qué tipo de datos y campos existen, para que puedas consultarlos incluso sin que estén presentes en ningún documento actual.
 
+<<<<<<< HEAD
 Ves a `http://localhost:8000/___graphql` después de ejecutar `gatsby develop` para entender los datos creados. Crea una nueva consulta y verifica las colecciones y campos disponibles usando el autocompletado (`CTRL + ESPACIO`).
+=======
+Go through `http://localhost:8000/___graphql` after running `gatsby develop` to understand the created data. Create a new query and check available collections and fields by using the autocomplete (`CTRL + SPACE`).
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Opciones
 
@@ -212,7 +216,11 @@ La consulta anterior buscará todos los proyectos que tienen un campo `slug.curr
 
 Muchos [_starters_ de Gatsby](/starters/?v=2) tienen algún ejemplo de creación de páginas, que deberías poder modificar según tus necesidades.
 
+<<<<<<< HEAD
 Recuerda usar la interfaz GraphiQL para ayudarte a escribir las consultas que necesitas - generalmente se ejecuta en `http://localhost:8000/___graphql` mientras usas `gatsby develop`.
+=======
+Remember to use the GraphiQL interface to help write the queries you need - it's usually running at `http://localhost:8000/___graphql` while running `gatsby develop`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Campos _"Raw"_
 
@@ -230,6 +238,7 @@ Puedes instalar [block-content-to-react](https://www.npmjs.com/package/@sanity/b
 
 Si no quieres añadir el ID de tu proyecto Sanity en el repositorio, puedes guardarlo fácilmente en archivos .env haciendo lo siguiente:
 
+<<<<<<< HEAD
 ```js
 // En tu archivo .env
 SANITY_PROJECT_ID = abc123
@@ -237,6 +246,15 @@ SANITY_DATASET = production
 SANITY_TOKEN = mi-token-super-secreto
 
 // En tu archivo gatsby-config.js
+=======
+```text:title=.env
+SANITY_PROJECT_ID = abc123
+SANITY_DATASET = production
+SANITY_TOKEN = my-super-secret-token
+```
+
+```js:title=gatsby-config.js
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })

@@ -59,8 +59,8 @@ Debido a las diferentes integraciones posibles de Gatsby, puede ayudar lanzar un
 
 Para instalar Wordpress con Gatsby, este archivo `docker-compose.yml` te puede ser de utilidad:
 
-```
-version: '2'
+```yaml:title=docker-compose.yml
+version: "2"
 
 services:
   db:
@@ -91,22 +91,22 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-    - ./wp-content:/var/www/html/wp-content
-    - ./wp-app:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./wp-app:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: sessions_phpmyadmin
-      environment:
-       - PMA_ARBITRARY=1
-       - PMA_HOST=sessions_db
-       - PMA_USER=wordpress
-       - PMA_PASSWORD=wordpress
-      restart: always
-      ports:
-       - 8080:80
-      volumes:
-       - /sessions
+    image: phpmyadmin/phpmyadmin
+    container_name: sessions_phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=sessions_db
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 ```
 
 Usa los contenidos del archivo de arriba cuando sigas las instrucciones de instalación de Docker Wordpress: https://docs.docker.com/compose/wordpress/
@@ -121,4 +121,8 @@ Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-buil
 
 ## Feedback
 
+<<<<<<< HEAD
 En cualquier momento durante el proceso de contribución, ¡al equipo de Gatsby Core le encantaría ayudar! ¡Organizamos un [meeting semanal de Mantenedores principales](/contributing/community#core-maintainers-meeting) dónde puedes compartir tus creaciones y recibir consejo y feedback directamente del equipo!
+=======
+At any point during the contributing process the Gatsby team would love to help! For help with a specific problem you can [open an issue on GitHub](/contributing/how-to-file-an-issue/). Or drop in to [our Discord server](https://gatsby.dev/discord) for general community discussion and support.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc

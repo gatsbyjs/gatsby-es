@@ -14,11 +14,12 @@ Revisa el [Documento de lanzamientos de Node](https://github.com/nodejs/Release#
 
 Ejecuta `node -v` en una ventana de la terminal para ver qué versión de Node posees.
 
-```
+```shell
 node -v
-v10.16.0
+v10.18.0
 ```
 
+<<<<<<< HEAD
 Este ejemplo muestra Node versión 10, específicamente v10.16.0.
 
 ## Actualizando desde Node versión 6
@@ -28,6 +29,17 @@ Node versión 6 alcanzó el estado de  _Fin de Ciclo (End-of-life)_ el 30 de Abr
 Generalmente recomendaríamos usar [la versión de Node cuyo estado es Activa LTS (Active LTS)](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 al momento de escribir esto). De todos modos, en este documento aprenderás cómo actualizar de Node 6 a Node 7 ya que esto probablemente será la actualización menos disruptiva para tí.
 
 > ¿Qué acerca de Node 7? Las versiones estables de Node son lanzamientos con numeros pares - Node 6, Node 8, Node 10, etcétera. Sólo usa los números impares si quieres probar con elementos de vanguardia o experimentales.
+=======
+This example shows Node.js version 10, specifically v10.18.0.
+
+## Upgrading from Node.js version 8
+
+Node.js version 8 reached _End-of-life_ status on December 31, 2019. Many of Gatsby's dependencies are updating to Node.js version 10 and above. Gatsby must also update in order to deliver new features and bug fixes more quickly.
+
+Generally, it's recommended to use [the Node version whose status is _Active LTS_](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 at time of writing).
+
+> What about Node.js 9? Stable versions of Node.js are evenly numbered releases - Node.js 6, Node.js 8, Node.js 10 etc. Only use uneven release numbers if you'd like to try cutting-edge and experimental features.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Hay múltiples modos de actualizar tu versión de Node dependiendo en cómo lo has instalado originalmente. Léelo para encontrar el mejor enfoque para tí.
 
@@ -35,17 +47,23 @@ Hay múltiples modos de actualizar tu versión de Node dependiendo en cómo lo h
 
 Éste es nuestro modo recomendado de instalar una nueva versión de Node.
 
+<<<<<<< HEAD
 Tendrás homebrew instalado en tu computadora si has [seguido la parte cero del tutorial de Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/#-install-nodejs-and-npm). Homebrew es un programa que te permite instalar versiones específicas de Node (y otros programas).
 
 Para actualizar de Node 6 a Node 8 usando Homebrew, abre una ventana de la terminal y ejecuta los siguientes comandos:
+=======
+You will have Homebrew installed on your computer if you [followed part zero of the Gatsby tutorial](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). Homebrew is a program that allows you to install specific versions of Node.js (and other software).
 
-```
+To update from Node.js 8 to Node.js 10 using Homebrew, open a terminal and run the following commands:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+
+```shell
 brew search node
 ```
 
 Deberías tener un resultado similar a éste:
 
-```
+```shell
 brew search node
 ==> Formulae
 heroku/brew/heroku-node ✔        llnode                           node@10                          nodebrew
@@ -53,19 +71,27 @@ leafnode                         node ✔                           node@8      
 libbitcoin-node                  node-build                       node_exporter                    nodenv
 ```
 
+<<<<<<< HEAD
 Estás interesado en la versión estable siguiente de Node posterior a Node 6, que es Node 8. Homebrew hace esto disponible en un paquete llamado `node@8`. Ejecuta:
+=======
+You're interested in the next stable version of Node.js after Node.js 8, which is Node.js 10. Homebrew makes this available in a package called `node@10`. Run:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
-```
-brew install node@8
+```shell
+brew install node@10
 ```
 
 Una vez que ésto ha concluido, ejecuta:
 
-```
+```shell
 node -v
 ```
 
+<<<<<<< HEAD
 para confirmar que has actualizado de Node versión 6 a la posterior versión 8 de Node.
+=======
+to confirm that you've upgraded from Node.js version 8 up to version 10.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ### Usando un paquete de administración de versión de Node
 
@@ -77,18 +103,22 @@ Hay dos paquetes populares para administrar múltiples versiones de Node en tu s
 
 Ejecuta
 
-```
+```shell
 nvm
 ```
 
 en una ventana de la terminal para ver si nvm está instalado en tu sistema. Si está instalado, ejecuta:
 
-```
-nvm install 8
-nvm alias default 8
+```shell
+nvm install 10
+nvm alias default 10
 ```
 
+<<<<<<< HEAD
 para instalar Node versión 8.
+=======
+to install and use Node.js version 10.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 [Revisa la documentación de nvm para más instrucciones](https://github.com/nvm-sh/nvm).
 
@@ -96,11 +126,15 @@ para instalar Node versión 8.
 
 Ejecuta:
 
-```
+```shell
 n
 ```
 
+<<<<<<< HEAD
 en una ventana de terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
+=======
+in a terminal to see if n is installed on your system. If it's installed, you can run `n 10` to install and use Node.js version 10.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 [Revisa la documentación de n para más instrucciones](https://github.com/tj/n).
 
@@ -116,4 +150,8 @@ Gatsby toma la compatibilidad con versiones previas en serio y apunta a dar comp
 
 Gatsby también confía en un enorme ecosistema de dependencias de JavaScript. A medida que el ecosistema se aleja de versiones anteriores y ya no compatibles de Node tenemos que mantenernos en velocidad para asegurarnos que los errores puedan ser arreglados y nuevas funcionalidades puedan ser lanzadas.
 
+<<<<<<< HEAD
 En éste documento has aprendido cómo actualizar de Node versión 6 (que ha alcanzado el estado de  _Fin de Ciclo (End of Life)_ status), a Node versión 8 (que ha alcanzado el estado de _En Mantenimiento (Maintenance)_.
+=======
+In this document, you learned how you upgrade from Node.js version 8 (which has reached _End of Life_ status) to Node.js version 10.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc

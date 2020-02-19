@@ -13,7 +13,11 @@ Además, Gitpod pre-compila cada rama del repositorio, para que no tengas que es
 
 ## Para empezar
 
+<<<<<<< HEAD
 Para iniciar un nuevo entorno de desarrollo, puedes prefijar cualquier URL de GitHub con `gitpod.io/#`.
+=======
+To start a fresh dev environment you can prefix any GitHub URL with `gitpod.io/#`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 > Ejemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby
 

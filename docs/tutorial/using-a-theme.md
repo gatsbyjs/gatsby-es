@@ -64,11 +64,15 @@ module.exports = {
 
 Cuando se usan temas de Gatsby puedes aprovechar algo llamado _component shadowing_.
 
+<<<<<<< HEAD
 El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
+=======
+The Gatsby blog theme package has a component that contains the content of the site author's biography. The file path to that component (in the blog theme package, not your site) is `src/gatsby-theme-blog/components/bio-content.js`. You can find this path by looking through the theme in your site's `node_modules/gatsby-theme-blog` directory.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Si miras en el árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 
-```
+```text
 my-blog
 ├── content
 │   ├── assets
@@ -93,6 +97,8 @@ En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-bl
 Abre el fichero `bio-content.js` y realiza algunas modificaciones de su contenido:
 
 ```jsx:title=bio-content.js
+import React, { Fragment } from "react"
+
 export default () => (
   {/* highlight-start */}
   <Fragment>
@@ -143,6 +149,9 @@ El tema para blog viene por defecto con el color púrpura de Gatsby, pero puedes
 Abre el fichero `/src/gatsby-theme-blog/gatsby-plugin-theme-ui/colors.js`, y descomenta el código en el mismo.
 
 ```javascript:title=colors.js
+import merge from "deepmerge"
+import defaultThemeColors from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors"
+
 {/* highlight-start */}
 const blue60 = "#007acc"
 const blue30 = "#66E0FF"

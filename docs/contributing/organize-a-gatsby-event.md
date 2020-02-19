@@ -2,14 +2,19 @@
 title: Organiza un Evento de Gatsby
 ---
 
+<<<<<<< HEAD
 ¿Estás interesado en organizar un evento de Gatsby? Queremos ayudar a construir la comunidad de Gatsby en tu área. Si tu evento cumple con algunos requisitos básicos listados abajo, serás elegible para recibir apoyo de Gatsby, como regalos de Gatsby, \$300 dólares para comida, recursos de aprendizaje, y más. Empieza pidiendo apoyo para el evento en la parte de abajo.
 
 [Pide Apoyo para Eventos](https://airtable.com/shrpwc99yogJm9sfI)
+=======
+Our communiy event support offerings and process are undergoing some changes. Check back soon to see our updated community event support opportunities!
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## ¿Qué constituye un evento de Gatsby?
 
 Un evento de Gatsby organizado por la comunidad puede ser un meetup local, una pequeña conferencia, un _Almuerza y Aprende_ con compañeros de trabajo, o un evento más grande. Depende de ti a cuántas personas quieres invitar y qué tan informal quieres que sea el ambiente. Puedes organizar un evento en tu trabajo o en una comunidad local.
 
+<<<<<<< HEAD
 ## ¿Qué apoyo provee Gatsby?
 
 Hay varias formas en las que Gatsby puede apoyarte con tu evento:
@@ -37,3 +42,8 @@ Para solicitar apoyo y enviar tu evento a la página de eventos de Gatsby, debes
 ## Enlaces Relacionados:
 
 - [Eventos de la Comunidad de Gatsby](/contributing/events/)
+=======
+## Related Links
+
+- [Gatsby's Community Events](/contributing/events/)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc

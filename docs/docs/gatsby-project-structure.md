@@ -24,6 +24,7 @@ Dentro de un proyecto Gatsby, quizás mires algunas o todas las carpetas y archi
 
 - **`/.cache`** _Generada automáticamente._ Esta carpeta es una cache interna creada automáticamente por Gatsby. Los archivos dentro de esta carpeta no deben ser modificados. Debe ser agregada al archivo `.gitignore` si aún no está.
 
+<<<<<<< HEAD
 - **`/public`** _Generada automáticamente._ El resultado del proceso de compilación se pondrá dentro de esta carpeta. Debe ser agregada al archivo `.gitignore` si aún no está.
 
 - **`/plugins`** Esta carpeta hospeda plugins ("locales") específicos del proyecto que no son publicados como un paquete `npm`. Revisa la [documentación de plugin](/docs/plugins/) para más detalles.
@@ -33,6 +34,17 @@ Dentro de un proyecto Gatsby, quizás mires algunas o todas las carpetas y archi
   - **`/pages`** Los componentes dentro de src/pages se vuelven páginas automáticamente con rutas basadas en el nombre del archivo. Revisa la [documentación de páginas](/docs/recipes/#creating-pages) para más detalles.
   - **`/templates`** Contienen plantillas para crear páginas de manera programática. Revisa la [documentación de plantillas](/docs/building-with-components/#page-template-components) para más detalles.
   - **`html.js`** Para una configuración personalizada por defecto .cache/default_html.js. Revisa la [documentación de html personalizado](/docs/custom-html/) para más detalles.
+=======
+- **`/plugins`** This folder hosts any project-specific ("local") plugins that aren't published as an `npm` package. Check out the [plugin docs](/docs/plugins/) for more detail.
+
+- **`/public`** _Automatically generated._ The output of the build process will be exposed inside this folder. Should be added to the `.gitignore` file if not added already.
+
+- **`/src`** This directory will contain all of the code related to what you will see on the frontend of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
+
+  - **`/pages`** Components under src/pages become pages automatically with paths based on their file name. Check out the [pages recipes](/docs/recipes/pages-layouts) for more detail.
+  - **`/templates`** Contains templates for programmatically creating pages. Check out the [templates docs](/docs/building-with-components/#page-template-components) for more detail.
+  - **`html.js`** For custom configuration of default .cache/default_html.js. Check out the [custom html docs](/docs/custom-html/) for more detail.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 - **`/static`** Si pones un archivo dentro de la carpeta static, no será procesado por Webpack. En vez de eso será copiado dentro de la carpeta public sin ser tocado. Revisa la [documentación de activos](/docs/static-folder/#adding-assets-outside-of-the-module-system) para más detalles.
 

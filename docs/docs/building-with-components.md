@@ -2,9 +2,13 @@
 title: Construyendo con Componentes
 ---
 
+<<<<<<< HEAD
 import LayerModel from "../../www/src/components/layer-model"
 
 Para usar Gatsby, necesitarás un conocimiento básico sobre componentes en React.
+=======
+To use Gatsby, you will need a basic understanding of React components.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 El [tutorial oficial](https://reactjs.org/tutorial/tutorial.html)
 es un buen lugar para empezar.
@@ -30,7 +34,7 @@ Todo en Gatsby está construido usando componentes.
 
 Una estructura de directorios básica de un proyecto podría verse así:
 
-```
+```text
 .
 ├── gatsby-config.js
 ├── package.json

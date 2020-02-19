@@ -152,7 +152,7 @@ Primero, crea un nuevo componente `Container`.
 
 1. Crea un nuevo directorio en `src/components` y después, en este nuevo directorio, crea un archivo llamado `container.js` y pega lo siguiente:
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -177,7 +177,7 @@ Notarás que el archivo termina con `.module.css` en vez del clásico `.css`. Es
 3. Crea un nuevo componente de página, creando un archivo en
    `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
@@ -248,7 +248,11 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
+<<<<<<< HEAD
 El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome) en tu navegador, verás:
+=======
+The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Resultado de importar módulos CSS en consola](css-modules-console.png)
 

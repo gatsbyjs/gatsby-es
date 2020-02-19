@@ -4,7 +4,11 @@ title: Trabajando Con Imágenes En Gatsby
 
 La optimización de imágenes es un reto en cualquier página web. Para utilizar las mejores prácticas para rendimiento en dispositvos, necesitas multiples tamaños y resoluciones de cada imagen. Por suerte, Gatsby tiene varios [plugins](/docs/plugins/) útiles que trabajan juntos para hacerlo para imágenes en [componentes de página](/docs/building-with-components/#page-components).
 
+<<<<<<< HEAD
 La aproximación recomendada es usar [consultas GraphQL](/docs/querying-with-graphql/) para conseguir imágenes de resolución y tamaño óptimas, y después, mostrarlas con el componente  [`gatsby-image`](/packages/gatsby-image/).
+=======
+The recommended approach is to use [GraphQL queries](/docs/graphql-concepts/) to get images of the optimal size or resolution, then, display them with the [`gatsby-image`](/packages/gatsby-image/) component.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Consulta Imágenes Con GraphQL
 
@@ -12,11 +16,19 @@ Consultar imágenes con GraphQL te permite acceder a los datos de la imagen tant
 
 Necesitarás unos cuantos plugins para esto:
 
+<<<<<<< HEAD
 - [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin que te permite [consultar archivos con GraphQL](/docs/querying-with-graphql/#images)
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) se encarga de las conexiones entre Sharp y los Plugins de Gatsby 
 - [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) te permite crear multiples imágenes de los tamaños adecuados y resoluciones con una consulta
 
 Si la imagen final es de un tamaño fijo, la optimización depende de tener multiples resoluciones de la imagen.  Si es responsiva, es decir, se estira para llenar un contenedor o página, la optimización se basa en tener diferentes tamaños de la misma imagen. Mira la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
+=======
+- [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin allows you to [query files with GraphQL](/docs/graphql-concepts/#images)
+- [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) powers the connections between Sharp and Gatsby Plugins
+- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) allows you to create multiples images of the right sizes and resolutions with a query
+
+If the final image is of a fixed size, optimization relies on having multiple resolutions of the image. If it is responsive, meaning it stretches to fill a container or page, optimization relies on having different sizes of the same image. See the [Gatsby Image documentation for more information](/packages/gatsby-image/#two-types-of-responsive-images).
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 También puedes usar argumentos en tu consulta para especificar exactamente, las dimensiones mínimas, y máximas. Ve la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
 

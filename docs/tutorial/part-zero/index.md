@@ -10,6 +10,7 @@ Antes de comenzar a crear tu primer sitio Gatsby, debes familiarizarte con algun
 
 La línea de comandos es una interface de texto para ejecutar comandos en tu ordenador. Muchas veces nos referimos a ella como la terminal. En este tutorial lo llamaremos de ambas formas. Es muy parecido a usar el Finder en Mac o el Explorador en Windows. Finder y Explorer son ejemplos de Interfaz gráfica de usuario (GUI). La línea de comandos es una manera poderosa, basada en texto, para interactuar con tu ordenador.
 
+<<<<<<< HEAD
 Asegúrate de encontrar y abrir la interfaz de línea de comandos (CLI) de tu ordenador. Dependiendo de que sistema operativo estés usando, mira [**instrucciones para Mac**](http://foro-mac.com.ar/tutorial-como-usar-la-terminal-en-mac/), [**instrucciones para Windows**](https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd) or [**instrucciones para Linux**](https://openwebinars.net/blog/La-guia-definitiva-para-aprender-a-usar-la-terminal-de-Linux/).
 
 ## Instalar Homebrew para Node.js
@@ -49,10 +50,96 @@ Una vez hayas seguido los pasos para la instalación, asegurate que todo esté i
 3.  Ejecuta `npm --version`.
 
 La respuesta de ambos comandos debe ser el número de versión. Las versiones que veas puede que no sean las mismas que te mostramos a continuación! Si despues de ejecutar esos comandos no te muestran las versiones, vuelve y asegúrate que hayas instalado Node.js.
+=======
+Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+
+_Note: If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
+
+## Install Node.js for your appropriate operating system
+
+Node.js is an environment that can run JavaScript code outside of a web browser. Gatsby is built with Node.js. To get up and running with Gatsby, you’ll need to have a recent version installed on your computer. npm comes bundled with Node.js so if you don't have npm, chances are that you don't have Node.js either.
+
+### Mac instructions
+
+To install Gatsby and Node.js on a Mac, it is recommended to use [Homebrew](https://brew.sh/). A little set-up in the beginning can save you from some headaches later on!
+
+#### How to install or verify Homebrew on your computer:
+
+1. Open your Terminal.
+2. See if Homebrew is installed by running `brew -v`. You should see "Homebrew" and a version number.
+3. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation).
+4. Once you've installed Homebrew, repeat step 2 to verify.
+
+#### Install Xcode Command Line Tools:
+
+1. Open your Terminal.
+2. Install Xcode Command line tools by running `xcode-select --install`.
+   - If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account
+3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
+
+#### Install Node
+
+1. Open your Terminal
+2. Run `brew install node`
+   - If you don't want to install it through Homebrew, download the latest Node.js version from [the official Node.js website](https://nodejs.org/en/), double click on the downloaded file and go through the installation process.
+
+### Windows Instructions
+
+- Download and install the latest Node.js version from [the official Node.js website](https://nodejs.org/en/)
+
+### Linux Instructions
+
+Install nvm (Node Version Manager) and needed dependencies. nvm is used to manage Node.js and all its associated versions.
+
+_💡 If when installing a package, it asks for confirmation, type `y` and press enter._
+
+#### Ubuntu, Debian, and other `apt` based distros:
+
+1. Run `sudo apt update` and then `sudo apt -y upgrade` to make sure your Linux distribution is ready to go.
+2. Run `sudo apt-get install curl` to install curl which allows you to transfer data and download additional dependencies.
+3. After it finishes installing, run `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash` to download the latest nvm version.
+4. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
+5. [Set default Node.js version](#set-default-nodejs-version)
+
+#### Arch, Manjaro and other `pacman` based distros:
+
+1. Run `sudo pacman -Sy` to make sure your distribution is ready to go.
+2. These distros come installed with curl, so you can use that to download nvm.
+   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+3. Before using nvm, you need to install additional dependencies by running `sudo pacman -S grep awk tar`.
+4. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
+5. [Set default Node.js version](#set-default-nodejs-version)
+
+#### Fedora, RedHat, and other `dnf` based distros:
+
+1. These distros come installed with curl, so you can use that to download nvm.
+   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+2. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
+3. [Set default Node.js version](#set-default-nodejs-version)
+
+If the Linux distribution you are using is not listed here, please find instructions on the web.
+
+#### Set default Node.js version
+
+When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the latest release of version 10, but more recent version numbers can be used instead.
+
+```shell
+nvm install 10
+nvm use 10
+```
+
+To confirm that this worked, you can run `npm --version` and `node --version`. The output should look similar to the screenshot below, showing version numbers in response to the commands.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Verifica las versiones de Node.js y npm](01-node-npm-versions.png)
 
+<<<<<<< HEAD
 ## Instala Git
+=======
+Once you have followed the installation steps and you have checked everything is installed properly, you can continue to the next step.
+
+## Install Git
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Git es un software de control de versiones distribuido y de software libre diseñado para gestionar proyectos pequeños o grandes de una manera rápida y eficiente. Cuando instalas un "starter" de Gatsby, Gatsby usa Git internamente para descargar e instalar los ficheros requeridos para tu proyecto. Necesitarás Git instalado para configurar tu primer sitio web Gatsby.
 
@@ -84,8 +171,13 @@ Ahora ya estás listo para usar la línea de comandos de Gatsby (Gatsby CLI) par
 4.  Ejecuta `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
+<<<<<<< HEAD
   <source type="video/mp4" src="./03-create-site.mp4"></source>
   <p>Sorry! You browser doesn't support this video.</p>
+=======
+  <source type="video/mp4" src="./03-create-site.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 </video>
 
 ¿Qué ha pasado?
@@ -112,15 +204,25 @@ gatsby develop
 
 ### Mira tu sitio web en local
 
+<<<<<<< HEAD
 Abre una nueva pestaña en tu navegador y ve a [**http://localhost:8000**](http://localhost:8000/).
+=======
+Open up a new tab in your browser and navigate to `http://localhost:8000/`
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Página principal](04-home-page.png)
 
 ¡Felicidades! ¡Esto es el inicio de tu primer sitio hecho con Gatsby! 🎉
 
+<<<<<<< HEAD
 Puedes ver tu sitio web en local en [**_http://localhost:8000_**](http://localhost:8000/) mientras tu servidor de desarrollo esté activo. Este es el proceso que has iniciado cuando ejecutaste el comando `gatsby develop`. Para detener el proceso (o cerrar el servidor de desarrollo), vuelve a la terminal, mantén presionada la tecla "control" y presiona la tecla "c" (ctrl-c). ¡Para iniciarlo nuevamente, ejecuta `gatsby develop` otra vez!
 
 **Nota:** Si estás en un entorno virtual (VM) como `vagrant` y/o te gustaría ejecutara el entorno de desarrollo desde tu dirección IP local, ejecuta `gatsby develop -- --host=0.0.0.0`. Ahora, el servidor de desarrollo escuchará tanto 'localhost' como tu dirección IP local.
+=======
+You’ll be able to visit the site locally at `http://localhost:8000/` for as long as your development server is running. That’s the process you started by running the `gatsby develop` command. To stop running that process (or to “stop running the development server”), go back to your terminal window, hold down the “control” key, and then hit “c” (ctrl-c). To start it again, run `gatsby develop` again!
+
+**Note:** If you are using VM setup like `vagrant` and/or would like to listen on your local IP address, run `gatsby develop --host=0.0.0.0`. Now, the development server listens on both `http://localhost` and your local IP.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Configura un editor de código
 
@@ -136,9 +238,15 @@ También recomendamos usar [Prettier](https://github.com/prettier/prettier), una
 
 Puedes usar Prettier directamente en tu editor de código usando el [plugin de Prettier para VS Code](https://github.com/prettier/prettier-vscode):
 
+<<<<<<< HEAD
 1. Abre la vista de las extensiones en VS Code (View => Extensions).
 2. Busca "Prettier - Code formatter".
 3. Presiona "Instalar". (Después de la instalación, te sugerirá reiniciar VS Code para habilitar la extensión. Nuevas versiones de VS Code habilitarán automáticamente la extensión después de descargarla.)
+=======
+1.  Open the extensions view on VS Code (View => Extensions).
+2.  Search for "Prettier - Code formatter".
+3.  Click "Install". (After installation, you'll be prompted to restart VS Code to enable the extension. Newer versions of VS Code will automatically enable the extension after download.)
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 > 💡 Si no estás usando VS Code, visita la documentación de Prettier por [instructiones de instalación](https://prettier.io/docs/en/install.html) u [otras integraciones](https://prettier.io/docs/en/editors.html).
 
