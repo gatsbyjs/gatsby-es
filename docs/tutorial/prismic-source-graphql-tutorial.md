@@ -49,11 +49,7 @@ Configurarás el plugin de fuente de Gatsby para que pueda extraer datos desde e
 },
 ```
 
-<<<<<<< HEAD
-Si ejecutas `gatsby develop` ahora, deberás tener acceso a los datos de Prismic a través de la interfaz de GraphiQL en [`http://localhost:8000/___graphql`](http://localhost:8000/___graphql). Puedes verificar que funcione intentando hacer una consulta que usa como fuente a Prismic.
-=======
-If you run `gatsby develop` now, you should be able to access the data from Prismic through the GraphiQL interface in `http://localhost:8000/___graphql`. You can check this by trying a query that uses the Prismic source.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Si ejecutas `gatsby develop` ahora, deberías tener acceso a los datos de Prismic a través de la interfaz de GraphiQL en `http://localhost:8000/___graphql`. Puedes verificar que funcione intentando hacer una consulta que usa como fuente a Prismic.
 
 ```graphql
 {
@@ -139,11 +135,7 @@ export default ({ data }) => {
 }
 ```
 
-<<<<<<< HEAD
-Guarda el archivo y verifica que tu sitio está siendo ejecutado en [`http://localhost:8000`](http://localhost:8000)
-=======
-Save the file and check on your site running at `http://localhost:8000`
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Guarda el archivo y verifica que tu sitio está siendo ejecutado en `http://localhost:8000`
 
 Puedes usar la función auxiliar `RichText` para [renderizar texto con formato](https://prismic.io/docs/reactjs/rendering/rich-text), generalmente, este será el proceso que usarás para consultar y renderizar tu repositorio Prismic. Podemos limpiar esto un poco más e incluir una función que renderice el arreglo de los posts del blogs que consultamos previamente.
 
@@ -313,11 +305,7 @@ Y con este paso final deberías ver todos tus posts del blog renderizados en tu 
 
 Una de las características más emocionantes que este plugin de fuente de Gatsby Prismic provee, es la habilidad de previsualizar cambios de tus documentos sin tener que publicarlos o recompilar tu aplicación de Gatsby. Para activar esto, primero tienes que configurar un _endpoint_ en tu repositorio Prismic.
 
-<<<<<<< HEAD
-En tu repositorio, ve a **Settings > Previews > Create a New Preview** y llena los campos referentes a tu proyecto. Para un ambiente de desarrollo local debes usar [`http://localhost:8000`](http://localhost:8000) como el Dominio, con `/preview` como el Gestor de Enlaces opcional. No te preocupes en incluir el script del toolbar, el plugin se encargará de eso.
-=======
-In your repository, go to **Settings > Previews > Create a New Preview** and fill in the fields for your setup. For a default local development environment, you should use `http://localhost:8000` as the Domain, with `/preview` as the optional Link Resolver. Don't worry about including the toolbar script, the plugin will take care of it.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+En tu repositorio, ve a **Settings > Previews > Create a New Preview** y llena los campos referentes a tu proyecto. Para un ambiente de desarrollo local debes usar `http://localhost:8000` como el Dominio, con `/preview` como el Gestor de Enlaces opcional. No te preocupes en incluir el script del toolbar, el plugin se encargará de eso.
 
 Finalmente, regresa a tu archivo de configuración de Gatsby para activar la característica.
 
