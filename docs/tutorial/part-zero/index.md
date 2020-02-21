@@ -88,7 +88,6 @@ nvm use 10
 ```
 
 Para confirmar que funcionó, puedes ejecutar `npm --version` y `node --version`. La salida debería verse similar a la captura de pantalla de abajo, mostrando el número de versión en respuesta a los comandos.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Verifica las versiones de Node.js y npm](01-node-npm-versions.png)
 
@@ -126,13 +125,8 @@ Ahora ya estás listo para usar la línea de comandos de Gatsby (Gatsby CLI) par
 4.  Ejecuta `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
-<<<<<<< HEAD
-  <source type="video/mp4" src="./03-create-site.mp4"></source>
-  <p>Sorry! You browser doesn't support this video.</p>
-=======
   <source type="video/mp4" src="./03-create-site.mp4" />
   <p>Sorry! Your browser doesn't support this video.</p>
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 </video>
 
 ¿Qué ha pasado?
@@ -159,25 +153,15 @@ gatsby develop
 
 ### Mira tu sitio web en local
 
-<<<<<<< HEAD
-Abre una nueva pestaña en tu navegador y ve a [**http://localhost:8000**](http://localhost:8000/).
-=======
-Open up a new tab in your browser and navigate to `http://localhost:8000/`
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Abre una nueva pestaña en tu navegador y ve a `http://localhost:8000/`
 
 ![Página principal](04-home-page.png)
 
 ¡Felicidades! ¡Esto es el inicio de tu primer sitio hecho con Gatsby! 🎉
 
-<<<<<<< HEAD
-Puedes ver tu sitio web en local en [**_http://localhost:8000_**](http://localhost:8000/) mientras tu servidor de desarrollo esté activo. Este es el proceso que has iniciado cuando ejecutaste el comando `gatsby develop`. Para detener el proceso (o cerrar el servidor de desarrollo), vuelve a la terminal, mantén presionada la tecla "control" y presiona la tecla "c" (ctrl-c). ¡Para iniciarlo nuevamente, ejecuta `gatsby develop` otra vez!
+Puedes ver tu sitio web en local en `http://localhost:8000/` mientras tu servidor de desarrollo esté activo. Este es el proceso que has iniciado cuando ejecutaste el comando `gatsby develop`. Para detener el proceso (o cerrar el servidor de desarrollo), vuelve a la terminal, mantén presionada la tecla "control" y presiona la tecla "c" (ctrl-c). ¡Para iniciarlo nuevamente, ejecuta `gatsby develop` otra vez!
 
-**Nota:** Si estás en un entorno virtual (VM) como `vagrant` y/o te gustaría ejecutara el entorno de desarrollo desde tu dirección IP local, ejecuta `gatsby develop -- --host=0.0.0.0`. Ahora, el servidor de desarrollo escuchará tanto 'localhost' como tu dirección IP local.
-=======
-You’ll be able to visit the site locally at `http://localhost:8000/` for as long as your development server is running. That’s the process you started by running the `gatsby develop` command. To stop running that process (or to “stop running the development server”), go back to your terminal window, hold down the “control” key, and then hit “c” (ctrl-c). To start it again, run `gatsby develop` again!
-
-**Note:** If you are using VM setup like `vagrant` and/or would like to listen on your local IP address, run `gatsby develop --host=0.0.0.0`. Now, the development server listens on both `http://localhost` and your local IP.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+**Nota:** Si estás en un entorno virtual (VM) como `vagrant` y/o te gustaría ejecutara el entorno de desarrollo desde tu dirección IP local, ejecuta `gatsby develop -- --host=0.0.0.0`. Ahora, el servidor de desarrollo escuchará tanto en `http://localhost` como tu dirección IP local.
 
 ## Configura un editor de código
 
@@ -193,15 +177,9 @@ También recomendamos usar [Prettier](https://github.com/prettier/prettier), una
 
 Puedes usar Prettier directamente en tu editor de código usando el [plugin de Prettier para VS Code](https://github.com/prettier/prettier-vscode):
 
-<<<<<<< HEAD
 1. Abre la vista de las extensiones en VS Code (View => Extensions).
 2. Busca "Prettier - Code formatter".
 3. Presiona "Instalar". (Después de la instalación, te sugerirá reiniciar VS Code para habilitar la extensión. Nuevas versiones de VS Code habilitarán automáticamente la extensión después de descargarla.)
-=======
-1.  Open the extensions view on VS Code (View => Extensions).
-2.  Search for "Prettier - Code formatter".
-3.  Click "Install". (After installation, you'll be prompted to restart VS Code to enable the extension. Newer versions of VS Code will automatically enable the extension after download.)
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 > 💡 Si no estás usando VS Code, visita la documentación de Prettier por [instructiones de instalación](https://prettier.io/docs/en/install.html) u [otras integraciones](https://prettier.io/docs/en/editors.html).
 
