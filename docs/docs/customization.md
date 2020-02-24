@@ -1,5 +1,5 @@
 ---
-title: Configuracion personalizada
+title: Configuración personalizada
 overview: true
 ---
 
