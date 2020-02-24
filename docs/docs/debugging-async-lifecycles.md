@@ -1,10 +1,10 @@
 ---
-title: Debugging Asynchronous Lifecycle Methods
+title: Depuración de métodos de ciclo de vida asíncrono
 ---
 
-Various lifecycle methods (see: [Gatsby Node APIs](/docs/node-apis/)) within Gatsby are presumed to be asynchronous. In other words, these methods can _eventually_ resolve to a value and this value is a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). We wait for the `Promise` to resolve, and then mark the lifecycle method as completed when it does.
+Se presume que varios métodos de ciclo de vida (consulta: [Gatsby Node APIs](/docs/node-apis/)) dentro de Gatsby son asíncronos. En otras palabras, estos métodos pueden _eventualmente_ resolverse en un valor y este valor es una [`Promesa`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Esperamos a que se resuelva la `Promesa`, y luego marcamos el método de ciclo de vida como completado cuando lo hace.
 
-In the context of Gatsby, this means that if you are invoking asynchronous functionality (e.g. data requests, `graphql` calls, etc.) and not correctly returning the Promise an internal issue can arise where the result of those call(s) happens _after_ the lifecycle method has already been marked as completed. Let's consider an example:
+En el contexto de Gatsby, esto significa que si estás invocando una funcionalidad asincrónica (por ejemplo, solicitudes de datos, llamadas `graphql`, etc.) y no se devuelve correctamente la Promesa, puede surgir un problema interno donde el resultado de esas llamadas ocurre _después_ que el método de ciclo de vida ya se ha marcado como completado. Consideremos un ejemplo:
 
 ```js:title=gatsby-node.js
 exports.createPages = async function({ actions, graphql }) {
@@ -35,9 +35,9 @@ exports.createPages = async function({ actions, graphql }) {
 }
 ```
 
-Can you spot the error? In this case, an asynchronous action (`graphql`) was invoked but this asynchronous action was neither `return`ed nor `await`ed from `createPages`. This means that the lifecycle method will be marked as complete before it's actually completed--which leads to missing data errors and other hard-to-debug errors.
+¿Puedes detectar el error? En este caso, se invocó una acción asincrónica (`graphql`) pero esta acción asincrónica no fue `devuelta` ni `esperada` desde `createPages`. Esto significa que el método de ciclo de vida se marcará como completo antes de que se complete, lo que lleva a errores de datos faltantes y otros errores difíciles de depurar.
 
-The fix is surprisingly simple--just one line to change!
+La solución es sorprendentemente simple: ¡solo se debe cambiar una línea!
 
 ```js:title=gatsby-node.js
 exports.createPages = async function({ actions, graphql }) {
@@ -67,13 +67,13 @@ exports.createPages = async function({ actions, graphql }) {
 }
 ```
 
-## Best Practices
+## Mejores prácticas
 
-### Use `async` / `await`
+### Usa `async` / `await`
 
-With Node 8, Node is able to natively interpret `async` functions. This lets you write asynchronous code as if it were synchronous! This can clean up code that previously was using a `Promise` chain and tends to be a little simpler to understand!
+Con Node 8, Node puede interpretar de forma nativa las funciones `async`. ¡Esto te permite escribir código asincrónico como si fuera síncrono! ¡Esto puede limpiar el código que anteriormente usaba una cadena `Promise` y tiende a ser un poco más simple de entender!
 
-### Use `Promise.all` if necessary
+### Usa `Promise.all` si es necesario
 
 [`Promise.all`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) wraps up _multiple_ asynchronous actions and resolves when _each_ have completed. This can be especially helpful if you're pulling from multiple data sources or abstracted some code that returns a Promise into a helper. For instance, consider the following code:
 
