@@ -31,6 +31,6 @@ Primero asegúrate de que la versión de `gatsby` especificada en tus dependenci
 
 Ahora, cuando surgen problemas que parecen estar relacionados con el almacenamiento en caché, puedes usar `npm run clean` para borrar el caché y comenzar desde un nuevo estado.
 
-_Nota: Si te encuentras usando este comando regularmente, considera ayudarnos y [responder a nuestros issues de GitHub][issue de github] con pasos claros de reproducción ._
+_Nota: Si te encuentras usando este comando regularmente, considera ayudarnos y [responder a nuestros issues de GitHub][github-issue] con pasos claros de reproducción ._
 
 [issue de github]: https://github.com/gatsbyjs/gatsby/issues/11747
