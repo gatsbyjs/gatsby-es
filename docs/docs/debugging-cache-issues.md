@@ -19,7 +19,7 @@ Puede haber ciertos escenarios en los que el mecanismo de almacenamiento en cach
 
 considera utilizar el comando `gatsby clean` que puede ayudarte a resolver los problemas de almacenamiento en caché.
 
-Primero asegúrate de que la versión de `gatsby` especificada en sus dependencias` package.json` sea _al menos_ `2.1.1`, y luego realiza el siguiente cambio en` package.json`:
+Primero asegúrate de que la versión de `gatsby` especificada en tus dependencias` package.json` sea _al menos_ `2.1.1`, y luego realiza el siguiente cambio en` package.json`:
 
 ```json:title=package.json
 {
