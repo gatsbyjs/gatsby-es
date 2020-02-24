@@ -33,4 +33,4 @@ Ahora, cuando surgen problemas que parecen estar relacionados con el almacenamie
 
 _Nota: Si te encuentras usando este comando regularmente, considera ayudarnos y [responder a nuestros issues de GitHub][github-issue] con pasos claros de reproducción ._
 
-[issue de github]: https://github.com/gatsbyjs/gatsby/issues/11747
+[github-issue]: https://github.com/gatsbyjs/gatsby/issues/11747
