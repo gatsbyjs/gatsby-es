@@ -9,20 +9,13 @@ Además, generalmente desean poder utilizar flujos de trabajo familiares basados
 
 Algunos beneficios que puedes usar para atraer clientes a Gatsby incluyen:
 
-<<<<<<< HEAD
 - Trabaja conjuntamente con su CMS
 - La rápida velocidad de desarrollo garantiza que el proyecto estará a tiempo
 - La facilidad para realizar cambios de desarrollo ayuda a mantener el proyecto por debajo del presupuesto
 - El bajo costo de alojamiento ayuda a mantener el proyecto dentro del presupuesto
-=======
-- Works with their CMS
-- Fast development speed ensures project will be on time
-- Ease of making development changes helps keep project under budget
-- Lower hosting cost helps keep project under budget
-- Fast performing websites which reduce page load and response time
-- Supports creation of highly scalable and dynamic apps
-- Rich plugin ecosystem which helps tackle complex code
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+- Sitios con rápido rendimiento que reducen la carga de la página y el tiempo de respuesta
+- Ofrece la creación de sitios altamente escalables y aplicaciones dinámicas
+- Un ecosistema rico de plugins que ayudan a reducir código complejo
 
 [Este one-pager](/gatsby-one-pager.pdf) puede ser útil para clientes -- esto explica Gatsby en su lenguaje.
 
