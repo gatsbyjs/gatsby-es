@@ -67,10 +67,7 @@ cada vez para re-ejecutar la consulta. Verás algo parecido a esto:
 El resultado es un _array_ de "nodos" `File` (nodo es un nombre elegante para un objeto en un
 "grafo"). Cada objeto `File` tiene los campos que has consultado.
 
-<<<<<<< HEAD
-## Transformando nodos `File`
-=======
-If you have multiple sets of data, you can query specific ones by specifying the `name` property from the config object in the `gatsby-config.js` file. In this case, `name` is set to `src`.
+Sí tienes múltiples arreglos de datos, puedes consultar datos específicos agregando la propiedad `name` de la configuración en el archivo `gatsby-config.js`. En este caso, `name` tiene el valor `src`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -82,7 +79,7 @@ If you have multiple sets of data, you can query specific ones by specifying the
 },
 ```
 
-You can then update your query using `sourceInstanceName` and the value of the `name` property in a filter like so.
+Entonces puedes consultar utilizando `sourceInstanceName` y el valor de la propiedad `name` en un filtro así.
 
 ```graphql
 {
@@ -99,8 +96,7 @@ You can then update your query using `sourceInstanceName` and the value of the `
 }
 ```
 
-## Transforming File nodes
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+## Transformando nodos `File`
 
 Una vez que los archivos se han obtenido, varios plugins "transformadores" en el ecosistema Gatsby pueden ser usados para transformar los nodos `File` en otros varios tipos de datos. Por ejemplo, un archivo JSON puede ser obtenido usando `gatsby-source-filesystem`, y luego los nodos `File` resultates pueden ser transformados en nodos JSON usando `gatsby-transformer-json`.
 
