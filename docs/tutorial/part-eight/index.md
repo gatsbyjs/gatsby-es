@@ -356,7 +356,7 @@ Lighthouse es una herramienta estupenda para hacer mejoras a tu sitio y aprender
 
 - [Plugins oficiales](https://github.com/gatsbyjs/gatsby/tree/master/packages): La lista completa de todos los plugins oficiales mantenidos por Gatsby.
 
-### Inicializadores oficiales
+### Starters oficiales
 
 1.  [Inicializador Gatsby por defecto (Gatsby's Default Starter)](https://github.com/gatsbyjs/gatsby-starter-default): Empieza tu proyecto con este modelo. Este inicializador básico genera los principales archivos de configuración que puedas necesitar. _[ejemplo funcionando](https://gatsbyjs.github.io/gatsby-starter-default/)_
 2.  [Inicializador Gatsby para blogs (Gatsby's Blog Starter)](https://github.com/gatsbyjs/gatsby-starter-blog): Inicializador Gatsby para crear un asombroso y ultra rápido blog. _[ejemplo funcionando](https://gatsbyjs.github.io/gatsby-starter-blog/)_
