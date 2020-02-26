@@ -165,11 +165,7 @@ export default () => (
 )
 ```
 
-<<<<<<< HEAD
-2.  Navega a http://localhost:8000/about/.
-=======
-2.  Navigate to `http://localhost:8000/about/`
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+1.  Navega a `http://localhost:8000/about/`
 
 ![Nueva página acerca de Gatsby](05-about-page.png)
 
@@ -234,11 +230,7 @@ Ahora deberías ver el texto de tu encabezado "Acerca de Gatsby" de nuevo.
 
 ### Que son “props” o propiedades?
 
-<<<<<<< HEAD
 Antes definiste componentes de React como piezas reusables de código que describen la interfaz de usuario. Para hacer que estas piezas reusables sean dinámicas necesitas poder suministrarles diferentes datos. Haces eso con una entrada llamada "props". Las props son (valga la redundancia) propiedades suministradas a componentes de React.
-=======
-Earlier, you defined React components as reusable pieces of code describing a UI. To make these reusable pieces dynamic you need to be able to supply them with different data. You do that with input called "props". Props are (appropriately enough) properties supplied to React components.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 En `about.js` pasaste una prop `headerText` con el valor de `"Acerca de Gatsby"` al sub-componente importado `Header`:
 
@@ -343,15 +335,9 @@ The Gatsby `<Link />` component is for linking between pages within your site. F
 
 ## Desplegando un sitio de Gatsby
 
-<<<<<<< HEAD
 Gatsby.js es un _generador de sitios moderno_, lo que significa que no hay servidores que configurar o complicadas bases de datos para desplegar. En su lugar, el comando `build` de Gatsby produce un directorio de HTML estático y archivos Javascript que puedes desplegar a un servicio de alojamiento estático.
 
 Prueba utilizar [Surge](http://surge.sh/) para desplegar tu primer sitio web con Gatsby. Surge es uno de muchos "alojamientos de sitios estáticos" que hace posible desplegar sitios con Gatsby.
-=======
-Gatsby.js is a _modern site generator_, which means there are no servers to set up or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
-
-Try using [Surge](http://surge.sh/) for deploying your first Gatsby website. Surge is one of many "static site hosts" which makes it possible to deploy Gatsby sites.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Si no lo has instalado anteriormente &amp; instala Surge, abre una nueva ventana de la terminal e instala su herramienta para línea de comandos:
 
@@ -382,13 +368,9 @@ Entonces finalmente despliega tu sitio publicando los archivos generados a surge
 surge public/
 ```
 
-<<<<<<< HEAD
-Una vez que esto termina de ejecutarse, deberías ver en tu terminal algo como esto:
-=======
-> Note that you will have to press the `enter` key after you see the `domain: some-name.surge.sh` information on your command-line interface.
+> Ten en cuenta que tendrás que presionar la tecla `enter` después de que veas la información de `domain: some-name.surge.sh` en tu interfaz de línea de comandos.
 
-Once this finishes running, you should see in your terminal something like:
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Una vez que esto termina de ejecutarse, deberías ver en tu terminal algo como esto:
 
 ![Captura de pantalla de publicar un sitio con Gatsby mediante Surge](surge-deployment.png)
 
