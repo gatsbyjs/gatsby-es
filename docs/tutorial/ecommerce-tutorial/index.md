@@ -304,11 +304,7 @@ module.exports = {
 }
 ```
 
-<<<<<<< HEAD
-To retrieve your SKUs from your Stripe account you will need to provide your secret API key. This key needs to kept secret and must never be shared on the frontend or on GitHub. Therefore we need to set an environment variable to store the secret key. You can read more about the usage of env variables in Gatsby [here](https://www.gatsbyjs.org/docs/environment-variables/).
-=======
 To retrieve your SKUs from your Stripe account you will need to provide your secret API key. This key needs to be kept secret and must never be shared on the frontend or on GitHub. Therefore you need to set an environment variable to store the secret key. You can read more about the usage of env variables in the [Gatsby docs](/docs/environment-variables/).
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 In the root directory of your project add a `.env.development` file:
 
