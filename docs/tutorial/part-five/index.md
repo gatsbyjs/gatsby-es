@@ -14,13 +14,8 @@ En este tutorial aprenderás cómo consumir datos en tu sitio de Gatsby usando G
 
 GraphiQL es el entorno de desarrollo integrado para GraphQL. Es una herramienta poderosa (y asombrosa) que usarás a menudo al crear sitios web de Gatsby.
 
-<<<<<<< HEAD
 Puedes usarla cuando tu sitio de desarrollo esté ejecutándose de forma habitual en
-<http://localhost:8000/___graphql>.
-=======
-You can access it when your site's development server is running—normally at
 `http://localhost:8000/___graphql`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
@@ -98,13 +93,8 @@ Alternativamente, puedes agregar campos utilizando el atajo de teclado de autoco
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-<<<<<<< HEAD
 Prueba a añadir un número de campos a tu consulta presionando <kbd>Ctrl + Enter</kbd>
 cada vez para volver a ejecutarla. Verás sus resultados actualizados:
-=======
-Try adding a number of fields to your query, press <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![allfile-query](allfile-query.png)
 
@@ -219,11 +209,7 @@ export const query = graphql`
 `
 ```
 
-<<<<<<< HEAD
-Visita ahora [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
-=======
-And now visit `http://localhost:8000/my-files`… 😲
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Visita ahora `http://localhost:8000/my-files`… 😲
 
 ![my-files-page](my-files-page.png)
 
