@@ -76,21 +76,12 @@ Una vez ya hayas instalado un sitio de Gatsby, ve al directorio raíz de tu proy
 
 #### Opciones
 
-<<<<<<< HEAD
 |     Opción      | Descripción                                      |
 | :-------------: | ------------------------------------------------ |
 | `-H`, `--host`  | Establece el _host_. Por defecto _localhost_     |
-| `-p`, `--port`  | Establece el puerto. Por defecto 8000            |
+| `-p`, `--port`  | Establece el puerto. Por defecto `env.PORT` u 8000            |
 | `-o`, `--open`  | Abre por ti el sitio en tu navegador por defecto.|
 | `-S`, `--https` | Usa HTTPS                                        |
-=======
-|     Option      | Description                                     |
-| :-------------: | ----------------------------------------------- |
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Sigue la [guía para HTTPS en local](/docs/local-https/)
 para averiguar cómo levantar un servidor de desarrollo HTTPS usando Gatsby.
@@ -112,11 +103,7 @@ You can now view gatsbyjs.org in the browser.
   On Your Network:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-<<<<<<< HEAD
-**Nota**: no puedes visitar la dirección 0.0.0.0:8000 en Windows (pero si que funciona si utilizas localhost:8000 o la URL "On Your Network" de Windows)
-=======
-**Note**: To access Gatsby on your local machine, use either `http://localhost:8000` or the "On Your Network" URL.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+**Nota**: Para acceder a Gatsby en tu maquina local, utiliza `http://localhost:8000` o la URL "En tu red".
 
 ### `build`
 
