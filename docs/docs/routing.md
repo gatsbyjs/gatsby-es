@@ -2,15 +2,11 @@
 title: Enrutamiento
 ---
 
-<<<<<<< HEAD
+Parte de lo que hace a los sitios de Gatsby tan rápidos es que una gran cantidad del trabajo es realizado en tiempo de compilación y el tiempo de ejecución del sitio solo usa mayormente [contenido estático](/docs/adding-app-and-website-functionality/#static-pages). Durante este proceso, Gatsby crea rutas para acceder a ese contenido, manejando el [enrutado](/docs/glossary#routing) por ti. Navegar en una aplicación de Gatsby requiere entendimiento de que son esas rutas y cómo son generadas.
+
+Alternativamente, tu aplicación puede incluir funcionalidades que no pueden ser manejadas en tiempo de compilación o mediante [re-hidratación](/docs/adding-app-and-website-functionality/#how-hydration-makes-apps-possible). Esto incluye cosas como autenticación u obtener contenido dinámico. Para manejar esas páginas, puedes hacer uso de [rutas solo para cliente](/docs/client-only-routes-and-user-authentication) utilizando [`@reach/router`](/docs/reach-router-and-gatsby/) que está incluido en Gatsby.
+
 ## Creando rutas
-=======
-Part of what makes Gatsby sites so fast is that a lot of the work is done at build time and the running site is using mostly [static content](/docs/adding-app-and-website-functionality/#static-pages). During that process, Gatsby creates paths to access that content, handling [routing](/docs/glossary#routing) for you. Navigating in a Gatsby app requires an understanding of what those paths are and how they're generated.
-
-Alternatively, your application may include functionality that cannot be handled at build time or through [rehydration](/docs/adding-app-and-website-functionality/#how-hydration-makes-apps-possible). This includes things like authentication or retrieving dynamic content. To handle those pages, you can make use of [client-only routes](/docs/client-only-routes-and-user-authentication) using [`@reach/router`](/docs/reach-router-and-gatsby/) which is built into Gatsby.
-
-## Creating routes
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Gatsby lo hace fácil mediante programación controlar tus páginas. Las páginas pueden ser creadas de tres maneras.
 
@@ -21,29 +17,21 @@ Gatsby lo hace fácil mediante programación controlar tus páginas. Las página
 
 Consulta [Creando y Modificando páginas](/docs/creating-and-modifying-pages) para obtener más detalles.
 
-<<<<<<< HEAD
-## Vinculación entre rutas
+Cuando Gatsby crea páginas, automáticamente genera rutas para acceder a ellas. Esto es diferente dependiendo de como fue definida la página.
 
-Puedes usar `gatsby-link` para enlazar estas rutas -- esto te proporcionará transiciones de página casi instantáneas mediante _prefetching_. [Más información sobre Gatsby Link
-](/docs/gatsby-link/).
+### Páginas definidas en `src/pages`
 
-También puedes usar enlaces estándar `<a>`, pero en estos casos no obtendrás el beneficio de _prefetching_.
-=======
-When Gatsby creates pages it automatically generates a path to access them. This path will differ depending on how the page was defined.
+Cada archivo `.js` dentro de `src/pages` generará su propia página en tu sitio de Gatsby. La ruta a esas páginas corresponde a la estructura de archivos donde se encuentra.
 
-### Pages defined in `src/pages`
+Por ejemplo, `contact.js` será encontrado en `yoursite.com/contact`. Y `home.js` será encontrado en `yoursite.com/home`. Esto funciona en cualquier nivel en el que el archivo esté creado. Sí `contact.js` es movido a un directorio llamado `information`, ubicado en `src/pages`, la página ahora será encontrada en `yoursite.com/information/contact`.
 
-Each `.js` file inside `src/pages` will generate its own page in your Gatsby site. The path for those pages matches the file structure it's found in.
+La excepción a esta regla es cualquier archivo llamado `index.js`. Archivos con este nombre son marcados como la raíz del directorio en el que se encuentran. Esto significa que el `index.js` en la raíz del directorio `src/pages` es accedido mediante `yoursite.com`. Sin embargo, sí hay un `index.js` dentro del directorio `information`, es encontrado en `yoursite.com/information`.
 
-For example, `contact.js` will be found at `yoursite.com/contact`. And `home.js` will be found at `yoursite.com/home`. This works at whatever level the file is created. If `contact.js` is moved to a directory called `information`, located inside `src/pages`, the page will now be found at `yoursite.com/information/contact`.
+Ten en cuenta que sí no hay ningún archivo `index.js` en un directorio en particular, esa página raíz no existe, y los intentos de navegar a ella te redigirán a una [página 404](/docs/add-404-page/). Por ejemplo, `yoursite.com/information/contact` puede existir, pero eso no garantiza que `yoursite.com/information` exista.
 
-The exception to this rule is any file named `index.js`. Files with this name are matched to the root directory they're found in. That means `index.js` in the root `src/pages` directory is accessed via `yoursite.com`. However, if there is an `index.js` inside the `information` directory, it is found at `yoursite.com/information`.
+### Páginas creadas con la acción `createPage`
 
-Note that if no `index.js` file exists in a particular directory that root page does not exist, and attempts to navigate to it will land you on a [404 page](/docs/add-404-page/). For example, `yoursite.com/information/contact` may exist, but that does not guarantee `yoursite.com/information` exists.
-
-### Pages created with `createPage` action
-
-Another way to create pages is in your `gatsby-node.js` file using the `createPage` action, a JavaScript function. When pages are defined this way, the path is explicitly set. For example:
+Otra forma de crear páginas es en tu archivo `gatsby-node.js` usando la acción `createPage`, una función de Javascript. Cuando las páginas son definidas de esta forma, la ruta es configurada explícitamente. Por ejemplo:
 
 ```js:title=gatsby-node.js
 createPage({
@@ -53,35 +41,30 @@ createPage({
 })
 ```
 
-For more information on this action, visit the [`createPage` API documentation](/docs/actions/#createPage).
+Para más información sobre esta acción, visita la [documentación del API `createPage`](/docs/actions/#createPage).
 
-## Conflicting Routes
+## Rutas en conflicto
 
-Since there are multiple ways to create a page, different plugins, themes, or sections of code in your `gatsby-node` file may accidentally create multiple pages that are meant to be accessed by the same path. When this happens, Gatsby will show a warning at build time, but the site will still build successfully. In this situation, the page that was built last will be accessible and any other conflicting pages will not be. Changing any conflicting paths to produce unique URLs should clear up the problem.
+Ya que hay multiples formas de crear una página, diferentes plugins, temas, o secciones de código en tu archivo `gatsby-node` puede que accidentalmente creen multiples páginas que se supone deben acceder por la misma ruta. CUando esto ocurre, Gatsby mostrará una advertencia en tiempo de compilación, pero el sitio se compilará exitosamente. En esta situación, la página que se construyó de último será accesible y cualquier otra página en conflicto no lo será. Cambiar cualquier ruta en conflicto para producir URLs únicas debería acabar con el problema.
 
-## Nested Routes
+## Rutas anidadas
 
-If your goal is to define paths that are multiple levels deep, such as `/portfolio/art/item1`, that can be done directly when creating pages as mentioned in [Creating routes](#creating-routes).
+Sí tu meta es definir rutas que están a varios niveles de profundidad, cómo `/portfolio/art/item1`, puede ser realizado directamente cuando se crean las páginas como se menciona en [Creando rutas](#creating-routes).
 
-Alternatively, if you want to create pages that will display different subcomponents depending on the URL path (such as a specific sidebar widget), Gatsby can handle that at the page level using [layouts](/docs/layout-components/).
+Alternativamente, sí quieres crear páginas que mostrarán diferentes sub-componentes dependiendo de la URl de la ruta (cómo un widget específico de barra lateral), Gatsby puede encargarse de esto al nivel de la página usando [layouts](/docs/layout-components/).
 
-## Linking between routes
+## Enlazado entre rutas
 
-In order to link between pages, you can use [`gatsby-link`](/docs/gatsby-link/). Using `gatsby-link` gives you built in [performance benefits](#performance-and-prefetching).
+Para poder enlazar páginas, puedes usar [`gatsby-link`](/docs/gatsby-link/). Usar `gatsby-link` te da [beneficios de rendimiento](#performance-and-prefetching).
 
-Alternatively, you can navigate between pages using standard `<a>` tags, but you won't get the benefit of prefetching in this case.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Alternativamente, puede navegar entre páginas usando etiquetas `<a>` por defecto, pero no obtendrás el beneficio de _prefetching_ (pre-cargar).
 
 ## Crear enlaces con autenticación activada
 
-<<<<<<< HEAD
-Si no deseas que todo tu contenido esté disponible públicamente, Gatsby permite crear [rutas "solo para clientes"](/docs/client-only-routes-and-user-authentication), que son accesible tras la autenticación.
-=======
-For pages dealing with sensitive information, or other dynamic behavior, you may want to handle that information server-side. Gatsby lets you create [client-only routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate, ensuring that the information is only available to authorized users.
+Para páginas tratando con información delicada, u otro comportamiento dinámico, puede que quieras manejar esta información en el lado del servidor. Gatsby te permite crear [rutas solo para el cliente](/docs/client-only-routes-and-user-authentication) que viven más allá de la autenticación, asegurando que la información está disponible solo para usuarios autorizados.
 
-## Performance and Prefetching
+## Rendimiento y Prefetching (Pre-carga)
 
-In order to improve performance, Gatsby looks for links that appear on the current page to perform prefetching. Before a user has even clicked on a link, Gatsby has started to fetch the page it points to. [Learn more about prefetching](/docs/how-code-splitting-works/#prefetching-chunks).
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Para mejorar el rendimiento, Gatsby mira los enlaces que aparecen en la página actual para realizar `prefetching` (pre-carga). Antes de que el usuario siquiera haya hecho click en un enlace, Gatsby ya ha empezado a obtener la página a la que apunta el enlace. [Aprende más sobre prefetching](/docs/how-code-splitting-works/#prefetching-chunks).
 
 <GuideList slug={props.slug} />
