@@ -86,7 +86,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 export default () => {
   const { title, siteUrl } = useSiteMetadata()
-  return <h1>welcome to {title}</h1>
+  return <h1>Bienvenido a {title}</h1>
 }
 ```
 
