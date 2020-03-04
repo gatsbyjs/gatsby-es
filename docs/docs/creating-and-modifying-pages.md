@@ -11,29 +11,16 @@ Las páginas se pueden crear de tres maneras:
 - El núcleo de Gatsby convierte automáticamente los componentes React en `src/pages` a páginas
 - Hay plugins que también pueden implementar `createPages` y crear páginas por ti
 
-<<<<<<< HEAD
 También puedes implementar la API [`onCreatePage`](/docs/node-apis/#onCreatePage)
-para modificar páginas creadas en el core o plugins o para crear [rutas solo para clientes](/docs/building-apps-with-gatsby/).
-=======
-You can also implement the API [`onCreatePage`](/docs/node-apis/#onCreatePage)
-to modify pages created in core or plugins or to create [client-only routes](/docs/client-only-routes-and-user-authentication/).
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+para modificar páginas creadas en el core o plugins o para crear [rutas solo para clientes](/docs/client-only-routes-and-user-authentication/).
 
 ## Ayuda para depuración
 
-<<<<<<< HEAD
 Para ver qué páginas están siendo creadas por tu código o plugins, puedes consultar
 información de la página mientras desarrollas en Graph*i*QL. Pega la siguiente consulta 
 en el IDE de Graph*i*QL para tu sitio. El IDE de Graph*i*QL está disponible cuando 
 ejecutas el servidor de desarrollo de tu sitio en `HOST:PORT/___graphql` 
 ej. `localhost:8000/___graphql`.
-=======
-To see what pages are being created by your code or plugins, you can query for
-page information while developing in Graph*i*QL. Paste the following query in
-the Graph*i*QL IDE for your site. The Graph*i*QL IDE is available when running
-your sites development server at `HOST:PORT/___graphql` e.g.
-`http://localhost:8000/___graphql`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ```graphql
 {
