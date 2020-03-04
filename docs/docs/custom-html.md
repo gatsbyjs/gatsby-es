@@ -2,13 +2,8 @@
 title: Personalizar html.js
 ---
 
-<<<<<<< HEAD
 Gatsby utiliza un componente React para que el servidor renderize el `<head>` y otras partes
-HTML fuera de la aplicación principal de Gatsby. Gatsby también establece un valor predeterminado para la etiqueta `<noscript>` allí.
-=======
-Gatsby uses a React component to server render the `<head>` and other parts of
-the HTML outside of the core Gatsby application.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+HTML fuera de la aplicación principal de Gatsby.
 
 La mayoría de los sitios deberían usar el `html.js` predeterminado enviado con Gatsby. Pero si necesitas 
 personalizar el html.js de tu sitio, copia el archivo predeterminado en tu 
@@ -22,14 +17,10 @@ Y luego haz modificaciones según sea necesario.
 
 Si necesitas insertar html personalizado en el `<head>` o `<footer>` de cada página de tu sitio, puedes usar `html.js`.
 
-<<<<<<< HEAD
-### *props* necesarios
-=======
-> Customizing `html.js` is a workaround solution for when the use of the appropriate APIs is not available in `gatsby-ssr.js`. Consider using [`onRenderBody`](/docs/ssr-apis/#onRenderBody) or [`onPreRenderHTML`](/docs/ssr-apis/#onPreRenderHTML) instead of the method above.
-> As a further consideration, customizing `html.js` is not supported within a Gatsby Theme. Use the API methods mentioned instead.
+> Personalizar `html.js` es una solución alterna para cuando el uso de las APIs apropiadas no esta disponible en `gatsby-ssr.js`. COnsidera usar [`onRenderBody`](/docs/ssr-apis/#onRenderBody) o [`onPreRenderHTML`](/docs/ssr-apis/#onPreRenderHTML) en lugar del método de arriba.
+> Como una consideración futura, personalizar `html.js` no es compatible dentro de un tema de Gatsby. Usa los metodos del API existentes en su lugar.
 
-## Required props
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+### *props* necesarios
 
 Nota: los diversos *props* que se muestran en las páginas son obligatorios, p. ej.
 `headComponents`,`preBodyComponents`, `body` y `postBodyComponents`.
