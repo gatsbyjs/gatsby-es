@@ -65,25 +65,15 @@ Además del rendimiento, crear un _starter_ libre de problemas de accesibilidad 
 
 Para más ayuda sobre accesibilidad, consulta la [lista de verificación del Proyecto A11y](https://a11yproject.com/checklist) y [WebAIM](https://webaim.org). También puedes consultar los [consejos para crear aplicaciones web accesibles](https://www.deque.com/blog/accessibility-tips-in-single-page-applications/) con mucho JavaScript en el lado del cliente.
 
-<<<<<<< HEAD
+## Ejecutar un _starter_ localmente
+
+Ya que los _starters_ son proyectos de Gatsby, puedes ejecutar `gatsby develop` o `gatsby build` y entonces `gatsby serve` para asegurarte de que el _starter_ está funcionando. Sí quieres estar extra seguro y asegurarte de que el comando `gatsby new`  funciona con tu _starter_, puedes ejecutar `gatsby new nombre-del-proyecto ../ruta/relativa/a/tu/starter`, reemplazando la parte final del comando con la ruta relativa apropiada.
+
 ## Añade tu _starter_ a la Librería de _Starters_ de Gatsby
-=======
-## Run your starter locally
-
-Since starters are Gatsby projects, you can run `gatsby develop` or `gatsby build` and then `gatsby serve` in order to ensure your starter is working. If you'd like to be extra thorough and make sure the `gatsby new` command works with your starter, you can run `gatsby new project-name ../relative/path/to/your/starter`, replacing the final part of that command with the appropriate relative path.
-
-## Add your starter to the Gatsby Starter Library
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Para asegurarte de que tu _starter_ es fácilmente localizable, eres bienvenido (pero no requerido) a añadirlo a la [Librería de _Starters_ de Gatsby](/contributing/submit-to-starter-library/). Añade etiquetas a tu _starter_ comprobando primero las existentes (como `contentful`, `csv`, etc.), ¡y añade más si es necesiario!
 
 ## Otras lecturas:
 
-<<<<<<< HEAD
-- [Cómo crear un _Starter_ en Gatsby
-  ](https://medium.com/@emasuriano/how-to-create-a-gatsby-starter-e7d53083a880) por Emanuel Suriano
+- [Cómo crear un _Starter_ en Gatsby](https://medium.com/@emasuriano/how-to-create-a-gatsby-starter-e7d53083a880) por Emanuel Suriano
 - [Introducción a los temas de Gatsby](/blog/2018-11-11-introducing-gatsby-themes/) (ncluye información sobre los _starters_)
-=======
-- [How to create a Gatsby Starter](https://medium.com/@emasuriano/how-to-create-a-gatsby-starter-e7d53083a880) by Emanuel Suriano
-- [Introducing Gatsby Themes](/blog/2018-11-11-introducing-gatsby-themes/) (including info on starters)
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
