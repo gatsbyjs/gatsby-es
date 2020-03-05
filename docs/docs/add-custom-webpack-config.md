@@ -17,8 +17,7 @@ Gatsby realiza múltiples builds de webpack con configuraciones algo diferentes.
 
 Revisa [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js) para ver el código fuente.
 
-Hay muchos plugins en el repositorio de Gatsby que usan esta API para ver ejemplos p.e. [Sass](/packages/gatsby-plugin-sass/), [TypeScript](/packages/gatsby-plugin-typescript/),
-[Glamor](/packages/gatsby-plugin-glamor/), ¡y muchos más!
+Hay muchos plugins en el repositorio de Gatsby que usan esta API para ver ejemplos p.e. [Sass](/packages/gatsby-plugin-sass/), [TypeScript](/packages/gatsby-plugin-typescript/), [Glamor](/packages/gatsby-plugin-glamor/), ¡y muchos más!
 
 ## Ejemplos
 
