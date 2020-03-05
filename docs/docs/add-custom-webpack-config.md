@@ -8,8 +8,7 @@ Para añadir configuraciones de webpack personalizadas, crea (si aun no lo hay) 
 
 Cuando Gatsby crea su configuración de webpack, esta función será llamada permitiéndote modificar la configuración por defecto de webpack usando [webpack-merge](https://github.com/survivejs/webpack-merge).
 
-Gatsby realiza múltiples builds de webpack con configuraciones algo diferentes. A 
-cada uno de esos build lo llamamos "escenario". Existen los siguientes escenarios:
+Gatsby realiza múltiples builds de webpack con configuraciones algo diferentes. A cada uno de esos build lo llamamos "escenario". Existen los siguientes escenarios:
 
 1.  develop: cuando se ejecuta el comando `gatsby develop`. Tiene configuración para _hot reloading_ e inyección de CSS en la página.
 2.  develop-html: lo mismo que develop pero sin react-hmre en la configuración de babel para renderizar el componente HTML.
