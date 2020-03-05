@@ -140,23 +140,11 @@ const Box = posed.div({
 </TransitionState>
 ```
 
-<<<<<<< HEAD
-Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo, y aparecerá de entrada/salida en consecuencia.
-=======
-Now, the `Box` component will be aware of whether the page it's a child of is mounting or unmounting, and it will fade in/out accordingly.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo si se esta montando o desmontando, y aparecerá de entrada/salida en consecuencia.
 
 ## Excluyendo elementos de las transiciones de página
 
-<<<<<<< HEAD
-Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del sitio_). Esto se puede conseguir envolviendo elementos con el componente `TransitionPortal`.
-
-```javascript
-import { TransitionPortal } from "gatsby-plugin-transition-link"
-```
-=======
-You may want to have elements on a page that persist throughout the page transition (_ex. a site-wide header_). This can be accomplished by wrapping elements in a persistent layout component by using the following plugin option in your `gatsby-config.js`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del sitio_). Esto se puede conseguir envolviendo elementos con un componente de _layout_ persistente usando la siguiente opcion de plugin en tu archivo `gatsby-config.js`.
 
 ```javascript
 module.exports = {
@@ -171,11 +159,7 @@ module.exports = {
 ];
 ```
 
-<<<<<<< HEAD
-Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información acerca de `TransitionPortal`.
-=======
-As always, check out [the installation docs](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) for more information.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información.
 
 ## Siguientes lecturas
 
