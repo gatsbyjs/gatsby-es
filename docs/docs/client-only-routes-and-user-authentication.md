@@ -2,36 +2,25 @@
 title: "Rutas solo para el cliente & Autenticación de usuario"
 ---
 
-<<<<<<< HEAD
-A menudo, deseas crear un sitio con partes solamente para el lado del cliente que están protegidas con autenticación.
-=======
-Often you want to create a site with client-only portions, which allows you to gate them by authentication or load different content based on URL parameters.
+A menudo, deseas crear un sitio con partes solamente para el lado del cliente, que te permiten filtrarlos por autenticación o cargar contenido diferente basado en los parametros de la URL.
 
-## Understanding client-only routes
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+## Entendiendo las rutas solo para cliente
 
 Un ejemplo clásico sería un sitio que tiene una página de destino, varias páginas de marketing, una página de inicio de sesión y luego una sección de aplicación para usuarios que han iniciado sesión. La sección de inicio de sesión no necesita ser procesada por el servidor, ya que todos los datos se cargarán en vivo desde tu API después de que el usuario inicie sesión. Por lo tanto, tiene sentido que esta parte de tu sitio sea solo para el lado del cliente.
 
-<<<<<<< HEAD
-Gatsby usa [@reach/router](https://reach.tech/router/) debajo del capó. Deberías usar @reach/router para crear rutas solo para el lado del cliente.
+Las rutas solo para cliente existirán solo en el cliente y no corresponderán a archivos `index.html` en los archivos de compilado de la aplicación. Sí te gustaría permitir a los usuarios visitar rutas solo para cliente directamente, necesitas [configurar tu sitio para manejar esas rutas](#handling-client-only-routes-with-gatsby) apropiadamente. O, sí tienes control sobre la configuración del archivo del servidor por ti mismo (en lugar de usar otro _host_ de archivos estáticos como Netlify), puedes [configurar el servidor](#configuring-and-handling-client-only-routes-on-a-server) para manejar estas rutas.
 
-Estas rutas existirán sólo en el lado del cliente y no se corresponderán con archivos index.html en los recursos construidos por una aplicación. Si deseas que los usuarios del sitio puedan visitar las rutas de los clientes directamente, deberás configurar tu servidor para manejar esas rutas de manera adecuada.
+Un sitio de muestra se puede configurar así:
 
-Para crear rutas solo para el lado del cliente, agrega el siguiente código al archivo `gatsby-node.js` de tu sitio:
-=======
-Client-only routes will exist on the client only and will not correspond to `index.html` files in an app's built assets. If you'd like site users to be able to visit client routes directly, you need to [set up your site to handle those routes](#handling-client-only-routes-with-gatsby) appropriately. Or, if you have control over the configuration of the file server yourself (instead of using another static file host like Netlify), you can [set up the server](#configuring-and-handling-client-only-routes-on-a-server) to handle these routes.
+![Sitio con una página principal estática y rutas solo para cliente](./images/client-only-routes.png)
 
-A sample site might be set up like this:
+Gatsby convierte los componentes en la carpeta `pages` en archivos HTML estáticos para la página _Home_ y la página _App_. Un `<Router />` es añadido a la página _App_ para que los componentes de perfil y detalles puedan ser renderizados desde la página _App_; estos no tienen archivos estáticos compilados por ellos ya que solo existen en el lado del cliente. La página del perfil puede hacer un `POST` de datos sobre el usuario al API, y la página de detalles puede cargar datos dinámicamente sobre el usuario con un _ID_ específico desde el API.
 
-![Site with a static homepage and client-only routes](./images/client-only-routes.png)
+# Manejando rutas solo para cliente con Gatsby
 
-Gatsby converts components in the `pages` folder into static HTML files for the Home page and the App page. A `<Router />` is added to the App page so that the profile and details components can be rendered from the App page; they don't have static assets built for them because they exist only on the client. The profile page can `POST` data about a user back to an API, and the details page can dynamically load data about a user with a specific id from an API.
+Gatsby usa [@reach/router](https://reach.tech/router/) debajo del capó, y es el enfoque recomendado para crear rutas solo para cliente.
 
-## Handling client-only routes with Gatsby
-
-Gatsby uses [@reach/router](https://reach.tech/router/) under the hood, and it is the recommended approach to create client-only routes.
-
-You first need to set up routes on a page that is built by Gatsby:
+Primero necesitas configurar rutas en una página que esta hecha con Gatsby:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -60,11 +49,11 @@ const App = () => {
 export default App
 ```
 
-With routes nested under the `<Router />` from Reach Router, it will [render the component from the route that corresponds to the `location`](https://reach.tech/router/api/Router). In the case of the `/app/profile` path, the `Profile` component will be rendered, as its prefix matches the base path of `/app`, and the remaining part is identical to the child's path.
+Con rutas anidadas debajo del `<Router />` de `Reach Router`, [renderizará el componente de la ruta que corresponda a la `ruta`](https://reach.tech/router/api/Router). En el caso de la ruta `/app/profile`, el componente `profile` sera renderizado, ya que su prefijo coincide con la ruta `/app`, y la parte restante es identica a la ruta de su hijo.
 
-### Adjusting routes to account for authenticated users
+### Ajustando rutas de cuenta para usuarios autenticados
 
-With [authentication set up](/docs/building-a-site-with-authentication) on your site, you can create a component like a `<PrivateRoute/>` to extend the example above and gate content:
+Con la [autenticación configurada](/docs/building-a-site-with-authentication) en tu sitio, puedes crear un componente como `<PrivateRoute/>` para expandir el ejemplo de arriba y filtrar contenido:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -94,7 +83,7 @@ const App = () => {
 export default App
 ```
 
-The `<PrivateRoute />` component would look something like this one (taken from the [Authentication Tutorial](/tutorial/authentication-tutorial/#controlling-private-routes), which implements this behavior):
+El componente `<PrivateRoute />` se vería similar a algo como este (tomado del [Tutorial de Autenticación](/tutorial/authentication-tutorial/#controlling-private-routes), que implementa este comportamiento):
 
 ```jsx:title=src/components/PrivateRoute.js
 // import ...
@@ -114,26 +103,20 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 export default PrivateRoute
 ```
 
-### Configuring pages with `matchPath`
+### Configurando páginas con `matchPath`
 
-To ensure that users can navigate to client-only routes directly, pages in your site need to have the [`matchPath` parameter](/docs/gatsby-internals-terminology/#matchpath) set. Add the following code to your site’s `gatsby-node.js` file:
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Para asegurarte de que los usuarios puedan navegar a rutas solo para cliente directamente, las páginas en tu sitio necesitan tener el [parámetro `matchPath`](/docs/gatsby-internals-terminology/#matchpath) configurado. Agrega el siguiente código al archivo `gatsby-node.js` de tu sitio:
 
 ```javascript:title=gatsby-node.js
 // Implementa la API “onCreatePage” de Gatsby. Esto se
 // llama después de crear cada página.
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
-
-<<<<<<< HEAD
-  // page.matchPath es una clave especial que se utiliza para hacer coincidir páginas
-  // solo en el cliente.
-=======
-  // Only update the `/app` page.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+  
+  // Solo actualiza la página `/app`.
   if (page.path.match(/^\/app/)) {
-    // page.matchPath is a special key that's used for matching pages
-    // with corresponding routes only on the client.
+    // page.matchPath es una llave especial que es usada para hacer coincidir páginas
+    // con rutas correspondientes solo en el cliente.
     page.matchPath = "/app/*"
 
     // Actualiza la página.
@@ -145,22 +128,17 @@ exports.onCreatePage = async ({ page, actions }) => {
 > 💡 Nota: También hay un plugin para simplificar la creación de rutas solo para el lado del cliente en tu sitio
 > [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths/).
 
-<<<<<<< HEAD
+El código de arriba (así como tambien el plugin `gatsby-plugin-create-client-paths`) actualiza la página `/app` en tiempo de compilación para agregar el parámetro `matchPath` en el objeto para asegurarse de que las páginas configuradas (en este caso, todo después de `/app`, cómo `/app/dashboard` o `/app/user`) puedan ser navegadas a ellas por `Reach Router`.
+
+_Sin_ esta configuración hecha, un usuaerio que haga click en un enlace a `<tusitio.com>/app/user` será llevado a la página estática de `/app` en lugar del componente o página que configuraste para `/app/user`.
+
 > Consejo: Para aplicaciones con enrutamiento complejo, es posible que desees anular el comportamiento de desplazamiento predeterminado de Gatsby con la API del navegador [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll).
 
-Consulta el [sitio de ejemplo de "autenticación simple"](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) para ver una demostración que implementa la autenticación de usuarios y rutas restringidas solo para el lado del cliente.
-=======
-The above code (as well as the `gatsby-plugin-create-client-paths` plugin) updates the `/app` page at build time to add the `matchPath` parameter in the page object to make it so that the configured pages (in this case, everything after `/app`, like `/app/dashboard` or `/app/user`) can be navigated to by Reach Router.
+## Configurando y manejando rutas solo para cliente en un servidor
 
-_Without_ this configuration set up, a user that clicks on a link to `<yoursite.com>/app/user` will instead be routed to the static `/app` page instead of the component or page you have set up at `/app/user`.
+Sí estás almacenando en tu propio servidor, puedes optar por configurar el servidor para manejar las rutas solo para cliente en lugar de usar el método `matchPath` explicado arriba.
 
-> Tip: For applications with complex routing, you may want to override Gatsby's default scroll behavior with the [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll) Browser API.
-
-## Configuring and handling client-only routes on a server
-
-If you are hosting on your own server, you can opt to configure the server to handle client-only routes instead of using the `matchPath` method explained above.
-
-Consider the following router and route to serve as an example:
+Considera el siguiente `router` y ruta como ejemplo:
 
 ```jsx:title=src/pages/app.js
 <Router basepath="/app">
@@ -168,17 +146,16 @@ Consider the following router and route to serve as an example:
 </Router>
 ```
 
-In this example with a router and a single route for `/app/why-gatsby-is-awesome/`, the server would not be able to complete this request as `why-gatsby-is-awesome` is a client-side route. It does not have a corresponding HTML file on the server. The file found at `/app/index.html` on the server contains all the code to handle the page paths after `/app`.
+En este ejemplo con un `router` y una sola ruta para `/app/why-gatsby-is-awesome/`, el servidor no sería capaz de completar la solicitud ya que `why-gatsby-is-awesome` es una ruta solo para cliente. No tiene un archivo HTML correspondiente en el servidor. El archivo encontrado en `/app/index.html` en el servidor contiene todo el código para manejar las rutas de la página después de `/app`.
 
-A pattern to follow, agnostic of server technology, is to watch for these specific routes and return the appropriate HTML file.
+Un patrón a seguir, agnóstico de la tecnología del servidor, es mirar por estas rutas en expecífico y retornar el archivo HTML apropiado.
 
-In this example, when making a `GET` request to `/app/why-gatsby-is-awesome`, the server should respond with `/app/index.html` and let the client handle the rendering of the route with the matching path. It is important to note that the response code should be a **200** (an OK) and not a **301** (a redirect).
+En este ejemplo, cuando se hace una solicitud `GET` a `/app/why-gatsby-is-awesome`, el servidor debería responder con `/app/index.html` y dejar que el cliente maneje el renderizado de la ruta que coincida. Es importante recordar que el código de respuesta debería ser un **200** (un OK) y no un **301** (una redirección).
 
-One result of this method is that the client is completely unaware of the logic on the server, decoupling it from Gatsby.
+Un resultado de este método es que el cliente es completamente indiferente a la lógica del servidor, desacoplandolo de Gatsby.
 
-## Additional resources
+## Recursos adicionales
 
-- [Gatsby repo "simple auth" example](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) - a demo implementing user authentication and restricted client-only routes
-- [Live version of the "simple auth" example](https://simple-auth.netlify.com/)
-- [The Gatsby store](https://github.com/gatsbyjs/store.gatsbyjs.org) which also implements an authenticated flow
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+- [Repo de ejemplo de Gatsby: "Autenticación simple"](https://github.com/gatsbyjs/gatsby/blob/master/examples/simple-auth/) - un demo implementando autenticación de usuario y restringiendo rutas solo para cliente
+- [Versión en vivo del ejemplo "Autenticación simple"](https://simple-auth.netlify.com/)
+- [La tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org) que también implementa un flujo de autenticación
