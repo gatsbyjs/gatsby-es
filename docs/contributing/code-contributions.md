@@ -6,12 +6,15 @@ title: Contribuciones de Código
 
 En esta página:
 
-- [Preparación del repositorio](#repo-setup)
-- [Creando tus propios plugins y loaders](#creating-your-own-plugins-and-loaders)
-- [Haciendo cambios a la Librería de inicio](#making-changes-to-the-starter-library)
-- [Contribuyendo con sitios de ejemplo](#contributing-example-sites)
-- [Usando Docker para establecer entornos de pruebas](#using-docker-to-set-up-test-environments)
-- [Herramientas de Desarrollo](#development-tools)
+- [Preparación del repositorio](#preparaci%c3%b3n-del-repositorio)
+- [Creando tus propios plugins y loaders](#creando-tus-propios-plugins-y-loaders)
+- [Haciendo cambios a la Librería de inicio](#haciendo-cambios-a-la-librer%c3%ada-de-inicio)
+- [Contribuyendo con sitios de ejemplo](#contribuyendo-con-sitios-de-ejemplo)
+- [Usando Docker para establecer entornos de pruebas](#usando-docker-para-establecer-entornos-de-pruebas)
+  - [Docker, Wordpress y Gatsby](#docker-wordpress-y-gatsby)
+- [Herramientas de Desarrollo](#herramientas-de-desarrollo)
+  - [Debugeando el proceso de build](#debugeando-el-proceso-de-build)
+- [Retroalimentación (Feedback)](#retroalimentaci%c3%b3n-feedback)
 
 ## Preparación del repositorio
 
@@ -119,10 +122,6 @@ Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integ
 
 Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
 
-## Feedback
+## Retroalimentación (Feedback)
 
-<<<<<<< HEAD
-En cualquier momento durante el proceso de contribución, ¡al equipo de Gatsby Core le encantaría ayudar! ¡Organizamos un [meeting semanal de Mantenedores principales](/contributing/community#core-maintainers-meeting) dónde puedes compartir tus creaciones y recibir consejo y feedback directamente del equipo!
-=======
-At any point during the contributing process the Gatsby team would love to help! For help with a specific problem you can [open an issue on GitHub](/contributing/how-to-file-an-issue/). Or drop in to [our Discord server](https://gatsby.dev/discord) for general community discussion and support.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+En cualquier momento durante el proceso de contribución, ¡al equipo principal de Gatsby le encantaría ayudar! Para ayuda con un problema en particular puedes [abrir un issue en Github](/contributing/how-to-file-an-issue/) o pasarte por [nuestro servidor en Discord](https://gatsby.dev/discord) para una discución general y ayuda de la comunidad.
