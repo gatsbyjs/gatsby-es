@@ -76,14 +76,14 @@ Las _keys_ en el código de ejemplo anterior son secuencias de caracteres randó
 Como tu archivo .env contiene tus _API keys_ reales y privadas, es considerado un riesgo de seguridad hacer _commit_ de tu archivo `.env`. Es una buena práctica hacer _commit_ a git o a cualquier otro sistema de control de versiones de un archivo `.env.example`, así se sabrá qué variables de entorno se deben proveer, sin mostrar tus _keys_ privadas.
 
 ```text:title=.env.example
-# renombre este archivo como .env y provee los valores listados abajo
+# renombra este archivo como .env y provee los valores listados abajo
 # también asegúrate de que esté disponible para herramientas de compilación (ej: Netlify)
 # advertencia: las variables con el prefijo GATSBY_ serán accesibles desde código del lado del cliente
 # se cuidadoso de no exponer información sensible (en este caso tu 'admin API key' de Algolia)
 
-GATSBY_ALGOLIA_APP_ID=ingreseValor
-GATSBY_ALGOLIA_SEARCH_KEY=ingreseValor
-ALGOLIA_ADMIN_KEY=ingreseValor
+GATSBY_ALGOLIA_APP_ID=ingresaValor
+GATSBY_ALGOLIA_SEARCH_KEY=ingresaValor
+ALGOLIA_ADMIN_KEY=ingresaValor
 ```
 
 Las consultas o `queries` (en inglés) te permiten obtener la información que quieras que Algolia indexe directamente desde la capa de GraphQL de Gatsby, exportándolas desde `src/utils/algolia.js` como un arreglo de objetos. Cada objeto está formado por una consulta GraphQL obligatoria y un nombre de índice opcional, una función transformadora (_transformer function_) y un objeto de configuraciones (_settings_).
@@ -157,7 +157,7 @@ Tal vez se vea un poco intimidante al inicio, pero solamente estás haciéndole 
 
 Los _transformers_ te permiten modificar los datos retornados por las consultas para convertirlos a un formato listo para la búsqueda. Lo que estás haciendo aquí es poner a un mismo nivel los atributos de posts y páginas para _'desanidar'_ los campos de _frontmatter_ (como `author`, `date`, `tags`) pero los _transformers_ pueden hacer mucho más si lo necesitas. Esto hace el proceso de indexado de información bastante flexible y poderoso. Podríamos, por ejemplo, usarlos para filtrar los resultados de tus consultas, formatear campos, añadir otros, unirlos, etc.
 
-Si has llegado hasta aquí entonces el _"backend"_ está listo. Deberías poder ejecutar `gatsby build` y ver tus índices en la interface web de Algolia llenos con tus datos.
+Si has llegado hasta aquí entonces el _"backend"_ está listo. Deberías poder ejecutar `gatsby build` y ver tus índices en la interfaz web de Algolia llenos con tus datos.
 
 ## Añadir una interfaz de búsqueda a tu sitio
 

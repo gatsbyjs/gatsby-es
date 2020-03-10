@@ -37,11 +37,11 @@ $title-color: #ff0000;
 
 The last step is to import the style and use it.
 
-Let's replace the default contents of the index.js file.
+Replace the default contents of the `index.js` file.
 
 ```jsx:title=index.js
-import React from "react"
-import "./mystyles.scss"
+import React from "react";
+import "./mystyles.scss";
 
 const IndexPage = () => {
   return (
@@ -58,10 +58,10 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 ```
 
 And that's all there is to it! Now you can use Bulma as you normally would.

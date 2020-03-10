@@ -64,7 +64,7 @@ module.exports = {
 
 Cuando se usan temas de Gatsby puedes aprovechar algo llamado _component shadowing_.
 
-El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
+El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `src/gatsby-theme-blog/components/bio-content.js`. Puedes encontrar esta ruta mirando por el tema en el directorio `node_modules/gatsby-theme-blog` de tu sitio.
 
 Si miras en el árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 

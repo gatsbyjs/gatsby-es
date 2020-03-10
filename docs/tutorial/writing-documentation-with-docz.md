@@ -24,7 +24,7 @@ Para configurar Docz necesitas instalar el tema Docz de Gatsby, y agregar cierta
 cd my-gatsby-site-with-docz
 ```
 
-Instala el paquete `gatsby-theme-docz`:
+E instala los paquetes requeridos:
 
 ```shell
 npm install --save gatsby-theme-docz docz

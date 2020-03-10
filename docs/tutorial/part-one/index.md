@@ -165,7 +165,7 @@ export default () => (
 )
 ```
 
-2.  Navega a http://localhost:8000/about/.
+1.  Navega a `http://localhost:8000/about/`
 
 ![Nueva página acerca de Gatsby](05-about-page.png)
 
@@ -367,6 +367,8 @@ Entonces finalmente despliega tu sitio publicando los archivos generados a surge
 ```shell
 surge public/
 ```
+
+> Ten en cuenta que tendrás que presionar la tecla `enter` después de que veas la información de `domain: some-name.surge.sh` en tu interfaz de línea de comandos.
 
 Una vez que esto termina de ejecutarse, deberías ver en tu terminal algo como esto:
 

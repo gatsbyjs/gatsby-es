@@ -2,13 +2,123 @@
 title: Gatsby en Linux
 ---
 
-# Linux
+Esta guía asume que ya tienes una instalación nativa de Linux en tu maquina. Los siguientes pasos te guiarán en cómo instalar Node.js y sus dependencias asociadas.
 
-> Esto es un TODO. Ayuda a nuestra comunidad a expandirlo.
+## Ubuntu, Debian, y otras distros basadas en `apt`
 
-> Por favor utiliza la [Guía de estilo de Gatsby](/contributing/gatsby-style-guide/) para asegurar que tu pull request sea aceptado.
+Empieza por actualizar y reemplazar.
 
-## Windows Subsystem Linux (WSL)
+```shell
+sudo apt update
+sudo apt -y upgrade
+```
+
+Instala cURL que te permite transferir datos y descargar dependencias adicionales.
+
+```shell
+sudo apt install curl
+```
+
+Una vez que `curl` está instalado, puedes usarlo para instalar `nvm`, que gestionará `node` y todas sus versiones asociadas.
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+> Ten en cuenta que esta es la versión mas reciente estable de nvm. Las instrucciones de instalación y depuración pueden ser encontradas en la [página de nvm en Github](https://github.com/nvm-sh/nvm)
+
+Cuando `nvm` es instalado, no esta por defecto configurado a una versión en particular de `node`. Necesitarás instalar la versión que quieres y darle instrucciones a `nvm` para usarla. Este ejemplo usa la última versión `10`, pero versiones mas recientes pueden ser usadas en su lugar.
+
+```shell
+nvm install 10
+nvm use 10
+```
+
+Para confirmar que ha funcionado, usa el siguiente comando.
+
+```shell
+node -v
+```
+
+> Ten en cuenta que `npm` viene empaquetado con `node`
+
+Finalmente, instala `git` que será necesario para crear tu primer proyecto de Gatsby basado en un _starter_.
+
+```shell
+sudo apt install git
+```
+
+## Fedora, RedHat, y otras distros basadas en `dnf`
+
+Estas distros vienen instaladas con `curl`, así que puedes usarlo para descargar `nvm`.
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+> Ten en cuenta que esta es la versión mas reciente estable de nvm. Las instrucciones de instalación y depuración pueden ser encontradas en la [página de nvm en Github](https://github.com/nvm-sh/nvm)
+
+Cuando `nvm` es instalado, no esta por defecto configurado a una versión en particular de `node`. Necesitarás instalar la versión que quieres y darle instrucciones a `nvm` para usarla. Este ejemplo usa la última versión `10`, pero versiones mas recientes pueden ser usadas en su lugar.
+
+```shell
+nvm install 10
+nvm use 10
+```
+
+Para confirmar que ha funcionado, usa el siguiente comando.
+
+```shell
+node -v
+```
+
+> Ten en cuenta que `npm` viene empaquetado con `node`
+
+Finalmente, instala `git` que será necesario para crear tu primer proyecto de Gatsby basado en un _starter_.
+
+```shell
+sudo dnf install git
+```
+
+## Archlinux y otras distros basadas en `pacman`
+
+Empieza por actualizar.
+
+```shell
+sudo pacman -Sy
+```
+
+Estas distros vienen instaladas con `curl`, así que puedes usarlo para descargar `nvm`.
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+```
+
+> Ten en cuenta que esta es la versión mas reciente estable de nvm. Las instrucciones de instalación y depuración pueden ser encontradas en la [página de nvm en Github](https://github.com/nvm-sh/nvm)
+
+Antes de usat `nvm`, necesitas instalar unas dependencias adicionales.
+
+```shell
+sudo pacman -S grep awk tar git
+```
+
+Cuando `nvm` es instalado, no esta por defecto configurado a una versión en particular de `node`. Necesitarás instalar la versión que quieres y darle instrucciones a `nvm` para usarla. Este ejemplo usa la última versión `10`, pero versiones mas recientes pueden ser usadas en su lugar.
+
+```shell
+nvm install 10
+nvm use 10
+```
+
+Para confirmar que ha funcionado, usa el siguiente comando.
+
+```shell
+node -v
+```
+
+> Ten en cuenta que `npm` viene empaquetado con `node`
+
+## Subsistema Linux de Windows (WSL)
+
+Esta guía asume que ya tienes WSL instalado con una distro Linux funcionando. Sí no, sigue la [guía del sitio de Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) para instalar WSL y una distro de Linux de tu preferencia.
 
 A partir del 17 de octubre de 2017, Windows 10 viene con distribuciones WSL y Linux disponibles a través de la [Windows Store], hay distribuciones diferentes para usar y se pueden configurar a través de `wslconfig` si tienes más de una distribución instalada.
 
@@ -17,7 +127,9 @@ A partir del 17 de octubre de 2017, Windows 10 viene con distribuciones WSL y Li
 wslconfig /setdefault ubuntu
 ```
 
-### Utilizando Windows Subsystem Linux: Ubuntu
+> Por favor ten en cuenta que sí has usado la instalación de [Gatsby en Windows](/docs/gatsby-on-windows/) sin WSL, entonces tienes que eliminar cualquier carpeta de `node_modules` existente en tu proyecto y re-instalar las dependencias en tu ambiente WSL.
+> 
+### Utilizando el Subsistema Linux de Windows: Ubuntu
 
 Si tienes una instalación fresca de Ubuntu, actualiza:
 
@@ -25,8 +137,6 @@ Si tienes una instalación fresca de Ubuntu, actualiza:
 sudo apt update
 sudo apt -y upgrade
 ```
-
-> Utiliza el argumento `-y` si estás de acuerdo en actualizar a las últimas versiones de software.
 
 **Herramientas de compilado**
 
@@ -71,11 +181,11 @@ O para instalar y aprobar todo al mismo tiempo `(y)`:
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
 ```
 
-### Additional links and resources
+### Enlaces adicionales y más recursos
 
-- [Super detailed guide to making VSCode work with ESL from VSCode's docs website](https://code.visualstudio.com/docs/remote/wsl)
-- [Microsoft Store page for downloading Ubuntu on Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
+- [Guía super detallada para hacer que VSCode trabaje con ESL de la documentación del sitio web de VSCode](https://code.visualstudio.com/docs/remote/wsl)
+- [Página de la tienda de Microsoft para descargar Ubuntu en Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
 - [n](https://github.com/tj/n)
 - [nvm](https://github.com/creationix/nvm)
 - [n-install](https://github.com/mklement0/n-install)
-- [bash startup](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578)
+- [Inicio de bash](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578)

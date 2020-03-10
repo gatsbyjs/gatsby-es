@@ -11,5 +11,4 @@ Cuando tienes varios equipos construyendo sitios web con Gatsby, existen algunas
 
 Esto es un stub. Ayuda a nuestra comunidad a expandirlo.
 
-Por favor, usa la [Guía de Estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu
-pull request sea aceptada.
+Por favor, usa la [Guía de Estilos de Gatsby](/contributing/gatsby-style-guide/) para asegurarte de que tu pull request sea aceptada.

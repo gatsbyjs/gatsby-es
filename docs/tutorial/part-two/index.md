@@ -248,7 +248,7 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome) en tu navegador, verás:
+El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome, usualmente por la tecla F12) en tu navegador, verás:
 
 ![Resultado de importar módulos CSS en consola](css-modules-console.png)
 

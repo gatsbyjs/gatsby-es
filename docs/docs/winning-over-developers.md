@@ -43,7 +43,7 @@ Gatsby has many benefits that give developers the freedom to build great website
 
 ### Brings focus to the front end
 
-> A benefit that frequently comes up in discussions of Gatsby is how it helps bring more focus to font-end development and a clearer division between front-end and back-end tasks. Complicated tooling and configuration can consume a lot of development time and can pull front-end developers away from doing what they do best. Because Gatsby requires minimal tooling and configuration, front-end developers can spend more time making great UI's and back-end developers can focus on adding the features and integrations that make your product better.
+> A benefit that frequently comes up in discussions of Gatsby is how it helps bring more focus to frontend development and a clearer division between frontend and backend tasks. Complicated tooling and configuration can consume a lot of development time and can pull frontend developers away from doing what they do best. Because Gatsby requires minimal tooling and configuration, frontend developers can spend more time making great UI's and backend developers can focus on adding the features and integrations that make your product better.
 
 ## Common concerns
 

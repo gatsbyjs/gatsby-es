@@ -44,7 +44,7 @@ gatsby build
 gatsby serve
 ```
 
-Una vez iniciado, puedes observar tu sitio web en [`localhost:9000`](http://localhost:9000).
+Una vez iniciado, puedes observar tu sitio web en `http://localhost:9000`.
 
 ### Ejecuta una auditoría Lighthouse
 
@@ -356,10 +356,10 @@ Lighthouse es una herramienta estupenda para hacer mejoras a tu sitio y aprender
 
 - [Plugins oficiales](https://github.com/gatsbyjs/gatsby/tree/master/packages): La lista completa de todos los plugins oficiales mantenidos por Gatsby.
 
-### Inicializadores oficiales
+### Starters oficiales
 
-1.  [Inicializador Gatsby por defecto (Gatsby's Default Starter)](https://github.com/gatsbyjs/gatsby-starter-default): Empieza tu proyecto con este modelo. Este inicializador básico genera los principales archivos de configuración que puedas necesitar. _[ejemplo funcionando](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Inicializador Gatsby para blogs (Gatsby's Blog Starter)](https://github.com/gatsbyjs/gatsby-starter-blog): Inicializador Gatsby para crear un asombroso y ultra rápido blog. _[ejemplo funcionando](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+1.  [Inicializador Gatsby por defecto (Gatsby's Default Starter)](https://github.com/gatsbyjs/gatsby-starter-default): Empieza tu proyecto con este modelo. Este inicializador básico genera los principales archivos de configuración que puedas necesitar. _[ejemplo funcionando](https://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Inicializador Gatsby para blogs (Gatsby's Blog Starter)](https://github.com/gatsbyjs/gatsby-starter-blog): Inicializador Gatsby para crear un asombroso y ultra rápido blog. _[ejemplo funcionando](https://gatsbyjs.github.io/gatsby-starter-blog/)_
 3.  [Inicializador Gatsby Hola-Mundo (Gatsby's Hello-World Starter)](https://github.com/gatsbyjs/gatsby-starter-hello-world): Inicializador Gatsby con lo mínimo básico necesario para un sitio web Gatsby. _[ejemplo funcionando](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
 ## Eso es todo amigos

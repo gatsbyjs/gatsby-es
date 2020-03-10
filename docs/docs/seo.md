@@ -2,29 +2,38 @@
 title: SEO con Gatsby
 ---
 
-Gatsby ayuda a mejorar la posición de tú sitio en los buscadores. Algunas funciones vienen listas y otras requieren configuración.
+Gatsby ayuda a mejorar la posición de tú sitio en los buscadores. Usar Gatsby hace que tu sitio sea rápido y eficiente para los rastreadores (`crawlers`) de los motores de búsqueda, como Googlebot, para rastrear tu sitio e indexar tus páginas. Algunas ventajas, como velocidad, vienen listas de inmediato y otras requieren configuración.
 
 ## Representación en el lado del servidor
 
-Debido a que Gatsby es representado en el servidor, todo el contenido de la página queda disponible para Google y otros motores de busqueda o robots exploradores.
+Debido a que Gatsby es renderizado en el servidor, todo el contenido de la página queda disponible para Google y otros motores de búsqueda o robots exploradores.
+Puedes ver esto inspeccionando la fuente para está página en el navegador, Click-Derecho => Ver el código fuente de la página. Verás el documento HTML completo renderizado.
 
-Tú puedes ver el código que ven los robots exploradores con `curl` (en tu terminal):
+Cuando instalas [`gatsby-plugin-offline`](/packages/gatsby-plugin-offline/), verás un documento HTML parcial que no contiene el HTML que esperabas. Usando `gatsby-plugin-offline`, podemos optimizar el consumo de ancho de banda y no dejar que los usuarios descarguen demasiados datos. Sirviendo un documento HTML parcial está bien. Google y otros motores de búsqueda aún verán el HTML completo debido a que `gatsby-plugin-offline` solo empieza a funcionar en la segunda carga de la página. Un motor de búsqueda siempre sirve una página en modo `Sandbox`, que esencialmente es la primera visita.
+
+Como dueño de un sitio web, ¿como puedo probar que mi sitio está sirviendo su HTML correctamente cuando `gatsby-plugin-offline` está siendo usado? Lo mejor sería si utilizarás una terminal de tu preferencia para visitar tu sitio. Puedes rastrear tu sitio ejecutando el siguiente comando:
+
+**en Windows (utilizando powershell):**
 
 ```shell
 Invoke-WebRequest https://www.gatsbyjs.org/docs/seo | Select -ExpandProperty Content
 ```
 
-`Click-Derecho => Ver código fuente` no mostrará el HTML actual (pero la página sigue siendo procesada por el servidor!) porque este sitio usa workers. [Lee estas notas](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes) para aprender más al respecto.
+**en Mac OS/Linux:**
+
+```shell
+curl https://www.gatsbyjs.org/docs/seo
+```
 
 ## Aumento de velocidad
 
 Gatsby incluye muchas herramientas para optimizar el rendimiento, tales como procesar archivos estáticos, carga de imágenes progresivas y el [modelo PRPL](/docs/prpl-pattern/)— todos ayudan a que tu sitio sea ligero y rápido por defecto.
 
-Desde enero de 2018, Google [premia sitios más rápidos con un aumento en las clasificaciones de búsqueda](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
+En Julio de 2018, [Google anunció un nuevo factor de posicionamiento para las velocidades de sitios](https://webmasters.googleblog.com/2018/01/using-page-speed-in-mobile-search.html), nombrando el algoritmo de actualización "Velocidad de Actualización". Google posiblemente posicionará páginas mejor en los resultados de búsqueda por mejores tiempos de carga, sin embargo, la intención de la búsqueda sigue siendo muy relevante y una página más lenta puede posicionarse mejor porque su contenido es más relevante.
 
 ## Metadatos de la página
 
-Agregando metadatos a la página, como título y descripción, ayuda a los buscadores a entender el contenido y cuando mostrar tu página en los resultados de busqueda.
+Agregando metadatos a la página, como título, descripción, textos `alt` y datos estructurados usando JSON-LD ayuda a los buscadores a entender el contenido y cuando mostrar tu página en los resultados de busqueda.
 
 La forma común de agregar metadatos es agregar componentes de [react-helmet](https://github.com/nfl/react-helmet) (junto con [Gatsby React Helmet plugin](/packages/gatsby-plugin-react-helmet) para darle soporte al procesado en el servidor) a tu página. Aquí una guía de [como agregar componentes de SEO](https://www.gatsbyjs.org/docs/add-seo-component/) a tu aplicación de Gatsby.
 
@@ -38,6 +47,7 @@ Algunos ejemplos que usan react-helmet:
 ## Genera fragmentos enriquecidos en motores de búsqueda utilizando datos estructurados
 
 Google utiliza datos estructurados que encuentra en la web para comprender el contenido de la página, así como para recopilar información sobre la web y el mundo en general.
+
 Por ejemplo, aquí hay un fragmento de datos estructurados en el [formato JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) (JavaScript Object Notation for Linked Data) que puede aparecer en la página de contacto de una empresa llamada Spooky Technologies, que describe su información de contacto:
 
 ```html
@@ -56,7 +66,9 @@ Por ejemplo, aquí hay un fragmento de datos estructurados en el [formato JSON-L
 </script>
 ```
 
-Cuando utilice datos estructurados, deberá realizar pruebas durante el desarrollo con la herramienta [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) de Google es un método recomendado. Después del despliegue, su [Informe de estado enriquecidos](https://support.google.com/webmasters/answer/7552505?hl=en) puede ayudar a controlar el estado de tus páginas y mitigar cualquier problema de plantillas o publicación.
+Cuando utilices datos estructurados, deberás realizar pruebas durante el desarrollo con la herramienta [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) de Google es un método recomendado. 
+
+Después del despliegue, tu [Informe de estado enriquecido](https://support.google.com/webmasters/answer/7552505?hl=es) puede ayudar a controlar el estado de tus páginas y mitigar cualquier problema de plantillas o publicación.
 
 ## Recursos adicionales
 

@@ -79,7 +79,7 @@ Una vez ya hayas instalado un sitio de Gatsby, ve al directorio raíz de tu proy
 |     Opción      | Descripción                                      |
 | :-------------: | ------------------------------------------------ |
 | `-H`, `--host`  | Establece el _host_. Por defecto _localhost_     |
-| `-p`, `--port`  | Establece el puerto. Por defecto 8000            |
+| `-p`, `--port`  | Establece el puerto. Por defecto `env.PORT` u 8000            |
 | `-o`, `--open`  | Abre por ti el sitio en tu navegador por defecto.|
 | `-S`, `--https` | Usa HTTPS                                        |
 
@@ -103,7 +103,7 @@ You can now view gatsbyjs.org in the browser.
   On Your Network:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-**Nota**: no puedes visitar la dirección 0.0.0.0:8000 en Windows (pero si que funciona si utilizas localhost:8000 o la URL "On Your Network" de Windows)
+**Nota**: Para acceder a Gatsby en tu maquina local, utiliza `http://localhost:8000` o la URL "En tu red".
 
 ### `build`
 

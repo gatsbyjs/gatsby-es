@@ -99,7 +99,7 @@ Puedes esperar que la ruta relativa sea relativa al archivo donde se encuentra e
 
 ### Fragmentos de imagen
 
-Otra cosa a tener en cuenta sobre esa consulta es cómo usa el fragmento `GatsbyImageSharpFixed` para devolver una imagen de ancho y alto fijos. También podrías usar el fragmento `GatsbyImageSharpFluid` que genera imágenes escalables que llenan su contenedor en vez de ajustarse a dimensiones específicas. En `gatsby-image`, imágenes _fluid_ están destinadas a imágenes que no tienen un tamaño determinado dependiendo de la pantalla, mientras que las otras son _fixed_.
+Otra cosa a tener en cuenta sobre esa consulta es cómo usa el fragmento `GatsbyImageSharpFixed` para devolver una imagen de ancho y alto fijos. También podrías usar el fragmento `GatsbyImageSharpFluid` que genera imágenes escalables que llenan su contenedor en vez de ajustarse a dimensiones específicas. En `gatsby-image`, las imágenes _fluid_ están destinadas a imágenes que no tienen un tamaño determinado dependiendo de la pantalla, mientras que las otras son _fixed_.
 
 La consulta devolverá un objeto de datos que incluye la imagen procesada en un formato utilizable para el componente `gatsby-image`. El resultado devuelto será pasado automáticamente al componente y se adjuntará a la propiedad `data`. Luego puedes mostrar la imagen usando JSX para generar automáticamente HTML adaptable y de alto rendimiento.
 

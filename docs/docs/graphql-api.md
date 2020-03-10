@@ -20,7 +20,7 @@ Data needs to be [sourced](/docs/content-and-data/) — or added to the GraphQL 
 
 **Note**: GraphQL isn't required: you can still [use Gatsby without GraphQL](/docs/using-gatsby-without-graphql/).
 
-Sourcing data with an existing plugin requires installing necessary packages and adding the plugin to the plugins array in the `gatsby-config` with any optional configurations. To source data from the filesystem for use with GraphQL, such as Markdown files, images, and more, refer to the [filesystem data sourcing docs](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/#5-sourcing-data).
+Sourcing data with an existing plugin requires installing necessary packages and adding the plugin to the plugins array in the `gatsby-config` with any optional configurations. To source data from the filesystem for use with GraphQL, such as Markdown files, images, and more, refer to the [filesystem data sourcing docs](/docs/sourcing-from-the-filesystem/) and [recipes](/docs/recipes/sourcing-data).
 
 For instructions on installing plugins from npm, refer to the instructions in the docs on [using a plugin](/docs/using-a-plugin-in-your-site/).
 
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 **Note**: the query exported in a `const` doesn't need to be named `pageQuery`. More importantly, Gatsby looks for an exported `graphql` string from the file.
@@ -77,8 +77,8 @@ const HomePage = ({ data }) => {
       Hello!
       {data.site.siteMetadata.description} // highlight-line
     </div>
-  )
-}
+  );
+};
 ```
 
 ### `StaticQuery`
@@ -157,7 +157,7 @@ const data = useStaticQuery(graphql`
       }
     }
   }
-`)
+`);
 ```
 
 #### Returns
@@ -173,14 +173,14 @@ const data = useStaticQuery(graphql`
       }
     }
   }
-`)
+`);
 return (
   // highlight-start
   <header>
     <h1>{data.site.siteMetadata.title}</h1>
   </header>
   // highlight-end
-)
+);
 ```
 
 ## Query structure
@@ -219,7 +219,7 @@ Other built-in configurations can be used in queries
 - [`Alias`](/docs/graphql-reference#alias)
 - [`Group`](/docs/graphql-reference#group)
 
-For examples, refer to the [Query recipes](/docs/recipes/#6-querying-data) and [GraphQL Query Options Reference Guide](/docs/graphql-reference/).
+For examples, refer to the [Query recipes](/docs/recipes/querying-data) and [GraphQL Query Options Reference Guide](/docs/graphql-reference/).
 
 ## Query fragments
 

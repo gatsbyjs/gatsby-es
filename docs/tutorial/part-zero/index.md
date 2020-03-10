@@ -10,47 +10,88 @@ Antes de comenzar a crear tu primer sitio Gatsby, debes familiarizarte con algun
 
 La línea de comandos es una interface de texto para ejecutar comandos en tu ordenador. Muchas veces nos referimos a ella como la terminal. En este tutorial lo llamaremos de ambas formas. Es muy parecido a usar el Finder en Mac o el Explorador en Windows. Finder y Explorer son ejemplos de Interfaz gráfica de usuario (GUI). La línea de comandos es una manera poderosa, basada en texto, para interactuar con tu ordenador.
 
-Asegúrate de encontrar y abrir la interfaz de línea de comandos (CLI) de tu ordenador. Dependiendo de que sistema operativo estés usando, mira [**instrucciones para Mac**](http://foro-mac.com.ar/tutorial-como-usar-la-terminal-en-mac/), [**instrucciones para Windows**](https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd) or [**instrucciones para Linux**](https://openwebinars.net/blog/La-guia-definitiva-para-aprender-a-usar-la-terminal-de-Linux/).
+Toma un momento y abre la interfaz de línea de comandos (CLI) de tu computadora. Dependiendo de que sistema operativo estés utilizando, mira las [**instrucciones para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instrucciones para Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) o las [**instrucciones para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-## Instalar Homebrew para Node.js
+_Nota: Sí eres nuevo con la línea de comandos, "ejecutar" un comando, significa "escribir una serie de instrucciones en el símbolo del sistema, y oprimir la tecla Enter". Los comandos serán mostrados en una caja destacada, algo como `node --version`, pero no toda caja destacada es un comando! Sí algo es un comando será mencionado como algo que tienes que correr/ejecutar_
 
-Para instalar Gatsby y Node.js, es recomendable usar [Homebrew](https://brew.sh/). Un poco de configuración al inicio te puede salvar de muchos dolores de cabeza más adelante!
+## Instala Node.js para tu sistema operativo
 
-Cómo instalar y verificar Homebrew en tu ordenador:
+Node.js es un ambiente que puede ejecutar código Javascript fuera del navegador web. Gatsby esta construído con Node.js. Para ponerte en marcha con Gatsby, necesitarás tener una versión reciente instalada en tu computadora. npm viene junto a Node.js así que sí no tienes npm, probablemente tampoco tienes Node.js.
 
-1. Abre la terminal
-1. Mira si Homebrew está instalado ejecuntando `brew -v`. Deberías ver "Homebrew" y el número de versión.
-1. Si no lo está, descárga e instala [Homebrew siguiendo las instrucciones (en inglés)](https://docs.brew.sh/Installation) para tu sistema operativo (Mac, Linux o Windows).
-1. Una vez hayas instalado Homebrew, repite el paso 2 para verificarlo.
+### Instrucciones para Mac
 
-### Usuarios Mac: Instalar Xcode Command Line Tools
+Para instalar Gatsby y Node.js en una Mac, es recomendado usar [Homebrew](https://brew.sh/). Un poco de configuración al inicio puede evitarte algunos dolores de cabeza despues!
 
-1. Abre la terminal.
-1. En una Mac, instalamos Xcode Command line tools ejecutando `xcode-select --install`.
-   1. Si eso falla, descárgalas [directamente del sitio web de Apple](https://developer.apple.com/download/more/), después de iniciar sesión con tu Cuenta de Developer de Apple.
-1. Después de que el proceso de instalación haya empezado, se te solicitará nuevamente aceptar las licencias de las herramientas que se van a descargar.
+#### Cómo instalar o verificar que tienes instalado Homebrew en tu computadora:
 
-## ⌚ Instala Node.js y npm
+1. Abre tu Terminal.
+2. Comprueba sí Homebrew está instalado ejecutando `brew -v`. Deberías ver "Homebrew" y un número de versión.
+3. Sí no, descarga e instala [Homebrew con estas instrucciones](https://docs.brew.sh/Installation).
+4. Una vez que ya tienes instalado Homebrew, repite el paso 2 para verificar.
 
-Node.js es un entorno que puede ejecutar código JavaScript fuera de un navegador web. Gatsby fue creado con Node.js. Para comenzar a utilizar Gatsby, debes tener instalada una versión reciente en tu ordenador.
+#### Instala las herramientas de línea de comandos de Xcode:
 
-_Note: La versión mínima soportada de Gatsby es Node 8, pero puedes usar una versión mas reciente._
+1. Abre tu Terminal.
+2. Instala las herramientas de línea de comandos de Xcode ejecutando `xcode-select --install`.
+   - Sí eso falla, decargalas [directamente del sitio de Apple](https://developer.apple.com/download/more/), después de iniciar sesión con una cuenta de desarrollador de Apple
+3. Después de empezar la instalación, serás llevado de nuevo a aceptar la licensia de software para las herramientas que vas a descargar.
 
-1. Abre la terminal.
-1. Ejecuta `brew update` para asegurarte de tener la última versión de Homebrew.
-1. Ejecuta el siguiente comando para instalar Node y npm todo en uno: `brew install node`
+#### Instala Node
 
-Una vez hayas seguido los pasos para la instalación, asegurate que todo esté instalado correctamente:
+1. Abre tu Terminal.
+2. Ejecuta `brew install node`
+   - Sí no quieres instalarlo mediante Homebrew, descarga la última versión de Node.js desde [el sitio oficial de Node.js](https://nodejs.org/es/), haz doble click en el archivo de descarga y sigue las instrucciones de instalación.
 
-### Verifica la instalación de Node.js
+### Instrucciones para Windows
 
-1.  Abre la terminal.
-2.  Ejecuta `node --version`. (Si eres nuevo con la línea de comandos, "ejecuta `comando`" quiere decir "escribe `comando` en la ventana de comandos, y presiona la tecla Enter". De ahora en adelante, ésto es lo que nos referimos con "ejecuta `comando`").
-3.  Ejecuta `npm --version`.
+- Descarga e instala la última versión de Node.js desde [el sitio oficial de Node.js](https://nodejs.org/es/)
 
-La respuesta de ambos comandos debe ser el número de versión. Las versiones que veas puede que no sean las mismas que te mostramos a continuación! Si despues de ejecutar esos comandos no te muestran las versiones, vuelve y asegúrate que hayas instalado Node.js.
+### Instrucciones para Linux
+
+Instala nvm (Gestor de versiones de Node) y las dependencias necesarias. nvm es usado para gestionar Node.js y todas sus versiones asociadas.
+
+_💡 Sí cuando instalas un paquete, te pide confirmación, teclea `y` y presiona enter._
+
+#### Ubuntu, Debian, y otras distros basadas en `apt`:
+
+1. Ejecuta `sudo apt update` y después `sudo apt -y upgrade` para asegurar que tu distribución de Linux esta lista para lo siguiente.
+2. Ejecuta `sudo apt-get install curl` para instalar `curl` que te permite transferir datos y descargar dependencias adicionales.
+3. Despues de que termines de instalar todo, ejecuta `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash` para descargar la ultima versión de nvm.
+4. Para confirmar que ha funcionado, utiliza el siguiente comando. `nvm --version`. La salida debería ser el número de versión.
+5. [Configura la versión por defecto de Node.js](#set-default-nodejs-version)
+
+#### Arch, Manjaro y otras distros basadas en `pacman`:
+
+1. Ejecuta `sudo pacman -Sy` para asegurarte de que tu distribución esta lista para lo siguiente.
+2. Estas distros vienen instaladas con `curl`, así que puedes utilizarlo para descargar nvm.
+   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+3. Antes de utilizar nvm, necesitas instalar unas dependencias adicionales ejecutando `sudo pacman -S grep awk tar`.
+4. Para confirmar que ha funcionado, utiliza el siguiente comando. `nvm --version`. La salida debería ser el número de versión.
+5. [Configura la versión por defecto de Node.js](#set-default-nodejs-version)
+
+#### Fedora, RedHat, y otras distros basadas en `dnf`:
+
+1. Estas distros vienen instaladas con `curl`, así que puedes utilizarlo para descargar nvm.
+   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+2. Para confirmar que ha funcionado, utiliza el siguiente comando. `nvm --version`. La salida debería ser el número de versión.
+3. [Configura la versión por defecto de Node.js](#set-default-nodejs-version)
+
+Sí la distribución de Linux que usas no está listada aquí, por favor busca las instrucciones de instalación en la web.
+
+#### Configura la versión por defecto de Node.js
+
+Cuando nvm es instalado, no viene configurado con una versión en particular de Node por defecto. Tendrás que instalar la versión que deseas y configurar nvm para que la use. Este ejemplo usa la última versión lanzada de Node 10, pero números de versiones mas recientes pueden ser usados en su lugar.
+
+```shell
+nvm install 10
+nvm use 10
+```
+
+Para confirmar que funcionó, puedes ejecutar `npm --version` y `node --version`. La salida debería verse similar a la captura de pantalla de abajo, mostrando el número de versión en respuesta a los comandos.
 
 ![Verifica las versiones de Node.js y npm](01-node-npm-versions.png)
+
+Una vez que hayas seguido los pasos de instalación y hayas comprobado que todo está instalado correctamente, puedes continuar con siguiente paso.
 
 ## Instala Git
 
@@ -84,8 +125,8 @@ Ahora ya estás listo para usar la línea de comandos de Gatsby (Gatsby CLI) par
 4.  Ejecuta `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="./03-create-site.mp4"></source>
-  <p>Sorry! You browser doesn't support this video.</p>
+  <source type="video/mp4" src="./03-create-site.mp4" />
+  <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
 ¿Qué ha pasado?
@@ -112,15 +153,15 @@ gatsby develop
 
 ### Mira tu sitio web en local
 
-Abre una nueva pestaña en tu navegador y ve a [**http://localhost:8000**](http://localhost:8000/).
+Abre una nueva pestaña en tu navegador y ve a `http://localhost:8000/`
 
 ![Página principal](04-home-page.png)
 
 ¡Felicidades! ¡Esto es el inicio de tu primer sitio hecho con Gatsby! 🎉
 
-Puedes ver tu sitio web en local en [**_http://localhost:8000_**](http://localhost:8000/) mientras tu servidor de desarrollo esté activo. Este es el proceso que has iniciado cuando ejecutaste el comando `gatsby develop`. Para detener el proceso (o cerrar el servidor de desarrollo), vuelve a la terminal, mantén presionada la tecla "control" y presiona la tecla "c" (ctrl-c). ¡Para iniciarlo nuevamente, ejecuta `gatsby develop` otra vez!
+Puedes ver tu sitio web en local en `http://localhost:8000/` mientras tu servidor de desarrollo esté activo. Este es el proceso que has iniciado cuando ejecutaste el comando `gatsby develop`. Para detener el proceso (o cerrar el servidor de desarrollo), vuelve a la terminal, mantén presionada la tecla "control" y presiona la tecla "c" (ctrl-c). ¡Para iniciarlo nuevamente, ejecuta `gatsby develop` otra vez!
 
-**Nota:** Si estás en un entorno virtual (VM) como `vagrant` y/o te gustaría ejecutara el entorno de desarrollo desde tu dirección IP local, ejecuta `gatsby develop -- --host=0.0.0.0`. Ahora, el servidor de desarrollo escuchará tanto 'localhost' como tu dirección IP local.
+**Nota:** Si estás en un entorno virtual (VM) como `vagrant` y/o te gustaría ejecutara el entorno de desarrollo desde tu dirección IP local, ejecuta `gatsby develop -- --host=0.0.0.0`. Ahora, el servidor de desarrollo escuchará tanto en `http://localhost` como tu dirección IP local.
 
 ## Configura un editor de código
 

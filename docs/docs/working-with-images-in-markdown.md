@@ -20,6 +20,10 @@ npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 
 You will also want to have `gatsby-source-filesystem` installed. Then, configure the various plugins in the `gatsby-config` file.
 
+### Configuring for images and posts in the same directory
+
+If your images are in the same directory as the Markdown files, sourcing and resolving the images can be done in one configuration. For example, if your Markdown pages and images are located together in a `/pages` directory, both content types will be automatically picked up by GraphQL as part of Gatsby's data layer.
+
 ```js:title=gatsby-config.js
 module.exports = {
   plugins: [
@@ -29,16 +33,49 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-      },
-    },
-  ],
-}
+        path: `${__dirname}/src/pages` // highlight-line
+      }
+    }
+  ]
+};
+```
+
+Then, in an example Markdown file, add a field called `featuredImage`:
+
+```markdown:title=src/pages/my-favorite-doggos.md
+---
+title: My Favorite Doggos
+featuredImage: pupperino.png
+---
+
+Content goes here!
+```
+
+The next step will be to incorporate the data into a template with a GraphQL query, which can be found later in this guide.
+
+### Configuring for images and posts in different directories
+
+There are also occassions when you may want to source images from a different directory than where your Markdown posts or pages are located, such as in an external `/images` folder. You can set this up by specifying two distinct sources, one for the pages and the other for images:
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`
+      }
+    }
+  ]
+};
 ```
 
 Then, in an example markdown file, add a field called `featuredImage`:
 
-```md:title=src/pages/example-post.md
+```markdown:title=src/pages/about.md
 ---
 title: My Amazing Post
 featuredImage: ./awesome-image.png
@@ -72,24 +109,24 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Also in the Markdown post template, import the `gatsby-image` package and pass the results of the GraphQL query into an `<Img />` component.
 
 ```jsx:title=src/templates/blog-post.js
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 // highlight-start
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 // highlight-end
 
 export default ({ data }) => {
-  let post = data.markdownRemark
+  let post = data.markdownRemark;
 
   // highlight-start
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   // highlight-end
 
   return (
@@ -102,8 +139,8 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query PostQuery($slug: String!) {
@@ -121,7 +158,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Your featured image should now appear on the generated page right below the main header. Tada!
@@ -155,20 +192,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
-      },
+              maxWidth: 1200
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-      },
-    },
-  ],
-}
+        path: `${__dirname}/src/pages`
+      }
+    }
+  ]
+};
 ```
 
 ### Using the Transformer Remark Plugin
@@ -186,24 +223,24 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-            },
-          },
-        ],
-      },
+              maxWidth: 800
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/posts`,
-      },
-    },
-  ],
-}
+        path: `${__dirname}/src/posts`
+      }
+    }
+  ]
+};
 ```
 
 With the configurations above, you can use the default Markdown syntax for images. They will be processed by Sharp and appear as if you placed them in a `gatsby-image` component.
 
-```md
-![Awesome image](./my-awesome-image.png)
+```markdown
+![Hopper The Rabbit](./rabbit-friend.png)
 ```

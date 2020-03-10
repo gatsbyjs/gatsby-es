@@ -140,15 +140,11 @@ const Box = posed.div({
 </TransitionState>
 ```
 
-Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo, y aparecerá de entrada/salida en consecuencia.
+Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo si se esta montando o desmontando, y aparecerá de entrada/salida en consecuencia.
 
 ## Excluyendo elementos de las transiciones de página
 
-Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del sitio_). Esto se puede conseguir envolviendo elementos con el componente `TransitionPortal`.
-
-```javascript
-import { TransitionPortal } from "gatsby-plugin-transition-link"
-```
+Quizá quieras tener elementos en la página que persistan durante la transición de la página (_ej. una cabecera del sitio_). Esto se puede conseguir envolviendo elementos con un componente de _layout_ persistente usando la siguiente opcion de plugin en tu archivo `gatsby-config.js`.
 
 ```javascript
 module.exports = {
@@ -163,7 +159,7 @@ module.exports = {
 ];
 ```
 
-Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información acerca de `TransitionPortal`.
+Como siempre, fíjate en [la documentación de `TransitionPortal`](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) para más información.
 
 ## Siguientes lecturas
 

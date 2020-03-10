@@ -29,11 +29,11 @@ module.exports = {
       resolve: "gatsby-source-sanity",
       options: {
         projectId: "abc123",
-        dataset: "blog",
-      },
-    },
-  ],
-}
+        dataset: "blog"
+      }
+    }
+  ]
+};
 ```
 
 En este punto puedes elegir (y probablemente deberías) [configurar una API de GraphQL](https://www.sanity.io/help/graphql-beta) para tu conjunto de datos de Sanity, si aún no lo has hecho. Esto ayudará al plugin conocer qué tipo de datos y campos existen, para que puedas consultarlos incluso sin que estén presentes en ningún documento actual.
@@ -42,13 +42,13 @@ Ves a `http://localhost:8000/___graphql` después de ejecutar `gatsby develop` p
 
 ## Opciones
 
-| Opciones       | Tipo    | Por Defecto | Descripción                                                                                                                                        |
-| -------------- | ------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectId      | string  |             | **[requerido]** El ID de tu proyecto en Sanity                                                                                                     |
-| dataset        | string  |             | **[requerido]** El conjunto de datos a obtener                                                                                                     |
-| token          | string  |             | Token de autenticación para obtener conjuntos de datos privados, o cuando uses `overlayDrafts` [Aprende más](https://www.sanity.io/docs/http-auth) |
-| overlayDrafts  | boolean | `false`     | Establecer en `true` para que los borradores reemplacen su versión publicada. Por defecto, los borradores se omitirán.                             |
-| watchMode      | boolean | `false`     | Establecer en `true` para mantener un _listener_ abierto y actualizar con los últimos cambios en tiempo real.                                      |
+| Opciones      | Tipo    | Por Defecto | Descripción                                                                                                                                        |
+| ------------- | ------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectId     | string  |             | **[requerido]** El ID de tu proyecto en Sanity                                                                                                     |
+| dataset       | string  |             | **[requerido]** El conjunto de datos a obtener                                                                                                     |
+| token         | string  |             | Token de autenticación para obtener conjuntos de datos privados, o cuando uses `overlayDrafts` [Aprende más](https://www.sanity.io/docs/http-auth) |
+| overlayDrafts | boolean | `false`     | Establecer en `true` para que los borradores reemplacen su versión publicada. Por defecto, los borradores se omitirán.                             |
+| watchMode     | boolean | `false`     | Establecer en `true` para mantener un _listener_ abierto y actualizar con los últimos cambios en tiempo real.                                      |
 
 ## Campos faltantes
 
@@ -72,17 +72,17 @@ Hay dos tipos de imágenes adaptables soportadas; _fixed_ y _fluid_. Para decidi
 ### _Fluid_
 
 ```jsx
-import React from "react"
-import Img from "gatsby-image"
+import React from "react";
+import Img from "gatsby-image";
 
 const Person = ({ data }) => (
   <article>
     <h2>{data.sanityPerson.name}</h2>
     <Img fluid={data.sanityPerson.profileImage.asset.fluid} />
   </article>
-)
+);
 
-export default Person
+export default Person;
 
 export const query = graphql`
   query PersonQuery {
@@ -97,23 +97,23 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ### _Fixed_
 
 ```jsx
-import React from "react"
-import Img from "gatsby-image"
+import React from "react";
+import Img from "gatsby-image";
 
 const Person = ({ data }) => (
   <article>
     <h2>{data.sanityPerson.name}</h2>
     <Img fixed={data.sanityPerson.profileImage.asset.fixed} />
   </article>
-)
+);
 
-export default Person
+export default Person;
 
 export const query = graphql`
   query PersonQuery {
@@ -128,7 +128,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ### Fragmentos disponibles
@@ -166,7 +166,7 @@ Por ejemplo, si tienes un tipo de documento `project` en Sanity del que quieres 
 
 ```js:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const result = await graphql(`
     {
@@ -189,23 +189,23 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    throw result.errors
+    throw result.errors;
   }
 
-  const projects = result.data.allSanityProject.edges || []
+  const projects = result.data.allSanityProject.edges || [];
   projects.forEach((edge, index) => {
-    const path = `/project/${edge.node.slug.current}`
+    const path = `/project/${edge.node.slug.current}`;
 
     createPage({
       path,
       component: require.resolve("./src/templates/project.js"),
-      context: { slug: edge.node.slug.current },
-    })
-  })
-}
+      context: { slug: edge.node.slug.current }
+    });
+  });
+};
 ```
 
 La consulta anterior buscará todos los proyectos que tienen un campo `slug.current`, y generará páginas para ellos, disponibles como `/project/<project-slug>`. Usará el _template_ definido en `src/templates/project.js` como base para estas páginas.
@@ -216,7 +216,7 @@ Recuerda usar la interfaz GraphiQL para ayudarte a escribir las consultas que ne
 
 ## Campos _"Raw"_
 
-_Arrays_ y tipos de objetos en la raíz de los documentos obtendrán una representación adicional _"raw JSON"_ en un campo llamado  `_raw<FieldName>`. Por ejemplo, un campo llamado `body` será asignado a `_rawBody`. Es importante tener en cuenta que esto solo se hace con nodos de nivel superior (documentos).
+_Arrays_ y tipos de objetos en la raíz de los documentos obtendrán una representación adicional _"raw JSON"_ en un campo llamado `_raw<FieldName>`. Por ejemplo, un campo llamado `body` será asignado a `_rawBody`. Es importante tener en cuenta que esto solo se hace con nodos de nivel superior (documentos).
 
 ## Texo Portable / Contenido de Bloque
 
@@ -230,13 +230,13 @@ Puedes instalar [block-content-to-react](https://www.npmjs.com/package/@sanity/b
 
 Si no quieres añadir el ID de tu proyecto Sanity en el repositorio, puedes guardarlo fácilmente en archivos .env haciendo lo siguiente:
 
-```js
-// En tu archivo .env
+```text:title=.env
 SANITY_PROJECT_ID = abc123
 SANITY_DATASET = production
 SANITY_TOKEN = mi-token-super-secreto
+```
 
-// En tu archivo gatsby-config.js
+```js:title=gatsby-config.js
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })

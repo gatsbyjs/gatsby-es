@@ -24,13 +24,13 @@ Dentro de un proyecto Gatsby, quizás mires algunas o todas las carpetas y archi
 
 - **`/.cache`** _Generada automáticamente._ Esta carpeta es una cache interna creada automáticamente por Gatsby. Los archivos dentro de esta carpeta no deben ser modificados. Debe ser agregada al archivo `.gitignore` si aún no está.
 
-- **`/public`** _Generada automáticamente._ El resultado del proceso de compilación se pondrá dentro de esta carpeta. Debe ser agregada al archivo `.gitignore` si aún no está.
-
 - **`/plugins`** Esta carpeta hospeda plugins ("locales") específicos del proyecto que no son publicados como un paquete `npm`. Revisa la [documentación de plugin](/docs/plugins/) para más detalles.
+
+- **`/public`** _Generada automáticamente._ El resultado del proceso de compilación se pondrá dentro de esta carpeta. Debe ser agregada al archivo `.gitignore` si aún no está.
 
 - **`/src`** Este directorio contendrá todo el código relacionado con el frontend que verás en tu página (lo que ves en el navegador), como la cabecera de tu sitio, o una plantilla de página. “Src” es una convención para “source code” (código fuente).
 
-  - **`/pages`** Los componentes dentro de src/pages se vuelven páginas automáticamente con rutas basadas en el nombre del archivo. Revisa la [documentación de páginas](/docs/recipes/#creating-pages) para más detalles.
+  - **`/pages`** Los componentes dentro de src/pages se vuelven páginas automáticamente con rutas basadas en el nombre del archivo. Revisa la [documentación de páginas](/docs/recipes/pages-layouts) para más detalles.
   - **`/templates`** Contienen plantillas para crear páginas de manera programática. Revisa la [documentación de plantillas](/docs/building-with-components/#page-template-components) para más detalles.
   - **`html.js`** Para una configuración personalizada por defecto .cache/default_html.js. Revisa la [documentación de html personalizado](/docs/custom-html/) para más detalles.
 

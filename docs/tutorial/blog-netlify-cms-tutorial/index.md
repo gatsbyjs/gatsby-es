@@ -30,7 +30,7 @@ cd [nombre-de-tu-proyecto]
 gatsby develop
 ```
 
-Ahora puedes ir a [`localhost:8000`](http://localhost:8000) para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en [`localhost:8000/admin`](http://localhost:8000/admin).
+Ahora puedes ir a `http://localhost:8000` para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en `http://localhost:8000/admin`.
 
 Un CMS, o sistema de administración de contenido, es útil porque puedes agregar contenido como publicaciones de blog desde un tablero en tu sitio, en lugar de tener que agregar publicaciones manualmente con Markdown. Sin embargo, es probable que desees poder acceder al CMS desde un sitio web desplegado, no solo localmente. Para eso deberás desplegar en Netlify a través de GitHub, preparar una implementación continua y realizar algunas configuraciones. Repasaremos esto en el [Paso-5](#step-5).
 
@@ -48,13 +48,13 @@ backend:
 
 #### Personalizando tu sitio
 
-Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando  `gatsby build && gatsby serve`.
+Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando `gatsby build && gatsby serve`.
 
 Probablemente también quieras editar el `README.md` y el `package.json`, archivos para incluir tus propios detalles del proyecto.
 
 ### Paso 4
 
-Abre [github.com](http://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
+Abre [github.com](https://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
 
 ```shell
 git init

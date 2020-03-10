@@ -85,6 +85,11 @@ See the [unofficial list of themes](https://gatsbytemplates.io/)
 - [Understanding the Gatsby lifecycle](https://medium.com/narative/understanding-gatsbys-lifecycle-31c473ba2f2d)
 - [GatsbyGuides.com series on building web applications with Gatsby & Drupal](https://gatsbyguides.com/)
 - [Deep dive into Gatsby – Building a static blog using Gatsby, React and GraphQL](https://zocada.com/deep-dive-gatsby-building-a-simple-static-blog-using-gatsby-react-and-graphql/)
+- [Gatsby - Full Tutorial for Beginners](https://www.youtube.com/watch?v=mHFAM0CXviE)
+- [Building a Video Blog with Gatsby and Markdown (MDX)](https://scotch.io/tutorials/building-a-video-blog-with-gatsby-and-markdown-mdx)
+- [Deploying Your First Gatsby Site to Netlify](https://scotch.io/tutorials/deploying-your-first-gatsby-site-to-netlify)
+- [Add a chat widget to your Gatsby blog](https://pusher.com/tutorials/chat-gatsby/)
+- [Headless WordPress: Why Gatsby Should Be Next on Your List of Things to Learn](https://deliciousbrains.com/gatsby-headless-wordpress/)
 
 ### German
 

@@ -28,7 +28,7 @@ En estos tutoriales de nivel intermedio, aprenderás cómo extraer datos de casi
 
 Los temas de Gatsby abstraen toda la configuración por defecto (funcionalidades compartidas, fuentes de datos, diseño) fuera de tu sitio web a un paquete instalable.
 
-Esto significa que la configuración y la funcionalidad no estarán escritas directamente en tu proyecto, sino versionado, isolado e instalado como una dependencia. Tú puedes actualizar un tema, componer temas e incluso cambiar un tema compatible con otro.
+Esto significa que la configuración y la funcionalidad no están escritas directamente en tu proyecto, sino versionadas, isoladas e instaladas como una dependencia. Puedes actualizar un tema, componer temas e incluso cambiar un tema compatible con otro.
 
 Conoce más sobre cómo usar y crear temas en [este tutorial](/tutorial/theme-tutorials/).
 

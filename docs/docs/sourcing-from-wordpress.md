@@ -66,7 +66,7 @@ module.exports = {
 
 ## Usando datos de WordPress
 
-Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/querying-with-graphql/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
+Una vez que tu plugin fuente está extrayendo datos, puedes construir las páginas de tu sitio implementando la API `createPages` en `gatsby-node.js`. Cuando esto es llamado, tus datos ya han sido extraídos y están disponibles para ser consultados con GraphQL. Gatsby usa [GraphQL al momento del build](/docs/graphql-concepts/#how-does-graphql-and-gatsby-work-together); Tu plugin fuente (en este caso, `gatsby-source-wordpress`) obtiene tu información, y Gatsby usa esos datos para "[automáticamente _inferir_ un esquema GraphQL](/docs/graphql-concepts/#how-does-graphql-and-gatsby-work-together)" contra la que puedas consultar.
 
 La API `createPages` expone la función `graphql`:
 
@@ -77,11 +77,11 @@ Puedes usar el archivo [`gatsby-node.js`](https://github.com/gatsbyjs/gatsby/blo
 Por ejemplo, aquí abajo tienes un extracto de ejemplo en `gatsby-node.js`.
 
 ```javascript:title=gatsby-node.js
-const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
+const path = require(`path`);
+const { slash } = require(`gatsby-core-utils`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   // consulta contenido para entradas de WordPress
   const result = await graphql(`
@@ -95,9 +95,9 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `)
+  `);
 
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+  const postTemplate = path.resolve(`./src/templates/post.js`);
   result.data.allWordpressPost.edges.forEach(edge => {
     createPage({
       // será la url de tu página
@@ -107,11 +107,11 @@ exports.createPages = async ({ graphql, actions }) => {
       // En la consulta GraphQL de la plantilla, 'id' estará disponible
       // como una variable GraphQL para realizar consultas de datos de esta entrada.
       context: {
-        id: edge.node.id,
-      },
-    })
-  })
-}
+        id: edge.node.id
+      }
+    });
+  });
+};
 ```
 
 Después de obtener los datos desde WordPress a través de la consulta, todas las entradas se iteran, llamando a [`createPage`](/docs/actions/#createPage) para cada una.
@@ -120,7 +120,7 @@ Una [página de Gatsby es definida](/docs/api-specification/#concepts) como "una
 
 Cuando reinicies tu servidor con el comando `gatsby develop` podrás navegar a las nuevas páginas creadas para cada una de tus entradas en sus respectivas rutas.
 
-En el IDE GraphiQL en [localhost:8000/\_\_graphql](http://localhost:8000/__graphql) deberías ver ahora campos consultables para `allWordpressPosts` en la barra lateral de documentos o del explorador.
+En el IDE GraphiQL en `localhost:8000/__graphql` deberías ver ahora campos consultables para `allWordpressPosts` en la barra lateral de documentos o del explorador.
 
 ## Terminando
 

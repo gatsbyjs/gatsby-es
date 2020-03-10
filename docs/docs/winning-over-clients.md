@@ -13,6 +13,9 @@ Algunos beneficios que puedes usar para atraer clientes a Gatsby incluyen:
 - La rápida velocidad de desarrollo garantiza que el proyecto estará a tiempo
 - La facilidad para realizar cambios de desarrollo ayuda a mantener el proyecto por debajo del presupuesto
 - El bajo costo de alojamiento ayuda a mantener el proyecto dentro del presupuesto
+- Sitios con rápido rendimiento que reducen la carga de la página y el tiempo de respuesta
+- Ofrece la creación de sitios altamente escalables y aplicaciones dinámicas
+- Un ecosistema rico de plugins que ayudan a reducir código complejo
 
 [Este one-pager](/gatsby-one-pager.pdf) puede ser útil para clientes -- esto explica Gatsby en su lenguaje.
 

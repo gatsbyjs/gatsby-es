@@ -34,7 +34,7 @@ Si estos problemas son más grandes que los beneficios de usar Disqus, puedes op
 
 ## Implementando Disqus
 
-![Logo de Disqus](images/disqus-logo.svg)
+![Logo de Disqus](./images/disqus-logo.svg)
 
 Pasos para agregar comentarios de Disqus a tu propio blog:
 
@@ -47,7 +47,7 @@ npm install disqus-react
 
 3. Agregar el nombre que utilizaste en el paso 1 como, por ejemplo, `GATSBY_DISQUS_NAME` a tus archivos `.env` y `.env.example` para que las personas que hagan fork de tu repositorio sepan que ellos necesitan ingresar este valor para hacer funcionar los comentarios (Necesitas el prefix de la variable de entorno con `GATSBY_` para que pueda estar [disponible en el código cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
-```title=.env.example
+```text:title=.env.example
 # habilita comentarios de Disqus para posts en un blog
 GATSBY_DISQUS_NAME=insertValue
 ```
@@ -59,10 +59,10 @@ GATSBY_DISQUS_NAME=yourSiteShortname
 4. En la plantilla de tu entrada de blog (usualmente `src/templates/post.js`) importa el componente `DiscussionEmbed`.
 
 ```js:title=src/templates/post.js
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 // highlight-next-line
-import { DiscussionEmbed } from "disqus-react"
+import { DiscussionEmbed } from "disqus-react";
 ```
 
 Luego define tu objeto de configuración de Disqus
@@ -70,8 +70,8 @@ Luego define tu objeto de configuración de Disqus
 ```js
 const disqusConfig = {
   shortname: process.env.GATSBY_DISQUS_NAME,
-  config: { identifier: slug, title },
-}
+  config: { identifier: slug, title }
+};
 ```
 
 Donde `identifier` debe ser un string o número que identifique exclusivamente a esa entrada de blog. Puede ser el slug del post, título o un ID. Finalmente, agrega `DiscussionEmbed` al JSX de la plantilla de tu entrada de blog.
@@ -84,9 +84,9 @@ return (
       <DiscussionEmbed {...disqusConfig} />
     </PageBody>
   </Global>
-)
+);
 ```
 
 Y eso es todo. Ahora debes poder ver el formulario de comentarios de Disqus debajo del post de tu blog [de esta forma](https://janosh.io/blog/disqus-comments#disqus_thread). ¡Feliz blogging!
 
-[![Comentarios de Disqus](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+[![Comentarios de Disqus](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)

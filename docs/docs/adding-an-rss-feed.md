@@ -23,29 +23,29 @@ Cuando la instalación esté completa, podrás agregar este paquete al archivo d
 ```js:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://www.example.com`
   },
-  plugins: [`gatsby-plugin-feed`],
-}
+  plugins: [`gatsby-plugin-feed`]
+};
 ```
 
 Aquí hay un ejemplo de cómo implementar este plugin con Markdown, pero para otras fuentes, necesitarás una forma de identificar de forma exclusiva el contenido, generalmente con la URL o con un slug.
 
 ```js:title=gatsby-node.js
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   // highlight-next-line
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
-      value,
-    })
+      value
+    });
   }
-}
+};
 ```
 
 Posteriormente, ejecuta una compilación (`npm run build`) ya que la generación de feeds RSS solamente se realizará para las compilaciones de producción. Por defecto, la ruta donde se generan los feeds RSS es `/rss.xml`, pero el plugin expone opciones para configurar esta funcionalidad predeterminada.
@@ -92,9 +92,9 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                });
+              });
             },
             query: `
               {
@@ -117,13 +117,13 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Your Site's RSS Feed",
-          },
-        ],
-      },
-    },
-  ],
-}
+            title: "Your Site's RSS Feed"
+          }
+        ]
+      }
+    }
+  ]
+};
 ```
 
 Este fragmento de código contiene una configuración personalizada de `gatsby-plugin-feed` en `gatsby-config.js` para consultar los metadatos de tu sitio, como tu `title` y `siteUrl`. También incluye una matriz de `feeds` con al menos un objeto que contiene una consulta GraphQL y un método `serialize`, que permite generar una estructura de feeds RSS personalizada. En este ejemplo, el contenido RSS proviene de archivos Markdown provenientes de tu sitio, y se consultan con la llave `allMarkdownRemark` y sus filtros y campos asociados.

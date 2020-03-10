@@ -139,29 +139,35 @@ if (typeof window !== `undefined`) {
 2. moving references to globals into a `componentDidMount` or `useEffect` hook:
 
 ```jsx
-import React from "react"
+import React from "react";
 
 const Foo = () => {
-  window.alert("This will break the build")
-  return <span>Bar</span>
-}
+  window.alert("This will break the build");
+  return <span>Bar</span>;
+};
 
-export default Foo
+export default Foo;
 ```
 
 Would be changed to:
 
 ```jsx
-import React from "react"
+import React from "react";
 
 const Foo = () => {
   React.useEffect(() => {
-    window.alert("This won't break the build")
-  })
-  return <span>Bar</span>
-}
+    window.alert("This won't break the build");
+  });
+  return <span>Bar</span>;
+};
 
-export default Foo
+export default Foo;
+```
+
+If these browser globals aren't protected correctly, you'll see a webpack error like the one below when building your site:
+
+```text
+WebpackError: ReferenceError: window is not defined
 ```
 
 For more information about errors encountered during builds, see the doc on [debugging HTML builds](/docs/debugging-html-builds/). For more information about React hooks, check out the [React docs](https://reactjs.org/docs/hooks-effect.html).
@@ -175,17 +181,17 @@ There are two possibilities of routes that you can set up: static and client-onl
 For dynamic routes, you should implement routing with [@reach/router](https://reach.tech/router), which is already included with Gatsby. Dynamic routes can be implemented the same way you would implement a router in Create React App (or any other React application). However, because these routes won't be represented as HTML files in the final build, if you want users to be able to visit the routes directly (like entering the URL in the search bar), you'll need to generate pages in the `gatsby-node.js` file which is demonstrated in the [Building Apps with Gatsby](/docs/adding-app-and-website-functionality/) guide.
 
 ```jsx
-import React from "react"
-import { Router } from "@reach/router"
+import React from "react";
+import { Router } from "@reach/router";
 
 const App = () => (
   <Router>
     <Route path="/user/" component={Users} />
     <Route path="/user/:id" component={UserDetails} />
   </Router>
-)
+);
 
-export default App
+export default App;
 ```
 
 Gatsby provides a `<Link />` component and a `navigate` function to help you direct users through pages on your site. You can read about how to use each in the [`gatsby-link` doc](/docs/gatsby-link/).
@@ -225,35 +231,35 @@ How do you share state across components like a theme without one top level `App
 In Create React App it could look like this:
 
 ```jsx:title=create-react-app/src/App.js
-import React from "react"
+import React from "react";
 
-const defaultTheme = "light"
-const ThemeContext = React.createContext(defaultTheme)
+const defaultTheme = "light";
+const ThemeContext = React.createContext(defaultTheme);
 
 function App() {
   return (
     <ThemeContext.Provider value={defaultTheme}>
       {/* App, routing, and other components */}
     </ThemeContext.Provider>
-  )
+  );
 }
 
-export default App
+export default App;
 ```
 
 In Gatsby, if you want your providers to be global across pages you would move those providers to `gatsby-browser.js`:
 
 ```jsx:title=gatsby/gatsby-browser.js
-import React from "react"
+import React from "react";
 
-const defaultTheme = "light"
-export const ThemeContext = React.createContext(defaultTheme)
+const defaultTheme = "light";
+export const ThemeContext = React.createContext(defaultTheme);
 
 export const wrapRootElement = ({ element }) => {
   return (
     <ThemeContext.Provider value={defaultTheme}>
       {element}
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 ```
