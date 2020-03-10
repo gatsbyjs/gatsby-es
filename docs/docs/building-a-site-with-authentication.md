@@ -75,17 +75,11 @@ Más información sobre errores relacionados al compilado estan disponibles en l
 
 ## Ejemplo real: la tienda de Gatsby
 
-<<<<<<< HEAD
 La [tienda de Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org) es una aplicación en vivo hecha con Gatsby que implementa autenticación usando Auth0.
 
-[Funciones utiles]
-=======
-The [Gatsby store](https://github.com/gatsbyjs/store.gatsbyjs.org) is a live application built with Gatsby that implements authentication using Auth0.
+[Funciones útiles](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js) en el repositorio de la tienda de Gatsby hacen uso de APIs de Auth0 para autenticar a los usuarios con Github, y envuelven APIs de Auth0 para comprobar que [solo cierto código de Auth0 se ejecuta en el navegador](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js#L3).
 
-[Util functions](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js) in the Gatsby Store repo make use of Auth0's APIs to authenticate users with GitHub, and wrap Auth0's APIs to check that [some of the Auth0 code runs only in the browser](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js#L3).
-
-In order to protect authenticated content with a private route, a `<Router />` is implemented in the `<PrivateRoute />` component that checks whether a user is authenticated or reroutes them to `/login`.
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+Para poder proteger contenido autenticado con una ruta privada, un `<Router />` es implementado en el componente `<PrivateRoute />` que comprueba sí el usuario está autenticado o lo redirige a `/login`.
 
 ```jsx
 // import ...
@@ -108,30 +102,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 }
 ```
 
-<<<<<<< HEAD
-## Lecturas adicionales
-=======
-This private route pattern is also covered in the [tutorial on making a site with authentication](/tutorial/authentication-tutorial/#controlling-private-routes).
+Este patrón de ruta privada también es cubierto en el [tutorial para hacer un sitio con autenticación](/tutorial/authentication-tutorial/#controlling-private-routes).
 
-## Further reading
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
+## Lecturas adicionales
 
 Si quieres más información sobre áreas autenticadas con Gatsby, esta lista (lista no exhaustiva) podría ayudar:
 
-<<<<<<< HEAD
 - [Creando un sitio con autenticación de usuarios](/tutorial/authentication-tutorial), un tutorial avanzado de Gatsby
 - [Repositorio de Gatsby con ejemplo de autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Versión en vivo del ejemplo de "Autenticación simple"](https://simple-auth.netlify.com/)
 - [Una _aplicación_ de email en Gatsby](https://github.com/DSchau/gatsby-mail), usando la API _Context_ de React para manejar autenticación
-- [La tienda de Gatsby para _swag_ y otros productos](https://github.com/gatsbyjs/store.gatsbyjs.org)
 - [Añade Autenticación a tus aplicaciones Gatsby con Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (transmisión en directo con Jason Lengstorf)
 - [Añade Autenticación a tus aplicaciones Gatsby con Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
 - [Otras publicaciones relacionadas con autenticación en el blog de Gatsby](/blog/tags/authentication/)
-=======
-- [Making a site with user authentication](/tutorial/authentication-tutorial), an advanced Gatsby tutorial
-- [Gatsby repo "simple auth" example](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Live version of the "simple auth" example](https://simple-auth.netlify.com/)
-- [A Gatsby email _application_](https://github.com/DSchau/gatsby-mail), using React Context API to handle authentication
-- [Add Authentication to your Gatsby apps with Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (livestream with Jason Lengstorf)
-- [Add Authentication to your Gatsby apps with Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
-- [Other authentication-related posts on the Gatsby blog](/blog/tags/authentication/)
->>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
