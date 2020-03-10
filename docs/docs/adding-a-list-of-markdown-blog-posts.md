@@ -8,7 +8,7 @@ Una vez que hayas añadido páginas en _Markdown_ a tu sitio, estás a un solo p
 
 Como es descrito [aquí](/docs/adding-markdown-pages), tendrás que crear tus posts en archivos _Markdown_, los cuales se verán algo así:
 
-```md
+```markdown
 ---
 path: "/blog/my-first-post"
 date: "2017-11-07"

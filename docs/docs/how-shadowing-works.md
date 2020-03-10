@@ -73,6 +73,7 @@ exports.onCreateWebpackConfig = (
     }
   });
 };
+>>>>>>> master
 ```
 
 We first check for themes in the redux store. This is for backwards-compatibility since themes are now merged with plugins. If the `themes` key was used in the user's `gatsby-config.js` those are passed to the shadowing resolver plugin. Otherwise, the flattened plugin list is passed.

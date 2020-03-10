@@ -26,7 +26,7 @@ plugins: [`gatsby-plugin-sass`],
 
 3.  Escribe tus hojas de estilo como archivos `.sass` or `.scss` y solicítalas o impórtalas como de costumbre.
 
-```css:styles.scss
+```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -36,7 +36,7 @@ body {
 }
 ```
 
-```css:styles.sass
+```css:title=styles.sass
 $font-stack:    Helvetica, sans-serif
 $primary-color: #333
 
