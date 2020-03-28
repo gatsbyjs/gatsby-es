@@ -68,9 +68,15 @@ Si estás creando un sitio web pequeño, una de las formas más eficientes de cr
 
 ### Cómo la capa de datos de Gatsby usa GraphQL para traer datos a los componentes
 
+<<<<<<< HEAD
 Hay muchas opciones para cargar datos en los componentes React. 
 Una de las más populares y poderosas es una tecnología llamada 
 [GraphQL](http://graphql.org/).
+=======
+There are many options for loading data into React components. One of the most
+popular and powerful of these is a technology called
+[GraphQL](https://graphql.org/).
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 GraphQL fue creado por Facebook para ayudar a los ingenieros de producto a _traer_ los datos necesarios 
 en los componentes.

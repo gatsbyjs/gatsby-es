@@ -31,7 +31,7 @@ npm install tailwindcss --save-dev
 Para configurar Tailwind, necesitaremos agregar un archivo de configuración de Tailwind. Afortunadamente, Tailwind tiene un script incorporado para hacer esto. Simplemente ejecuta el siguiente comando:
 
 ```shell
-npx tailwind init
+npx tailwindcss init
 ```
 
 ### Opción #1: PostCSS
@@ -70,12 +70,34 @@ Estos pasos suponen que ya tienes instalada una biblioteca CSS-in-JS, y los ejem
 
 1. Instala el Macro de Babel para Tailwind
 
+<<<<<<< HEAD
 **Nota**: Actualmente, `tailwind.macro` no es compatible con Tailwind 1.0.0+. Sin embargo, hay una versión beta compatible, disponible en `tailwind.macro@next`. Tómate la libertad de usar la versión beta o volver a TailwindCSS 0.7.4.
 
 **Opción 1**: Instala `tailwind.macro@next` y usa Tailwind 1.0.0+
+=======
+**Note**: `tailwind.macro` isn't currently compatible with Tailwind 1.0.0+. However, a new forked project can be found at `twin.macro` that supports Tailwindcss v1.2 classes. It's currently in pre-release so not all plugins are supported at the time of writing. Alternatively, you can revert to Tailwind 0.7.4.
+
+**Option 1**: Install `twin.macro` and use Tailwind 1.2.0+
+
+1. Install Twin and Emotion
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ```shell
-npm install --save tailwind.macro@next
+npm install -D twin.macro @emotion/core @emotion/styled gatsby-plugin-emotion
+```
+
+2. Import the Tailwind base styles
+
+```javascript:title=gatsby-browser.js
+import "tailwindcss/dist/base.css"
+```
+
+3. Enable the Gatsby emotion plugin
+
+```javascript:title=gatsby-config.js
+module.exports = {
+  plugins: [`gatsby-plugin-emotion`],
+}
 ```
 
 **Opción 2**: Instala `tailwind.macro` estable y usa Tailwind 0.7.4

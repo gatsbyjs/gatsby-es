@@ -89,11 +89,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path,
       component: blogPostTemplate,
+<<<<<<< HEAD
       // En la consulta graphql de la plantilla de tu blog, puedes usar path
       // como una variable GraphQL para consultar datos del archivo markdown.
       context: {
         path,
         },
+=======
+      // In your blog post template's graphql query, you can use pagePath
+      // as a GraphQL variable to query for data from the markdown file.
+      context: {
+        pagePath: path,
+      },
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
     })
   })
 }

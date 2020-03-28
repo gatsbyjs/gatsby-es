@@ -3,10 +3,14 @@ title: GraphQL API
 tableOfContentsDepth: 2
 ---
 
+<<<<<<< HEAD
 import { GraphqlApiQuery } from "../../www/src/components/api-reference/doc-static-queries"
 import APIReference from "../../www/src/components/api-reference"
 
 A great advantage of Gatsby is a built-in data layer that combines any and all data sources you configure. Data is collected at [build time](/docs/glossary#build) and automatically assembled into a [schema](/docs/glossary#schema) that defines how data can be queried throughout your site.
+=======
+A great advantage of Gatsby is a built-in data layer that combines all data sources you configure. Data is collected at [build time](/docs/glossary#build) and automatically assembled into a [schema](/docs/glossary#schema) that defines how data can be queried throughout your site.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 This doc serves as a reference for GraphQL features built into Gatsby, including methods for querying and sourcing data, and customizing GraphQL for your site's needs.
 
@@ -227,6 +231,7 @@ Fragments allow you to reuse parts of GraphQL queries. They also allow you to sp
 
 For more information, check out the docs guide on [using fragments in Gatsby](/docs/using-fragments/).
 
+<<<<<<< HEAD
 ### List of Gatsby fragments
 
 Some fragments come included in Gatsby plugins, such as fragments for returning optimized image data in various formats with `gatsby-image` and `gatsby-transformer-sharp`, or data fragments with `gatsby-source-contentful`.
@@ -260,6 +265,11 @@ The following fragments are available in any site with `gatsby-source-contentful
 </GraphqlApiQuery>
 
 _**Note**: the above fragments are from officially maintained Gatsby starters; other plugins like `gatsby-source-datocms` and `gatsby-source-sanity` ship with fragments of their own. A list of those fragments can be found in the [`gatsby-image` README](/packages/gatsby-image#fragments)._
+=======
+### Gatsby fragments
+
+Some fragments come included in Gatsby plugins, such as fragments for returning optimized image data in various formats with `gatsby-image` and `gatsby-transformer-sharp`, or data fragments with `gatsby-source-contentful`. For more information on what plugins include fragments, see the [`gatsby-image` README](/packages/gatsby-image#fragments).
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ## Advanced Customizations
 

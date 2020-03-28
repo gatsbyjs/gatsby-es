@@ -72,4 +72,8 @@ Después del despliegue, tu [Informe de estado enriquecido](https://support.goog
 
 ## Recursos adicionales
 
+<<<<<<< HEAD
 Tú también puedes estar interesado en el [articulo acerca del SEO en Gatsby](/blog/tags/seo/)
+=======
+You might also be interested in [blog posts about SEO in Gatsby](/blog/tags/seo/) and [an advanced tutorial about SEO and social sharing cards](/tutorial/seo-and-social-sharing-cards-tutorial/).
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097

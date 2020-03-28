@@ -89,7 +89,11 @@ Hay páginas específicas acerca de cómo contribuir a varias partes del ecosist
 
 ### Entradas del Blog
 
+<<<<<<< HEAD
 Para contribuir al blog de Gatsby, es necesario primero pasar tu idea de contenido por el equipo de Gatsby antes de enviarla. Para más información, refiérete a la página de [contribuciones al blog y sitio web](/contributing/blog-and-website-contributions/), incluyendo cómo proponer una idea y cómo configurar el blog para que se ejecute localmente.
+=======
+For the Gatsby blog, it's necessary to run your content idea by the Gatsby team before submitting it. For more information, refer to the page on [blog contributions](/contributing/blog-contributions/), including how to propose an idea and setting up the blog to run locally.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ## Actualiza tu fork con los últimos cambios de Gatsby
 

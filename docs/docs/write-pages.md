@@ -61,12 +61,16 @@ Los archivos dinámicos que son creados son (todos dentro del directorio `.cache
 
 Esto es una colección de objetos de página, creados desde el _namespace_ `pages` de redux. Para cada página incluye
 
-- [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname)
-- [jsonName](/docs/behind-the-scenes-terminology/#jsonname)
-- [path](/docs/behind-the-scenes-terminology/#path)
-- [matchPath](/docs/behind-the-scenes-terminology/#matchpath)
+- [componentChunkName](/docs/gatsby-internals-terminology/#componentchunkname)
+- [jsonName](/docs/gatsby-internals-terminology/#jsonname)
+- [path](/docs/gatsby-internals-terminology/#path)
+- [matchPath](/docs/gatsby-internals-terminology/#matchpath)
 
+<<<<<<< HEAD
 Las páginas están ordenadas de forma que aquellas con `matchPath`s van antes que las que no tienen. Esto es para ayudar a [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) en la selección de páginas mediante regex, antes de probar las rutas explícitas. Mira [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para más información.
+=======
+The pages are sorted such that those with `matchPath`s come before those without. This is to assist [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) in selecting pages via regex before trying explicit paths. See [matchPaths](/docs/gatsby-internals-terminology/#matchpath) for more info.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 p. ej.
 
@@ -85,7 +89,11 @@ p. ej.
 
 ## sync-requires.js
 
+<<<<<<< HEAD
 Es un archivo de JavaScript generado dinámicamente que exporta `components`. Este es un objeto creado por iteración sobre el _namespace_ `components` de redux. Las claves son el [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname) (p. ej. `component---src-blog-2-js`), y los valores son expresiones requeridas por el componente. P. ej. `/home/site/src/blog/2.js`. El archivo se verá parecido a este:
+=======
+This is a dynamically generated JavaScript file that exports `components`. It is an object created by iterating over the `components` redux namespace. The keys are the [componentChunkName](/docs/gatsby-internals-terminology/#componentchunkname) (e.g. `component---src-blog-2-js`), and the values are expressions that require the component. E.g. `/home/site/src/blog/2.js`. The file will look something like this:
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ```javascript
 exports.components = {

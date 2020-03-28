@@ -17,6 +17,12 @@ Esto significa que la configuración y funcionalidades no son directamente escri
 
 ## Otros recursos
 
+<<<<<<< HEAD
 - [Tutoriales de temas de Gatsby](/tutorial/theme-tutorials/)
 - [Posts de Gatsby sobre temas](/blog/tags/themes)
 - [Plugins, Temas y Starters](/docs/plugins-themes-and-starters/)
+=======
+- [Gatsby theme tutorials](/tutorial/plugin-and-theme-tutorials/)
+- [Gatsby blog posts on themes](/blog/tags/themes)
+- [Plugins, Themes, and Starters](/docs/plugins-themes-and-starters/)
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097

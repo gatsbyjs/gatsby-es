@@ -2,7 +2,11 @@
 title: Compatibilidad Con Navegadores
 ---
 
+<<<<<<< HEAD
 Gatsby tiene compatibilidad con [los mismos navegadores que la actual versión estable de React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support), la cual es actualmente IE9+, así como las versiones más recientes de otros navegadores populares.
+=======
+Gatsby supports [the same browsers as the current stable version of React.js](https://reactjs.org/docs/react-dom.html#browser-support) which is currently IE9+ as well as the most recent versions of other popular browsers.
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ## Polyfills
 

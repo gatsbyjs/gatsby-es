@@ -15,7 +15,13 @@ El propósito de este documento es:
 1.  Definir qué es un _plugin_ transformador de Gatsby, y
 2.  Examinar una reimplementación simplificada de un _plugin_ existente, para demostrar cómo crear un _plugin_ transformador.
 
+<<<<<<< HEAD
 ## ¿Qué hacen los _plugins_ transformadores?
+=======
+For a step-by-step process, check out the tutorial on [Creating a Remark Transformer Plugin](/tutorial/remark-plugin-tutorial/).
+
+## What do transformer plugins do?
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Los _plugins_ transformadores "transforman" datos de un tipo a otro tipo. Usarás a menudo ambos _plugins_ de origen y transformadores en tus sitios Gatsby.
 
@@ -286,3 +292,7 @@ const cachedHTML = await cache.get(htmlCacheKey(markdownNode))
 
 cache.set(htmlCacheKey(markdownNode), html)
 ```
+
+## Additional resources
+
+- Tutorial: [Creating a Remark Transformer Plugin](/tutorial/remark-plugin-tutorial/)

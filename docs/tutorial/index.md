@@ -24,6 +24,7 @@ En estos tutoriales de nivel intermedio, aprenderás cómo extraer datos de casi
 7.  [Crea páginas programáticamente desde datos](/tutorial/part-seven/): Aprende cómo crear páginas programáticamente para tus blog posts.
 8.  [Prepara un sitio web para publicarlo](/tutorial/part-eight/): Aprende como auditar la performance de tu sitio web y buenas prácticas de accesibilidad, SEO y más.
 
+<<<<<<< HEAD
 ## Tutoriales sobre temas
 
 Los temas de Gatsby abstraen toda la configuración por defecto (funcionalidades compartidas, fuentes de datos, diseño) fuera de tu sitio web a un paquete instalable.
@@ -31,6 +32,13 @@ Los temas de Gatsby abstraen toda la configuración por defecto (funcionalidades
 Esto significa que la configuración y la funcionalidad no están escritas directamente en tu proyecto, sino versionadas, isoladas e instaladas como una dependencia. Puedes actualizar un tema, componer temas e incluso cambiar un tema compatible con otro.
 
 Conoce más sobre cómo usar y crear temas en [este tutorial](/tutorial/theme-tutorials/).
+=======
+## Plugin & Theme tutorials
+
+Gatsby plugins are a way to encapsulate, re-use, and compose functionality, such as data sourcing. Gatsby themes are a type of plugin which abstracts your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
+
+Learn how to build and use plugins and themes step-by-step in the [Plugin and Theme Tutorials](/tutorial/plugin-and-theme-tutorials/).
+>>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ## Tutoriales adicionales
 
