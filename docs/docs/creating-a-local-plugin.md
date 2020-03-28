@@ -8,7 +8,7 @@ Si un plugin es únicamente aplicable a tu caso de uso específico, o si estás 
 
 Coloca el código en la carpeta `plugins` en la carpeta raíz de tu proyecto de esta manera:
 
-```
+```text
 /my-gatsby-site
 └── gatsby-config.js
 └── /src

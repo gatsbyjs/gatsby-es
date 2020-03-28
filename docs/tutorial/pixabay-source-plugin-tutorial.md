@@ -2,8 +2,6 @@
 title: "Pixabay Image Source Plugin Tutorial"
 ---
 
-Creating your own source plugin.
-
 ## What this tutorial covers
 
 In this tutorial you'll create your own source plugin. Your plugin will source data from [pixabay.com](https://pixabay.com) allowing you to add Pixabay images to any Gatsby site.

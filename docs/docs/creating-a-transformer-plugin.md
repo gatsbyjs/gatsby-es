@@ -286,3 +286,7 @@ const cachedHTML = await cache.get(htmlCacheKey(markdownNode))
 
 cache.set(htmlCacheKey(markdownNode), html)
 ```
+
+## Additional resources
+
+- Tutorial: [Creating a Remark Transformer Plugin](/tutorial/remark-plugin-tutorial/)

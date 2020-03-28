@@ -4,7 +4,7 @@ title: Estructura de un proyecto Gatsby
 
 Dentro de un proyecto Gatsby, quizás mires algunas o todas las carpetas y archivos siguientes:
 
-```
+```text
 /
 |-- /.cache
 |-- /plugins

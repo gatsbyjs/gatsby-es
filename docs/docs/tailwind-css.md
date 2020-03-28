@@ -31,7 +31,7 @@ npm install tailwindcss --save-dev
 Para configurar Tailwind, necesitaremos agregar un archivo de configuración de Tailwind. Afortunadamente, Tailwind tiene un script incorporado para hacer esto. Simplemente ejecuta el siguiente comando:
 
 ```shell
-npx tailwind init
+npx tailwindcss init
 ```
 
 ### Opción #1: PostCSS
@@ -75,7 +75,21 @@ Estos pasos suponen que ya tienes instalada una biblioteca CSS-in-JS, y los ejem
 **Opción 1**: Instala `tailwind.macro@next` y usa Tailwind 1.0.0+
 
 ```shell
-npm install --save tailwind.macro@next
+npm install -D twin.macro @emotion/core @emotion/styled gatsby-plugin-emotion
+```
+
+2. Import the Tailwind base styles
+
+```javascript:title=gatsby-browser.js
+import "tailwindcss/dist/base.css"
+```
+
+3. Enable the Gatsby emotion plugin
+
+```javascript:title=gatsby-config.js
+module.exports = {
+  plugins: [`gatsby-plugin-emotion`],
+}
 ```
 
 **Opción 2**: Instala `tailwind.macro` estable y usa Tailwind 0.7.4

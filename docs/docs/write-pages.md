@@ -61,10 +61,10 @@ Los archivos dinámicos que son creados son (todos dentro del directorio `.cache
 
 Esto es una colección de objetos de página, creados desde el _namespace_ `pages` de redux. Para cada página incluye
 
-- [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname)
-- [jsonName](/docs/behind-the-scenes-terminology/#jsonname)
-- [path](/docs/behind-the-scenes-terminology/#path)
-- [matchPath](/docs/behind-the-scenes-terminology/#matchpath)
+- [componentChunkName](/docs/gatsby-internals-terminology/#componentchunkname)
+- [jsonName](/docs/gatsby-internals-terminology/#jsonname)
+- [path](/docs/gatsby-internals-terminology/#path)
+- [matchPath](/docs/gatsby-internals-terminology/#matchpath)
 
 Las páginas están ordenadas de forma que aquellas con `matchPath`s van antes que las que no tienen. Esto es para ayudar a [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) en la selección de páginas mediante regex, antes de probar las rutas explícitas. Mira [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para más información.
 
