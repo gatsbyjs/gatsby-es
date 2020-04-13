@@ -15,4 +15,4 @@ Puedes ir directamente al [issue de traducciones](https://github.com/gatsbyjs/ga
 
 ## Guía de estilos y glosario 💅
 
-Las traducciones deben llevar un orden, si fuiste o vas a ir directamente al [issue de traducciones](https://github.com/gatsbyjs/gatsby-es/issues/97), por favor lee con detenimiento la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md) o tenla a la mano para poder hacer referencia a palabras comunes y/o preguntas acerca de que traducir y que no.
+Las traducciones deben llevar un orden, si fuiste o vas a ir directamente al [issue de traducciones](https://github.com/gatsbyjs/gatsby-es/issues/97), por favor lee con detenimiento la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md) o tenla la mano para poder hacer referencia a palabras comunes y/o preguntas acerca de que traducir y que no.
