@@ -18,7 +18,7 @@ Puedes usarla cuando tu sitio de desarrollo esté ejecutándose de forma habitua
 `http://localhost:8000/___graphql`.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="/graphiql-explore.mp4"></source>
+  <source type="video/mp4" src="/graphiql-explore.mp4" />
   <p>Your browser does not support the video element.</p>
 </video>
 

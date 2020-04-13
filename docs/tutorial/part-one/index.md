@@ -45,7 +45,7 @@ Abre el archivo en `src/pages/index.js`. El código en este archivo crea un comp
 1.  Cambia el texto "Hello World" a "Hola Gatsby!" y guarda el archivo. Si tus ventanas están una al lado de la otra, puedes ver que los cambios a tu código y contenido son reflejados casi de inmediato en el navegador después de guardar el archivo.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
+  <source type="video/mp4" src="./02-demo-hot-reloading.mp4" />
   <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
@@ -327,7 +327,7 @@ export default () => (
 Después de que guardes el archivo, deberías ver la página de contacto y ser capaz de enlazarla a la página principal.
 
 <video controls="controls" loop="true">
-  <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
+  <source type="video/mp4" src="./10-linking-between-pages.mp4" />
   <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
