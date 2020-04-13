@@ -10,7 +10,7 @@ La documentación de Gatsby consiste en una serie de páginas maquetadas mediant
 
 Sabemos que todos quieren contribuir pero debemos mantener un orden en las traducciones, para esto el issue de progreso es de gran ayuda, para poder empezar a traducir sigue estos pasos, por favor **no empieces a traducir si no sigues todos estos pasos, y te asignamos la página**, la idea es que no pierdas preciado trabajo y tiempo si la página ya fue tomada por otro, a veces podemos tardar en asignar, pero por favor ten paciencia:
 
-- **1.-** Ve al [issue de progreso de traducción activa](#issues-de-traducciones) y revisa que página esta **disponible** y quisieras traducir.
+- **1.-** Ve al [issue de progreso de traducción activa](#issues-de-traducciones) y revisa que página está **disponible** y quisieras traducir.
 - **2.-** Si ya tienes cual quieres traducir, comenta citando a alguno de los mantenedores @horacioh, @darking360 o @nucliweb con la página que quieres traducir y así podemos asignarla.
 - **3.-** Espera una respuesta en los comentarios, o bien, revisa que la página que deseas traducir ya tiene tu nombre de usuario al lado entre paréntesis:
 
@@ -18,15 +18,15 @@ Sabemos que todos quieren contribuir pero debemos mantener un orden en las tradu
 
   De esta forma ya sabes que puedes empezar a traducir.
 
-- **4.-** Empieza a traducir 🎉 Si no sabes como empezar, en la siguiente parte te enseñamos como hacer un `fork` del proyecto, clonarlo y a cómo abrir tu primer PR.
+- **4.-** Empieza a traducir 🎉 Si no sabes como empezar, en la siguiente parte te enseñamos como hacer un `fork` del proyecto, clonarlo y  cómo abrir tu primer PR.
 
 ## Crear un fork, clonar
 
 ¿Es tu primera contribución a un proyecto de código abierto? Que genial, y no te preocupes, no es un proceso complicado o tedioso, solo hay una serie de pasos que debes seguir para empezar a traducir y crear tu primera contribución, debes crear un `fork` del proyecto, que significa clonar el proyecto base a tus proyectos, de esta manera evitamos choques no deseados en el contenido oficial. Seguidamente clonarás el proyecto a tu equipo de trabajo para tener todo el código de las páginas para que las abras en tu editor de texto, y finalmente cuando termines de traducir, pódras crear tu primer PR para que lo revisemos 🎉 Parece mucho, pero sigue estas instrucciones:
 
 - **1.-** Para crear un `fork` del proyecto, dirígete a la [página principal de las traducciones en Español](https://github.com/gatsbyjs/gatsby-es) y en la parte superior derecha, verás un botón que dice `fork`, dale click y esto creará un `fork` en tus proyectos personales, al finalizar esto, estarás en una página similar a la de Gatsby, solo que con tu nombre de usuario.
-- **2.-** Ahora vas a clonar el proyecto, para esto, justo donde quedaste en el paso anterior dale click a `Clone or download` y eso te dará la dirección de tu repositorio, copiala y ve a tu terminal y ejecuta `git clone <URL_DEL_REPOSITORIO>` pegando el enlace de tu repositorio para clonar.
-- **3.-** Ya con el proyecto clonado, abrelo en tu editor de texto y ahora debes crear una rama para trabajar ⚙️
+- **2.-** Ahora vas a clonar el proyecto, para esto, justo donde quedaste en el paso anterior dale clic a `Clone or download` y eso te dará la dirección de tu repositorio, copiala y ve a tu terminal y ejecuta `git clone <URL_DEL_REPOSITORIO>` pegando el enlace de tu repositorio para clonar.
+- **3.-** Ya con el proyecto clonado, ábrelo en tu editor de texto y ahora debes crear una rama para trabajar ⚙️
 
 ## Crear una rama y hacer commit de tus cambios
 
@@ -36,29 +36,29 @@ Al terminar de clonar el proyecto, estarás trabajando sobre la rama `master` en
 - **2.-** Ya estando en tu rama, abre tu editor de texto favorito y empieza a traducir la página que solicitaste 🚀
 - **3.-** Al finalizar de traducir, debes hacer `commit` de estos cambios, esto para que el repositorio los guarde, para esto debes agregar tus cambios ejecutando: `git add <RUTA_A_LA_PAGINA>`, debes agregar la ruta al archivo que modificaste, una forma fácil de obtener la ruta es ejecutar `git status` y aparecerá en rojo el archivo que modificaste, solo agrega el archivo de la página que cambiaste, nada más.
 - **4.-** Ahora debes agregar un comentario a tu commit, para esto ejecuta: `git commit -m "<MENSAJE>"`, por ejemplo: `git commit -m "Translating tutorial eight. Half page ready"`.
-- **5.-** Finalmente es hora de subir tus cambios, para esto baste con ejecutar: `git push origin` o `git push origin <NOMBRE_DE_LA_RAMA>`.
+- **5.-** Finalmente es hora de subir tus cambios, para esto basta con ejecutar: `git push origin` o `git push origin <NOMBRE_DE_LA_RAMA>`.
 - **6.-** Tus cambios ya están en tu repositorio en Github, ahora solo resta crear tu PR.
 
 ## Creando un PR
 
 Todos tus cambios ya están en el repositorio, pero no el oficial, para poderlos incluir debes crear un PR y los mantenedores lo revisarán para aprobarlo, esto para comprobar que tiene los números de línea correctos, acentos y gramática, sigue estos pasos:
 
-- **1.-** Ve a las [Pull Requests del proyecto](https://github.com/gatsbyjs/gatsby-es/pulls) y haz click en el botón `New pull request`.
-- **2.-** Como tus cambios están en tu repositorio que es un `fork` del oficial, debes hacer click en el enlace que dice: `compare across forks`.
+- **1.-** Ve a las [Pull Requests del proyecto](https://github.com/gatsbyjs/gatsby-es/pulls) y haz clic en el botón `New pull request`.
+- **2.-** Como tus cambios están en tu repositorio que es un `fork` del oficial, debes hacer clic en el enlace que dice: `compare across forks`.
 - **3.-** En las opciones de la derecha, debes seleccionar tu repositorio, usualmente aparece como: `<TU_NOMBRE_DE_USUARIO>/gatsby-es`, y al lado debes seleccionar al nombre de la rama en la que están tus cambios.
-- **4.-** Ahora se mostrarán los cambios que realizaste en el código, si todo se ve bien, haz click en `Create pull request`.
+- **4.-** Ahora se mostrarán los cambios que realizaste en el código, si todo se ve bien, haz clic en `Create pull request`.
 - **5.-** Ahora se te pedirá un título para el PR y unos comentarios, agrega un título acorde con tu traducción o cambios, y un comentario explicando los mismos, y dale a `Create pull request`.
-- **6.-** Ahora agregarás la etiqueta `Work in progress` a tu PR, puedes hacer esto en las opciones de la mano derecha del PR, dale click a `Labels` y busca esta etiqueta, asi sabremos que sigues trabajando en el PR. Al terminar con tu trabajo, cambia la etiqueta a `Ready for review` para que sepamos que ya está listo para ser evaluado.
+- **6.-** Ahora agregarás la etiqueta `Work in progress` a tu PR, puedes hacer esto en las opciones de la mano derecha del PR, dale clic a `Labels` y busca esta etiqueta, así sabremos que sigues trabajando en el PR. Al terminar con tu trabajo, cambia la etiqueta a `Ready for review` para que sepamos que ya está listo para ser evaluado.
 - **7.-** Los mantenedores revisarán tus cambios, y te harán saber si hay correcciones o se puede pasar directo, de existir correcciones, solo debes agregarlas, volver a hacer commit de tus cambios y subir a tu repositorio, el PR se actualizará automáticamente 🧙
 
 ## Recomendaciones al trabajar en las traducciones
 
-Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md), pero aquí agregamos los detalles mas importantes que debes tener en cuenta al traducir que pueden parecer basicos pero son de suma importancia:
+Puedes encontrar más detalle sobre el estilo que deben llevar las traducciones en la [guía de estilos y glosario](https://github.com/gatsbyjs/gatsby-es/blob/master/TRANSLATION.md), pero aquí agregamos los detalles más importantes que debes tener en cuenta al traducir que pueden parecer básicos pero son de suma importancia:
 
 - Cuida tu ortografía, es importante que la documentación tenga una buena ortografía tanto acentos como palabras bien escritas, siempre ten cuidado con esto.
 - No agregues o elimines líneas de la documentación, traduce siempre sobre las mismas líneas, una forma fácil de comprobar esto es revisar que las primeras y últimas 10 líneas de la página tengan contenido igual o títulos, pero por supuesto traducidos.
 - Siempre manten un Español neutro, no uses palabras que estén influenciadas por tu región o país, esto será evaluado más adelante por los mantenedores pero es de gran ayuda para mantener la documentación con un lenguaje neutral.
-- Si no conoces la traducción a una palabra puedes utilizar herramientas como [Google translate](https://translate.google.com/?hl=es), no hay nada de malo en esto, pero no traduzcas una página completa con este ya que el significado se puede perder.
+- Si no conoces la traducción a una palabra puedes utilizar herramientas como [Google translate](https://translate.google.com/?hl=es), no hay nada de malo en esto, pero no traduzcas una página completa con éste ya que el significado se puede perder.
 
 Una buena forma de tener en cuenta aspectos como estos es crear una lista de checks en tu PR, por ejemplo:
 
@@ -68,15 +68,15 @@ Una buena forma de tener en cuenta aspectos como estos es crear una lista de che
 
 ## No se inglés, ¿aún así puedo contribuir?
 
-¡Por supuesto que si! Como pudiste leer en la sección arriba de esta, entre los aspectos vitales de las traducciones están la ortografía y la gramática, los mantenedores hacen su mejor esfuerzo por mantener limpios estos aspectos, pero siempre se les puede escapar algo, también puedes contribuir leyendo las traducciones y detectando errores, bien sean estos aspectos o quizás palabras mal escritos, modismos o palabras que no son de Español neutro, puedes ayudarnos a curar este contenido 🤓 Envíanos un PR con correcciones 🚀
+¡Por supuesto que sí! Como pudiste leer en la sección arriba de esta, entre los aspectos vitales de las traducciones están la ortografía y la gramática, los mantenedores hacen su mejor esfuerzo por mantener limpios estos aspectos, pero siempre se les puede escapar algo, también puedes contribuir leyendo las traducciones y detectando errores, bien sean estos aspectos o quizás palabras mal escritos, modismos o palabras que no son de Español neutro, puedes ayudarnos a curar este contenido 🤓 Envíanos un PR con correcciones 🚀
 
 ## Recompensas ✨
 
-Al contribuir con un proyecto como este no solo estarías contribuyendo a código abierto (lo cual es genial), si no que tambien entras a los contribuidores oficiales de Gatsby, y por si esto no fuera lo suficiente, el equipo de Gatsby te quiere agradecer regalándote un [premio](https://www.gatsbyjs.org/contributing/contributor-swag/) de la [tienda oficial de Gatsby](https://store.gatsbyjs.org/) ❤️ Si sigues contribuyendo puedes optar por más regalos, con 5 contribuciones o más, revisa la [página oficial](https://www.gatsbyjs.org/contributing/contributor-swag/) para más información 🧐
+Al contribuir con un proyecto como éste no solo estarías contribuyendo a código abierto (lo cual es genial), si no que también entrás a los contribuidores oficiales de Gatsby, y por si esto no fuera lo suficiente, el equipo de Gatsby te quiere agradecer regalándote un [premio](https://www.gatsbyjs.org/contributing/contributor-swag/) de la [tienda oficial de Gatsby](https://store.gatsbyjs.org/) ❤️ Si sigues contribuyendo puedes optar por más regalos, con 5 contribuciones o más, revisa la [página oficial](https://www.gatsbyjs.org/contributing/contributor-swag/) para más información 🧐
 
 ## Extensión de Markdown para VS Code
 
-Al traducir encontrarás sintaxis como `[texto](https://www.google.com)` y muchas otras como `**texto en negrita**`, esto corresponde a sintaxis de Markdown, son archivos que luego son renderizados a texto en nuestras páginas web, una forma excelente de saber si tienes bien escrito el Markdown es hacer una pequeña visualización de este, para no desplegar o ejecutar herramientas tediosas, Visual Studio Code posee una extension para visualizar Markdown, junto a otras herramientas útiles, puedes encontrarlo en [este enlace](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), si no utilizas este editor, puedes valerte de cualquier extensión que te ayude a esto, solo asegúrate de que el formato y la sintaxis estan bien, por ejemplo, nunca separes `[texto](https://www.google.com)` como `[texto] (https://www.google.com)` ya que esto daña el enlace que debe aparecer allí 🔥
+Al traducir encontrarás sintaxis como `[texto](https://www.google.com)` y muchas otras como `**texto en negrita**`, esto corresponde a sintaxis de Markdown, son archivos que luego son renderizados a texto en nuestras páginas web, una forma excelente de saber si tienes bien escrito el Markdown es hacer una pequeña visualización de éste, para no desplegar o ejecutar herramientas tediosas, Visual Studio Code posee una extension para visualizar Markdown, junto a otras herramientas útiles, puedes encontrarlo en [este enlace](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), si no utilizas este editor, puedes valerte de cualquier extensión que te ayude a esto, solo asegúrate de que el formato y la sintaxis están bien, por ejemplo, nunca separes `[texto](https://www.google.com)` como `[texto] (https://www.google.com)` ya que esto daña el enlace que debe aparecer allí 🔥
 
 ## A traducir 🏃‍
 
