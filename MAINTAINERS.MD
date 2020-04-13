@@ -4,7 +4,7 @@ La traducción de la documentación de Gatsby es un esfuerzo por y para la comun
 
 ## Que esperamos de ti 🧙‍
 
-Como mantenedor tienes un rol de responsabilidad mas alto en el repositorio, tienes todo el poder en tus manos para realizar merge de solicitudes PR, cerrar issues, y editar  o reabrir algún otro, pero todo poder conlleva una gran responsabilidad, primordialmente esperamos que sigas:
+Como mantenedor tienes un rol de responsabilidad más alto en el repositorio, tienes todo el poder en tus manos para realizar merge de solicitudes PR, cerrar issues, y editar o reabrir algún otro, pero todo poder conlleva una gran responsabilidad, primordialmente esperamos que sigas:
 
 - Tener cierta cantidad de tiempo a la semana para dedicar al repositorio, entre 4 y 8 horas estaría bien, recuerda que esto es un esfuerzo de la comunidad, y todos tenemos trabajo fuera de esto claro 🤓
 - Mantener al día el repositorio, bien sea con los PR de actualización o velando porque las traducciones estén bien.
@@ -22,4 +22,4 @@ Si llegaste hasta aquí es que estás interesado en ser mantenedor de la documen
 
 ## Máximo número de mantenedores
 
-Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería acotar el número a 3 o 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puedes optar por [swag gratis](https://www.gatsbyjs.org/contributing/contributor-swag/) con tus contribuciones ❤️
+Ahora bien no toda la comunidad puede ser mantenedora del repositorio, idealmente se debería acotar el número a 3 ó 5 mantenedores, para poder organizar los issues y revisar las traducciones. Aun así las contribuciones cuentan mucho, puedes optar por [swag gratis](https://www.gatsbyjs.org/contributing/contributor-swag/) con tus contribuciones ❤️
