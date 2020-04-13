@@ -12,7 +12,7 @@ Los títulos de las secciones tienen identificadores explícitos de la siguiente
 ## Try Gatsby {#try-gatsby}
 ```
 
-¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, osea:
+¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, o sea:
 
 ```md
 Consulta la [sección de inicio](/getting-started#try-gatsby) para más información.
