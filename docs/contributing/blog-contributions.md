@@ -25,6 +25,7 @@ Cosas que buscamos para el contenido del blog de Gatsby:
 - Mostrar una herramienta, un fix, u otro contenido que tu u otra persona ha contribuido a la comunidad _open source_ de Gatsby
 - Mostrar una herramienta, un fix que otra persona ha contribuido a la comunidad _open source_ de Gatsby
 - Explicaciones claras y concisas de detalles técnicos o conceptos complejos relacionados con React, GraphQL, la web y desarrollo de aplicaciones, contribuciones _open source_, core de Gatsby y temas relacionados con Gatsby.
+- Guías y recursos para aprender React, GraphQL, HTML/CSS, desarrollo web, buenas practicas, accesibilidad, SEO, Gatsby, diferentes herramientas e integraciones con CMS y otros temas relacionados con Gatsby.
 - Otros temas que piensas que podrían ser valiosos para las personas aprendiendo o trabajando con Gatsby.
 
 Cosas que queremos evitar en el blog de Gatsby:
