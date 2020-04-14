@@ -195,7 +195,7 @@ Aquí hay una consulta de ejemplo para generar diferentes tamaños de una imagen
 }
 ```
 
-En cualquier caso, puedes agregar soporte para trazado SVG adicionando `_tracedSVG` al final de cada fragmento. _Note esto no funcionará en el explorador GraphQL._
+En cualquier caso, puedes agregar soporte para trazado SVG adicionando `_tracedSVG` al final de cada fragmento. _Nota: esto no funcionará en el explorador GraphQL._
 
 ### Renderización de las imágenes en `index.js`
 
