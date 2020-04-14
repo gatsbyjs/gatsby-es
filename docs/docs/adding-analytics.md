@@ -16,15 +16,15 @@ Google Analytics provee una forma de recoger estos datos y analizarlos, respondi
 
 El primer paso es crear una cuenta de Google Analytics. Puedes hacerlo [aquí](https://analytics.google.com/) con tu cuenta de Google.
 
-Google también tiene una [página de preparación](https://support.google.com/analytics/answer/1008015?hl=en) para más referencias.
+Google también tiene una [página de preparación](https://support.google.com/analytics/answer/1008015?hl=es) para más referencias.
 
-Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Ésta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en si misma. Rellena el formulario con el nombre de tu sitio web y URL.
+Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Esta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en sí misma. Rellena el formulario con el nombre de tu sitio web y URL.
 
 El Tracking ID  es lo que se usa para identificar los datos con el tráfico de tu sitio web. Deberías usar un Tracking ID distinto para cada sitio web que estés monitoreando.
 
-Deberías tener un Tracking ID; apúntalo, ya que tu sitio web necesitará referenciarlo cuando mande las visualizaciones de página a Google Analytics. Debería estar en formato `UA-XXXXXXXXX-X`.
+Deberías tener un Tracking ID; apúntalo, ya que tu sitio web necesitará referenciarlo cuando envíe las visualizaciones de página a Google Analytics. Debería estar en formato `UA-XXXXXXXXX-X`.
 
-Puedes encontrar el tracking ID posteriormente yendo a `Admin > Tracking Info > Tracking Code`.
+Puedes encontrar el tracking ID posteriormente yendo a `Admin` > `Tracking Info` > `Tracking Code`.
 
 ## Usando `gatsby-plugin-google-analytics`
 
@@ -54,7 +54,7 @@ module.exports = {
 
 La documentación completa para el plugin puede encontrarse [aquí](/packages/gatsby-plugin-google-analytics/).
 
-Hay más opciones de configuración extra--tanto con el plugin de Gatsby como en tu cuenta de Google Analytics--así que puedes personalizar cosas para satisfacer las necesidades de tu página web.
+Hay más opciones de configuración extra --tanto con el plugin de Gatsby como en tu cuenta de Google Analytics-- así que puedes personalizar cosas para satisfacer las necesidades de tu página web.
 
 ¡Cuando esté configurado puedes desplegar tu sitio web para probar! Si navegas a la página de inicio de Google Analytics, deberías ver un tablero con diferentes estadísticas.
 
