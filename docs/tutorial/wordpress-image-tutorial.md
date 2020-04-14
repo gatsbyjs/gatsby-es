@@ -53,17 +53,10 @@ module.exports = {
         baseUrl: `dev-gatbsyjswp.pantheonsite.io`,
         // El protocolo. Este puede ser http o https.
         protocol: `http`,
-<<<<<<< HEAD
         // Indica si el sitio está alojado en wordpress.com.
         // Si es falso, entonces se asume que el sitio es auto alojado.
         // Si es verdadero, entonces el plugin obtendrá su contenido en wordpress.com usando la API REST JSON V2.
         // Si tu sitio está alojado en wordpress.org, configúralo como falso.
-=======
-        // Indicates whether the site is hosted on wordpress.com.
-        // If false, then the assumption is made that the site is self hosted.
-        // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
-        // If your site is hosted on wordpress.com, then set this to true.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
         hostingWPCOM: false,
         // Si useACF es verdadero, el plugin fuente intentará importar el contenido del plugin ACF de WordPress.
         // Esta característica no se ha probado para sitios alojados en WordPress.com
