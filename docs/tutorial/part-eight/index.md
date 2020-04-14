@@ -20,9 +20,9 @@ En esta sección final, te guiaremos en algunos pasos básicos para preparar y p
 
 Citando del [sitio web Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse es una herramienta automatizada de código abierto para aumentar la calidad de las páginas web. Puedes ejecutarla para que diagnostique cualquier pagina web, publica o que requiera autenticación. Audita el desempeño, accesibilidad, aplicación web progresiva (PWAs siglas en ingles), y más.
+> Lighthouse es una herramienta automatizada de código abierto para aumentar la calidad de las páginas web. Puedes ejecutarla para que diagnostique cualquier pagina web, publica o que requiera autenticación. Audita el desempeño, accesibilidad, aplicación web progresiva (PWAs siglas en inglés), y más.
 
-Lighthouse viene incluido en Chrome DevTools. Ejecutando sus auditorías -- y después abordando los errores que encuentra e implementando las mejoras que sugiere -- es una manera estupenda de preparar tu sitio web para ponerlo en línea. Su ayuda te da la confianza de que tu sitio web es lo mas rápido y accesible posible.
+Lighthouse viene incluido en Chrome DevTools. Ejecutando sus auditorías -- y después abordando los errores que encuentra e implementando las mejoras que sugiere -- es una manera estupenda de preparar tu sitio web para ponerlo en línea. Su ayuda te da la confianza de que tu sitio web es lo más rápido y accesible posible.
 
 ¡Probémoslo!
 
@@ -52,11 +52,11 @@ Ahora ejecutarás tus primeras pruebas con Lighthouse.
 
 1.  Si aun no lo has hecho, abre tu sitio web en Chrome en modo incógnito, para que las extensiones no interfieran con las pruebas. Después, abre la Chrome DevTools.
 
-2.  Haz clic en la pestaña "Audits" donde mirarás una pantalla como esta:
+2.  Haz clic en la pestaña "Audits" donde verás una pantalla como ésta:
 
 ![Lighthouse audit start](./lighthouse-audit.png)
 
-3.  Da clic en "Perform an audit..." (todos los tipos de auditoría disponibles deberán estar seleccionadas por defecto). Después da clic en "Run audit" (tomará un minuto aproximadamente para hacer la auditoría). Una vez que la auditoría termine, verás unos resultados como estos:
+3.  Haz clic en "Perform an audit..." (todos los tipos de auditoría disponibles deberán estar seleccionadas por defecto). Después haz clic en "Run audit" (tomará un minuto aproximadamente para hacer la auditoría). Una vez que la auditoría termine, verás unos resultados como estos:
 
 ![Lighthouse audit results](./lighthouse-audit-results.png)
 
@@ -117,7 +117,7 @@ Es todo lo que necesitas para empezar a agregar un manifiesto a tu sitio web Gat
 
 Otro requerimiento para que un sitio web califique como PWA es el uso de un [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Un "service worker" se ejecuta en segundo plano, decidiendo si ofrece recursos en línea o almacenados en la cache del navegador dependiendo del estado de conexión, permitiendo una experiencia agradable sin ella.
 
-El [plugin Gatsby's offline](/packages/gatsby-plugin-offline/) hace que el sitio web Gatsby funcione sin conexión y sea mas resistente a malas condiciones de red, creando un "service worker" para tu sitio web.
+El [plugin Gatsby's offline](/packages/gatsby-plugin-offline/) hace que el sitio web Gatsby funcione sin conexión y sea más resistente a malas condiciones de red, creando un "service worker" para tu sitio web.
 
 ### ✋ Usando `gatsby-plugin-offline`
 
@@ -158,7 +158,7 @@ Es todo lo que necesitas para iniciar con "service workers" en Gatsby.
 
 ## Agregar metadatos a la página
 
-Agregar metadatos a las páginas (como un título o descripción) es clave para ayudar aa motores de búsqueda como Google a entender tu contenido y decidir cuando mostrarte en sus resultados de búsqueda.
+Agregar metadatos a las páginas (como un título o descripción) es clave para ayudar a los motores de búsqueda como Google a entender tu contenido y decidir cuando mostrarte en sus resultados de búsqueda.
 
 [React Helmet](https://github.com/nfl/react-helmet) es una biblioteca que provee una interfaz de componentes React para que administres la [cabecera de tus documentos HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
@@ -291,7 +291,7 @@ SEO.propTypes = {
 export default SEO
 ```
 
-El código de arriba configura valores por defecto para la mayoría de etiquetas de metadatos y te proporciona un componente `<SEO>` para ytrabajar con el en el resto de tu proyecto. Bastante genial, ¿verdad?
+El código de arriba configura valores por defecto para la mayoría de etiquetas de metadatos y te proporciona un componente `<SEO>` para trabajar con él en el resto de tu proyecto. Bastante genial, ¿verdad?
 
 4.  Ahora, puedes utilizar el componente `<SEO>` en tus plantillas y páginas y pasarle props. Por ejemplo, agrégalo a tu plantilla `blog-post.js` así:
 
@@ -334,7 +334,7 @@ export const query = graphql`
 `
 ```
 
-El ejemplo de arriba esta basado en el [Starter de Blog de Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Pasandole props al componente `<SEO>` puedes cambiar dinámicamente  los metadatos de una entrada del blog. En este caso, el `title` y el `excerpt` de la entrada de blog (sí existen en el archivo markdown de la entrada de blog) serán utilizados en lugar de las propiedades por defecto del `siteMetadata` de tu archivo `gatsby-config.js`.
+El ejemplo de arriba está basado en el [Starter de Blog de Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Pasandole props al componente `<SEO>` puedes cambiar dinámicamente  los metadatos de una entrada del blog. En este caso, el `title` y el `excerpt` de la entrada de blog (sí existen en el archivo markdown de la entrada de blog) serán utilizados en lugar de las propiedades por defecto del `siteMetadata` de tu archivo `gatsby-config.js`.
 
 Ahora, sí ejecutas una auditoría Lighthouse como se mostraba más arriba, deberías acercarte --sí no es perfecto-- ¡a una puntuación de 100!
 
@@ -372,6 +372,6 @@ Esto es solo el inicio. ¡Sigue adelante!
 - ¿Escribiste algún post genial acerca de lo que has aprendido? ¡Compártelo también!
 - ¡Colabora! Paseate por los [issues abiertos](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) en el repo de gatsby y [vuélvete colaborador](/contributing/how-to-contribute/).
 
-Revisa los docs de ["como contribuir"](/contributing/how-to-contribute/) para mas ideas.
+Revisa los docs de ["como contribuir"](/contributing/how-to-contribute/) para más ideas.
 
 Ansiamos ver lo que haces 😄.
