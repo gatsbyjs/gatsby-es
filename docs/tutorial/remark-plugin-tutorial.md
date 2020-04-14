@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD:docs/docs/remark-plugin-tutorial.md
-title: "Remark Plugin Tutorial"
-=======
 title: "Creating a Remark Transformer Plugin"
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097:docs/tutorial/remark-plugin-tutorial.md
 ---
 
 [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark) empowers developers to translate Markdown into HTML to be consumed via Gatsby's GraphQL API. Blogs and other content based sites can highly benefit from functionality enabled with this plugin. With this plugin, authors of content for the site don't need to worry about how the site is written or structured but can rather focus on writing engaging posts and content!
