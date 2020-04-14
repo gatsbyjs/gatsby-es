@@ -1,5 +1,5 @@
 ---
-título: Utilizando Múltiple Temas Juntos
+título: Usando múltiples temas juntos
 ---
 
 ## Que subre este tutorial
