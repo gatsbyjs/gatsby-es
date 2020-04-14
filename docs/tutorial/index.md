@@ -34,6 +34,6 @@ Conoce más sobre cómo usar y crear temas en [este tutorial](/tutorial/theme-tu
 
 ## Tutoriales adicionales
 
-Hay muchos casos de uso para Gatsby, muchos de los cuales no están cubiertos en el primer grupo de tutoriales para no distraerte mientras aprendes. La sección de los tutoriales adicionales de Gatsby es una colección de recursos que muestran cómo hacer muchas más cosas, paso a paso con Gatsby, como por ejemplo cómo usar "source plugins" para imagenes y gestores de contenido (CMS).
+Hay muchos casos de uso para Gatsby, muchos de los cuales no están cubiertos en el primer grupo de tutoriales para no distraerte mientras aprendes. La sección de los tutoriales adicionales de Gatsby es una colección de recursos que muestran cómo hacer muchas más cosas, paso a paso con Gatsby, como por ejemplo cómo usar "source plugins" para imágenes y gestores de contenido (CMS).
 
 Profundiza más con [los tutoriales adicionales de Gatsby](/tutorial/additional-tutorials/).
