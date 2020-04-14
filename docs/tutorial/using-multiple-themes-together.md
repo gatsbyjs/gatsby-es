@@ -2,51 +2,48 @@
 título: Utilizando Múltiple Temas Juntos
 ---
 
-<<<<<<< HEAD
-_Este tutorial estará disponible pronto. Mientras tanto, puedes mirar la [introducción a utilizar múltiples temas el la documentación.](/docs/themes/using-multiple-gatsby-themes)._
-=======
-## What this tutorial covers
+## Que subre este tutorial
 
-This tutorial covers how to compose multiple themes into a final site using [gatsby-theme-blog](/packages/gatsby-theme-blog/), [gatsby-theme-notes](/packages/gatsby-theme-notes/) and [gatsby-mdx-embed](/packages/@pauliescanlon/gatsby-mdx-embed/) as examples. It will also cover the concept of component shadowing with [Theme-UI](/docs/theme-ui/) for styling.
+Este tutorial cubre como componer múltiples temas en un sitio final usando [gatsby-theme-blog](/packages/gatsby-theme-blog/), [gatsby-theme-notes](/packages/gatsby-theme-notes/) y [gatsby-mdx-embed](/packages/@pauliescanlon/gatsby-mdx-embed/) como ejemplos. También cubre el concepto de `component shadowing` con [Theme-UI](/docs/theme-ui/) para estilizado.
 
-## Prerequisites
+## Prerrequisitos
 
-This tutorial assumes the following:
+Este tutorial asume lo siguiente:
 
-- That you have an understanding of [Gatsby fundamentals](/tutorial/#gatsby-fundamentals)
-- An existing knowledge of [Gatsby Themes](/docs/themes/what-are-gatsby-themes/)
+- Que entiendes los [fundamentos de Gatsby](/tutorial/#gatsby-fundamentals)
+- Conocimiento sobre [temas de Gatsby](/docs/themes/what-are-gatsby-themes/)
 
-## Example repository
+## Repositorio de ejemplo
 
-You can view a [full working example of this tutorial](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes) on GitHub. Some longer code snippets have been edited for length and the full code is available for reference in the example repository.
+Puedes ver un [ejemplo completo funcionando de este tutorial](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes) en Github. Algunos trozos de código largos han sido editados por longitud y el código completo esta disponible para referencia en el repositorio de ejemplo.
 
-## Create a new site
+## Crear un sitio nuevo
 
-Using the hello world starter create a new site and navigate to that directory.
+Usando el `starter` de `hello world`, crea un nuevo sitio y navega a ese directorio.
 
 ```shell
 gatsby new multiple-themes https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd multiple-themes
 ```
 
-## Install and compose the themes
+## Instalar y componer los temas
 
-This step composes [gatsby-theme-blog](/packages/gatsby-theme-blog/) and [gatsby-theme-notes](/packages/gatsby-theme-notes/).
+Este paso compone [gatsby-theme-blog](/packages/gatsby-theme-blog/) y [gatsby-theme-notes](/packages/gatsby-theme-notes/).
 
-1. Install the themes:
+1. Instala los temas:
 
 ```shell
 npm install gatsby-theme-blog gatsby-theme-notes
 ```
 
-2. Edit `gatsby-config.js` to add the themes to the plugin array and to update the site metadata:
+2. Edita el archivo `gatsby-config.js` para agregar los temas al arreglo de plugins y para actualizar los metadatos del sitio:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Your Site Title`,
-    description: `A description for your blazing fast site, using multiple themes!`,
-    author: `Your name`,
+    title: `El titulo de tu sitio`,
+    description: `Una descripción para tu sitio super rápido, usando múltiples temas!`,
+    author: `Tu nombre`,
     social: [
       {
         name: `Twitter`,
@@ -75,79 +72,79 @@ module.exports = {
 }
 ```
 
-3. Run the site:
+3. Ejecuta el sitio:
 
 ```shell
 gatsby develop
 ```
 
-4. Checkout `localhost:8000` to see what is currently there.
+4. Comprueba `localhost:8000` para ver lo que hay alli.
 
-## Add content
+## Agregar contenido
 
-Behind the scenes, the two themes created content folders in the root directory of the site. In this step, you will add some content to these folders.
+Entre bastidores, los dos temas crearon carpetas de contenido en el directorio raíz del sitio. En este paso, agregaras algo de contenido a estas carpetas.
 
-### Add a post
+### Agregar un post
 
-Create a new file in `/content/posts`, like this one:
+Crea un nuevo archivo en `/content/posts`, como este:
 
 ```mdx:title=content/posts/hello-posts.md
 ---
-title: My first blog post
+title: Mi primer post
 date: 2020-02-15
 ---
 
-Multiple themes are great!
+Múltiples temas son geniales!
 ```
 
-### Add a note
+### Agregar una nota
 
-Create a new file in `/content/notes`, like this one:
+Crea un nuevo archivo en `/content/notes`, como este:
 
 ```mdx:title=content/note/hello-notes.md
 ---
-title: My first note
+title: Mi primera nota
 date: 2020-02-20
 ---
 
-Multiple themes are awesome!
+Múltiples temas son geniales!
 ```
 
-Restart your development server with `gatsby develop`. Now if you visit `http://localhost:8000/blog/hello-posts/` and `http://localhost:8000/notes/hello-notes` you should see your new content.
+Reinicia tu servidor de desarrollo con `gatsby develop`. Ahora si visitas `http://localhost:8000/blog/hello-posts/` y `http://localhost:8000/notes/hello-notes` deberías poder ver tu nuevo contenido.
 
-## Add an avatar image
+## Agregar una imagen de avatar
 
-Put an avatar image into the `content/assets/` directory, this is used by `gatsby-theme-blog` for the bio component. The file name can be `avatar.png` or `avatar.jpg`.
+Agrega una imagen de avatar al directorio de `content/assets/`, este es usado por `gatsby-theme-blog` para el componente de biografía. El nombre del archivo puede ser `avatar.png` o `avatar.jpg`.
 
-## Put the blog posts on the homepage
+## Mostrar los posts en la pagina principal
 
-1. Delete the existing `src/pages/index.js` file.
+1. Elimina el archivo `src/pages/index.js` existente.
 
-2. Change the theme options for the blog theme in `gatsby-config.js`:
+2. Cambia las opciones del tema para el blog en `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 {
       resolve: `gatsby-theme-blog`,
       options: {
-        // basePath defaults to `/` so this could also be included without options as just `gatsby-theme-blog`,
+        // basePath es por defecto `/` asi que este tambien se puede incluir sin opciones, solamente con `gatsby-theme-blog`,
         basePath: `/`,
       },
     },
 ```
 
-3. Restart your development server with `gatsby develop` to test your new homepage.
+3. Reinicia tu servidor de desarrollo con `gatsby develop` para probar tu nueva página principal.
 
-## Shadow components
+## Componentes "Shadow"
 
-Use [theme shadowing](/docs/themes/shadowing/) to customize components the theme provides for you.
+Usa [shadowing de tema](/docs/themes/shadowing/) para personalizar componentes que el tema proporciona para ti.
 
 ### Shadow `bio-content.js`
 
-The first component to update is `bio-content.js` which provides the content used in the `gatsby-theme-blog` `bio` component.
+El primer componente a actualizar es `bio-content.js` que proporciona el contenido usado en el componente de `bio` en `gatsby-theme-blog`.
 
-> 💡 Don't forget to stop and restart your development server when adding a shadowed component for the first time.
+> 💡 No olvides detener y reiniciar tu servidor de desarrollo cuando agregues componentes "shadow" por primera vez.
 
-In order to shadow the file you need to place it in the same location it exists within the theme. In this case, that means `src/gatsby-theme-blog/components/bio-content.js`. So you'll create a file structure that looks look like this:
+Para poder hacer "shadow" en el archivo, debes ponerlo en la misma ubicación donde existe el tema. En este caso, eso significa en `src/gatsby-theme-blog/components/bio-content.js`. Así que crearas una estructura de archivos que se ve algo como esto:
 
 ```text
 └── src
@@ -156,7 +153,7 @@ In order to shadow the file you need to place it in the same location it exists 
     │   │   ├── bio-content.js // highlight-line
 ```
 
-Feel free to make the text of your bio anything you like, but the component will look something like this:
+Siéntete libre de cambiar el texto de tú biografía como quieras, pero el componente se vera algo como esto:
 
 ```jsx:title=src/gatsby-theme-blog/components/bio-content.js
 import React, { Fragment } from "react"
@@ -164,18 +161,18 @@ import { Styled } from "theme-ui"
 
 export default () => (
   <Fragment>
-    Words by <Styled.a href="http://example.com/">Your Name</Styled.a>.
+    Palabras de <Styled.a href="http://example.com/">Tu Nombre</Styled.a>.
     <br />
-    Change me. Your awesome bio, about how great you are!
+    Cambia esto. Tu increíble biografía, sobre que tan genial eres!
   </Fragment>
 )
 ```
 
 ### Shadow Theme-UI
 
-`gatsby-theme-blog` and `gatsby-theme-notes` both use [Theme-UI](/docs/theme-ui/) design tokens to manage their styling: colors, font sizes, spacing, etc. You can use component shadowing to gain control over these design tokens in the final site.
+Ambos `gatsby-theme-blog` y `gatsby-theme-notes` usan fichas de diseño de [Theme-UI](/docs/theme-ui/) para gestionar sus estilos: colores, tamaños de fuente, espaciado, etc. Puedes usar `component shadowing` para ganar control sobre estas fichas de diseño en el sitio final.
 
-As with your bio, you need to match the file structure of the theme. In this case, that's `src/gatsby-plugin-theme-ui/index.js` and the resulting structure will look like this:
+Así como con tu biografía, necesitas coincidir con la estructura de archivos del tema. En este caso, es `src/gatsby-plugin-theme-ui/index.js` y la estructura resultante se vera algo como esto:
 
 ```text
 └── src
@@ -183,7 +180,7 @@ As with your bio, you need to match the file structure of the theme. In this cas
     │   ├── index.js //highlight-line
 ```
 
-Feel free to use whatever colors you like, but here is an example of what you could do.
+Siéntete libre de usar cualquier color que quieras, pero aquí hay un ejemplo de como puedes hacerlo.
 
 ```javascript:title=src/gatsby-plugin-theme-ui/index.js
 import merge from "deepmerge"
@@ -205,24 +202,24 @@ export default merge(defaultTheme, {
 })
 ```
 
-> Note that this example uses `deepmerge`. This allows you to use the Theme-UI configuration for any settings you don't override in this file.
+> Ten en cuenta que este ejemplo usa `deepmerge`. Este permite que uses la configuración de Theme-UI para cualquier parámetro que no sobreescribas en este archivo.
 
-## Add another theme
+## Agregar otro tema
 
-Themes can be big, like `gatsby-theme-blog`, but they can also be a small discrete set of components or functions. A great example of this is [gatsby-mdx-embed](https://gatsby-mdx-embed.netlify.com/) which adds the ability to embed social media content and videos directly into your MDX files.
+Los temas pueden ser grandes, como `gatsby-theme-blog`, pero tambien pueden ser un pequeno y discreto conjunto de componentes o funciones. Un gran ejemplo de esto es [gatsby-mdx-embed](https://gatsby-mdx-embed.netlify.com/) que agrega la habilidad de embedir contenido de redes sociales directamente en tus archivos MDX.
 
-1. Install the theme:
+1. Instala el tema:
 
 ```shell
 npm install @pauliescanlon/gatsby-mdx-embed
 ```
 
-2. Update the `gatsby-config.js` file and add `gatsby-mdx-embed` as a plugin:
+2. Actualiza el archivo `gatsby-config.js` y agrega `gatsby-mdx-embed` como un plugin:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    // ...siteMetadata is unchanged.
+    // ...siteMetadata no es cambiado.
   },
   plugins: [
     `@pauliescanlon/gatsby-mdx-embed`, // highlight-line
@@ -242,7 +239,7 @@ module.exports = {
 }
 ```
 
-3. Test it out by adding a Youtube video to one of your blog posts:
+3. Prueba agregando un videos de Youtube a uno de tus posts:
 
 ```mdx:title=content/posts/video-post.md
 ---
@@ -250,23 +247,23 @@ title: Jason and Jackson Talk Themes
 date: 2020-02-21
 ---
 
-Here is a video about composing and styling themes with J&J!
+Aquí hay un video sobre composición y estilado de temas con J&J!
 
 <YouTube youTubeId="6Z4p-qjnKCQ" />
 ```
 
-## Add a navigation menu
+## Agregar un menú de navegación
 
-Use component shadowing to add a navigation menu. You can read more about [creating dynamic navigation menus](/docs/creating-dynamic-navigation/) in the docs.
+Usa `component shadowing` para agregar un menú de navegación. Puedes leer más acerca de como [crear menús de navegación dinamicos](/docs/creating-dynamic-navigation/) en la documentación.
 
-1. Add a `menuLinks` array to `gatsby-config.js`:
+1. Agrega un arreglo `menuLinks` al archivo `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Your Site Title`,
-    description: `A description for your blazing fast site, using multiple themes!`,
-    author: `Your name`,
+    title: `El titulo de tu sitio`,
+    description: `Una descripción para tu sitio super rápido, usando múltiples temas!`,
+    author: `Tu nombre`,
     // highlight-start
     menuLinks: [
       {
@@ -280,16 +277,16 @@ module.exports = {
     ],
     // highlight-end
     social: [
-      // ...social array is unchanged.
+      // ...el arreglo social no es cambiado.
     ],
   },
   plugins: [
-    // ...plugins array is unchanged.
+    // ...el arreglo de plugins no es cambiado.
   ],
 }
 ```
 
-2. Create the navigation component:
+2. Crea un componente de navegación:
 
 ```jsx:title=src/components/navigation.js
 import React from "react"
@@ -315,7 +312,7 @@ export default () => {
   return (
     <nav
       css={css({
-        py: 2, // Short form for paddingTop and paddingBottom
+        py: 2, // Forma corta de "paddingTop" y "paddingBottom"
       })}
     >
       <ul
@@ -357,9 +354,9 @@ export default () => {
 }
 ```
 
-3. When that is done the next step is to shadow `header.js` from `gatsby-theme-blog`. You can copy and paste code from the original component as a starting point for your new shadowed component.
+3. Cuando este listo, el siguiente paso es hacer "shadow" de `header.js` desde `gatsby-theme-blog`. Puedes copiar y pegar codigo del componente original como punto de inicio para tu nuevo componente hecho con "shadow".
 
-Your file structure should look like this:
+Tu estructura de archivos deberia verse algo como esto:
 
 `src/gatsby-theme-blog/components/header.js`
 
@@ -370,9 +367,9 @@ Your file structure should look like this:
     │   │   ├── header.js // highlight-line
 ```
 
-4. Import the navigation menu and add it to the header:
+4. Importa el menú de navegación y agregalo al header:
 
-> 💡 This code snippet is edited for length the [full component can be viewed on GitHub.](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes/src/gatsby-theme-blog/components/header.js)
+> 💡 Este ejemplo de código está editado por longitud, el [componente completo puede ser visto en Github.](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes/src/gatsby-theme-blog/components/header.js)
 
 ```jsx:title=src/gatsby-theme-blog/components/header.js
 import React from "react"
@@ -397,25 +394,24 @@ export default () => {
 }
 ```
 
-5. Run `gatsby develop` and test the new navigation component.
+5. Ejecuta `gatsby develop` y prueba el nuevo componente de navegación.
 
-## Wrapping up
+## Resumiendo
 
-This tutorial has introduced you to the idea of composing multiple themes together in a single Gatsby site. Gatsby Themes are an innovative rethink of the traditional website template and understanding their potential gives you a powerful new set of tools as a developer. To keep diving deeper, check out the [Gatsby Theme docs](/docs/themes/) and some of the other resources listed below.
+Este tutorial te ha presentado la idea de componer múltiples temas juntos en un solo sitio de Gatsby. Los temas de Gatsby son una reinvención innovativa de la plantilla de sitio web tradicional y entender su potencial te da un nuevo conjunto de herramientas como desarrollador. Para seguir profundizando sobre esto, mira la [documentación de temas de Gatsby](/docs/themes/) y algunos de los otros recursos listados abajo.
 
-## What's next?
+## Que sigue?
 
-- [Building a theme](/tutorial/building-a-theme/)
+- [Construyendo un tema](/tutorial/building-a-theme/)
 
-## Other resources
+## Otros recursos
 
-- [Using Multiple Themes Example Repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes)
-- [Gatsby Themes Reference Guide](/docs/themes/)
-- [Egghead.io Course: Gatsby Theme Authoring (free)](https://egghead.io/courses/gatsby-theme-authoring)
-- [IBM and Gatsby Themes: Driving Impact Through Design](https://www.youtube.com/watch?v=I2nh2juOKxM)
-- [Setting up yarn workspaces for Gatsby theme development](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/#reach-skip-nav)
-- [What is component shadowing?](/blog/2019-04-29-component-shadowing/)
-- [Customizing styles in Gatsby Themes with Theme-UI](/blog/2019-07-03-customizing-styles-in-gatsby-themes-with-theme-ui/)
-- [Composing and styling Gatsby Themes (with Brent Jackson) — Learn With Jason](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
-- [Build a Personal Site Using Gatsby Themes (with Will Johnson) — Learn With Jason](https://www.youtube.com/watch?v=vf2Dy_xKUno)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+- [Repositorio de ejemplo para usar múltiples temas](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-themes)
+- [Guía de referencia para temas de Gatsby](/docs/themes/)
+- [Curso de Egghead.io: Creando temas de Gatsby (gratis)](https://egghead.io/courses/gatsby-theme-authoring)
+- [IBM y temas de Gatsby: Impulsando el impacto a través del diseño](https://www.youtube.com/watch?v=I2nh2juOKxM)
+- [Configurando espacios de trabajo de yarn para desarrollo de temas de Gatsby](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/#reach-skip-nav)
+- [Que es component shadowing?](/blog/2019-04-29-component-shadowing/)
+- [Personalizando estilos en temas de gatsby con Theme-UI](/blog/2019-07-03-customizing-styles-in-gatsby-themes-with-theme-ui/)
+- [Componiendo y estilando temas de Gatsby (con Brent Jackson) - Aprende con Jason](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
+- [Construye un sitio personal usando temas de Gatsby (con Will Johnson) - Aprende con Jason](https://www.youtube.com/watch?v=vf2Dy_xKUno)
