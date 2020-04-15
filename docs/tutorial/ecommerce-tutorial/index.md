@@ -178,11 +178,6 @@ return (
 )
 ```
 
-<<<<<<< HEAD
-The `render()` function applies our styles to the button and binds the `redirectToCheckout()` function to the button's onclick event.
-
-=======
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 #### Importing the checkout component into the homepage
 
 Now go to your `src/pages/index.js` file. This is your homepage that shows at the root URL. Import your new checkout component in the file underneath the other imports and add your `<Checkout />` component within the `<Layout>` element. Your `index.js` file should now look similar to this:
@@ -412,11 +407,7 @@ export default SkuCard
 
 This component renders a neat card for each individual SKU, with the SKU name, nicely formatted pricing, and a "BUY ME" button. The button triggers the `redirectToCheckout` function with the corresponding SKU ID.
 
-<<<<<<< HEAD
-Lastly, we need to refactor our `Skus` component to initialize the Stripe.js client, and render `SkuCards` while handing down the Stripe.js client in the `props`:
-=======
 Lastly, you need to refactor your `Skus` component to `loadStripe`, and render `SkuCards` while handing down the Stripe promise in the `props`:
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ```jsx:title=src/components/Products/Skus.js
 import React from "react"
