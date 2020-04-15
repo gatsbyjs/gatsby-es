@@ -191,6 +191,8 @@ Gatsby CLI está disponible via npm y debe ser instalado de manera global en tu 
 npm install -g gatsby-cli
 ```
 
+_**Nota**: cuando instalas Gatsby y lo ejecutas por primera vez, veras un mensaje corto notificándote sobre el uso anónimo de datos que están siendo recolectados por los comandos de Gatsby, puedes leer más sobre como estos datos son extraídos y usados en la [documentación de telemetria](/docs/telemetry)._
+
 Para ver los comandos disponibles:
 
 ```shell
