@@ -32,15 +32,11 @@ Una de las maneras más directas de agregar estilos globales a un sitio web es u
 
 Sería mejor (especialmente si eres nuevo con la línea de comandos) si cerraras el terminal que usaste para la [parte uno](/tutorial/part-one/) e inicias una nueva sesión en otra terminal para la parte dos.
 
-<<<<<<< HEAD
-Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby e inicia el servidor de desarrollo:
-=======
-Open a new terminal window, create a new "hello world" Gatsby site in a directory called `tutorial-part-two`, and then move to this new directory:
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby en un directorio llamado 'tutorial-part-two', y luego muévete a este nuevo directorio:
 
 ```shell
-gatsby new tutorial-parte-dos https://github.com/gatsbyjs/gatsby-starter-hello-world
-cd tutorial-parte-dos
+gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd tutorial-part-two
 ```
 
 Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola mundo") con la siguiente estructura:
@@ -52,11 +48,7 @@ Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola 
 │       └── index.js
 ```
 
-<<<<<<< HEAD
-#### ✋ Agrega estilos a un archivo css
-=======
-#### ✋ Add styles to a CSS file
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+#### ✋ Agrega estilos a un archivo CSS
 
 1. Crea un archivo `.css` en tu proyecto nuevo:
 
@@ -88,11 +80,7 @@ html {
 }
 ```
 
-<<<<<<< HEAD
-> Nota: el lugar donde quede ubicado el archivo css de ejemplo en `/src/styles/` es irrelevante.
-=======
-> Note: The placement of the example CSS file in a `/src/styles/` folder is arbitrary.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+> Nota: el colocar el archivo CSS de ejemplo en un directorio `/src/styles/` es arbitrario.
 
 #### ✋ Incluye la hoja de estilos en `gatsby-browser.js`
 
@@ -142,11 +130,7 @@ Si echas un vistazo a tu proyecto en el navegador, deberías ver el fondo de atr
 
 ## Usando CSS limitado al componente
 
-<<<<<<< HEAD
 Hasta aquí, hemos hablado acerca de la aproximación más tradicional de usar hojas de estilo css normales. Ahora, hablaremos acerca de varios métodos de estructurar CSS para realizar estilos de una manera orientada a componentes.
-=======
-So far, we've talked about the more traditional approach of using standard CSS stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ### Módulos CSS
 
@@ -177,11 +161,7 @@ export default ({ children }) => (
 )
 ```
 
-<<<<<<< HEAD
-Notarás que importamos un archivo llamado `container.module.css` que es un módulo css. Creemos ese archivo ahora.
-=======
-You'll notice you imported a CSS module file named `container.module.css`. Let's create that file now.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Notarás que importamos un archivo llamado `container.module.css` que es un módulo CSS. Creemos ese archivo ahora.
 
 2. En el mismo directorio (`src/components`), crea un archivo `container.module.css` y copia/pega lo siguiente:
 
