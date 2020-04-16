@@ -33,17 +33,10 @@ gatsby new [<site-name> [<starter-url>]]
 
 #### Argumentos
 
-<<<<<<< HEAD
 | Argumentos  | Descripción                                                                                                                                                                                                                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | site-name   | El nombre de tu sitio Gatsby, el cual también se usa para crear el directorio del proyecto.                                                                                                                                                                  |
-| starter-url | La URL de un starter de Gatsby o una ruta de archivo local. Por defecto se usa [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); Para más información, mira los documentos sobre [_starters_ de Gatsby](/docs/gatsby-starters/). |
-=======
-| Argument    | Description                                                                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| site-name   | Your Gatsby site name, which is also used to create a project directory.                                                                                                                                 |
-| starter-url | A Gatsby starter URL or local file path. Defaults to [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); see the [Gatsby starters](/docs/starters/) docs for more information. |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+| starter-url | La URL de un starter de Gatsby o una ruta de archivo local. Por defecto se usa [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); Para más información, mira los documentos sobre [_starters_ de Gatsby](/docs/starters/). |
 
 > Nota: El `site-name` solo puede contener letras y números. Si introduces  `.`, `./` o `<espacio>` en el nombre, `gatsby new` lanzará un error.
 
@@ -120,22 +113,13 @@ En el directorio raíz de un sitio de Gatsby, compila tu aplicación y déjala l
 
 #### Opciones
 
-<<<<<<< HEAD
 |            Opción            | Descripción                                                                                                                                       |
 | :--------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 |       `--prefix-paths`       | Compila tu sitio con una ruta prefijada en los enlaces (establece el _pathPrefix_ en tu configuración)                                            |
 |        `--no-uglify`         | Compila tu sitio sin afear los paquetes JS (para propósitos de _debugging_)                                                                       |
+|         `--profile`          | Compila tu sitio con `react profiling`. Mira [Midiendo el rendimiento de un sitio con React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
 | `--open-tracing-config-file` | Fichero de configuración del _tracer_ (compatible con OpenTracing). Mira la sección sobre [_Tracing_ del Rendimiento](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Deshabilita la interfaz en color                                                                                                                  |
-=======
-|            Option            | Description                                                                                                                                  |
-| :--------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------- |
-|       `--prefix-paths`       | Build site with link paths prefixed (set pathPrefix in your config)                                                                          |
-|        `--no-uglify`         | Build site without uglifying JS bundles (for debugging)                                                                                      |
-|         `--profile`          | Build site with react profiling. See [Profiling Site Performance with React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
-| `--open-tracing-config-file` | Tracer configuration file (OpenTracing compatible). See [Performance Tracing](/docs/performance-tracing/)                                    |
-| `--no-color`, `--no-colors`  | Disables colored terminal output                                                                                                             |
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Además de estas opciones, también se pueden establecer [variables de entorno para la compilación](/docs/environment-variables/#build-variables) para una configuración más avanzada que se ajuste mejor a la ejecución de la compilación. Por ejemplo, si establecemos `CI=true` como una variable de entorno conseguiremos una salida a medida para [terminales _dumb_](https://en.wikipedia.org/wiki/Computer_terminal#Dumb_terminals).
 
