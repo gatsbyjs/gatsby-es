@@ -6,25 +6,13 @@ title: Contribuciones de Código
 
 En esta página:
 
-<<<<<<< HEAD
-- [Preparación del repositorio](#preparaci%c3%b3n-del-repositorio)
-- [Creando tus propios plugins y loaders](#creando-tus-propios-plugins-y-loaders)
-- [Haciendo cambios a la Librería de inicio](#haciendo-cambios-a-la-librer%c3%ada-de-inicio)
-- [Contribuyendo con sitios de ejemplo](#contribuyendo-con-sitios-de-ejemplo)
-- [Usando Docker para establecer entornos de pruebas](#usando-docker-para-establecer-entornos-de-pruebas)
-  - [Docker, Wordpress y Gatsby](#docker-wordpress-y-gatsby)
-- [Herramientas de Desarrollo](#herramientas-de-desarrollo)
-  - [Debugeando el proceso de build](#debugeando-el-proceso-de-build)
-- [Retroalimentación (Feedback)](#retroalimentaci%c3%b3n-feedback)
-=======
-- [Repo setup](#repo-setup)
-- [Creating your own plugins and loaders](#creating-your-own-plugins-and-loaders)
-- [Making changes to the starter Library](#making-changes-to-the-starter-library)
-- [Contributing example sites](#contributing-example-sites)
-- [Using Docker to set up test environments](#using-docker-to-set-up-test-environments)
-- [Development tools](#development-tools)
-- [Official theme development](#official-theme-development)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+- [Preparación del repositorio](#repo-setup)
+- [Creando tus propios plugins y loaders](#creating-your-own-plugins-and-loaders)
+- [Haciendo cambios a la Librería de inicio](#making-changes-to-the-starter-library)
+- [Contribuyendo con sitios de ejemplo](#contributing-example-sites)
+- [Usando Docker para establecer entornos de pruebas](#using-docker-to-set-up-test-environments)
+- [Herramientas de Desarrollo](#development-tools)
+- [Desarrollo oficial de temas](#official-theme-development)
 
 ## Preparación del repositorio
 
@@ -34,11 +22,7 @@ Para comenzar a configurar el repositorio de Gatsby en tu máquina usando git, Y
 
 Alternativamente, puedes omitir la configuración local y [usar una herramienta de desarrollo en línea](/contributing/using-an-online-dev-environment/).
 
-<<<<<<< HEAD
-Para contribuir al blog o al sitio web Gatsbyjs.org, consulta los pasos de configuración en la página de [contribuciones del blog y sitio web](/contributing/blog-and-website-contributions/). Para instrucciones relativas a la contribución de documentos, visita la [página de contribuciones de documentos](/contributing/docs-contributions/).
-=======
-To contribute to the blog, check out the setup steps on the [blog contributions](/contributing/blog-contributions/) page. For instructions on contributing to the docs, visit the [docs contributions page](/contributing/docs-contributions/). To contribute to the website, see the [website contributions](/contributing/website-contributions/) page.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Para contribuir al blog, consulta los pasos de configuración en la página de [contribuciones del blog](/contributing/blog-contributions/). Para instrucciones relacionadas a la contribución de documentación, visita la [página de contribuciones de documentación](/contributing/docs-contributions/). Para contribuir con el sitio web, mira la página de [contribuciones al sitio web](/contributing/website-contributions/).
 
 ## Creando tus propios plugins y loaders
 
