@@ -44,13 +44,8 @@ Run this in your terminal:
 
 ## Adding configuration
 
-<<<<<<< HEAD
-Here you'll specify the config that will be needed to pull down data from butter.
-Make sure to add your **API_TOKEN** from your dashboard. In this guide you will be creating `faq_items`, `faq_headline`, `homepage` , `customer_case_study` as stated in the config below. Do well to change it if you named it something differently.
-=======
 Here you'll specify the config that will be needed to pull down data from ButterCMS.
 Make sure to add your **API_TOKEN** from your dashboard. In this guide you will be creating `faq_items`, `faq_headline`, `homepage`, `customer_case_study` as stated in the config below. Do well to change it if you named it something differently.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 ```javascript:title=gatsby-config.js
 module.exports = {
