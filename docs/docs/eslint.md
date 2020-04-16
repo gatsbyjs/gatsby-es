@@ -10,11 +10,7 @@ JavaScript, siendo un lenguaje dinámico y de tipado débil, es especialmente pr
 
 Gatsby cuenta con una configuración de ESLint incorporada por defecto. Para muchos usuarios, nuestra configuración es lo único que necesitas. Sin embargo, si sabes que te gustaría personalizar tu configuración de ESLint; como por ejemplo, si tu compañía tiene su propia configuración; esto muestra cómo se puede hacer.
 
-<<<<<<< HEAD
-Replicaremos (mayormente) la [configuración que viene incluida en Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js) para permitirte agregar presets adicionales, plugins y reglas.
-=======
-You'll replicate (mostly) the [ESLint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) so you can then add additional presets, plugins, and rules.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Replicaremos (mayormente) la [configuración que viene incluida en Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) para permitirte agregar presets adicionales, plugins y reglas.
 
 ```shell
 
@@ -42,11 +38,7 @@ module.exports = {
 }
 ```
 
-<<<<<<< HEAD
-Nota: Cuando no hay un archivo ESLint, Gatsby agrega implícitamente un _loader_ (cargador) en blanco de ESLint. Este _loader_ encola la retroalimentación de ESLint a una ventana de la terminal donde estas ejecutando o construyendo Gatsby y tambien a la consola en de tu navegador, en las herramientas de desarrollo. Esto te da retroalimentación consolidada e inmediata en archivos nuevos guardados. Cuando incluyes un archivo `.eslintrc` personalizado, Gatsby te da control total sobre la configuración de ESLint. Esto significa que sobreescribirá el `eslint-loader` por defecto y que necesitas habilitar cualquiera de las reglas ti mismo. Una forma de hacer esto es con el plugin de la comunidad [`gatsby-eslint-plugin`](/packages/gatsby-plugin-eslint/). Esto tambien significa que la [configuración por defecto de ESLint con la que Gatsby es descargado](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js) será completamente sobreescrita. Sí aun así te gustaría aprovechar la ventaja de estas reglas, necesitarás hacer una copia de ellas a tu archivo local.
-=======
-Note: When there is no ESLint file Gatsby implicitly adds a barebones ESLint loader. This loader pipes ESLint feedback into the terminal window where you are running or building Gatsby and also to the console in your browser developer tools. This gives you consolidated, immediate feedback on newly-saved files. When you include a custom `.eslintrc` file, Gatsby gives you full control over the ESLint configuration. This means that it will override the built-in `eslint-loader` and you need to enable any and all rules yourself. One way to do this is to use the Community plugin [`gatsby-eslint-plugin`](/packages/gatsby-plugin-eslint/). This also means that the default [ESLint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) will be entirely overwritten. If you would still like to take advantage of those rules, you'll need to copy them to your local file.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+Nota: Cuando no hay un archivo ESLint, Gatsby agrega implícitamente un _loader_ (cargador) en blanco de ESLint. Este _loader_ encola la retroalimentación de ESLint a una ventana de la terminal donde estas ejecutando o construyendo Gatsby y tambien a la consola en de tu navegador, en las herramientas de desarrollo. Esto te da retroalimentación consolidada e inmediata en archivos nuevos guardados. Cuando incluyes un archivo `.eslintrc` personalizado, Gatsby te da control total sobre la configuración de ESLint. Esto significa que sobreescribirá el `eslint-loader` por defecto y que necesitas habilitar cualquiera de las reglas ti mismo. Una forma de hacer esto es con el plugin de la comunidad [`gatsby-eslint-plugin`](/packages/gatsby-plugin-eslint/). Esto tambien significa que la [configuración por defecto de ESLint con la que Gatsby es descargado](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) será completamente sobreescrita. Sí aun así te gustaría aprovechar la ventaja de estas reglas, necesitarás hacer una copia de ellas a tu archivo local.
 
 ### Desactivando ESLint
 
