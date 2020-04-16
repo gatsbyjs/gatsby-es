@@ -119,18 +119,11 @@ The `gatsby build` command also won't be able to use browser APIs, so some code 
 
 Some common globals that would need to be protected are:
 
-<<<<<<< HEAD
-- `window`
-- `localStorage`
-- `sessionStorage`
-- `navigator`
-=======
 - [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 - [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 - [`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 - [`navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator)
 - [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document)
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Additionally, some packages that depend on globals existing (e.g. `react-router-dom`) may need to be [patched](/docs/debugging-html-builds/#fixing-third-party-modules) or migrated to other packages.
 
