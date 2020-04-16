@@ -47,13 +47,16 @@ Ten en mente que `proxy` solo tiene efecto en desarrollo (con `gatsby develop`),
 Algunas ocasiones necesitas acceso más granular/flexible a el servidor de desarrollo. Gatsby expone el servidor de desarrollo [Express.js](https://expressjs.com/) a tu sitio `gatsby-config.js` donde puedes agregar _middlewares_ de Express según necesites.
 
 ```javascript:title=gatsby-config.js
-var proxy = require("http-proxy-middleware")
+const { createProxyMiddleware } = require("http-proxy-middleware") //v1.x.x
+// Use implicit require for v0.x.x of 'http-proxy-middleware'
+// const proxy = require('http-proxy-middleware')
+// be sure to replace 'createProxyMiddleware' with 'proxy' where applicable
 
 module.exports = {
   developMiddleware: app => {
     app.use(
       "/.netlify/functions/",
-      proxy({
+      createProxyMiddleware({
         target: "http://localhost:9000",
         pathRewrite: {
           "/.netlify/functions/": "",
@@ -71,12 +74,16 @@ Ten en mente que _middleware_ solo tiene efecto en desarrollo (con `gatsby devel
 Si filtras a APIs locales con certificados con sello-propio, establece la opción `secure` a `false`.
 
 ```javascript:title=gatsby-config.js
-var proxy = require("http-proxy-middleware")
+const { createProxyMiddleware } = require("http-proxy-middleware") //v1.x.x
+// Use implicit require for v0.x.x of 'http-proxy-middleware'
+// const proxy = require('http-proxy-middleware')
+// be sure to replace 'createProxyMiddleware' with 'proxy' where applicable
+
 module.exports = {
   developMiddleware: app => {
     app.use(
       "/.netlify/functions/",
-      proxy({
+      createProxyMiddleware({
         target: "http://localhost:9000",
         secure: false, // No rechazar certificados firmados localmente
         pathRewrite: {

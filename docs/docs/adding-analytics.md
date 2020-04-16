@@ -69,3 +69,4 @@ Hay más opciones de configuración extra--tanto con el plugin de Gatsby como en
 - [Matomo (antiguamente Piwik)](/packages/gatsby-plugin-matomo/)
 - [Simple Analytics](/packages/gatsby-plugin-simple-analytics)
 - [Parse.ly Analytics](/packages/gatsby-plugin-parsely-analytics/)
+- [GoatCounter](/packages/gatsby-plugin-goatcounter/)
