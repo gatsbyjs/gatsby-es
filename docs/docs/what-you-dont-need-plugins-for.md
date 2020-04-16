@@ -9,10 +9,6 @@ Algunos ejemplos:
 - Importación de paquetes de JavaScript que proporcionan funcionalidad general, como `lodash` o` axios`
 - Integrando bibliotecas de visualización, como `Highcharts` o `d3`.
 
-<<<<<<< HEAD
 Como regla general, cualquier paquete de npm que puedas usar mientras trabajas con otro proyecto Javascript o aplicación de React tambien puede ser utilizado con una aplicación de Gatsby. Lo que ofrecen los plugins es una integración pre-empaquetada al núcleo de las APIs de Gatsby para ahorrarte tiempo y energía, con una configuración mínima.
-=======
-As a general rule, any npm package you might use while working on another JavaScript or React application can also be used with a Gatsby application. What plugins offer is a prepackaged integration into the core Gatsby APIs to save you time and energy, with minimal configuration.
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 Un buen caso de uso sería utilizar `Styled Components`, podrías renderizar manualmente el componente `Provider` cerca de la raíz de tu aplicación, o puedes usar [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/) que se encarga de este paso por ti adicionalmente de cualquier dificultad para configurar `Styled Components` para trabajar con renderizado del lado del servidor (SSR).
