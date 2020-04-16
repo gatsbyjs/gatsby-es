@@ -136,26 +136,22 @@ Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integ
 
 Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
 
-<<<<<<< HEAD
+## Desarrollo oficial de temas
+
+Esta sección es para el desarrollo oficial de temas en el mono repositorio de Gatsby. Si estas buscando
+construir tu propio tema, mira [construyendo temas](/docs/themes/building-themes/).
+
+Antes de que empecemos, asegurate de tener
+[configurado tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/)
+y que estas usando la última versión de 'gatsby-dev-cli'.
+
+- En el mono repositorio de Gatsby encuentra el starter en el directorio de starters en '/starters' que usa el tema sobre el que quieres trabajar
+- Navega a ese directorio, p. ej. 'cd starters/gatsby-starter-blog-theme'
+- Instala las dependencias: 'yarn'
+- Ejecuta Gatsby Dev CLI para sincronizar los archivos del tema, referenciando el tema apropiado: 'gatsby-dev --packages gatsby-theme-blog'
+- En otra pestaña ejecuta el starter: 'yarn develop'
+- Edita los archivos del tema, veras que los cambios serán automáticamente copiados y actualizados en tu starter.
+
 ## Retroalimentación (Feedback)
-=======
-## Official theme development
-
-This section is for official theme development in Gatsby's monorepo. If you are looking
-to build your own theme, see [building themes](/docs/themes/building-themes/).
-
-Before getting started, make sure that you have
-[set up your local dev environment](/contributing/setting-up-your-local-dev-environment/)
-and that you're on the latest version of `gatsby-dev-cli`.
-
-- In the Gatsby monorepo find the starter in the `/starters` directory that uses the theme you want to work on
-- Navigate to that directory, e.g. `cd starters/gatsby-starter-blog-theme`
-- Install dependencies: `yarn`
-- Run Gatsby Dev CLI to sync theme files, referencing the appropriate theme: `gatsby-dev --packages gatsby-theme-blog`
-- In another tab run the starter: `yarn develop`
-- Edit the theme files, you'll see changes automatically copied over and update in your starter.
-
-## Feedback
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
 
 En cualquier momento durante el proceso de contribución, ¡al equipo principal de Gatsby le encantaría ayudar! Para ayuda con un problema en particular puedes [abrir un issue en Github](/contributing/how-to-file-an-issue/) o pasarte por [nuestro servidor en Discord](https://gatsby.dev/discord) para una discución general y ayuda de la comunidad.
