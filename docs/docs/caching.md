@@ -45,16 +45,12 @@ Para desplegar con Now, seguir las instrucciones en la [documentación de Now](h
 
 ---
 
-<<<<<<< HEAD
-<sup>1</sup> Es importante que uses la combinación de `max-age=0` y `must-revalidate` en lugar de usar `no-cache`. Esto permite al CDN almacenar las copias de los archivos en los servidores más cercanos a los usuarios y solamente descargar una nueva versión desde el servidor de origen en caso de que los archivos hayan cambiado. Usar `no-cache`, por otro lado, decrementa la performance porque fuerza al CDN a descargar una nueva copia del archivo desde el servidor de origen en cada petición.
-=======
 <sup>
   1
-</sup> You can use 'no-cache' instead of 'max-age=0, must-revalidate'. Despite what the name might imply, 'no-cache' permits a cache to serve cached content as long as it validates the cache freshness first.
+</sup> Puedes usar 'no-cache' en lugar de 'max-age=0, must-revalidate'. A pesar de lo que el nombre pueda implicar, 'no-cache' permite al cache servir contenido en cache siempre y cuando se valide lo reciente del cache primero.
 <sup>
   [2][3]{" "}
-</sup> In either case, clients have to make a round trip to the origin server on each request. However, if you are correctly utilizing ETags or Last-Modified validation you will avoid downloading assets when the cached copy is still valid (e.g. the file hasn't changed on the origin server since it was cached).
+</sup> En cualquier caso, los clientes deben hacer un viaje de ida y vuelta al servidor de origen por cada solicitud. Sin embargo, si estas utilizando correctamente la validación de "ETags" o "Last-Modified" evitaras descargar recursos cuando la copia en cache siga siendo valida. (p. ej. el archivo no ha cambiado en el servidor de origen desde que fue puesto en cache).
 
 [2]: https://tools.ietf.org/html/rfc7234#section-5.2.2.1
 [3]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#no-cache_and_no-store
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
