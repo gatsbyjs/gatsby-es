@@ -36,17 +36,13 @@ Entonces el plugin puede empezarse a agregar a Gatsby mediante APIs de [Node](/d
 
 Tu plugin no necesita estar en tu proyecto para poder ser probado o trabajar en el. Sí te gustaría [desacoplar](/docs/glossary#decoupled) tu plugin de tu sitio, puedes seguir uno de los métodos descritos abajo. Esto es utíl de hacer sí quieres publicar el plugin en su propio paquete, o probar/desarrollar una versión modificada de un plugin escrito por la comunidad.
 
-<<<<<<< HEAD
-## Utilizando `require.resolve` como ruta de archivo
-=======
-To get started developing a plugin outside of your site's root folder, you can quickly generate one using `gatsby new` with the [starter for plugins](https://github.com/gatsbyjs/gatsby/tree/master/starters/gatsby-starter-plugin):
+Para empezar a esarrollar un plugin fuera de la carpeta raiz de tu sitio, puedes generar uno rapidamente usando `gatsby new` con el [starter para plugins](https://github.com/gatsbyjs/gatsby/tree/master/starters/gatsby-starter-plugin):
 
 ```shell
 gatsby new gatsby-plugin-foo https://github.com/gatsbyjs/gatsby-starter-plugin
 ```
 
-### Using `require.resolve` and a filepath
->>>>>>> 8ff6bb09c23261662f47e79a041a92855d517097
+## Utilizando `require.resolve` como ruta de archivo
 
 Incluir una carpeta de `plugins` no es la unica forma de referenciar plugins locales. Alternativamente, puedes incluir un plugin en tu archivo `gatsby-config.js` directamente referenciando su ruta relativa al archivo `gatsby-config.js` con `require`.
 
