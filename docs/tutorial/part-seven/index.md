@@ -23,6 +23,11 @@ Comencemos.
 
 ## Crear slugs para páginas
 
+Un ‘slug’ es la parte identificadora única de una dirección web,
+como la parte '/tutorial/part-seven' de la página 'https://www.gatsbyjs.org/tutorial/part-seven/'.
+
+También es referenciado como el ‘path’ (ruta) pero en este tutorial usaremos el termino ‘slug’ para mantener la consistencia.
+
 Crear nuevas páginas tiene dos pasos:
 
 1.  Generar la "ruta" o "slug" para la página.

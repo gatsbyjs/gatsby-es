@@ -6,15 +6,13 @@ title: Contribuciones de Código
 
 En esta página:
 
-- [Preparación del repositorio](#preparaci%c3%b3n-del-repositorio)
-- [Creando tus propios plugins y loaders](#creando-tus-propios-plugins-y-loaders)
-- [Haciendo cambios a la Librería de inicio](#haciendo-cambios-a-la-librer%c3%ada-de-inicio)
-- [Contribuyendo con sitios de ejemplo](#contribuyendo-con-sitios-de-ejemplo)
-- [Usando Docker para establecer entornos de pruebas](#usando-docker-para-establecer-entornos-de-pruebas)
-  - [Docker, Wordpress y Gatsby](#docker-wordpress-y-gatsby)
-- [Herramientas de Desarrollo](#herramientas-de-desarrollo)
-  - [Debugeando el proceso de build](#debugeando-el-proceso-de-build)
-- [Retroalimentación (Feedback)](#retroalimentaci%c3%b3n-feedback)
+- [Preparación del repositorio](#repo-setup)
+- [Creando tus propios plugins y loaders](#creating-your-own-plugins-and-loaders)
+- [Haciendo cambios a la Librería de inicio](#making-changes-to-the-starter-library)
+- [Contribuyendo con sitios de ejemplo](#contributing-example-sites)
+- [Usando Docker para establecer entornos de pruebas](#using-docker-to-set-up-test-environments)
+- [Herramientas de Desarrollo](#development-tools)
+- [Desarrollo oficial de temas](#official-theme-development)
 
 ## Preparación del repositorio
 
@@ -24,7 +22,7 @@ Para comenzar a configurar el repositorio de Gatsby en tu máquina usando git, Y
 
 Alternativamente, puedes omitir la configuración local y [usar una herramienta de desarrollo en línea](/contributing/using-an-online-dev-environment/).
 
-Para contribuir al blog o al sitio web Gatsbyjs.org, consulta los pasos de configuración en la página de [contribuciones del blog y sitio web](/contributing/blog-and-website-contributions/). Para instrucciones relativas a la contribución de documentos, visita la [página de contribuciones de documentos](/contributing/docs-contributions/).
+Para contribuir al blog, consulta los pasos de configuración en la página de [contribuciones del blog](/contributing/blog-contributions/). Para instrucciones relacionadas a la contribución de documentación, visita la [página de contribuciones de documentación](/contributing/docs-contributions/). Para contribuir con el sitio web, mira la página de [contribuciones al sitio web](/contributing/website-contributions/).
 
 ## Creando tus propios plugins y loaders
 
@@ -121,6 +119,22 @@ Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integ
 ### Debugeando el proceso de build
 
 Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
+
+## Desarrollo oficial de temas
+
+Esta sección es para el desarrollo oficial de temas en el mono repositorio de Gatsby. Si estas buscando
+construir tu propio tema, mira [construyendo temas](/docs/themes/building-themes/).
+
+Antes de que empecemos, asegurate de tener
+[configurado tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/)
+y que estas usando la última versión de 'gatsby-dev-cli'.
+
+- En el mono repositorio de Gatsby encuentra el starter en el directorio de starters en '/starters' que usa el tema sobre el que quieres trabajar
+- Navega a ese directorio, p. ej. 'cd starters/gatsby-starter-blog-theme'
+- Instala las dependencias: 'yarn'
+- Ejecuta Gatsby Dev CLI para sincronizar los archivos del tema, referenciando el tema apropiado: 'gatsby-dev --packages gatsby-theme-blog'
+- En otra pestaña ejecuta el starter: 'yarn develop'
+- Edita los archivos del tema, veras que los cambios serán automáticamente copiados y actualizados en tu starter.
 
 ## Retroalimentación (Feedback)
 

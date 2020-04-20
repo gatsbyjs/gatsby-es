@@ -36,7 +36,7 @@ gatsby new [<site-name> [<starter-url>]]
 | Argumentos  | Descripción                                                                                                                                                                                                                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | site-name   | El nombre de tu sitio Gatsby, el cual también se usa para crear el directorio del proyecto.                                                                                                                                                                  |
-| starter-url | La URL de un starter de Gatsby o una ruta de archivo local. Por defecto se usa [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); Para más información, mira los documentos sobre [_starters_ de Gatsby](/docs/gatsby-starters/). |
+| starter-url | La URL de un starter de Gatsby o una ruta de archivo local. Por defecto se usa [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); Para más información, mira los documentos sobre [_starters_ de Gatsby](/docs/starters/). |
 
 > Nota: El `site-name` solo puede contener letras y números. Si introduces  `.`, `./` o `<espacio>` en el nombre, `gatsby new` lanzará un error.
 
@@ -117,6 +117,7 @@ En el directorio raíz de un sitio de Gatsby, compila tu aplicación y déjala l
 | :--------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 |       `--prefix-paths`       | Compila tu sitio con una ruta prefijada en los enlaces (establece el _pathPrefix_ en tu configuración)                                            |
 |        `--no-uglify`         | Compila tu sitio sin afear los paquetes JS (para propósitos de _debugging_)                                                                       |
+|         `--profile`          | Compila tu sitio con `react profiling`. Mira [Midiendo el rendimiento de un sitio con React Profiler](/docs/profiling-site-performance-with-react-profiler/) |
 | `--open-tracing-config-file` | Fichero de configuración del _tracer_ (compatible con OpenTracing). Mira la sección sobre [_Tracing_ del Rendimiento](/docs/performance-tracing/) |
 | `--no-color`, `--no-colors`  | Deshabilita la interfaz en color                                                                                                                  |
 

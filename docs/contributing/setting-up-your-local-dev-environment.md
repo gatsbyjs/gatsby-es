@@ -2,7 +2,7 @@
 title: Configuración de tu entorno de desarrollo local
 ---
 
-Esta página describe cómo configurar para que contribuyas al core de Gatsby y su ecosistema. Para obtener instrucciones sobre cómo trabajar con la documentación, visita la página [contribuciones a la documentación](/contributing/docs-contributions/). Para instrucciones de configuración del blog y sitio web, visita la página [blog y contribuciones al sitio web](/contributing/blog-and-website-contributions/).
+Esta página describe cómo configurar para que contribuyas al core de Gatsby y su ecosistema. Para obtener instrucciones sobre cómo trabajar con la documentación, visita la página [contribuciones a la documentación](/contributing/docs-contributions/). Para instrucciones de configuración del sitio web, visita la página [contribuciones al sitio web](/contributing/website-contributions/).
 
 > Gatsby usa un patrón de "monorepo" para manejar sus dependencias y confía en
 > [Lerna](https://lerna.js.org/) y en [Yarn](https://yarnpkg.com/en/) para configurar el repositorio para cambios tanto de desarrollo como en la documentación de la infraestructura.

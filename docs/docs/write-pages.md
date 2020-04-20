@@ -66,7 +66,7 @@ Esto es una colección de objetos de página, creados desde el _namespace_ `page
 - [path](/docs/gatsby-internals-terminology/#path)
 - [matchPath](/docs/gatsby-internals-terminology/#matchpath)
 
-Las páginas están ordenadas de forma que aquellas con `matchPath`s van antes que las que no tienen. Esto es para ayudar a [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) en la selección de páginas mediante regex, antes de probar las rutas explícitas. Mira [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para más información.
+Las páginas están ordenadas de forma que aquellas con `matchPath`s van antes que las que no tienen. Esto es para ayudar a [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) en la selección de páginas mediante regex, antes de probar las rutas explícitas. Mira [matchPaths](/docs/gatsby-internals-terminology/#matchpath) para más información.
 
 p. ej.
 
@@ -85,7 +85,7 @@ p. ej.
 
 ## sync-requires.js
 
-Es un archivo de JavaScript generado dinámicamente que exporta `components`. Este es un objeto creado por iteración sobre el _namespace_ `components` de redux. Las claves son el [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname) (p. ej. `component---src-blog-2-js`), y los valores son expresiones requeridas por el componente. P. ej. `/home/site/src/blog/2.js`. El archivo se verá parecido a este:
+Es un archivo de JavaScript generado dinámicamente que exporta `components`. Este es un objeto creado por iteración sobre el _namespace_ `components` de redux. Las claves son el [componentChunkName](/docs/gatsby-internals-terminology/#componentchunkname) (p. ej. `component---src-blog-2-js`), y los valores son expresiones requeridas por el componente. P. ej. `/home/site/src/blog/2.js`. El archivo se verá parecido a este:
 
 ```javascript
 exports.components = {

@@ -19,7 +19,7 @@ El siguiente modelo muestra cómo datos de un origen pueden ser consultados por 
 
 <LayerModel initialLayer="View" />
 
-[Pensando en React](https://facebook.github.io/react/docs/thinking-in-react.html)
+[Pensando en React](https://es.reactjs.org/docs/thinking-in-react.html)
 es un buen recurso para aprender cómo estructurar aplicaciones con React.
 
 ## ¿Cómo usa Gatsby componentes React?

@@ -32,11 +32,11 @@ Una de las maneras más directas de agregar estilos globales a un sitio web es u
 
 Sería mejor (especialmente si eres nuevo con la línea de comandos) si cerraras el terminal que usaste para la [parte uno](/tutorial/part-one/) e inicias una nueva sesión en otra terminal para la parte dos.
 
-Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby e inicia el servidor de desarrollo:
+Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby en un directorio llamado 'tutorial-part-two', y luego muévete a este nuevo directorio:
 
 ```shell
-gatsby new tutorial-parte-dos https://github.com/gatsbyjs/gatsby-starter-hello-world
-cd tutorial-parte-dos
+gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd tutorial-part-two
 ```
 
 Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola mundo") con la siguiente estructura:
@@ -48,7 +48,7 @@ Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola 
 │       └── index.js
 ```
 
-#### ✋ Agrega estilos a un archivo css
+#### ✋ Agrega estilos a un archivo CSS
 
 1. Crea un archivo `.css` en tu proyecto nuevo:
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Nota: el lugar donde quede ubicado el archivo css de ejemplo en `/src/styles/` es irrelevante.
+> Nota: el colocar el archivo CSS de ejemplo en un directorio `/src/styles/` es arbitrario.
 
 #### ✋ Incluye la hoja de estilos en `gatsby-browser.js`
 
@@ -161,7 +161,7 @@ export default ({ children }) => (
 )
 ```
 
-Notarás que importamos un archivo llamado `container.module.css` que es un módulo css. Creemos ese archivo ahora.
+Notarás que importamos un archivo llamado `container.module.css` que es un módulo CSS. Creemos ese archivo ahora.
 
 2. En el mismo directorio (`src/components`), crea un archivo `container.module.css` y copia/pega lo siguiente:
 

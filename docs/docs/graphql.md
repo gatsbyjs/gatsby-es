@@ -3,7 +3,7 @@ title: GraphQL y Gatsby
 overview: true
 ---
 
-Cuando desarrolles con Gatsby, accederás a tus datos por medio del lenguaje de consulta [GraphQL](http://graphql.org/). GraphQL te permite expresar tus necesidades de datos declarativamente. Esto es hecho con `consultas`. Las consultas son la representación de los datos que necesitas. Una consulta tiene la siguiente forma:
+Cuando desarrolles con Gatsby, accederás a tus datos por medio del lenguaje de consulta [GraphQL](https://graphql.org/). GraphQL te permite expresar tus necesidades de datos declarativamente. Esto es hecho con `consultas`. Las consultas son la representación de los datos que necesitas. Una consulta tiene la siguiente forma:
 
 ```graphql
 {

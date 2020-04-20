@@ -130,7 +130,7 @@ To show how `production-app` works, let's imagine that we've just refreshed the 
 */
 ```
 
-Then, the app, webpack-runtime, component, and data json bundles are loaded via `<link>` and `<script>` (see [HTML tag generation](/docs/html-generation/#5-add-preload-link-and-script-tags)). Now, our `production-app` code starts running.
+Then, the app, webpack-runtime, component, shared libraries, and data json bundles are loaded via `<link>` and `<script>` (see [HTML tag generation](/docs/html-generation/#5-add-preload-link-and-script-tags)). Now, your `production-app` code starts running.
 
 ### onClientEntry (api-runner-browser)
 

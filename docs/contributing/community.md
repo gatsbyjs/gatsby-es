@@ -36,7 +36,7 @@ La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee 
 
 ¡Subscríbete al boletín de Gatsby para mantenerte al día con las noticias de la comunidad de Gatsby! Aprende sobre nuevas funciones, tips & trucos y lo que las personas están construyendo.
 
-[Subscríbete aquí](/newsletter/)
+<EmailCaptureForm signupMessage="¿Quieres mantenerte al día con los últimos consejos &amp; trucos? ¡Suscribete a nuestro boletín informativo!" />
 
 ### Twitter
 

@@ -1,19 +1,8 @@
 ---
-title: Contribuciones al Blog y Sitio Web
+title: Contribuciones al Blog
 ---
 
-¡Agradecemos de todo corazón las contribuciones al blog y al sitio web de Gatsby!
-
-Aquí hay algunas cosas a tener en cuenta al decidir donde contribuir en Gatbsy:
-
-- [Entradas en el blog](#contributing-to-the-blog) funcionan mejor para estudios de casos y la narración de historias (mira el [formato de entradas de blog](#blog-post-format)).
-- [La documentación](/contributing/docs-contributions/) es material de aprendizaje continuamente relevante y reconocible que va más allá de cualquier caso de estudio o situación.
-- [Cambios al sitio web](#making-changes-to-the-website) que mejoren cualquiera de estos, ¡son siempre bienvenidos!
-
-## Contribuyendo al Blog
-
-Sí te gustaría contribuir con un post en el blog de Gatsby, por favor revisa el proceso y las pautas descritas abajo para enviar
-tu idea para el post a nuestro [formulario de propuestas para el blog de Gatsby](https://airtable.com/shr3449954866i3iF)
+Sí te gustaría contribuir con un post en el blog de Gatsby, por favor revisa el proceso y las pautas descritas abajo para enviar tu idea para el post a nuestro [formulario de propuestas para el blog de Gatsby](https://airtable.com/shr3449954866i3iF)
 
 ### Proceso de presentación de propuesta de Blog
 
@@ -36,6 +25,7 @@ Cosas que buscamos para el contenido del blog de Gatsby:
 - Mostrar una herramienta, un fix, u otro contenido que tu u otra persona ha contribuido a la comunidad _open source_ de Gatsby
 - Mostrar una herramienta, un fix que otra persona ha contribuido a la comunidad _open source_ de Gatsby
 - Explicaciones claras y concisas de detalles técnicos o conceptos complejos relacionados con React, GraphQL, la web y desarrollo de aplicaciones, contribuciones _open source_, core de Gatsby y temas relacionados con Gatsby.
+- Guías y recursos para aprender React, GraphQL, HTML/CSS, desarrollo web, buenas practicas, accesibilidad, SEO, Gatsby, diferentes herramientas e integraciones con CMS y otros temas relacionados con Gatsby.
 - Otros temas que piensas que podrían ser valiosos para las personas aprendiendo o trabajando con Gatsby.
 
 Cosas que queremos evitar en el blog de Gatsby:
@@ -46,17 +36,3 @@ Cosas que queremos evitar en el blog de Gatsby:
 - **Contenido que parece no tener un beneficio claro para los usuarios de Gatsby y/o su comunidad.** Por ejemplo, sí estás escribiendo sobre un caso de uso o integración que es extremadamente de nicho o única para condiciones en específico que son realmente poco comúnes en tu organización, el blog de Gatsby puede no ser el mejor lugar para tu contenido. De igual forma, sí tu post del blog no tiene relación directa con Gatsby (o una interesante relación indirecta con Gatsby), entonces puede ser apropiado para un blog personal u otro blog de la comunidad.
 
 **Por favor ten en cuenta** que estas son pautas, no reglas. Sí piensas que to post del blog pertenece al blog de Gatsby, te recomendamos enviarlo. Mientras que nos reservamos el derecho a decidir que es apropiado o no para el blog de Gatsby, tambien valoramos y aplaudimos tu creatividad y contribuciones.
-
-## Realizar cambios en el sitio web
-
-Si quieres realizar cambios, mejoras, o añadir nueva funcionalidad al sitio web, no necesitas configurar por completo el repositorio de Gatsby para contribuir. Puedes activar tu propia instancia del sitio web de Gatsby con estos pasos:
-
-- Clona [el repositorio de Gatsby](https://github.com/gatsbyjs/gatsby/) y navega a `/www`.
-- Ejecuta `yarn` para instalar todas las dependencias del sitio web.
-- Ejecuta `npm run develop` para previsualizar el sitio en `http://localhost:8000/`.
-
-> Nota: Si estas experimentando problemas en una equipo con Linux, ejecuta `sudo apt install libvips-dev`, para instalar una dependencia nativa. También puedes tomar como referencia la [guía de Gatsby en Linux](/docs/gatsby-on-linux/) para otros requerimientos específicos de Linux.
-
-¡Ahora puedes hacer y previsualizar tus cambios antes de lanzar una pull request!
-
-Para instrucciones para configurar el repositorio por completo, visita la página de [contribuciones de código](/contributing/code-contributions/).

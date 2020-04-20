@@ -4,7 +4,7 @@ title: Obteniendo datos desde Sanity
 
 ## ¿Qué es Sanity.io?
 
-[Sanity](https:///www.sanity.io) es un backend alojado para contenido estructurado que viene con un editor de código libre creado con React. Tiene potentes APIs en tiempo real tanto para leer como escribir datos.
+[Sanity](https://www.sanity.io) es un backend alojado para contenido estructurado que viene con un editor de código libre creado con React. Tiene potentes APIs en tiempo real tanto para leer como escribir datos.
 
 Puedes usar Sanity como un _headless CMS_ que permite a tus autores trabajar en un entorno amigable, o como un backend puro para tus aplicaciones. Te hacemos más fácil la reutilización de contenido en varios sitios web, aplicaciones, impresión, asistentes de voz, y otros canales.
 

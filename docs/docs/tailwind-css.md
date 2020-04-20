@@ -70,9 +70,11 @@ Estos pasos suponen que ya tienes instalada una biblioteca CSS-in-JS, y los ejem
 
 1. Instala el Macro de Babel para Tailwind
 
-**Nota**: Actualmente, `tailwind.macro` no es compatible con Tailwind 1.0.0+. Sin embargo, hay una versión beta compatible, disponible en `tailwind.macro@next`. Tómate la libertad de usar la versión beta o volver a TailwindCSS 0.7.4.
+**Nota**: Actualmente, 'tailwind.macro' no es compatible con Tailwind 1.0.0+. Sin embargo, hay una versión clonada del proyecto que puede ser encontrada en 'twin.macro' que es compatible con clases de Tailwindcss v1.2. Esta actualmente en pre-lanzamiento así que no todos los plugins son compatibles al momento de escribir esto. Alternativamente, puedes revertir a Tailwind 0.7.4.
 
-**Opción 1**: Instala `tailwind.macro@next` y usa Tailwind 1.0.0+
+**Opción 1**: Instala 'twin.macro' y usa Tailwind 1.2.0+
+
+1. Instala Twin y Emotion
 
 ```shell
 npm install -D twin.macro @emotion/core @emotion/styled gatsby-plugin-emotion

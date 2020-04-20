@@ -309,9 +309,9 @@ import { getUser, isLoggedIn, logout } from "../services/auth" // highlight-line
 export default () => {
   let greetingMessage = ""
   if (isLoggedIn()) {
-    content.message = `Hola, ${getUser().name}`
+    greetingMessage = `Hola, ${getUser().name}`
   } else {
-    content.message = "No has iniciado sesión"
+    greetingMessage = "No has iniciado sesión"
   }
 
   return (

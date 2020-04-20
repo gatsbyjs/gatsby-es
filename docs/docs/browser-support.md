@@ -2,7 +2,7 @@
 title: Compatibilidad Con Navegadores
 ---
 
-Gatsby tiene compatibilidad con [los mismos navegadores que la actual versión estable de React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support), la cual es actualmente IE9+, así como las versiones más recientes de otros navegadores populares.
+Gatsby tiene compatibilidad con [los mismos navegadores que la actual versión estable de React.js](https://es.reactjs.org/docs/react-dom.html#browser-support), la cual es actualmente IE9+, así como las versiones más recientes de otros navegadores populares.
 
 ## Polyfills
 

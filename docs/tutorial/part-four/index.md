@@ -70,7 +70,7 @@ Si estás creando un sitio web pequeño, una de las formas más eficientes de cr
 
 Hay muchas opciones para cargar datos en los componentes React. 
 Una de las más populares y poderosas es una tecnología llamada 
-[GraphQL](http://graphql.org/).
+[GraphQL](https://graphql.org/).
 
 GraphQL fue creado por Facebook para ayudar a los ingenieros de producto a _traer_ los datos necesarios 
 en los componentes.

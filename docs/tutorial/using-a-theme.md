@@ -181,3 +181,7 @@ Para ver qué otros colores del tema puedes personalizar, revisa el fichero `col
 ## Conclusiones
 
 Esto fue una introducción paso a paso para usar un tema de Gastby a través de un ejemplo específico. Ten en cuenta que temas diferentes serán construidos de forma diferente, para permitir diversas opciones de personalización. Para más información, revisa la [documentación sobre temas de Gatsby](/docs/themes/).
+
+## Qué sigue?
+
+- [Usando múltiples temas juntos](/tutorial/using-multiple-themes-together/)
