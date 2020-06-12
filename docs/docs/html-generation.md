@@ -1,78 +1,78 @@
 ---
-title: Page HTML Generation
+title: Generacion de páginas HTML
 ---
 
-> This documentation isn't up to date with the latest version of Gatsby.
+> Esta documentación no está actualizada con la última versión de Gatsby.
 >
-> Outdated areas are:
+> Las áreas desactualizadas son:
 >
-> - replace mentions of `data.json` with `page-data.json`
+> - reemplazar menciones de `data.json` con `page-data.json`
 >
-> You can help by making a PR to [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
+> Puedes ayudar haciendo un PR para [actualizar esta documentación](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-In the [previous section](/docs/production-app/), we saw how Gatsby uses webpack to build the JavaScript bundles required to take over the user experience once the first HTML page has finished loading. But how do the original HTML pages get generated?
+En la [sección previa](/docs/production-app/), vimos como Gatsby usa webpack para generar los empaquetados Javascript requeridos para hacerse cargo de la experiencia del usuario una vez que la primera página HTML ha terminado de cargar. Pero, ¿cómo se generan las páginas HTML originales?
 
-The high level process is:
+El proceso a alto nivel es:
 
-1. Create a webpack configuration for Node.js Server Side Rendering (SSR)
-1. Build a `render-page.js` that takes a page path and renders its HTML
-1. For each page in redux, call `render-page.js`
+1. Crear una configuración de webpack para renderizado de lado de servidor Node.js (SSR)
+1. Construye un `render-page.js` que toma la ruta de la página y renderiza su HTML
+1. Por cada página en redux, llama `render-page.js`
 
 ## Webpack
 
-For the first step, we use webpack to build an optimized Node.js bundle. The entry point for this is called `static-entry.js`
+Para el primer paso, usamos webpack para construir un empaquetado Node.js optimizado. El punto de entrada para esto es llamado `static-entry.js`
 
 ## static-entry.js
 
-[static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) exports a function that takes a path and returns rendered HTML. Here's what it does to create that HTML:
+[static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) exporta una función que toma la ruta y regresa el HTML renderizado. Esto es lo que hace para crear ese HTML:
 
-1. [Require page, json, and webpack chunk data sources](/docs/html-generation/#1-require-page-json-and-webpack-chunk-data-sources)
-2. [Create HTML React Container](/docs/html-generation/#2-create-html-react-container)
-3. [Load Page and Data](/docs/html-generation/#3-load-page-and-data)
-4. [Create Page Component](/docs/html-generation/#4-create-page-component)
-5. [Add Preload Link and Script Tags](/docs/html-generation/#5-add-preload-link-and-script-tags)
-6. [Inject Page Info to CDATA](/docs/html-generation/#6-inject-page-info-to-cdata)
-7. [Render Final HTML Document](/docs/html-generation/#7-render-final-html-document)
+1. [Solicitar página, json y _chunk_ de fuentes de datos webpack](/docs/html-generation/#1-require-page-json-and-webpack-chunk-data-sources)
+2. [Crear contenedores HTML React](/docs/html-generation/#2-create-html-react-container)
+3. [Cargar página y datos](/docs/html-generation/#3-load-page-and-data)
+4. [Crear componente página](/docs/html-generation/#4-create-page-component)
+5. [Agregar enlace de precarga y etiquetas script](/docs/html-generation/#5-add-preload-link-and-script-tags)
+6. [Inyectar información de página a CDATA](/docs/html-generation/#6-inject-page-info-to-cdata)
+7. [Renderizar el documento HTML final](/docs/html-generation/#7-render-final-html-document)
 
-#### 1. Require page, json, and webpack chunk data sources
+#### 1. Solicitar página, json y _chunk_ de fuentes de datos webpack
 
-In order to perform the rest of the operations, we need some data sources to work off. These are:
+A fin de optimizar el resto de operaciones, necesitamos algunas fuentes de datos para trabajar. Estas son:
 
 ##### sync-requires.js
 
-Exports `components` which is a map of componentChunkName to require statements for the disk location of the component. See [Write Out Pages](/docs/write-pages/#sync-requiresjs).
+Exporta `components` que es un mapa de componentChunkName para requerir sentencias para la ubicación del componente en el disco. Mira [Escribir páginas](/docs/write-pages/#sync-requiresjs).
 
 ##### data.json
 
-Contains all the pages (with componentChunkName, jsonName, and path) and the dataPaths which map jsonName to dataPath. See [Write Out Pages](/docs/write-pages/#datajson) for more.
+Contiene todas las páginas (con componentChunkName, jsonName y ruta) y el dataPaths que mapea jsonName a dataPath. Mira [Escribir páginas](/docs/write-pages/#datajson) para más.
 
 ##### webpack.stats.json
 
-Contains a mapping from componentChunkName to the webpack chunks comprising it. See [Code Splitting](/docs/how-code-splitting-works/#webpackstatsjson) for more.
+Contiene un mapeo de componentChunkName de los trozos de webpack que lo componen. Mira [División de código](/docs/how-code-splitting-works/#webpackstatsjson) para más.
 
 ##### chunk-map.json
 
-Contains a mapping from componentChunkName to their core (non-shared) chunks. See [Code Splitting](/docs/how-code-splitting-works/#chunk-mapjson) for more.
+Contiene un mapeo de componentChunkName a sus trozos centrales (no-compartidos). Mira [División de código](/docs/how-code-splitting-works/#chunk-mapjson) para más.
 
-#### 2. Create HTML React Container
+#### 2. Crear contenedores HTML React
 
-We create an `html` React component that will eventually be rendered to a file. It will have props for each section (e.g. `head`, `preBodyComponents`, `postBodyComponents`). This is owned by [default-html.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/default-html.js).
+Creamos un componente `html` React que eventualmente será renderizado a un archivo. Tendrá props por cada sección (ejemplo `head`, `preBodyComponents`, `postBodyComponents`). Esto es propiedad de [default-html.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/default-html.js).
 
-#### 3. Load Page and Data
+#### 3. Cargar página y datos
 
-The only input to `static-entry.js` is a path. So we must look up the page for that path in order to find its `componentChunkName` and `jsonName`. This is achieved by simply looking up the pages array contained in `data.json`. We can then load its data by looking it up in `dataPaths`.
+La única entrada de `static-entry.js` es una ruta. Por lo tanto, debemos buscar en la página esa ruta para encontrar su `componentChunkName` y `jsonName`. Esto se logra simplemente buscando en el arreglo de páginas contenidas en `data.json`. Debemos entonces cargar sus datos buscando en `dataPaths`.
 
-#### 4. Create Page Component
+#### 4. Crear componente página
 
-Now we're ready to create a React component for the page (inside the Html container). This is handled by [RouteHandler](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L123). Its render will create an element from the component in `sync-requires.js`.
+Ahora estamos listos para crear un componente React para la página (dentro del contenedor Html). Esto es manejado por [RouteHandler](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L123). Su renderizado creará un elemento desde el componente en `sync-requires.js`.
 
-#### 5. Add Preload Link and Script Tags
+#### 5. Agregar enlace de precarga y etiquetas script
 
-This is covered by the [Code Splitting](/docs/how-code-splitting-works/#construct-link-and-script-tags-for-current-page) docs. We essentially create a `<link rel="preload" href="component.js">` in the document head, and a follow up `<script src="component.js">` at the end of the document. For each component and page JSON.
+Esto es cubierto por la documentación de [división de código](/docs/how-code-splitting-works/#construct-link-and-script-tags-for-current-page). Esencialmente creamos un `<link rel="preload" href="component.js">` en el head del documento, seguido de `<script src="component.js">` al final del documento. Por cada componente y página JSON.
 
-#### 6. Inject Page Info to CDATA
+#### 6. Inyectar información de página a CDATA
 
-The [production-app.js](/docs/production-app/#first-load) needs to know the page that it's rendering. The way we pass this information is by setting it in CDATA during HTML generation, since we know that page at this point. So we add the following to the [top of the HTML document](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L325):
+[production-app.js](/docs/production-app/#first-load) necesita saber de la página que esta renderizando. La forma en que pasamos esta información es configurándola en CDATA durante la generación de HTML, ya que conocemos esa página hasta este punto. Entonces agregamos lo siguiente a la [parte superior del documento HTML](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L325):
 
 ```html
 /*
@@ -89,16 +89,16 @@ The [production-app.js](/docs/production-app/#first-load) needs to know the page
 */
 ```
 
-#### 7. Render Final HTML Document
+#### 7. Renderizar el documento HTML final
 
-Finally, we call [react-dom](https://reactjs.org/docs/react-dom.html) and render our top level Html component to a string and return it.
+Finalmente, llamamos a [react-dom](https://reactjs.org/docs/react-dom.html) y renderiza nuestro componente Html de nivel superior en una cadena y lo devuelve.
 
 ## build-html.js
 
-So, we've built the means to generate HTML for a page. This webpack bundle is saved to `public/render-page.js`. Next, we need to use it to generate HTML for all the site's pages.
+Hemos creado los medios para generar HTML para una página. Este empaquetado webpack es guardado en `public/render-page.js`. A continuación, necesitamos usarlo para generar el HTML para todas las páginas del sitio.
 
-Page HTML does not depend on other pages. So we can perform this step in parallel. We use the [jest-worker](https://github.com/facebook/jest/tree/master/packages/jest-worker) library to make this easier. By default, the [html-renderer-queue.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/html-renderer-queue.js) creates a pool of workers equal to the number of physical cores on your machine. You can configure the number of pools by passing an optional environment variable, [`GATSBY_CPU_COUNT`](/docs/multi-core-builds). It then partitions the pages into groups and sends them to the workers, which run [worker.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/worker.js).
+La página HTML no depende de otras páginas. Entonces podemos realizar este paso en paralelo. Usamos la librería [jest-worker](https://github.com/facebook/jest/tree/master/packages/jest-worker) para hacer esto mas fácil. Por defecto [html-renderer-queue.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/html-renderer-queue.js) crea un grupo de _workers_ igual al numero de núcleos físicos en tu maquina. Puedes configurar el número de grupos pasando una variable de entorno opcional, [`GATSBY_CPU_COUNT`](/docs/multi-core-builds). Luego divide las páginas en grupos y las envía a los _workers_, que ejecutan [worker.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/worker.js).
 
-The workers simply iterate over each page in their partition, and call the `render-page.js` with the page. It then saves the html for the page's path in `/public`.
+Los _workers_ simplemente iteran sobre cada página en su partición y llaman a `render-page.js` con la página. Luego guarda el html para la ruta de las páginas en `/public`.
 
-Once all workers have finished, we're done!
+Una vez que todos los workers hayan terminado, ¡hemos terminado!
