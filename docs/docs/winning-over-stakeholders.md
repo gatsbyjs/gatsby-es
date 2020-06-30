@@ -1,15 +1,15 @@
 ---
-title: "Winning Over Stakeholders"
+title: "Conquistar los accionistas"
 ---
 
-Any website project has multiple stakeholders, such as developers, marketers, content creators, engineering leaders, executives, and clients.
+Cualquier proyecto del sitio web tiene varias accionistas, como los desarrolladores, los comercializadores, creadores de contenido, líderes de ingeniería, los ejecutivos, y los clientes.
 
-In smaller projects and organizations, one person may wear multiple hats. As a freelancer, you may be the developer, marketer, content creator, and engineering leader rolled into one. Working at a mid-sized agency or organization, you are likely to only wear one hat at a time.
+En proyectos y organizaciones más pequeñas, una persona puede usar muchos sombreros. Como un freelance, puede ser el desarrollador, el comercializador, el creador de contenido, y líder de ingeniería rodó en una. Trabajando en una agencia o organización de tamaño mediano, usted es probable para usar sólo un sombrero a la vez.
 
-When working with other stakeholders, it's important to understand their motivations, and what they're being measured on, so you can explain the benefits of Gatsby in a way that resonates with them.
+Cuando trabajar con otros accionistas, es importante a entender sus motivaciones, y lo que se están midiendo en, así que usted puede explicar los beneficios de Gatsby de una manera que resuena con ellos.
 
-For example, marketers typically care about increasing leads and conversion rates, while executives focus on driving revenue, and clients prioritize the project shipping on time and under budget.
+Por ejemplo, los comercializadores por lo general se preocupan por el aumento de potenciales crecientes y tasas de conversión, mientras los ejecutivos centran en impulsar los ingresos, y los clientes priorizan el envío del proyecto a tiempo por debajo del presupuesto.
 
-This section includes guides to explaining the benefits of Gatsby to the various types of stakeholders that you may work with.
+Esta sección incluye las guías para explicar los beneficios de Gatsby a los diferentes tipos de accionistas con que puede trabajar.
 
 <GuideList slug={props.slug} />
