@@ -1,14 +1,14 @@
 ---
-title: Code Splitting and Prefetching
+title: División de código y _Prefetching_
 ---
 
-Code splitting in Gatsby occurs during webpack compilation via [Dynamic Splitting](https://webpack.js.org/guides/code-splitting/#dynamic-imports). During compilation, if webpack finds an `import` function invocation, it will split the imported file into a separate bundle. If modules are instead loaded with `require`, they are not code split and are instead included in the original bundle.
+En Gatsby, la división de código ocurre durante la compilación de _webpack_ a través de [División dinámica](https://webpack.js.org/guides/code-splitting/#dynamic-imports). Durante la compilación, si _webpack_ encuentra una invocación a una función `import`, dividirá el archivo importado en un _bundle_ separado. Si los módulos son cargados mediante `require`, no se les aplica división de código, sino que se incluyen en el _bundle_ original.
 
-But how do you figure out what modules/files to split? Thankfully, there is a natural answer. Pages! When you load a page, there's no reason you need to also load the JavaScript/CSS for all the other pages on the site (except to prefetch them which we'll get to [later](/docs/how-code-splitting-works/#prefetching-chunks)). Gatsby's job is to do the heavy lifting of generating the right JavaScript in the form that webpack expects to perform this code splitting.
+Pero, ¿cómo saber qué módulos/archivos dividir? Afortunadamente, hay una respuesta natural. ¡Páginas! Al cargar una página, no hay razón por la cual también se tengan que subir los archivos JavaScript/CSS para todas las otras páginas del sitio (excepto si se quiere hacer _prefetch_ de estas, lo cual veremos [más adelante](/docs/how-code-splitting-works/#prefetching-chunks)). La tarea de Gatsby es hacer el trabajo pesado de generar el JavaScript correcto en la forma en que _webpack_ espera realizar esta división de código.
 
 ## .cache/async-requires.js
 
-During the [Write Out Pages](/docs/write-pages/#async-requiresjs) bootstrap phase, you output `.cache/async-requires.js`. This file is key to code splitting. It exports a `components` object that maps [ComponentChunkNames](/docs/behind-the-scenes-terminology/#componentchunkname) to functions that import the component's file on disk. E.g
+Durante la [Write Out Pages](/docs/write-pages/#async-requiresjs) bootstrap phase, le das salida a `.cache/async-requires.js`. Este archivo es crucial para la división de código. El archivo exporta un objeto `components` que asigna [ComponentChunkNames](/docs/behind-the-scenes-terminology/#componentchunkname) a funciones que importan el archivo del componente en el disco. Por ejemplo:
 
 ```javascript
 exports.components = {
@@ -16,27 +16,27 @@ exports.components = {
     import(
       "/home/site/src/blog.js" /* webpackChunkName: "component---src-blog-js" */
     ),
-  // more components
+  // más componentes
 }
 ```
 
-The entry point to webpack (`production-app.js`) [references ./async-requires.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js#L15). And therefore webpack will analyze it and find the object mapping components to functions that dynamically import page component files. According to dynamic splitting, webpack will then create separate chunks for each of those imported files.
+El punto de entrada a _webpack_ (`production-app.js`) [references ./async-requires.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js#L15). Y, por lo tanto, _webpack_ lo analizará y encontrará el objeto que le asigna componentes a funciones que importan, dinámicamente, archivos de componentes de página. Según la división dinámica, _webpack_ creará _chunks_ separados para cada uno de esos archivos importados.
 
-`async-requires` also exports a `data` function that dynamically imports the [data.json](/docs/write-pages/#datajson) file so that it too is code split.
+`async-requires` también exporta una función `data` que importa, dinámicamente, el archivo [data.json](/docs/write-pages/#datajson) para que también se divida el código.
 
-## Chunk bundle naming
+## Cómo nombrar los paquetes de fragmentos
 
-Great! You've told webpack where you want to code split. But how will these be named on disk? Webpack gives you the ability to customize this via the [chunkFilename](https://webpack.js.org/configuration/output/#output-chunkfilename) configuration in the [output](https://webpack.js.org/configuration/output/) section, which is set by Gatsby in [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L135) as:
+¡Genial! Le has indicado a _webpack_ dónde quieres dividir el código. Pero, ¿cómo se les nombrará en el disco? _Webpack_ te brinda la posibilidad de personalizar esto a través de la configuración [chunkFilename](https://webpack.js.org/configuration/output/#output-chunkfilename) en la sección [_output_](https://webpack.js.org/configuration/output/), la cual Gatsby establece en [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L135) como:
 
 ```text
 [name]-[contenthash].js
 ```
 
-Content hash is simply a hash of the contents of the chunk that was code split. But what about `name`? You haven't told webpack the "name" of the chunk, other than the filename, which can't be a name since it has slashes in it. Normally, Webpack would replace `[name]` with `[id]` (see [webpack docs](https://webpack.js.org/configuration/output/#output-chunkfilename)). But, it gives us the opportunity to specify the name instead as a comment in the `import block`. In the example above, that's what the `/* webpackChunkName: "component---src-blog-js" */` is doing.
+_Content hash_ es simplemente un _hash_ de los contenidos del _chunk_ que se dividieron en código. Pero, ¿qué hay de `name`? Aún no le has dicho a _webpack_ el "nombre" del _chunk_, uno distinto al nombre del archivo, el cual no puede ser un nombre ya que contiene _slashes_. Normalmente, _Webpack_ reemplazaría `[name]` por `[id]` (conoce más en [documentos de _webpack_](https://webpack.js.org/configuration/output/#output-chunkfilename)). Pero, en cambio, nos da la oportunidad de especificar el nombre como un comentario en el `import block`. En el ejemplo anterior, eso es lo que hace el comentario `/* webpackChunkName: "component---src-blog-js" */`.
 
-## Primer on chunkGroups and chunks
+## Introducción a _chunkGroups_ y _chunks_
 
-Before we go on to show how Gatsby maps components to the generated bundle names, you should understand how webpack chunks work. A chunk group represents a logical code split, e.g. a Gatsby page, or the Gatsby core app. The chunk groups might share a bunch of code or libraries. Webpack detects these and creates shared pieces of code. These are chunks, e.g. there might be a chunk for React and other libraries. Then there would be the leftover chunks of core Gatsby JS code for the particular chunk group. This is most easily explained by the below graph.
+Antes de proceder a mostrar cómo Gatsby le asigna componentes a los nombres de los _bundles_ generados, debes entender cómo funcionan los _chunks_ de _webpack_. Un grupo de _chunks_ representa una división lógica de código, p. ej., una página de Gatsby o la aplicación principal de Gatsby. Los grupos de _chunks_ pueden compartir un montón de código o bibliotecas. _Webpack_ los detecta y crea piezas de código compartidas. Estos son _chunks_, p. ej., puede haber un _chunk_ para _React_ y otras bibliotecas. Luego, quedarían los _chunks_ sobrantes del código central de Gatsby JS para el grupo de _chunks_ en particular. Esto se explica más fácilmente mediante el siguiente gráfico.
 
 ```dot
 digraph {
@@ -75,23 +75,23 @@ digraph {
 }
 ```
 
-In the above graph, you can see 3 chunk groups: 2 pages and the core Gatsby app. The two pages share a bunch of libraries. Webpack found these common dependencies and created chunks for them. These chunks are id 0 and 1. And you'll see that both page `chunkGroups` depend on them. Each page also depends on its own chunk which represents the page's core code (from its src code in the Gatsby site). These would be id 7 for `component---src-blog-1-js` and 8 for `component---src-blog-2-js`.
+En el gráfico anterior, puedes ver 3 grupos de _chunks_: 2 páginas y la aplicación principal de Gatsby. Las dos páginas comparten un montón de bibliotecas. _Webpack_ encontró estas dependencias comunes y creó _chunks_ para ellas. Estos _chunks_ son _id_ 0 y 1. Y verás que ambas páginas `chunkGroups` dependen de ellos. Cada página también depende de su propio _chunk_ que representa el código central de la página (de su código _src_ en el sitio Gatsby). Estos serían _id_ 7 para `component---src-blog-1-js` y 8 para `component---src-blog-2-js`.
 
-You can also see the chunk group for `app`. It turns out that this shares no dependencies with the pages. But it does include the webpack runtime whose name is declared in [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L390).
+También puedes ver el grupo de _chunks_ para `app`. Resulta que esto no comparte dependencias con las páginas. Pero sí incluye el tiempo de ejecución de _webpack_ cuyo nombre se declara en [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L390).
 
-Remember that the chunk group name was assigned by the `/* webpackChunkName: .../*` in the previous section.
+Recuerda que el nombre del grupo de _chunks_ fue asignado por `/* webpackChunkName: .../*` en la sección anterior.
 
-## Referencing chunks in build HTML
+## Referenciar _chunks_ al generar HTML
 
-Webpack can now split your code into different bundles, and you've named them appropriately. But those bundles will still be named with a content hash. E.g. for a component `component--src-blog-js`, the output chunk bundle might be named something like `component--src-blog-js-2e49587d85e03a033f58.js`. Webpack will replace `import()` calls with links to the generated bundle filenames. This works great for your pure JavaScript bundles. But things get complicated when generating your page HTML files.
+Webpack ahora puede dividir tu código en diferentes _bundles_, y los has nombrado apropiadamente. Pero, esos _bundles_ seguirán siendo nombrados con un _content hash_. P. ej., para un componente `component--src-blog-js`, el _chunk bundle_ de salida podría ser nombrado como `component--src-blog-js-2e49587d85e03a033f58.js`. _Webpack_ reemplazará las invocaciones a `import()` por enlaces a los nombres de archivo de los _bundles_ generados. Esto funciona muy bien para tus _bundles_ de JavaScript puro. Pero las cosas se complican al generar los archivos HTML de tu página.
 
-HTML file generation is covered under the [Page HTML Generation](/docs/html-generation/) docs. In summary, webpack builds `static-entry.js` which produces a `render-page.js` bundle. This is a function that accepts a page and renders its HTML. The HTML is enough to drive a site, and enhance SEO, but once the page is loaded, Gatsby also loads the JavaScript bundle so that page rendering occurs clientside from then on. This gives the advantage of fast initial page loads combined with client side rendering for future page clicks.
+La generación de archivos HTML está cubierta en los documentos de [Generación de Páginas HTML](/docs/html-generation/). En resumen, _webpack_ construye un archivo `static-entry.js` que produce un _bundle_ `render-page.js`. Esta es una función que acepta una página y renderiza su HTML. El contenido HTML es suficiente para impulsar un sitio y mejorar el _SEO_, pero una vez que se carga la página, Gatsby también carga el _bundle_ de JavaScript para que la renderización de la página ocurra en el lado del cliente a partir de ese momento. Esto ofrece la ventaja de cargas de página iniciales rápidas combinadas con renderización en el lado del cliente para futuros clics en la página.
 
-To do this, you need to be able to create `<link>` and `<script>` tags in the HTML the Gatsby runtime chunk, and the page chunk (e.g. index). But as mentioned above, only webpack knows the name of the generated filename for each chunk. All Gatsby knows is the `componentChunkName`.
+Para hacer esto, debes poder crear etiquetas `<link>` y `<script>` en el HTML, en el _chunk_ del _runtime_ de Gatsby, y en el _chunk_ de la página (p.ej. índice). Pero como se mencionó anteriormente, solo _webpack_ conoce el nombre del nombre de archivo generado para cada _chunk_. `componentChunkName` es lo único que Gatsby conoce.
 
 #### webpack.stats.json
 
-It turns out that webpack provides a way to record the mapping. It provides a compilation hook called [done](https://webpack.js.org/api/compiler-hooks/#done) that you can register for. It provides a [stats](https://webpack.js.org/api/stats/) data structure that contains all the `chunkGroups` (remember that the chunk Group is the `componentChunkName`). Each chunk group contains a list of the chunks it depends on. Gatsby provides a custom webpack plugin called [GatsbyWebpackStatsExtractor](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/gatsby-webpack-stats-extractor.js) that implements this hook and writes the chunk information to `/public/webpack.stats.json` (under the `assetsByChunkName` key). E.g
+Resulta que _webpack_ proporciona una forma de registrar la asignación. Provee un _hook_ de compilación llamado [_done_](https://webpack.js.org/api/compiler-hooks/#done) para el cual te puedes registrar. Proporciona una estructura de datos [_stats_](https://webpack.js.org/api/stats/) que contiene todos los `chunkGroups` (recuerda que el _chunk Group_ es el `componentChunkName`). Cada grupo de _chunks_ contiene una lista de los _chunks_ de los que depende. Gatsby provee un _plugin_ personalizado para _webpack_ llamado [GatsbyWebpackStatsExtractor](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/gatsby-webpack-stats-extractor.js) que implementa este _hook_ y escribe la información del _chunk_ en `/public/webpack.stats.json` (bajo el _key_ `assetsByChunkName`). P. ej.
 
 ```javascript
 {
@@ -113,7 +113,7 @@ It turns out that webpack provides a way to record the mapping. It provides a co
 
 ##### chunk-map.json
 
-`webpack.stats.json` maps chunk groups (componentChunkNames) to the chunk asset names they depend on. Your [Gatsby webpack compiler hook](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L234) also outputs `chunk-map.json` which is a mapping from chunkGroup to the core chunk for the component, as opposed to the shared chunks (id0 and id1 in [primer diagram](/docs/how-code-splitting-works/#primer-on-chunkgroups-and-chunks)). This will render a single component chunk for JavaScript and CSS within each chunk group. E.g
+`webpack.stats.json` asigna grupos de _chunks_ (componentChunkNames) a los nombres de los activos de _chunks_ de los que depende. Tu [_hook_ compilador de _webpack_ de Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L234) también le da salida a `chunk-map.json`, lo cual es una asignación de _chunkGroup_ al _chunk_ principal para el componente, contrario a los _chunks_ compartidos (_id0_ e _id1_ en el [diagrama introductorio](/docs/how-code-splitting-works/#primer-on-chunkgroups-and-chunks)). Esto renderizará el _chunk_ de un solo componente para JavaScript y CSS dentro de cada grupo de _chunks_. P. ej.
 
 ```javascript
 {
@@ -125,15 +125,15 @@ It turns out that webpack provides a way to record the mapping. It provides a co
 }
 ```
 
-#### Referencing Chunks
+#### Cómo referenciar _chunks_
 
-These two files are loaded by [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L16) so that it can lookup chunk assets for componentChunkNames. This occurs in two places.
+Estos dos archivos son cargados por [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L16) para que pueda buscar activos de _chunks_ para _componentChunkNames_. Esto ocurre en dos lugares.
 
-##### Construct link and script tags for current page
+##### Construcción de etiquetas _link_ y _script_ para la página actual
 
-As mentioned above, `static-entry.js` generates HTML, but also loads the Gatsby JavaScript runtime and the JavaScript for the page you're generating HTML for. These are added as a `link` tags in the `<head>` (see [link tag preloading](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)), and then referenced at the bottom of the body in `script` tags.
+Como ya se ha mencionado, `static-entry.js` genera HTML, pero también carga el _runtime_ de JavaScript de Gatsby y el JavaScript de la página para la que se está generando HTML. Estos se agregan como etiquetas `link` en `<head>` (más detalles en [precarga de etiquetas link](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)), y luego son referenciados al final de _body_ en etiquetas `script`.
 
-The Gatsby runtime bundle is called `app` (output name from [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L169)). You [lookup assetsByChunkName](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L204) by `app` to get its chunk asset files. Then you do the same for the component by looking up the same collection by `componentChunkName` (e.g. `component---src-blog-2-js`). These two chunk asset arrays are merged together. For each chunk in it, you create the following link and add it to the [headComponents](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L259).
+El _bundle_ del _runtime_ de Gatsby se llama `app` (nombre de salida de [webpack.config.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/webpack.config.js#L169)). Tú [buscas assetsByChunkName](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L204) mediante `app` para obtener sus archivos de activos de _chunks_. Luego, haces lo mismo para el componente al buscar la misma colección a través de `componentChunkName` (p. ej. `component---src-blog-2-js`). Estos dos _arrays_ de activos de _chunks_ se fusionan. Para cada _chunk_ que contenga, crea el siguiente enlace y agrégalo a [headComponents](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L259).
 
 ```html
 <link
@@ -144,9 +144,9 @@ The Gatsby runtime bundle is called `app` (output name from [webpack.config.js](
 />
 ```
 
-`rel="preload"` tells the browser to start downloading this resource with a high priority as it will likely be referenced further down in the document. So hopefully by the time you get there, the resource will be returned from the server already.
+`rel="preload"` le indica al navegador que comience a descargar este recurso con alta prioridad, ya que es probable que se haga referencia más adelante en el documento. Esperemos que para cuando llegue el momento, el recurso ya haya sido devuelto por el servidor.
 
-Then, at the [end of the body](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L331), you include the actual script tag that references the preloaded asset.
+Luego, al [final de _body_](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L331), incluye la verdadera etiqueta _script_ que hace referencia al activo precargado.
 
 ```html
 <script
@@ -156,7 +156,7 @@ Then, at the [end of the body](https://github.com/gatsbyjs/gatsby/blob/master/pa
 />
 ```
 
-If the asset is CSS, you [inject it inline in the head](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L311).
+Si el activo es CSS, [insértalo _inline_ en el _head_](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L311).
 
 ```html
 <style
@@ -165,17 +165,17 @@ If the asset is CSS, you [inject it inline in the head](https://github.com/gatsb
 />
 ```
 
-##### Prefetching chunks
+##### _Prefetching chunks_
 
-As shown above, Gatsby uses "preload" to speed up loading of resources required by the page. These are its CSS and its core JavaScript needed to run the page. But if you stopped there, then when a user clicked a link to another page, he would have to wait for that pages resources to download before showing it. To speed this up, once the current page has loaded, Gatsby looks for all links on the page, and for each starts prefetching the page that the link points to.
+Como se mostró anteriormente, Gatsby usa _"preload"_ para acelerar la carga de los recursos requeridos por la página. Estos son su CSS y su JavaScript principal, necesarios para ejecutar la página. Pero si pararas aquí, entonces cuando un usuario haga clic en un enlace a otra página, tendría que esperar a que se descarguen los recursos de esa página antes de mostrarla. Para acelerar esto, una vez que la página actual se haya cargado, Gatsby busca todos los enlaces en la página, y para cada uno, comienza a hacer _prefetch_ de la página a la que apunta el enlace.
 
-It does this using the `<link rel="prefetch" href="..." />` parameter. When the browser sees this tag, it will start downloading the resource but at an extremely low priority and only when the resources for the current page have finished loading. Check out the [MDN prefetch docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more.
+Esto lo hace usando el parámetro `<link rel="prefetch" href="..." />`. Cuando el navegador vea esta etiqueta, comenzará a descargar el recurso pero con una prioridad extremadamente baja y solo cuando los recursos de la página actual hayan terminado de cargarse. Dirígete a los [documentos MDN sobre _prefetch_](https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ) para más información.
 
-Here's how it works. All links on Gatsby sites use the [gatsby-link](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-link) plugin which provides a `GatsbyLink` component that uses reach router. The "to" attribute is the page the browser will navigate to if clicked. So once the Link [componentDidMount](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-link/src/index.js#L61) callback is invoked, we enqueue the "to" path into the [production-app loader](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L223) for prefetching.
+Así es como funciona. Todos los enlaces en los sitios de Gatsby usan el _plugin_ [gatsby-link](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-link), el cual provee un componente `GatsbyLink` que usa el enrutador de alcance. El atributo _"to"_ es la página a la que el navegador se dirigirá en caso de que se haga clic. Entonces, una vez que se invoca el _callback Link_ [componentDidMount](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-link/src/index.js#L61), agregamos la ruta _"to"_ al [_loader_ de production-app](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L223) para hacer _prefetch_.
 
-At this stage, you know the page that you're navigating to, and can retrieve its `componentChunkName` and `jsonName`, but how do you figure out the generated chunkGroup for the component?
+En este punto, sabes cuál es la página a la que te estás dirigiendo y puedes recuperar sus `componentChunkName` y `jsonName` pero, ¿cómo calcularías el _chunkGroup_ generado para el componente?
 
-`static-entry.js` [requires `chunk-map.json`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L20) and then [injects it into the CDATA](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L342) of the html as `window.___chunkMapping` so that it is available to all code in [production-app.js](/docs/production-app/). E.g:
+`static-entry.js` [solicita `chunk-map.json`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L20) y luego [lo inyecta en el _CDATA_](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js#L342) de HTML como `window.___chunkMapping` de manera que esté disponible para todo el código en [production-app.js](/docs/production-app/). P. ej:
 
 ```html
 /*
@@ -195,8 +195,8 @@ At this stage, you know the page that you're navigating to, and can retrieve its
 */
 ```
 
-Now the loader can create the full component asset path using [chunkMapping](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L69). It then dynamically constructs a `<link rel="prefetch" ... />` tag and adds it to the DOM (in [prefetch.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/prefetch.js)).
+Ahora, el _loader_ puede crear la ruta completa del activo del componente usando [chunkMapping](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L69). Luego construye, dinámicamente, una etiqueta `<link rel="prefetch" ... />` y la agrega al _DOM_ (en [prefetch.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/prefetch.js)).
 
-You may notice that prefetching doesn't prefetch the shared chunks (e.g. `id0` and `id1`). Why? This is a punt. We're guessing that shared chunks will have been loaded earlier for other pages. And if not, then the main page loading logic will download it. It just won't be prefetched.
+Puedes ver que al hacer _prefetching_ no se aplica a los _chunks_ compartidos (p. ej. `id0` y `id1`). ¿Por qué? Esto es un _punt_. Suponemos que los _chunks_ compartidos se habrán cargado antes para otras páginas. Y si no, entonces la lógica de carga de la página principal lo descargará. Simplemente, no se le hará _prefetch_.
 
-One more thing, prefetching can be disabled by implementing the [disableCorePrefetching](/docs/browser-apis/#disableCorePrefetching) browser API and returning true. This value is checked in [loader.enqueue](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L242). An example plugin that implements this is [gatsby-plugin-guess-js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-guess-js/src/gatsby-browser.js#L3).
+Algo más, el _prefetching_ se puede deshabilitar implementando la API del navegador [disableCorePrefetching](/docs/browser-apis/#disableCorePrefetching) y arrojando _true_. Este valor se verifica en [loader.enqueue](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/loader.js#L242). Un ejemplo de un _plugin_ que implementa esto es [gatsby-plugin-guess-js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-guess-js/src/gatsby-browser.js#L3).
