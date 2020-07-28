@@ -1,8 +1,8 @@
 ---
-title: Sourcing from Databases
+title: Abastecimiento de la base de datos
 ---
 
-The Gatsby ecosystem includes built-in connectors to several database systems. These include:
+El ecosistema de Gatsby incluye incorporados conectores a varios sistemas de bases de datos. Éstos incluyen:
 
 - [PostgreSQL](/packages/gatsby-source-pg/?=pg)
 - [MySQL](/packages/gatsby-source-mysql/?=mysql)
@@ -10,4 +10,4 @@ The Gatsby ecosystem includes built-in connectors to several database systems. T
 - [MongoDB](/packages/gatsby-source-mongodb/)
 - [Firebase](/packages/gatsby-source-firebase/)/[Firestore](/packages/gatsby-source-firestore/)
 
-These plugins will ingest data from your DB and make it available for your page components to query.
+Estos complementos ingerir datos de su DB y los pondrán a disposición para que sus componentes de tu página query.
