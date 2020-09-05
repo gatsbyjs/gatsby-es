@@ -2,4 +2,4 @@
 title: Glamor
 ---
 
-CSS-in-JS library [Glamor](https://github.com/threepointone/glamor) is not actively maintained. the maintainer recommends using [Emotion](/docs/emotion/).
+La CSS-in-JS biblioteca [Glamor](https://github.com/threepointone/glamor) no se mantiene activamente. el responsable de mantenedor recomienda usar [Emotion](/docs/emotion/).
