@@ -1,26 +1,26 @@
 ---
-title: Querying Data in Components with the useStaticQuery Hook
+Título: Consultando información en componentes utilizando useStaticQuery Hook
 ---
 
-Gatsby v2.1.0 introduces `useStaticQuery`, a new Gatsby feature that provides the ability to use a [React Hook](https://reactjs.org/docs/hooks-intro.html) to query with GraphQL at _build time_.
+Gatsby v2.1.0 introdujo `useStaticQuery`, una nueva característica de Gatsby que provee la habilidad de usar [React Hook](https://es.reactjs.org/docs/hooks-rules.html) para hacer consultas con GraphQL en _build time_.
 
-Just like the [StaticQuery](/docs/static-query/) component, it allows your React components to retrieve data via a GraphQL query that will be parsed, evaluated, and injected into the component. However, `useStaticQuery` is a hook rather than a component that takes a render prop!
+Al igual que el componente [StaticQuery](/docs/static-query/), permite que tus componentes de React puedan recibir información vía una consulta de GraphQL que será parseada, evaluada e injectada dentro del componente. Sin embargo, ¡`useStaticQuery` es un hook más que un componente que toma propiedades de rendereo!
 
-In this guide, you will walk through an example using `useStaticQuery`. If you're not familiar with static queries in Gatsby, you might want to check out [the difference between a static query and a page query](/docs/static-query/#how-staticquery-differs-from-page-query).
+En esta guía, veremos un ejemplo de uso de `useStaticQuery`. Si todavía no estas familiarizado con las consultas estáticas en Gatsby, quizás deberías darle un vistazo a [la diferencia entre una consulta estática y una consulta de página](/docs/static-query/#how-staticquery-differs-from-page-query).
 
-## How to use useStaticQuery in components
+## Cómo usar useStaticQuery en componentes
 
-> 💡 You'll need React and ReactDOM 16.8.0 or later to use `useStaticQuery`.
+> 💡 Vas a necesitar React y ReactDOM 16.8.0 o mayor para usar `useStaticQuery`.
 >
 > 📦 `npm install react@^16.8.0 react-dom@^16.8.0`
 
-`useStaticQuery` is a React Hook. All the [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html) apply.
+`useStaticQuery` es un React Hook. Todas las [Reglas de Hooks](https://es.reactjs.org/docs/hooks-rules.html) aplican.
 
-It takes your GraphQL query and returns the requested data. That's it!
+Esto toma tus consultas de GraphQL y retorna la información solicitada. ¡Así de simple!
 
-### Basic example
+### Ejemplo básico
 
-Let's create a `Header` component that queries for the site title from `gatsby-config.js`:
+Creamos un componente `Header` que consulte por el título del sitio desde `gatsby-config.js`:
 
 ```jsx:title=src/components/header.js
 import React from "react"
@@ -45,11 +45,11 @@ export default () => {
 }
 ```
 
-### Composing custom `useStaticQuery` hooks
+### Componiendo hooks de `useStaticQuery` personalizados
 
-One of the most compelling features of hooks is the ability to compose and re-use these blocks of functionality. `useStaticQuery` is a hook. Therefore, using `useStaticQuery` allows us to compose and re-use blocks of reusable functionality. Perfect!
+Uno de las características más convincentes de hooks es la habilidad de componer y reutilizar estos bloques de funcionalidad. `useStaticQuery` es un hook. Por lo tanto, usar `useStaticQuery` nos permite componer y reutilizar bloques de funcionalidades reutilizable. ¡Perfecto!
 
-A classic example is to create a `useSiteMetadata` hook which will provide the `siteMetadata` to be re-used in any component. It looks something like:
+Un ejemplo clásico es crear un `useSiteMetadata` hook el cuál permitira proveer al `siteMetadata` ser reutilizado en cualquier componente. Esto se ve algo así:
 
 ```jsx:title=src/hooks/use-site-metadata.js
 import { useStaticQuery, graphql } from "gatsby"
@@ -78,7 +78,7 @@ export const useSiteMetadata = () => {
 }
 ```
 
-Then just import your newly created hook, like so:
+Entonces solamente importamos el nuevo hook creado, así:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -86,11 +86,11 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 export default () => {
   const { title, siteUrl } = useSiteMetadata()
-  return <h1>welcome to {title}</h1>
+  return <h1>Bienvenido a {title}</h1>
 }
 ```
 
-## Known Limitations
+## Limitaciones a considerar
 
-- `useStaticQuery` does not accept variables (hence the name "static"), but can be used in _any_ component, including pages
-- Because of how queries currently work in Gatsby, we support only a single instance of `useStaticQuery` in a file
+- `useStaticQuery` no acepta variables (por eso el nombre "static"), pero puede ser usado en _cualquier_ componente, incluido páginas.
+- Debido a como funcionan las consultas actualmente en Gatsby, nosotros solamente damos soporte a una sola instancia de `useStaticQuery` en un archivo.
