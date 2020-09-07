@@ -6,7 +6,7 @@ Gatsby v2.1.0 introdujo `useStaticQuery`, una nueva característica de Gatsby qu
 
 Al igual que el componente [StaticQuery](/docs/static-query/), permite que tus componentes de React puedan recibir información vía una consulta de GraphQL que será parseada, evaluada e injectada dentro del componente. Sin embargo, ¡`useStaticQuery` es un hook más que un componente que toma propiedades de rendereo!
 
-En esta guía, veremos un ejemplo de uso de `useStaticQuery`. Si todavía no estas familiarizado con las consultas estáticas en Gatsby, quizás deberíasa darle un vistazo a [la diferencia entre una consulta estática y una consulta de página](/docs/static-query/#how-staticquery-differs-from-page-query).
+En esta guía, veremos un ejemplo de uso de `useStaticQuery`. Si todavía no estas familiarizado con las consultas estáticas en Gatsby, quizás deberías darle un vistazo a [la diferencia entre una consulta estática y una consulta de página](/docs/static-query/#how-staticquery-differs-from-page-query).
 
 ## Cómo usar useStaticQuery en componentes
 
@@ -14,7 +14,7 @@ En esta guía, veremos un ejemplo de uso de `useStaticQuery`. Si todavía no est
 >
 > 📦 `npm install react@^16.8.0 react-dom@^16.8.0`
 
-`useStaticQuery` es un React Hook. Todas las [Reglas de Hooks](https://reactjs.org/docs/hooks-rules.html) aplican.
+`useStaticQuery` es un React Hook. Todas las [Reglas de Hooks](https://es.reactjs.org/docs/hooks-rules.html) aplican.
 
 Esto toma tus consultas de GraphQL y retorna la información solicitada. ¡Así de simple!
 
