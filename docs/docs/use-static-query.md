@@ -2,7 +2,7 @@
 Título: Consultando información en componentes utilizando useStaticQuery Hook
 ---
 
-Gatsby v2.1.0 introdujo `useStaticQuery`, una nueva característica de Gatsby que provee la habilidad de usar [React Hook](https://reactjs.org/docs/hooks-intro.html) para hacer consultas con GraphQL en _build time_.
+Gatsby v2.1.0 introdujo `useStaticQuery`, una nueva característica de Gatsby que provee la habilidad de usar [React Hook](https://es.reactjs.org/docs/hooks-rules.html) para hacer consultas con GraphQL en _build time_.
 
 Al igual que el componente [StaticQuery](/docs/static-query/), permite que tus componentes de React puedan recibir información vía una consulta de GraphQL que será parseada, evaluada e injectada dentro del componente. Sin embargo, ¡`useStaticQuery` es un hook más que un componente que toma propiedades de rendereo!
 
