@@ -15,10 +15,10 @@ En este tutorial aprenderás cómo consumir datos en tu sitio de Gatsby usando G
 GraphiQL es el entorno de desarrollo integrado para GraphQL. Es una herramienta poderosa (y asombrosa) que usarás a menudo al crear sitios web de Gatsby.
 
 Puedes usarla cuando tu sitio de desarrollo esté ejecutándose de forma habitual en
-<http://localhost:8000/___graphql>.
+`http://localhost:8000/___graphql`.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="/graphiql-explore.mp4"></source>
+  <source type="video/mp4" src="/graphiql-explore.mp4" />
   <p>Your browser does not support the video element.</p>
 </video>
 
@@ -209,7 +209,7 @@ export const query = graphql`
 `
 ```
 
-Visita ahora [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+Visita ahora `http://localhost:8000/my-files`… 😲
 
 ![my-files-page](my-files-page.png)
 

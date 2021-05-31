@@ -34,20 +34,20 @@ tell Jest to use `babel-jest`. The easiest way to do this is to add a `jest.conf
 ```js:title=jest.config.js
 module.exports = {
   transform: {
-    "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`,
+    "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`
   },
   moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/file-mock.js`,
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/file-mock.js`
   },
-  testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
+  testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {
-    __PATH_PREFIX__: ``,
+    __PATH_PREFIX__: ``
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/loadershim.js`],
-}
+  setupFiles: [`<rootDir>/loadershim.js`]
+};
 ```
 
 Let's go over the content of this configuration file:
@@ -59,10 +59,10 @@ Let's go over the content of this configuration file:
 
 ```js:title=jest-preprocess.js
 const babelOptions = {
-  presets: ["babel-preset-gatsby"],
-}
+  presets: ["babel-preset-gatsby"]
+};
 
-module.exports = require("babel-jest").createTransformer(babelOptions)
+module.exports = require("babel-jest").createTransformer(babelOptions);
 ```
 
 - The next option is `moduleNameMapper`. This
@@ -77,7 +77,7 @@ module.exports = require("babel-jest").createTransformer(babelOptions)
   for this. Note the pair of double underscores in the name.
 
 ```js:title=__mocks__/file-mock.js
-module.exports = "test-file-stub"
+module.exports = "test-file-stub";
 ```
 
 - The next config setting is `testPathIgnorePatterns`. You are telling Jest to ignore
@@ -88,7 +88,7 @@ module.exports = "test-file-stub"
   includes un-transpiled ES6 code. By default Jest doesn't try to transform code
   inside `node_modules`, so you will get an error like this:
 
-```
+```text
 /my-app/node_modules/gatsby/cache-dir/gatsby-browser-entry.js:1
 ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import React from "react"
                                                                                             ^^^^^^
@@ -113,8 +113,8 @@ exclude the `gatsby` module.
 
 ```js:title=loadershim.js
 global.___loader = {
-  enqueue: jest.fn(),
-}
+  enqueue: jest.fn()
+};
 ```
 
 ### 3. Useful mocks to complete your testing environment
@@ -126,8 +126,8 @@ needed at first, but will make things a lot easier if you want to test
 components that use `Link` or GraphQL.
 
 ```js:title=__mocks__/gatsby.js
-const React = require("react")
-const gatsby = jest.requireActual("gatsby")
+const React = require("react");
+const gatsby = jest.requireActual("gatsby");
 
 module.exports = {
   ...gatsby,
@@ -147,12 +147,12 @@ module.exports = {
     }) =>
       React.createElement("a", {
         ...rest,
-        href: to,
+        href: to
       })
   ),
   StaticQuery: jest.fn(),
-  useStaticQuery: jest.fn(),
-}
+  useStaticQuery: jest.fn()
+};
 ```
 
 This mocks the `graphql()` function, `Link` component, and `StaticQuery` component.
@@ -168,19 +168,19 @@ the extension `.spec.js` or `.test.js`. The decision comes down to your own
 preference. In this guide, we will use the `__tests__` folder convention. Let's create a test for our header component, so create a `header.js` file in `src/components/__tests__/`:
 
 ```js:title=src/components/__tests__/header.js
-import React from "react"
-import renderer from "react-test-renderer"
+import React from "react";
+import renderer from "react-test-renderer";
 
-import Header from "../header"
+import Header from "../header";
 
 describe("Header", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(<Header siteTitle="Default Starter" />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 ```
 
 This is a very simple snapshot test, which uses `react-test-renderer` to render
@@ -217,50 +217,26 @@ by running `npm test -- -u`.
 
 ## Using TypeScript
 
-If you are using TypeScript, you need to make a couple of small changes to your
-config. First install `ts-jest`:
+If you are using TypeScript, you need to make two changes to your
+config.
 
-```shell
-npm install --save-dev ts-jest
-```
+Update the transform in `jest.config.js` to run `jest-preprocess` on files in your project's root directory.
 
-Then update the configuration in `jest.config.js`, like so:
+**Note:** `<rootDir>` is replaced by Jest with the root directory of the project. Don't change it.
 
 ```js:title=jest.config.js
-module.exports = {
-  transform: {
-    "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js",
-  },
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$",
-  moduleNameMapper: {
-    ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/__mocks__/file-mock.js",
-  },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  testPathIgnorePatterns: ["node_modules", ".cache", "public"],
-  transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
-  globals: {
-    __PATH_PREFIX__: "",
-  },
-  testURL: "http://localhost",
-  setupFiles: ["<rootDir>/loadershim.js"],
-}
+    "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js",
 ```
 
-You may notice that two other options, `testRegex` and `moduleFileExtensions`,
-have been added. Option `testRegex` is the pattern telling Jest which files
-contain tests. The pattern above matches any `.js`, `.jsx`, `.ts` or `.tsx`
-file inside a `__tests__` directory, or any file elsewhere with the extension
-`.test.js`, `.test.jsx`, `.test.ts`, `.test.tsx`, or `.spec.js`, `.spec.jsx`,
-`.spec.ts`, `.spec.tsx`.
+Also update `jest.preprocess.js` with the following Babel preset to look like this:
 
-Option `moduleFileExtensions` is needed when working with TypeScript.
-The only thing it is doing is telling Jest which file extensions you can
-import in your files without making precise the file extension. By default,
-it works with `js`, `json`, `jsx`, `node` file extensions so we just need
-to add `ts` and `tsx`. You can read more about it in [Jest's documentation](https://jestjs.io/docs/en/configuration.html#modulefileextensions-array-string).
+```js:title=jest-preprocess.js
+const babelOptions = {
+  presets: ["babel-preset-gatsby", "@babel/preset-typescript"]
+};
+```
+
+Once this is changed, you can write your tests in TypeScript using the `.ts` or `.tsx` extensions.
 
 ## Other resources
 

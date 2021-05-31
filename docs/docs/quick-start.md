@@ -19,6 +19,8 @@ Este inicio rápido está destinado a desarrolladores intermedios y avanzados. P
 npm install -g gatsby-cli
 ```
 
+> El comando de arriba instala el CLI de Gatsby en tu maquina.
+
 ### Crear un nuevo sitio.
 
 ```shell
@@ -37,7 +39,7 @@ cd gatsby-site
 gatsby develop
 ```
 
-Gatsby iniciará un entorno de desarrollo con _hot-reloading_ accesible por defecto en `localhost:8000`.
+Gatsby iniciará un entorno de desarrollo con _hot-reloading_ accesible por defecto en `http://localhost:8000`.
 
 Intenta editar las páginas JavaScript en `src/pages`. Los cambios guardados se recargarán en vivo en el navegador.
 

@@ -14,20 +14,20 @@ Revisa el [Documento de lanzamientos de Node](https://github.com/nodejs/Release#
 
 Ejecuta `node -v` en una ventana de la terminal para ver qué versión de Node posees.
 
-```
+```shell
 node -v
-v10.16.0
+v10.18.0
 ```
 
-Este ejemplo muestra Node versión 10, específicamente v10.16.0.
+Este ejemplo muestra Node versión 10, específicamente v10.18.0.
 
-## Actualizando desde Node versión 6
+## Actualizando desde Node versión 8
 
-Node versión 6 alcanzó el estado de  _Fin de Ciclo (End-of-life)_ el 30 de Abril del 2019. Muchas de las dependencias de Gatsby están actualizándose a Node versión 8 y superiores. Gatsby también debe actualizarse para entregar nuevas funcionalidades y corrección de bugs más rápidamente.
+Node versión 8 alcanzó el estado de _Fin de Ciclo (End-of-life)_ el 31 de Diciembre del 2019. Muchas de las dependencias de Gatsby están actualizándose a Node versión 10 y superiores. Gatsby también debe actualizarse para entregar nuevas funcionalidades y corrección de bugs más rápidamente.
 
-Generalmente recomendaríamos usar [la versión de Node cuyo estado es Activa LTS (Active LTS)](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 al momento de escribir esto). De todos modos, en este documento aprenderás cómo actualizar de Node 6 a Node 7 ya que esto probablemente será la actualización menos disruptiva para tí.
+Generalmente recomendaríamos usar [la versión de Node cuyo estado es Activa LTS (Active LTS)](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 al momento de escribir esto).
 
-> ¿Qué acerca de Node 7? Las versiones estables de Node son lanzamientos con numeros pares - Node 6, Node 8, Node 10, etcétera. Sólo usa los números impares si quieres probar con elementos de vanguardia o experimentales.
+> ¿Qué acerca de Node 8? Las versiones estables de Node son lanzamientos con numeros pares - Node 6, Node 8, Node 10, etcétera. Sólo usa los números impares si quieres probar con elementos de vanguardia o experimentales.
 
 Hay múltiples modos de actualizar tu versión de Node dependiendo en cómo lo has instalado originalmente. Léelo para encontrar el mejor enfoque para tí.
 
@@ -35,17 +35,17 @@ Hay múltiples modos de actualizar tu versión de Node dependiendo en cómo lo h
 
 Éste es nuestro modo recomendado de instalar una nueva versión de Node.
 
-Tendrás homebrew instalado en tu computadora si has [seguido la parte cero del tutorial de Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/#-install-nodejs-and-npm). Homebrew es un programa que te permite instalar versiones específicas de Node (y otros programas).
+Tendrás homebrew instalado en tu computadora si has [seguido la parte cero del tutorial de Gatsby](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). Homebrew es un programa que te permite instalar versiones específicas de Node (y otros programas).
 
-Para actualizar de Node 6 a Node 8 usando Homebrew, abre una ventana de la terminal y ejecuta los siguientes comandos:
+Para actualizar de Node 8 a Node 10 usando Homebrew, abre una ventana de la terminal y ejecuta los siguientes comandos:
 
-```
+```shell
 brew search node
 ```
 
 Deberías tener un resultado similar a éste:
 
-```
+```shell
 brew search node
 ==> Formulae
 heroku/brew/heroku-node ✔        llnode                           node@10                          nodebrew
@@ -53,19 +53,19 @@ leafnode                         node ✔                           node@8      
 libbitcoin-node                  node-build                       node_exporter                    nodenv
 ```
 
-Estás interesado en la versión estable siguiente de Node posterior a Node 6, que es Node 8. Homebrew hace esto disponible en un paquete llamado `node@8`. Ejecuta:
+Estás interesado en la versión estable siguiente de Node posterior a Node 8, que es Node 10. Homebrew hace esto disponible en un paquete llamado `node@10`. Ejecuta:
 
-```
-brew install node@8
+```shell
+brew install node@10
 ```
 
 Una vez que ésto ha concluido, ejecuta:
 
-```
+```shell
 node -v
 ```
 
-para confirmar que has actualizado de Node versión 6 a la posterior versión 8 de Node.
+para confirmar que has actualizado de Node versión 8 a la posterior versión 10 de Node.
 
 ### Usando un paquete de administración de versión de Node
 
@@ -77,18 +77,18 @@ Hay dos paquetes populares para administrar múltiples versiones de Node en tu s
 
 Ejecuta
 
-```
+```shell
 nvm
 ```
 
 en una ventana de la terminal para ver si nvm está instalado en tu sistema. Si está instalado, ejecuta:
 
-```
-nvm install 8
-nvm alias default 8
+```shell
+nvm install 10
+nvm alias default 10
 ```
 
-para instalar Node versión 8.
+para instalar Node versión 10.
 
 [Revisa la documentación de nvm para más instrucciones](https://github.com/nvm-sh/nvm).
 
@@ -96,11 +96,11 @@ para instalar Node versión 8.
 
 Ejecuta:
 
-```
+```shell
 n
 ```
 
-en una ventana de terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 8` para instalar y usar Node versión 8.
+en una ventana de terminal para ver si n está instalado en tu sistema. Si está instalado, puedes ejecutar `n 10` para instalar y usar Node versión 10.
 
 [Revisa la documentación de n para más instrucciones](https://github.com/tj/n).
 
@@ -116,4 +116,4 @@ Gatsby toma la compatibilidad con versiones previas en serio y apunta a dar comp
 
 Gatsby también confía en un enorme ecosistema de dependencias de JavaScript. A medida que el ecosistema se aleja de versiones anteriores y ya no compatibles de Node tenemos que mantenernos en velocidad para asegurarnos que los errores puedan ser arreglados y nuevas funcionalidades puedan ser lanzadas.
 
-En éste documento has aprendido cómo actualizar de Node versión 6 (que ha alcanzado el estado de  _Fin de Ciclo (End of Life)_ status), a Node versión 8 (que ha alcanzado el estado de _En Mantenimiento (Maintenance)_.
+En éste documento has aprendido cómo actualizar de Node versión 8 (que ha alcanzado el estado de  _Fin de Ciclo (End of Life)_ status), a Node versión 10 (que ha alcanzado el estado de _En Mantenimiento (Maintenance)_.

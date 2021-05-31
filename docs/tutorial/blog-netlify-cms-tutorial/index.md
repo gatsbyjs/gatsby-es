@@ -2,7 +2,7 @@
 title: Creación de un Blog de Gatsby con Netlify CMS
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JeTqxCJC56Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video: Make a developer blog in under 10 minutes | Lightning Tutorial"></iframe>
+https://youtu.be/JeTqxCJC56Q
 
 Este tutorial usará [gatsby-personal-starter-blog](http://t.wang.sh/gatsby-personal-starter-blog), un proyecto inicial de Gatsby basado en el oficial [gatsby-starter-blog](/starters/gatsbyjs/gatsby-starter-blog/). Las diferencias son que `gatsby-personal-starter-blog` está configurado para ejecutar el blog en un subdirectorio, `/blog`, y viene preinstalado con [Netlify CMS](https://www.netlifycms.org/) para edición de contenidos. También agrega el resaltado de código de VS Code para bloques de código.
 
@@ -30,7 +30,7 @@ cd [nombre-de-tu-proyecto]
 gatsby develop
 ```
 
-Ahora puedes ir a [`localhost:8000`](http://localhost:8000) para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en [`localhost:8000/admin`](http://localhost:8000/admin).
+Ahora puedes ir a `http://localhost:8000` para ver tu nuevo sitio, pero lo que es genial es que Netlify CMS está preinstalado y puedes acceder a él en `http://localhost:8000/admin`.
 
 Un CMS, o sistema de administración de contenido, es útil porque puedes agregar contenido como publicaciones de blog desde un tablero en tu sitio, en lugar de tener que agregar publicaciones manualmente con Markdown. Sin embargo, es probable que desees poder acceder al CMS desde un sitio web desplegado, no solo localmente. Para eso deberás desplegar en Netlify a través de GitHub, preparar una implementación continua y realizar algunas configuraciones. Repasaremos esto en el [Paso-5](#step-5).
 
@@ -48,13 +48,13 @@ backend:
 
 #### Personalizando tu sitio
 
-Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando  `gatsby build && gatsby serve`.
+Accede a `gatsby-config.js` y edita tu siteMetadata. Añade tu ID de Google Analytics y tu icono/favicon. Prueba los cambios para la compilación implementada saliendo del servidor de desarrollo y ejecutando `gatsby build && gatsby serve`.
 
 Probablemente también quieras editar el `README.md` y el `package.json`, archivos para incluir tus propios detalles del proyecto.
 
 ### Paso 4
 
-Abre [github.com](http://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
+Abre [github.com](https://github.com) y crea un nuevo repositorio, con el mismo nombre que tu proyecto. Inserta el código de tu nuevo sitio Gatsby en GitHub usando los siguientes comandos de Terminal:
 
 ```shell
 git init

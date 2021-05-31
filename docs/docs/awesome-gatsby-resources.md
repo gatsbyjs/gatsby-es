@@ -16,6 +16,10 @@ See the [library of official and community starters](/starters/)
 
 See the [library of official and community plugins](/plugins/)
 
+## Themes
+
+See the [unofficial list of themes](https://gatsbytemplates.io/)
+
 ## Tools
 
 - [Develop & Build GatsbyJS static sites within Docker](https://github.com/aripalo/gatsby-docker/)
@@ -41,6 +45,7 @@ See the [library of official and community plugins](/plugins/)
 - [Jason Lengstorf's "Learn stuff with Jason" playlist](https://www.youtube.com/playlist?list=PLz8Iz-Fnk_eTpvd49Sa77NiF8Uqq5Iykx)
 - [Gatsby Days Bay Area December 2018 - Kyle Mathews & Guest Speakers](https://www.youtube.com/playlist?list=PLCU2qJekvcN1wzgVKymbjbGtZ3VgAWOdj)
 - [Static Site Generation with Gatsby.js v0 — Scott Nonnenberg](https://blog.scottnonnenberg.com/static-site-generation-with-gatsby-js/)
+- [Build a JAMstack Saas App with Gatsby playlist](https://www.youtube.com/playlist?list=PL8KiuH6vpACWZ7989jU1Puil5P2_m2O8e)
 - [React.js Conf 2016 - Lightning Talks - Kyle Mathews](https://www.youtube.com/watch?v=RFkNRKL6ZoE)
 - [Developing with React and Gatsby.js — Kyle Mathews](https://www.youtube.com/watch?v=G4LVKJOOj7o)
 - [GraphQL Summit Open Source Lightning Talk on Gatsby — Kyle Mathews](https://youtu.be/y588qNiCZZo)
@@ -49,6 +54,7 @@ See the [library of official and community plugins](/plugins/)
 ## Livestreams
 
 - [Learn with Jason](https://www.youtube.com/playlist?list=PLCU2qJekvcN0RuMHCnjMYAKlpSKQ_e1hO)
+- [Build a Saas app with Gatsby and the JAMstack](https://www.youtube.com/playlist?list=PL8KiuH6vpACWZ7989jU1Puil5P2_m2O8e)
 
 ## Gatsby tutorials
 
@@ -81,6 +87,12 @@ See the [library of official and community plugins](/plugins/)
 - [Understanding the Gatsby lifecycle](https://medium.com/narative/understanding-gatsbys-lifecycle-31c473ba2f2d)
 - [GatsbyGuides.com series on building web applications with Gatsby & Drupal](https://gatsbyguides.com/)
 - [Deep dive into Gatsby – Building a static blog using Gatsby, React and GraphQL](https://zocada.com/deep-dive-gatsby-building-a-simple-static-blog-using-gatsby-react-and-graphql/)
+- [Gatsby - Full Tutorial for Beginners](https://www.youtube.com/watch?v=mHFAM0CXviE)
+- [Building a Video Blog with Gatsby and Markdown (MDX)](https://scotch.io/tutorials/building-a-video-blog-with-gatsby-and-markdown-mdx)
+- [Deploying Your First Gatsby Site to Netlify](https://scotch.io/tutorials/deploying-your-first-gatsby-site-to-netlify)
+- [Add a chat widget to your Gatsby blog](https://pusher.com/tutorials/chat-gatsby/)
+- [Headless WordPress: Why Gatsby Should Be Next on Your List of Things to Learn](https://deliciousbrains.com/gatsby-headless-wordpress/)
+- [Gatsby Tutorials \[video series\] — Michael Uloth](https://www.youtube.com/watch?v=jAa1wh5ATm0&list=PLHBEcHVSROXQQhXpNhmiVKKcw72Cc0V-U)
 
 ### German
 

@@ -1,33 +1,35 @@
 ---
-title: Creating a Transformer Plugin
+title: Creando un Plugin "Transformador"
 ---
 
-There are two types of plugins that work within Gatsby's data system, "source"
-and "transformer" plugins.
+Hay dos tipos de _plugins_ que funcionan dentro del sistema de datos de Gatsby, _plugins_ "fuente"
+y "transformador".
 
-- **Source** plugins "source" data from remote or local locations into what
-  Gatsby calls [nodes](/docs/node-interface/).
-- **Transformer** plugins "transform" data provided by source plugins into new
-  nodes and/or node fields.
+- **Fuente** son _plugins_ que "obtienen" datos desde ubicaciones remotas o locales en lo que
+  Gatsby llama [nodos](/docs/node-interface/).
+- **Transformador** son _plugins_ que "transforman" datos proporcionados por los _plugins_ fuente en nuevos
+  nodos y/o campos de nodo.
 
-The purpose of this doc is to:
+El propósito de este documento es:
 
-1.  Define what a Gatsby transformer plugin is, and
-2.  Walk through a simplified reimplementation of an existing plugin, to demonstrate how to create a transformer plugin.
+1.  Definir qué es un _plugin_ transformador de Gatsby, y
+2.  Examinar una reimplementación simplificada de un _plugin_ existente, para demostrar cómo crear un _plugin_ transformador.
 
-## What do transformer plugins do?
+Para un proceso paso a paso, mira el tutorial sobre: [Creando un Plugin transformador de Remark](/tutorial/remark-plugin-tutorial/).
 
-Transformer plugins "transform" data of one type into another type. You'll often use both source plugins and transformer plugins in your Gatsby sites.
+## ¿Qué hacen los _plugins_ transformadores?
 
-This loose coupling between the data source and transformer plugins allow Gatsby developers to quickly assemble complex data transformation pipelines with little work.
+Los _plugins_ transformadores "transforman" datos de un tipo a otro tipo. Usarás a menudo ambos _plugins_ de origen y transformadores en tus sitios Gatsby.
 
-## How do you create a transformer plugin?
+Este acoplamiento flexible entre los datos de origen y los _plugins_ transformadores permiten a los desarrolladores de Gatsby ensamblar rápidamente _pipelines_ complejos de transformación de datos con poco trabajo.
 
-Just like a source plugin, a transformer plugin is a normal NPM package. It has a `package.json` file with optional dependencies as well as a `gatsby-node.js` file where you implement Gatsby's Node.js APIs.
+## ¿Cómo creas un _plugin_ transformador?
 
-`gatsby-transformer-yaml` is transformer plugin that looks for new nodes with a media type of text/yaml (e.g. a .yaml file) and creates new YAML child node(s) by parsing the YAML source into JavaScript objects.
+Al igual que un _plugin_ fuente, un _plugin_ transformador es un paquete NPM normal. Tiene un archivo `package.json` con dependencias opcionales así como un archivo `gatsby-node.js` donde implementas las APIs Node.js de Gatsby.
 
-As an example, let's partially rebuild a simplified `gatsby-transformer-yaml` directly in an example site. Let's say we have a default gatsby starter site which includes a `src/data/example.yml` file:
+`gatsby-transformer-yaml` en un plugin transformador que busca nuevos nodos con un formato de archivo _text/yaml_ (p.ej. un archivo .yaml) y crea nuevos nodo(s) hijo YAML convirtiendo el origen YAML en objetos JavaScript.
+
+Como ejemplo, reconstruyamos parcialmente un `gatsby-transformer-yaml` simplificado directamente en un sitio de ejemplo. Digamos que tenemos un sitio Gatsby predeterminado que incluye un archivo `src/data/example.yml`:
 
 ```yaml:title=src/data/example.yml
 - name: Jane Doe
@@ -36,9 +38,9 @@ As an example, let's partially rebuild a simplified `gatsby-transformer-yaml` di
   bio: Developer based in Maintown, USA
 ```
 
-### Make sure the data is sourced
+### Asegúrate de que los datos se obtienen
 
-First, in `gatsby-config.js`, use the `gatsby-source-filesystem` plugin to create File nodes.
+Primero, en `gatsby-config.js`, usa el plugin `gatsby-source-filesystem` para crear nodos _File_.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -53,7 +55,7 @@ module.exports = {
 }
 ```
 
-These are exposed in your graphql schema which you can query:
+Estos son expuestos en tu esquema _graphql_ que puedes consultar:
 
 ```graphql
 query {
@@ -72,7 +74,7 @@ query {
 }
 ```
 
-Now you have a `File` node to work with:
+Ahora tienes un nodo `File` con el que trabajar:
 
 ```json
 {
@@ -96,23 +98,23 @@ Now you have a `File` node to work with:
 }
 ```
 
-### Transform nodes of type `text/yaml`
+### Transformar nodos de tipo `text/yaml`
 
-Now, transform the newly created `File` nodes by hooking into the `onCreateNode` API in `gatsby-node.js`.
+Ahora, transforma los nuevos nodos `File` creados enganchándolos a la API `onCreateNode` en `gatsby-node.js`.
 
-If you're following along in an example project, install the following packages:
+Si estás siguiendo en un proyecto de ejemplo, instala los siguientes paquetes:
 
 ```shell
 npm install --save js-yaml lodash
 ```
 
-Now, in `gatsby-node.js`:
+Ahora, en `gatsby-node.js`:
 
 ```javascript:title=gatsby-node.js
 const jsYaml = require(`js-yaml`)
 
 async function onCreateNode({ node, loadNodeContent }) {
-  // only log for nodes of mediaType `text/yaml`
+  // solo registra nodos con el mediaType `text/yaml`
   if (node.internal.mediaType !== `text/yaml`) {
     return
   }
@@ -124,16 +126,16 @@ async function onCreateNode({ node, loadNodeContent }) {
 exports.onCreateNode = onCreateNode
 ```
 
-File content:
+Contenidos del archivo:
 
-```text
+```yaml
 - id: Jane Doe
   bio: Developer based in Somewhere, USA
 - id: John Smith
   bio: Developer based in Maintown, USA
 ```
 
-Parsed YAML content:
+Contenido del archivo YAML resuelto:
 
 ```javascript
 ;[
@@ -148,7 +150,7 @@ Parsed YAML content:
 ]
 ```
 
-Now we'll write a helper function to transform the parsed YAML content into new Gatsby nodes:
+Ahora escribiremos una función auxiliar para transformar el contenido resuelto de YAML en nuevos nodos de Gatsby:
 
 ```javascript
 function transformObject(obj, id, type) {
@@ -167,11 +169,11 @@ function transformObject(obj, id, type) {
 }
 ```
 
-Above, we create a `yamlNode` object with the shape expected by the [`createNode` action](/docs/actions/#createNode).
+Arriba, creamos un objeto `yamlNode` con la forma esperada por la [acción `createNode`](/docs/actions/#createNode).
 
-We then create a link between the parent node (file) and the child node (yaml content).
+Luego creamos un enlace entre el nodo padre (archivo) y el nodo hijo (contenido yaml).
 
-In our updated `gatsby-node.js`, we'll then iterate through the parsed YAML content, using the helper function to transform each into a new node:
+En nuestro `gatsby-node.js` actualizado, iteraremos a través del contenido resuelto en YAML, usando la función auxiliar para transformar cada uno en un nuevo nodo:
 
 ```javascript:title=gatsby-node.js
 const jsYaml = require(`js-yaml`)
@@ -225,7 +227,7 @@ async function onCreateNode({
 exports.onCreateNode = onCreateNode
 ```
 
-Now we can query for our new nodes containing our transformed YAML data:
+Ahora podemos consultar nuestros nuevos nodos que contienen nuestros datos YAML transformados:
 
 ```graphql
 query {
@@ -266,23 +268,27 @@ query {
 }
 ```
 
-Check out the [full source code](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-yaml/src/gatsby-node.js) of `gatsby-transformer-yaml`.
+Revisa el [código fuente completo](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-yaml/src/gatsby-node.js) de `gatsby-transformer-yaml`.
 
-## Using the cache
+## Usando la caché
 
-Sometimes transforming properties costs time and resources. In order to avoid recreating these properties at each run, you can profit from the global cache mechanism Gatsby provides.
+A veces, transformar propiedades cuesta tiempo y recursos. Para evitar recrear estas propiedades en cada ejecución, puedes beneficiarte del mecanismo de caché global que proporciona Gatsby.
 
-Cache keys should at least contain the contentDigest of the concerned node. For example, the `gatsby-transformer-remark` uses the following cache key for the html node:
+Las claves de caché deben contener al menos el contentDigest del nodo en cuestión. Por ejemplo, `gatsby-transformer-remark` usa la siguiente clave de caché para el nodo html:
 
 ```javascript:title=extend-node-type.js
 const htmlCacheKey = node =>
   `transformer-remark-markdown-html-${node.internal.contentDigest}-${pluginsCacheStr}-${pathPrefixCacheStr}`
 ```
 
-Accessing and setting content in the cache is as simple as:
+Acceder y configurar contenido en la caché es tan sencillo como:
 
 ```javascript:title=extend-node-type.js
 const cachedHTML = await cache.get(htmlCacheKey(markdownNode))
 
 cache.set(htmlCacheKey(markdownNode), html)
 ```
+
+## Additional resources
+
+- Tutorial: [Creating a Remark Transformer Plugin](/tutorial/remark-plugin-tutorial/)

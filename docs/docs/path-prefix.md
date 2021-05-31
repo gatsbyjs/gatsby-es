@@ -19,8 +19,8 @@ Firstly, add a `pathPrefix` value to your `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 module.exports = {
-  pathPrefix: `/blog`,
-}
+  pathPrefix: `/blog`
+};
 ```
 
 ### Build
@@ -33,7 +33,17 @@ gatsby build --prefix-paths
 
 If this flag is not passed, Gatsby will ignore your `pathPrefix` and build the site as if hosted from the root domain.
 
-### In-app linking
+## Serve
+
+Serve your application with the `--prefix-paths` flag, like so:
+
+```shell
+gatsby serve --prefix-paths
+```
+
+If this flag is not passed, Gatsby will ignore your `pathPrefix`.
+
+## In-app linking
 
 Gatsby provides APIs and libraries to make using this feature seamless. Specifically, the [`Link`](/docs/gatsby-link/) component has built-in functionality to handle path prefixing.
 
@@ -42,9 +52,9 @@ For example, if you want to link to the location `/page-2`, but the actual link 
 For example, when navigating to the `page-2` location in the `Link` component below; the location will be automatically prefixed with your assigned `pathPrefix` value.
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
 
 function Index() {
   return (
@@ -52,16 +62,16 @@ function Index() {
       {/* highlight-next-line */}
       <Link to="page-2">Page 2</Link>
     </Layout>
-  )
+  );
 }
 ```
 
 If you want to do programmatic/dynamic navigation, this is also possible! Expose the Gatsby `navigate` helper, and this too automatically handles path prefixing.
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import { navigate } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { navigate } from "gatsby";
+import Layout from "../components/layout";
 
 export default function Index() {
   return (
@@ -72,7 +82,7 @@ export default function Index() {
         Go to page 2, dynamically
       </button>
     </Layout>
-  )
+  );
 }
 ```
 

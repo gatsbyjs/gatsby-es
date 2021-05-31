@@ -64,11 +64,11 @@ module.exports = {
 
 Cuando se usan temas de Gatsby puedes aprovechar algo llamado _component shadowing_.
 
-El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `gatsby-theme-blog/src/components/bio-content.js`.
+El paquete del tema para blogs de Gatsby tiene un componente que contiene la biografía del autor del sitio web. La ruta a este componente (en el paquete del tema para blogs, no en tu propio sitio web) es `src/gatsby-theme-blog/components/bio-content.js`. Puedes encontrar esta ruta mirando por el tema en el directorio `node_modules/gatsby-theme-blog` de tu sitio.
 
 Si miras en el árbol de directorios de tu sitio web, verás que es parecido al siguiente:
 
-```
+```text
 my-blog
 ├── content
 │   ├── assets
@@ -93,6 +93,8 @@ En el directorio `src` del sitio web se encuentra el directorio `gatsby-theme-bl
 Abre el fichero `bio-content.js` y realiza algunas modificaciones de su contenido:
 
 ```jsx:title=bio-content.js
+import React, { Fragment } from "react"
+
 export default () => (
   {/* highlight-start */}
   <Fragment>
@@ -143,6 +145,9 @@ El tema para blog viene por defecto con el color púrpura de Gatsby, pero puedes
 Abre el fichero `/src/gatsby-theme-blog/gatsby-plugin-theme-ui/colors.js`, y descomenta el código en el mismo.
 
 ```javascript:title=colors.js
+import merge from "deepmerge"
+import defaultThemeColors from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors"
+
 {/* highlight-start */}
 const blue60 = "#007acc"
 const blue30 = "#66E0FF"
@@ -176,3 +181,7 @@ Para ver qué otros colores del tema puedes personalizar, revisa el fichero `col
 ## Conclusiones
 
 Esto fue una introducción paso a paso para usar un tema de Gastby a través de un ejemplo específico. Ten en cuenta que temas diferentes serán construidos de forma diferente, para permitir diversas opciones de personalización. Para más información, revisa la [documentación sobre temas de Gatsby](/docs/themes/).
+
+## Qué sigue?
+
+- [Usando múltiples temas juntos](/tutorial/using-multiple-themes-together/)

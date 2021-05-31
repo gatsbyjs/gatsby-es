@@ -32,11 +32,11 @@ Una de las maneras más directas de agregar estilos globales a un sitio web es u
 
 Sería mejor (especialmente si eres nuevo con la línea de comandos) si cerraras el terminal que usaste para la [parte uno](/tutorial/part-one/) e inicias una nueva sesión en otra terminal para la parte dos.
 
-Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby e inicia el servidor de desarrollo:
+Abre una nueva terminal, crea un nuevo sitio web "hola mundo" con Gatsby en un directorio llamado 'tutorial-part-two', y luego muévete a este nuevo directorio:
 
 ```shell
-gatsby new tutorial-parte-dos https://github.com/gatsbyjs/gatsby-starter-hello-world
-cd tutorial-parte-dos
+gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd tutorial-part-two
 ```
 
 Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola mundo") con la siguiente estructura:
@@ -48,7 +48,7 @@ Ahora tienes un nuevo sitio web Gatsby (basado en el inicializador Gatsby "hola 
 │       └── index.js
 ```
 
-#### ✋ Agrega estilos a un archivo css
+#### ✋ Agrega estilos a un archivo CSS
 
 1. Crea un archivo `.css` en tu proyecto nuevo:
 
@@ -80,7 +80,7 @@ html {
 }
 ```
 
-> Nota: el lugar donde quede ubicado el archivo css de ejemplo en `/src/styles/` es irrelevante.
+> Nota: el colocar el archivo CSS de ejemplo en un directorio `/src/styles/` es arbitrario.
 
 #### ✋ Incluye la hoja de estilos en `gatsby-browser.js`
 
@@ -152,7 +152,7 @@ Primero, crea un nuevo componente `Container`.
 
 1. Crea un nuevo directorio en `src/components` y después, en este nuevo directorio, crea un archivo llamado `container.js` y pega lo siguiente:
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -161,7 +161,7 @@ export default ({ children }) => (
 )
 ```
 
-Notarás que importamos un archivo llamado `container.module.css` que es un módulo css. Creemos ese archivo ahora.
+Notarás que importamos un archivo llamado `container.module.css` que es un módulo CSS. Creemos ese archivo ahora.
 
 2. En el mismo directorio (`src/components`), crea un archivo `container.module.css` y copia/pega lo siguiente:
 
@@ -177,7 +177,7 @@ Notarás que el archivo termina con `.module.css` en vez del clásico `.css`. Es
 3. Crea un nuevo componente de página, creando un archivo en
    `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
@@ -248,7 +248,7 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome) en tu navegador, verás:
+El código `console.log(styles)` registrará en consola lo importado para que puedas apreciar el resultado de procesar el archivo `./about-css-modules.module.css`. Si abres la consola de desarrollador (usando por ejemplo las herramientas de desarrollador de Firefox o Chrome, usualmente por la tecla F12) en tu navegador, verás:
 
 ![Resultado de importar módulos CSS en consola](css-modules-console.png)
 

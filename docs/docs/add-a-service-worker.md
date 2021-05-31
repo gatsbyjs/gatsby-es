@@ -12,7 +12,7 @@ Permite características como las notificaciones push o la sincronización en se
 
 Gatsby provee un plugin maravilloso para crear y cargar un _service worker_ en tu sitio [gatsby-plugin-offline](https://www.npmjs.com/package/gatsby-plugin-offline).
 
-Recomendamos usar este plugin junto con el [plugin manifest](https://www.npmjs.com/package/gatsby-plugin-manifest). (No olvides listar el plugin offline después del plugin manifest para que el archivo manifest pueda ser incluido en el _service worker_).
+Puedes usar este plugin junto con el [plugin manifest](https://www.npmjs.com/package/gatsby-plugin-manifest). (No olvides listar el plugin offline después del plugin manifest para que el archivo manifest pueda ser incluido en el _service worker_).
 
 ### Instalando `gatsby-plugin-offline`
 

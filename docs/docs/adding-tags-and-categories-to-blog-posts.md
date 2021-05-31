@@ -19,7 +19,7 @@ El proceso esencialmente se verá así:
 
 Agregas etiquetas definiéndolas en el `frontmatter` de tu archivo _Markdown_. El `frontmatter` es el área en la parte superior rodeada de guiones que incluye datos de publicaciones como el título y la fecha.
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 ---
@@ -29,7 +29,7 @@ Fui al zoológico hoy. Fue terrible.
 
 Los campos pueden ser cadenas de texto, números, o arreglos. Como una publicación generalmente puede tener muchas etiquetas, tiene sentido definirla como un arreglo. Aquí agregamos nuestro nuevo campo de etiquetas:
 
-```md
+```markdown
 ---
 title: "Un viaje al zoológico"
 tags: ["animales", "Chicago", "zoológicos"]
@@ -44,7 +44,7 @@ Si `gatsby develop` está corriendo, reinícialo para que Gatsby pueda utilizar 
 
 Ahora, estos campos están disponibles en la capa de datos. Para usar datos de un campo, consúltalo usando `graphql`. Todos los campos están disponibles para consultar dentro de `frontmatter`
 
-Intenta correr la siguiente consulta en Graph<em>i</em>QL (`localhost:8000/___graphql`):
+Intenta correr la siguiente consulta en Graph<em>i</em>QL (`http://localhost:8000/___graphql`):
 
 ```graphql
 {
@@ -66,31 +66,31 @@ Si seguiste el tutorial para [Agregar Páginas en _Markdown_](/docs/adding-markd
 Primero, agregaremos una plantilla de etiquetas en `src/templates/tags.js`:
 
 ```jsx:title=src/templates/tags.js
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 // Componentes
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby";
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with "${tag}"`;
 
   return (
     <div>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
+          const { slug } = node.fields;
+          const { title } = node.frontmatter;
           return (
             <li key={slug}>
               <Link to={slug}>{title}</Link>
             </li>
-          )
+          );
         })}
       </ul>
       {/*
@@ -99,12 +99,12 @@ const Tags = ({ pageContext, data }) => {
             */}
       <Link to="/tags">All tags</Link>
     </div>
-  )
-}
+  );
+};
 
 Tags.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -113,19 +113,19 @@ Tags.propTypes = {
         PropTypes.shape({
           node: PropTypes.shape({
             frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
+              title: PropTypes.string.isRequired
             }),
             fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
+              slug: PropTypes.string.isRequired
+            })
+          })
         }).isRequired
-      ),
-    }),
-  }),
-}
+      )
+    })
+  })
+};
 
-export default Tags
+export default Tags;
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -147,7 +147,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 **Nota**: los `propTypes` están incluidos en este ejemplo para ayudarte a asegurar que estás obteniendo todos los datos que necesitas en el componente, y sirven como una guía mientras desestructuras / usas estas _props_.
@@ -157,14 +157,14 @@ export const pageQuery = graphql`
 Ahora tenemos una plantilla. ¡Excelente! Asumiré que seguiste el tutorial para [Agregar Páginas en _Markdown_](/docs/adding-markdown-pages/) y tienes un ejemplo de `createPages` que genera páginas de publicación, así como páginas de etiquetas. En el archivo del sitio `gatsby-node.js`, incluye `lodash` (`const _ = require('lodash')`) y luego asegúrate que tu [`createPages`](/docs/node-apis/#createPages) se parezca a esto:
 
 ```js:title=gatsby-node.js
-const path = require("path")
-const _ = require("lodash")
+const path = require("path");
+const _ = require("lodash");
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("src/templates/blog.js")
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const blogPostTemplate = path.resolve("src/templates/blog.js");
+  const tagTemplate = path.resolve("src/templates/tags.js");
 
   const result = await graphql(`
     {
@@ -189,26 +189,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
   // manejar errores
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
-  const posts = result.data.postsRemark.edges
+  const posts = result.data.postsRemark.edges;
 
   // Crear páginas de detalles de publicaciones
   posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: blogPostTemplate,
-    })
-  })
+      component: blogPostTemplate
+    });
+  });
 
   // Extraer datos de etiquetas de la consulta
-  const tags = result.data.tagsGroup.group
+  const tags = result.data.tagsGroup.group;
 
   // Hacer páginas de etiquetas
   tags.forEach(tag => {
@@ -216,11 +216,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
-        tag: tag.fieldValue,
-      },
-    })
-  })
-}
+        tag: tag.fieldValue
+      }
+    });
+  });
+};
 ```
 
 Algunas notas:
@@ -234,23 +234,23 @@ Algunas notas:
 Nuestra página `/tags` simplemente listará todas las etiquetas, seguidas por el número de publicaciones con dicha etiqueta. Podemos obtener los datos con la primera consulta que escribimos anteriormente, que agrupa publicaciones por etiquetas:
 
 ```jsx:title=src/pages/tags.js
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 // Utilidades
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase";
 
 // Componentes
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet";
+import { Link, graphql } from "gatsby";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
-      siteMetadata: { title },
-    },
-  },
+      siteMetadata: { title }
+    }
+  }
 }) => (
   <div>
     <Helmet title={title} />
@@ -267,7 +267,7 @@ const TagsPage = ({
       </ul>
     </div>
   </div>
-)
+);
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
@@ -275,19 +275,19 @@ TagsPage.propTypes = {
       group: PropTypes.arrayOf(
         PropTypes.shape({
           fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
+          totalCount: PropTypes.number.isRequired
         }).isRequired
-      ),
+      )
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
-}
+        title: PropTypes.string.isRequired
+      })
+    })
+  })
+};
 
-export default TagsPage
+export default TagsPage;
 
 export const pageQuery = graphql`
   query {
@@ -303,7 +303,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ## _(opcional)_ Renderizar etiquetas dentro de tus publicaciones de blog

@@ -11,22 +11,15 @@ A medida que tu proyecto crece en el tiempo, tener esta información disponible 
 
 ## Configurando tu ambiente
 
-Para configurar Storybook necesitas instalar dependencias y algunas configuraciones personalizadas. Primero, instala el CLI de Storybook.
+> Ten en cuenta que las instrucciones a continuación están usando [npx](https://www.npmjs.com/package/npx). `npx` es una parte de npm y en este caso te permite generar automáticamente una estructura de archivos/carpetas completa con la configuración por defecto. Sí estás ejecutando una versión vieja de `npm` (`<5.2.0`) deberías ejecutar el siguiente comando en su lugar `npm install -g @storybook/cli`. Entonces podrías ejecutar `sb init` desde la raíz del directorio de Gatsby para inicializar Storybook.
+
+Para configurar Storybook necesitas instalar dependencias y algunas configuraciones personalizadas. Puedes empezar rápidamente utilizando el comando automatizado de la línea de comandos desde la raíz de tu proyecto Gatsby:
 
 ```shell
-npm install -g @storybook/cli
+npx -p @storybook/cli sb init
 ```
 
-Una vez que el CLI está instalado, el próximo paso es correr el comando `sb init` que está disponible en el directorio base de tu proyecto Gatsby
-
-```shell
-cd my-awesome-gatsby-project
-sb init
-```
-
-> Nota que si estás ejecutando una versión reciente de `npm` (5.2.0+) puedes correr el siguiente comando singular en vez del anterior: `npx -p @storybook/cli sb init`, el cual es el método recomendado por Storybook. Esto no instala el CLI en tu computadora, de este modo asegurando que siempre estés corriendo la última versión disponible del CLI.
-
-El comando `sb init` arranca la configuración básica necesaria para ejecutar Storybook en un proyecto React. Pero, al ser esto para un proyecto de Gatsby, necesitas instalar la configuración predeterminada, así no obtienes errores cuando estés tratando de utilizar componentes específicos de Gatsby en las historias.
+Este comando agrega una serie de archivos `boilerplate` para Storybook en tu proyecto. Sin embargo, ya que esto es para un proyecto de Gatsby, necesitas actualizar la configuración predeterminada de Storybook un poco para no obtener errores cuando trates de utilizar componentes específicos dentro de las historias.
 
 Para actualizar tu configuración de Storybook abre `.storybook/config.js` y modifica el contenido del siguiente modo:
 

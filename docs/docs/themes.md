@@ -1,6 +1,7 @@
 ---
 title: Temas
 overview: true
+disableTableOfContents: true
 ---
 
 Al usar un tema de Gatsby, toda tu configuración por defecto (funcionalidades compartidas, suministro de datos, diseño) es abstraído fuera de tu sitio, a un paquete instalable.
@@ -9,8 +10,13 @@ Esto significa que la configuración y funcionalidades no son directamente escri
 
 <GuideList slug={props.slug} />
 
-### Otros recursos
+### Busca temas
 
-- [Entradas del blog de Gatsby sobre temas](/blog/tags/themes)
-- [Transimión en vivo de Jason Lengstorf y Brent Jackson en donde crean un tema](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
-- [Transimión en vivo de Jason Lengstorf y Emma Wedekind en donde crean un tema](https://www.youtube.com/watch?v=W2uTfay3doo)
+- [Temas en la líbreria de Plugins](/plugins/?=gatsby-theme)
+- [Mostrador de Temas Jam](https://themejam.gatsbyjs.org/showcase)
+
+## Otros recursos
+
+- [Tutoriales de temas de Gatsby](/tutorial/plugin-and-theme-tutorials/)
+- [Posts de Gatsby sobre temas](/blog/tags/themes)
+- [Plugins, Temas y Starters](/docs/plugins-themes-and-starters/)

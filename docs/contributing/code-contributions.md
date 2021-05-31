@@ -12,6 +12,7 @@ En esta página:
 - [Contribuyendo con sitios de ejemplo](#contributing-example-sites)
 - [Usando Docker para establecer entornos de pruebas](#using-docker-to-set-up-test-environments)
 - [Herramientas de Desarrollo](#development-tools)
+- [Desarrollo oficial de temas](#official-theme-development)
 
 ## Preparación del repositorio
 
@@ -21,7 +22,7 @@ Para comenzar a configurar el repositorio de Gatsby en tu máquina usando git, Y
 
 Alternativamente, puedes omitir la configuración local y [usar una herramienta de desarrollo en línea](/contributing/using-an-online-dev-environment/).
 
-Para contribuir al blog o al sitio web Gatsbyjs.org, consulta los pasos de configuración en la página de [contribuciones del blog y sitio web](/contributing/blog-and-website-contributions/). Para instrucciones relativas a la contribución de documentos, visita la [página de contribuciones de documentos](/contributing/docs-contributions/).
+Para contribuir al blog, consulta los pasos de configuración en la página de [contribuciones del blog](/contributing/blog-contributions/). Para instrucciones relacionadas a la contribución de documentación, visita la [página de contribuciones de documentación](/contributing/docs-contributions/). Para contribuir con el sitio web, mira la página de [contribuciones al sitio web](/contributing/website-contributions/).
 
 ## Creando tus propios plugins y loaders
 
@@ -59,8 +60,8 @@ Debido a las diferentes integraciones posibles de Gatsby, puede ayudar lanzar un
 
 Para instalar Wordpress con Gatsby, este archivo `docker-compose.yml` te puede ser de utilidad:
 
-```
-version: '2'
+```yaml:title=docker-compose.yml
+version: "2"
 
 services:
   db:
@@ -91,22 +92,22 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-    - ./wp-content:/var/www/html/wp-content
-    - ./wp-app:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./wp-app:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: sessions_phpmyadmin
-      environment:
-       - PMA_ARBITRARY=1
-       - PMA_HOST=sessions_db
-       - PMA_USER=wordpress
-       - PMA_PASSWORD=wordpress
-      restart: always
-      ports:
-       - 8080:80
-      volumes:
-       - /sessions
+    image: phpmyadmin/phpmyadmin
+    container_name: sessions_phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=sessions_db
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 ```
 
 Usa los contenidos del archivo de arriba cuando sigas las instrucciones de instalación de Docker Wordpress: https://docs.docker.com/compose/wordpress/
@@ -119,6 +120,22 @@ Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integ
 
 Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
 
-## Feedback
+## Desarrollo oficial de temas
 
-En cualquier momento durante el proceso de contribución, ¡al equipo de Gatsby Core le encantaría ayudar! ¡Organizamos un [meeting semanal de Mantenedores principales](/contributing/community#core-maintainers-meeting) dónde puedes compartir tus creaciones y recibir consejo y feedback directamente del equipo!
+Esta sección es para el desarrollo oficial de temas en el mono repositorio de Gatsby. Si estas buscando
+construir tu propio tema, mira [construyendo temas](/docs/themes/building-themes/).
+
+Antes de que empecemos, asegurate de tener
+[configurado tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/)
+y que estas usando la última versión de 'gatsby-dev-cli'.
+
+- En el mono repositorio de Gatsby encuentra el starter en el directorio de starters en '/starters' que usa el tema sobre el que quieres trabajar
+- Navega a ese directorio, p. ej. 'cd starters/gatsby-starter-blog-theme'
+- Instala las dependencias: 'yarn'
+- Ejecuta Gatsby Dev CLI para sincronizar los archivos del tema, referenciando el tema apropiado: 'gatsby-dev --packages gatsby-theme-blog'
+- En otra pestaña ejecuta el starter: 'yarn develop'
+- Edita los archivos del tema, veras que los cambios serán automáticamente copiados y actualizados en tu starter.
+
+## Retroalimentación (Feedback)
+
+En cualquier momento durante el proceso de contribución, ¡al equipo principal de Gatsby le encantaría ayudar! Para ayuda con un problema en particular puedes [abrir un issue en Github](/contributing/how-to-file-an-issue/) o pasarte por [nuestro servidor en Discord](https://gatsby.dev/discord) para una discución general y ayuda de la comunidad.

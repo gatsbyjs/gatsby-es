@@ -2,7 +2,7 @@
 title: Comunidad
 ---
 
-Desde septiembre 2019, la comunidad de Gatsby se compone de más de 2,400 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
+Desde diciembre 2019, la comunidad de Gatsby se compone de más de 2,800 colaboradores y decenas de miles de desarrolladores construyendo sitios personales y comerciales en Gatsby.
 
 El código abierto no tiene la mejor reputación de siempre ser amable y cordial, y eso nos pone tristes. **Todos pertenecen en el código abierto, y Gatsby se dedica a hacerte sentir bienvenido.**
 
@@ -36,20 +36,12 @@ La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee 
 
 ¡Subscríbete al boletín de Gatsby para mantenerte al día con las noticias de la comunidad de Gatsby! Aprende sobre nuevas funciones, tips & trucos y lo que las personas están construyendo.
 
-[Subscríbete aquí](/newsletter/)
+<EmailCaptureForm signupMessage="¿Quieres mantenerte al día con los últimos consejos &amp; trucos? ¡Suscribete a nuestro boletín informativo!" />
 
 ### Twitter
 
 Para las últimas noticias sobre Gatsby,
 [sigue a **@gatsbyjs** en Twitter](https://twitter.com/gatsbyjs).
-
-### Reunión de mantenedores de la comunidad
-
-El equipo principal de Gatsby (empleados oficiales de Gatsby que trabajan en el código abierto de Gatsby) tienen una reunión semanal donde alentamos a los miembros de a comunidad a compartir sus proyectos, desafíos, y logros directamente con el equipo principal de Gatsby. ¡También el equipo principal comparte información y planes pertinentes a la comunidad!
-
-Este evento recurrente toma lugar cada miércoles a las 8:30 AM Hora estándar del pacífico (PST).
-
-[Agrega el evento del calendario recurrente aquí](https://gatsby.dev/core-maintainers)
 
 ## Donde conseguir soporte
 
@@ -68,15 +60,15 @@ a recursos útiles.
 
 ### Hashnode
 
-Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus tips. Lee
+Muchos miembros de la comunidad también usan Hashnode para hacer preguntas y compartir sus consejos. Lee
 las [preguntas y posts existentes](https://hashnode.com/n/gatsby)
 etiquetados con **gatsby** o
 [haz tu pregunta](https://hashnode.com/create/question) o [comparte tu historia](https://hashnode.com/create/story) y agrega la etiqueta `gatsby`.
 
 ### DEV Community
 
-DEV Community es otra plataforma donde tambien puedes hacer preguntas y compartir tus tips. Lee
-las [preguntas y post existentes](https://dev.to/t/gatsby)
+DEV Community es otra plataforma informativa donde tambien puedes hacer preguntas y compartir tus consejos. Lee
+las [preguntas y posts existentes](https://dev.to/t/gatsby)
 etiquetados con **gatsby** o
 [pide ayuda](https://dev.to/new/help). Además puedes [escribir un post](https://dev.to/new/gatsby) con la etiqueta **gatsby**.
 

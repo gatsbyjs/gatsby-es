@@ -2,7 +2,8 @@
 title: Building an E-commerce Site
 ---
 
-This is a stub. Help our community expand it.
+La velocidad y rendimiento de los sitios hechos con Gatsby lo hacen una herramienta increíble para sitios de e-commerce (comercio digital). Hay plugins existentes para conectar con servicios como [Shopify](/packages/gatsby-source-shopify/) y [Snipcart](/packages/gatsby-plugin-snipcart/) con Gatsby, y esta sección contiene guías de referencia para ayudarte a configurar todo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+<GuideList slug={props.slug} />
+
+_También puedes comprobar el [tutorial "Creado un sitio e-commerce con Stripe"](/tutorial/ecommerce-tutorial/) para más información_

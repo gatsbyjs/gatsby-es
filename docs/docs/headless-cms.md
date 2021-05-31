@@ -32,7 +32,7 @@ Aquí hay algunos recursos para guías, plugins, y _starters_ para sistemas CMS 
 | [Sanity](https://www.sanity.io/)              | [guía](/docs/sourcing-from-sanity)                                               | [documentación](/packages/gatsby-source-sanity/)              |
 | [Drupal](https://www.drupal.com/)             | [guía](/docs/sourcing-from-drupal/)                                              | [documentación](/packages/gatsby-source-drupal)               |                                                                     |
 | [Shopify](https://www.shopify.com/)           |                                                                                  | [documentación](/packages/gatsby-source-shopify)              |                                                                     |
-| [CosmicJS](https://cosmicjs.com/)             | [guide](/blog/2018-06-07-build-a-gatsby-blog-using-the-cosmic-js-source-plugin/) | [documentación](/packages/gatsby-source-cosmicjs)             | [starters](/starters/?s=cosmicjs&v=2)                               |
+| [CosmicJS](https://cosmicjs.com/)             | [guía](/blog/2018-06-07-build-a-gatsby-blog-using-the-cosmic-js-source-plugin/) | [documentación](/packages/gatsby-source-cosmicjs)             | [starters](/starters/?s=cosmicjs&v=2)                               |
 | [Contentstack](https://www.contentstack.com/) | [guía](/docs/sourcing-from-contentstack)                                         | [documentación](/packages/gatsby-source-contentstack)         | [starter](/starters/contentstack/gatsby-starter-contentstack/)      |
 | [ButterCMS](https://buttercms.com/)           | [guía](/docs/sourcing-from-buttercms/)                                           | [documentación](/packages/gatsby-source-buttercms)            | [starter](/starters/ButterCMS/gatsby-starter-buttercms/)            |
 | [Ghost](https://ghost.org/)                   | [guía](/docs/sourcing-from-ghost/)                                               | [documentación](/packages/gatsby-source-ghost/)               | [starter](/starters/TryGhost/gatsby-starter-ghost/)                 |
@@ -43,9 +43,12 @@ Aquí hay algunos recursos para guías, plugins, y _starters_ para sistemas CMS 
 | [Cockpit](https://getcockpit.com/)            |                                                                                  | [documentación](/packages/gatsby-plugin-cockpit)              |
 | [CraftCMS](https://craftcms.com/)             |                                                                                  | [documentación](/packages/gatsby-source-craftcms)             |
 | [AgilityCMS](https://agilitycms.com/)         | [guía](/docs/sourcing-from-agilitycms/)                                          | [documentación](/packages/@agility/gatsby-source-agilitycms/) | [starter](/starters/agility/agility-gatsby-starter/)                |
+| [Forestry](https://forestry.io/)              | [guía](/docs/sourcing-from-forestry/)                                           |                                                      |                                                                     |
+| [Gentics Mesh](https://getmesh.io)            | [guía](/docs/sourcing-from-gentics-mesh)                                        |                                                      |                                                                     |
+| [Seams-CMS](https://seams-cms.com/)           | [guía](/docs/sourcing-from-seams-cms)                                           |                                                      |                                                                     |
 
 ## Cómo añadir nuevas guías a esta sección
 
-Si no ves tu CMS preferido en esta lista, puedes [escribir tú mismo una nueva guía](/contributing/how-to-contribute/) ó [abrir una _issue_ para solicitarla](https://github.com/gatsbyjs/gatsby/issues/new/choose).
+Si no ves tu CMS preferido en esta lista, puedes [escribir tú mismo una nueva guía](/contributing/how-to-contribute/) ó [abrir un _issue_ para solicitarla](https://github.com/gatsbyjs/gatsby/issues/new/choose).
 
 También puedes [escribir tu propio plugin _source_](/docs/creating-a-source-plugin/) para integrar Gatsby con un CMS que no está en la lista.

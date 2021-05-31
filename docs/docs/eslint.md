@@ -10,7 +10,7 @@ JavaScript, siendo un lenguaje dinámico y de tipado débil, es especialmente pr
 
 Gatsby cuenta con una configuración de ESLint incorporada por defecto. Para muchos usuarios, nuestra configuración es lo único que necesitas. Sin embargo, si sabes que te gustaría personalizar tu configuración de ESLint; como por ejemplo, si tu compañía tiene su propia configuración; esto muestra cómo se puede hacer.
 
-Replicaremos (principalmente) la [configuración que viene incluida en Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js) para permitirte agregar presets adicionales, plugins y reglas.
+Replicaremos (mayormente) la [configuración que viene incluida en Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) para permitirte agregar presets adicionales, plugins y reglas.
 
 ```shell
 
@@ -37,3 +37,9 @@ module.exports = {
   extends: `react-app`,
 }
 ```
+
+Nota: Cuando no hay un archivo ESLint, Gatsby agrega implícitamente un _loader_ (cargador) en blanco de ESLint. Este _loader_ encola la retroalimentación de ESLint a una ventana de la terminal donde estas ejecutando o construyendo Gatsby y tambien a la consola en de tu navegador, en las herramientas de desarrollo. Esto te da retroalimentación consolidada e inmediata en archivos nuevos guardados. Cuando incluyes un archivo `.eslintrc` personalizado, Gatsby te da control total sobre la configuración de ESLint. Esto significa que sobreescribirá el `eslint-loader` por defecto y que necesitas habilitar cualquiera de las reglas ti mismo. Una forma de hacer esto es con el plugin de la comunidad [`gatsby-eslint-plugin`](/packages/gatsby-plugin-eslint/). Esto tambien significa que la [configuración por defecto de ESLint con la que Gatsby es descargado](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.ts) será completamente sobreescrita. Sí aun así te gustaría aprovechar la ventaja de estas reglas, necesitarás hacer una copia de ellas a tu archivo local.
+
+### Desactivando ESLint
+
+Crear un archivo `.eslintrc` vacío en la raíz de tu proyecto deshabilitará ESLint de tu sitio. El archivo vacío desactivará el `eslint-loader` por defecto, ya que Gatsby asume que una vez que tienes un archivo ESLint estás a cargo del _linting_.

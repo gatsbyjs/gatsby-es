@@ -2,7 +2,7 @@
 title: Crear un sitio con autenticación de usuarios
 ---
 
-A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/building-apps-with-gatsby/#client-only-routes), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
+A veces, debes crear un sitio con contenido cerrado, disponible solo para usuarios autenticados. Con Gatsby, puedes lograr esto usando el concepto de [rutas únicas del cliente](/docs/client-only-routes-and-user-authentication/), para definir qué páginas puede ver un usuario solo después de iniciar sesión.
 
 ## Prerrequisitos
 
@@ -120,6 +120,8 @@ export const logout = callback => {
   callback()
 }
 ```
+
+_Esta guía sobre [agregar autenticación](/docs/building-a-site-with-authentication/) contiene más información acerca del flujo para conectar Gatsby a un servicio externo._
 
 ## Creando rutas únicas del cliente
 
@@ -305,12 +307,13 @@ import { getUser, isLoggedIn, logout } from "../services/auth" // highlight-line
 
 // highlight-start
 export default () => {
-  const content = { message: "", login: true }
+  let greetingMessage = ""
   if (isLoggedIn()) {
-    content.message = `Hola, ${getUser().name}`
+    greetingMessage = `Hola, ${getUser().name}`
   } else {
-    content.message = "No has iniciado sesión"
+    greetingMessage = "No has iniciado sesión"
   }
+
   return (
     // highlight-end
     <div
@@ -321,7 +324,7 @@ export default () => {
         borderBottom: "1px solid #d1c1e0",
       }}
     >
-      <span>{content.message}</span> {/* highlight-line */}
+      <span>{greetingMessage}</span> {/* highlight-line */}
       <nav>
         <Link to="/">Inicio</Link>
         {` `}
@@ -407,7 +410,7 @@ Sí deseas aprender más sobre cómo utilizar soluciones de autenticación lista
 - [Repositorio de Gatsby con autenticación simple](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
 - [Una _aplicación_ de Gatsby con email](https://github.com/DSchau/gatsby-mail), que usa la API de React Context para controlar la autenticación
 - [La tienda de Gatsby para premios y otros extras](https://github.com/gatsbyjs/store.gatsbyjs.org)
-- [Building a blog with Gatsby, React and Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
-- [JAMstack PWA — Let’s Build a Polling App. with Gatsby.js, Firebase, and Styled-components Pt. 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
+- [Construyendo un Blog con Gatsby, React y Webtask.io!](https://auth0.com/blog/building-a-blog-with-gatsby-react-and-webtask/)
+- [JAMstack PWA - Vamos a construir una aplicación de encuentas. Con Gatsby.js, Firebase, y Styled-Components, parte 2](https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc)
 - [JAMstack Hackathon Starter - Starter de apps Gatsby autenticadas con Netlify Identity](/starters/sw-yx/jamstack-hackathon-starter)
-- [Livestream de Learn With Jason: How to use Netlify Identity and Netlify Functions (with Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
+- [Livestream de Learn With Jason: Cómo usar "Netlify Identity" y funciones de Netlify (con Shawn Wang)](https://www.youtube.com/watch?v=vrSoLMmQ46k&feature=youtu.be)
