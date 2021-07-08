@@ -1,62 +1,63 @@
 ---
-title: Sourcing from Contentful
+title: Obteniendo datos desde Contentful
 ---
 
-## What is Contentful? Why choose it?
+## ¿Qué es Contentful? ¿Por qué elegirlo?
 
-[Contentful](https://www.contentful.com/) is a headless Content Management System (CMS) that lets you organize your content into what could be called “modules,” or little bits of data that can be rearranged to appear nicely on mobile devices, tablets, computers, virtual reality devices (maybe someday?) and more.
+[Contentful](https://www.contentful.com/) es un _headless CMS_ que le permite
+organizar su contenido en lo que podría llamarse "módulos", o pequeños pedazos de datos que pueden reorganizarse para que se vean bien en dispositivos móviles, tabletas, computadoras, dispositivos de realidad virtual (tal vez algún día?) y más.
 
-Actually, the way Contentful handles bits of content means that you can push content out when new technology develops without having to redesign, rewrite, or rethink all of it for a new format.
+En realidad, la forma en que Contentful maneja fragmentos de contenido significa que puede expulsar el contenido cuando se desarolle una nueva tecnología sin tener que rediseñar, reescribir, o repensar todo para un nuevo formato.
 
-## Prerequisites
+## Prerrequisitos
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [Quick Start guide](/docs/quick-start), then come back.
+Esta guía assume que tiene un proyecto de Gatsby configurado. Si necesita configurar un proyecto, diríjase a la [Guía de Inicio Rápido](/docs/quick-start),luego regreze.
 
-## Pulling data in and pushing data out
+## Introducir datos y expulsarlos
 
-If you have a JSON file with content in it, you could pull it into Contentful using [contentful-import](https://github.com/contentful/contentful-import). If you are creating new content, you don't need this and just create content straight in Contentful.
+Si tienes un archivo JSON con contenido, puedes colocarlo en Contentful usando [contentful-import](https://github.com/contentful/contentful-import). Si estás creando contendio nuevo, no necesita esto y simplemente crea contenido directamente en Contentful.
 
-If you do create content directly in Contentful, make sure to name your fields in a way you can remember when you create GraphQL queries. If you use GraphiQL, it can suggest fields to you, but this will only help if the field names are clear and memorable.
+Si creas contenido directamente en Contentful, asegúrate de nombrar sus _fields_ de una manera que puedas recordar cuando crees consultas en _GraphQL_. Si usas GraphiQL, puedes sugerirle campos, pero esto sólo ayudará si los nombres del los campos son claros y memorables.
 
-As far as pushing data out to your site goes, we suggest to you to use this fantastic plugin [gatsby-source-contentful](https://www.npmjs.com/package/gatsby-source-contentful), to use it, you'd need to have the `spaceId` and the `accessToken` from contentful.
+En cuanto a enviar datos a tu sitio, le sugerimos que use este fantástico plugin: [gatsby-source-contentful](https://www.npmjs.com/package/gatsby-source-contentful), para usarlo, necesitarías tener el `spaceId` y el `accessToken` provenientes de contentful.
 
-## Install
+## Instalación
 
 ```shell
 npm install --save gatsby-source-contentful
 ```
 
-## How to use
+## Cómo utilizar
 
-### With the Delivery API
-
-```javascript:title=gatsby-config.js
-plugins: [
-  {
-    resolve: `gatsby-source-contentful`,
-    options: {
-      spaceId: `your_space_id_grab_it_from_contentful`,
-      accessToken: `your_token_id_grab_it_from_contentful`,
-    },
-  },
-]
-```
-
-### With the Preview API
+### Con la API de _Delivery_
 
 ```javascript:title=gatsby-config.js
 plugins: [
   {
     resolve: `gatsby-source-contentful`,
     options: {
-      spaceId: `your_space_id_grab_it_from_contentful`,
-      accessToken: `your_token_id_grab_it_from_contentful`,
-      host: `preview.contentful.com`,
-    },
-  },
-]
+      spaceId: `tu_space_id_agarralo_de_contentful`,
+      accessToken: `tu_token_id_agarralo_de_contentful`
+    }
+  }
+];
 ```
 
-## Examples of Gatsby + Contentful websites
+### Con la API de _Preview_
 
-The Gatsby blog has [several examples of individuals and companies](/blog/tags/contentful) that chose to build with Gatsby and Contentful.
+```javascript:title=gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-source-contentful`,
+    options: {
+      spaceId: `tu_space_id_agarralo_de_contentful`,
+      accessToken: `tu_token_id_agarralo_de_contentful`,
+      host: `preview.contentful.com`
+    }
+  }
+];
+```
+
+## Ejemplos de sitios web con Gatsby + Contentful
+
+El blog de Gatsby [tiene varios ejemplos de individuos y empresas](/blog/tags/contentful) que eligieron construir con Gatsby y Contentful.
