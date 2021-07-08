@@ -116,10 +116,13 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | bundler                             | _bundler_                                          |
 | callback                            | _callback_                                         |
 | camelCase                           | _camelCase_                                        |
+| cheat-sheet                         | hoja de trucos                                     |
+| client-side                         | lado del cliente                                   |
 | community pair programming sessions | sesiones de programación en pareja de la comunidad |
 | component shadowing                 | _component shadowing_                              |
 | controlled component                | componente controlado                              |
 | debugging                           | depuración                                         |
+| deploy                              | _deploy_                                           |
 | DOM                                 | DOM                                                |
 | file                                | archivo                                            |
 | fork                                | _fork_                                             |
@@ -133,6 +136,7 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | layout                              | _layout_                                           |
 | library                             | biblioteca                                         |
 | lowercase                           | minúscula(s)                                       |
+| newsletter                          | _newsletter_                                       |
 | monorepo                            | _monorepo_                                         |
 | open source                         | código abierto                                     |
 | props                               | _props_                                            |
@@ -150,5 +154,23 @@ Aquí hay algunas sugerencias para la traducción de términos de uso común en 
 | swag                                | premio                                             |
 | template literals                   | _template literals_                                |
 | uncontrolled component              | componente no controlado                           |
+| Issue                               | Issue                                              |
+| Layout                              | Layout                                             |
+| server-side rendering               | _server-side rendering_                            |
+| Scope (sustantivo)                  | Ambito                                             |
+| Scope (verbo)                       | Aislar                                             |
+| Open Source                         | Código abierto                                     |
+| script                              | script                                             |
+| swag                                | premio                                             |
+| push notifications                  | Notificaciones push                                |
+| workspace                           | _workspace_                                        |
+| monorepo                            | _monorepo_                                         |
+| fork                                | _fork_                                             |
+| Workshop                            | Taller                                             |
+| file                                | archivo                                            |
+| Community Pair Programming Sessions | Sesiones de programación en pareja de la comunidad |
+| stub                                | stub                                               |
+| starter                             | _starter_                                          |
+| component shadowing                 | _component shadowing_                              |
 | workshop                            | taller                                             |
 | workspace                           | _workspace_                                        |
