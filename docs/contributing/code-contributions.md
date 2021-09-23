@@ -46,13 +46,13 @@ El archivo `.env.development` es ignorado por git. Tu token nunca debería envia
 
 ## Contribuyendo con sitios de ejemplo
 
-La política de Gatsby es que "Usar" sitios de ejemplo (como los de [ejemplos pertenecientes al repositorio](https://github.com/gatsbyjs/gatsby/tree/master/examples)) debería sólo incluir plugins mantenidos por el equipo principal ya que sinó nos es difícil mantener las cosas actualizadas.
+La política de Gatsby es que "Usar" sitios de ejemplo (como los de [ejemplos pertenecientes al repositorio](https://github.com/gatsbyjs/gatsby/tree/master/examples)) debería sólo incluir plugins mantenidos por el equipo principal ya que sino nos es difícil mantener las cosas actualizadas.
 
 Para contribuir con tus propios sitios de ejemplo, es recomendable crear tu repositorio de Github y enlazarlo ahí con tu plugin fuente, etc.
 
 ## Usando Docker para establecer entornos de pruebas
 
-Debido a las diferentes integraciones posibles de Gatsby, puede ayudar lanzar un contenedor Docker con la aplicación de software que necesitas probar. Esto facilita la instalación, por lo que puedes centrarte menos en la configuración y más en los detalles de integración que te interesen.
+Debido a las diferentes integraciones posibles de Gatsby, puedes ayudar a lanzar un contenedor Docker con la aplicación de software que necesitas probar. Esto facilita la instalación, por lo que puedes centrarte menos en la configuración y más en los detalles de integración que te interesen.
 
 > ¿Tienes alguna configuración que no esté listada aquí? Háznoslo saber añadiéndola a este archivo y abriendo una PR.
 
@@ -116,26 +116,26 @@ Usando Docker Compose, puedes iniciar y parar una instancia de Wordpress e integ
 
 ## Herramientas de Desarrollo
 
-### Debugeando el proceso de build
+### Depurando el proceso de build
 
-Consulta la página de [Debugeando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo debugear Gatsby.
+Consulta la página de [Depurando el proceso de build](/docs/debugging-the-build-process/) para aprender cómo depurar Gatsby.
 
 ## Desarrollo oficial de temas
 
-Esta sección es para el desarrollo oficial de temas en el mono repositorio de Gatsby. Si estas buscando
+Esta sección es para el desarrollo oficial de temas en el mono repositorio de Gatsby. Si estás buscando
 construir tu propio tema, mira [construyendo temas](/docs/themes/building-themes/).
 
-Antes de que empecemos, asegurate de tener
+Antes de que empecemos, asegúrate de tener
 [configurado tu ambiente de desarrollo local](/contributing/setting-up-your-local-dev-environment/)
-y que estas usando la última versión de 'gatsby-dev-cli'.
+y que estás usando la última versión de 'gatsby-dev-cli'.
 
 - En el mono repositorio de Gatsby encuentra el starter en el directorio de starters en '/starters' que usa el tema sobre el que quieres trabajar
 - Navega a ese directorio, p. ej. 'cd starters/gatsby-starter-blog-theme'
 - Instala las dependencias: 'yarn'
 - Ejecuta Gatsby Dev CLI para sincronizar los archivos del tema, referenciando el tema apropiado: 'gatsby-dev --packages gatsby-theme-blog'
 - En otra pestaña ejecuta el starter: 'yarn develop'
-- Edita los archivos del tema, veras que los cambios serán automáticamente copiados y actualizados en tu starter.
+- Edita los archivos del tema, verás que los cambios serán automáticamente copiados y actualizados en tu starter.
 
 ## Retroalimentación (Feedback)
 
-En cualquier momento durante el proceso de contribución, ¡al equipo principal de Gatsby le encantaría ayudar! Para ayuda con un problema en particular puedes [abrir un issue en Github](/contributing/how-to-file-an-issue/) o pasarte por [nuestro servidor en Discord](https://gatsby.dev/discord) para una discución general y ayuda de la comunidad.
+En cualquier momento durante el proceso de contribución, ¡al equipo principal de Gatsby le encantaría ayudar! Para ayuda con un problema en particular puedes [abrir un issue en Github](/contributing/how-to-file-an-issue/) o pasarte por [nuestro servidor en Discord](https://gatsby.dev/discord) para una discusión general y ayuda de la comunidad.
