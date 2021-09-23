@@ -15,7 +15,7 @@ Uno de los valores de nuestra comunidad es que ["tú perteneces a ella"](/blog/2
 Con el fin de fomentar un ambiente abierto y cordial, nosotros como
 colaboradores y mantenedores juramos hacer que la participación en nuestro proyecto y
 nuestra comunidad sea una experiencia libre de acoso para todos, no importa tu edad, tamaño,
-disabilidad, origen étnico, identidad y expresión de género, nivel de
+discapacidad, origen étnico, identidad y expresión de género, nivel de
 experiencia, nacionalidad, apariencia personal, raza, religión o identidad/orientación
 sexual.
 
@@ -23,7 +23,7 @@ sexual.
 
 ## Maneras de contribuir
 
-La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee las guías abajo para asegurarte de que tus contribuciones sean aceptadas:
+La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee las guías a continuación para asegurarte de que tus contribuciones sean aceptadas:
 
 - [Cómo contribuir](/contributing/how-to-contribute/)
 - [Cómo abrir un Issue](/contributing/how-to-file-an-issue/)
@@ -36,7 +36,7 @@ La comunidad de Gatsby recibe contribuciones de muy buena manera. Por favor lee 
 
 ¡Subscríbete al boletín de Gatsby para mantenerte al día con las noticias de la comunidad de Gatsby! Aprende sobre nuevas funciones, tips & trucos y lo que las personas están construyendo.
 
-<EmailCaptureForm signupMessage="¿Quieres mantenerte al día con los últimos consejos &amp; trucos? ¡Suscribete a nuestro boletín informativo!" />
+<EmailCaptureForm signupMessage="¿Quieres mantenerte al día con los últimos consejos &amp; trucos? ¡Suscríbete a nuestro boletín informativo!" />
 
 ### Twitter
 
@@ -67,7 +67,7 @@ etiquetados con **gatsby** o
 
 ### DEV Community
 
-DEV Community es otra plataforma informativa donde tambien puedes hacer preguntas y compartir tus consejos. Lee
+DEV Community es otra plataforma informativa donde también puedes hacer preguntas y compartir tus consejos. Lee
 las [preguntas y posts existentes](https://dev.to/t/gatsby)
 etiquetados con **gatsby** o
 [pide ayuda](https://dev.to/new/help). Además puedes [escribir un post](https://dev.to/new/gatsby) con la etiqueta **gatsby**.
