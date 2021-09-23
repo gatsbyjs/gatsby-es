@@ -12,7 +12,7 @@ Los títulos de las secciones tienen identificadores explícitos de la siguiente
 ## Try Gatsby {#try-gatsby}
 ```
 
-¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, osea:
+¡**NO** traduzcas estos identificadores! Se usan para la navegación y no funcionaría correctamente si se hace referencia externamente, o sea:
 
 ```md
 Consulta la [sección de inicio](/getting-started#try-gatsby) para más información.
@@ -65,7 +65,7 @@ ReactDOM.render(element, document.getElementById('root'));
 ```js
 // Ejemplo
 const element = <h1>Hola mundo</h1>;
-// "root" hace referencia a un indentificador de un elemento.
+// "root" hace referencia a un identificador de un elemento.
 // NO LO TRADUZCAS
 ReactDOM.render(element, document.getElementById('raíz'));
 ```
@@ -101,7 +101,7 @@ Para enlaces que no tienen un equivalente en español (Stack Overflow, videos de
 
 ## Usted, tú y vos
 
-Para mantener la consistencia y evitar regionalismos decidimos utilizar tú para la segunda persona del singular.
+Para mantener la consistencia y evitar regionalismos, decidimos utilizar tú para la segunda persona del singular.
 
 # Traducciones comunes
 
