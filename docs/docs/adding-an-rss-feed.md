@@ -130,7 +130,7 @@ Este fragmento de código contiene una configuración personalizada de `gatsby-p
 
 El campo `output` de su objeto te permite personalizar el nombre del archivo para tu feed RSS y el `title` para el nombre del feed RSS de tu sitio.
 
-Por defecto, se hace referencia al feed en todas las páginas. Puedes personalizar este comportamiento proporcionando un campo adicional `match` de tipo `string`. Esta cadena se usará para construir una `RegExp`, y esta expresión regular se usará para probar el `pathname` de la página actual. Solo las páginas que satisfacen la explesión regular tendrán referencia del feed incluido.
+Por defecto, se hace referencia al feed en todas las páginas. Puedes personalizar este comportamiento proporcionando un campo adicional `match` de tipo `string`. Esta cadena se usará para construir una `RegExp`, y esta expresión regular se usará para probar el `pathname` de la página actual. Solo las páginas que satisfacen la expresión regular tendrán referencia del feed incluido.
 
 Para ver tu feed en acción, ejecuta `gatsby build && gatsby serve` y luego inspecciona el contenido y las URL's de tu archivo RSS en `http://localhost:9000/rss.xml`.
 
