@@ -6,7 +6,7 @@ Escribir buena documentación es importante para los que mantienen tus proyectos
 
 Docz aprovecha archivos `mdx` – archivos Markdown con JSX – que convierte **componentes React** a archivos Markdown. Sabiendo tus PropTypes o tipos Flow o los tipos TypeScript, puede generar una **tabla de propiedades** para documentar apropiadamente como usar tus componentes. Adicionalmente, puedes proveer **código editable** de tus componentes, para que cualquiera pueda verlos en acción, modificar el código y ver los cambios en directo, o copiar esa parte del código y usarlo en otro lado.
 
-Si estas empezando tu proyecto Gatsby desde cero y te gustaría tener una excelente documentación, con soporte para Docz, puedes usar [`gatsby-starter-docz`](https://github.com/pedronauck/gatsby-starter-docz). También puedes encontrar mas información al final de esta guía en la sección [otros recursos](#other-resources).
+Si estás empezando tu proyecto Gatsby desde cero y te gustaría tener una excelente documentación, con soporte para Docz, puedes usar [`gatsby-starter-docz`](https://github.com/pedronauck/gatsby-starter-docz). También puedes encontrar más información al final de esta guía en la sección [otros recursos](#other-resources).
 
 Como alternativa, la siguiente guía debería ayudarte a que utilices Docz en un proyecto Gatsby existente.
 
@@ -18,7 +18,7 @@ Primero, si aún no tienes un proyecto Gatsby configurado, usa la CLI de Gatsby 
 gatsby new my-gatsby-site-with-docz
 ```
 
-Para configurar Docz necesitas instalar el tema Docz de Gatsby, y agregar cierta configuración personalizada. Asegurate de estar en el directorio raíz de tu proyecto Gatsby:
+Para configurar Docz necesitas instalar el tema Docz de Gatsby, y agregar cierta configuración personalizada. Asegúrate de estar en el directorio raíz de tu proyecto Gatsby:
 
 ```shell
 cd my-gatsby-site-with-docz
