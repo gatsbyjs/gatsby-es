@@ -69,11 +69,11 @@ plugins: [
 ### Añadir un archivo Markdown
 
 Crea una carpeta en el directorio `/src` de tu aplicación Gatsby llamado `markdown-pages`.
-Ahora crea un archivo Markdown dentro de el con el nombre `post-1.md`.
+Ahora crea un archivo Markdown dentro de él con el nombre `post-1.md`.
 
 #### Frontmatter para metadatos en markdown files
 
-Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado _frontmatter_ y está denotado por tres guiones al principio y final del bloque. Este bloque será parseado por `gatsby-transformer-remark` como `frontmatter`. La API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
+Cuando creas un archivo Markdown, puedes incluir un conjunto de parejas clave-valor que pueden ser usadas para aportar datos adicionales relevantes para especificar páginas en la capa de datos de GraphQL. Este dato es llamado _frontmatter_ y está denotado por tres guiones al principio y final del bloque. Este bloque será analizado por `gatsby-transformer-remark` como `frontmatter`. La API GraphQL proveerá las parejas clave-valor como datos en nuestros componentes de React. 
 
 ```markdown:title=src/markdown-pages/post-1.md
 ---
@@ -139,7 +139,7 @@ Hay dos cosas importantes en el archivo superior:
 
 Gatsby expone una poderosa API en Node.JS, la cual permite funcionalidades como la creación de páginas dinámicas. Esta API está disponible en el archivo `gatsby-node.js`  en el directorio raíz de tu proyecto, al mismo nivel de `gatsby-config.js`. Cada *export* encontrado en este archivo será ejecutado por Gatsby, como se detalla en su [especificación API Node](/docs/node-apis/). Sin embargo, sólo tienes que preocuparte por una API en particular de esta instancia, `createPages`.
 
-Usa `graphql` para consultar el archivo Markdown como debajo.A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
+Usa `graphql` para consultar el archivo Markdown como debajo. A continuación usa la acción creadora `createPage` para crear una página para cada uno de los archivos de Markdown usando el `blogTemplate.js` que has creado en el paso previo.
 
 **NOTA:** Gatsby llama a la API `createPages`  (si está presente) en tiempo de compilación con parámetros inyectados, `actions` y `graphql`.
 
