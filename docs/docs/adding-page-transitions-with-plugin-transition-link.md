@@ -69,7 +69,7 @@ Tienes dos métodos principales de crear transiciones de páginas:
 1. Usa la función `trigger` definida en tu _prop_ `exit`/`entry`. Más detalles en la subsección '[Usando la función `trigger`](#using-the-trigger-function)'.
 2. Usa las _props_ pasadas por `TransitionLink` para definir tus transiciones. Más detalles en la subsección '[Usando _props_ pasadas](#using-passed-props)'.
 
-Adicionalmente, puedes especificar un número de _props_ y opciones en el componente `TransitionLink`, como `length`, `delay` y más. Para mas opciones y detalles, mira [la documentación de TransitionLink](https://transitionlink.tylerbarnes.ca/docs/transitionlink/).
+Adicionalmente, puedes especificar un número de _props_ y opciones en el componente `TransitionLink`, como `length`, `delay` y más. Para más opciones y detalles, mira [la documentación de TransitionLink](https://transitionlink.tylerbarnes.ca/docs/transitionlink/).
 
 #### Usando la función trigger
 
@@ -140,7 +140,7 @@ const Box = posed.div({
 </TransitionState>
 ```
 
-Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo si se esta montando o desmontando, y aparecerá de entrada/salida en consecuencia.
+Ahora, el componente `Box` estará al pendiente del estado de la transición de la página que es hijo si se está montando o desmontando, y aparecerá de entrada/salida en consecuencia.
 
 ## Excluyendo elementos de las transiciones de página
 
@@ -165,6 +165,6 @@ Como siempre, fíjate en [la documentación de `TransitionPortal`](https://trans
 
 - [Documentación oficial](https://transitionlink.tylerbarnes.ca/docs/)
 - [Código fuente del plugin](https://github.com/TylerBarnes/gatsby-plugin-transition-link)
-- [Sitio demo](https://gatsby-plugin-transition-link.netlify.com/)
+- [Sitio demo](https://gatsby-plugin-transition-link.netlify.app/)
 - [Entrada de blog: 'Transiciones de página con Per-Link Gatsby y TransitionLink'](/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/)
 - [Usando transition-link con react-spring](https://github.com/TylerBarnes/gatsby-plugin-transition-link/issues/34)
