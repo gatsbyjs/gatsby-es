@@ -18,7 +18,7 @@ El primer paso es crear una cuenta de Google Analytics. Puedes hacerlo [aquí](h
 
 Google también tiene una [página de preparación](https://support.google.com/analytics/answer/1008015?hl=en) para más referencias.
 
-Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Ésta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en si misma. Rellena el formulario con el nombre de tu sitio web y URL.
+Cuando tengas tu cuenta, te pedirá que añadas una nueva propiedad. Esta propiedad tendrá un Tracking ID asociado. En este caso la propiedad será la página web en sí misma. Rellena el formulario con el nombre de tu sitio web y URL.
 
 El Tracking ID  es lo que se usa para identificar los datos con el tráfico de tu sitio web. Deberías usar un Tracking ID distinto para cada sitio web que estés monitoreando.
 
