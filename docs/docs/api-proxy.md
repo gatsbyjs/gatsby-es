@@ -40,11 +40,11 @@ module.exports = {
 
 De esta manera, cuando en desarrollo tu hagas `fetch('/api/todos')`, el servidor de desarrollo reconocerá que no es un recurso estático, y filtrará tu petición a `http://dev-mysite.com/api/todos` como plan de contingencia.
 
-Ten en mente que `proxy` solo tiene efecto en desarrollo (con `gatsby develop`), y depende de ti el asegurar que URLs como `/api/todos` apunten a el lugar indicado en producción.
+Ten en mente que `proxy` solo tiene efecto en desarrollo (con `gatsby develop`), y depende de ti el asegurar que URLs como `/api/todos` apunten al lugar indicado en producción.
 
 ## Proxy avanzado
 
-Algunas ocasiones necesitas acceso más granular/flexible a el servidor de desarrollo. Gatsby expone el servidor de desarrollo [Express.js](https://expressjs.com/) a tu sitio `gatsby-config.js` donde puedes agregar _middlewares_ de Express según necesites.
+Algunas ocasiones necesitas acceso más granular/flexible al servidor de desarrollo. Gatsby expone el servidor de desarrollo [Express.js](https://expressjs.com/) a tu sitio `gatsby-config.js` donde puedes agregar _middlewares_ de Express según necesites.
 
 ```javascript:title=gatsby-config.js
 const { createProxyMiddleware } = require("http-proxy-middleware") //v1.x.x
