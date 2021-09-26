@@ -11,7 +11,7 @@ Es importante que sepas estas dos cosas antes de que empieces:
 
 ## ¿Por qué usar Algolia?
 
-Algolia es una plataforma de alojamiento de buscadores que aloja información del índice de páginas por ti, y retorna los resultados en donde sea que esté la búsqueda de tu sitio. Tú le dices a Algolia qué paginas tienes, dónde están y cómo navegar hacia ellas, y Algolia te devuelve esos resultados basada en cualquier término de búsqueda usado.
+Algolia es una plataforma de alojamiento de buscadores que aloja información del índice de páginas por ti, y retorna los resultados en donde sea que esté la búsqueda de tu sitio. Tú le dices a Algolia qué paginas tienes, dónde están y cómo navegar hacia ellas, y Algolia te devuelve esos resultados basado en cualquier término de búsqueda usado.
 
 Para implementar la búsqueda de Algolia en un sitio Gatsby, tendrás que instalar el _plugin_, decirle qué información consultar, proveer tus credenciales de Algolia, y seguir otros pocos pasos de configuración. Esto significa que después de que las consultas se hayan ejecutado cuando haces un `gatsby build`, Algolia tendrá disponible el índice entero de tu sitio y podrá devolver resultados a usuarios rápidamente. Para aprender más acerca de los beneficios de usar Algolia, [revisa este post en el blog de Netlify, quienes recientemente cambiaron el buscador de su sitio al de Algolia](https://www.netlify.com/blog/2017/10/10/replacing-our-search-with-algolia/).
 
