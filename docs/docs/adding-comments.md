@@ -2,7 +2,7 @@
 title: Agregando comentarios
 ---
 
-Si tienes un blog corriendo en Gatsby y has empezado a agregar contenido a el, lo siguiente en lo que deberías pensar es en cómo incrementar el “engagement” entre tus visitantes. Una buena forma de hacerlo es permitir que tus usuarios puedan realizar preguntas y expresen sus puntos de vista sobre lo que has escrito. Esto hará ver tu blog mucho más dinámico para cualquiera que lo visite.
+Si tienes un blog funcionando en Gatsby y has empezado a agregar contenido al mismo, lo siguiente en lo que deberías pensar es en cómo incrementar la “fidelización” entre tus visitantes. Una buena forma de hacerlo es permitir que tus usuarios puedan realizar preguntas y expresen sus puntos de vista sobre lo que has escrito. Esto hará ver a tu blog mucho más dinámico para cualquiera que lo visite.
 
 Existen muchas opciones para añadir funcionalidad de comentarios, muchos de ellos están enfocados especialmente a sitios estáticos. Aunque esta lista no es de ninguna manera exhaustiva, plantea un buen punto de inicio para ilustrar que hay disponible:
 
