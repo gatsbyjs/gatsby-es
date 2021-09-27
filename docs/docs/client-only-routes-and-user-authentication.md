@@ -2,7 +2,7 @@
 title: "Rutas solo para el cliente & Autenticación de usuario"
 ---
 
-A menudo, deseas crear un sitio con partes solamente para el lado del cliente, que te permiten filtrarlos por autenticación o cargar contenido diferente basado en los parametros de la URL.
+A menudo, deseas crear un sitio con partes solamente para el lado del cliente, que te permiten filtrarlos por autenticación o cargar contenido diferente basado en los parámetros de la URL.
 
 ## Entendiendo las rutas solo para cliente
 
@@ -14,13 +14,13 @@ Un sitio de muestra se puede configurar así:
 
 ![Sitio con una página principal estática y rutas solo para cliente](./images/client-only-routes.png)
 
-Gatsby convierte los componentes en la carpeta `pages` en archivos HTML estáticos para la página _Home_ y la página _App_. Un `<Router />` es añadido a la página _App_ para que los componentes de perfil y detalles puedan ser renderizados desde la página _App_; estos no tienen archivos estáticos compilados por ellos ya que solo existen en el lado del cliente. La página del perfil puede hacer un `POST` de datos sobre el usuario al API, y la página de detalles puede cargar datos dinámicamente sobre el usuario con un _ID_ específico desde el API.
+Gatsby convierte los componentes en la carpeta `pages` en archivos HTML estáticos para la página _Home_ y la página _App_. Un `<Router />` es añadido a la página _App_ para que los componentes de perfil y detalles puedan ser renderizados desde la página _App_; estos no tienen archivos estáticos compilados por ellos ya que solo existen en el lado del cliente. La página del perfil puede hacer un `POST` de datos sobre el usuario desde la API, y la página de detalles puede cargar datos dinámicamente sobre el usuario con un _ID_ específico desde la API.
 
 # Manejando rutas solo para cliente con Gatsby
 
 Gatsby usa [@reach/router](https://reach.tech/router/) debajo del capó, y es el enfoque recomendado para crear rutas solo para cliente.
 
-Primero necesitas configurar rutas en una página que esta hecha con Gatsby:
+Primero necesitas configurar rutas en una página que está hecha con Gatsby:
 
 ```jsx:title=src/pages/app.js
 import React from "react"
@@ -49,7 +49,7 @@ const App = () => {
 export default App
 ```
 
-Con rutas anidadas debajo del `<Router />` de `Reach Router`, [renderizará el componente de la ruta que corresponda a la `ruta`](https://reach.tech/router/api/Router). En el caso de la ruta `/app/profile`, el componente `profile` sera renderizado, ya que su prefijo coincide con la ruta `/app`, y la parte restante es identica a la ruta de su hijo.
+Con rutas anidadas debajo del `<Router />` de `Reach Router`, [renderizará el componente de la ruta que corresponda a la `ruta`](https://reach.tech/router/api/Router). En el caso de la ruta `/app/profile`, el componente `profile` será renderizado, ya que su prefijo coincide con la ruta `/app`, y la parte restante es idéntica a la ruta de su hijo.
 
 ### Ajustando rutas de cuenta para usuarios autenticados
 
@@ -128,9 +128,9 @@ exports.onCreatePage = async ({ page, actions }) => {
 > 💡 Nota: También hay un plugin para simplificar la creación de rutas solo para el lado del cliente en tu sitio
 > [gatsby-plugin-create-client-paths](/packages/gatsby-plugin-create-client-paths/).
 
-El código de arriba (así como tambien el plugin `gatsby-plugin-create-client-paths`) actualiza la página `/app` en tiempo de compilación para agregar el parámetro `matchPath` en el objeto para asegurarse de que las páginas configuradas (en este caso, todo después de `/app`, cómo `/app/dashboard` o `/app/user`) puedan ser navegadas a ellas por `Reach Router`.
+El código de arriba (así como también el plugin `gatsby-plugin-create-client-paths`) actualiza la página `/app` en tiempo de compilación para agregar el parámetro `matchPath` en el objeto para asegurarse de que las páginas configuradas (en este caso, todo después de `/app`, cómo `/app/dashboard` o `/app/user`) puedan ser navegadas a ellas por `Reach Router`.
 
-_Sin_ esta configuración hecha, un usuaerio que haga click en un enlace a `<tusitio.com>/app/user` será llevado a la página estática de `/app` en lugar del componente o página que configuraste para `/app/user`.
+_Sin_ esta configuración hecha, un usuario que haga clic en un enlace a `<tusitio.com>/app/user` será llevado a la página estática de `/app` en lugar del componente o página que configuraste para `/app/user`.
 
 > Consejo: Para aplicaciones con enrutamiento complejo, es posible que desees anular el comportamiento de desplazamiento predeterminado de Gatsby con la API del navegador [shouldUpdateScroll](/docs/browser-apis/#shouldUpdateScroll).
 
@@ -152,7 +152,7 @@ Un patrón a seguir, agnóstico de la tecnología del servidor, es mirar por est
 
 En este ejemplo, cuando se hace una solicitud `GET` a `/app/why-gatsby-is-awesome`, el servidor debería responder con `/app/index.html` y dejar que el cliente maneje el renderizado de la ruta que coincida. Es importante recordar que el código de respuesta debería ser un **200** (un OK) y no un **301** (una redirección).
 
-Un resultado de este método es que el cliente es completamente indiferente a la lógica del servidor, desacoplandolo de Gatsby.
+Un resultado de este método es que el cliente es completamente indiferente a la lógica del servidor, desacoplándolo de Gatsby.
 
 ## Recursos adicionales
 
