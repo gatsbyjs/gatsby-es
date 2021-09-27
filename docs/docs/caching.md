@@ -50,7 +50,7 @@ Para desplegar con Now, seguir las instrucciones en la [documentación de Now](h
 </sup> Puedes usar 'no-cache' en lugar de 'max-age=0, must-revalidate'. A pesar de lo que el nombre pueda implicar, 'no-cache' permite al cache servir contenido en cache siempre y cuando se valide lo reciente del cache primero.
 <sup>
   [2][3]{" "}
-</sup> En cualquier caso, los clientes deben hacer un viaje de ida y vuelta al servidor de origen por cada solicitud. Sin embargo, si estas utilizando correctamente la validación de "ETags" o "Last-Modified" evitaras descargar recursos cuando la copia en cache siga siendo valida. (p. ej. el archivo no ha cambiado en el servidor de origen desde que fue puesto en cache).
+</sup> En cualquier caso, los clientes deben hacer un viaje de ida y vuelta al servidor de origen por cada solicitud. Sin embargo, si estás utilizando correctamente la validación de "ETags" o "Last-Modified" evitarás descargar recursos cuando la copia en caché siga siendo valida. (p. ej. el archivo no ha cambiado en el servidor de origen desde que fue puesto en caché).
 
 [2]: https://tools.ietf.org/html/rfc7234#section-5.2.2.1
 [3]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#no-cache_and_no-store
