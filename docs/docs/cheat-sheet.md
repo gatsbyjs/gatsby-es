@@ -413,7 +413,7 @@ Obtén el PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf
   </p>
   <p>
     {/* prettier-ignore */}
-    También veras un segundo enlace: <code>http://localhost:8000/___graphql</code>.
+    También verás un segundo enlace: <code>http://localhost:8000/___graphql</code>.
     Esto es una herramienta que puedes usar para experimentar consultando tus datos. Aprende más
     sobre ella en <a href="https://gatsby.dev/tutorial">gatsby.dev/tutorial</a>
   </p>
