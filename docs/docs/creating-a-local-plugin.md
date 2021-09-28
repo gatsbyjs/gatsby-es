@@ -34,9 +34,9 @@ Entonces el plugin puede empezarse a agregar a Gatsby mediante APIs de [Node](/d
 
 ## Desarrollando un plugin local que está fuera del proyecto
 
-Tu plugin no necesita estar en tu proyecto para poder ser probado o trabajar en el. Sí te gustaría [desacoplar](/docs/glossary#decoupled) tu plugin de tu sitio, puedes seguir uno de los métodos descritos abajo. Esto es utíl de hacer sí quieres publicar el plugin en su propio paquete, o probar/desarrollar una versión modificada de un plugin escrito por la comunidad.
+Tu plugin no necesita estar en tu proyecto para poder ser probado o trabajar en él. Sí te gustaría [desacoplar](/docs/glossary#decoupled) tu plugin de tu sitio, puedes seguir uno de los métodos descritos abajo. Esto es útíl de hacer sí quieres publicar el plugin en su propio paquete, o probar/desarrollar una versión modificada de un plugin escrito por la comunidad.
 
-Para empezar a esarrollar un plugin fuera de la carpeta raiz de tu sitio, puedes generar uno rapidamente usando `gatsby new` con el [starter para plugins](https://github.com/gatsbyjs/gatsby/tree/master/starters/gatsby-starter-plugin):
+Para empezar a desarrollar un plugin fuera de la carpeta raíz de tu sitio, puedes generar uno rápidamente usando `gatsby new` con el [starter para plugins](https://github.com/gatsbyjs/gatsby/tree/master/starters/gatsby-starter-plugin):
 
 ```shell
 gatsby new gatsby-plugin-foo https://github.com/gatsbyjs/gatsby-starter-plugin
@@ -44,7 +44,7 @@ gatsby new gatsby-plugin-foo https://github.com/gatsbyjs/gatsby-starter-plugin
 
 ## Utilizando `require.resolve` como ruta de archivo
 
-Incluir una carpeta de `plugins` no es la unica forma de referenciar plugins locales. Alternativamente, puedes incluir un plugin en tu archivo `gatsby-config.js` directamente referenciando su ruta relativa al archivo `gatsby-config.js` con `require`.
+Incluir una carpeta de `plugins` no es la única forma de referenciar plugins locales. Alternativamente, puedes incluir un plugin en tu archivo `gatsby-config.js` directamente referenciando su ruta relativa al archivo `gatsby-config.js` con `require`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -62,11 +62,11 @@ module.exports = {
 
 ### Usando `npm link` o `yarn link`
 
-Puedes usar [`npm link`](https://docs.npmjs.com/cli/link.html) o [`yarn link`](https://yarnpkg.com/lang/en/docs/cli/link/) para referenciar un paquete desde otro localización en tu maquina.
+Puedes usar [`npm link`](https://docs.npmjs.com/cli/link.html) o [`yarn link`](https://yarnpkg.com/lang/en/docs/cli/link/) para referenciar un paquete desde otra localización en tu máquina.
 
 Ejecutando `npm link ../ruta/a/mi-plugin` en la raíz de tu sitio de Gatsby, tu computadora creará un `symlink` a tu paquete.
 
-**Nota**: Mira el ejemplo de como usar un plugin local desde la carpeta de plugins, con `require.resolve`, y `npm link` en este [repositorio de ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-local-plugins).
+**Nota**: Mira el ejemplo de cómo usar un plugin local desde la carpeta de plugins, con `require.resolve`, y `npm link` en este [repositorio de ejemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-multiple-local-plugins).
 
 ## Compilación y procesamiento con Babel
 
