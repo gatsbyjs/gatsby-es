@@ -101,7 +101,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 ## Modificar páginas creadas por núcleo o plugins
 
-El núcleo de Gatsby y los plugins pueden crear páginas automáticamente por ti. A veces el
+El núcleo de Gatsby y los plugins pueden crear páginas automáticamente por ti. A veces 
 el valor predeterminado no es exactamente lo que deseas y necesitas modificar los objetos 
 de páginas creadas.
 
@@ -110,7 +110,7 @@ de páginas creadas.
 Una razón común para necesitar modificar las páginas creadas automáticamente es eliminar
 las barras finales.
 
-Para hacer esto, en el `gatsby-node.js` de tu sitio agregua código similar al siguiente:
+Para hacer esto, en el `gatsby-node.js` de tu sitio agrega código similar al siguiente:
 
 _Nota: También hay un plugin que elimina automáticamente todas las barras finales de las páginas:
 [gatsby-plugin-remove-trailing-slashes](/packages/gatsby-plugin-remove-trailing-slashes/)_.
@@ -138,7 +138,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
 ### Pasar contexto a páginas
 
-Las páginas creadas automáticamente pueden recibir contexto y usarlo como variables en sus consultas GraphQL. Para anular el valor predeterminado y pasar tu propio contexto, abre el archivo `gatsby-node.js` de tu sitio y agregua algo similar a lo siguiente:
+Las páginas creadas automáticamente pueden recibir contexto y usarlo como variables en sus consultas GraphQL. Para anular el valor predeterminado y pasar tu propio contexto, abre el archivo `gatsby-node.js` de tu sitio y agrega algo similar a lo siguiente:
 
 ```javascript:title=gatsby-node.js
 exports.onCreatePage = ({ page, actions }) => {
