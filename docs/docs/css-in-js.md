@@ -3,7 +3,7 @@ title: Mejora tus estilos con CSS-in-JS
 overview: true
 ---
 
-CSS-in-JS se refiere a un enfoque donde los estilos son escritos en JavaScript en lugar de en un fichero CSS externo para facilitar la separación de estilos entre componentes, fomentando un rendimiento más rápido, estilos dinámicos y mucho más.
+CSS-in-JS se refiere a un enfoque donde los estilos son escritos en JavaScript en lugar de un fichero CSS externo para facilitar la separación de estilos entre componentes, fomentando un rendimiento más rápido, estilos dinámicos y mucho más.
 
 CSS-in-JS une la brecha entre CSS y JavaScript:
 
@@ -16,7 +16,7 @@ CSS-in-JS, aunque no es obligatorio en Gatsby, es muy popular entre los desarrol
 
 _Ten en cuenta que esta funcionalidad no es parte de React o Gatsby, y requiere usar alguna de las muchas [bibliotecas CSS-in-JS de terceros](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
 
-> Añadiendo una clase estable de CSS a JSX junto con CSS-in-JS puede hacer más fácil para tus usuario incluir [_User Stylesheets_](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para accesibilidad. Veáse un ejemplo con [Styled Components](/docs/styled-components#enabling-user-stylesheets-with-a-stable-class-name).
+> Añadiendo una clase estable de CSS a JSX junto con CSS-in-JS puede hacer más fácil para tus usuarios incluir [_User Stylesheets_](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para accesibilidad. Veáse un ejemplo con [Styled Components](/docs/styled-components#enabling-user-stylesheets-with-a-stable-class-name).
 
 Esta sección puede contener guías para dar estilo a tu sitio con algunas de las bibliotecas CSS-in-JS más populares, incluyendo cómo configurar estilos globales usando cada biblioteca.
 
