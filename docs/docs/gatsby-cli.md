@@ -9,11 +9,11 @@ _Puedes encontrar disponible documentación similar en el [README](https://githu
 
 ## Cómo utilizar gatsby-cli
 
-La CLI de Gatsby (`gatsby-cli`) está empaquetada como un ejecutable que puede usarse globalmente. La CLI de Gatsby está disponible a través de [npm](https://www.npmjs.com/) y debe instalarse globalmente con el comando `npm install -g gatsby-cli` para poder usarla en local.
+La CLI de Gatsby (`gatsby-cli`) está empaquetada como un ejecutable que puede usarse globalmente. La CLI de Gatsby está disponible a través de [npm](https://www.npmjs.com/) y debe instalarse globalmente con el comando `npm install -g gatsby-cli` para poder usarla en modo local.
 
 Introduce `gatsby --help` para ver toda la ayuda.
 
-También puedes usar la variante en script de estos comandos en el `package.json`, normalmente ya expuestos en la mayoría de [_starters_](/docs/starters/). Por ejemplo, si quisiesemos hacer que el comando [`gatsby develop`](#develop) esté disponible en nuestra aplicación, deberíamos abrir el `package.json` y añadir un script como el siguiente:
+También puedes usar la variante en script de estos comandos en el `package.json`, normalmente ya expuestos en la mayoría de [_starters_](/docs/starters/). Por ejemplo, si quisiésemos hacer que el comando [`gatsby develop`](#develop) esté disponible en nuestra aplicación, deberíamos abrir el `package.json` y añadir un script como el siguiente:
 
 ```json:title=package.json
 {
@@ -94,7 +94,7 @@ Puedes usar el comando _develop_ de Gatsby con la opción de _host_ para acceder
 gatsby develop -H 0.0.0.0
 ```
 
-El terminal the mostrará la información como normalmente, pero además va a incluir una URL que podrás usar para navegar desde un cliente de la misma red para ver cómo se renderiza.
+El terminal te mostrará la información como normalmente, pero además va a incluir una URL que podrás usar para navegar desde un cliente de la misma red para ver cómo se renderiza.
 
 ```shell
 You can now view gatsbyjs.org in the browser.
@@ -103,7 +103,7 @@ You can now view gatsbyjs.org in the browser.
   On Your Network:  http://192.168.0.212:8000/ // highlight-line
 ```
 
-**Nota**: Para acceder a Gatsby en tu maquina local, utiliza `http://localhost:8000` o la URL "En tu red".
+**Nota**: Para acceder a Gatsby en tu máquina local, utiliza `http://localhost:8000` o la URL "En tu red".
 
 ### `build`
 
@@ -156,7 +156,7 @@ En el directorio raiz de un sitio Gatsby, elimina el cache (carpeta `.cache`) y 
 
 `gatsby clean`
 
-Es muy útil como último recurso cuando tu proyecto local tiene problemas o si el contenido no se refresca. Algunos problemas comunes que puede resolver son:
+Es muy útil como último recurso cuando tu proyecto local tiene problemas o si el contenido no se actualiza. Algunos problemas comunes que puede resolver son:
 
 - Información obsoleta, p. ej. este archivo/recurso/etc. no está disponible
 - Error de GraphQL, p. ej. el recurso de GraphQL debería estar presente pero no lo está
