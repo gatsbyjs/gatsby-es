@@ -122,7 +122,7 @@ Recuerda, `sync-requires.js` es usado durante la [generación de página HTML](/
 
 ## data.json
 
-Este es un archivo json generado. Contiene todo los contenidos de `pages.json` ([como antes](/docs/write-pages/#pagesjson)), y el redux `jsonDataPaths` los cuales fueron creados al final de la fase de [ejecución de consulta](/docs/query-execution/#save-query-results-to-redux-and-disk). Se parece a: 
+Este es un archivo json generado. Contiene todos los contenidos de `pages.json` ([como antes](/docs/write-pages/#pagesjson)), y el redux `jsonDataPaths` los cuales fueron creados al final de la fase de [ejecución de consulta](/docs/query-execution/#save-query-results-to-redux-and-disk). Se parece a: 
 
 ```javascript
 {
@@ -146,7 +146,7 @@ Este es un archivo json generado. Contiene todo los contenidos de `pages.json` (
 
 Este también es usado por la [generación de página HTML](/docs/html-generation/) de dos maneras:
 
-1. `static-entry.js` produce un _compilado de webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa `pages` para buscar la página para la página.
+1. `static-entry.js` produce un _compilado de webpack_ `page-renderer.js` que genera el HTML para una ruta. Requiere `data.json` y usa `pages` para buscar en la página.
 2. Para obtener el `jsonName` desde el objeto _page_, y lo usa para construir una ruta de recurso para el actual resultado json teniéndola en cuenta al buscar en `data.json.dataPaths[jsonName]`.
 
 Ahora que Gatsby ha escrito la página de datos, podemos empezar con la [sección de Webpack](/docs/webpack-and-ssr/).
