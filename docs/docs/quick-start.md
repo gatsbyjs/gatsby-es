@@ -19,7 +19,7 @@ Este inicio rápido está destinado a desarrolladores intermedios y avanzados. P
 npm install -g gatsby-cli
 ```
 
-> El comando de arriba instala el CLI de Gatsby en tu maquina.
+> El comando de arriba instala el CLI de Gatsby en tu máquina.
 
 ### Crear un nuevo sitio.
 
