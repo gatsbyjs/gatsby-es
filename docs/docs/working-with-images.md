@@ -14,11 +14,11 @@ Necesitarás unos cuantos plugins para esto:
 
 - [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin que te permite [consultar archivos con GraphQL](/docs/graphql-concepts/#images)
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) se encarga de las conexiones entre Sharp y los Plugins de Gatsby 
-- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) te permite crear multiples imágenes de los tamaños adecuados y resoluciones con una consulta
+- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) te permite crear múltiples imágenes de los tamaños adecuados y resoluciones con una consulta
 
-Si la imagen final es de un tamaño fijo, la optimización depende de tener multiples resoluciones de la imagen.  Si es responsiva, es decir, se estira para llenar un contenedor o página, la optimización se basa en tener diferentes tamaños de la misma imagen. Mira la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
+Si la imagen final es de un tamaño fijo, la optimización depende de tener múltiples resoluciones de la imagen. Si es responsiva, es decir, se estira para llenar un contenedor o página, la optimización se basa en tener diferentes tamaños de la misma imagen. Mira la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
 
-También puedes usar argumentos en tu consulta para especificar exactamente, las dimensiones mínimas, y máximas. Ve la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
+También puedes usar argumentos en tu consulta para especificar exactamente, las dimensiones mínimas y máximas. Ve la [documentación de `Gatsby Image` para más información](/packages/gatsby-image/#two-types-of-responsive-images).
 
 Este ejemplo es para una galería de imágenes donde las imágenes se estiran cuando se cambia el tamaño de la página. Utiliza el método `fluid` y el fragmento `fluid` para obtener los datos adecuados para usar en el componente `gatsby-image` y argumentos para establecer el ancho como 400px y la altura máxima como 250px.
 
