@@ -11,7 +11,7 @@ A medida que tu proyecto crece en el tiempo, tener esta información disponible 
 
 ## Configurando tu ambiente
 
-> Ten en cuenta que las instrucciones a continuación están usando [npx](https://www.npmjs.com/package/npx). `npx` es una parte de npm y en este caso te permite generar automáticamente una estructura de archivos/carpetas completa con la configuración por defecto. Sí estás ejecutando una versión vieja de `npm` (`<5.2.0`) deberías ejecutar el siguiente comando en su lugar `npm install -g @storybook/cli`. Entonces podrías ejecutar `sb init` desde la raíz del directorio de Gatsby para inicializar Storybook.
+> Ten en cuenta que las instrucciones a continuación están usando [npx](https://www.npmjs.com/package/npx). `npx` es una parte de npm y en este caso te permite generar automáticamente una estructura de archivos/carpetas completa con la configuración por defecto. Si estás ejecutando una versión vieja de `npm` (`<5.2.0`) deberías ejecutar el siguiente comando en su lugar `npm install -g @storybook/cli`. Entonces podrías ejecutar `sb init` desde la raíz del directorio de Gatsby para inicializar Storybook.
 
 Para configurar Storybook necesitas instalar dependencias y algunas configuraciones personalizadas. Puedes empezar rápidamente utilizando el comando automatizado de la línea de comandos desde la raíz de tu proyecto Gatsby:
 
@@ -27,7 +27,7 @@ Para actualizar tu configuración de Storybook abre `.storybook/config.js` y mod
 import { configure } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
-// automáticamente importa todos los archivos terminando en *.stories.js
+// automáticamente importa todos los archivos terminados en *.stories.js
 // highlight-next-line
 const req = require.context("../src", true, /.stories.js$/)
 function loadStories() {
@@ -58,7 +58,7 @@ configure(loadStories, module)
 
 Después haz algunos ajustes a la configuración predeterminada de `webpack` para Storybook asi puedes transpilar archivos fuente de Gatsby, y para asegurar que tienes los plugins necesarios de `babel` para transpilar componentes de Gatsby.
 
-Crea un nuevo archivo llamado `webpack.config.js` en la carpeta `.storybook` creada por el CLI de Storybook. Luego ubica el siguiente código en ese archivo (dependiendo en qué versión de Storybook estás utilizando.
+Crea un nuevo archivo llamado `webpack.config.js` en la carpeta `.storybook` creada por el CLI de Storybook. Luego ubica el siguiente código en ese archivo (dependiendo en qué versión de Storybook estás utilizando).
 
 **Para Storybook v5:**
 
@@ -90,7 +90,7 @@ module.exports = ({ config }) => {
 }
 ```
 
-> Nota que si estás utilizando un [StaticQuery](/docs/static-query/) en tus componentes, `babel-plugin-remove-graphql-queries` es necesario para renderizarlos en Storybook. Esto es porque los queries son construidos a la hora del compilado de Gatsby, y no será ejecutado cuando se rendericen los componentes directamente.
+> Nota que si estás utilizando un [StaticQuery](/docs/static-query/) en tus componentes, `babel-plugin-remove-graphql-queries` es necesario para renderizarlos en Storybook. Esto es porque los queries son construídos a la hora del compilado de Gatsby, y no será ejecutado cuando se rendericen los componentes directamente.
 
 > Cuando utilizas TypeScript, agrega esta regla::
 
