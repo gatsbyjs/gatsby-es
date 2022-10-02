@@ -2,7 +2,7 @@
 title: Añadir un archivo de manifiesto
 ---
 
-Si has llevado a cabo una [auditoría con Lighthouse](/docs/audit-with-lighthouse/), puedes haberte dado cuenta de una puntuación un tanto mediocre en la categoría "Aplicación Web Progresiva" ("Progressive Web App"). Veamos como se puede mejorar esta puntuación.
+Si has llevado a cabo una [auditoría con Lighthouse](/docs/audit-with-lighthouse/), te habrás fijado que hay una puntuación mediocre en la categoría "Aplicación Web Progresiva" ("Progressive Web App"). Veamos como se puede mejorar esta puntuación.
 
 Pero primero, ¿qué _son_ exactamente las PWA?
 
